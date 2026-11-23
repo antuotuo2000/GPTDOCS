@@ -12,7 +12,7 @@
     var state = {
       activeId: PILLARS[0].id,
       activeCat: 'all',
-      theme: document.documentElement.getAttribute('data-theme') || 'light',
+      theme: document.documentElement.getAttribute('data-theme') || 'dark',
       lang: document.documentElement.getAttribute('data-lang') || 'zh',
       density: 'relaxed',
       productQuery: '',

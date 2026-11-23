@@ -30,7 +30,7 @@
  catFilter: 'all',
  density: 'relaxed',
  lang: 'zh',
- theme: 'light',
+ theme: 'dark',
  ch1View: 'viewA',
  ch1Series: { s1: true, s2: true },
  activePillar: 0,

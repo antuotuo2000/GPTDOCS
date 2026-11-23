@@ -6,7 +6,7 @@
       var STORAGE_LANG_KEY = 'mui_portal_lang_v1';
       var STORAGE_AUDIT_KEY = 'aapl_culture_bp_audit_v1';
 
-      var state = { theme: 'light', lang: 'zh', eView: 'revemp', gView: 'emp' };
+      var state = { theme: 'dark', lang: 'zh', eView: 'revemp', gView: 'emp' };
       var hits = { eraCanvas: [], genomeCanvas: [] };
 
       function showToast(msg) {
@@ -493,7 +493,7 @@
 
       // Init Theme, Lang & Resize
       try {
-        applyTheme((localStorage.getItem(STORAGE_THEME_KEY) || 'light').replace(/^"|"$/g, ''), true);
+        applyTheme((localStorage.getItem(STORAGE_THEME_KEY) || 'dark').replace(/^"|"$/g, ''), true);
         applyLang((localStorage.getItem(STORAGE_LANG_KEY) || 'zh').replace(/^"|"$/g, ''), true);
       } catch (e) {}
 

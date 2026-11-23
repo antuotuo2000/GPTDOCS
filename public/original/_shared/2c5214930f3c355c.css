@@ -1,8 +1,0 @@
-
-    body[data-density="compact"] .section-block { padding: 18px 20px; margin-bottom: 14px; }
-    body[data-density="compact"] .kpi-card, body[data-density="compact"] .feature-card, body[data-density="compact"] .matrix-card { padding: 12px 14px; }
-    body[data-density="compact"] .lead-prose { font-size: 0.9rem; line-height: 1.62; margin-bottom: 14px; }
-    body[data-density="compact"] .ip-pill-grid { gap: 6px; }
-    body[data-density="compact"] .ip-pill-btn { padding: 7px 9px; }
-    .side-tool-full { margin-top: 6px; width: 100%; justify-content: center; }
-  

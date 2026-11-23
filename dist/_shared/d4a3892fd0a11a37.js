@@ -8,7 +8,7 @@ var ALL_IPS=window.__CVS_IPS__;
 var IP_MAP={};for(var idx0=0;idx0<ALL_IPS.length;idx0++){IP_MAP[ALL_IPS[idx0].id]=ALL_IPS[idx0]}
 var INITIAL_ID="aetna";
 var IS_STANDALONE_FILE=false;
-var state={ipId:INITIAL_ID,lang:"zh",theme:"light",density:"comfortable",hubCat:"all",ch1View:"viewA",ch1Series:{s1:true,s2:true},activePillar:0,radarSeries:{s0:true,s1:true,s2:true},peerFilter:"all",peerQuery:"",epsSeries:{rev:true,oci:true},sim:{views:145,v_per_view:0.03,ancillary_m:0.8,years:5,transmedia:true,preset:"p2"},checks:[true,true,true,true,false,false]};
+var state={ipId:INITIAL_ID,lang:"zh",theme:"dark",density:"comfortable",hubCat:"all",ch1View:"viewA",ch1Series:{s1:true,s2:true},activePillar:0,radarSeries:{s0:true,s1:true,s2:true},peerFilter:"all",peerQuery:"",epsSeries:{rev:true,oci:true},sim:{views:145,v_per_view:0.03,ancillary_m:0.8,years:5,transmedia:true,preset:"p2"},checks:[true,true,true,true,false,false]};
 function curIp(){return IP_MAP[state.ipId]||ALL_IPS[0]}
 function isEn(){return state.lang==="en"}
 function isExportedSingle(){return IS_STANDALONE_FILE||!document.getElementById("ipHubSwitcher")}

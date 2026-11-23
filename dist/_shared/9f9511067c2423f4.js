@@ -144,7 +144,7 @@
 
       var state = {
         lang: 'zh',
-        theme: 'light',
+        theme: 'dark',
         tab: DEFAULT_TAB,
         category: 'ALL',
         sector: 'ALL',
@@ -1642,7 +1642,7 @@
       if (window.DOCS_FULLTEXT) loadFullText();
 
       try {
-        applyTheme((localStorage.getItem(THEME_KEY) || 'light').replace(/^"|"$/g, ''), true);
+        applyTheme((localStorage.getItem(THEME_KEY) || 'dark').replace(/^"|"$/g, ''), true);
         applyLang((localStorage.getItem(LANG_KEY) || 'zh').replace(/^"|"$/g, ''), true);
       } catch (e) {
         renderAll();

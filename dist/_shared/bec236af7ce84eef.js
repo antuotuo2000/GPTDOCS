@@ -28,7 +28,7 @@
 
       var state = {
         lang: 'zh',
-        theme: 'light',
+        theme: 'dark',
         ch1View: 'viewA',
         activePillar: 0,
         radarSeries: { aapl: true, sam: true, mi: true },

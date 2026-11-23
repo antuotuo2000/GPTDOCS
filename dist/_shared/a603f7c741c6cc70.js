@@ -422,7 +422,7 @@
 
     var state = {
       lang: 'zh',
-      theme: 'light',
+      theme: 'dark',
       density: 'relaxed',
       ch1View: 'viewA',
       ch1Series: { s1: true, s2: true },

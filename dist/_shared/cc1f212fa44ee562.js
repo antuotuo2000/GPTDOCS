@@ -10,7 +10,7 @@
  var p0 = CFG.sim.presets[0];
  var state = {
  lang: 'zh',
- theme: 'light',
+ theme: 'dark',
  ch1View: 'viewA',
  ch1Series: { s1: true, s2: true },
  activePillar: 0,

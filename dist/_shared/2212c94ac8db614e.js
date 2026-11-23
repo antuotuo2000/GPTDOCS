@@ -235,7 +235,7 @@
 
       var state = {
         lang: 'zh',
-        theme: 'light',
+        theme: 'dark',
         ch1View: 'viewA',
         activePillar: 0,
         radarSeries: { mo: true, pmi: true, ko: true },

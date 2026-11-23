@@ -18,7 +18,7 @@
 
  var DEFAULT_IP_ID = "john_furner";
  var state = {
- ipId: DEFAULT_IP_ID, execCat: 'all', lang: 'zh', theme: 'light',
+ ipId: DEFAULT_IP_ID, execCat: 'all', lang: 'zh', theme: 'dark',
  ch1View: 'viewA', ch1Series: { s1: true, s2: true }, activePillar: 0,
  radarSeries: { s0: true, s1: true, s2: true }, peerFilter: 'all', peerQuery: '',
  epsSeries: { rev: true, oci: true },
