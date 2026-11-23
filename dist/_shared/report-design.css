@@ -3,18 +3,35 @@
 @import url('./fac57b26aa692610.css');
 @import url('./45cc91304dbc67cc.css');
 @import url('./fc0f8ecd828d63f8.css');
+@import url('./transparent-chrome.css');
+@import url('./page-background.css');
+@import url('./fixed-backdrop.css');
+@import url('./report-glass.css');
+@import url('./report-reading.css');
+@import url('./report-header.css');
 
 /* Reset page-specific background layers and chrome to the reference values. */
-body {
-  background: var(--bg-canvas) var(--hero-glow) repeat fixed 0% 0% / auto !important;
-}
 body::before, body::after { content: none !important; }
 .mui-appbar { box-shadow: none !important; }
 .sidebar-card {
-  background: var(--bg-paper) !important;
+  background: var(--report-frost) !important;
+  backdrop-filter: blur(24px) saturate(120%);
+  -webkit-backdrop-filter: blur(24px) saturate(120%);
   border-radius: 14px !important;
   border: 1px solid var(--border-subtle) !important;
   box-shadow: var(--shadow-card) !important;
+}
+.mui-sidebar { background: transparent !important; }
+.mui-sidebar :is(.co-hub-pills, .co-hub-pill:not(.active), .co-hub-item:not(.active)) {
+  background: var(--report-frost-soft) !important;
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+}
+@media (max-width: 1023px) {
+  .mui-sidebar {
+    backdrop-filter: blur(16px) saturate(150%);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+  }
 }
 
 /* The longest title sets a shared text width; secondary text is clipped to it. */

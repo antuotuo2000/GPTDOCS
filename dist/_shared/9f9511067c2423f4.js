@@ -133,6 +133,10 @@
 
       var MATRIX_DIMS = ['Company', 'CorporateCulture', 'SeniorExecutive', 'hardware', 'software', 'patent'];
       var CONV_ORDER = ['', 'CORE', 'FOCUS', 'WATCH'];
+      var REPORT_HIGHLIGHTS = {
+        'PDD/Company/pdd_12_ttm_rmb_450_8b.html': { rgb: '255, 105, 79', hash: '#ip=pdd_main', titleZh: '拼多多 · 12 大业务板块', titleEn: 'PDD · 12 Business Lines', noteZh: '主站 · Temu · 商业化', noteEn: 'PDD · Temu · Monetization' },
+        'ARM/Company/arm_holdings_nasdaq_arm_12_fy2026_4_92b.html': { rgb: '45, 212, 191', hash: '', titleZh: 'Arm · 12 大产品与服务', titleEn: 'Arm · 12 Products & Services', noteZh: '架构授权 · CPU · 版税', noteEn: 'Architecture · CPU · Royalties' }
+      };
 
       var catalog = window.DOCS_CATALOG || { companies: [], files: [], stats: {} };
       var navLinks = Array.isArray(window.DOCS_NAV_LINKS) ? window.DOCS_NAV_LINKS : [];
@@ -241,9 +245,7 @@
       });
 
       contentItems.forEach(function (it) {
-        it._titleHay = [it.title, it.titleEn || '', it.name, it.company, it.companyLabel, it.ticker, it.sector].join(' ').toLowerCase();
-        it._headingHay = (it.headings || []).concat(it.headingsEn || []).join(' ').toLowerCase();
-        it._summaryHay = [it.summary || '', it.summaryEn || ''].join(' ').toLowerCase();
+        window.ReportSearch.prepare(it);
       });
 
       var fullTextRequest;
@@ -297,7 +299,7 @@
       }
 
       function tokenize(q) {
-        return String(q || '').trim().toLowerCase().split(/\s+/).filter(Boolean);
+        return window.ReportSearch.tokenize(q);
       }
       function highlight(text, tokens) {
         var safe = esc(text);
@@ -324,20 +326,7 @@
         return '';
       }
       function scoreItem(it, tokens) {
-        if (!tokens.length) return 1;
-        var total = 0;
-        for (var i = 0; i < tokens.length; i++) {
-          var tk = tokens[i];
-          var sc = 0;
-          if (String(it.ticker || '').toLowerCase() === tk || String(it.company || '').toLowerCase() === tk) sc += 140;
-          if (it._titleHay.indexOf(tk) !== -1) sc += 55;
-          if (it._headingHay.indexOf(tk) !== -1) sc += 25;
-          if (it._summaryHay.indexOf(tk) !== -1) sc += 14;
-          if (it._ftHay && it._ftHay.indexOf(tk) !== -1) sc += 7;
-          if (sc === 0) return 0;
-          total += sc;
-        }
-        return total;
+        return window.ReportSearch.scoreItem(it, tokens);
       }
 
       function getFilteredItems() {
@@ -436,7 +425,7 @@
 
           var lx = cx + Math.cos(a) * (R + 13);
           var ly = cy + Math.sin(a) * (R + 12);
-          ctx.fillStyle = '#BAE6FD';
+          ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-secondary').trim();
           ctx.fillText(isEn() ? shortTagsEn[j] : shortTags[j], lx, ly);
         }
 
@@ -620,6 +609,7 @@
       }
 
       function buildDocCardHtml(it, tokens) {
+        var feature = REPORT_HIGHLIGHTS[it.relPath];
         var href = encodeRelUrl(it.relPath);
         var starred = !!state.watchlist[it.company];
         var conv = state.convMap[it.company] || '';
@@ -628,14 +618,14 @@
         var readMin = Math.max(2, Math.round(words / 480));
         var dateTxt = (it.modifiedTime || '').slice(0, 10);
         var coShort = (it.companyLabel || it.company || '').split(' ')[0];
-        var spineCol = PILLAR_COLORS[it.category] || '#0073E6';
+        var spineCol = feature ? ('rgb(' + feature.rgb + ')') : (PILLAR_COLORS[it.category] || '#0073E6');
         var chaps = getHeadings(it).slice(0, 2);
 
         var openAttrs = IS_STANDALONE_PREVIEW
           ? ('href="#sheet-' + esc(it.id) + '" data-open-sheet="' + esc(it.id) + '"')
           : ('href="' + esc(href) + '" target="_blank" rel="noopener noreferrer"');
 
-        return '<article class="m-doc-card hud-corners MuiCard" style="--doc-spine:' + spineCol + ';">' +
+        return '<article class="m-doc-card hud-corners MuiCard' + (feature ? ' m-doc-featured' : '') + '" style="--doc-spine:' + spineCol + ';' + (feature ? '--feature-rgb:' + feature.rgb + ';' : '') + '">' +
           '<div style="display:flex;flex-direction:column;gap:9px;">' +
             '<div class="m-doc-meta">' +
               '<div class="m-badge-row">' +
@@ -644,6 +634,7 @@
                   esc((it.ticker || it.company).slice(0, 6)) + ' // ' + esc(coShort) +
                 '</span>' +
                 '<span class="m-pil-badge pil-' + esc(it.category) + '">' + esc(getCatLabel(it.category)) + '</span>' +
+                (feature ? '<span class="m-featured-badge">' + (isEn() ? 'Featured' : '重点研究') + '</span>' : '') +
                 '<button type="button" class="m-conv-pill mono' + (conv ? (' conv-' + conv) : '') + '" data-cycle-conv="' + esc(it.company) + '">' + (conv || '+评级') + '</button>' +
               '</div>' +
               '<button type="button" class="m-star-btn' + (starred ? ' on' : '') + '" data-star-co="' + esc(it.company) + '" aria-label="收藏该标的">' +
@@ -765,6 +756,17 @@
               '<span class="m-spot-cta">' + (isEn() ? 'SCAN ↗' : '接入 ↗') + '</span>' +
             '</div>';
         }
+        var featured = contentItems.filter(function (it) { return !!REPORT_HIGHLIGHTS[it.relPath]; });
+        featured.sort(function (a, b) { return a.company === 'PDD' ? -1 : b.company === 'PDD' ? 1 : 0; });
+        document.getElementById('heroSpotlightBox').insertAdjacentHTML('afterbegin',
+          '<div class="m-featured-pair">' + featured.map(function (it) {
+            var feature = REPORT_HIGHLIGHTS[it.relPath];
+            return '<a class="m-featured-report" data-featured-report="' + esc(it.ticker) + '" style="--feature-rgb:' + feature.rgb + ';" href="' + esc(encodeRelUrl(it.relPath) + feature.hash) + '" target="_blank" rel="noopener noreferrer">' +
+              '<span class="m-featured-kicker mono">FOCUS // ' + esc(it.ticker) + '</span>' +
+              '<strong>' + esc(isEn() ? feature.titleEn : feature.titleZh) + '</strong>' +
+              '<span class="m-featured-note">' + esc(isEn() ? feature.noteEn : feature.noteZh) + '<b aria-hidden="true">↗</b></span>' +
+            '</a>';
+          }).join('') + '</div>');
 
         var secTotal = Object.keys(stats.sectorCounts || {}).length || 4;
         document.getElementById('bentoSecCh').textContent = secTotal + 'CH';
@@ -1628,6 +1630,15 @@
         if (ev.key === LANG_KEY && ev.newValue) applyLang(ev.newValue.replace(/^"|"$/g, ''), true);
       });
 
+      var incomingQuery = new URLSearchParams(location.search).get('q');
+      if (incomingQuery) {
+        state.query = incomingQuery;
+        state.tab = 'feed';
+        sInput.value = incomingQuery;
+        clrSearch.classList.remove('hidden');
+        kbdHint.classList.add('hidden');
+        loadFullText();
+      }
       if (window.DOCS_FULLTEXT) loadFullText();
 
       try {
@@ -1637,4 +1648,3 @@
         renderAll();
       }
     })();
-  

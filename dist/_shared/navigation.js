@@ -1,4 +1,9 @@
-/* Shared header/sidebar behavior for every report. Page engines own search/language/theme. */
+/* Shared report article search, header and sidebar behavior. */
+(() => {
+  const script = document.createElement('script');
+  script.src = new URL('./article-search.js', document.currentScript.src).href;
+  document.head.append(script);
+})();
 (() => {
   const root = document.documentElement;
   const key = 'mui_portal_sidebar_collapsed_v1';
