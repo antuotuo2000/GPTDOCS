@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>NXP 恩智浦全产品与服务 12 大板块深度研报中枢（Q3 2026 $3.79B 全景拆解）| 数据中心</title>
+ <meta name="description" content="NXP Semiconductors N.V. (NASDAQ: NXPI) 恩智浦全系列 12 大产品与服务矩阵深度商业研报中枢（Q3 2026 营收 $3.79B +19% YoY、Non-GAAP 毛利率 58.6%、TTM FCF $3.50B）：覆盖 S32 汽车域控、77GHz 雷达、高压 BMS、车载网络、i.MX Edge AI、MCX MCU、Trimension UWB、NFC/RFID、5G GaN 射频与数据中心、安全 PMIC/eFuse、EdgeLock 2GO 云服务与 CoreRide/MotionWise 软件生态。" />
+ <script src="../../_shared/8bb21429b650b62d.js"></script>
+ <link rel="stylesheet" href="../../_shared/da855b29faa4452c.css">
+
+
+ <link rel="stylesheet" href="../../_shared/33905cb27b41a624.css">
+
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI High-Clarity AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">S3</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+ <a class="crumb-link hide-sm" href="../../index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg><span data-i18n-zh="NXPI 研报中枢" data-i18n-en="NXPI Research Hub">NXPI 研报中枢</span></a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="01 · S32 汽车域控与区域计算处理器（S32N · S32G · S32K5 · S32Z/E）" data-i18n-en="01 · NXP S32 Automotive &amp; Zonal Compute (S32N · S32G · S32K5 · S32Z/E)">01 · S32 汽车域控与区域计算处理器（S32N · S32G · S32K5 · S32Z/E）</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="Q3 26 汽车营收 $2.07B (+13% YoY)" data-i18n-en="Q3 26 Auto Rev $2.07B (+13% YoY)">Q3 26 汽车营收 $2.07B (+13% YoY)</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="Non-GAAP 毛利率 58.6% · SDV 核心" data-i18n-en="58.6% Non-GAAP GM · SDV Core">Non-GAAP 毛利率 58.6% · SDV 核心</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换恩智浦产品…" aria-label="快速跳转章节或产品线" data-ph-zh="检索章节或切换恩智浦产品…" data-ph-en="Jump to section or NXP product…" data-aria-zh="快速跳转章节或产品线" data-aria-en="Quick jump to chapter or NXP product" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ 
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">NXP CORE · #1 AUTO COMPUTE</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="01 · S32 汽车域控处理器" data-i18n-en="01 · S32 Automotive Processors">01 · S32 汽车域控处理器</div>
+ <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="5nm/16nm 汽车超集成处理器 S32N × 区域控制 MCU S32K5 × CoreRide 软件定义汽车底座" data-i18n-en="5nm S32N Super-Integration × S32K5 Zonal MCUs × CoreRide SDV Compute Foundation">5nm/16nm 汽车超集成处理器 S32N × 区域控制 MCU S32K5 × CoreRide 软件定义汽车底座</p>
+
+ <div class="sidebar-mini-kpis" id="sideMiniKpis">
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="Q3 2026 汽车分部营收" data-i18n-en="Q3 2026 Auto Revenue">Q3 2026 汽车分部营收</span><span class="sidebar-mini-val mono" data-i18n-zh="$2,070M (+13% YoY)" data-i18n-en="$2,070M (+13% YoY)">$2,070M (+13% YoY)</span></div><div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="FY2025 汽车全年营收" data-i18n-en="FY2025 Auto Full Year">FY2025 汽车全年营收</span><span class="sidebar-mini-val mono" data-i18n-zh="$7,116M (占比 58.0%)" data-i18n-en="$7,116M (58.0% Share)">$7,116M (占比 58.0%)</span></div><div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="集团 Non-GAAP 毛利/营利" data-i18n-en="Non-GAAP GM / OM">集团 Non-GAAP 毛利/营利</span><span class="sidebar-mini-val mono" data-i18n-zh="58.6% / 37.1%" data-i18n-en="58.6% / 37.1%">58.6% / 37.1%</span></div>
+ </div>
+ </div>
+
+ <!-- Unified MUI Navigation Card: 12-Pillar Hub Nav + Report TOC -->
+ <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Site Links &amp; Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="portalRelatedReports" data-co-key="NXPI">
+          <div class="co-side-head">
+            <span class="co-side-title mono">NXPI · 01/01</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="portalRelatedPrevBtn" href="nxp_12_q3_2026_3_79b.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="portalRelatedNextBtn" href="nxp_12_q3_2026_3_79b.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (1)" data-i18n-en="All (1)">全部 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="nxp_12_q3_2026_3_79b.html" title="NXP 恩智浦全产品与服务 12 大板块深度研报中枢（Q3 2026 $3.79B 全景拆解）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="NXP 恩智浦全产品与服务 12 大板块深度研报中枢（Q3 2026 $3.79B 全景拆解）" data-i18n-en="NXP &amp; 12 Deep DiveReport (Q3 2026 $3.79B OverviewBreakdown)">NXP 恩智浦全产品与服务 12 大板块深度研报中枢（Q3 2026 $3.79B 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+          </div>
+          <script src="../../_shared/9a77e5144f5d3a03.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ 
+
+ <div class="nav-divider"></div>
+
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心经营指标" data-i18n-en="Executive Summary &amp; Cycle KPIs">执行摘要与核心经营指标</span></a></li><li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="S32架构矩阵与区域计算" data-i18n-en="S32 Architecture &amp; Zonal Tiers">S32架构矩阵与区域计算</span></a></li><li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大护城河与五维雷达" data-i18n-en="4 Moat Pillars &amp; 5-Axis Radar">四大护城河与五维雷达</span></a></li><li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="全球汽车SoC/MCU对标" data-i18n-en="Global Auto SoC/MCU Matrix">全球汽车SoC/MCU对标</span></a></li><li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="单车硅含量与复利模拟" data-i18n-en="Per-Vehicle Economics &amp; Sim">单车硅含量与复利模拟</span></a></li><li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="SDV演进与2026四大战役" data-i18n-en="SDV Roadmap &amp; 2026 Battles">SDV演进与2026四大战役</span></a></li><li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="汽车计算护城河核查清单" data-i18n-en="Auto Compute Moat Checklist">汽车计算护城河核查清单</span></a></li><li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="SEC财报与官方信源核验索引" data-i18n-en="SEC Filings &amp; Primary Sources">SEC财报与官方信源核验索引</span></a></li>
+ </ul>
+ </nav>
+
+ <!-- Compact MUI Page Utility Controls -->
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+ <!-- NXP 12 All-Products & Services Portfolio Interactive Switcher -->
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="NXP 12大全系列产品与服务切换台">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">NXPI 12 ALL-PRODUCTS &amp; SERVICES PORTFOLIO</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="恩智浦半导体 (NXPI) 12 大全产品与服务深度研报中枢（100% 覆盖汽车电子 · 边缘物联网 · 射频基建 · 安全云与软件）" data-i18n-en="NXP Semiconductors (NXPI) 12 All-Products &amp; Services Monograph Hub (Auto · Edge IoT · RF Infra · Security &amp; Software)">恩智浦半导体 (NXPI) 12 大全产品与服务深度研报中枢（100% 覆盖汽车电子 · 边缘物联网 · 射频基建 · 安全云与软件）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" class="mui-btn" title="切换至上一产品线 (快捷键 [)" data-title-zh="切换至上一产品线 (快捷键 [)" data-title-en="Previous Product Line (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一产品" data-i18n-en="Prev">上一产品</span>
+ </button>
+ <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一产品线 (快捷键 ])" data-title-zh="切换至下一产品线 (快捷键 ])" data-title-en="Next Product Line (Shortcut ])">
+ <span data-i18n-zh="下一产品" data-i18n-en="Next">下一产品</span> <span>→</span>
+ </button>
+ <button type="button" id="hubFocusModeBtn" class="mui-btn" title="折叠/展开 12 大产品矩阵切换台" data-title-zh="折叠/展开 12 大产品矩阵切换台" data-title-en="Collapse/Expand 12-Product Switcher">单品沉浸阅读 ▴</button>
+ 
+ </div>
+ </div>
+
+ <div class="hub-summary-strip">
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Q3 2026 集团净营收" data-i18n-en="Q3 2026 Consolidated Rev">Q3 2026 集团净营收</span>
+ <span class="hub-sum-val mono">$3.79B (+19% YoY)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="汽车 / 工业与物联网" data-i18n-en="Auto / Industrial &amp; IoT">汽车 / 工业与物联网</span>
+ <span class="hub-sum-val mono">$2.07B (+13%) · $802M (+39%)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Non-GAAP 毛利率 / 营利率" data-i18n-en="Non-GAAP GM / OM">Non-GAAP 毛利率 / 营利率</span>
+ <span class="hub-sum-val mono">58.6% GM · 37.1% OM</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="TTM 自由现金流 / 新回购" data-i18n-en="TTM FCF / New Buyback">TTM 自由现金流 / 新回购</span>
+ <span class="hub-sum-val mono">$3.50B FCF · +$5.0B</span>
+ </div>
+ </div>
+
+ <div class="hub-cat-bar">
+ <div class="hub-cat-pills" role="tablist" aria-label="恩智浦产品线大类筛选">
+ <button type="button" class="hub-cat-btn active" data-cat-filter="all" data-i18n-zh="全部 12 大产品与服务" data-i18n-en="All 12 Pillars">全部 12 大产品与服务</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="auto" data-i18n-zh="汽车电子核心 (01–04)" data-i18n-en="Automotive Core (01–04)">汽车电子核心 (01–04)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="edge_mobile" data-i18n-zh="边缘AI·MCU·无线 (05–08)" data-i18n-en="Edge AI, MCU &amp; RF (05–08)">边缘AI·MCU·无线 (05–08)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="infra_sw" data-i18n-zh="基建·电源·安全云·软件 (09–12)" data-i18n-en="Infra, PMIC, Security &amp; SW (09–12)">基建·电源·安全云·软件 (09–12)</button>
+ </div>
+ <span class="mono" style="font-size:0.73rem;color:var(--text-muted);" data-i18n-zh="提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节" data-i18n-en="Tip: Press [ / ] to cycle products · Press ⌘K to jump">提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节</span>
+ </div>
+
+ <div class="ip-pill-grid" id="ipPillGrid">
+ <button type="button" class="ip-pill-btn active" data-switch-ip="s32_auto" aria-pressed="true"><span class="ip-pill-mono mono">S3</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="s32_auto">01. S32 汽车域控与区域计算</span><span class="ip-pill-meta mono" data-pill-meta="s32_auto">Auto $2.07B/Q3 (+13%) · S32N/K5 · S32 Auto &amp; Zonal Compute</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="adas_radar" aria-pressed="false"><span class="ip-pill-mono mono">RD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="adas_radar">02. 77GHz 车载雷达与 ADAS 感知</span><span class="ip-pill-meta mono" data-pill-meta="adas_radar">全球雷达收发器 #1 · SAF8xxx · 77GHz Auto Radar &amp; ADAS</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ev_bms" aria-pressed="false"><span class="ip-pill-mono mono">BM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ev_bms">03. 高压 BMS、电驱与功率驱动</span><span class="ip-pill-meta mono" data-pill-meta="ev_bms">Wireless BMS · 800V 栅极驱动 · High-Voltage BMS &amp; EV Drive</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ivn_net" aria-pressed="false"><span class="ip-pill-mono mono">IV</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ivn_net">04. 车载网络 IVN、以太网与 OrangeBox</span><span class="ip-pill-meta mono" data-pill-meta="ivn_net">全球 IVN 霸主 · 10G TSN + OrangeBox · In-Vehicle Networking &amp; OrangeBox</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="imx_edge_ai" aria-pressed="false"><span class="ip-pill-mono mono">MX</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="imx_edge_ai">05. i.MX 应用处理器与 Edge AI</span><span class="ip-pill-meta mono" data-pill-meta="imx_edge_ai">Ind&amp;IoT $802M/Q3 (+39%) · Kinara Ara-2 · i.MX &amp; Edge AI NPUs</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="mcu_mcx" aria-pressed="false"><span class="ip-pill-mono mono">MC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="mcu_mcx">06. MCX 与 i.MX RT 微控制器</span><span class="ip-pill-meta mono" data-pill-meta="mcu_mcx">MCX A5/N/W + RT700 · FRDM 生态 · MCX &amp; i.MX RT MCUs</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="uwb_wireless" aria-pressed="false"><span class="ip-pill-mono mono">UW</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="uwb_wireless">07. Trimension UWB 与无线连接</span><span class="ip-pill-meta mono" data-pill-meta="uwb_wireless">宝马全系 UWB 部署 · Wi-Fi 7/Matter · Trimension UWB &amp; Wireless</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="nfc_rfid" aria-pressed="false"><span class="ip-pill-mono mono">NF</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="nfc_rfid">08. 移动 NFC、eSE 与 RFID/MIFARE</span><span class="ip-pill-meta mono" data-pill-meta="nfc_rfid">手机移动支付标配 · MIFARE / UCODE · Mobile NFC, eSE &amp; RFID</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="rf_datacenter" aria-pressed="false"><span class="ip-pill-mono mono">RF</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="rf_datacenter">09. 5G GaN 射频功率与数据中心</span><span class="ip-pill-meta mono" data-pill-meta="rf_datacenter">Comm Infra $503M/Q3 (+54% YoY) · 5G GaN RF &amp; Data Center</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="analog_pmic" aria-pressed="false"><span class="ip-pill-mono mono">PM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="analog_pmic">10. 安全 PMIC、eFuse 与模拟前端</span><span class="ip-pill-meta mono" data-pill-meta="analog_pmic">FS2x/FS27 · eF100 · NAFE73388 · Safety PMIC, eFuse &amp; AFE</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="edgelock_sec" aria-pressed="false"><span class="ip-pill-mono mono">EL</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="edgelock_sec">11. EdgeLock 安全与 2GO 云服务</span><span class="ip-pill-meta mono" data-pill-meta="edgelock_sec">SE051H · EdgeLock 2GO · PQC/CRA · EdgeLock Security &amp; 2GO Cloud</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="coreride_sw" aria-pressed="false"><span class="ip-pill-mono mono">SW</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="coreride_sw">12. CoreRide、MotionWise 与开发生态</span><span class="ip-pill-meta mono" data-pill-meta="coreride_sw">TTTech $766M · eIQ · MCUXpresso · CoreRide, MotionWise &amp; SW Stack</span></span></button>
+ </div>
+ </section>
+
+ <!-- Dynamic Monograph Sections Host (00 - 07) -->
+ <div id="ipSectionsHost">
+ <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="战略定评：软件定义汽车（SDV）中央计算与区域控制的行业事实标准底座" data-i18n-en="Verdict: De Facto Silicon Foundation for Software-Defined Vehicles (SDV) &amp; Zonal E/E">战略定评：软件定义汽车（SDV）中央计算与区域控制的行业事实标准底座</span><span class="mui-chip" data-i18n-zh="主力芯片族：S32N7/N55 超集成处理器 · S32G 车载网关 · S32Z/E 实时域控 · S32K5/K3 区域 MCU" data-i18n-en="Key Silicon: S32N7/N55 Super-Integration · S32G Gateways · S32Z/E Real-Time · S32K5/K3 MCUs">主力芯片族：S32N7/N55 超集成处理器 · S32G 车载网关 · S32Z/E 实时域控 · S32K5/K3 区域 MCU</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="财报基准：FY2025 + Q3 2026 官方核验" data-i18n-en="Baseline: FY2025 &amp; Q3 2026 Official">财报基准：FY2025 + Q3 2026 官方核验</span></div><div class="hero-overline mono"><span data-i18n-zh="CORE THESIS · 汽车业务占恩智浦总营收 55%–58% × S32N7 AI 边缘编排 × 大众集团深度战略绑定" data-i18n-en="CORE THESIS · 55%–58% of NXP Revenue × S32N7 Agentic Edge Compute × Volkswagen Strategic Pact">CORE THESIS · 汽车业务占恩智浦总营收 55%–58% × S32N7 AI 边缘编排 × 大众集团深度战略绑定</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">S32 汽车域控与区域计算处理器研报：<span class="gradient-accent">如何借 SDV 架构重构单车芯片价值量？</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">随着全球整车厂从分布式 ECU 转向“中央计算 + 区域控制（Zonal E/E）”架构，恩智浦汽车业务在 Q3 2026 创下 <strong>$20.70 亿美元</strong>（同比 +13%、环比 +7%）的强劲复苏 <a class="cite-link" href="https://media.nxp.com/news-releases/news-release-details/nxp-semiconductors-reports-third-quarter-2026-results/" target="_blank" rel="noopener noreferrer">Q3 2026 8-K ↗</a>。核心引擎正是 <strong>S32 统一汽车计算平台</strong>：向上以 5nm 制程 <strong>S32N55 / S32N7</strong> 超集成处理器整合车辆动态控制与智能体 AI 编排 <a class="cite-link" href="https://www.nxp.com/company/about-nxp/events/event-archive/nxp-embedded-world:NXP-EMBEDDED-WORLD" target="_blank" rel="noopener noreferrer">EW 2026 ↗</a>，中腰部以 <strong>S32G</strong> 统治车载网关与 <strong>S32Z/E</strong> 接管多合一电驱实时控制，向下以 <strong>S32K5 / S32K3</strong> 锚定区域配电与车身执行器，并叠加 TTTech Auto MotionWise 安全中间件与大众集团 2026 年 10 月战略合作，构筑极难替代的软硬一体护城河 <a class="cite-link" href="https://www.nxp.com/applications/technologies/ai-and-machine-learning/automotive-edge-ai:AUTOMOTIVE-EDGE-AI" target="_blank" rel="noopener noreferrer">CoreRide ↗</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="单车价值量随区域架构翻倍" data-i18n-en="Zonal E/E Doubles Content per Vehicle">单车价值量随区域架构翻倍</h3><p data-i18n-zh="传统汽车数百颗分散 MCU 整合为 1–2 颗 S32N 中央处理器 + 4–6 颗 S32K5 区域控制器，单车 ASP 大幅跃升。" data-i18n-en="Consolidating dozens of legacy ECUs into S32N central compute + S32K5 zonal nodes structurally lifts NXP dollar content per car.">传统汽车数百颗分散 MCU 整合为 1–2 颗 S32N 中央处理器 + 4–6 颗 S32K5 区域控制器，单车 ASP 大幅跃升。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="全系 ASIL-D 功能安全与软件复用" data-i18n-en="Universal ASIL-D &amp; Software Reuse">全系 ASIL-D 功能安全与软件复用</h3><p data-i18n-zh="S32 全家族共享统一 Arm 内核与安全岛架构，OEM 一次开发即可跨高低配车型无缝移植，客户粘性极高。" data-i18n-en="Shared Arm architecture, HSE security, and ASIL-D safety across S32 tiers slash OEM software porting costs across vehicle trims.">S32 全家族共享统一 Arm 内核与安全岛架构，OEM 一次开发即可跨高低配车型无缝移植，客户粘性极高。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="S32N7 叠加 eIQ Auto 切入车端 AI" data-i18n-en="S32N7 + eIQ Auto Edge Orchestration">S32N7 叠加 eIQ Auto 切入车端 AI</h3><p data-i18n-zh="整合神经处理单元与安全隔离域，支持在不影响底盘安全的前提下运行车载智能体与预测性维护 AI。" data-i18n-en="Hardware-isolated NPU partitions let OEMs run agentic EV trip orchestration alongside ASIL-D chassis control.">整合神经处理单元与安全隔离域，支持在不影响底盘安全的前提下运行车载智能体与预测性维护 AI。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q3 2026 汽车分部营收" data-i18n-en="Q3 2026 Auto Revenue">Q3 2026 汽车分部营收</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="+13% YoY" data-i18n-en="+13% YoY">+13% YoY</span></div><div class="kpi-value mono" data-i18n-zh="$2.07B" data-i18n-en="$2.07B">$2.07B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">占 Q3 2026 总营收 ($3.79B) 的 54.7%，环比 +7% <a class="cite-link" href="https://media.nxp.com/news-releases/news-release-details/nxp-semiconductors-reports-third-quarter-2026-results/" target="_blank" rel="noopener noreferrer">Q3 2026 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY2025 汽车全年营收" data-i18n-en="FY2025 Auto Net Sales">FY2025 汽车全年营收</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="基本盘 58%" data-i18n-en="58% Mix">基本盘 58%</span></div><div class="kpi-value mono" data-i18n-zh="$7.12B" data-i18n-en="$7.12B">$7.12B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">在行业去库存周期中仍稳守 $71.16 亿规模 <a class="cite-link" href="https://media.nxp.com/news-releases/news-release-details/nxp-semiconductors-reports-fourth-quarter-and-full-year-2025/" target="_blank" rel="noopener noreferrer">FY25 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="全球汽车半导体市场规模" data-i18n-en="Global Auto Semi TAM">全球汽车半导体市场规模</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="2026E 估算" data-i18n-en="2026E TAM">2026E 估算</span></div><div class="kpi-value mono" data-i18n-zh="$107.3B" data-i18n-en="$107.3B">$107.3B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">预计 2031 年增至 $1,485.7 亿，区域架构驱动硅含量上行 <a class="cite-link" href="https://www.theindextimes.com/post/nxpi-nxp-semiconductors-is-betting-that-the-ai-revolution-happens-at" target="_blank" rel="noopener noreferrer">Market ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="VSMC 300mm 晶圆产能保障" data-i18n-en="VSMC 300mm Fab Ramp">VSMC 300mm 晶圆产能保障</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="2026.09 投产" data-i18n-en="Opened Sep 26">2026.09 投产</span></div><div class="kpi-value mono" data-i18n-zh="300mm" data-i18n-en="300mm">300mm</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">与世界先进合资新加坡 VSMC 首座 12 寸厂于 2026 年 9 月开幕，锁定车规混合信号产能 <a class="cite-link" href="https://media.nxp.com/news-releases/news-release-details/nxp-semiconductors-reports-third-quarter-2026-results/" target="_blank" rel="noopener noreferrer">VSMC ↗</a>。</p></div></div></section>
+ </div>
+ </main>
+ </div>
+
+ <script src="../../_shared/edc5de15cc7d3a15.js"></script>
+</body>
+</html>

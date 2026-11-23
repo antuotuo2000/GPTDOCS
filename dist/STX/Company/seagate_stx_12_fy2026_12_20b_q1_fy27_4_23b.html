@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>希捷科技 Seagate (STX) 全产品线与服务 12 大板块深度研报中枢（FY2026 $12.20B · Q1 FY27 $4.23B）| 数据中心</title>
+ <meta name="description" content="Seagate Technology Holdings plc (NASDAQ: STX) 希捷科技 12 大产品与服务深度商业研报中枢（FY2026 $12.20B 营收、Q1 FY2027 $4.23B +61% YoY、57.8% Non-GAAP 毛利率）：覆盖 Mozaic 3+/4+ HAMR、Exos、CORVAULT、Nytro SSD、IronWolf NAS、SkyHawk AI、BarraCuda、FireCuda、LaCie、消费级外置、Lyve Cloud/Mobile 与 Rescue/Secure。" />
+ <script src="../../_shared/8bb21429b650b62d.js"></script>
+ <link rel="stylesheet" href="../../_shared/1eff97ee7a2a3442.css">
+
+ <link rel="stylesheet" href="../../_shared/372add634973254b.css">
+ 
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI High-Clarity AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">MZ</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+ <a class="crumb-link hide-sm" href="../../index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg><span data-i18n-zh="希捷研报中枢" data-i18n-en="Seagate Hub">希捷研报中枢</span></a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="01 · Mozaic 3+ / 4+ HAMR 热辅助磁记录技术平台（30TB–44TB+）" data-i18n-en="01 · Mozaic 3+ / 4+ HAMR Recording Platform (30TB–44TB+)">01 · Mozaic 3+ / 4+ HAMR 热辅助磁记录技术平台（30TB–44TB+）</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="FY26 近线 695 EB (+40%)" data-i18n-en="FY26 Nearline 695 EB (+40%)">FY26 近线 695 EB (+40%)</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="4.4TB/碟 · 44TB 批量出货" data-i18n-en="4.4TB/Platter · 44TB Shipping">4.4TB/碟 · 44TB 批量出货</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换希捷产品…" aria-label="快速跳转章节或产品线" data-ph-zh="检索章节或切换希捷产品…" data-ph-en="Jump to section or Seagate product…" data-aria-zh="快速跳转章节或产品线" data-aria-en="Quick jump to chapter or Seagate product" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ 
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与导航" data-aria-zh="研究章节目录与导航" data-aria-en="Report Chapters &amp; Navigation">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">SEAGATE CORE · HAMR MOAT</span>
+ <span class="mui-chip mono" style="font-size:0.68rem;">STX · 01/01</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="01 · Mozaic HAMR 技术平台" data-i18n-en="01 · Mozaic HAMR Platform">01 · Mozaic HAMR 技术平台</div>
+ <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="10碟 44TB 批量交付超大规模云厂商 × 纳米光子激光写入 × 无需新增产线实现单盘容量跃迁" data-i18n-en="10-platter 44TB volume shipping to hyperscalers × Nanophotonic laser writer × Capacity scaling without adding discs">10碟 44TB 批量交付超大规模云厂商 × 纳米光子激光写入 × 无需新增产线实现单盘容量跃迁</p>
+ <div class="sidebar-mini-kpis" id="sideMiniKpis"></div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="章节目录" data-aria-zh="章节目录" data-aria-en="Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="STX">
+          <div class="co-side-head">
+            <span class="co-side-title mono">STX · 01/01</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="seagate_stx_12_fy2026_12_20b_q1_fy27_4_23b.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="seagate_stx_12_fy2026_12_20b_q1_fy27_4_23b.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (1)" data-i18n-en="All (1)">全部 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="seagate_stx_12_fy2026_12_20b_q1_fy27_4_23b.html" title="希捷科技 Seagate (STX) 全产品线与服务 12 大板块深度研报中枢（FY2026 $12.20B · Q1 FY27 $4.23B）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="希捷科技 Seagate (STX) 全产品线与服务 12 大板块深度研报中枢（FY2026 $12.20B · Q1 FY27 $4.23B）" data-i18n-en="Seagate (STX) &amp; 12 Deep DiveReport (FY2026 $12.20B · Q1 FY27 $4.23B)">希捷科技 Seagate (STX) 全产品线与服务 12 大板块深度研报中枢（FY2026 $12.20B · Q1 FY27 $4.23B）</span><span class="co-hub-meta mono">Company</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0">执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1">技术架构与核心飞轮</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2">四大统治支柱与雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3">内部阶梯与竞品对比</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4">单位经济与财务模拟</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5">代际演进与关键战役</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6">护城河核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7">SEC财报与信源索引</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+ <!-- Seagate 12 All-Products & Services Interactive Switcher -->
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="希捷科技 12 大产品与服务切换台">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">SEAGATE (STX) 12 ALL-PRODUCTS &amp; SERVICES</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="希捷科技 Seagate 全系列 12 大产品与服务深度研报中枢（100% 覆盖数据中心 · 边缘客户端 · 创意与云服务）" data-i18n-en="Seagate Technology 12 All-Products &amp; Services Monograph Hub (100% Coverage Across Data Center, Edge &amp; Cloud/Services)">希捷科技 Seagate 全系列 12 大产品与服务深度研报中枢（100% 覆盖数据中心 · 边缘客户端 · 创意与云服务）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" class="mui-btn" title="切换至上一产品线 (快捷键 [)" data-title-zh="切换至上一产品线 (快捷键 [)" data-title-en="Previous Product Line (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一产品" data-i18n-en="Prev">上一产品</span>
+ </button>
+ <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一产品线 (快捷键 ])" data-title-zh="切换至下一产品线 (快捷键 ])" data-title-en="Next Product Line (Shortcut ])">
+ <span data-i18n-zh="下一产品" data-i18n-en="Next">下一产品</span> <span>→</span>
+ </button>
+ <button type="button" id="hubFocusModeBtn" class="mui-btn" title="展开/收起 12 大产品矩阵" data-title-zh="展开/收起 12 大产品矩阵" data-title-en="Toggle 12-Product Focus Mode">单品沉浸阅读 ▴</button>
+ 
+ </div>
+ </div>
+
+ <div class="hub-summary-strip">
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="FY2026 集团总营收" data-i18n-en="FY2026 Consolidated Revenue">FY2026 集团总营收</span>
+ <span class="hub-sum-val mono">$12.20B (+34% YoY)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Q1 FY2027 单季营收 / 增速" data-i18n-en="Q1 FY2027 Revenue / Growth">Q1 FY2027 单季营收 / 增速</span>
+ <span class="hub-sum-val mono">$4.23B (+61% YoY)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Q1 FY2027 毛利率 (GAAP/Non-GAAP)" data-i18n-en="Q1 FY2027 Gross Margin">Q1 FY2027 毛利率 (GAAP/Non-GAAP)</span>
+ <span class="hub-sum-val mono">57.3% / 57.8%</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="FY26 自由现金流 / 数据中心占比" data-i18n-en="FY26 FCF / Data Center Mix">FY26 自由现金流 / 数据中心占比</span>
+ <span class="hub-sum-val mono">$3.11B · ~80% 营收</span>
+ </div>
+ </div>
+
+ <div class="hub-cat-bar">
+ <div class="hub-cat-pills" role="tablist" aria-label="希捷产品线大类筛选">
+ <button type="button" class="hub-cat-btn active" data-cat-filter="all" data-i18n-zh="全部 12 大产品与服务" data-i18n-en="All 12 Pillars">全部 12 大产品与服务</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="datacenter" data-i18n-zh="数据中心与底层技术 (01–04)" data-i18n-en="Data Center &amp; Core (01–04)">数据中心与底层技术 (01–04)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="edge_client" data-i18n-zh="边缘 NAS · 安防 · 客户端 (05–08)" data-i18n-en="Edge, NAS &amp; Client (05–08)">边缘 NAS · 安防 · 客户端 (05–08)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="creative_services" data-i18n-zh="创意生态 · 云服务 · 安全 (09–12)" data-i18n-en="Creative, Cloud &amp; Security (09–12)">创意生态 · 云服务 · 安全 (09–12)</button>
+ </div>
+ <span class="mono" style="font-size:0.73rem;color:var(--text-muted);" data-i18n-zh="提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节" data-i18n-en="Tip: Press [ / ] to cycle products · Press ⌘K to jump">提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节</span>
+ </div>
+
+ <div class="ip-pill-grid" id="ipPillGrid">
+ <button type="button" class="ip-pill-btn active" data-switch-ip="mozaic_hamr" aria-pressed="true"><span class="ip-pill-mono mono">MZ</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="mozaic_hamr">01. Mozaic 3+ / 4+ HAMR 平台</span><span class="ip-pill-meta mono" data-pill-meta="mozaic_hamr">30TB–44TB+ · 4.4TB/碟 · Mozaic 3+ / 4+ HAMR Platform</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="exos_enterprise" aria-pressed="false"><span class="ip-pill-mono mono">EX</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="exos_enterprise">02. Exos 企业级近线与 MACH.2</span><span class="ip-pill-meta mono" data-pill-meta="exos_enterprise">占营收 ~80% · 198 EB/季 · Exos Enterprise & MACH.2</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="corvault_systems" aria-pressed="false"><span class="ip-pill-mono mono">CV</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="corvault_systems">03. Exos CORVAULT 与企业系统</span><span class="ip-pill-meta mono" data-pill-meta="corvault_systems">4U 106盘 · PB级自愈合 · Exos CORVAULT & Systems</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="nytro_ssd" aria-pressed="false"><span class="ip-pill-mono mono">NY</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="nytro_ssd">04. Nytro 企业级 NVMe SSD</span><span class="ip-pill-meta mono" data-pill-meta="nytro_ssd">PCIe Gen5 · 14.9 GB/s · Nytro Enterprise SSDs</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ironwolf_nas" aria-pressed="false"><span class="ip-pill-mono mono">IW</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ironwolf_nas">05. IronWolf & Pro NAS</span><span class="ip-pill-meta mono" data-pill-meta="ironwolf_nas">1TB–32TB CMR · $849.99 · IronWolf & Pro NAS</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="skyhawk_ai" aria-pressed="false"><span class="ip-pill-mono mono">SH</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="skyhawk_ai">06. SkyHawk & AI 智能安防</span><span class="ip-pill-meta mono" data-pill-meta="skyhawk_ai">32TB · 64路视频+32路AI · SkyHawk & SkyHawk AI</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="barracuda_pc" aria-pressed="false"><span class="ip-pill-mono mono">BC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="barracuda_pc">07. BarraCuda 桌面与 OEM</span><span class="ip-pill-meta mono" data-pill-meta="barracuda_pc">500GB–24TB · 现金流基石 · BarraCuda PC & OEM</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="firecuda_gaming" aria-pressed="false"><span class="ip-pill-mono mono">FC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="firecuda_gaming">08. FireCuda 电竞与主机生态</span><span class="ip-pill-meta mono" data-pill-meta="firecuda_gaming">Gen5 SSD · PS5/Xbox 授权 · FireCuda Gaming & Consoles</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="lacie_creative" aria-pressed="false"><span class="ip-pill-mono mono">LC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="lacie_creative">09. LaCie 创意专业存储</span><span class="ip-pill-meta mono" data-pill-meta="lacie_creative">Thunderbolt 5 · $1,844+ · LaCie Creative Pro</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="consumer_external" aria-pressed="false"><span class="ip-pill-mono mono">OT</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="consumer_external">10. 消费级移动与桌面外置</span><span class="ip-pill-meta mono" data-pill-meta="consumer_external">One Touch / Expansion · Consumer External Drives</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="lyve_cloud_mobile" aria-pressed="false"><span class="ip-pill-mono mono">LV</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="lyve_cloud_mobile">11. Lyve Cloud 与边缘迁移</span><span class="ip-pill-meta mono" data-pill-meta="lyve_cloud_mobile">零出口费 S3 · 边缘摆渡 · Lyve Cloud & Lyve Mobile</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="rescue_secure" aria-pressed="false"><span class="ip-pill-mono mono">RS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="rescue_secure">12. Rescue 数据恢复与安全</span><span class="ip-pill-meta mono" data-pill-meta="rescue_secure">95%+ 恢复率 · SED 加密 · Rescue & Seagate Secure</span></span></button>
+ </div>
+ </section>
+
+ <!-- Dynamic Monograph Sections Host (00 - 07) -->
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="战略定评：全球存储行业近二十年最大技术代差护城河与高毛利引擎" data-i18n-en="Verdict: Storage Industry's Largest Two-Decade Tech Moat &amp; Gross Margin Engine">战略定评：全球存储行业近二十年最大技术代差护城河与高毛利引擎</span><span class="mui-chip" data-i18n-zh="量产代际：Mozaic 3+ (30TB–36TB) · Mozaic 4+ (40TB–44TB) · 2028 路线图 50TB+" data-i18n-en="Production Nodes: Mozaic 3+ (30–36TB) · Mozaic 4+ (40–44TB) · 50TB+ Roadmap">量产代际：Mozaic 3+ (30TB–36TB) · Mozaic 4+ (40TB–44TB) · 2028 路线图 50TB+</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="财报基准：FY2026 &amp; Q1 FY2027 (截至 2026-10-02) 官方核验" data-i18n-en="Filing Baseline: FY2026 &amp; Q1 FY2027 (Ended Oct 2, 2026)">财报基准：FY2026 &amp; Q1 FY2027 (截至 2026-10-02) 官方核验</span></div><div class="hero-overline mono"><span data-i18n-zh="CORE THESIS · 4.4TB/碟纳米光子写入 × 90% 成熟机械件复用 × 推动 Q1 FY27 毛利率飙升至 57.8%" data-i18n-en="CORE THESIS · 4.4TB/Platter Plasmonic Writer × 90% Proven Mechanics × Driving Record 57.8% Non-GAAP GM">CORE THESIS · 4.4TB/碟纳米光子写入 × 90% 成熟机械件复用 × 推动 Q1 FY27 毛利率飙升至 57.8%</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">希捷 Mozaic 3+ / 4+ HAMR 平台深度研报：<span class="gradient-accent">如何在不增加盘片的前提下，用激光改写 AI 时代的存储毛利天花板？</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">面对 AI 视频生成、多模态大模型与数据湖引发的指数级冷温数据爆发，传统 PMR 垂直磁记录已触及超顺磁物理极限。希捷耗时逾二十年押注 <strong>HAMR（热辅助磁记录）</strong>，于 2025 年面向渠道全面铺开 <strong>Mozaic 3+（30TB–36TB）</strong>，并于 2026 年 3 月宣布下一代 <strong>Mozaic 4+（单碟 4.4TB、10 碟 44TB）</strong>向两大超大规模云厂商批量出货 <a class="cite-link" href="https://www.seagate.com/stories/articles/seagate-delivers-industrys-highest-capacity-hard-drives-with-next-generation-mozaic-4/" target="_blank" rel="noopener noreferrer">Mozaic 4+ 44TB ↗</a> <a class="cite-link" href="https://investors.seagate.com/news/news-details/2025/Seagate-Introduces-Hard-Drive-Capacities-of-Up-to-36TB-Extending-Its-HAMR-Based-Mozaic-3-Technology-Platform/default.aspx" target="_blank" rel="noopener noreferrer">Mozaic 3+ 36TB ↗</a>。通过“以单碟面密度提升替代增加盘片数量”的工程范式，希捷在不大幅扩建晶圆/盘体产线（FY26 CapEx 仅占营收 4.7%）的前提下，驱动 FY26 近线出货飙升 <strong>40% 至 695 EB</strong>、Q1 FY27 营收同比暴增 <strong>+61% 至 $42.33 亿美元</strong>，Non-GAAP 毛利率创下历史性的 <strong>57.8%</strong> <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1137789/000113778926000153/stxq42026pressreleasefinan.htm" target="_blank" rel="noopener noreferrer">SEC 8-K FY26 ↗</a> <a class="cite-link" href="https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-First-Quarter-2027-Financial-Results/default.aspx" target="_blank" rel="noopener noreferrer">STX Q1 FY27 IR ↗</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="面密度跃迁直接转化为单位 TB 成本骤降" data-i18n-en="Areal Density Cuts Cost-per-TB Without More Discs">面密度跃迁直接转化为单位 TB 成本骤降</h3><p data-i18n-zh="10 碟装即可实现 44TB（较 30TB 提升近 47%），复用 90% 既有机械平台组件，单 TB 功耗与机架空间大幅压缩。" data-i18n-en="Hits 44TB on 10 platters (+47% vs 30TB) while reusing ~90% of proven mechanical components, slashing watts/TB and rack footprint.">10 碟装即可实现 44TB（较 30TB 提升近 47%），复用 90% 既有机械平台组件，单 TB 功耗与机架空间大幅压缩。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="二代纳米光子写入器与超晶格铂合金介质" data-i18n-en="Gen-2 Plasmonic Writer &amp; Superlattice Media">二代纳米光子写入器与超晶格铂合金介质</h3><p data-i18n-zh="自研纳米光子激光器瞬间局部加热高矫顽力铂铁超晶格介质至居里点写入，并配备 7nm 集成主控芯片保障 250 万小时 MTBF。" data-i18n-en="In-house nanophotonic laser heats high-coercivity platinum-alloy superlattice media in nanoseconds, paired with a 7nm SoC for 2.5M-hr MTBF.">自研纳米光子激光器瞬间局部加热高矫顽力铂铁超晶格介质至居里点写入，并配备 7nm 集成主控芯片保障 250 万小时 MTBF。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="收购 Intevac 垂直整合镀膜设备供应链" data-i18n-en="Intevac Acquisition Locks Media Tooling IP">收购 Intevac 垂直整合镀膜设备供应链</h3><p data-i18n-zh="2025 年以 $1.19 亿全现金收购硬盘溅射设备商 Intevac，将 HAMR 核心介质镀膜工艺与设备壁垒完全收归自有。" data-i18n-en="Acquired HDD sputtering equipment maker Intevac for $119M cash in 2025, vertically securing proprietary HAMR media deposition tooling.">2025 年以 $1.19 亿全现金收购硬盘溅射设备商 Intevac，将 HAMR 核心介质镀膜工艺与设备壁垒完全收归自有。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Mozaic 4+ 单盘最高容量" data-i18n-en="Mozaic 4+ Max Capacity">Mozaic 4+ 单盘最高容量</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="2026.03 批量出货" data-i18n-en="Shipping Mar 2026">2026.03 批量出货</span></div><div class="kpi-value mono" data-i18n-zh="44TB (4.4TB/碟)" data-i18n-en="44TB (4.4TB/disc)">44TB (4.4TB/碟)</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">已向两家头部超大规模云厂商量产出货，30TB/32TB/36TB Mozaic 3+ 同步覆盖渠道 <a class="cite-link" href="https://www.seagate.com/stories/articles/seagate-delivers-industrys-highest-capacity-hard-drives-with-next-generation-mozaic-4/" target="_blank" rel="noopener noreferrer">Mozaic 4+ 44TB ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q1 FY27 集团营收与增速" data-i18n-en="Q1 FY27 Revenue &amp; Growth">Q1 FY27 集团营收与增速</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="同比 +61.0% YoY" data-i18n-en="+61.0% YoY">同比 +61.0% YoY</span></div><div class="kpi-value mono" data-i18n-zh="$4.23B" data-i18n-en="$4.23B">$4.23B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">截至 2026-10-02 单季营收 $4,233M，Q2 FY27 指引进一步上调至 $4.8B <a class="cite-link" href="https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-First-Quarter-2027-Financial-Results/default.aspx" target="_blank" rel="noopener noreferrer">STX Q1 FY27 IR ↗</a> <a class="cite-link" href="https://www.stocktitan.net/sec-filings/STX/10-q-seagate-technology-holdings-plc-quarterly-earnings-report-d15b14b99c34.html" target="_blank" rel="noopener noreferrer">SEC Q1 FY27 10-Q ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q1 FY27 Non-GAAP 毛利率" data-i18n-en="Q1 FY27 Non-GAAP GM">Q1 FY27 Non-GAAP 毛利率</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="两年跳升 +24pp" data-i18n-en="+24pp vs FY24">两年跳升 +24pp</span></div><div class="kpi-value mono" data-i18n-zh="57.8%" data-i18n-en="57.8%">57.8%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">较 FY24 的 23.4% 与 FY25 的 35.8% 实现跨越式重构，价值定价与 HAMR 结构立功 <a class="cite-link" href="https://beancount.io/blog/2026/11/08/seagate-fy2027-q1-earnings-analysis" target="_blank" rel="noopener noreferrer">Margin Ledger ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="SSD 相对 HDD 单 TB 溢价倍数" data-i18n-en="SSD vs. HDD Price/TB Ratio">SSD 相对 HDD 单 TB 溢价倍数</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="至少持续至 2027+" data-i18n-en="Through 2027+">至少持续至 2027+</span></div><div class="kpi-value mono" data-i18n-zh="≥ 7 : 1" data-i18n-en="≥ 7 : 1">≥ 7 : 1</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">企业级数据中心 87% 存储需求仍由 HDD 承载，替代 HDD 需 $2,400 亿 NAND 资本开支 <a class="cite-link" href="https://www.forbes.com/sites/tomcoughlin/2025/08/04/c2q-2025-hdd-industry-growth-projected-for-2025/" target="_blank" rel="noopener noreferrer">HDD Market Share ↗</a>。</p></div></div></section>
+    </div>
+ </main>
+ </div>
+
+ <script src="../../_shared/bbc9ae5432084455.js"></script>
+</body>
+</html>

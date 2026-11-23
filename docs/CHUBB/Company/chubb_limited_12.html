@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-density="comfortable">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+ <title>安达保险（Chubb Limited）全线 12 大核心产品与服务深度商业研报中枢 | 安达数据中心</title>
+ <meta name="description" content="基于 Chubb Limited FY2025 10-K 与 2026Q1–Q3 Form 8-K/10-Q 官方财报核验，逐一深度拆解安达保险全线 12 款核心产品与服务的技术底座、竞争护城河、单元经济模型与 5 年复利推演。" />
+ <script src="../../_shared/30c964d6b70a6860.js"></script>
+ <link rel="stylesheet" href="../../_shared/6a788b40b2a2cc4c.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">ES</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+ <a class="crumb-link hide-sm" href="../../index.html">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="安达数据中心" data-i18n-en="Chubb Research Hub">安达数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current">北美大客户零售与 Westchester E&amp;S 批发商业险研报</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-md">FY25 NPW $12.69B · Q3&#x27;26 $3.21B</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-md">NA 商业 CR 81.4% · 5年CAGR 12%(E&amp;S)</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换产品…" aria-label="快速跳转章节或产品" data-ph-zh="检索章节或切换产品…" data-ph-en="Jump to chapter or product…" data-aria-zh="快速跳转章节或产品" data-aria-en="Quick jump to chapter or product" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+
+ <div class="mui-lang-switch hide-sm" role="group" aria-label="排版密度切换" data-aria-zh="排版密度切换" data-aria-en="Reading Density">
+ 
+ 
+ </div>
+
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换高清晰浅色 / 零噪点深空暗色" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换高清晰浅色 / 零噪点深空暗色" data-title-en="Toggle Crisp Light / Deep-Space Dark">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ <span id="appbarThemeLabel" class="hide-sm">清晰浅色</span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与产品导航" data-aria-zh="研究章节目录与产品导航" data-aria-en="Report Chapters &amp; Product Nav">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">CHUBB · #1 COMMERCIAL ENGINE</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title">北美大客户与 E&amp;S 商业险</div>
+ <p id="sideCardSub" class="sidebar-subtitle">FY25 净保费 $126.91亿 × Westchester E&amp;S $39亿 × 世界500强复杂风险承保中枢</p>
+ <div class="sidebar-mini-kpis" id="sideMiniKpis"></div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="章节目录" data-aria-zh="章节目录" data-aria-en="Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="CHUBB">
+          <div class="co-side-head">
+            <span class="co-side-title mono">CHUBB · 01/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../SeniorExecutive/chubb_limited_nyse_cb_42_chubb_executive_hub.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../SeniorExecutive/chubb_limited_nyse_cb_42_chubb_executive_hub.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="chubb_limited_12.html" title="安达保险（Chubb Limited）全线 12 大核心产品与服务深度商业研报中枢 | 安达数据中心"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="安达保险（Chubb Limited）全线 12 大核心产品与服务深度商业研报中枢 | 安达数据中心" data-i18n-en="(Chubb Limited) 12 &amp; Deep Dive Report | Data Center">安达保险（Chubb Limited）全线 12 大核心产品与服务深度商业研报中枢 | 安达数据中心</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../SeniorExecutive/chubb_limited_nyse_cb_42_chubb_executive_hub.html" title="安达保险 (Chubb Limited, NYSE: CB) 42 大核心高管全景深度研报中枢 | Chubb Executive Hub"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="安达保险 (Chubb Limited, NYSE: CB) 42 大核心高管全景深度研报中枢 | Chubb Executive Hub" data-i18n-en="(Chubb Limited, NYSE: CB) 42 OverviewDeep DiveReport | Chubb Executive Hub">安达保险 (Chubb Limited, NYSE: CB) 42 大核心高管全景深度研报中枢 | Chubb Executive Hub</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ <div class="nav-section-label" data-i18n-zh="当前产品研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">当前产品研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList"><li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心经营指标" data-i18n-en="Executive Summary &amp; Core KPIs">执行摘要与核心经营指标</span></a></li><li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="大型商业承保架构与 E&amp;S 飞轮" data-i18n-en="Major Accounts &amp; E&amp;S Architecture">大型商业承保架构与 E&amp;S 飞轮</span></a></li><li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大商业支柱与五维护城河雷达" data-i18n-en="4 Commercial Pillars &amp; Moat Radar">四大商业支柱与五维护城河雷达</span></a></li><li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="北美商业与 E&amp;S 巨头横向对标" data-i18n-en="NA Commercial &amp; E&amp;S Peer Matrix">北美商业与 E&amp;S 巨头横向对标</span></a></li><li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="单元经济学与周期承保模拟器" data-i18n-en="Unit Economics &amp; Cycle Simulator">单元经济学与周期承保模拟器</span></a></li><li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="演进时间轴与承保纪律战役" data-i18n-en="Evolution Timeline &amp; Cycle Battles">演进时间轴与承保纪律战役</span></a></li><li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="大客户与 E&amp;S 护城河核查清单" data-i18n-en="Major &amp; E&amp;S Moat Checklist">大客户与 E&amp;S 护城河核查清单</span></a></li><li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="一手 SEC 财报与权威核验信源" data-i18n-en="Primary SEC Filings &amp; Verified Sources">一手 SEC 财报与权威核验信源</span></a></li></ul>
+ </nav>
+
+ 
+ </aside>
+
+ <main class="main-content">
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="安达保险 12 大核心产品与服务切换中枢"><div class="ip-hub-top"><div class="ip-hub-title-group"><span class="mui-chip mui-chip-primary mono">CHUBB · 12 FLAGSHIP PRODUCTS</span><span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="安达保险全线 12 款核心产品与服务独立商业研报切换中枢（点击任一产品实时重绘全部 8 大章节、5 张高分图表与盈利推演器）" data-i18n-en="Chubb Limited 12 Flagship Products &amp; Services Monograph Hub (Click any product to dynamically render all 8 chapters, 5 charts &amp; ROI simulator)">安达保险全线 12 款核心产品与服务独立商业研报切换中枢（点击任一产品实时重绘全部 8 大章节、5 张高分图表与盈利推演器）</span></div><div class="ip-hub-controls"><button type="button" id="prevIpBtn" class="mui-btn" title="切换上一款产品 (快捷键 [)" data-title-zh="切换上一款产品 (快捷键 [)" data-title-en="Previous Product (Shortcut [)"><span>←</span> <span data-i18n-zh="上一产品" data-i18n-en="Prev">上一产品</span></button><button type="button" id="nextIpBtn" class="mui-btn" title="切换下一款产品 (快捷键 ])" data-title-zh="切换下一款产品 (快捷键 ])" data-title-en="Next Product (Shortcut ])"><span data-i18n-zh="下一产品" data-i18n-en="Next">下一产品</span> <span>→</span></button><a data-open-standalone-link="1" class="mui-btn" href="#prod=na_major_es"><span data-open-standalone-text="1" data-i18n-zh="打开《北美大型企业与 E&amp;S》独立页 ↗" data-i18n-en="Open NA Major &amp; E&amp;S Page ↗">打开《北美大型企业与 E&amp;S》独立页 ↗</span></a></div></div><div class="hub-cat-bar" role="tablist"><button type="button" class="hub-cat-btn active" data-hub-cat="all" data-i18n-zh="全部产品 (12)" data-i18n-en="All (12)">全部产品 (12)</button><button type="button" class="hub-cat-btn" data-hub-cat="commercial_na" data-i18n-zh="北美商业与农业 (01–03)" data-i18n-en="NA Commercial &amp; Ag (01–03)">北美商业与农业 (01–03)</button><button type="button" class="hub-cat-btn" data-hub-cat="personal_overseas" data-i18n-zh="豪宅与海外业务 (04–06)" data-i18n-en="HNW &amp; Overseas (04–06)">豪宅与海外业务 (04–06)</button><button type="button" class="hub-cat-btn" data-hub-cat="life_re_specialty" data-i18n-zh="寿险、再保与网络 (07–09)" data-i18n-en="Life, Re &amp; Cyber (07–09)">寿险、再保与网络 (07–09)</button><button type="button" class="hub-cat-btn" data-hub-cat="services_digital" data-i18n-zh="防损、理赔与数字 (10–12)" data-i18n-en="Services &amp; Studio (10–12)">防损、理赔与数字 (10–12)</button></div><div class="ip-pill-grid"><button type="button" class="ip-pill-btn active" data-switch-ip="na_major_es" data-prod-group="commercial_na" aria-pressed="true"><span class="ip-pill-mono mono">MJ</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="na_major_es">01. 北美大客户与 E&amp;S 批发</span><span class="ip-pill-meta mono" data-pill-meta="na_major_es">$12.69B/年 · 81.4% CR</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="na_middle_small" data-prod-group="commercial_na" aria-pressed="false"><span class="ip-pill-mono mono">MS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="na_middle_small">02. 北美中小微商业险</span><span class="ip-pill-meta mono" data-pill-meta="na_middle_small">$8.59B/年 · 8.5% CAGR</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="na_agriculture" data-prod-group="commercial_na" aria-pressed="false"><span class="ip-pill-mono mono">AG</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="na_agriculture">03. 北美农业保险 Rain &amp; Hail</span><span class="ip-pill-meta mono" data-pill-meta="na_agriculture">$2.93B/年 · 全美 #1</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="na_personal_hnw" data-prod-group="personal_overseas" aria-pressed="false"><span class="ip-pill-mono mono">MP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="na_personal_hnw">04. 北美高净值个人险 Masterpiece</span><span class="ip-pill-meta mono" data-pill-meta="na_personal_hnw">$7.02B/年 · 95%+ 留存</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="overseas_commercial" data-prod-group="personal_overseas" aria-pressed="false"><span class="ip-pill-mono mono">OC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="overseas_commercial">05. 海外一般商业险与跨国统筹</span><span class="ip-pill-meta mono" data-pill-meta="overseas_commercial">$8.81B/年 · 54国牌照</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="overseas_consumer_ah" data-prod-group="personal_overseas" aria-pressed="false"><span class="ip-pill-mono mono">AH</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="overseas_consumer_ah">06. 海外消费险与意外健康险</span><span class="ip-pill-meta mono" data-pill-meta="overseas_consumer_ah">$6.22B/年 · +11% YoY</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="chubb_life_huatai" data-prod-group="life_re_specialty" aria-pressed="false"><span class="ip-pill-mono mono">LF</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="chubb_life_huatai">07. 安达人寿与华泰控股</span><span class="ip-pill-meta mono" data-pill-meta="chubb_life_huatai">$7.28B/年 · 利润 $1.24B</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="global_reinsurance" data-prod-group="life_re_specialty" aria-pressed="false"><span class="ip-pill-mono mono">RE</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="global_reinsurance">08. 全球再保 (Tempest Re)</span><span class="ip-pill-meta mono" data-pill-meta="global_reinsurance">$1.31B/年 · 79.3% CR</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="cyber_financial_lines" data-prod-group="life_re_specialty" aria-pressed="false"><span class="ip-pill-mono mono">CY</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="cyber_financial_lines">09. Cyber ERM 与金融线</span><span class="ip-pill-meta mono" data-pill-meta="cyber_financial_lines">1998先行者 · 全球生态</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="risk_engineering_services" data-prod-group="services_digital" aria-pressed="false"><span class="ip-pill-mono mono">RE</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="risk_engineering_services">10. 风险工程与防损服务</span><span class="ip-pill-meta mono" data-pill-meta="risk_engineering_services">~500工程师 · IoT传感器</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="claims_worldview_service" data-prod-group="services_digital" aria-pressed="false"><span class="ip-pill-mono mono">CL</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="claims_worldview_service">11. 全球理赔与 Worldview®</span><span class="ip-pill-meta mono" data-pill-meta="claims_worldview_service">97%满意度 · 实时透明</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="chubb_studio_embedded" data-prod-group="services_digital" aria-pressed="false"><span class="ip-pill-mono mono">ST</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="chubb_studio_embedded">12. Chubb Studio® 与 $175.5B 浮存金</span><span class="ip-pill-meta mono" data-pill-meta="chubb_studio_embedded">$175.5B资产 · NII $1.89B/季</span></span></button></div></section>
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="产品战略定评：北美大型企业与非标准（E&amp;S）复杂风险的绝对定价权锚点" data-i18n-en="Verdict: Premier Underwriting Anchor for NA Fortune 500 &amp; E&amp;S Complex Risks">产品战略定评：北美大型企业与非标准（E&amp;S）复杂风险的绝对定价权锚点</span><span class="mui-chip" data-i18n-zh="追踪窗口：FY2024 ($12.51B) → FY2025 ($12.69B) → Q3 2026 ($3.21B/季)" data-i18n-en="Window: FY2024 ($12.51B) → FY2025 ($12.69B) → Q3 2026 ($3.21B/qtr)">追踪窗口：FY2024 ($12.51B) → FY2025 ($12.69B) → Q3 2026 ($3.21B/季)</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="数据基准：2026-10 Chubb Q3 8-K/新闻稿核验" data-i18n-en="Baseline: Oct 2026 Chubb Q3 Earnings Verified">数据基准：2026-10 Chubb Q3 8-K/新闻稿核验</span></div><div class="hero-overline mono"><span data-i18n-zh="PRODUCT 01 · $126.9亿大客户与批发体量 × Westchester 5年12%复合增速 × 81.4% 综合成本率" data-i18n-en="PRODUCT 01 · $12.69B Scale × 12% 5-Yr Westchester E&amp;S CAGR × 81.4% NA Commercial CR">PRODUCT 01 · $126.9亿大客户与批发体量 × Westchester 5年12%复合增速 × 81.4% 综合成本率</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">北美大客户零售与 Westchester E&S 批发深度研报：<span class="gradient-accent">当商业财产费率进入竞争软周期，安达如何靠“能力而非纯产能”守住 18%+ 承保利润率？</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">作为美国第一大商业险承保商，安达北美大客户零售（Major Accounts Retail，$76亿保费）与非标准批发平台 <strong>Westchester E&S</strong>（$39亿保费，过去5年复合增速达 <strong>12%</strong>）共同构成集团最核心的商业利润引擎 <a class="cite-link" href="https://about.chubb.com/stories/2025-chubb-letter-to-shareholders.html" target="_blank" rel="noopener noreferrer">2025 股东信 ↗</a>。面对 2026 年大型商业财产险费率走软，安达在 Q3 2026 主动收缩定价不足的大额财产与部分金融责任险敞口（该板块单季净保费同比主动微调 -5.0% 至 $32.10亿，剔除再保与主动减仓后仍正增长 +1.2%），以承保纪律换取行业领先的 <strong>82.1% 事故年除巨灾综合成本率</strong> <a class="cite-link" href="https://news.chubb.com/2026-10-20-Chubb-Reports-Third-Quarter-Per-Share-Net-Income-and-Record-Core-Operating-Income-of-7-30-and-7-66,-Respectively,-Up-4-4-and-0-8-Consolidated-Net-Premiums-Written-of-15-1-Billion,-Up-1-9-,-with-P-C-and-Life-Insurance-Up-1-9-and-1-4-P-C-Combined" target="_blank" rel="noopener noreferrer">Q3'26 财报 ↗</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="零售+批发双轮驱动（$7.6B + $3.9B）" data-i18n-en="Dual Retail &amp; Wholesale Flywheel">零售+批发双轮驱动（$7.6B + $3.9B）</h3><p data-i18n-zh="Major Accounts 面向《财富》千强提供全球统筹保单；Westchester 专攻批发经纪渠道的高难度 E&amp;S 业务，跻身全美前五。" data-i18n-en="Major Accounts serves Fortune 1000 multinationals directly via retail brokers, while Westchester ranks top-5 in U.S. wholesale E&amp;S.">Major Accounts 面向《财富》千强提供全球统筹保单；Westchester 专攻批发经纪渠道的高难度 E&amp;S 业务，跻身全美前五。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="“能力型承保”而非纯超赔产能" data-i18n-en="Capability Over Excess Capacity">“能力型承保”而非纯超赔产能</h3><p data-i18n-zh="不同于仅拼价格提供超赔层的竞争对手，安达输出主承保结构设计、自保前端（Captive Fronting）与近 500 名风险工程师服务。" data-i18n-en="Rather than competing purely on excess-layer price, Chubb provides primary structuring, captive fronting, and global engineering.">不同于仅拼价格提供超赔层的竞争对手，安达输出主承保结构设计、自保前端（Captive Fronting）与近 500 名风险工程师服务。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="逆周期收缩纪律保卫 ROE" data-i18n-en="Counter-Cyclical Walk-Away Discipline">逆周期收缩纪律保卫 ROE</h3><p data-i18n-zh="当伦敦及美国大额财产市场竞争加剧时，安达宁可放弃 -5% 名义保费并加大分保，也不牺牲 82% 左右的底层承保盈利线。" data-i18n-en="When property rates soften, Chubb actively non-renews inadequate accounts and increases reinsurance cessions to protect margins.">当伦敦及美国大额财产市场竞争加剧时，安达宁可放弃 -5% 名义保费并加大分保，也不牺牲 82% 左右的底层承保盈利线。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY2025 大客户与 E&amp;S 净保费" data-i18n-en="FY25 Major &amp; E&amp;S NPW">FY2025 大客户与 E&amp;S 净保费</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="占 NA 商业 59.6%" data-i18n-en="59.6% of NA Comm">占 NA 商业 59.6%</span></div><div class="kpi-value mono" data-i18n-zh="$12.69B" data-i18n-en="$12.69B">$12.69B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">2025 全年较 FY24 ($12.51B) 增长 +1.4%，其中 Westchester 5 年复合增速达 12% <a class="cite-link" href="https://news.chubb.com/2026-02-03-Chubb-Reports-Fourth-Quarter-Net-Income-of-3-21-Billion,-Up-24-7-,-and-Core-Operating-Income-of-2-98-Billion,-Up-21-7-Consolidated-Net-Premiums-Written-of-13-1-Billion,-Up-8-9-,-with-P-C-and-Life-Insurance-Up-7-7-and-16-9-Record-P-C-Combined-Ra" target="_blank" rel="noopener noreferrer">FY25 财报 ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q3 2026 板块净保费与基本面" data-i18n-en="Q3'26 NPW &amp; Underlying">Q3 2026 板块净保费与基本面</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="主动控险微调" data-i18n-en="Disciplined Trim">主动控险微调</span></div><div class="kpi-value mono" data-i18n-zh="$3.21B" data-i18n-en="$3.21B">$3.21B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">名义 -5.0% 系大额财产及金融线主动减仓与分保所致，剔除后内生增长 +1.2% <a class="cite-link" href="https://news.chubb.com/2026-10-20-Chubb-Reports-Third-Quarter-Per-Share-Net-Income-and-Record-Core-Operating-Income-of-7-30-and-7-66,-Respectively,-Up-4-4-and-0-8-Consolidated-Net-Premiums-Written-of-15-1-Billion,-Up-1-9-,-with-P-C-and-Life-Insurance-Up-1-9-and-1-4-P-C-Combined" target="_blank" rel="noopener noreferrer">Q3'26 ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="NA 商业险综合成本率 (CR)" data-i18n-en="NA Commercial Combined Ratio">NA 商业险综合成本率 (CR)</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="领先同业 10pct+" data-i18n-en="10+ pts vs Peers">领先同业 10pct+</span></div><div class="kpi-value mono" data-i18n-zh="81.4% / 86.3%" data-i18n-en="81.4% / 86.3%">81.4% / 86.3%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">FY25 全年 CR 81.4%，Q3'26 含巨灾 86.3%（除巨灾事故年 CAY 仅 82.1%） <a class="cite-link" href="https://news.chubb.com/2026-10-20-Chubb-Reports-Third-Quarter-Per-Share-Net-Income-and-Record-Core-Operating-Income-of-7-30-and-7-66,-Respectively,-Up-4-4-and-0-8-Consolidated-Net-Premiums-Written-of-15-1-Billion,-Up-1-9-,-with-P-C-and-Life-Insurance-Up-1-9-and-1-4-P-C-Combined" target="_blank" rel="noopener noreferrer">Q3'26 ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Westchester E&amp;S 批发规模" data-i18n-en="Westchester E&amp;S Scale">Westchester E&amp;S 批发规模</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="全美 E&amp;S 前五" data-i18n-en="Top-5 U.S. E&amp;S">全美 E&amp;S 前五</span></div><div class="kpi-value mono" data-i18n-zh="$3.90B+" data-i18n-en="$3.90B+">$3.90B+</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">覆盖超赔财产、环境、医疗责任、建筑及 2024 年新增宠物险（Healthy Paws）等特种线 <a class="cite-link" href="https://about.chubb.com/stories/2025-chubb-letter-to-shareholders.html" target="_blank" rel="noopener noreferrer">股东信 ↗</a></p></div></div></section>
+    </div>
+ </main>
+ </div>
+
+ <script src="../../_shared/97fef669b1bcd209.js"></script>
+</body>
+</html>

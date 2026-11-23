@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>NVIDIA 30 大核心高管与董事会全景深度研报中枢（Kress·Huang·Malachowsky·Parker·Shoquist·Teter·Dally·Alben·Jones等）</title>
+ <meta name="description" content="NVIDIA 全量 30 位核心高管与董事会成员深度研报中枢：涵盖 Colette M. Kress、Jensen Huang、Chris Malachowsky、Nick Parker、Debora Shoquist、Timothy S. Teter、Bill Dally、Jonah Alben、Harvey C. Jones、Suzanne Nora Johnson 等。" />
+ <link rel="stylesheet" href="../../_shared/d9a54bd97d602c9c.css">
+ 
+ <link rel="stylesheet" href="../../_shared/333a0898a0ef2b51.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI Frosted Glass AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">CK</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation"><a class="crumb-link hide-sm" href="../../index.html"><span class="portal-menu-text" data-portal-zh="数据中心" data-portal-en="Research Hub">数据中心</span></a><span class="hide-sm" aria-hidden="true">/</span>
+ <span class="crumb-link hide-sm">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="NVIDIA 2026 研报中枢" data-i18n-en="NVIDIA 2026 Research Hub">NVIDIA 2026 研报中枢</span>
+ </span>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="Colette M. Kress · 临时CEO · $115.8B/季" data-i18n-en="Colette M. Kress · Interim CEO · $115.8B/qtr">Colette M. Kress · 临时CEO · $115.8B/季</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="临时CEO兼CFO · $115.8B/季" data-i18n-en="Interim CEO &amp; CFO · $115.8B/qtr">临时CEO兼CFO · $115.8B/季</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="FY26薪酬 $14.34M · 478万股" data-i18n-en="FY26 $14.34M · 4.78M sh">FY26薪酬 $14.34M · 478万股</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换高管…" aria-label="快速跳转章节或高管" data-ph-zh="检索章节或切换高管…" data-ph-en="Jump to section or Executive…" data-aria-zh="快速跳转章节或高管" data-aria-en="Quick jump to chapter or Executive" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">NVIDIA · CSUITE</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="Colette M. Kress 深度档案" data-i18n-en="Colette M. Kress Monograph">Colette M. Kress 深度档案</div>
+ <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="2013 入职任 CFO（ex-Cisco/MSFT/TI）→ 2026.11.11 临危受命兼任临时 CEO，掌舵 $5,180亿战略承诺与 $2,273亿回购池" data-i18n-en="Joined 2013 as CFO (ex-Cisco/MSFT/TI) → Named Interim CEO Nov 11, 2026 while retaining CFO, steering $518B commitments &amp; $227.3B buyback">2013 入职任 CFO（ex-Cisco/MSFT/TI）→ 2026.11.11 临危受命兼任临时 CEO，掌舵 $5,180亿战略承诺与 $2,273亿回购池</p>
+ <div class="sidebar-mini-kpis" id="sideMiniKpis"></div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="章节目录" data-aria-zh="章节目录" data-aria-en="Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="NVDA">
+          <div class="co-side-head">
+            <span class="co-side-title mono">NVDA · 03/03</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../Company/nvidia_nasdaq_nvda_q3_fy2027_115_84b.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../Company/nvidia_12_fy2026_215_94b_q3_fy27_115_84b.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (3)" data-i18n-en="All (3)">全部 (3)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (2)" data-i18n-en="Company (2)">公司深度 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../Company/nvidia_12_fy2026_215_94b_q3_fy27_115_84b.html" title="NVIDIA 英伟达全产品与服务 12 大板块深度研报中枢（FY2026 $215.94B · Q3 FY27 $115.84B）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="NVIDIA 英伟达全产品与服务 12 大板块深度研报中枢（FY2026 $215.94B · Q3 FY27 $115.84B）" data-i18n-en="NVIDIA &amp; 12 Deep DiveReport (FY2026 $215.94B · Q3 FY27 $115.84B)">NVIDIA 英伟达全产品与服务 12 大板块深度研报中枢（FY2026 $215.94B · Q3 FY27 $115.84B）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="Company" href="../Company/nvidia_nasdaq_nvda_q3_fy2027_115_84b.html" title="NVIDIA 英伟达 (NASDAQ: NVDA) 商业模式深度研究报告（Q3 FY2027 $115.84B 全景拆解）"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="NVIDIA 英伟达 (NASDAQ: NVDA) 商业模式深度研究报告（Q3 FY2027 $115.84B 全景拆解）" data-i18n-en="NVIDIA (NASDAQ: NVDA) Business ModelDeep Dive Research Report (Q3 FY2027 $115.84B OverviewBreakdown)">NVIDIA 英伟达 (NASDAQ: NVDA) 商业模式深度研究报告（Q3 FY2027 $115.84B 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="SeniorExecutive" href="nvidia_30_kress_huang_malachowsky_parker_shoquist_teter_dally_alben_jones.html" title="NVIDIA 30 大核心高管与董事会全景深度研报中枢（Kress·Huang·Malachowsky·Parker·Shoquist·Teter·Dally·Alben·Jones等）"><span class="co-hub-ticker mono">03</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="NVIDIA 30 大核心高管与董事会全景深度研报中枢（Kress·Huang·Malachowsky·Parker·Shoquist·Teter·Dally·Alben·Jones等）" data-i18n-en="NVIDIA 30 &amp; OverviewDeep DiveReport (Kress·Huang·Malachowsky·Parker·Shoquist·Teter·Dally·Alben·Jones)">NVIDIA 30 大核心高管与董事会全景深度研报中枢（Kress·Huang·Malachowsky·Parker·Shoquist·Teter·Dally·Alben·Jones等）</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0">执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1">权力版图与财务架构</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2">领导支柱与五维雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3">全球 AI 半导体横评</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4">薪酬对齐与价值沙盘</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5">进阶史与 2026 战役</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6">治理风险核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7">SEC 财报与信源索引</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+
+ <!-- NVIDIA 30 Senior Executives Interactive Switcher -->
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="NVIDIA 30位核心高管与董事会切换中枢">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">NVIDIA · 30 SENIOR EXECUTIVES &amp; BOARD</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="NVIDIA 全量 30 位核心高管、创始人与董事会独立研报切换中枢（点击任一高管实时重绘全部 8 大章节与 5 张高分图表）" data-i18n-en="NVIDIA All 30 Senior Executives, Founders &amp; Board Switcher (Click any leader to dynamically render 8 chapters &amp; 5 charts)">NVIDIA 全量 30 位核心高管、创始人与董事会独立研报切换中枢（点击任一高管实时重绘全部 8 大章节与 5 张高分图表）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" data-hub-nav="prev" class="mui-btn" title="切换至上一位高管 (快捷键 [)" data-title-zh="切换至上一位高管 (快捷键 [)" data-title-en="Previous Executive (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一高管" data-i18n-en="Prev Exec">上一高管</span>
+ </button>
+ <button type="button" id="nextIpBtn" data-hub-nav="next" class="mui-btn" title="切换至下一位高管 (快捷键 ])" data-title-zh="切换至下一位高管 (快捷键 ])" data-title-en="Next Executive (Shortcut ])">
+ <span data-i18n-zh="下一高管" data-i18n-en="Next Exec">下一高管</span> <span>→</span>
+ </button>
+ 
+ </div>
+ </div>
+ <div class="exec-cat-bar">
+ <div class="exec-cat-pills" role="tablist" aria-label="高管职级与战线分类筛选">
+ <button type="button" class="exec-cat-btn active" data-filter-cat="all" data-i18n-zh="全部高管与董事会 (30)" data-i18n-en="All Leaders &amp; Board (30)">全部高管与董事会 (30)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="csuite" data-i18n-zh="C-Suite 核心高管 (7)" data-i18n-en="C-Suite Executives (7)">C-Suite 核心高管 (7)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="founders" data-i18n-zh="创始人与元老 (3)" data-i18n-en="Founders &amp; Vets (3)">创始人与元老 (3)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="eng" data-i18n-zh="核心工程与业务 SVP (10)" data-i18n-en="Eng &amp; Business SVPs (10)">核心工程与业务 SVP (10)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="board" data-i18n-zh="独立董事会成员 (10)" data-i18n-en="Board of Directors (10)">独立董事会成员 (10)</button>
+ </div>
+ <span class="exec-cat-note mono" data-i18n-zh="支持 URL 锚点直达 (#exec=colette_kress) · 快捷键 [ / ] 切换 · ⌘K 搜索" data-i18n-en="Deep-link via #exec=id · Keys [ / ] to step · ⌘K quick jump">支持 URL 锚点直达 (#exec=colette_kress) · 快捷键 [ / ] 切换 · ⌘K 搜索</span>
+ </div>
+ <div class="ip-pill-grid" id="ipPillGrid">
+<button type="button" class="ip-pill-btn active" data-switch-ip="colette_kress" data-exec-cat="csuite" aria-pressed="true"><span class="ip-pill-mono mono">CK</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="colette_kress">01. Colette M. Kress</span><span class="ip-pill-meta mono" data-pill-meta="colette_kress">临时CEO兼CFO · $115.8B/季 · Colette M. Kress</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="nick_parker" data-exec-cat="csuite" aria-pressed="false"><span class="ip-pill-mono mono">NP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="nick_parker">02. Nick Parker</span><span class="ip-pill-meta mono" data-pill-meta="nick_parker">CCO · 2026.08前微软CBO · Nick Parker</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="debora_shoquist" data-exec-cat="csuite" aria-pressed="false"><span class="ip-pill-mono mono">DS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="debora_shoquist">03. Debora Shoquist</span><span class="ip-pill-meta mono" data-pill-meta="debora_shoquist">运营EVP · $390B供应链 · Debora Shoquist</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="tim_teter" data-exec-cat="csuite" aria-pressed="false"><span class="ip-pill-mono mono">TT</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="tim_teter">04. Timothy S. Teter</span><span class="ip-pill-meta mono" data-pill-meta="tim_teter">总法务官 · 治理与并购中枢 · Timothy S. Teter</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="alison_wagonfeld" data-exec-cat="csuite" aria-pressed="false"><span class="ip-pill-mono mono">AW</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="alison_wagonfeld">05. Alison Wagonfeld</span><span class="ip-pill-meta mono" data-pill-meta="alison_wagonfeld">首任 CMO · 前 Google Cloud · Alison Wagonfeld</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="michael_kagan" data-exec-cat="csuite" aria-pressed="false"><span class="ip-pill-mono mono">MK</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="michael_kagan">06. Michael Kagan</span><span class="ip-pill-meta mono" data-pill-meta="michael_kagan">CTO · Mellanox联合创始人 · Michael Kagan</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="scott_gawel" data-exec-cat="csuite" aria-pressed="false"><span class="ip-pill-mono mono">SG</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="scott_gawel">07. Scott Gawel</span><span class="ip-pill-meta mono" data-pill-meta="scott_gawel">VP &amp; CAO · 2026.05前Intel · Scott Gawel</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="jensen_huang" data-exec-cat="founders" aria-pressed="false"><span class="ip-pill-mono mono">JH</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="jensen_huang">08. Jen-Hsun (Jensen) Huang</span><span class="ip-pill-meta mono" data-pill-meta="jensen_huang">联合创始人 · 2026.11.11辞任 · Jensen Huang</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="chris_malachowsky" data-exec-cat="founders" aria-pressed="false"><span class="ip-pill-mono mono">CM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="chris_malachowsky">09. Chris A. Malachowsky</span><span class="ip-pill-meta mono" data-pill-meta="chris_malachowsky">联合创始人 · NVIDIA Fellow · Chris Malachowsky</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="ajay_puri" data-exec-cat="founders" aria-pressed="false"><span class="ip-pill-mono mono">AP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ajay_puri">10. Ajay K. (Jay) Puri</span><span class="ip-pill-meta mono" data-pill-meta="ajay_puri">高级顾问 · 前现场运营EVP · Ajay K. Puri</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="bill_dally" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">BD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="bill_dally">11. William &quot;Bill&quot; Dally</span><span class="ip-pill-meta mono" data-pill-meta="bill_dally">首席科学家 · 研究SVP · William Dally</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="jonah_alben" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">JA</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="jonah_alben">12. Jonah Alben</span><span class="ip-pill-meta mono" data-pill-meta="jonah_alben">GPU工程SVP · Vera Rubin总师 · Jonah Alben</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="dwight_diercks" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">DD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="dwight_diercks">13. Dwight Diercks</span><span class="ip-pill-meta mono" data-pill-meta="dwight_diercks">软件工程SVP · 32年元老 · Dwight Diercks</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="kevin_deierling" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">KD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="kevin_deierling">14. Kevin Deierling</span><span class="ip-pill-meta mono" data-pill-meta="kevin_deierling">网络SVP · $31.4B网络帝国 · Kevin Deierling</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="ian_buck" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">IB</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ian_buck">15. Ian Buck</span><span class="ip-pill-meta mono" data-pill-meta="ian_buck">CUDA之父 · $107.6B数据中心 · Ian Buck</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="bryan_catanzaro" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">BC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="bryan_catanzaro">16. Bryan Catanzaro</span><span class="ip-pill-meta mono" data-pill-meta="bryan_catanzaro">应用深度学习VP · Nemotron · Bryan Catanzaro</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="rev_lebaredian" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">RL</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="rev_lebaredian">17. Rev Lebaredian</span><span class="ip-pill-meta mono" data-pill-meta="rev_lebaredian">Omniverse与物理AI仿真VP · Rev Lebaredian</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="kristin_major" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">KM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="kristin_major">18. Kristin Major</span><span class="ip-pill-meta mono" data-pill-meta="kristin_major">HR SVP · 管理3.6万高人效团队 · Kristin Major</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="toshiya_hari" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">TH</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="toshiya_hari">19. Toshiya Hari</span><span class="ip-pill-meta mono" data-pill-meta="toshiya_hari">IR与战略财务VP · 前高盛MD · Toshiya Hari</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="kari_briski" data-exec-cat="eng" aria-pressed="false"><span class="ip-pill-mono mono">KB</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="kari_briski">20. Kari Briski</span><span class="ip-pill-meta mono" data-pill-meta="kari_briski">AI软件产品VP · NIM微服务 · Kari Briski</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="harvey_jones" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">HJ</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="harvey_jones">21. Harvey C. Jones</span><span class="ip-pill-meta mono" data-pill-meta="harvey_jones">首任董事会主席 · 1993董事 · Harvey C. Jones</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="suzanne_nora_johnson" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">SN</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="suzanne_nora_johnson">22. Suzanne Nora Johnson</span><span class="ip-pill-meta mono" data-pill-meta="suzanne_nora_johnson">独董 · 国安与出口管制主席 · Suzanne Nora Johnson</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="stephen_neal" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">SL</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="stephen_neal">23. Stephen C. Neal</span><span class="ip-pill-meta mono" data-pill-meta="stephen_neal">首席独董 · Cooley名誉主席 · Stephen C. Neal</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="brooke_seawell" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">BS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="brooke_seawell">24. A. Brooke Seawell</span><span class="ip-pill-meta mono" data-pill-meta="brooke_seawell">审计委主席 · NEA合伙人 · A. Brooke Seawell</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="tench_coxe" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">TC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="tench_coxe">25. Tench Coxe</span><span class="ip-pill-meta mono" data-pill-meta="tench_coxe">创世董事 · Sutter Hill · Tench Coxe</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="mark_stevens" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">MS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="mark_stevens">26. Mark A. Stevens</span><span class="ip-pill-meta mono" data-pill-meta="mark_stevens">资深董事 · S-Cubed / 前红杉 · Mark A. Stevens</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="dawn_hudson" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">DH</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="dawn_hudson">27. Dawn Hudson</span><span class="ip-pill-meta mono" data-pill-meta="dawn_hudson">薪酬委主席 · 前NFL CMO · Dawn Hudson</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="john_dabiri" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">JD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="john_dabiri">28. John O. Dabiri</span><span class="ip-pill-meta mono" data-pill-meta="john_dabiri">独董 · 加州理工教授 (46岁) · John O. Dabiri</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="aarti_shah" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">AS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="aarti_shah">29. Aarti Shah</span><span class="ip-pill-meta mono" data-pill-meta="aarti_shah">独董 · 前礼来 SVP &amp; CIDO · Aarti Shah</span></span></button>
+<button type="button" class="ip-pill-btn" data-switch-ip="melissa_lora" data-exec-cat="board" aria-pressed="false"><span class="ip-pill-mono mono">ML</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="melissa_lora">30. Melissa B. Lora</span><span class="ip-pill-meta mono" data-pill-meta="melissa_lora">独董 · 前Taco Bell国际总裁 · Melissa B. Lora</span></span></button>
+ </div>
+ </section>
+
+ <!-- Dynamic Monograph Sections Host (00 - 07) -->
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="核心定评：临时CEO兼CFO · $115.8B/季" data-i18n-en="Verdict: Interim CEO &amp; CFO · $115.8B/qtr">核心定评：临时CEO兼CFO · $115.8B/季</span><span class="mui-chip" data-i18n-zh="2013入职 · 13年任期" data-i18n-en="Joined 2013 · 13-Yr Tenure">2013入职 · 13年任期</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="2026-11-21 SEC 核验" data-i18n-en="Nov 21, 2026 SEC Verified">2026-11-21 SEC 核验</span></div><div class="hero-overline mono"><span data-i18n-zh="临时CEO · $115.8B/季 · Q3 FY27 $115.8B (+103%) · Vera Rubin 爬坡" data-i18n-en="Interim CEO · $115.8B/qtr · Q3 FY27 $115.8B (+103% YoY) · Vera Rubin Ramp">临时CEO · $115.8B/季 · Q3 FY27 $115.8B (+103%) · Vera Rubin 爬坡</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">Colette M. Kress 深度解构：<span class="gradient-accent">临时CEO · $115.8B/季</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">2026年11月11日，在黄仁勋辞去总裁、CEO及董事职务后，董事会任命自2013年起担任CFO的Colette Kress出任临时CEO并继续兼任CFO。她主导了英伟达从年营收41.3亿美元向年化超4,600亿美元算力帝国的资本配置转型，在Q3 FY27交出$1,158亿营收（+103% YoY）、$438亿自由现金流、$5,180亿战略承诺与$2,273亿剩余回购授权的答卷。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm" target="_blank" rel="noopener noreferrer">官方信源 ↗</a></p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="全栈算力平台核心定位" data-i18n-en="Full-Stack AI Platform Role">全栈算力平台核心定位</h3><p data-i18n-zh="Colette M. Kress 在英伟达 GPU、Vera CPU、高速网络与 CUDA 软件四层闭环中承担关键职责。" data-i18n-en="Colette M. Kress anchors critical execution across NVIDIA's GPU, Vera CPU, networking &amp; CUDA stack.">Colette M. Kress 在英伟达 GPU、Vera CPU、高速网络与 CUDA 软件四层闭环中承担关键职责。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="2026 组织与治理交接定位" data-i18n-en="2026 Transition Positioning">2026 组织与治理交接定位</h3><p data-i18n-zh="在 2026 年 11 月 CEO 更迭与新设国家安全委员会背景下，维系团队、客户与审计稳定性。" data-i18n-en="Stabilizes execution, customers &amp; oversight amid Nov 2026 CEO transition and NatSec Committee.">在 2026 年 11 月 CEO 更迭与新设国家安全委员会背景下，维系团队、客户与审计稳定性。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="财务纪律与长期激励对齐" data-i18n-en="Financial &amp; Equity Alignment">财务纪律与长期激励对齐</h3><p data-i18n-zh="背靠 Q3 FY27 66.9% GAAP 营业利润率与 $43.8B 自由现金流，支撑 $518B 战略承诺。" data-i18n-en="Backed by 66.9% GAAP operating margin and $43.8B Q3 FCF supporting $518B commitments.">背靠 Q3 FY27 66.9% GAAP 营业利润率与 $43.8B 自由现金流，支撑 $518B 战略承诺。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q3 FY27 合并营收" data-i18n-en="Q3 FY27 Revenue">Q3 FY27 合并营收</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="2026 Q3/FY26" data-i18n-en="2026 Q3/FY26">2026 Q3/FY26</span></div><div class="kpi-value mono" data-i18n-zh="$115.8B (+103%)" data-i18n-en="$115.8B (+103%)">$115.8B (+103%)</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">核验自英伟达 2026 SEC 官方披露与财务报表 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27cfocommentary.htm" target="_blank" rel="noopener noreferrer">Q3 EX-99.2 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY26 表内总薪酬" data-i18n-en="FY26 Total Pay">FY26 表内总薪酬</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="DEF 14A / 10-K" data-i18n-en="DEF 14A / 10-K">DEF 14A / 10-K</span></div><div class="kpi-value mono" data-i18n-zh="$14.34M" data-i18n-en="$14.34M">$14.34M</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">数据核验自 2026 财年 10-K 及委托书薪酬披露 <a class="cite-link" href="https://equibles.com/stocks/nvda/executive-compensation" target="_blank" rel="noopener noreferrer">DEF 14A ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="战略承诺总额" data-i18n-en="Total Commitments">战略承诺总额</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="2026.11 治理" data-i18n-en="Nov 2026 Gov">2026.11 治理</span></div><div class="kpi-value mono" data-i18n-zh="$518B" data-i18n-en="$518B">$518B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">反映 2026 年 11 月 CEO 交接与董事会架构重组最新状态 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm" target="_blank" rel="noopener noreferrer">Form 8-K ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q4 FY27 集团营收指引" data-i18n-en="Q4 FY27 Revenue Outlook">Q4 FY27 集团营收指引</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="含额外一周" data-i18n-en="Extra Week">含额外一周</span></div><div class="kpi-value mono" data-i18n-zh="$130.0B" data-i18n-en="$130.0B">$130.0B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">±3%，预计 GAAP/Non-GAAP 毛利率 71.0%–72.0% <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27cfocommentary.htm" target="_blank" rel="noopener noreferrer">Q4 指引 ↗</a>。</p></div></div></section>
+    </div>
+
+ </main>
+ </div>
+
+ <script src="../../_shared/a9c421f622835dcf.js"></script>
+</body>
+</html>

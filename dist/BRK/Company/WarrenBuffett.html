@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>巴菲特 48 家投资公司深度研报中枢（苹果·运通·谷歌·可口可乐·日本五大商社·喜诗糖果·比亚迪等）| 数据中心</title>
+  <meta name="description" content="沃伦·巴菲特（Warren Buffett / Berkshire Hathaway）全部 48 家在持与历史投资公司（27家美股13F重仓、日本五大商社、6家全资控股实业明珠与10大经典战役/清仓教训）商业模式、护城河与复利深度研报切换中枢。" />
+  <meta name="keywords" content="巴菲特, Warren Buffett, Berkshire Hathaway, AAPL, AXP, GOOGL, KO, BAC, CVX, OXY, 三菱商事, GEICO, BNSF, 比亚迪, MUI" />
+  
+  <!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky MUI Frosted Glass AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span id="appbarMonogram" class="brand-monogram mono">AAPL</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+          <a class="crumb-link hide-sm" href="../../index.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="《苹果公司 Apple Inc.》巴菲特投资深度研报" data-i18n-en="Apple Inc. (AAPL) Buffett Investment Monograph">《苹果公司 Apple Inc.》巴菲特投资深度研报</span>
+        </nav>
+        <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="NASDAQ: AAPL" data-i18n-en="NASDAQ: AAPL">NASDAQ: AAPL</span>
+        <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="第一重仓 25.0% · $75.90B" data-i18n-en="#1 Stake 25.0% · $75.90B">第一重仓 25.0% · $75.90B</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或48家公司…" aria-label="快速跳转章节或投资公司" data-ph-zh="检索章节或48家公司…" data-ph-en="Jump to section or 48 companies…" data-aria-zh="快速跳转章节或投资公司" data-aria-en="Quick jump to chapter or company" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Centered Shell -->
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Navigation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">BUFFETT PORTFOLIO · #01 AAPL</span>
+        </div>
+        <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="苹果公司投资深度分析" data-i18n-en="Apple Inc. Deep Dive">苹果公司投资深度分析</div>
+        <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="自研 Apple Silicon 芯片能效壁垒 × iOS/macOS 跨端锁客 × Services 经常性现金流 × 极致回购注销" data-i18n-en="Custom Apple Silicon Moat × iOS Ecosystem Lock-In × High-Margin Services × Relentless Buybacks">自研 Apple Silicon 芯片能效壁垒 × iOS/macOS 跨端锁客 × Services 经常性现金流 × 极致回购注销</p>
+
+        <div class="sidebar-mini-kpis" id="sideMiniKpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="巴菲特持仓状态" data-i18n-en="Buffett Position">巴菲特持仓状态</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="$75.90B · 占比 25.0%" data-i18n-en="$75.90B · 25.0% Wt">$75.90B · 占比 25.0%</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="FY2025 合并营收" data-i18n-en="FY25 Net Sales">FY2025 合并营收</span>
+            <span class="sidebar-mini-val mono">$416.2B</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="FY2025 净利润" data-i18n-en="FY25 Net Income">FY2025 净利润</span>
+            <span class="sidebar-mini-val mono">$112.0B</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unified MUI Navigation Card: Site Portal Nav + Report TOC -->
+      <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Site Links &amp; Table of Contents">
+        <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="BRK">
+          <div class="co-side-head">
+            <span class="co-side-title mono">BRK · 01/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../CorporateCulture/Berkshire_Corporate_Culture_Analysis.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../CorporateCulture/Berkshire_Corporate_Culture_Analysis.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="CorporateCulture" data-i18n-zh="企业文化 (1)" data-i18n-en="CorporateCulture (1)">企业文化 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="WarrenBuffett.html" title="巴菲特 48 家投资公司深度研报中枢（苹果·运通·谷歌·可口可乐·日本五大商社·喜诗糖果·比亚迪等）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="巴菲特 48 家投资公司深度研报中枢（苹果·运通·谷歌·可口可乐·日本五大商社·喜诗糖果·比亚迪等）" data-i18n-en="Buffett 48 Deep DiveReport (Apple· ·Google· · · ·)">巴菲特 48 家投资公司深度研报中枢（苹果·运通·谷歌·可口可乐·日本五大商社·喜诗糖果·比亚迪等）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="CorporateCulture" href="../CorporateCulture/Berkshire_Corporate_Culture_Analysis.html" title="伯克希尔·哈撒韦 Berkshire Hathaway (BRK.B) 企业文化与治理架构深度研究报告"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="伯克希尔·哈撒韦 Berkshire Hathaway (BRK.B) 企业文化与治理架构深度研究报告" data-i18n-en="Berkshire Hathaway (BRK.B) Corporate Culture &amp; Governance Deep Dive">伯克希尔·哈撒韦 Berkshire Hathaway (BRK.B) 企业文化与治理架构深度研究报告</span><span class="co-hub-meta mono">CorporateCulture</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+        <div class="nav-divider"></div>
+
+        <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与持仓定位" data-i18n-en="Executive Summary &amp; Stake">执行摘要与持仓定位</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="持仓脉络与业务矩阵" data-i18n-en="Holding Arc &amp; Business Matrix">持仓脉络与业务矩阵</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="商业模式与经济护城河" data-i18n-en="Business Model &amp; Culture Moat">商业模式与经济护城河</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="行业对标与竞争力拆解" data-i18n-en="Peer Matrix &amp; KPI Breakdown">行业对标与竞争力拆解</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="现金流纪律与复利推演" data-i18n-en="Cash Flow &amp; Compounding Sim">现金流纪律与复利推演</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="操作复盘与巴菲特箴言" data-i18n-en="Trade Review &amp; Buffett Maxims">操作复盘与巴菲特箴言</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="巴菲特护城河核查清单" data-i18n-en="Buffett Moat Checklist">巴菲特护城河核查清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="一手财报与访谈索引" data-i18n-en="Primary Filings &amp; Sources">一手财报与访谈索引</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Compact MUI Page Utility Controls -->
+      
+    </aside>
+
+    <!-- Main Analytical Content -->
+    <main class="main-content">
+
+
+      <!-- Warren Buffett 48 Invested Companies Interactive Switcher -->
+      <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="巴菲特48家投资公司切换台">
+        <div class="ip-hub-top">
+          <div class="ip-hub-title-group">
+            <span class="mui-chip mui-chip-primary mono">WARREN BUFFETT 48 COMPANIES</span>
+            <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="巴菲特 48 家投资公司独立研报切换中枢（点击任一公司实时重绘全部 8 大章节与 5 张高分图表）" data-i18n-en="Warren Buffett 48 Invested Companies Monograph Switcher (Click any company to dynamically render all 8 chapters &amp; 5 charts)">巴菲特 48 家投资公司独立研报切换中枢（点击任一公司实时重绘全部 8 大章节与 5 张高分图表）</span>
+          </div>
+          <div class="ip-hub-controls">
+            <button type="button" id="prevIpBtn" class="mui-btn" title="切换至上一家公司 (快捷键 [)" data-title-zh="切换至上一家公司 (快捷键 [)" data-title-en="Previous Company (Shortcut [)">
+              <span>←</span> <span data-i18n-zh="上一公司" data-i18n-en="Prev Co">上一公司</span>
+            </button>
+            <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一家公司 (快捷键 ])" data-title-zh="切换至下一家公司 (快捷键 ])" data-title-en="Next Company (Shortcut ])">
+              <span data-i18n-zh="下一公司" data-i18n-en="Next Co">下一公司</span> <span>→</span>
+            </button>
+            <a id="openStandalonePageLink" href="./01_AAPL_Apple.html" class="mui-btn mui-btn-primary" style="text-decoration:none;" title="打开当前选中公司的独立单文件网页" data-title-zh="打开当前选中公司的独立单文件网页" data-title-en="Open standalone page for the active company">
+              <span id="openStandalonePageText" data-i18n-zh="打开《苹果公司》独立网页 ↗" data-i18n-en="Open Apple Inc. Page ↗">打开《苹果公司》独立网页 ↗</span>
+            </a>
+            
+          </div>
+        </div>
+
+        <div class="ip-hub-filter-row">
+          <div class="mui-segmented" role="group" aria-label="持仓梯队快速筛选">
+            <button type="button" class="mui-seg-btn active" data-hub-tier="all" data-i18n-zh="全部公司 (48)" data-i18n-en="All Companies (48)">全部公司 (48)</button>
+            <button type="button" class="mui-seg-btn" data-hub-tier="13f" data-i18n-zh="2026Q3 美股13F在持 (27)" data-i18n-en="Q3 2026 U.S. 13F (27)">2026Q3 美股13F在持 (27)</button>
+            <button type="button" class="mui-seg-btn" data-hub-tier="japan" data-i18n-zh="日本五大综合商社 (5)" data-i18n-en="Japan Sogo Shosha (5)">日本五大综合商社 (5)</button>
+            <button type="button" class="mui-seg-btn" data-hub-tier="subsidiary" data-i18n-zh="全资控股实业明珠 (6)" data-i18n-en="Wholly-Owned Jewels (6)">全资控股实业明珠 (6)</button>
+            <button type="button" class="mui-seg-btn" data-hub-tier="historical" data-i18n-zh="历年封神与经典清仓 (10)" data-i18n-en="Historic Legends &amp; Exits (10)">历年封神与经典清仓 (10)</button>
+          </div>
+          <span class="mui-chip mono" data-i18n-zh="伯克希尔 2026Q3 13F $304.20B · 现金堡垒 $352.3B · 快捷键 [ / ] 切换" data-i18n-en="BRK Q3 2026 13F $304.20B · Cash $352.3B · Press [ / ] to step">伯克希尔 2026Q3 13F $304.20B · 现金堡垒 $352.3B · 快捷键 [ / ] 切换</span>
+        </div>
+
+        <div class="ip-pill-grid" id="ipPillGrid">
+            <button type="button" class="ip-pill-btn active" data-switch-ip="01_AAPL_Apple" data-pill-tier="13f" aria-pressed="true">
+              <span class="ip-pill-mono mono">AAPL</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="01_AAPL_Apple">01. 苹果公司</span>
+                <span class="ip-pill-meta mono" data-pill-meta="01_AAPL_Apple">$75.90B · 占比 25.0% · AAPL</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="02_AXP_American_Express" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">AXP</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="02_AXP_American_Express">02. 美国运通</span>
+                <span class="ip-pill-meta mono" data-pill-meta="02_AXP_American_Express">$46.10B · 占比 15.2% · AXP</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="03_GOOGL_Alphabet" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">GOOG</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="03_GOOGL_Alphabet">03. 谷歌 Alphabet</span>
+                <span class="ip-pill-meta mono" data-pill-meta="03_GOOGL_Alphabet">$36.37B · 占比 12.0% · GOOG</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="04_KO_Coca_Cola" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">KO</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="04_KO_Coca_Cola">04. 可口可乐</span>
+                <span class="ip-pill-meta mono" data-pill-meta="04_KO_Coca_Cola">$34.43B · 占比 11.3% · KO</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="05_BAC_Bank_of_America" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">BAC</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="05_BAC_Bank_of_America">05. 美国银行</span>
+                <span class="ip-pill-meta mono" data-pill-meta="05_BAC_Bank_of_America">$24.81B · 占比 8.2% · BAC</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="06_CVX_Chevron" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">CVX</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="06_CVX_Chevron">06. 雪佛龙</span>
+                <span class="ip-pill-meta mono" data-pill-meta="06_CVX_Chevron">$17.23B · 占比 5.7% · CVX</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="07_OXY_Occidental_Petroleum" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">OXY</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="07_OXY_Occidental_Petroleum">07. 西方石油</span>
+                <span class="ip-pill-meta mono" data-pill-meta="07_OXY_Occidental_Petroleum">$14.66B + $8.5B优先股 · OXY</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="08_MCO_Moodys" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">MCO</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="08_MCO_Moodys">08. 穆迪公司</span>
+                <span class="ip-pill-meta mono" data-pill-meta="08_MCO_Moodys">$11.20B · 占比 3.7% · MCO</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="09_CB_Chubb" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">CB</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="09_CB_Chubb">09. 安达保险</span>
+                <span class="ip-pill-meta mono" data-pill-meta="09_CB_Chubb">$11.14B · 占比 3.7% · CB</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="10_KHC_Kraft_Heinz" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">KHC</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="10_KHC_Kraft_Heinz">10. 卡夫亨氏</span>
+                <span class="ip-pill-meta mono" data-pill-meta="10_KHC_Kraft_Heinz">$7.40B · 占比 2.4% · KHC</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="11_DAL_Delta_Air_Lines" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">DAL</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="11_DAL_Delta_Air_Lines">11. 达美航空</span>
+                <span class="ip-pill-meta mono" data-pill-meta="11_DAL_Delta_Air_Lines">$5.38B · 占比 1.8% · DAL</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="12_DVA_DaVita" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">DVA</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="12_DVA_DaVita">12. 达维塔保健</span>
+                <span class="ip-pill-meta mono" data-pill-meta="12_DVA_DaVita">$5.02B · 持股 ~45% · DVA</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="13_SIRI_SiriusXM" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">SIRI</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="13_SIRI_SiriusXM">13. 天狼星XM</span>
+                <span class="ip-pill-meta mono" data-pill-meta="13_SIRI_SiriusXM">$3.23B · 持股 ~37% · SIRI</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="14_LEN_Lennar" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">LEN</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="14_LEN_Lennar">14. 莱纳房产</span>
+                <span class="ip-pill-meta mono" data-pill-meta="14_LEN_Lennar">$2.16B · Q3翻倍增持 · LEN</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="15_KR_Kroger" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">KR</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="15_KR_Kroger">15. 克罗格</span>
+                <span class="ip-pill-meta mono" data-pill-meta="15_KR_Kroger">$2.05B · 占比 0.7% · KR</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="16_VRSN_VeriSign" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">VRSN</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="16_VRSN_VeriSign">16. 威瑞信</span>
+                <span class="ip-pill-meta mono" data-pill-meta="16_VRSN_VeriSign">$1.67B · 持股 ~6.6% · VRSN</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="17_LLYVK_Liberty_Live" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">LLYV</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="17_LLYVK_Liberty_Live">17. 自由现场娱乐</span>
+                <span class="ip-pill-meta mono" data-pill-meta="17_LLYVK_Liberty_Live">$1.50B · 折价套利仓 · LLYV</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="18_ALLY_Ally_Financial" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">ALLY</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="18_ALLY_Ally_Financial">18. 盟友金融</span>
+                <span class="ip-pill-meta mono" data-pill-meta="18_ALLY_Ally_Financial">$1.02B · 持股 ~9.0% · ALLY</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="19_NYT_New_York_Times" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">NYT</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="19_NYT_New_York_Times">19. 纽约时报</span>
+                <span class="ip-pill-meta mono" data-pill-meta="19_NYT_New_York_Times">$1.00B · 持股 ~9.5% · NYT</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="20_BSP_Bending_Spoons" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">BSP</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="20_BSP_Bending_Spoons">20. Bending Spoons</span>
+                <span class="ip-pill-meta mono" data-pill-meta="20_BSP_Bending_Spoons">$1.02B+ · Q3唯一新进 · BSP</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="21_NUE_Nucor" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">NUE</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="21_NUE_Nucor">21. 纽柯钢铁</span>
+                <span class="ip-pill-meta mono" data-pill-meta="21_NUE_Nucor">$369.5M · 电炉钢龙头 · NUE</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="22_LPX_Louisiana_Pacific" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">LPX</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="22_LPX_Louisiana_Pacific">22. 路易斯安那太平洋</span>
+                <span class="ip-pill-meta mono" data-pill-meta="22_LPX_Louisiana_Pacific">$365.7M · 持股 ~8.0% · LPX</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="23_COF_Capital_One" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">COF</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="23_COF_Capital_One">23. 第一资本金融</span>
+                <span class="ip-pill-meta mono" data-pill-meta="23_COF_Capital_One">$222.0M · 翻倍兑现仓 · COF</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="24_M_Macys" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">MACY</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="24_M_Macys">24. 梅西百货</span>
+                <span class="ip-pill-meta mono" data-pill-meta="24_M_Macys">$171.7M · 资产折价股 · M</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="25_NVR_NVR_Inc" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">NVR</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="25_NVR_NVR_Inc">25. NVR 房产</span>
+                <span class="ip-pill-meta mono" data-pill-meta="25_NVR_NVR_Inc">$68.4M · 缩股85%典范 · NVR</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="26_JEF_Jefferies" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">JEF</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="26_JEF_Jefferies">26. 杰富瑞集团</span>
+                <span class="ip-pill-meta mono" data-pill-meta="26_JEF_Jefferies">$19.8M · Berkadia伙伴 · JEF</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="27_DHI_DR_Horton" data-pill-tier="13f" aria-pressed="false">
+              <span class="ip-pill-mono mono">DHI</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="27_DHI_DR_Horton">27. 霍顿房屋</span>
+                <span class="ip-pill-meta mono" data-pill-meta="27_DHI_DR_Horton">$487K · 全美#1房企 · DHI</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="28_8058_Mitsubishi" data-pill-tier="japan" aria-pressed="false">
+              <span class="ip-pill-mono mono">8058</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="28_8058_Mitsubishi">28. 三菱商事</span>
+                <span class="ip-pill-meta mono" data-pill-meta="28_8058_Mitsubishi">持股 &gt;10.2% · 涨近4倍 · 8058</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="29_8031_Mitsui" data-pill-tier="japan" aria-pressed="false">
+              <span class="ip-pill-mono mono">8031</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="29_8031_Mitsui">29. 三井物产</span>
+                <span class="ip-pill-meta mono" data-pill-meta="29_8031_Mitsui">持股 10.83% · 涨约3.7倍 · 8031</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="30_8001_ITOCHU" data-pill-tier="japan" aria-pressed="false">
+              <span class="ip-pill-mono mono">8001</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="30_8001_ITOCHU">30. 伊藤忠商事</span>
+                <span class="ip-pill-meta mono" data-pill-meta="30_8001_ITOCHU">持股 &gt;10.0% · 涨超3.1倍 · 8001</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="31_8002_Marubeni" data-pill-tier="japan" aria-pressed="false">
+              <span class="ip-pill-mono mono">8002</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="31_8002_Marubeni">31. 丸红商事</span>
+                <span class="ip-pill-meta mono" data-pill-meta="31_8002_Marubeni">持股 10.32% · 涨逾4倍 · 8002</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="32_8053_Sumitomo" data-pill-tier="japan" aria-pressed="false">
+              <span class="ip-pill-mono mono">8053</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="32_8053_Sumitomo">32. 住友商事</span>
+                <span class="ip-pill-meta mono" data-pill-meta="32_8053_Sumitomo">持股 10.05% · 全员破10% · 8053</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="33_BRK_GEICO" data-pill-tier="subsidiary" aria-pressed="false">
+              <span class="ip-pill-mono mono">GEIC</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="33_BRK_GEICO">33. GEICO 保险</span>
+                <span class="ip-pill-meta mono" data-pill-meta="33_BRK_GEICO">100%全资 · 营收 $45.3B · GEIC</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="34_BRK_Sees_Candies" data-pill-tier="subsidiary" aria-pressed="false">
+              <span class="ip-pill-mono mono">SEES</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="34_BRK_Sees_Candies">34. 喜诗糖果</span>
+                <span class="ip-pill-meta mono" data-pill-meta="34_BRK_Sees_Candies">$25M投入 → 税前&gt;$2B+ · SEES</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="35_BRK_BNSF_Railway" data-pill-tier="subsidiary" aria-pressed="false">
+              <span class="ip-pill-mono mono">BNSF</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="35_BRK_BNSF_Railway">35. BNSF 铁路</span>
+                <span class="ip-pill-meta mono" data-pill-meta="35_BRK_BNSF_Railway">$44B并购 · OCF $8.1B · BNSF</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="36_BRK_Energy_BHE" data-pill-tier="subsidiary" aria-pressed="false">
+              <span class="ip-pill-mono mono">BHE</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="36_BRK_Energy_BHE">36. 伯克希尔能源</span>
+                <span class="ip-pill-meta mono" data-pill-meta="36_BRK_Energy_BHE">100%全资 · 9M营收$17.8B · BHE</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="37_BRK_Precision_Castparts" data-pill-tier="subsidiary" aria-pressed="false">
+              <span class="ip-pill-mono mono">PCC</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="37_BRK_Precision_Castparts">37. 精密机件 PCC</span>
+                <span class="ip-pill-meta mono" data-pill-meta="37_BRK_Precision_Castparts">$37.2B并购 · 航发叶片王 · PCC</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="38_BRK_Dairy_Queen" data-pill-tier="subsidiary" aria-pressed="false">
+              <span class="ip-pill-mono mono">IDQ</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="38_BRK_Dairy_Queen">38. 冰雪皇后 DQ</span>
+                <span class="ip-pill-meta mono" data-pill-meta="38_BRK_Dairy_Queen">7,500+门店 · 99%加盟 · IDQ</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="39_HIST_BYD" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">1211</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="39_HIST_BYD">39. 比亚迪</span>
+                <span class="ip-pill-meta mono" data-pill-meta="39_HIST_BYD">$2.3亿 → &gt;$70亿 (&gt;30倍) · 1211</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="40_HIST_PetroChina" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">0857</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="40_HIST_PetroChina">40. 中国石油</span>
+                <span class="ip-pill-meta mono" data-pill-meta="40_HIST_PetroChina">$4.88亿 → $40亿 (8.2倍) · 0857</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="41_HIST_Washington_Post" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">WPO</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="41_HIST_Washington_Post">41. 华盛顿邮报</span>
+                <span class="ip-pill-meta mono" data-pill-meta="41_HIST_Washington_Post">$1,060万 → $11亿 (&gt;100倍) · WPO</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="42_HIST_Goldman_Sachs" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">GS</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="42_HIST_Goldman_Sachs">42. 高盛集团</span>
+                <span class="ip-pill-meta mono" data-pill-meta="42_HIST_Goldman_Sachs">$50亿优先股 · 净赚&gt;$32亿 · GS</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="43_HIST_Capital_Cities_ABC" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">CCAB</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="43_HIST_Capital_Cities_ABC">43. 大都会/ABC</span>
+                <span class="ip-pill-meta mono" data-pill-meta="43_HIST_Capital_Cities_ABC">$5.17亿 → ~$25亿 (~5倍) · CCB</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="44_HIST_Gillette" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">GILL</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="44_HIST_Gillette">44. 吉列公司</span>
+                <span class="ip-pill-meta mono" data-pill-meta="44_HIST_Gillette">$6亿 → &gt;$50亿 (&gt;8.5倍) · GILL</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="45_HIST_Wells_Fargo" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">WFC</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="45_HIST_Wells_Fargo">45. 富国银行</span>
+                <span class="ip-pill-meta mono" data-pill-meta="45_HIST_Wells_Fargo">赚逾百亿 · 2022清零离场 · WFC</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="46_HIST_Visa_Mastercard" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">V/MA</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="46_HIST_Visa_Mastercard">46. 维萨与万事达</span>
+                <span class="ip-pill-meta mono" data-pill-meta="46_HIST_Visa_Mastercard">15年 &gt;10倍 · 26Q1止盈 · V/MA</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="47_HIST_Salomon_Brothers" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">SALO</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="47_HIST_Salomon_Brothers">47. 所罗门兄弟</span>
+                <span class="ip-pill-meta mono" data-pill-meta="47_HIST_Salomon_Brothers">$7亿优先股 · 临危救主翻倍 · SB</span>
+              </span>
+            </button>
+            <button type="button" class="ip-pill-btn" data-switch-ip="48_HIST_Dexter_Shoe" data-pill-tier="historical" aria-pressed="false">
+              <span class="ip-pill-mono mono">DEXT</span>
+              <span class="ip-pill-text">
+                <span class="ip-pill-name" data-pill-name="48_HIST_Dexter_Shoe">48. 德克斯特鞋业</span>
+                <span class="ip-pill-meta mono" data-pill-meta="48_HIST_Dexter_Shoe">换股代价超 -$185亿! · DEXT</span>
+              </span>
+            </button>
+        </div>
+      </section>
+
+      <!-- Dynamic Monograph Sections Host (00 - 07) -->
+      <div id="ipSectionsHost">
+<!-- 00 执行摘要与核心指标 -->
+      <section id="sec-00" class="mui-paper hero-card section-block">
+        <div class="status-strip">
+          <span class="mui-chip mui-chip-primary" data-i18n-zh="巴菲特定评：消费生态垄断 × 史上最大单笔美元盈利战役" data-i18n-en="Buffett Verdict: Consumer Ecosystem Moat × Largest Nominal Dollar Gain in History">巴菲特定评：消费生态垄断 × 史上最大单笔美元盈利战役</span>
+          <span class="mui-chip" data-i18n-zh="投资跨度：2016 Q1 · 2026Q3 美股核心持仓" data-i18n-en="Arc: 2016 Q1 · Q3 2026 U.S. 13F Core">投资跨度：2016 Q1 · 2026Q3 美股核心持仓</span>
+          <span class="mui-chip mui-chip-success mono" data-i18n-zh="核验基准：FY25 净利 $112.0B" data-i18n-en="Baseline: FY25 Net Inc $112.0B">核验基准：FY25 净利 $112.0B</span>
+        </div>
+
+        <div class="hero-overline mono">
+          <span data-i18n-zh="BERKSHIRE HATHAWAY #01 / 48 · 自研 Apple Silicon 芯片能效壁垒 × iOS/macOS 跨端锁客 × Services 经常性现金流 × 极致回购注销" data-i18n-en="BERKSHIRE HATHAWAY #01 / 48 · Custom Apple Silicon Moat × iOS Ecosystem Lock-In × High-Margin Services × Relentless Buybacks">BERKSHIRE HATHAWAY #01 / 48 · 自研 Apple Silicon 芯片能效壁垒 × iOS/macOS 跨端锁客 × Services 经常性现金流 × 极致回购注销</span>
+        </div>
+
+        <h1 class="hero-h1" data-i18n-rich="hero_h1">苹果公司 Apple Inc. (AAPL) 巴菲特投资深度分析：<span class="gradient-accent">消费生态垄断 × 史上最大单笔美元盈利战役</span></h1>
+
+        <p class="lead-prose" data-i18n-rich="lead_prose">巴菲特于 2016 年突破“不投科技股”传统重仓苹果，将其定义为具备极高转换成本与品牌粘性的顶级消费品生态而非单纯硬件制造商。截至 2026Q3 13F，尽管在 2024–2025 年间逢高锁定巨额利润，苹果仍以 2.279 亿股、$759.0 亿美元市值稳居伯克希尔第一重仓（占美股组合 25.0%）。FY2025 苹果实现净销售额 $4,162 亿美元（+6%）、净利润 $1,120 亿美元、经营现金流 $1,115 亿美元，服务业务高毛利引擎与持续注销式回购构筑了教科书级复利机器。 在巴菲特与伯克希尔·哈撒韦 60 年资本配置体系中，该标的定位为<strong>「第一重仓 · 占比 25.0% ($75.90B)」</strong>（首次建仓/并购：2016 Q1，持仓规模/历史战果：<strong>$75.90B 持仓市值</strong>，核心经营锚点：<strong>FY25 净利 $112.0B</strong>） <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">10-K 年报 ↗</a> <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm" target="_blank" rel="noopener noreferrer">SEC / 权威核验 ↗</a>。</p>
+
+        <div class="grid-3" style="margin-bottom: 18px;">
+        <div class="feature-card">
+          <div class="mui-avatar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h3 data-i18n-zh="超级消费品心智垄断而非周期硬件商" data-i18n-en="Indispensable Consumer Ecosystem, Not Hardware">超级消费品心智垄断而非周期硬件商</h3>
+          <p data-i18n-rich="tc_0">巴菲特洞察到全球逾 22 亿活跃 iOS 设备构筑了人类商业史上最深的数字转换成本——用户宁可放弃第二辆车也不愿放弃 iPhone。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">权威核验 ↗</a></p>
+        </div>
+        <div class="feature-card">
+          <div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div>
+          <h3 data-i18n-zh="高毛利 Services 订阅税与负营运资本" data-i18n-en="74%+ Margin Services Tollbooth &amp; Cash Velocity">高毛利 Services 订阅税与负营运资本</h3>
+          <p data-i18n-rich="tc_1">App Store、iCloud、Apple Pay 与搜索默认分润贡献近千亿美元级经常性收入，硬件预收与供应链账期形成天然负营运资本。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">权威核验 ↗</a></p>
+        </div>
+        <div class="feature-card">
+          <div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 data-i18n-zh="美股史上最强“食人族”回购复利" data-i18n-en="History&#x27;s Greatest Share Cannibalization Machine">美股史上最强“食人族”回购复利</h3>
+          <p data-i18n-rich="tc_2">每年将近千亿美元自由现金流用于回购注销流通股，使伯克希尔即便不追加一分钱也能享受每股内在价值的持续复利跃升。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">权威核验 ↗</a></p>
+        </div>
+        </div>
+
+        <div class="grid-4">
+        <div class="mui-paper mui-card-interactive kpi-card">
+          <div class="kpi-top">
+            <span class="kpi-label" data-i18n-zh="2026Q3 持仓市值" data-i18n-en="Q3 26 Stake Value">2026Q3 持仓市值</span>
+            <span class="mui-chip mui-chip-primary mono" data-i18n-zh="组合第1重仓 · 25.0%" data-i18n-en="#1 Holding · 25.0%">组合第1重仓 · 25.0%</span>
+          </div>
+          <div class="kpi-value mono" data-i18n-zh="$75.90B" data-i18n-en="$75.90B">$75.90B</div>
+          <p class="kpi-desc" data-i18n-rich="kpi_0">持有 2.2792 亿股 AAPL，虽经高位兑现仍稳居伯克希尔头号重仓 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">财报核验 ↗</a></p>
+        </div>
+        <div class="mui-paper mui-card-interactive kpi-card">
+          <div class="kpi-top">
+            <span class="kpi-label" data-i18n-zh="FY2025 合并营收" data-i18n-en="FY25 Net Sales">FY2025 合并营收</span>
+            <span class="mui-chip mui-chip-success mono" data-i18n-zh="同比 +6.4%" data-i18n-en="+6.4% YoY">同比 +6.4%</span>
+          </div>
+          <div class="kpi-value mono" data-i18n-zh="$416.2B" data-i18n-en="$416.2B">$416.2B</div>
+          <p class="kpi-desc" data-i18n-rich="kpi_1">iPhone 基盘叠加高毛利 Services 服务生态（毛利率逾 74%）持续扩张 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">财报核验 ↗</a></p>
+        </div>
+        <div class="mui-paper mui-card-interactive kpi-card">
+          <div class="kpi-top">
+            <span class="kpi-label" data-i18n-zh="FY2025 净利润" data-i18n-en="FY25 Net Income">FY2025 净利润</span>
+            <span class="mui-chip mui-chip-warning mono" data-i18n-zh="净利率 26.9%" data-i18n-en="26.9% Net Margin">净利率 26.9%</span>
+          </div>
+          <div class="kpi-value mono" data-i18n-zh="$112.0B" data-i18n-en="$112.0B">$112.0B</div>
+          <p class="kpi-desc" data-i18n-rich="kpi_2">经营现金流高达 $1,115 亿美元，无需重资产资本开支即可转化为股东回报 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">财报核验 ↗</a></p>
+        </div>
+        <div class="mui-paper mui-card-interactive kpi-card">
+          <div class="kpi-top">
+            <span class="kpi-label" data-i18n-zh="十年回购注销幅度" data-i18n-en="10Y Share Reduction">十年回购注销幅度</span>
+            <span class="mui-chip mui-chip-violet mono" data-i18n-zh="食人族复利典范" data-i18n-en="Cannibal Compounder">食人族复利典范</span>
+          </div>
+          <div class="kpi-value mono" data-i18n-zh="&gt;38% 注销" data-i18n-en="&gt;38% Retired">&gt;38% 注销</div>
+          <p class="kpi-desc" data-i18n-rich="kpi_3">自 2016 年伯克希尔建仓以来累计回购逾 $6,500 亿，被动大幅增厚每股权益 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">财报核验 ↗</a></p>
+        </div>
+        </div>
+      </section>
+
+      <!-- 01 巴菲特持仓脉络与业务架构拆解 -->
+      <section id="sec-01" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 01 · BERKSHIRE POSITION ARC &amp; OPERATING ARCHITECTURE</div>
+            <h2 class="sec-h2" data-i18n-zh="一、巴菲特投资苹果公司脉络与商业飞轮架构拆解" data-i18n-en="1. Buffett&#x27;s Apple Inc. Thesis &amp; Operating Flywheel Architecture">一、巴菲特投资苹果公司脉络与商业飞轮架构拆解</h2>
+            <p class="sec-sub" data-i18n-zh="首次建仓/并购：2016 Q1 · Apple 软硬芯一体化闭环飞轮 · 22亿+ 活跃设备生态税" data-i18n-en="Initial Entry: 2016 Q1 · Apple Silicon-Hardware-Services Closed-Loop Flywheel · 2.2B+ Active Devices">首次建仓/并购：2016 Q1 · Apple 软硬芯一体化闭环飞轮 · 22亿+ 活跃设备生态税</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="$75.90B 持仓市值" data-i18n-en="$75.90B Stake Value">$75.90B 持仓市值</span>
+        </div>
+
+        <div class="arch-blueprint">
+          <div class="arch-hub">
+            <div class="arch-hub-title" data-i18n-zh="Apple 软硬芯一体化闭环飞轮 · 22亿+ 活跃设备生态税" data-i18n-en="Apple Silicon-Hardware-Services Closed-Loop Flywheel · 2.2B+ Active Devices">Apple 软硬芯一体化闭环飞轮 · 22亿+ 活跃设备生态税</div>
+            <div class="arch-hub-sub" data-i18n-zh="自研 Apple Silicon 芯片能效壁垒 × iOS/macOS 跨端锁客 × Services 经常性现金流 × 极致回购注销" data-i18n-en="Custom Apple Silicon Moat × iOS Ecosystem Lock-In × High-Margin Services × Relentless Buybacks">自研 Apple Silicon 芯片能效壁垒 × iOS/macOS 跨端锁客 × Services 经常性现金流 × 极致回购注销</div>
+          </div>
+          <div class="arch-nodes">
+          <div class="arch-node">
+            <div class="arch-node-tag mono" data-i18n-zh="CORE ENGINE 01" data-i18n-en="CORE ENGINE 01">CORE ENGINE 01</div>
+            <div class="arch-node-name" data-i18n-zh="iPhone 旗舰入口" data-i18n-en="iPhone Flagship Funnel">iPhone 旗舰入口</div>
+            <div class="arch-node-desc" data-i18n-zh="占总营收约 51%，超 90% 留存率锁定全球高净值消费群。" data-i18n-en="~51% of net sales; &gt;90% retention anchoring global affluent consumers.">占总营收约 51%，超 90% 留存率锁定全球高净值消费群。</div>
+          </div>
+          <div class="arch-node">
+            <div class="arch-node-tag mono" data-i18n-zh="CORE ENGINE 02" data-i18n-en="CORE ENGINE 02">CORE ENGINE 02</div>
+            <div class="arch-node-name" data-i18n-zh="Services 服务高毛利引擎" data-i18n-en="Services Margin Engine">Services 服务高毛利引擎</div>
+            <div class="arch-node-desc" data-i18n-zh="年化突破千亿美元、毛利率逾 74%，平滑硬件换机周期。" data-i18n-en="$100B+ run-rate at &gt;74% gross margin smoothing hardware cycles.">年化突破千亿美元、毛利率逾 74%，平滑硬件换机周期。</div>
+          </div>
+          <div class="arch-node">
+            <div class="arch-node-tag mono" data-i18n-zh="SILICON MOAT" data-i18n-en="SILICON MOAT">SILICON MOAT</div>
+            <div class="arch-node-name" data-i18n-zh="Apple Silicon 自研芯片" data-i18n-en="Custom Apple Silicon">Apple Silicon 自研芯片</div>
+            <div class="arch-node-desc" data-i18n-zh="M 系列与 A 系列构筑端侧 AI（Apple Intelligence）算力护城河。" data-i18n-en="A/M-series custom silicon powering private on-device AI compute.">M 系列与 A 系列构筑端侧 AI（Apple Intelligence）算力护城河。</div>
+          </div>
+          <div class="arch-node">
+            <div class="arch-node-tag mono" data-i18n-zh="ECOSYSTEM LOCK" data-i18n-en="ECOSYSTEM LOCK">ECOSYSTEM LOCK</div>
+            <div class="arch-node-name" data-i18n-zh="Mac / iPad / 穿戴矩阵" data-i18n-en="Mac, iPad &amp; Wearables">Mac / iPad / 穿戴矩阵</div>
+            <div class="arch-node-desc" data-i18n-zh="AirPods 与 Watch 将单设备买家转化为全家桶高粘性订户。" data-i18n-en="AirPods &amp; Watch multiply per-household switching friction.">AirPods 与 Watch 将单设备买家转化为全家桶高粘性订户。</div>
+          </div>
+          <div class="arch-node">
+            <div class="arch-node-tag mono" data-i18n-zh="SUPPLY CHAIN" data-i18n-en="SUPPLY CHAIN">SUPPLY CHAIN</div>
+            <div class="arch-node-name" data-i18n-zh="负营运资本现金机器" data-i18n-en="Negative Working Capital">负营运资本现金机器</div>
+            <div class="arch-node-desc" data-i18n-zh="极高存货周转叠加供应商账期，净利润近 100% 转化为自由现金流。" data-i18n-en="Ultra-lean inventory turns ~100% of net profit into FCF.">极高存货周转叠加供应商账期，净利润近 100% 转化为自由现金流。</div>
+          </div>
+          <div class="arch-node">
+            <div class="arch-node-tag mono" data-i18n-zh="CAPITAL RETURN" data-i18n-en="CAPITAL RETURN">CAPITAL RETURN</div>
+            <div class="arch-node-name" data-i18n-zh="千亿美元级回购飞轮" data-i18n-en="$90B–$100B Annual Buybacks">千亿美元级回购飞轮</div>
+            <div class="arch-node-desc" data-i18n-zh="十年注销近四成总股本，是巴菲特最推崇的股东友好型资本配置。" data-i18n-en="Nearly 40% share count reduction over a decade.">十年注销近四成总股本，是巴菲特最推崇的股东友好型资本配置。</div>
+          </div>
+          </div>
+          <div class="arch-platform-bar">
+          <div class="arch-platform">
+            <strong data-i18n-zh="伯克希尔第一重仓压舱石" data-i18n-en="Berkshire&#x27;s #1 Portfolio Anchor">伯克希尔第一重仓压舱石</strong>
+            <span data-i18n-zh="2016–2018 累计投入约 $360 亿，峰值浮盈超 $1,400 亿，创人类单笔股票盈利纪录。" data-i18n-en="~$36B cost basis in 2016–18 generated &gt;$140B lifetime gains—history&#x27;s largest equity win.">2016–2018 累计投入约 $360 亿，峰值浮盈超 $1,400 亿，创人类单笔股票盈利纪录。</span>
+          </div>
+          <div class="arch-platform">
+            <strong data-i18n-zh="2024–2026 税务与仓位再平衡" data-i18n-en="2024–26 Tax &amp; Weight Rebalancing">2024–2026 税务与仓位再平衡</strong>
+            <span data-i18n-zh="逢高锁定部分低税率浮盈充实 $3,523 亿现金储备，仍保留 $759 亿（25%）核心头寸。" data-i18n-en="Trimmed at ~32x P/E to fortify $352.3B cash while retaining $75.9B (25%) #1 conviction.">逢高锁定部分低税率浮盈充实 $3,523 亿现金储备，仍保留 $759 亿（25%）核心头寸。</span>
+          </div>
+          </div>
+        </div>
+
+        <div class="mui-alert" style="margin-bottom: 18px;">
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="巴菲特视角" data-i18n-en="BUFFETT LENS">巴菲特视角</span>
+          <div data-i18n-rich="ch1_alert"><strong>巴菲特仓位与商业本质定评（伯克希尔第一重仓压舱石）：</strong>2016–2018 累计投入约 $360 亿，峰值浮盈超 $1,400 亿，创人类单笔股票盈利纪录。 逢高锁定部分低税率浮盈充实 $3,523 亿现金储备，仍保留 $759 亿（25%）核心头寸。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">10-K 年报 ↗</a></div>
+        </div>
+
+        <div class="chart-card" style="margin-bottom: 18px;">
+          <div class="chart-toolbar">
+            <div>
+              <div id="ch1ChartTitle" class="chart-title">苹果核心业务板块收入占比 vs 毛利贡献结构 (FY2025)</div>
+              <div id="ch1ChartSub" class="chart-caption">Services 以约 26% 营收贡献超 41% 毛利总额</div>
+            </div>
+            <div class="mui-segmented" role="tablist">
+              <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA" data-i18n-zh="视图A: 业务与盈利结构拆解" data-i18n-en="View A: Segment &amp; Margin Mix">视图A: 业务与盈利结构拆解</button>
+              <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB" data-i18n-zh="视图B: 历年核心业绩演进" data-i18n-en="View B: Multi-Year Trajectory">视图B: 历年核心业绩演进</button>
+            </div>
+          </div>
+          <div id="ch1AxisMeta" class="chart-axis-meta mono"></div>
+          <div class="canvas-stage">
+            <canvas id="chartCh1"></canvas>
+          </div>
+          <div class="chart-legend" id="ch1Legend">
+            <button type="button" class="legend-pill" data-ch1-series="s1"><span id="ch1Dot1" class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1"></span></button>
+            <button type="button" class="legend-pill" data-ch1-series="s2"><span id="ch1Dot2" class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2"></span></button>
+          </div>
+        </div>
+
+        <div class="grid-2">
+        <div class="matrix-card">
+          <div class="matrix-card-head">
+            <div class="matrix-card-title" data-i18n-zh="iPhone 旗舰入口 × Services 服务高毛利引擎" data-i18n-en="iPhone Flagship Funnel × Services Margin Engine">iPhone 旗舰入口 × Services 服务高毛利引擎</div>
+            <span class="mui-chip mui-chip-primary mono" data-i18n-zh="$416.2B" data-i18n-en="$416.2B">$416.2B</span>
+          </div>
+          <p class="matrix-card-body" data-i18n-rich="mc_body_0">占总营收约 51%，超 90% 留存率锁定全球高净值消费群。 年化突破千亿美元、毛利率逾 74%，平滑硬件换机周期。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">10-K 披露 ↗</a></p>
+          <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail1"><span>展开微观执行机制</span> <span>⌄</span></button>
+          <div id="matrixDetail1" class="collapse-panel" data-i18n-rich="mc_det_0">iMessage、iCloud 照片库、Apple Watch 健康记录与全家桶协同形成高不可攀的迁移壁垒。 核心量化验证：Services 服务业务毛利率 达 74.2%（经常性订阅利润核心）。</div>
+        </div>
+        <div class="matrix-card">
+          <div class="matrix-card-head">
+            <div class="matrix-card-title" data-i18n-zh="Apple Silicon 自研芯片 × Mac / iPad / 穿戴矩阵" data-i18n-en="Custom Apple Silicon × Mac, iPad &amp; Wearables">Apple Silicon 自研芯片 × Mac / iPad / 穿戴矩阵</div>
+            <span class="mui-chip mui-chip-success mono" data-i18n-zh="高端市占 &gt;70%" data-i18n-en="&gt;70% Premium Share">高端市占 &gt;70%</span>
+          </div>
+          <p class="matrix-card-body" data-i18n-rich="mc_body_1">M 系列与 A 系列构筑端侧 AI（Apple Intelligence）算力护城河。 AirPods 与 Watch 将单设备买家转化为全家桶高粘性订户。</p>
+          <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail2"><span>展开微观执行机制</span> <span>⌄</span></button>
+          <div id="matrixDetail2" class="collapse-panel" data-i18n-rich="mc_det_1">定价权与竞争壁垒传导：在全球 $800+ 高端智能手机市场占据逾七成份额，攫取全行业超 80% 营业利润。（iOS 旗舰用户换机留存率：92.0%）。</div>
+        </div>
+        <div class="matrix-card">
+          <div class="matrix-card-head">
+            <div class="matrix-card-title" data-i18n-zh="自由现金流效率：负营运资本现金机器" data-i18n-en="Owner Earnings Engine: Negative Working Capital">自由现金流效率：负营运资本现金机器</div>
+            <span class="mui-chip mui-chip-warning mono" data-i18n-zh="$112.0B" data-i18n-en="$112.0B">$112.0B</span>
+          </div>
+          <p class="matrix-card-body" data-i18n-rich="mc_body_2">极高存货周转叠加供应商账期，净利润近 100% 转化为自由现金流。 经营现金流高达 $1,115 亿美元，无需重资产资本开支即可转化为股东回报 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm" target="_blank" rel="noopener noreferrer">现金流核验 ↗</a></p>
+          <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail3"><span>展开微观执行机制</span> <span>⌄</span></button>
+          <div id="matrixDetail3" class="collapse-panel" data-i18n-rich="mc_det_2">逾 10 亿付费订阅账户让苹果从硬件一次性销售升级为永续年金型平台。 维持性资本开支可控，真金白银留存率高。</div>
+        </div>
+        <div class="matrix-card">
+          <div class="matrix-card-head">
+            <div class="matrix-card-title" data-i18n-zh="资本配置与股东回报：千亿美元级回购飞轮" data-i18n-en="Capital Allocation &amp; Buybacks: $90B–$100B Annual Buybacks">资本配置与股东回报：千亿美元级回购飞轮</div>
+            <span class="mui-chip mui-chip-violet mono" data-i18n-zh="&gt;38% 注销" data-i18n-en="&gt;38% Retired">&gt;38% 注销</span>
+          </div>
+          <p class="matrix-card-body" data-i18n-rich="mc_body_3">十年注销近四成总股本，是巴菲特最推崇的股东友好型资本配置。 库克团队不搞盲目跨界大并购，将几乎全部自由现金流通过回购+分红返还股东。</p>
+          <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail4"><span>展开微观执行机制</span> <span>⌄</span></button>
+          <div id="matrixDetail4" class="collapse-panel" data-i18n-rich="mc_det_3">2016–2018 累计投入约 $360 亿，峰值浮盈超 $1,400 亿，创人类单笔股票盈利纪录。 逢高锁定部分低税率浮盈充实 $3,523 亿现金储备，仍保留 $759 亿（25%）核心头寸。</div>
+        </div>
+        </div>
+      </section>
+
+      <!-- 02 商业模式与企业文化护城河 -->
+      <section id="sec-02" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 02 · TWO-FILTER MOAT &amp; CORPORATE CULTURE</div>
+            <h2 class="sec-h2" data-i18n-zh="二、巴菲特“护城河 × 资本配置”双维审视：十年后更宽的竞争壁垒" data-i18n-en="2. Buffett&#x27;s Moat &amp; Capital Allocation Test: 10-Year Competitive Durability">二、巴菲特“护城河 × 资本配置”双维审视：十年后更宽的竞争壁垒</h2>
+            <p class="sec-sub" data-i18n-zh="点击左侧任一护城河支柱卡片，联动高亮右侧五维竞争力雷达图对应维度" data-i18n-en="Click any moat pillar on the left to inspect Buffett&#x27;s lens and highlight the 5-axis radar">点击左侧任一护城河支柱卡片，联动高亮右侧五维竞争力雷达图对应维度</p>
+          </div>
+          <span class="mui-chip mui-chip-success" data-i18n-zh="护城河定性：留存率 &gt;92% · 2026Q3 美股核心持仓" data-i18n-en="Moat Rating: &gt;92% Retention · Q3 2026 U.S. 13F Core">护城河定性：留存率 &gt;92% · 2026Q3 美股核心持仓</span>
+        </div>
+
+        <div class="grid-radar">
+          <div class="pillar-stack" id="pillarStack">
+          <button type="button" class="pillar-card active" data-pillar="0">
+            <div class="pillar-head">
+              <span class="pillar-title" data-i18n-zh="01 · 生态转换成本护城河" data-i18n-en="01 · Ecosystem Switching Costs">01 · 生态转换成本护城河</span>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="留存率 &gt;92%" data-i18n-en="&gt;92% Retention">留存率 &gt;92%</span>
+            </div>
+            <p class="pillar-desc" data-i18n-zh="iMessage、iCloud 照片库、Apple Watch 健康记录与全家桶协同形成高不可攀的迁移壁垒。" data-i18n-en="iMessage, iCloud, Health data, and AirDrop lock users across multi-device upgrade cycles.">iMessage、iCloud 照片库、Apple Watch 健康记录与全家桶协同形成高不可攀的迁移壁垒。</p>
+          </button>
+          <button type="button" class="pillar-card" data-pillar="1">
+            <div class="pillar-head">
+              <span class="pillar-title" data-i18n-zh="02 · 品牌溢价与高端定价权" data-i18n-en="02 · Global Luxury-Tech Pricing Power">02 · 品牌溢价与高端定价权</span>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="高端市占 &gt;70%" data-i18n-en="&gt;70% Premium Share">高端市占 &gt;70%</span>
+            </div>
+            <p class="pillar-desc" data-i18n-zh="在全球 $800+ 高端智能手机市场占据逾七成份额，攫取全行业超 80% 营业利润。" data-i18n-en="Commands &gt;70% of global $800+ smartphones and &gt;80% of industry operating profit.">在全球 $800+ 高端智能手机市场占据逾七成份额，攫取全行业超 80% 营业利润。</p>
+          </button>
+          <button type="button" class="pillar-card" data-pillar="2">
+            <div class="pillar-head">
+              <span class="pillar-title" data-i18n-zh="03 · 服务订阅高毛利印钞机" data-i18n-en="03 · High-Margin Services Flywheel">03 · 服务订阅高毛利印钞机</span>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="毛利率 ~74%" data-i18n-en="~74% Gross Margin">毛利率 ~74%</span>
+            </div>
+            <p class="pillar-desc" data-i18n-zh="逾 10 亿付费订阅账户让苹果从硬件一次性销售升级为永续年金型平台。" data-i18n-en="1B+ paid subscriptions transform hardware sales into high-margin recurring annuities.">逾 10 亿付费订阅账户让苹果从硬件一次性销售升级为永续年金型平台。</p>
+          </button>
+          <button type="button" class="pillar-card" data-pillar="3">
+            <div class="pillar-head">
+              <span class="pillar-title" data-i18n-zh="04 · 教科书级回购资本配置" data-i18n-en="04 · Shareholder-First Capital Return">04 · 教科书级回购资本配置</span>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="ROE &gt;140%" data-i18n-en="ROE &gt;140%">ROE &gt;140%</span>
+            </div>
+            <p class="pillar-desc" data-i18n-zh="库克团队不搞盲目跨界大并购，将几乎全部自由现金流通过回购+分红返还股东。" data-i18n-en="Tim Cook avoids empire-building M&amp;A, returning ~100% of FCF via buybacks and dividends.">库克团队不搞盲目跨界大并购，将几乎全部自由现金流通过回购+分红返还股东。</p>
+          </button>
+            <div id="pillarFocusNote" class="mui-alert" style="margin-top: 4px;">
+              <div><strong>支柱一深度解析：</strong>巴菲特在奥马哈多次指出，苹果的护城河不在于下一代手机参数领先多少，而在于 iOS 生态深入全球数十亿家庭数字生活的每一分钟。</div>
+            </div>
+          </div>
+
+          <div class="chart-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div class="chart-title" data-i18n-zh="苹果公司 巴菲特五维护城河雷达图（10分制标杆评估）" data-i18n-en="Apple Inc. 5-Axis Moat Benchmark Radar (10-Pt Scale)">苹果公司 巴菲特五维护城河雷达图（10分制标杆评估）</div>
+              <div class="chart-caption" data-i18n-zh="点击下方图例胶囊可开关对比曲线，悬停顶点查看具体分值" data-i18n-en="Click legend pills to toggle peer curves; hover vertices for exact scores">点击下方图例胶囊可开关对比曲线，悬停顶点查看具体分值</div>
+            </div>
+            <div class="canvas-stage-tall">
+              <canvas id="chartRadar"></canvas>
+            </div>
+            <div class="chart-legend" id="radarLegend">
+              <button type="button" class="legend-pill" data-radar-key="target"><span class="legend-dot" style="background:#3399FF;"></span><span data-i18n-zh="苹果 Apple (AAPL)" data-i18n-en="Apple (AAPL)">苹果 Apple (AAPL)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="peer"><span class="legend-dot" style="background:#22C55E;"></span><span data-i18n-zh="微软 Microsoft (MSFT)" data-i18n-en="Microsoft (MSFT)">微软 Microsoft (MSFT)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="bench"><span class="legend-dot" style="background:#FFB74D;"></span><span data-i18n-zh="三星电子 Samsung" data-i18n-en="Samsung Electronics">三星电子 Samsung</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 全球同业横向对标 -->
+      <section id="sec-03" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 03 · PEER BENCHMARKING &amp; METRIC DECOMPOSITION</div>
+            <h2 class="sec-h2" data-i18n-zh="三、苹果公司 vs 全球同业标杆横向对标：护城河厚度与资本回报代差" data-i18n-en="3. Apple Inc. vs. Global Industry Peers: Moat Depth &amp; Return Spread">三、苹果公司 vs 全球同业标杆横向对标：护城河厚度与资本回报代差</h2>
+            <p class="sec-sub" data-i18n-zh="支持按公司名称、掌舵人、商业模式关键词或护城河特征实时检索筛选" data-i18n-en="Search or filter in real time by company, leader, business model, or moat trait">支持按公司名称、掌舵人、商业模式关键词或护城河特征实时检索筛选</p>
+          </div>
+          <span id="peerCountBadge" class="mui-chip mui-chip-primary mono"></span>
+        </div>
+
+        <div class="datagrid-toolbar">
+          <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索对标企业、掌舵人、核心产品或巴菲特比较结论…" data-ph-zh="搜索对标企业、掌舵人、核心产品或巴菲特比较结论…" data-ph-en="Search peer company, leader, moat, or Buffett&#39;s view…" aria-label="筛选对比企业" />
+          <div class="mui-segmented" role="group">
+            <button type="button" id="peerFilterAll" class="mui-seg-btn active" data-peer-filter="all" data-i18n-zh="全部对标企业" data-i18n-en="All Peers">全部对标企业</button>
+            <button type="button" id="peerFilterCore" class="mui-seg-btn" data-peer-filter="core" data-i18n-zh="直接竞争对手" data-i18n-en="Direct Rivals">直接竞争对手</button>
+            <button type="button" id="peerFilterEco" class="mui-seg-btn" data-peer-filter="eco" data-i18n-zh="伯克希尔生态参照" data-i18n-en="Berkshire Universe Peers">伯克希尔生态参照</button>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-bottom: 20px;">
+          <table class="mui-table">
+            <thead>
+              <tr>
+                <th data-i18n-zh="企业与核心掌舵人" data-i18n-en="Company &amp; Leader">企业与核心掌舵人</th>
+                <th data-i18n-zh="商业模式与市场卡位" data-i18n-en="Business Model &amp; Niche">商业模式与市场卡位</th>
+                <th data-i18n-zh="企业文化与治理基因" data-i18n-en="Culture &amp; Governance">企业文化与治理基因</th>
+                <th data-i18n-zh="最新核心营收规模" data-i18n-en="Scale &amp; Growth">最新核心营收规模</th>
+                <th data-i18n-zh="利润率与资本回报" data-i18n-en="Margins &amp; Return">利润率与资本回报</th>
+                <th data-i18n-zh="巴菲特视角优劣势评估" data-i18n-en="Buffett&#x27;s Comparative Verdict">巴菲特视角优劣势评估</th>
+              </tr>
+            </thead>
+            <tbody id="peerTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="苹果生态盈利质量与资本回报六维评估" data-i18n-en="Apple 6-Metric Quality &amp; Capital Return Profile">苹果生态盈利质量与资本回报六维评估</div>
+              <div class="chart-caption" data-i18n-zh="数据核验：Apple Inc. FY2025 Form 10-K (SEC EDGAR, Ended Sep 27, 2025)" data-i18n-en="Verified Source: Apple Inc. FY2025 Form 10-K (SEC EDGAR, Ended Sep 27, 2025)">数据核验：Apple Inc. FY2025 Form 10-K (SEC EDGAR, Ended Sep 27, 2025)</div>
+            </div>
+            <span class="mui-chip mui-chip-success mono" data-i18n-zh="FY2025 财报核验" data-i18n-en="FY25 10-K Verified">FY2025 财报核验</span>
+          </div>
+          <div class="canvas-stage-bars">
+            <canvas id="chartBars"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 自由现金流、资本配置与复利模拟器 -->
+      <section id="sec-04" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 04 · OWNER EARNINGS &amp; COMPOUNDING SIMULATOR</div>
+            <h2 class="sec-h2" data-i18n-zh="四、苹果公司股东盈余演进与长期复利推演：时间如何奖励好生意？" data-i18n-en="4. Apple Inc. Owner Earnings Trajectory &amp; Compounding Simulator">四、苹果公司股东盈余演进与长期复利推演：时间如何奖励好生意？</h2>
+            <p class="sec-sub" data-i18n-zh="内生盈利增长叠加注销式股票回购与分红复投的全周期复利效应测算" data-i18n-en="Quantifying intrinsic earnings growth amplified by share cannibalization &amp; dividend reinvestment">内生盈利增长叠加注销式股票回购与分红复投的全周期复利效应测算</p>
+          </div>
+          <span class="mui-chip mui-chip-warning mono" data-i18n-zh="2016 建仓至今复利轨" data-i18n-en="2016 Entry to FY25">2016 建仓至今复利轨</span>
+        </div>
+
+        <div class="grid-4" style="margin-bottom: 18px;">
+        <div class="mui-paper kpi-card">
+          <span class="kpi-label mono" data-i18n-zh="2026Q3 持仓市值" data-i18n-en="Q3 26 Stake Value">2026Q3 持仓市值</span>
+          <div class="kpi-value mono" style="color: var(--mui-primary-lighter);" data-i18n-zh="$75.90B" data-i18n-en="$75.90B">$75.90B</div>
+          <p class="kpi-desc" data-i18n-zh="持有 2.2792 亿股 AAPL，虽经高位兑现仍稳居伯克希尔头号重仓" data-i18n-en="227.92M shares held; still #1 equity position after disciplined trimming">持有 2.2792 亿股 AAPL，虽经高位兑现仍稳居伯克希尔头号重仓</p>
+        </div>
+        <div class="mui-paper kpi-card">
+          <span class="kpi-label mono" data-i18n-zh="FY2025 净利润" data-i18n-en="FY25 Net Income">FY2025 净利润</span>
+          <div class="kpi-value mono" style="color: var(--mui-success-text);" data-i18n-zh="$112.0B" data-i18n-en="$112.0B">$112.0B</div>
+          <p class="kpi-desc" data-i18n-zh="经营现金流高达 $1,115 亿美元，无需重资产资本开支即可转化为股东回报" data-i18n-en="$111.5B operating cash flow with asset-light negative working capital">经营现金流高达 $1,115 亿美元，无需重资产资本开支即可转化为股东回报</p>
+        </div>
+        <div class="mui-paper kpi-card">
+          <span class="kpi-label mono" data-i18n-zh="十年回购注销幅度" data-i18n-en="10Y Share Reduction">十年回购注销幅度</span>
+          <div class="kpi-value mono" style="color: var(--mui-warning-text);" data-i18n-zh="&gt;38% 注销" data-i18n-en="&gt;38% Retired">&gt;38% 注销</div>
+          <p class="kpi-desc" data-i18n-zh="自 2016 年伯克希尔建仓以来累计回购逾 $6,500 亿，被动大幅增厚每股权益" data-i18n-en="&gt;$650B buybacks since 2016 entry continuously accreting Berkshire&#x27;s ownership">自 2016 年伯克希尔建仓以来累计回购逾 $6,500 亿，被动大幅增厚每股权益</p>
+        </div>
+        <div class="mui-paper kpi-card">
+          <span class="kpi-label mono" data-i18n-zh="生态转换成本护城河" data-i18n-en="Ecosystem Switching Costs">生态转换成本护城河</span>
+          <div class="kpi-value mono" style="color: var(--mui-violet-text);" data-i18n-zh="留存率 &gt;92%" data-i18n-en="&gt;92% Retention">留存率 &gt;92%</div>
+          <p class="kpi-desc" data-i18n-zh="iMessage、iCloud 照片库、Apple Watch 健康记录与全家桶协同形成高不可攀的迁移壁垒。" data-i18n-en="iMessage, iCloud, Health data, and AirDrop lock users across multi-device upgrade cycles.">iMessage、iCloud 照片库、Apple Watch 健康记录与全家桶协同形成高不可攀的迁移壁垒。</p>
+        </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="伯克希尔持仓苹果演进与苹果稀释 EPS 跃升对照" data-i18n-en="Apple Diluted EPS ($) vs. Services Revenue Share (%)">伯克希尔持仓苹果演进与苹果稀释 EPS 跃升对照</div>
+              <div class="chart-caption" data-i18n-zh="柱状图（左轴）：稀释每股收益 EPS ($)；折线（右轴）：服务收入占比 (%)" data-i18n-en="Bars (left): Diluted EPS ($); Line (right): Services Rev Share (%)">柱状图（左轴）：稀释每股收益 EPS ($)；折线（右轴）：服务收入占比 (%)</div>
+            </div>
+            <span class="mui-chip mui-chip-primary mono" data-i18n-zh="2016 建仓至今复利轨" data-i18n-en="2016 Entry to FY25">2016 建仓至今复利轨</span>
+          </div>
+          <div class="chart-axis-meta mono">
+            <span style="color:var(--chart-c1);" data-i18n-zh="■ 左轴：稀释每股收益 EPS ($)" data-i18n-en="■ Left: Diluted EPS ($)">■ 左轴：稀释每股收益 EPS ($)</span>
+            <span style="color:var(--chart-c2);" data-i18n-zh="● 右轴：服务收入占比 (%)" data-i18n-en="● Right: Services Rev Share (%)">● 右轴：服务收入占比 (%)</span>
+          </div>
+          <div class="canvas-stage">
+            <canvas id="chartEps"></canvas>
+          </div>
+          <div class="chart-legend" id="epsLegend">
+            <button type="button" class="legend-pill" data-eps-series="eps"><span class="legend-dot" style="background:var(--chart-c1);"></span><span data-i18n-zh="稀释每股收益 EPS ($)" data-i18n-en="Diluted EPS ($)">稀释每股收益 EPS ($)</span></button>
+            <button type="button" class="legend-pill" data-eps-series="oci"><span class="legend-dot" style="background:var(--chart-c2);"></span><span data-i18n-zh="服务收入占比 (%)" data-i18n-en="Services Rev Share (%)">服务收入占比 (%)</span></button>
+          </div>
+        </div>
+
+        <!-- Interactive Compounding Simulator -->
+        <div class="simulator-grid">
+          <div class="sim-controls">
+            <div>
+              <div class="sec-eyebrow mono" style="margin-bottom:2px;">INTERACTIVE COMPOUNDING SIMULATOR</div>
+              <h3 style="font-size:1rem;font-weight:800;" data-i18n-zh="苹果长期持仓内生增长 + 注销式回购复利推演器" data-i18n-en="Apple Stake Compounding &amp; Share-Cannibalization Simulator">苹果长期持仓内生增长 + 注销式回购复利推演器</h3>
+            </div>
+
+            <label class="mui-switch-row" for="simDripToggle">
+              <div>
+                <div style="font-size:0.84rem;font-weight:700;color:var(--text-primary);" data-i18n-zh="开启每年注销回购 + 分红复投增厚 (+3.8%/年)" data-i18n-en="Include Share Cannibalization + Dividend Yield (+3.8%/yr)">开启每年注销回购 + 分红复投增厚 (+3.8%/年)</div>
+                <div style="font-size:0.74rem;color:var(--text-secondary);" data-i18n-zh="模拟管理层注销式股票回购与现金股息再投资带来的每股权益被动复利加速" data-i18n-en="Models annual share-count cannibalization plus cash dividend reinvestment atop organic growth">模拟管理层注销式股票回购与现金股息再投资带来的每股权益被动复利加速</div>
+              </div>
+              <input type="checkbox" id="simDripToggle" checked />
+            </label>
+
+            <div class="preset-stack" role="group">
+              <button type="button" class="preset-btn active" data-preset="p1">
+                <span data-i18n-zh="① 巴菲特基准长期持有情景 (10年)" data-i18n-en="① Buffett Base Compounding (10Y)">① 巴菲特基准长期持有情景 (10年)</span>
+                <span class="mono">10Y · 9.5%</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="p2">
+                <span data-i18n-zh="② 戴维斯双击与护城河扩张牛市情景" data-i18n-en="② Davis Double-Play Bull Case">② 戴维斯双击与护城河扩张牛市情景</span>
+                <span class="mono">15Y · 13.7%</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="p3">
+                <span data-i18n-zh="③ 保守宏观逆风与估值均值回归压力测试" data-i18n-en="③ Conservative Margin-of-Safety Case">③ 保守宏观逆风与估值均值回归压力测试</span>
+                <span class="mono">10Y · 6.5%</span>
+              </button>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="初始投入本金 (USD)" data-i18n-en="Initial Principal (USD)">初始投入本金 (USD)</span>
+                <span id="simPrincipalLabel" class="slider-val mono">$10,000</span>
+              </div>
+              <input type="range" id="simPrincipalSlider" class="mui-slider" min="1000" max="200000" step="1000" value="10000" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="长期持有年限 (Years)" data-i18n-en="Holding Horizon (Years)">长期持有年限 (Years)</span>
+                <span id="simYearsLabel" class="slider-val mono">10 年</span>
+              </div>
+              <input type="range" id="simYearsSlider" class="mui-slider" min="3" max="30" step="1" value="10" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="基础内生年化增长率 (Base CAGR %)" data-i18n-en="Base Intrinsic CAGR (%)">基础内生年化增长率 (Base CAGR %)</span>
+                <span id="simCagrLabel" class="slider-val mono">9.5%</span>
+              </div>
+              <input type="range" id="simCagrSlider" class="mui-slider" min="0" max="30" step="0.5" value="9.5" />
+            </div>
+          </div>
+
+          <div class="sim-output-panel">
+            <div class="sim-readouts">
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="期末预估总资产 (Ending Value)" data-i18n-en="Projected Ending Value">期末预估总资产 (Ending Value)</div>
+                <div id="simEndingVal" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);">$0</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="总回报倍数 (MOIC) / 综合年化" data-i18n-en="Total MOIC / Blended CAGR">总回报倍数 (MOIC) / 综合年化</div>
+                <div id="simMoicVal" class="sim-stat-num mono" style="color:var(--mui-success-text);">0x</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="累计净复利收益 (Net Gain)" data-i18n-en="Cumulative Net Gain">累计净复利收益 (Net Gain)</div>
+                <div id="simNetGainVal" class="sim-stat-num mono">$0</div>
+              </div>
+              <div class="sim-stat-box">
+                <div id="simMidLabel" class="sim-stat-label">中期资产节点</div>
+                <div id="simMidVal" class="sim-stat-num mono">$0</div>
+              </div>
+            </div>
+
+            <div class="canvas-stage-sim">
+              <canvas id="chartSim"></canvas>
+            </div>
+            <div class="chart-legend" style="margin-top:4px;">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="━ 含分红再投+注销回购总资产轨迹" data-i18n-en="━ Total Wealth w/ Buyback+DRIP Boost">━ 含分红再投+注销回购总资产轨迹</span>
+              <span class="mui-chip mono" data-i18n-zh="- - 仅靠基础业绩/股价增值基准" data-i18n-en="- - Base Growth Only (Ex-Boost)">- - 仅靠基础业绩/股价增值基准</span>
+            </div>
+            <div class="chart-caption" data-i18n-zh="悬停曲线可逐年对比“回购注销+分红复投”带来的份额增厚剪刀差。" data-i18n-en="Hover along the curve to inspect year-by-year compounding alpha from buybacks &amp; DRIP.">悬停曲线可逐年对比“回购注销+分红复投”带来的份额增厚剪刀差。</div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 18px;">
+          <div class="mui-alert mui-alert-success" style="flex-direction:column; gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="mui-chip mui-chip-success mono">BULL &amp; MOAT THESIS</span>
+              <strong data-i18n-zh="巴菲特看重的核心确定性与正向护城河" data-i18n-en="Core Conviction &amp; Enduring Moat Strengths">巴菲特看重的核心确定性与正向护城河</strong>
+            </div>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-rich="pos_lens"><strong>结构性确定性：</strong>全球 22 亿+ 活跃硬件底座、自研芯片端侧隐私 AI 算力优势，以及每年近千亿美元自由现金流驱动的 3%–4% 净股本注销，使苹果具备极罕见的巨无霸稳态复利能力 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">AAPL 10-K ↗</a>。</p>
+          </div>
+
+          <div class="mui-alert mui-alert-warning" style="flex-direction:column; gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="mui-chip mui-chip-warning mono">BOUNDARY &amp; RISK LENS</span>
+              <strong data-i18n-zh="能力圈边界、减仓/清仓动因与客观风险反思" data-i18n-en="Circle-of-Competence Boundaries &amp; Key Risks">能力圈边界、减仓/清仓动因与客观风险反思</strong>
+            </div>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-rich="crit_lens"><strong>核心风险与估值约束：</strong>30x+ 远期市盈率透支部分安全边际；欧美数字市场法案（DMA）与美国司法部反垄断诉讼对 App Store 佣金及谷歌搜索默认分润构成长期监管压力。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 投资始末时间轴与经典战役复盘 -->
+      <section id="sec-05" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 05 · BERKSHIRE HOLDING CHRONICLE &amp; LESSONS</div>
+            <h2 class="sec-h2" data-i18n-zh="五、伯克希尔投资苹果公司全景复盘：三幕演化时间轴与四大经典战役" data-i18n-en="5. Berkshire&#x27;s Apple Inc. Chronicle: 3-Act Timeline &amp; Defining Decisions">五、伯克希尔投资苹果公司全景复盘：三幕演化时间轴与四大经典战役</h2>
+            <p class="sec-sub" data-i18n-zh="基于 SEC 13F 历史持仓、公司年报与伯克希尔致股东信完整还原" data-i18n-en="Reconstructed from SEC Form 13F/10-K filings &amp; Berkshire Shareholder Letters">基于 SEC 13F 历史持仓、公司年报与伯克希尔致股东信完整还原</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="2016 Q1 · 第一重仓 · 占比 25.0" data-i18n-en="2016 Q1 · #1 Holding · 25.0%">2016 Q1 · 第一重仓 · 占比 25.0</span>
+        </div>
+
+        <div class="mui-timeline">
+        <div class="timeline-step">
+          <span class="timeline-dot"></span>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+            <strong style="font-size:0.95rem;" data-i18n-zh="第一幕：打破科技股禁区的百亿试水 (2016–2018)" data-i18n-en="Act I: Breaking the Tech Taboo ($36B Accumulation, 2016–18)">第一幕：打破科技股禁区的百亿试水 (2016–2018)</strong>
+            <span class="mui-chip  mono" data-i18n-zh="成本约 ~$35/股 (拆股后)" data-i18n-en="~$35/sh Split-Adj Cost">成本约 ~$35/股 (拆股后)</span>
+          </div>
+          <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-rich="tl_0">投资经理托德/泰德率先小仓买入后，巴菲特亲自验证孙辈与朋友圈对 iPhone 的极致依赖，在 12–15 倍市盈率区间豪掷约 $360 亿买成第一重仓。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">史料核验 ↗</a></p>
+        </div>
+        <div class="timeline-step">
+          <span class="timeline-dot" style="background:#3399FF;"></span>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+            <strong style="font-size:0.95rem;" data-i18n-zh="第二幕：服务生态化与千亿浮盈爆发 (2019–2023)" data-i18n-en="Act II: Services Re-Rating &amp; $150B+ Peak Stake (2019–23)">第二幕：服务生态化与千亿浮盈爆发 (2019–2023)</strong>
+            <span class="mui-chip mui-chip-primary mono" data-i18n-zh="单笔盈利破千亿美元" data-i18n-en="&gt;$100B+ Dollar Gain">单笔盈利破千亿美元</span>
+          </div>
+          <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-rich="tl_1">伴随 AirPods、Apple Silicon 与订阅服务爆发，苹果估值从硬件折价重估至消费奢侈品溢价，伯克希尔持仓一度占组合近 50%。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">史料核验 ↗</a></p>
+        </div>
+        <div class="timeline-step">
+          <span class="timeline-dot" style="background:#22C55E;"></span>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+            <strong style="font-size:0.95rem;" data-i18n-zh="第三幕：高位税务锁利与 25% 压舱石定格 (2024–2026Q3)" data-i18n-en="Act III: Disciplined Profit-Taking &amp; 25% Core Anchor (2024–26)">第三幕：高位税务锁利与 25% 压舱石定格 (2024–2026Q3)</strong>
+            <span class="mui-chip mui-chip-success mono" data-i18n-zh="2.279亿股 · $75.90B" data-i18n-en="227.92M Sh · $75.90B">2.279亿股 · $75.90B</span>
+          </div>
+          <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-rich="tl_2">在 21% 企业税率窗口与 30 倍+ 估值高位分批减持锁定巨额现金，截至 2026Q3 仍保留 $759 亿稳居伯克希尔头号基石持仓。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">史料核验 ↗</a></p>
+        </div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 18px;">
+        <div class="feature-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="mui-chip mui-chip-primary mono" data-i18n-zh="战役 01 · 认知破壁战" data-i18n-en="Case 01 · Mindset Shift">战役 01 · 认知破壁战</span>
+            <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="伯克希尔资本复盘" data-i18n-en="Berkshire Case Study">伯克希尔资本复盘</span>
+          </div>
+          <h3 data-i18n-zh="14倍市盈率看透“消费品本质”" data-i18n-en="Buying a Consumer Monopoly at 14x P/E">14倍市盈率看透“消费品本质”</h3>
+          <p data-i18n-rich="case_0">2016 年华尔街担忧 iPhone 6s 见顶给出硬件低估值，巴菲特一眼看穿其超越可口可乐的用户粘性果断重仓。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm" target="_blank" rel="noopener noreferrer">权威信源 ↗</a></p>
+        </div>
+        <div class="feature-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="mui-chip mui-chip-success mono" data-i18n-zh="战役 02 · 芯片自主战" data-i18n-en="Case 02 · Silicon Autonomy">战役 02 · 芯片自主战</span>
+            <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="伯克希尔资本复盘" data-i18n-en="Berkshire Case Study">伯克希尔资本复盘</span>
+          </div>
+          <h3 data-i18n-zh="Apple Silicon 彻底甩开 x86 依赖" data-i18n-en="M-Series Silicon Transformation">Apple Silicon 彻底甩开 x86 依赖</h3>
+          <p data-i18n-rich="case_1">自 2020 年起用自研 M 系列芯片重构 Mac 与 iPad 能效比，大幅抬升硬件毛利率与端侧 AI 壁垒。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm" target="_blank" rel="noopener noreferrer">权威信源 ↗</a></p>
+        </div>
+        <div class="feature-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="mui-chip mui-chip-warning mono" data-i18n-zh="战役 03 · 资本配置战" data-i18n-en="Case 03 · Buyback Mastery">战役 03 · 资本配置战</span>
+            <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="伯克希尔资本复盘" data-i18n-en="Berkshire Case Study">伯克希尔资本复盘</span>
+          </div>
+          <h3 data-i18n-zh="十年逾 $6,500 亿注销式回购" data-i18n-en="$650B+ Share Cannibalization">十年逾 $6,500 亿注销式回购</h3>
+          <p data-i18n-rich="case_2">库克拒绝高溢价大型收购，坚持回购注销流通股，让伯克希尔被动享有更高盈利份额。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm" target="_blank" rel="noopener noreferrer">权威信源 ↗</a></p>
+        </div>
+        <div class="feature-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="mui-chip mui-chip-violet mono" data-i18n-zh="战役 04 · 仓位风控战" data-i18n-en="Case 04 · Portfolio Discipline">战役 04 · 仓位风控战</span>
+            <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="伯克希尔资本复盘" data-i18n-en="Berkshire Case Study">伯克希尔资本复盘</span>
+          </div>
+          <h3 data-i18n-zh="2024–2025 逢高兑现充实国债堡垒" data-i18n-en="2024–25 Tax-Smart Trimming">2024–2025 逢高兑现充实国债堡垒</h3>
+          <p data-i18n-rich="case_3">巴菲特克服锚定心理在高估值区间兑现超千亿美元现金，展现大师级风控与税务前瞻。 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm" target="_blank" rel="noopener noreferrer">权威信源 ↗</a></p>
+        </div>
+        </div>
+
+        <div class="grid-3">
+        <div class="mui-alert">
+          <div data-i18n-rich="law_0"><strong>巴菲特法则一：</strong>看客户心智占有率，而非技术复杂度：真正伟大的科技股本质上都是不可替代的日常消费习惯。</div>
+        </div>
+        <div class="mui-alert">
+          <div data-i18n-rich="law_1"><strong>巴菲特法则二：</strong>当一家拥有极致现金流的垄断者在 15 倍 PE 大举回购自身股票时，长期股东无需交易即可躺赢。</div>
+        </div>
+        <div class="mui-alert">
+          <div data-i18n-rich="law_2"><strong>巴菲特法则三：</strong>再伟大的公司面对 30 倍以上估值与组合过度集中时，适度兑现补充低风险弹药也是理性纪律的一部分。</div>
+        </div>
+        </div>
+      </section>
+
+      <!-- 06 巴菲特“买股票就是买公司”核查清单 -->
+      <section id="sec-06" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 06 · BUFFETT&#39;S 6-POINT OWNERSHIP CHECKLIST</div>
+            <h2 class="sec-h2" data-i18n-zh="六、巴菲特“买股票就是买公司”六维交互式核查清单" data-i18n-en="6. Warren Buffett&#x27;s 6-Point &#x27;Buying Stock = Buying the Business&#x27; Checklist">六、巴菲特“买股票就是买公司”六维交互式核查清单</h2>
+            <p class="sec-sub" data-i18n-zh="对照巴菲特“宽阔护城河、优秀管理层、安全边际”体系逐项检验（勾选状态按公司独立保存在本地浏览器）" data-i18n-en="Evaluate against Buffett&#x27;s Economic Moat, Capital Allocation &amp; Margin-of-Safety checklist (saved per company)">对照巴菲特“宽阔护城河、优秀管理层、安全边际”体系逐项检验（勾选状态按公司独立保存在本地浏览器）</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono">已核查 4 / 6 项 (67%)</span>
+            <button type="button" id="checkAllBtn" class="mui-btn" data-i18n-zh="全部勾选" data-i18n-en="Check All">全部勾选</button>
+            <button type="button" id="resetCheckBtn" class="mui-btn" data-i18n-zh="重置清单" data-i18n-en="Reset">重置清单</button>
+          </div>
+        </div>
+
+        <div class="progress-track">
+          <div id="checklistProgressBar" class="progress-fill"></div>
+        </div>
+
+        <div id="checklistContainer" class="checklist-grid"></div>
+      </section>
+
+      <!-- 07 数据来源与监管核验索引 -->
+      <footer id="sec-07" class="mui-paper section-block" style="padding: 22px 26px;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;">
+          <strong style="font-size:0.92rem;" data-i18n-zh="数据来源与一手监管财报 / 访谈核验索引（SEC 13F · 10-K/20-F · 官方年报）" data-i18n-en="Primary Regulatory Filings &amp; Interview Sources (SEC 13F · 10-K/20-F · IR)">数据来源与一手监管财报 / 访谈核验索引（SEC 13F · 10-K/20-F · 官方年报）</strong>
+          <span class="mui-chip mono">MUI Branding UI Architecture · Offline Ready</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;" data-i18n-zh="本报告所有持仓股数、市值权重、公司财务数据及巴菲特投资论述均严格核验自美国证监会（SEC EDGAR CIK 0001067983）、日本商社年报、各公司最新 Form 10-K 及伯克希尔历年致股东信，仅供商业模式与投资思想研究，不构成任何投资建议。" data-i18n-en="All Berkshire Hathaway Form 13F share counts, portfolio weights, corporate financials, and Warren Buffett commentary are verified from SEC EDGAR (CIK 0001067983), corporate annual reports, and Berkshire Shareholder Letters. For research only; not investment advice.">
+          本报告所有持仓股数、市值权重、公司财务数据及巴菲特投资论述均严格核验自美国证监会（SEC EDGAR CIK 0001067983）、日本商社年报、各公司最新 Form 10-K 及伯克希尔历年致股东信，仅供商业模式与投资思想研究，不构成任何投资建议。
+        </p>
+        <ul class="sources-list">
+          <li><span class="mono">[01]</span><a href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">Apple Inc. FY2025 Form 10-K (SEC EDGAR, Ended Sep 27, 2025) ↗</a></li>
+          <li><span class="mono">[02]</span><a href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm" target="_blank" rel="noopener noreferrer">Apple Q4 FY2025 Earnings Release Form 8-K (SEC EDGAR) ↗</a></li>
+          <li><span class="mono">[03]</span><a href="https://sec-api.io/insights/financial-analysis-august-2026-apple-inc" target="_blank" rel="noopener noreferrer">Financial Analysis August 2026: Apple Inc. (SEC-API Insights) ↗</a></li>
+          <li><span class="mono">[04]</span><a href="https://www.heygotrade.com/en/news/warren-buffett-portfolio/" target="_blank" rel="noopener noreferrer">Berkshire Hathaway Q3 2026 13F Portfolio Holdings Breakdown ↗</a></li>
+        </ul>
+      </footer>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="../../_shared/bb0efc9c23a731dc.js"></script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《四海兄弟 Mafia》电影化黑帮叙事 IP 深度研究报告 | 2K · Hangar 13</title>
+  <meta name="description" content="2K 经典时代黑帮电影叙事 IP《四海兄弟 Mafia》深度研究报告：2002 年至今全系销量超 2,000 万份、与《GTA》完美错位的严肃历史线性叙事定位、四海兄弟3破 700 万份，以及 2025.08《Mafia: The Old Country（故乡）》290 万愿望单与 $49.99 精益定价突围成功范式。" />
+  <meta name="keywords" content="Mafia, 四海兄弟, Mafia: The Old Country, 四海兄弟故乡, Mafia III, Mafia Definitive Edition, Hangar 13, 2K Games, $49.99中端3A定价, 游戏IP分析" />
+  <link rel="stylesheet" href="../../../_shared/2d4ffc526be8470d.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky MUI Frosted Glass AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle navigation sidebar" data-title-zh="展开/收起章节目录" data-title-en="Expand or collapse section navigation">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">MAF</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb navigation">
+          <a class="crumb-link hide-sm" href="../../../index.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="四海兄弟 Mafia 黑帮史诗 IP 深度研报" data-i18n-en="Mafia Crime Drama Franchise Deep Dive">四海兄弟 Mafia 黑帮史诗 IP 深度研报</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="2K · HANGAR 13" data-i18n-en="2K · HANGAR 13">2K · HANGAR 13</span>
+        <span class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="故乡 290万愿望单 · $49.99 爆款范式" data-i18n-en="2.9M Wishlists · $49.99 Hit Blueprint">故乡 290万愿望单 · $49.99 爆款范式</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或指标&#8230;" aria-label="快速跳转章节或指标" data-ph-zh="检索章节或指标&#8230;" data-ph-en="Jump to section or KPI&#8230;" data-aria-zh="快速跳转章节或指标" data-aria-en="Quick jump to section or metric" autocomplete="off" />
+          <span class="quick-search-kbd mono">&#8984;K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Centered Shell -->
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Navigation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Section table of contents and portal links">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="IP MONOGRAPH · MAFIA SAGA" data-i18n-en="IP MONOGRAPH · MAFIA SAGA">IP MONOGRAPH · MAFIA SAGA</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="四海兄弟系列深度专论" data-i18n-en="Mafia Franchise Monograph">四海兄弟系列深度专论</div>
+        <p class="sidebar-subtitle" data-i18n-zh="游戏界的《教父》百年黑手党编年史 × 与 GTA 错位互补的紧凑线性叙事 × $49.99 高 ROIC 精益 3A 样板" data-i18n-en="Interactive &#x27;Godfather&#x27; Period Saga × Focused Linear Counterweight to GTA × $49.99 Disciplined AAA ROI">游戏界的《教父》百年黑手党编年史 × 与 GTA 错位互补的紧凑线性叙事 × $49.99 高 ROIC 精益 3A 样板</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="系列累计总销量" data-i18n-en="Franchise Units Sold">系列累计总销量</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="&gt;2,000 万份+" data-i18n-en="&gt;20M+ Units">&gt;2,000 万份+</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="《故乡》发售前愿望单" data-i18n-en="Old Country Wishlists">《故乡》发售前愿望单</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="&gt;290万 (PS5历史前5)" data-i18n-en="&gt;2.9M (Top-5 PS5)">&gt;290万 (PS5历史前5)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="《故乡》首发全美畅销榜" data-i18n-en="Aug 2025 US Rank">《故乡》首发全美畅销榜</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="全美第 3 · 超预期爆款" data-i18n-en="#3 US · Beat Targets">全美第 3 · 超预期爆款</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Portal navigation and chapters">
+        <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="TTWO">
+          <div class="co-side-head">
+            <span class="co-side-title mono">TTWO · 08/15</span>
+            <a href="../../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="ttwo_ip_grand_theft_auto.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="ttwo_ip_max_payne_rockstar_classics.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (15)" data-i18n-en="All (15)">全部 (15)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="software" data-i18n-zh="软件生态 (14)" data-i18n-en="software (14)">软件生态 (14)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../../Company/take_two_interactive_ttwo_12_gta_vi_rdr_nba_2k_borderlands_civ_zynga_d2c_ai.html" title="Take-Two Interactive (TTWO) 12 大核心业务板块深度研报中枢（GTA VI·RDR·NBA 2K·Borderlands·Civ·Zynga·D2C·AI）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Take-Two Interactive (TTWO) 12 大核心业务板块深度研报中枢（GTA VI·RDR·NBA 2K·Borderlands·Civ·Zynga·D2C·AI）" data-i18n-en="Take-Two Interactive (TTWO) 12 Deep DiveReport (GTA VI·RDR·NBA 2K·Borderlands·Civ·Zynga·D2C·AI)">Take-Two Interactive (TTWO) 12 大核心业务板块深度研报中枢（GTA VI·RDR·NBA 2K·Borderlands·Civ·Zynga·D2C·AI）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="6_grand_theft_auto_vi_gta_6.html" title="侠盗猎车手6 Grand Theft Auto VI (GTA 6) 产品架构与商业价值深度研报"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="侠盗猎车手6 Grand Theft Auto VI (GTA 6) 产品架构与商业价值深度研报" data-i18n-en="6 Grand Theft Auto VI (GTA 6) &amp; Deep DiveReport">侠盗猎车手6 Grand Theft Auto VI (GTA 6) 产品架构与商业价值深度研报</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="take_two_interactive_nasdaq_ttwo.html" title="Take-Two Interactive 公司深度研究报告 (NASDAQ: TTWO)"><span class="co-hub-ticker mono">03</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Take-Two Interactive 公司深度研究报告 (NASDAQ: TTWO)" data-i18n-en="Take-Two Interactive Deep Dive Research Report (NASDAQ: TTWO)">Take-Two Interactive 公司深度研究报告 (NASDAQ: TTWO)</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_bioshock.html" title="《生化奇兵 BioShock》（含沉浸模拟精神续作 Judas）IP 深度研究报告 | 2K"><span class="co-hub-ticker mono">04</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《生化奇兵 BioShock》（含沉浸模拟精神续作 Judas）IP 深度研究报告 | 2K" data-i18n-en="BioShock ( Judas)IP Deep Dive Research Report | 2K">《生化奇兵 BioShock》（含沉浸模拟精神续作 Judas）IP 深度研究报告 | 2K</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_borderlands.html" title="《无主之地 Borderlands》（含小缇娜的奇幻之地）IP 深度研究报告 | 2K · Gearbox"><span class="co-hub-ticker mono">05</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《无主之地 Borderlands》（含小缇娜的奇幻之地）IP 深度研究报告 | 2K · Gearbox" data-i18n-en="Borderlands IP Deep Dive Research Report | 2K · Gearbox">《无主之地 Borderlands》（含小缇娜的奇幻之地）IP 深度研究报告 | 2K · Gearbox</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_civilization.html" title="《席德·梅尔的文明 Sid Meier&#x27;s Civilization》4X 策略 IP 深度研究报告 | 2K · Firaxis"><span class="co-hub-ticker mono">06</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《席德·梅尔的文明 Sid Meier&#x27;s Civilization》4X 策略 IP 深度研究报告 | 2K · Firaxis" data-i18n-en="Sid Meier&#x27;s Civilization4X IP Deep Dive Research Report | 2K · Firaxis">《席德·梅尔的文明 Sid Meier&#x27;s Civilization》4X 策略 IP 深度研究报告 | 2K · Firaxis</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_grand_theft_auto.html" title="《侠盗猎车手 Grand Theft Auto》全系列 IP 深度研究报告 | Rockstar Games"><span class="co-hub-ticker mono">07</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《侠盗猎车手 Grand Theft Auto》全系列 IP 深度研究报告 | Rockstar Games" data-i18n-en="Grand Theft Auto IP Deep Dive Research Report | Rockstar Games">《侠盗猎车手 Grand Theft Auto》全系列 IP 深度研究报告 | Rockstar Games</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="software" href="ttwo_ip_mafia.html" title="《四海兄弟 Mafia》电影化黑帮叙事 IP 深度研究报告 | 2K · Hangar 13"><span class="co-hub-ticker mono">08</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《四海兄弟 Mafia》电影化黑帮叙事 IP 深度研究报告 | 2K · Hangar 13" data-i18n-en="Mafia IP Deep Dive Research Report | 2K · Hangar 13">《四海兄弟 Mafia》电影化黑帮叙事 IP 深度研究报告 | 2K · Hangar 13</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_max_payne_rockstar_classics.html" title="《马克思·佩恩 Max Payne》与 Rockstar 经典动作悬疑 IP 深度研究报告"><span class="co-hub-ticker mono">09</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《马克思·佩恩 Max Payne》与 Rockstar 经典动作悬疑 IP 深度研究报告" data-i18n-en="Max Payne &amp; Rockstar IP Deep Dive Research Report">《马克思·佩恩 Max Payne》与 Rockstar 经典动作悬疑 IP 深度研究报告</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_nba_2k.html" title="《NBA 2K》篮球模拟与虚拟城市生态 IP 深度研究报告 | 2K · Visual Concepts"><span class="co-hub-ticker mono">10</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《NBA 2K》篮球模拟与虚拟城市生态 IP 深度研究报告 | 2K · Visual Concepts" data-i18n-en="NBA 2K &amp; IP Deep Dive Research Report | 2K · Visual Concepts">《NBA 2K》篮球模拟与虚拟城市生态 IP 深度研究报告 | 2K · Visual Concepts</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_red_dead_redemption.html" title="《荒野大镖客 Red Dead Redemption》系列 IP 深度研究报告 | Rockstar Games"><span class="co-hub-ticker mono">11</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《荒野大镖客 Red Dead Redemption》系列 IP 深度研究报告 | Rockstar Games" data-i18n-en="Red Dead Redemption IP Deep Dive Research Report | Rockstar Games">《荒野大镖客 Red Dead Redemption》系列 IP 深度研究报告 | Rockstar Games</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_wwe_pga_2k.html" title="《WWE 2K》与《PGA TOUR 2K》体育竞技矩阵 IP 深度研究报告 | 2K Sports"><span class="co-hub-ticker mono">12</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《WWE 2K》与《PGA TOUR 2K》体育竞技矩阵 IP 深度研究报告 | 2K Sports" data-i18n-en="WWE 2K &amp; PGA TOUR 2K IP Deep Dive Research Report | 2K Sports">《WWE 2K》与《PGA TOUR 2K》体育竞技矩阵 IP 深度研究报告 | 2K Sports</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_xcom.html" title="《幽浮 XCOM》（含漫威暗夜之子）回合制战术策略 IP 深度研究报告 | 2K · Firaxis"><span class="co-hub-ticker mono">13</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《幽浮 XCOM》（含漫威暗夜之子）回合制战术策略 IP 深度研究报告 | 2K · Firaxis" data-i18n-en="XCOM IP Deep Dive Research Report | 2K · Firaxis">《幽浮 XCOM》（含漫威暗夜之子）回合制战术策略 IP 深度研究报告 | 2K · Firaxis</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_zynga_evergreen_empires_poker.html" title="Zynga 常青中重度与社交棋牌 IP（Empires &amp; Puzzles · Zynga Poker · Words With Friends · CSR）深度研报"><span class="co-hub-ticker mono">14</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Zynga 常青中重度与社交棋牌 IP（Empires &amp; Puzzles · Zynga Poker · Words With Friends · CSR）深度研报" data-i18n-en="Zynga &amp; IP (Empires &amp; Puzzles · Zynga Poker · Words With Friends · CSR)Deep DiveReport">Zynga 常青中重度与社交棋牌 IP（Empires &amp; Puzzles · Zynga Poker · Words With Friends · CSR）深度研报</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_zynga_puzzle_toon_blast.html" title="Zynga 消除与混合休闲王牌 IP（Toon Blast · Match Factory! · Color Block Jam）深度研报"><span class="co-hub-ticker mono">15</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Zynga 消除与混合休闲王牌 IP（Toon Blast · Match Factory! · Color Block Jam）深度研报" data-i18n-en="Zynga &amp; IP (Toon Blast · Match Factory! · Color Block Jam)Deep DiveReport">Zynga 消除与混合休闲王牌 IP（Toon Blast · Match Factory! · Color Block Jam）深度研报</span><span class="co-hub-meta mono">software/old</span></span></a>
+          </div>
+          <script src="../../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+        <div class="nav-divider"></div>
+
+        <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Core Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span data-i18n-zh="IP 核心论点与《故乡》突围战报" data-i18n-en="IP Thesis &amp; &#x27;Old Country&#x27; Breakout">IP 核心论点与《故乡》突围战报</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span data-i18n-zh="与 GTA 错位共生及百年黑帮时空轴" data-i18n-en="Anti-GTA Linear Niche &amp; Period Lore">与 GTA 错位共生及百年黑帮时空轴</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span data-i18n-zh="四大竞争壁垒与犯罪叙事品类雷达" data-i18n-en="Four Moats &amp; Crime Narrative Radar">四大竞争壁垒与犯罪叙事品类雷达</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span data-i18n-zh="四海兄弟四代作品与 $50 精品竞品对比" data-i18n-en="Mafia Entries &amp; $50 AA+/AAA Comps">四海兄弟四代作品与 $50 精品竞品对比</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span data-i18n-zh="$49.99 精益线性 3A vs $70 臃肿沙盒测算" data-i18n-en="$49.99 Lean AAA vs. $70 Bloat Sim">$49.99 精益线性 3A vs $70 臃肿沙盒测算</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span data-i18n-zh="从捷克神作、三代争议到西西里复兴" data-i18n-en="Czech Roots, Mafia III &amp; Sicily Rebirth">从捷克神作、三代争议到西西里复兴</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span data-i18n-zh="Hangar 13 下一部正作立项核查清单" data-i18n-en="Next Mafia Greenlight Checklist">Hangar 13 下一部正作立项核查清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span data-i18n-zh="官方数据来源与核验索引" data-i18n-en="Official Sources &amp; Verification">官方数据来源与核验索引</span></a></li>
+        </ul>
+      </nav>
+
+      
+    </aside>
+
+    <!-- Main Analytical Content -->
+    <main class="main-content">
+
+      <!-- 00 执行摘要与核心指标 -->
+      <section id="sec-00" class="mui-paper hero-card section-block">
+        <div class="status-strip">
+          <span class="mui-chip mui-chip-primary" data-i18n-zh="IP 定评：整个 3A 游戏工业“反开放世界注水、靠 $49.99 紧凑线性电影感突围”的教科书范本" data-i18n-en="IP Verdict: Textbook Proof That Tight $49.99 Linear AAA Storytelling Beats Open-World Bloat">IP 定评：整个 3A 游戏工业“反开放世界注水、靠 $49.99 紧凑线性电影感突围”的教科书范本</span>
+          <span class="mui-chip " data-i18n-zh="研发主力：Hangar 13（捷克布尔诺/布拉格 + 英国布莱顿 + 加州诺瓦托）" data-i18n-en="Studio Craft: Hangar 13 (Brno/Prague Czech Heritage + Brighton UK + Novato)">研发主力：Hangar 13（捷克布尔诺/布拉格 + 英国布莱顿 + 加州诺瓦托）</span>
+          <span class="mui-chip mui-chip-success mono" data-i18n-zh="最新捷报：《Mafia: The Old Country》(2025.08) 超 290万愿望单、冲上全美畅销第3大超预期" data-i18n-en="Breakout Win: Mafia: The Old Country (&gt;2.9M Wishlists · #3 US Aug 2025 Seller)">最新捷报：《Mafia: The Old Country》(2025.08) 超 290万愿望单、冲上全美畅销第3大超预期</span>
+        </div>
+        <div class="hero-overline mono">
+          <span data-i18n-zh="FRANCHISE MONOGRAPH · 横跨七十年的黑手党家族悲剧史诗 × 虚幻5西西里电影质感 × 验证 $50 中端精品定价黄金律" data-i18n-en="FRANCHISE MONOGRAPH · 70-Year Mob Cinema Anthology × Unreal Engine 5 1900s Sicily × Validated $49.99 Pricing Sweet Spot">FRANCHISE MONOGRAPH · 横跨七十年的黑手党家族悲剧史诗 × 虚幻5西西里电影质感 × 验证 $50 中端精品定价黄金律</span>
+        </div>
+        <h1 class="hero-h1" data-i18n-rich="hero_h1">《四海兄弟 Mafia》电影化黑帮叙事 IP 深度分析：<span class="gradient-accent">百年家族犯罪编年史、与GTA的精妙错位及50美元精品突围方法论</span></h1>
+        <p class="lead-prose" data-i18n-rich="hero_lead">同一家游戏集团既然已经拥有宇宙第一犯罪开放世界《GTA》，为什么还要保留并大力投资另一个黑帮 IP<strong>《四海兄弟 Mafia》</strong>？2025 年 8 月 8 日发售的系列最新前传<strong>《四海兄弟：故乡（Mafia: The Old Country）》</strong>给出了最响亮的商业答案：通过彻底放弃空洞的开放世界清问号套路，回归《教父》式的 1900 年代西西里岛紧凑线性家族悲剧，并将首发定价精准锚定在亲民的 <strong>$49.99</strong>，该作发售前狂揽<strong>超 290 万全球玩家愿望单（跻身 PS5 历史愿望单总榜前 5 名！）</strong>，上市当月勇夺<strong>美国高端买断游戏畅销榜第 3 名</strong> <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>，被 CEO Strauss Zelnick 公开盛赞为<strong>“远超内部预期的巨大爆款（Massive Hit）”</strong>，彻底验证了忙碌成年玩家对“高品质、无注水、15小时通关、$50合理定价”叙事大作的旺盛渴求 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>！</p>
+        <div class="grid-3" style="margin-bottom:18px;">
+          <article class="feature-card">
+            <div class="mui-avatar-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+            <h3 data-i18n-zh="严肃历史黑帮正剧 vs GTA 现代荒诞街头讽刺" data-i18n-en="Solemn Period Mob Tragedy vs. GTA&#x27;s Modern Satire">严肃历史黑帮正剧 vs GTA 现代荒诞街头讽刺</h3>
+            <p data-i18n-rich="feat_0">如果说 GTA 是昆汀《低俗小说》式的现代狂欢，那么《四海兄弟》就是科波拉《教父》与斯科塞斯《好家伙》式的古典宿命正剧——老爷车限速、警员开罚单、西西里匕首决斗，两者零内耗互补 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div class="mui-avatar-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3 data-i18n-zh="吸取三代开放世界注水教训，确立“紧凑线性”核心竞争力" data-i18n-en="Pivoting Back from Repetitive Open World to Tight Linear Pacing">吸取三代开放世界注水教训，确立“紧凑线性”核心竞争力</h3>
+            <p data-i18n-rich="feat_1">2016《Mafia III》虽狂卖 700 万+ 份但因重复抢地盘任务拉低评分（MC 68）；2020《初代最终版》与 2025《故乡》果断回归纯章节制电影叙事，砍掉垃圾时长，研发成本降 40% 而口碑大幅跃升 <a class="cite-link" href="https://en.wikipedia.org/wiki/Mafia_III" target="_blank" rel="noopener noreferrer">Wikipedia Mafia III &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div class="mui-avatar-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3 data-i18n-zh="切换通用虚幻引擎 5（UE5）实现捷克美学与全球招聘提效" data-i18n-en="Transitioning to Unreal Engine 5 for Photorealistic Sicily">切换通用虚幻引擎 5（UE5）实现捷克美学与全球招聘提效</h3>
+            <p data-i18n-rich="feat_2">Hangar 13 告别维护昂贵的旧自研 Fusion 引擎，全面转向 UE5 MetaHuman 面部捕捉与 Nanite 古建筑扫描，甚至提供正宗<strong>西西里方言配音</strong>，美术质感媲美一线 $70 巨制 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </article>
+        </div>
+        <div class="grid-4">
+          <div class="mui-paper kpi-card mui-card-interactive">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="四海兄弟全系列累计销量" data-i18n-en="Franchise Cumulative Sales">四海兄弟全系列累计销量</span>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="2002–2026 四代传承" data-i18n-en="24-Year Crime Saga">2002–2026 四代传承</span>
+            </div>
+            <div class="kpi-value mono" data-i18n-zh="&gt;2,000万份+" data-i18n-en="&gt;20M+ Units">&gt;2,000万份+</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_0">早在 2021 年即达 ~1,700 万份，叠加三部曲长尾与 2025《故乡》大卖稳超两千万份大关 <a class="cite-link" href="https://www.tweaktown.com/news/80936/take-two-reveals-franchise-sales-for-bioshock-mafia-gta-nba-2k/index.html" target="_blank" rel="noopener noreferrer">TweakTown Mafia &#8599;</a>。</p>
+          </div>
+          <div class="mui-paper kpi-card mui-card-interactive">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="《四海兄弟：故乡》愿望单纪录" data-i18n-en="The Old Country Wishlists">《四海兄弟：故乡》愿望单纪录</span>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="PS5 历史总榜前 5" data-i18n-en="Top-5 PS5 All-Time">PS5 历史总榜前 5</span>
+            </div>
+            <div class="kpi-value mono" data-i18n-zh="&gt;290万份" data-i18n-en="&gt;2.9M Wish">&gt;290万份</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_1">官方投资者报告披露：发售前超 290 万玩家加入愿望单，冲进 PS5 平台历史愿望单 Top 5 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </div>
+          <div class="mui-paper kpi-card mui-card-interactive">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="《四海兄弟 III》历史销量峰值" data-i18n-en="Mafia III Unit Record">《四海兄弟 III》历史销量峰值</span>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="首周出货 450万份" data-i18n-en="4.5M Launch Week">首周出货 450万份</span>
+            </div>
+            <div class="kpi-value mono" data-i18n-zh="700万+ 份" data-i18n-en="7M+ Units">700万+ 份</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_2">首周出货破当时 2K 历史最快纪录（450万份），累计超 700 万份，并于 2026.10 获次世代 60帧升级 <a class="cite-link" href="https://en.wikipedia.org/wiki/Mafia_III" target="_blank" rel="noopener noreferrer">Wikipedia Mafia III &#8599;</a>。</p>
+          </div>
+          <div class="mui-paper kpi-card mui-card-interactive">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="《故乡》创新亲民定价锚点" data-i18n-en="Disciplined Mid-Tier Price">《故乡》创新亲民定价锚点</span>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="全美8月畅销榜 #3" data-i18n-en="#3 US Aug 2025">全美8月畅销榜 #3</span>
+            </div>
+            <div class="kpi-value mono" data-i18n-zh="$49.99" data-i18n-en="$49.99">$49.99</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_3">较 $70 行业定价主动让利 $20，换来极高首发全价购买转化率与远超内部预期的投资回报 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 架构蓝图与核心产品/业务拆解 -->
+      <section id="sec-01" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 01 · 70-YEAR MOB CHRONOLOGY &amp; LEAN-AAA DESIGN" data-i18n-en="CHAPTER 01 · 70-YEAR MOB CHRONOLOGY &amp; LEAN-AAA DESIGN">CHAPTER 01 · 70-YEAR MOB CHRONOLOGY &amp; LEAN-AAA DESIGN</span></div>
+            <h2 class="sec-h2" data-i18n-zh="横跨七十年的黑手党历史宇宙与 Hangar 13 跨国协作工坊" data-i18n-en="Seven Decades of Mob History &amp; Hangar 13&#x27;s Cross-Studio Craft">横跨七十年的黑手党历史宇宙与 Hangar 13 跨国协作工坊</h2>
+            <p class="sec-sub" data-i18n-zh="每一部作品定格一个真实历史切面，构成电子游戏界独一无二的 20 世纪黑帮编年史" data-i18n-en="Each installment captures a distinct historical era of organized crime from 1900s Sicily to 1968 New Bordeaux">每一部作品定格一个真实历史切面，构成电子游戏界独一无二的 20 世纪黑帮编年史</p>
+          </div>
+          <div class="mui-segmented" role="tablist" aria-label="图表视图切换" data-aria-zh="图表视图切换" data-aria-en="Chart view switcher">
+            <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA" data-i18n-zh="视图 A：系列历代作品销量与热度演进" data-i18n-en="View A: Franchise Entries Scale &amp; MC">视图 A：系列历代作品销量与热度演进</button>
+            <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB" data-i18n-zh="视图 B：2025–2026 $50 中端精品爆发验证" data-i18n-en="View B: $50 Lean-AAA Market Proof">视图 B：2025–2026 $50 中端精品爆发验证</button>
+          </div>
+        </div>
+
+        <div class="arch-blueprint">
+          <div class="arch-hub">
+            <div class="arch-hub-title" data-i18n-zh="Hangar 13 四地一体研发架构（捷克布尔诺 &amp; 布拉格历史老班底 + 英国布莱顿 + 美国加州诺瓦托）" data-i18n-en="Hangar 13 Four-Studio Network (Brno &amp; Prague Czech Roots + Brighton UK + Novato CA)">Hangar 13 四地一体研发架构（捷克布尔诺 &amp; 布拉格历史老班底 + 英国布莱顿 + 美国加州诺瓦托）</div>
+            <div class="arch-hub-sub" data-i18n-zh="统一虚幻引擎 5（Unreal Engine 5）电影化叙事管线 · 为下一部续作沉淀全套西服布料、古典载具与面部动捕资产" data-i18n-en="Unified Unreal Engine 5 cinematic pipeline banking reusable period vehicles, tailoring, and MetaHuman rigs">统一虚幻引擎 5（Unreal Engine 5）电影化叙事管线 · 为下一部续作沉淀全套西服布料、古典载具与面部动捕资产</div>
+          </div>
+          <div class="arch-nodes">
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="1900s · 家族血誓起源" data-i18n-en="1900s · SICILIAN ORIGINS">1900s · 家族血誓起源</div>
+              <div class="arch-node-name" data-i18n-zh="四海兄弟：故乡 (The Old Country)" data-i18n-en="Mafia: The Old Country (2025)">四海兄弟：故乡 (The Old Country)</div>
+              <div class="arch-node-desc" data-i18n-zh="西西里硫磺矿童工恩佐（Enzo）投身托里西家族，骑马与初代古董汽车并存，弹簧刀近身肉搏与歌剧院宿命决裂。" data-i18n-en="Sulfur-mine survivor Enzo Favara rises in Don Torrisi&#x27;s family across horseback chases, early motorcars, and stiletto knife duels.">西西里硫磺矿童工恩佐（Enzo）投身托里西家族，骑马与初代古董汽车并存，弹簧刀近身肉搏与歌剧院宿命决裂。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="1930s · 美国禁酒令黄金期" data-i18n-en="1930s · PROHIBITION ERA">1930s · 美国禁酒令黄金期</div>
+              <div class="arch-node-name" data-i18n-zh="四海兄弟：最终版 (Definitive Ed.)" data-i18n-en="Mafia: Definitive Edition (2020)">四海兄弟：最终版 (Definitive Ed.)</div>
+              <div class="arch-node-desc" data-i18n-zh="失落天堂市（芝加哥原型）出租车司机汤米·安吉洛卷入萨列里家族私酒战争，“想活命就上车”铸就经典。" data-i18n-en="Cab driver Tommy Angelo enters Salieri&#x27;s Prohibition-era Lost Heaven syndicate in the acclaimed 2020 full remake.">失落天堂市（芝加哥原型）出租车司机汤米·安吉洛卷入萨列里家族私酒战争，“想活命就上车”铸就经典。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="1940s–50s · 二战老兵与战后繁荣" data-i18n-en="1940s–50s · POST-WAR BOOM">1940s–50s · 二战老兵与战后繁荣</div>
+              <div class="arch-node-name" data-i18n-zh="四海兄弟 II (Mafia II)" data-i18n-en="Mafia II (2010 / 2020)">四海兄弟 II (Mafia II)</div>
+              <div class="arch-node-desc" data-i18n-zh="西西里移民维托·斯卡莱塔与挚友乔在帝国湾（纽约原型）从寒冬积雪走向夏日摇滚，结局“乔不在协议里”催人泪下。" data-i18n-en="WWII vet Vito Scaletta and Joe Barbaro climb Empire Bay&#x27;s Commission from 1945 winter snow to 1951 rock-and-roll.">西西里移民维托·斯卡莱塔与挚友乔在帝国湾（纽约原型）从寒冬积雪走向夏日摇滚，结局“乔不在协议里”催人泪下。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="1968 · 越战创伤与民权风暴" data-i18n-en="1968 · NEW BORDEAUX">1968 · 越战创伤与民权风暴</div>
+              <div class="arch-node-name" data-i18n-zh="四海兄弟 III (Mafia III)" data-i18n-en="Mafia III (2016 / 2026 60FPS)">四海兄弟 III (Mafia III)</div>
+              <div class="arch-node-desc" data-i18n-zh="越战特种兵林肯·克雷在新波尔多（新奥尔良原型）向意大利黑帮血债血偿，纪录片访谈叙事与 60 年代灵魂摇滚金曲封神。" data-i18n-en="Vietnam vet Lincoln Clay dismantles the Marcano mob in 1968 New Bordeaux, framed as a gripping FBI/journalist documentary.">越战特种兵林肯·克雷在新波尔多（新奥尔良原型）向意大利黑帮血债血偿，纪录片访谈叙事与 60 年代灵魂摇滚金曲封神。</div>
+            </div>
+          </div>
+          <div class="arch-platform-bar">
+            <div class="arch-platform">
+              <strong data-i18n-zh="2026年10月推送《四海兄弟 III》原生 PS5/Xbox 60FPS 升级激活全集复购" data-i18n-en="Oct 2026 Native 60FPS Console Update Revitalizing Mafia: Trilogy">2026年10月推送《四海兄弟 III》原生 PS5/Xbox 60FPS 升级激活全集复购</strong>
+              <span data-i18n-zh="借《故乡》破圈东风，2K 持续维护老三部曲现代主机体验，使新入坑玩家顺着历史时间轴一路补票 1→2→3 代合集。" data-i18n-en="Upgrading legacy entries to smooth 60fps on PS5/XSX lets new Old Country fans binge chronologically from 1905 through 1968.">借《故乡》破圈东风，2K 持续维护老三部曲现代主机体验，使新入坑玩家顺着历史时间轴一路补票 1→2→3 代合集。</span>
+            </div>
+            <div class="arch-platform">
+              <strong data-i18n-zh="欧洲捷克工作室成本优势：同等电影画质研发支出较加州低 ~40%" data-i18n-en="Czech Republic R&amp;D Cost Advantage (~40% Leaner Than California)">欧洲捷克工作室成本优势：同等电影画质研发支出较加州低 ~40%</strong>
+              <span data-i18n-zh="布尔诺与布拉格分部承接主力关卡与美术制作，使《故乡》即使卖 $49.99 依然享有媲美 $70 北美大作的丰厚净利率。" data-i18n-en="Anchoring core production in Brno and Prague gives Hangar 13 structural AAA cost efficiency that makes $49.99 highly lucrative.">布尔诺与布拉格分部承接主力关卡与美术制作，使《故乡》即使卖 $49.99 依然享有媲美 $70 北美大作的丰厚净利率。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card" style="margin-bottom:18px;">
+          <div class="chart-toolbar">
+            <div>
+              <div id="ch1ChartTitle" class="chart-title">《四海兄弟》历代核心作品销量/热度规模（百万份）与 Metacritic 评分</div>
+              <div id="ch1ChartSub" class="chart-caption">从 2002 年捷克 PC 黑马（88分），历经三代 700 万份规模扩张，到《故乡》重回紧凑叙事高口碑</div>
+            </div>
+            <span class="mui-chip mono" data-i18n-zh="数据源：May 2026 IR / Wikipedia / Horizons" data-i18n-en="Source: May 2026 IR / Wikipedia / Horizons">数据源：May 2026 IR / Wikipedia / Horizons</span>
+          </div>
+          <div id="ch1AxisMeta" class="chart-axis-meta"></div>
+          <div class="canvas-stage">
+            <canvas id="chartCh1"></canvas>
+          </div>
+          <div class="chart-legend">
+            <button type="button" class="legend-pill" data-ch1-series="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1"></span></button>
+            <button type="button" class="legend-pill" data-ch1-series="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2"></span></button>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="matrix-card">
+            <div class="matrix-card-head">
+              <h3 class="matrix-card-title" data-i18n-zh="Zelnick 的定价哲学拆解：为什么《GTA VI》敢卖 $80，而《故乡》主动卖 $50？" data-i18n-en="Value-Per-Hour Discipline: $79.99 GTA VI vs. $49.99 Mafia">Zelnick 的定价哲学拆解：为什么《GTA VI》敢卖 $80，而《故乡》主动卖 $50？</h3>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="因品施策精准刀法" data-i18n-en="Bespoke Price Elasticity">因品施策精准刀法</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mat_body_0">许多发行商一刀切把所有新游全涨到 $70，导致 12–15 小时线性单机在首发月无人问津；Take-Two 深刻洞悉价格弹性——数百小时体量的《GTA VI》定 $80 玩家仍觉超值，而紧凑精悍无注水的《四海兄弟：故乡》定 <strong>$49.99</strong> 彻底打消“等打折再买”心理，首月全价销量反而翻倍 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>！</p>
+          </article>
+          <article class="matrix-card">
+            <div class="matrix-card-head">
+              <h3 class="matrix-card-title" data-i18n-zh="30+ 岁成熟工作党福音：“周末两三天恰好通关一部好莱坞黑帮大片”" data-i18n-en="Serving Time-Poor Adult Gamers Who Never Finish 100-Hour Games">30+ 岁成熟工作党福音：“周末两三天恰好通关一部好莱坞黑帮大片”</h3>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="高通关率带来好口碑" data-i18n-en="High Completion Rate">高通关率带来好口碑</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mat_body_1">行业后台奖杯统计显示，超过 75% 的成年玩家从未通关过《刺客信条》等百小时沙盒；《四海兄弟：故乡》砍掉一切收集羽毛与重复据点，每一章都是精心编排的赛马、潜入、枪战或歌剧院高潮，极高通关率直接沉淀为系列续作忠诚度 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </article>
+          <article class="matrix-card">
+            <div class="matrix-card-head">
+              <h3 class="matrix-card-title" data-i18n-zh="文化考据护城河：连对白都录制纯正西西里岛母语方言" data-i18n-en="Unmatched Historical Authenticity (Full Sicilian Dialect Audio)">文化考据护城河：连对白都录制纯正西西里岛母语方言</h3>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="欧洲工作室文化底蕴" data-i18n-en="Old-World Craft">欧洲工作室文化底蕴</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mat_body_2">为了还原 1905 年圣切莱斯特小镇的黑手党起源（Cosa Nostra），Hangar 13 不仅实地激光扫描西西里柠檬庄园与古罗马遗迹，更专门聘请意大利西西里本土演员录制纯正西西里语配音轨（区别于标准意大利语），文化沉浸感令全球影迷折服 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </article>
+          <article class="matrix-card">
+            <div class="matrix-card-head">
+              <h3 class="matrix-card-title" data-i18n-zh="《故乡》大捷的直接红利：为《四海兄弟 4》（传闻 70年代拉斯维加斯）扫清绿灯障碍" data-i18n-en="Unlocking the Greenlight for Mainline Mafia IV (1970s Vegas Era)">《故乡》大捷的直接红利：为《四海兄弟 4》（传闻 70年代拉斯维加斯）扫清绿灯障碍</h3>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="UE5 管线无缝复用" data-i18n-en="Sequel Flywheel Lit">UE5 管线无缝复用</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mat_body_3">此前 Hangar 13 曾因取消原创科幻项目遭遇波折，《故乡》是工作室证明虚幻 5 驾驭力的背水一战；如今以低预算斩获全美畅销第 3 名，管理层已明确确认该作证明了高性价比叙事大作市场空间，下一部正统续作水到渠成 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 02 四大护城河支柱与五维雷达图 -->
+      <section id="sec-02" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 02 · NICHE DIFFERENTIATION MOATS &amp; CRIME GENRE RADAR" data-i18n-en="CHAPTER 02 · NICHE DIFFERENTIATION MOATS &amp; CRIME GENRE RADAR">CHAPTER 02 · NICHE DIFFERENTIATION MOATS &amp; CRIME GENRE RADAR</span></div>
+            <h2 class="sec-h2" data-i18n-zh="《四海兄弟》四大错位护城河与黑帮叙事赛道五维雷达" data-i18n-en="Four Mafia Differentiation Moats &amp; Crime Drama Genre Radar">《四海兄弟》四大错位护城河与黑帮叙事赛道五维雷达</h2>
+            <p class="sec-sub" data-i18n-zh="对比世嘉《如龙（Like a Dragon）》与《热血无赖》，看《四海兄弟》如何垄断欧美古典黑手党题材" data-i18n-en="How Mafia owns Western historical organized-crime drama alongside Sega&#x27;s Yakuza / Like a Dragon">对比世嘉《如龙（Like a Dragon）》与《热血无赖》，看《四海兄弟》如何垄断欧美古典黑手党题材</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击左侧支柱联动右侧五维雷达" data-i18n-en="Click Pillars to Highlight Radar Axes">点击左侧支柱联动右侧五维雷达</span>
+        </div>
+
+        <div class="grid-radar">
+          <div class="pillar-stack">
+            <button type="button" class="pillar-card active" data-pillar="0">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="护城河一：欧美 20 世纪黑手党银幕美学的唯一正统游戏载体" data-i18n-en="Moat 1: Sole Torchbearer of Classic Italo-American Mob Cinema">护城河一：欧美 20 世纪黑手党银幕美学的唯一正统游戏载体</span>
+                <span class="mui-chip mui-chip-primary mono" data-i18n-zh="《教父/黑道家族》代餐" data-i18n-en="Godfather/Sopranos Niche">《教父/黑道家族》代餐</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="自 EA 十余年前放弃《教父》改编版权后，全球游戏市场再无第二款专注风衣礼帽、汤姆逊冲锋枪、禁酒令私酒与家族缄默法则（Omerta）的 3A 系列。" data-i18n-en="With EA&#x27;s Godfather license long defunct, Mafia holds an uncontested lock on fedoras, Tommy guns, Prohibition bootlegging, and Omerta family drama.">自 EA 十余年前放弃《教父》改编版权后，全球游戏市场再无第二款专注风衣礼帽、汤姆逊冲锋枪、禁酒令私酒与家族缄默法则（Omerta）的 3A 系列。</p>
+            </button>
+            <button type="button" class="pillar-card" data-pillar="1">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="护城河二：$49.99 精益预算结构带来的极高容错率与高 ROIC" data-i18n-en="Moat 2: Lean $50 Budget Discipline &amp; Fast Breakeven">护城河二：$49.99 精益预算结构带来的极高容错率与高 ROIC</span>
+                <span class="mui-chip mui-chip-success mono" data-i18n-zh="~200万份即丰厚盈利" data-i18n-en="Low Breakeven Bar">~200万份即丰厚盈利</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="不养百人在线运维团队、不做无用百平方公里荒地，将捷克与英国工作室预算全部花在刀刃（主角脸模、车辆物理与主线演出）上，商业安全垫极厚。" data-i18n-en="Concentrating Czech and UK dev budgets strictly on facial acting, period atmosphere, and curated set-pieces yields rapid payback.">不养百人在线运维团队、不做无用百平方公里荒地，将捷克与英国工作室预算全部花在刀刃（主角脸模、车辆物理与主线演出）上，商业安全垫极厚。</p>
+            </button>
+            <button type="button" class="pillar-card" data-pillar="2">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="护城河三：时代金曲电台与汽车工业进化博物馆" data-i18n-en="Moat 3: Period Automobile Physics &amp; Historical Soundtrack Vault">护城河三：时代金曲电台与汽车工业进化博物馆</span>
+                <span class="mui-chip mui-chip-violet mono" data-i18n-zh="从手摇马车到60年代肌肉车" data-i18n-en="Authentic Era Time-Machine">从手摇马车到60年代肌肉车</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="每一代拟真还原对应年代汽车悬挂重量感（支持开启拟真手动挡与警方超速罚单模式），伴随爵士乐、50年代摇滚与60年代反战灵魂乐构建极致穿越感。" data-i18n-en="Optional simulation driving physics, fuel/speed-limit policing, and curated jazz/rock radio turn each entry into a playable historical time capsule.">每一代拟真还原对应年代汽车悬挂重量感（支持开启拟真手动挡与警方超速罚单模式），伴随爵士乐、50年代摇滚与60年代反战灵魂乐构建极致穿越感。</p>
+            </button>
+            <button type="button" class="pillar-card" data-pillar="3">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="护城河四：《四海兄弟：三部曲》合集漏斗长效拉新" data-i18n-en="Moat 4: &#x27;Mafia: Trilogy&#x27; Anthology Funnel">护城河四：《四海兄弟：三部曲》合集漏斗长效拉新</span>
+                <span class="mui-chip mui-chip-warning mono" data-i18n-zh="四部作品互相导流" data-i18n-en="4-Game Cross-Sell">四部作品互相导流</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="《故乡》结局彩蛋与初代/二代家族姓氏巧妙呼应，促使通关《故乡》的新玩家顺势购入《Mafia: Trilogy》合集包，单客连带消费翻倍。" data-i18n-en="Connecting Sicilian family lineages in The Old Country directly to Empire Bay and Lost Heaven drives high-margin Mafia: Trilogy bundle sales.">《故乡》结局彩蛋与初代/二代家族姓氏巧妙呼应，促使通关《故乡》的新玩家顺势购入《Mafia: Trilogy》合集包，单客连带消费翻倍。</p>
+            </button>
+          </div>
+
+          <div class="chart-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div class="chart-title" data-i18n-zh="犯罪黑帮叙事游戏 IP 五维特征对比雷达" data-i18n-en="5-Axis Crime Drama Franchise Differentiation Radar">犯罪黑帮叙事游戏 IP 五维特征对比雷达</div>
+              <div class="chart-caption" data-i18n-zh="对比《四海兄弟》系列、世嘉《如龙（Like a Dragon）》与《GTA 单机主线》的差异化生态位" data-i18n-en="Comparing Mafia (2K/Hangar 13), Like a Dragon / Yakuza (Sega/RGG), and GTA Story Mode">对比《四海兄弟》系列、世嘉《如龙（Like a Dragon）》与《GTA 单机主线》的差异化生态位</div>
+            </div>
+            <div class="canvas-stage-tall">
+              <canvas id="chartRadar"></canvas>
+            </div>
+            <div class="chart-legend" style="margin-bottom:10px;">
+              <button type="button" class="legend-pill" data-radar-key="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span data-i18n-zh="四海兄弟 Mafia (2K / Hangar 13)" data-i18n-en="Mafia (2K / Hangar 13)">四海兄弟 Mafia (2K / Hangar 13)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span data-i18n-zh="如龙 Like a Dragon (世嘉 RGG)" data-i18n-en="Like a Dragon / Yakuza (Sega)">如龙 Like a Dragon (世嘉 RGG)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="s3"><span class="legend-dot" style="background:var(--chart-c3);"></span><span data-i18n-zh="开放世界犯罪大作均值" data-i18n-en="Standard $70 Crime Sandbox">开放世界犯罪大作均值</span></button>
+            </div>
+            <div id="pillarFocusNote" class="mui-alert"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 标杆同业/竞品矩阵与横向对比 -->
+      <section id="sec-03" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 03 · MAFIA SAGA &amp; LEAN-AAA BENCHMARK MATRIX" data-i18n-en="CHAPTER 03 · MAFIA SAGA &amp; LEAN-AAA BENCHMARK MATRIX">CHAPTER 03 · MAFIA SAGA &amp; LEAN-AAA BENCHMARK MATRIX</span></div>
+            <h2 class="sec-h2" data-i18n-zh="《四海兄弟》全四代矩阵与全球高性价比叙事竞品对比表" data-i18n-en="Mafia Four-Era Saga &amp; Disciplined Narrative Game Peers">《四海兄弟》全四代矩阵与全球高性价比叙事竞品对比表</h2>
+            <p class="sec-sub" data-i18n-zh="完整梳理 1900s–1968 四代作品数据及外部精益研发标杆" data-i18n-en="Compare all four Mafia eras alongside Sega&#x27;s RGG Studio and recent $50 linear breakouts">完整梳理 1900s–1968 四代作品数据及外部精益研发标杆</p>
+          </div>
+          <span id="peerCountBadge" class="mui-chip mui-chip-primary mono"></span>
+        </div>
+
+        <div class="datagrid-toolbar">
+          <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索公司、工作室、引擎、商业模式或优劣势关键词&#8230;" aria-label="筛选竞品对比表格" data-ph-zh="搜索公司、工作室、引擎、商业模式或优劣势关键词&#8230;" data-ph-en="Search title, studio, engine, monetization or verdict&#8230;" data-aria-zh="筛选竞品对比表格" data-aria-en="Filter benchmark comparison table" />
+          <div class="mui-segmented" role="group" aria-label="竞品分类筛选" data-aria-zh="竞品分类筛选" data-aria-en="Category filter">
+              <button type="button" class="mui-seg-btn active" data-peer-filter="all" data-i18n-zh="全部作品 (6)" data-i18n-en="All Titles (6)">全部作品 (6)</button>
+              <button type="button" class="mui-seg-btn" data-peer-filter="mafia" data-i18n-zh="四海兄弟全四代作品" data-i18n-en="Mafia Four-Era Saga">四海兄弟全四代作品</button>
+              <button type="button" class="mui-seg-btn" data-peer-filter="peer" data-i18n-zh="精益叙事与黑帮竞品" data-i18n-en="Crime &amp; Lean-AAA Peers">精益叙事与黑帮竞品</button>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-bottom:18px;">
+          <table class="mui-table">
+            <thead>
+              <tr>
+                  <th data-i18n-zh="作品名称与发售节点" data-i18n-en="Title &amp; Release">作品名称与发售节点</th>
+                  <th data-i18n-zh="年代城市与叙事焦点" data-i18n-en="Historical Era &amp; Focus">年代城市与叙事焦点</th>
+                  <th data-i18n-zh="引擎、结构与定价" data-i18n-en="Engine, Scope &amp; Price">引擎、结构与定价</th>
+                  <th data-i18n-zh="销量 / 愿望单实绩" data-i18n-en="Sales / Wishlist Proof">销量 / 愿望单实绩</th>
+                  <th data-i18n-zh="榜单排名与评分" data-i18n-en="Charts &amp; Score">榜单排名与评分</th>
+                  <th data-i18n-zh="战略经验与商业定评" data-i18n-en="Strategic Verdict">战略经验与商业定评</th>
+              </tr>
+            </thead>
+            <tbody id="peerTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="《四海兄弟》关键商业验证指标拆解（愿望单热度、首周爆发与定价效率）" data-i18n-en="Verified Commercial Proof Points Across the Mafia Franchise">《四海兄弟》关键商业验证指标拆解（愿望单热度、首周爆发与定价效率）</div>
+              <div class="chart-caption" data-i18n-zh="源自 Take-Two 2026年5月官方投资者演示文稿第 16 页及历史财报实绩" data-i18n-en="Grounded in Slide 16 of Take-Two&#x27;s May 2026 Investor Presentation and SEC disclosures">源自 Take-Two 2026年5月官方投资者演示文稿第 16 页及历史财报实绩</div>
+            </div>
+            <span class="mui-chip mono" data-i18n-zh="官方披露硬指标" data-i18n-en="Official IR Metrics">官方披露硬指标</span>
+          </div>
+          <div class="canvas-stage-bars">
+            <canvas id="chartBars"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 商业化变现模型与交互式收益测算器 -->
+      <section id="sec-04" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 04 · $49.99 LEAN-AAA VS. $69.99 BLOAT ROIC SIMULATOR" data-i18n-en="CHAPTER 04 · $49.99 LEAN-AAA VS. $69.99 BLOAT ROIC SIMULATOR">CHAPTER 04 · $49.99 LEAN-AAA VS. $69.99 BLOAT ROIC SIMULATOR</span></div>
+            <h2 class="sec-h2" data-i18n-zh="《四海兄弟：故乡》商业模型解密：$49.99 精益线性大作 ROI 模拟器" data-i18n-en="Mafia&#x27;s $49.99 Lean-AAA Unit Economics &amp; Sequel ROIC Simulator">《四海兄弟：故乡》商业模型解密：$49.99 精益线性大作 ROI 模拟器</h2>
+            <p class="sec-sub" data-i18n-zh="对比“$65M 精益预算 + $49.99 高正价转化”与“$160M 臃肿开放世界 + $69.99 等打折”两套模型的净现金回报" data-i18n-en="Compare net cash profit and ROIC of Hangar 13&#x27;s lean $49.99 linear model against a bloated $160M open-world budget">对比“$65M 精益预算 + $49.99 高正价转化”与“$160M 臃肿开放世界 + $69.99 等打折”两套模型的净现金回报</p>
+          </div>
+          <span class="mui-chip mui-chip-success mono" data-i18n-zh="精益 3A 经济学样板" data-i18n-en="Lean-AAA ROI Model">精益 3A 经济学样板</span>
+        </div>
+
+        <div class="grid-2" style="margin-bottom:18px;">
+          <div class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="为什么卖 $49.99 反而比硬标 $69.99 实际成交均价（Realized ASP）相差无几？" data-i18n-en="Why $49.99 Launch Pricing Protects Realized ASP">为什么卖 $49.99 反而比硬标 $69.99 实际成交均价（Realized ASP）相差无几？</h3>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="首发正价率极高" data-i18n-en="High Full-Price Mix">首发正价率极高</span>
+            </div>
+            <p data-i18n-rich="econ_0">一款平庸的 $69.99 单机大作往往首月滞销，被迫在发售第 6 周开启七折（$48.99）、三个月后半价（$34.99），全周期实际均价跌破 $38；而《四海兄弟：故乡》首发即坦诚定价 <strong>$49.99（豪华版 $59.99）</strong>，290 万愿望单玩家无需苦等黑五直接首周全价入手，首季净现金回流速度惊人 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>！</p>
+          </div>
+          <div class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="UE5 资产沉淀红利：下一部正统续作边际研发效率再提 25%" data-i18n-en="Unreal Engine 5 Asset Reuse Accelerating Mafia IV">UE5 资产沉淀红利：下一部正统续作边际研发效率再提 25%</h3>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="工具链磨合完毕" data-i18n-en="Reusable UE5 Stack">工具链磨合完毕</span>
+            </div>
+            <p data-i18n-rich="econ_1">《故乡》已替 Hangar 13 完成了从自研老引擎向 UE5 的全套载具驾驶、掩体枪战与电影面部绑定迁移；下一部新作无需重复造轮子，可将全部预算聚焦于更大规模的 70 年代美国黑帮都会剧情 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>。</p>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="单机叙事大作两种成本模型盈亏平衡对比（累计销量百万份 vs 净现金利润 $M）" data-i18n-en="Breakeven &amp; Net Cash Comparison: Lean $50 Mafia Model vs. Bloated Open World">单机叙事大作两种成本模型盈亏平衡对比（累计销量百万份 vs 净现金利润 $M）</div>
+              <div class="chart-caption" data-i18n-zh="在捷克+英国精益成本结构下，售出 ~190 万份即完全回本，卖到 450 万份净赚近亿美元！" data-i18n-en="Breakeven sits near ~1.9M units under Hangar 13&#x27;s lean structure—turning 4M–5M units into a high-margin triumph">在捷克+英国精益成本结构下，售出 ~190 万份即完全回本，卖到 450 万份净赚近亿美元！</div>
+            </div>
+            <span class="mui-chip mono" data-i18n-zh="盈亏平衡结构优势" data-i18n-en="Breakeven Advantage">盈亏平衡结构优势</span>
+          </div>
+          <div class="chart-axis-meta">
+            <span style="color:var(--chart-c1);" data-i18n-zh="■ 左轴：终端累计毛流水 ($M)" data-i18n-en="■ Left Axis: Cumulative Gross Bookings ($M)">■ 左轴：终端累计毛流水 ($M)</span>
+            <span style="color:var(--chart-c2);" data-i18n-zh="● 右轴：扣除研发宣发后净现金利润 ($M)" data-i18n-en="● Right Axis: Net Publisher Cash Profit ($M)">● 右轴：扣除研发宣发后净现金利润 ($M)</span>
+          </div>
+          <div class="canvas-stage">
+            <canvas id="chartEps"></canvas>
+          </div>
+          <div class="chart-legend">
+            <button type="button" class="legend-pill" data-eps-series="eps"><span class="legend-dot" style="background:var(--chart-c1);"></span><span data-i18n-zh="累计零售毛流水 (左轴 · $M)" data-i18n-en="Cumulative Gross Bookings (Left · $M)">累计零售毛流水 (左轴 · $M)</span></button>
+            <button type="button" class="legend-pill" data-eps-series="oci"><span class="legend-dot" style="background:var(--chart-c2);"></span><span data-i18n-zh="2K 扣除研发与宣发后净赚现金 (右轴 · $M)" data-i18n-en="Net Cash Profit Post-Dev &amp; Marketing (Right · $M)">2K 扣除研发与宣发后净赚现金 (右轴 · $M)</span></button>
+          </div>
+        </div>
+
+        <!-- Interactive Simulator -->
+        <div class="simulator-grid">
+          <div class="sim-controls">
+            <div>
+              <div class="chart-title" data-i18n-zh="《四海兄弟》精益 3A 单品与续作 ROIC 交互测算器" data-i18n-en="Mafia Lean-AAA vs. Bloated Open-World Net Profit Simulator">《四海兄弟》精益 3A 单品与续作 ROIC 交互测算器</div>
+              <div class="chart-caption" data-i18n-zh="调节 3 年累计销量、混合成交均价、研发+宣发总成本及老三部曲（Mafia: Trilogy）联动补票开关" data-i18n-en="Adjust 3-year units, blended ASP, total dev+marketing cost, and Mafia: Trilogy back-catalog cross-sell">调节 3 年累计销量、混合成交均价、研发+宣发总成本及老三部曲（Mafia: Trilogy）联动补票开关</div>
+            </div>
+
+            <div class="preset-stack">
+              <button type="button" class="preset-btn active" data-preset="base">
+                <span data-i18n-zh="《故乡》超预期实绩基准（3年 480万份 · $43 混合均价 · $68M成本）" data-i18n-en="Old Country Hit Base: 4.8M Units · $43 Blended ASP · $68M Cost">《故乡》超预期实绩基准（3年 480万份 · $43 混合均价 · $68M成本）</span>
+                <span class="mono" style="font-size:0.74rem;opacity:0.85;" data-i18n-zh="4.8M份 · +135% ROIC" data-i18n-en="4.8M · +135% ROIC">4.8M份 · +135% ROIC</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="sequel">
+                <span data-i18n-zh="下一代《四海兄弟4》赌城扩张情景（650万份 · $52 均价 · $95M成本）" data-i18n-en="Mafia IV Vegas Upside: 6.5M Units · $52 ASP · $95M Cost">下一代《四海兄弟4》赌城扩张情景（650万份 · $52 均价 · $95M成本）</span>
+                <span class="mono" style="font-size:0.74rem;opacity:0.85;" data-i18n-zh="6.5M份 · 旗舰跃升" data-i18n-en="6.5M · Vegas Tentpole">6.5M份 · 旗舰跃升</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="conservative">
+                <span data-i18n-zh="温和走量保守情景（3年 300万份 · $37 均价 · $68M成本）" data-i18n-en="Conservative Case: 3.0M Units · $37 ASP · $68M Cost">温和走量保守情景（3年 300万份 · $37 均价 · $68M成本）</span>
+                <span class="mono" style="font-size:0.74rem;opacity:0.85;" data-i18n-zh="3.0M份 · 依然稳赚" data-i18n-en="3.0M · Safely Profitable">3.0M份 · 依然稳赚</span>
+              </button>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="3 年累计拷贝销量 (百万份)" data-i18n-en="3-Year Cumulative Units Sold (Millions)">3 年累计拷贝销量 (百万份)</span>
+                <span id="simVal1Label" class="slider-val mono"></span>
+              </div>
+              <input type="range" id="simSlider1" class="mui-slider" min="2.0" max="8.5" step="0.2" value="4.8" aria-label="3 年累计拷贝销量 (百万份)" data-aria-zh="3 年累计拷贝销量 (百万份)" data-aria-en="3-Year Cumulative Units Sold (Millions)" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="3 年全周期混合成交均价 ASP ($)" data-i18n-en="3-Year Blended Realized Copy ASP ($)">3 年全周期混合成交均价 ASP ($)</span>
+                <span id="simVal2Label" class="slider-val mono"></span>
+              </div>
+              <input type="range" id="simSlider2" class="mui-slider" min="30" max="58" step="1" value="43" aria-label="3 年全周期混合成交均价 ASP ($)" data-aria-zh="3 年全周期混合成交均价 ASP ($)" data-aria-en="3-Year Blended Realized Copy ASP ($)" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="捷克+英国精益研发与宣发总成本 ($M)" data-i18n-en="Total Lean Dev + Marketing Cost ($M)">捷克+英国精益研发与宣发总成本 ($M)</span>
+                <span id="simVal3Label" class="slider-val mono"></span>
+              </div>
+              <input type="range" id="simSlider3" class="mui-slider" min="50" max="120" step="2" value="68" aria-label="捷克+英国精益研发与宣发总成本 ($M)" data-aria-zh="捷克+英国精益研发与宣发总成本 ($M)" data-aria-en="Total Lean Dev + Marketing Cost ($M)" />
+            </div>
+
+            <label class="mui-switch-row" for="simToggle">
+              <span style="font-size:0.8rem;font-weight:700;color:var(--mui-success-text);" data-i18n-zh="计入《四海兄弟：三部曲》合集与 60FPS 补丁带动的老作净利 (+$16M)" data-i18n-en="Include Mafia: Trilogy Back-Catalog &amp; 60fps Patch Halo (+$16M Net)">计入《四海兄弟：三部曲》合集与 60FPS 补丁带动的老作净利 (+$16M)</span>
+              <input type="checkbox" id="simToggle" checked />
+            </label>
+          </div>
+
+          <div class="sim-output-panel">
+            <div>
+              <div class="chart-title" data-i18n-zh="3 年累计净现金回报对比：$50 精益线性模型 vs $160M 臃肿沙盒模型" data-i18n-en="3-Year Cumulative Net Cash: Lean $50 Model vs. $160M Bloated Budget">3 年累计净现金回报对比：$50 精益线性模型 vs $160M 臃肿沙盒模型</div>
+              <div class="chart-caption" data-i18n-zh="实线为 Hangar 13 精益模型净现金曲线，虚线为若盲目堆砌 $160M 开放世界预算的现金流对比" data-i18n-en="Solid curve shows Hangar 13 lean-budget net cash vs. dashed $160M bloated open-world counterfactual">实线为 Hangar 13 精益模型净现金曲线，虚线为若盲目堆砌 $160M 开放世界预算的现金流对比</div>
+            </div>
+            <div class="sim-readouts">
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="3 年终端总预订额" data-i18n-en="3-Yr Gross Retail Bookings">3 年终端总预订额</div>
+                <div id="simOut1" class="sim-stat-num mono"></div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="完全回本所需销量门槛" data-i18n-en="Breakeven Unit Threshold">完全回本所需销量门槛</div>
+                <div id="simOut2" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);"></div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="扣除成本后净赚现金利润" data-i18n-en="3-Yr Net Publisher Profit">扣除成本后净赚现金利润</div>
+                <div id="simOut3" class="sim-stat-num mono"></div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="单项目净投资回报率 (Net ROIC)" data-i18n-en="Project Net Cash ROIC">单项目净投资回报率 (Net ROIC)</div>
+                <div id="simOut4" class="sim-stat-num mono" style="color:var(--mui-success-text);"></div>
+              </div>
+            </div>
+            <div class="canvas-stage-sim">
+              <canvas id="chartSim"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 历史演进三部曲与里程碑战役复盘 -->
+      <section id="sec-05" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 05 · QUARTER-CENTURY MOB CHRONICLE &amp; LESSONS" data-i18n-en="CHAPTER 05 · QUARTER-CENTURY MOB CHRONICLE &amp; LESSONS">CHAPTER 05 · QUARTER-CENTURY MOB CHRONICLE &amp; LESSONS</span></div>
+            <h2 class="sec-h2" data-i18n-zh="二十四年四海兄弟沉浮录：迷失于沙盒，救赎于初心" data-i18n-en="24 Years of Mafia: Lost in Open-World Bloat, Redeemed by Focus">二十四年四海兄弟沉浮录：迷失于沙盒，救赎于初心</h2>
+            <p class="sec-sub" data-i18n-zh="从捷克布尔诺独立奇才到 2025 西西里故乡王者归来" data-i18n-en="How returning to Illusion Softworks&#x27; linear Czech roots saved the franchise">从捷克布尔诺独立奇才到 2025 西西里故乡王者归来</p>
+          </div>
+          <span class="mui-chip mono" data-i18n-zh="2002 – 2026 家族史诗" data-i18n-en="2002 – 2026 Mob Saga">2002 – 2026 家族史诗</span>
+        </div>
+
+        <div class="mui-timeline">
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;color:var(--text-primary);" data-i18n-zh="捷克 Illusion Softworks 创造初代神作，Take-Two 收购改组为 2K Czech" data-i18n-en="Czech Masterpiece Origins &amp; Take-Two&#x27;s 2008 Acquisition (2K Czech)">捷克 Illusion Softworks 创造初代神作，Take-Two 收购改组为 2K Czech</strong>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="第一阶段 · 2002 – 2010" data-i18n-en="ERA I · 2002 – 2010">第一阶段 · 2002 – 2010</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="tl_0">2002 年捷克设计师 Daniel Vavra 主导的初代《Mafia: The City of Lost Heaven》凭拟真车损、加油与感人结局震撼欧洲（PC MC 88）；2008 年 Take-Two 收购该团队改组为 2K Czech 并于 2010 年推出口碑极佳的《四海兄弟 II》 <a class="cite-link" href="https://en.wikipedia.org/wiki/Take-Two_Interactive" target="_blank" rel="noopener noreferrer">Wikipedia TTWO &#8599;</a>。</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;color:var(--text-primary);" data-i18n-zh="组建 Hangar 13 推出《四海兄弟 III》销量破 700 万，重制初代找回线性灵魂" data-i18n-en="Hangar 13&#x27;s 7M-Unit Mafia III &amp; The 2020 Definitive Edition Reset">组建 Hangar 13 推出《四海兄弟 III》销量破 700 万，重制初代找回线性灵魂</strong>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="第二阶段 · 2014 – 2020" data-i18n-en="ERA II · 2014 – 2020">第二阶段 · 2014 – 2020</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="tl_1">2016《Mafia III》首周出货 450 万份大破纪录，但强塞开放世界重复据点导致口碑下滑；团队痛定思痛，在 2020 年以 $39.99 推出纯线性重制的《四海兄弟：最终版》，瞬间赢回全球粉丝盛赞 <a class="cite-link" href="https://www.gamesindustry.biz/nba-2k17-mafia-iii-break-2k-launch-records" target="_blank" rel="noopener noreferrer">GamesIndustry Mafia III &#8599;</a>。</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;color:var(--text-primary);" data-i18n-zh="全面拥抱虚幻 5，《四海兄弟：故乡》2025 大爆并启动下一部正作时代" data-i18n-en="UE5 Pivot &amp; 2025&#x27;s &#x27;The Old Country&#x27; Smash Hit Ignites Future Slate">全面拥抱虚幻 5，《四海兄弟：故乡》2025 大爆并启动下一部正作时代</strong>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="第三阶段 · 2022 – 2026+" data-i18n-en="ERA III · 2022 – 2026+">第三阶段 · 2022 – 2026+</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="tl_2">切换 UE5 打造的《Mafia: The Old Country》于 2025 年 8 月以 $49.99 惊艳突围（290万愿望单、全美第3），并于 2026 年 10 月更新三代 60 帧补丁，将整个四海兄弟宇宙推入良性复利轨道 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="战略纠偏一：承认“不必每款游戏都做成 100 小时开放世界”" data-i18n-en="Case 1: Rejecting Industry Groupthink on Mandatory Open Worlds">战略纠偏一：承认“不必每款游戏都做成 100 小时开放世界”</h3>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="少即是多（Less is More）" data-i18n-en="Scope Discipline">少即是多（Less is More）</span>
+            </div>
+            <p data-i18n-rich="case_0">《Mafia III》其实拥有顶级的过场表演与 1968 时代张力，唯独被强行拉长时长的据点刷钱拖了后腿；《故乡》砍掉全部冗余支线专注 14 小时高浓度主线，结果研发更快、预算更省、玩家反而更满意 <a class="cite-link" href="https://en.wikipedia.org/wiki/Mafia_III" target="_blank" rel="noopener noreferrer">Wikipedia Mafia III &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="档期卡位二：抢在《GTA VI》前一年（2025.08）精准收割犯罪叙事饥渴" data-i18n-en="Case 2: Surgical August 2025 Release Window Timing">档期卡位二：抢在《GTA VI》前一年（2025.08）精准收割犯罪叙事饥渴</h3>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="完美避峰填谷" data-i18n-en="Smart Slate Spacing">完美避峰填谷</span>
+            </div>
+            <p data-i18n-rich="case_1">2K 将《故乡》精准排在 2025 年 8 月暑期档尾声——当时《GTA VI》刚宣布定档 2026，全球喜爱犯罪题材的玩家正处于空窗饥渴期，直接助推《故乡》冲上全美畅销第 3 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="引擎转型三：果断弃用老旧自研引擎拥抱 Unreal Engine 5" data-i18n-en="Case 3: Retiring Custom Engine Debt for Unreal Engine 5">引擎转型三：果断弃用老旧自研引擎拥抱 Unreal Engine 5</h3>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="解放美术与招聘效率" data-i18n-en="Tech Modernization">解放美术与招聘效率</span>
+            </div>
+            <p data-i18n-rich="case_2">中型工作室维护自研引擎会吞噬 30% 工程人力且新人上手极慢；Hangar 13 转向行业通用的 UE5 后，新招捷克与英国美术师入职首周即可产出西西里光影资产 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="长尾维护四：2026.10 免费推送次世代 60FPS 补丁激活老作目录" data-i18n-en="Case 4: Free Oct 2026 60FPS Console Upgrade Lifting Catalog Bundles">长尾维护四：2026.10 免费推送次世代 60FPS 补丁激活老作目录</h3>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="四作合集常青销售" data-i18n-en="Anthology Maintenance">四作合集常青销售</span>
+            </div>
+            <p data-i18n-rich="case_3">许多玩家打完《故乡》想补旧作却嫌老主机版锁 30 帧；官方及时跟进原生 60FPS 更新，让《四海兄弟》全套四部曲成为秋季促销高转化捆绑包 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 06 交互式跟踪与风险核查清单 -->
+      <section id="sec-06" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 06 · MAFIA IV GREENLIGHT &amp; FRANCHISE CHECKLIST" data-i18n-en="CHAPTER 06 · MAFIA IV GREENLIGHT &amp; FRANCHISE CHECKLIST">CHAPTER 06 · MAFIA IV GREENLIGHT &amp; FRANCHISE CHECKLIST</span></div>
+            <h2 class="sec-h2" data-i18n-zh="《四海兄弟》后续管线与精益模式复用核查清单" data-i18n-en="Mafia Franchise Continuation &amp; Lean-AAA Checklist">《四海兄弟》后续管线与精益模式复用核查清单</h2>
+            <p class="sec-sub" data-i18n-zh="跟踪《故乡》长尾去化与 Hangar 13 下一部正统续作（Mafia IV）的 6 项核心节点" data-i18n-en="6 checkpoints tracking The Old Country&#x27;s catalog tail and Hangar 13&#x27;s next project">跟踪《故乡》长尾去化与 Hangar 13 下一部正统续作（Mafia IV）的 6 项核心节点</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono"></span>
+            <button type="button" id="checkAllBtn" class="mui-btn" data-i18n-zh="全部勾选" data-i18n-en="Check All">全部勾选</button>
+            <button type="button" id="resetCheckBtn" class="mui-btn" data-i18n-zh="恢复基准" data-i18n-en="Reset">恢复基准</button>
+          </div>
+        </div>
+
+        <div class="progress-track">
+          <div id="checklistProgressBar" class="progress-fill"></div>
+        </div>
+
+        <div id="checklistContainer" class="checklist-grid"></div>
+      </section>
+
+      <!-- 07 权威数据来源与财报核验索引 -->
+      <section id="sec-07" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 07 · PRIMARY FILINGS &amp; VERIFIED SOURCES" data-i18n-en="CHAPTER 07 · PRIMARY FILINGS &amp; VERIFIED SOURCES">CHAPTER 07 · PRIMARY FILINGS &amp; VERIFIED SOURCES</span></div>
+            <h2 class="sec-h2" data-i18n-zh="权威数据来源与 SEC 财报核验索引" data-i18n-en="Primary Filings &amp; Verified Sources Index">权威数据来源与 SEC 财报核验索引</h2>
+            <p class="sec-sub" data-i18n-zh="本报告全部销量、预订额、经常性消费（RCS）占比、评分与管线节点均源自 SEC 披露文件及官方投资者材料" data-i18n-en="All unit sales, Net Bookings, Recurrent Consumer Spending (RCS) ratios, review scores, and slate dates are grounded in SEC filings and official disclosures">本报告全部销量、预订额、经常性消费（RCS）占比、评分与管线节点均源自 SEC 披露文件及官方投资者材料</p>
+          </div>
+          <span class="mui-chip mui-chip-success mono">12 Verified URLs</span>
+        </div>
+
+        <div class="mui-alert mui-alert-success">
+          <div>
+            <strong data-i18n-zh="研究方法与范围声明：" data-i18n-en="Methodology &amp; Scope Note: ">研究方法与范围声明：</strong>
+            <span data-i18n-zh="本页面严格聚焦 2K / Hangar 13 旗下《Mafia 四海兄弟》系列 IP 的历史黑帮叙事定位、与 GTA 的错位互补关系以及 $49.99 精益 3A 单品经济模型。" data-i18n-en="This monograph focuses strictly on 2K and Hangar 13&#x27;s Mafia franchise—covering period mob storytelling, anti-open-world scope discipline, and $49.99 unit economics.">本页面严格聚焦 2K / Hangar 13 旗下《Mafia 四海兄弟》系列 IP 的历史黑帮叙事定位、与 GTA 的错位互补关系以及 $49.99 精益 3A 单品经济模型。</span>
+          </div>
+        </div>
+
+        <ul class="sources-list">
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[01]</span>
+            <span><a href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Take-Two 2026年5月官方投资者演示文稿（Slide 16：四海兄弟故乡 290万愿望单与全美第3）" data-i18n-en="Take-Two May 2026 Investor Presentation (Slide 16: Mafia)">Take-Two 2026年5月官方投资者演示文稿（Slide 16：四海兄弟故乡 290万愿望单与全美第3）</strong> &#8599;</a> — <span data-i18n-zh="官方核验 2025-08-08 发售、&gt;290万愿望单（PS5历史前5）及 Circana 8月全美畅销第3名" data-i18n-en="Aug 8, 2025 release, &gt;2.9M wishlists (Top-5 PS5 ever) &amp; #3 US Aug 2025 rank">官方核验 2025-08-08 发售、&gt;290万愿望单（PS5历史前5）及 Circana 8月全美畅销第3名</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[02]</span>
+            <span><a href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Horizons Capitals：Zelnick 盛赞《故乡》$49.99 大超预期及 2026.10 60FPS 升级" data-i18n-en="Horizons Capitals: Mafia: The Old Country Outperformance &amp; 60fps Update">Horizons Capitals：Zelnick 盛赞《故乡》$49.99 大超预期及 2026.10 60FPS 升级</strong> &#8599;</a> — <span data-i18n-zh="核验 $50 定价超预期表现及 2026年10月《四海兄弟3》次世代 60帧升级" data-i18n-en="$49.99 outperformance (&#x27;massive hit&#x27;) and Oct 2026 60fps console patch">核验 $50 定价超预期表现及 2026年10月《四海兄弟3》次世代 60帧升级</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[03]</span>
+            <span><a href="https://en.wikipedia.org/wiki/Mafia_III" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Wikipedia：Mafia III 累计销量破 700 万份与研发历史" data-i18n-en="Wikipedia: Mafia III Sales (&gt;7M Units) &amp; Reception">Wikipedia：Mafia III 累计销量破 700 万份与研发历史</strong> &#8599;</a> — <span data-i18n-zh="核验《四海兄弟3》累计售出 700 万+ 份及 1968 新波尔多叙事设定" data-i18n-en="Verified &gt;7M copies sold and Hangar 13 debut production context">核验《四海兄弟3》累计售出 700 万+ 份及 1968 新波尔多叙事设定</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[04]</span>
+            <span><a href="https://www.gamesindustry.biz/nba-2k17-mafia-iii-break-2k-launch-records" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="GamesIndustry.biz：Mafia III 首周出货 450 万份创当时 2K 最快纪录" data-i18n-en="GamesIndustry.biz: Mafia III Ships 4.5M Units in Launch Week">GamesIndustry.biz：Mafia III 首周出货 450 万份创当时 2K 最快纪录</strong> &#8599;</a> — <span data-i18n-zh="核验 Take-Two 官方确认的四海兄弟3 首周 450 万份零售出货量" data-i18n-en="Take-Two confirmation of 4.5M launch-week shipments">核验 Take-Two 官方确认的四海兄弟3 首周 450 万份零售出货量</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[05]</span>
+            <span><a href="https://www.tweaktown.com/news/80936/take-two-reveals-franchise-sales-for-bioshock-mafia-gta-nba-2k/index.html" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="TweakTown：2021 年四海兄弟系列 1,700 万份历史基数核验" data-i18n-en="TweakTown: Historical 17M Mafia Franchise Sales (Aug 2021)">TweakTown：2021 年四海兄弟系列 1,700 万份历史基数核验</strong> &#8599;</a> — <span data-i18n-zh="核验在计入近五年三部曲与 2025《故乡》前已达 ~1,700 万份" data-i18n-en="17M baseline prior to 2022–2026 Trilogy tail and The Old Country">核验在计入近五年三部曲与 2025《故乡》前已达 ~1,700 万份</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[06]</span>
+            <span><a href="https://www.sec.gov/Archives/edgar/data/946581/000162828026072175/ttwo2q27earningsrelease.htm" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="SEC Form 8-K：Take-Two FY2027 Q2 财报（故乡构成的去年同期高基数说明）" data-i18n-en="SEC Form 8-K: Q2 FY27 Prior-Year Mafia Launch Comp">SEC Form 8-K：Take-Two FY2027 Q2 财报（故乡构成的去年同期高基数说明）</strong> &#8599;</a> — <span data-i18n-zh="官方确认 2025年8月《Mafia: The Old Country》为 Q2 FY26 重要预订额驱动源" data-i18n-en="Confirms Mafia: The Old Country as a major Q2 FY26 Bookings contributor">官方确认 2025年8月《Mafia: The Old Country》为 Q2 FY26 重要预订额驱动源</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[07]</span>
+            <span><a href="https://www.sec.gov/Archives/edgar/data/946581/000162828026037434/ttwo-20260331.htm" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="SEC Form 10-K：Take-Two FY2026 年报（2K 全资自有 Mafia 品牌说明）" data-i18n-en="SEC Form 10-K: FY2026 2K Wholly-Owned Mafia IP">SEC Form 10-K：Take-Two FY2026 年报（2K 全资自有 Mafia 品牌说明）</strong> &#8599;</a> — <span data-i18n-zh="核验 Mafia 为 2K 100% 内部自有核心叙事系列，零外部版权分成" data-i18n-en="100% internally owned and developed IP status under 2K / Hangar 13">核验 Mafia 为 2K 100% 内部自有核心叙事系列，零外部版权分成</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[08]</span>
+            <span><a href="https://en.wikipedia.org/wiki/Take-Two_Interactive" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Wikipedia：Take-Two 2008 年收购捷克 Illusion Softworks (2K Czech) 档案" data-i18n-en="Wikipedia: Acquisition of Illusion Softworks / 2K Czech">Wikipedia：Take-Two 2008 年收购捷克 Illusion Softworks (2K Czech) 档案</strong> &#8599;</a> — <span data-i18n-zh="核验布尔诺与布拉格研发团队并入 2K 及后续整合进 Hangar 13 历史" data-i18n-en="2008 acquisition of Illusion Softworks and evolution into Hangar 13">核验布尔诺与布拉格研发团队并入 2K 及后续整合进 Hangar 13 历史</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[09]</span>
+            <span><a href="https://www.metacritic.com/company/take-two-interactive/" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Metacritic：Mafia 全系列媒体评分记录（初代88 / 最终版79 / 故乡）" data-i18n-en="Metacritic: Mafia Franchise Critical Score History">Metacritic：Mafia 全系列媒体评分记录（初代88 / 最终版79 / 故乡）</strong> &#8599;</a> — <span data-i18n-zh="核验 2025-08-08 PS5/PC/Xbox 发售记录与历代均分" data-i18n-en="Release dates, ratings, and review aggregates across Mafia titles">核验 2025-08-08 PS5/PC/Xbox 发售记录与历代均分</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[10]</span>
+            <span><a href="https://mafia.2k.com/" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Mafia 官方网站：《Mafia: The Old Country》西西里语配音与版本详情" data-i18n-en="Official Mafia: The Old Country Portal (2K / Hangar 13)">Mafia 官方网站：《Mafia: The Old Country》西西里语配音与版本详情</strong> &#8599;</a> — <span data-i18n-zh="核验 $49.99 标准版 / $59.99 豪华版定价、UE5 特性与西西里语配音说明" data-i18n-en="$49.99/$59.99 pricing, UE5 features, and authentic Sicilian audio">核验 $49.99 标准版 / $59.99 豪华版定价、UE5 特性与西西里语配音说明</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[11]</span>
+            <span><a href="https://hangar13games.com/" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Hangar 13 官方网站：四城协同工作室体系介绍" data-i18n-en="Hangar 13 Official Studio Locations (Brno, Prague, Brighton, Novato)">Hangar 13 官方网站：四城协同工作室体系介绍</strong> &#8599;</a> — <span data-i18n-zh="核验捷克双城、英国布莱顿与加州诺瓦托四地联合研发架构" data-i18n-en="Four-studio global structure across Czechia, UK, and California">核验捷克双城、英国布莱顿与加州诺瓦托四地联合研发架构</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[12]</span>
+            <span><a href="https://gamesbeat.com/take-two-reports-bookings-for-fiscal-q2-of-1-6b-down-18-and-below-expectations/" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="GamesBeat：Take-Two 精益定价与多工作室协同报道" data-i18n-en="GamesBeat: Take-Two Portfolio &amp; Pricing Strategy">GamesBeat：Take-Two 精益定价与多工作室协同报道</strong> &#8599;</a> — <span data-i18n-zh="核验集团针对不同体量作品实施差异化定价的经营成果" data-i18n-en="Executive commentary on matching retail pricing to campaign scope">核验集团针对不同体量作品实施差异化定价的经营成果</span></span>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../../../_shared/3ca9fec3e569bf9b.js"></script>
+</body>
+</html>

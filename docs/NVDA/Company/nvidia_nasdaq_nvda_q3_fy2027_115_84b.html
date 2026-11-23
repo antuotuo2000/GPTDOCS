@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NVIDIA 英伟达 (NASDAQ: NVDA) 商业模式深度研究报告（Q3 FY2027 $115.84B 全景拆解）| 数据中心</title>
+  <meta name="description" content="NVIDIA Corporation 英伟达商业模式架构深度拆解（Q3 FY2027 营收 $115.84B、数据中心 $107.60B、GAAP 毛利率 74.8%）：涵盖 Vera Rubin 六芯协同、CUDA+NIM 软件护城河、$390B 供应链锁单与 AI 工厂单位经济模拟器。" />
+  <script src="../../_shared/72295ce49687f976.js"></script>
+  <link rel="stylesheet" href="../../_shared/481917dff6a7416f.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky MUI AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">NV</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+          <a class="crumb-link hide-sm" href="../../index.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="NVIDIA (NVDA) 商业模式架构深度拆解" data-i18n-en="NVIDIA Corp. (NVDA) Business Model Architecture">NVIDIA (NVDA) 商业模式架构深度拆解</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="Q3 FY27 $115.84B (+103.2%)" data-i18n-en="Q3 FY27 $115.84B (+103.2%)">Q3 FY27 $115.84B (+103.2%)</span>
+        <span class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="GAAP 毛利率 74.8% · DC 92.9%" data-i18n-en="GAAP GM 74.8% · DC 92.9%">GAAP 毛利率 74.8% · DC 92.9%</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索研究章节或核心指标…" aria-label="快速跳转章节" data-ph-zh="检索研究章节或核心指标…" data-ph-en="Jump to section or metric…" data-aria-zh="快速跳转章节" data-aria-en="Quick jump to chapter" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Centered Shell -->
+  <div class="layout-shell">
+    <!-- Left Persistent MUI Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与阅读工具" data-aria-zh="研究章节目录与阅读工具" data-aria-en="Report Chapters & Tools">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">NVIDIA CORP · NASDAQ: NVDA</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="英伟达商业模式研报" data-i18n-en="NVIDIA Business Model">英伟达商业模式研报</div>
+        <p class="sidebar-subtitle" data-i18n-zh="Q3 FY27 $1,158.4亿创纪录 × Vera Rubin 六芯协同 × CUDA+NIM 生态垄断" data-i18n-en="Q3 FY27 record $115.84B rev × Vera Rubin 6-chip codesign × CUDA+NIM moat">Q3 FY27 $1,158.4亿创纪录 × Vera Rubin 六芯协同 × CUDA+NIM 生态垄断</p>
+
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="Q3 FY27 官方净营收" data-i18n-en="Q3 FY27 Net Revenue">Q3 FY27 官方净营收</span>
+            <span class="sidebar-mini-val mono">$115.84B (+103%)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="数据中心营收占比" data-i18n-en="Data Center Share">数据中心营收占比</span>
+            <span class="sidebar-mini-val mono">92.9% ($107.6B)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="GAAP 毛利率 / FCF" data-i18n-en="GAAP GM / Q3 FCF">GAAP 毛利率 / FCF</span>
+            <span class="sidebar-mini-val mono">74.8% / $43.78B</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="章节目录" data-aria-zh="章节目录" data-aria-en="Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="NVDA">
+          <div class="co-side-head">
+            <span class="co-side-title mono">NVDA · 02/03</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="nvidia_12_fy2026_215_94b_q3_fy27_115_84b.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../SeniorExecutive/nvidia_30_kress_huang_malachowsky_parker_shoquist_teter_dally_alben_jones.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (3)" data-i18n-en="All (3)">全部 (3)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (2)" data-i18n-en="Company (2)">公司深度 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="nvidia_12_fy2026_215_94b_q3_fy27_115_84b.html" title="NVIDIA 英伟达全产品与服务 12 大板块深度研报中枢（FY2026 $215.94B · Q3 FY27 $115.84B）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="NVIDIA 英伟达全产品与服务 12 大板块深度研报中枢（FY2026 $215.94B · Q3 FY27 $115.84B）" data-i18n-en="NVIDIA &amp; 12 Deep DiveReport (FY2026 $215.94B · Q3 FY27 $115.84B)">NVIDIA 英伟达全产品与服务 12 大板块深度研报中枢（FY2026 $215.94B · Q3 FY27 $115.84B）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="Company" href="nvidia_nasdaq_nvda_q3_fy2027_115_84b.html" title="NVIDIA 英伟达 (NASDAQ: NVDA) 商业模式深度研究报告（Q3 FY2027 $115.84B 全景拆解）"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="NVIDIA 英伟达 (NASDAQ: NVDA) 商业模式深度研究报告（Q3 FY2027 $115.84B 全景拆解）" data-i18n-en="NVIDIA (NASDAQ: NVDA) Business ModelDeep Dive Research Report (Q3 FY2027 $115.84B OverviewBreakdown)">NVIDIA 英伟达 (NASDAQ: NVDA) 商业模式深度研究报告（Q3 FY2027 $115.84B 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../SeniorExecutive/nvidia_30_kress_huang_malachowsky_parker_shoquist_teter_dally_alben_jones.html" title="NVIDIA 30 大核心高管与董事会全景深度研报中枢（Kress·Huang·Malachowsky·Parker·Shoquist·Teter·Dally·Alben·Jones等）"><span class="co-hub-ticker mono">03</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="NVIDIA 30 大核心高管与董事会全景深度研报中枢（Kress·Huang·Malachowsky·Parker·Shoquist·Teter·Dally·Alben·Jones等）" data-i18n-en="NVIDIA 30 &amp; OverviewDeep DiveReport (Kress·Huang·Malachowsky·Parker·Shoquist·Teter·Dally·Alben·Jones)">NVIDIA 30 大核心高管与董事会全景深度研报中枢（Kress·Huang·Malachowsky·Parker·Shoquist·Teter·Dally·Alben·Jones等）</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+        <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary & KPIs">执行摘要与核心指标</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span data-i18n-zh="全栈架构与六芯协同" data-i18n-en="Full-Stack & 6-Chip Codesign">全栈架构与六芯协同</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span data-i18n-zh="四大统治支柱与雷达" data-i18n-en="4 Pillars & Moat Radar">四大统治支柱与雷达</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span data-i18n-zh="全球 AI 算力横向对比" data-i18n-en="Global AI Silicon Matrix">全球 AI 算力横向对比</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span data-i18n-zh="AI 工厂经济与复利模拟" data-i18n-en="Unit Economics & LTV Sim">AI 工厂经济与复利模拟</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span data-i18n-zh="商业演进史与四大战役" data-i18n-en="Evolution & 2026 Battles">商业演进史与四大战役</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span data-i18n-zh="护城河耐久度核查清单" data-i18n-en="Moat Durability Checklist">护城河耐久度核查清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span data-i18n-zh="SEC 财报与官方信源索引" data-i18n-en="SEC Filings & Primary Sources">SEC 财报与官方信源索引</span></a></li>
+        </ul>
+      </nav>
+
+      
+    </aside>
+
+    <!-- Main Analytical Content -->
+    <main class="main-content">
+      <!-- Section 00: Hero & KPIs -->
+      <section id="sec-00" class="mui-paper hero-card section-block">
+        <div class="status-strip">
+          <span class="mui-chip mui-chip-primary" data-i18n-zh="战略定评：从芯片供应商跃迁为全球“AI 工厂”全栈基础设施垄断者" data-i18n-en="Verdict: From Discrete GPU Vendor to Full-Stack 'AI Factory' Infrastructure Monopoly">战略定评：从芯片供应商跃迁为全球“AI 工厂”全栈基础设施垄断者</span>
+          <span class="mui-chip" data-i18n-zh="核心栈：Vera Rubin NVL72 · Blackwell Ultra · Spectrum-X · CUDA + NIM" data-i18n-en="Core Stack: Vera Rubin NVL72 · Blackwell Ultra · Spectrum-X · CUDA + NIM">核心栈：Vera Rubin NVL72 · Blackwell Ultra · Spectrum-X · CUDA + NIM</span>
+          <span class="mui-chip mui-chip-success mono" data-i18n-zh="财报基准：Q3 FY2027 (截至 2026-10-25) 官方核验" data-i18n-en="Filing Baseline: Q3 FY2027 (Ended Oct 25, 2026)">财报基准：Q3 FY2027 (截至 2026-10-25) 官方核验</span>
+        </div>
+        <div class="hero-overline mono">
+          <span data-i18n-zh="CORE THESIS · 单季 $1,158.4亿营收 (+103.2%) × 六芯协同机架级交付 × 74.8% GAAP 毛利率" data-i18n-en="CORE THESIS · $115.84B Quarterly Revenue (+103.2% YoY) × 6-Chip Rack-Scale Delivery × 74.8% GAAP GM">CORE THESIS · 单季 $1,158.4亿营收 (+103.2%) × 六芯协同机架级交付 × 74.8% GAAP 毛利率</span>
+        </div>
+        <h1 class="hero-h1" data-i18n-rich="hero_h1">NVIDIA 英伟达商业模式深度研究报告：<span class="gradient-accent">如何以“六芯协同 + CUDA 生态”独揽全球 AI 算力七成以上价值池？</span></h1>
+        <p class="lead-prose" data-i18n-rich="lead_prose">在 AI 基础设施资本开支突破万亿美元周期的 2026 年，英伟达为何能以轻晶圆厂（Fabless）模式在 Q3 FY2027 轰出 <strong>$1,158.4 亿美元单季营收（同比 +103.2%）</strong> 与 <strong>74.8% GAAP 毛利率</strong> <a class="cite-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/" target="_blank" rel="noopener noreferrer">Q3 FY27 PR ↗</a>？核心密码在于其完成了三次商业模式升维：第一，<strong>从“卖单颗 GPU 加速卡”升维为“按吉瓦 (GW) 交付整机柜 AI 工厂”</strong>，以 Vera Rubin NVL72 实现六颗自研芯片（Vera CPU、Rubin GPU、NVLink 6、ConnectX-9、BlueField-4、Spectrum-X）的极限协同设计 <a class="cite-link" href="https://developer.nvidia.com/blog/inside-the-nvidia-rubin-platform-six-new-chips-one-ai-supercomputer/" target="_blank" rel="noopener noreferrer">Vera Rubin ↗</a>；第二，<strong>“免费 CUDA + 收费 NIM / AI Enterprise”双边软件飞轮</strong>，将超 500 万开发者与企业推理微服务牢牢锁死在单一架构栈上；第三，以 <strong>$3,900 亿美元供应链与 HBM 产能承诺</strong>锁死上游先进封装与存储资源，把物理产能稀缺转化为持续的定价权与 66.9% 营业利润率。</p>
+
+        <div class="grid-3" style="margin-bottom: 18px;">
+          <div class="feature-card">
+            <div class="mui-avatar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <h3 data-i18n-zh="从卖“加速卡”到卖“整机柜 AI 工厂”" data-i18n-en="From Discrete Chips to Rack-Scale AI Factories">从卖“加速卡”到卖“整机柜 AI 工厂”</h3>
+            <p data-i18n-zh="通过 NVL72 机架级捆绑与 DSX 模块化参考架构，英伟达将单颗 GPU 价值量放大至包含 CPU、NVLink 交换机与超高速网卡的系统级客单价。" data-i18n-en="NVL72 rack-scale bundling and DSX blueprints expand monetization from single GPUs to full-rack compute, CPU, NVLink switching, and NIC systems.">通过 NVL72 机架级捆绑与 DSX 模块化参考架构，英伟达将单颗 GPU 价值量放大至包含 CPU、NVLink 交换机与超高速网卡的系统级客单价。</p>
+          </div>
+          <div class="feature-card">
+            <div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3 data-i18n-zh="CUDA-X + NIM 软件生态高转换成本" data-i18n-en="CUDA-X + NIM High Switching-Cost Software Moat">CUDA-X + NIM 软件生态高转换成本</h3>
+            <p data-i18n-zh="底层免费 CUDA 聚集全球开发者，上层 NVIDIA AI Enterprise、NIM 微服务与 NeMo 代理框架直接向企业按卡/年收取高毛利软件授权。" data-i18n-en="Free CUDA captures global developers at the base while NVIDIA AI Enterprise, NIM microservices, and NeMo monetize production enterprise deployments.">底层免费 CUDA 聚集全球开发者，上层 NVIDIA AI Enterprise、NIM 微服务与 NeMo 代理框架直接向企业按卡/年收取高毛利软件授权。</p>
+          </div>
+          <div class="feature-card">
+            <div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3 data-i18n-zh="轻晶圆厂模式 + $390B 产能先手锁定" data-i18n-en="Fabless Leverage + $390B Supply Pre-Commitment">轻晶圆厂模式 + $390B 产能先手锁定</h3>
+            <p data-i18n-zh="将重资产晶圆制造外包给台积电，同时用巨额预付与长期协议锁死 CoWoS 封装与 HBM4 存储产能，筑起后来者难以逾越的交付护城河。" data-i18n-en="Keeping manufacturing asset-light at TSMC while committing $390B to multi-year memory and packaging locks out rivals from scarce HBM4 supply.">将重资产晶圆制造外包给台积电，同时用巨额预付与长期协议锁死 CoWoS 封装与 HBM4 存储产能，筑起后来者难以逾越的交付护城河。</p>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <div class="mui-paper mui-card-interactive kpi-card">
+            <div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q3 FY27 单季净营收" data-i18n-en="Q3 FY27 Quarterly Revenue">Q3 FY27 单季净营收</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="同比暴增 +103.2%" data-i18n-en="+103.2% YoY">+103.2% YoY</span></div>
+            <div class="kpi-value mono">$115.84B</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_desc_0">环比 Q2 ($96.2B) 再增 20.4%，Q4 FY27 业绩指引更上看 $130.0B（含第 14 周）<a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27cfocommentary.htm" target="_blank" rel="noopener noreferrer">SEC CFO ↗</a>。</p>
+          </div>
+          <div class="mui-paper mui-card-interactive kpi-card">
+            <div class="kpi-top"><span class="kpi-label" data-i18n-zh="数据中心营收与占比" data-i18n-en="Data Center Revenue &amp; Mix">数据中心营收与占比</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="占总营收 92.9%" data-i18n-en="92.9% of Total">占总营收 92.9%</span></div>
+            <div class="kpi-value mono">$107.60B</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_desc_1">同比 +110%，其中超大规模云厂商贡献 $60.1B，AI 云/政企 (ACIE) 贡献 $47.5B <a class="cite-link" href="https://sec-api.io/insights/nvidia-nvda-q3-fy2027-earnings-revenue-115-8bn-data-center-107-6bn-q4-outlook-130-0bn-sec-filing-analysis" target="_blank" rel="noopener noreferrer">SEC Analysis ↗</a>。</p>
+          </div>
+          <div class="mui-paper mui-card-interactive kpi-card">
+            <div class="kpi-top"><span class="kpi-label" data-i18n-zh="GAAP 毛利率 / 营业利润率" data-i18n-en="GAAP Gross / Op Margin">GAAP 毛利率 / 营业利润率</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="印钞级盈利效率" data-i18n-en="Elite Profitability">印钞级盈利效率</span></div>
+            <div class="kpi-value mono">74.8% · 66.9%</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_desc_2">单季营业利润达 $77.52B，GAAP 净利润 $65.29B (+105% YoY)，稀释 EPS $2.70 <a class="cite-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/" target="_blank" rel="noopener noreferrer">Q3 8-K ↗</a>。</p>
+          </div>
+          <div class="mui-paper mui-card-interactive kpi-card">
+            <div class="kpi-top"><span class="kpi-label" data-i18n-zh="9M FY27 自由现金流" data-i18n-en="9M FY27 Free Cash Flow">9M FY27 自由现金流</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="Q3 回馈股东 $28.1B" data-i18n-en="$28.1B Q3 Return">Q3 回馈股东 $28.1B</span></div>
+            <div class="kpi-value mono">$113.67B</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_desc_3">仅 Q3 单季自由现金流即达 $43.78B，账面尚余 $2,273 亿股票回购授权额度 <a class="cite-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/" target="_blank" rel="noopener noreferrer">Cash Flow ↗</a>。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 01: Full-Stack Architecture & 6-Chip Codesign -->
+      <section id="sec-01" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 01 · FULL-STACK ARCHITECTURE &amp; 6-CHIP EXTREME CODESIGN</div>
+            <h2 class="sec-h2" data-i18n-zh="一、全栈商业架构：英伟达如何通过“六芯协同 + 软硬一体化”重构算力价值分配？" data-i18n-en="1. Full-Stack Architecture: How 6-Chip Codesign &amp; Software Lock-In Capture AI Value">一、全栈商业架构：英伟达如何通过“六芯协同 + 软硬一体化”重构算力价值分配？</h2>
+            <p class="sec-sub" data-i18n-zh="Vera Rubin NVL72 机架级交付 × Spectrum-X 网络底座 × CUDA-X + NIM 软件飞轮 × Edge &amp; Physical AI 延伸" data-i18n-en="Vera Rubin NVL72 Rack-Scale × Spectrum-X Networking × CUDA-X + NIM Software × Edge &amp; Physical AI">Vera Rubin NVL72 机架级交付 × Spectrum-X 网络底座 × CUDA-X + NIM 软件飞轮 × Edge &amp; Physical AI 延伸</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="一年一代极限迭代节奏" data-i18n-en="Annual Architecture Cadence">一年一代极限迭代节奏</span>
+        </div>
+
+        <div class="arch-blueprint">
+          <div class="arch-hub">
+            <div class="arch-hub-title" data-i18n-zh="NVIDIA “AI Factory” 全栈商业飞轮（硬件系统 × 高速互联 × 软件授权 × 物理 AI）" data-i18n-en="NVIDIA 'AI Factory' Full-Stack Flywheel (Rack Silicon × Interconnect × Software × Physical AI)">NVIDIA “AI Factory” 全栈商业飞轮（硬件系统 × 高速互联 × 软件授权 × 物理 AI）</div>
+            <div class="arch-hub-sub" data-i18n-zh="从单卡销售转向以整机柜 NVL72 与模块化 DSX POD 为单位的系统级交付，通吃计算、网络与调度层利润" data-i18n-en="Transitioning from card sales to NVL72 rack-scale and DSX POD system delivery across compute, networking, and orchestration">从单卡销售转向以整机柜 NVL72 与模块化 DSX POD 为单位的系统级交付，通吃计算、网络与调度层利润</div>
+          </div>
+          <div class="arch-nodes">
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="NEW FLAGSHIP · 极速量产" data-i18n-en="NEW FLAGSHIP · FASTEST RAMP">NEW FLAGSHIP · 极速量产</div>
+              <div class="arch-node-name" data-i18n-zh="Vera Rubin NVL72 平台" data-i18n-en="Vera Rubin NVL72 Platform">Vera Rubin NVL72 平台</div>
+              <div class="arch-node-desc" data-i18n-zh="Q3 FY27 开启史上最快爬坡交付，集成自研 Vera CPU 与最高 288GB HBM4 的 Rubin GPU，获 Azure/GCP/OCI 率先部署。" data-i18n-en="Fastest ramp in NVIDIA history in Q3 FY27; integrates custom Vera CPU and Rubin GPU (up to 288GB HBM4) across Azure, GCP, and OCI.">Q3 FY27 开启史上最快爬坡交付，集成自研 Vera CPU 与最高 288GB HBM4 的 Rubin GPU，获 Azure/GCP/OCI 率先部署。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="VOLUME ENGINE · 现金牛" data-i18n-en="VOLUME ENGINE · CASH COW">VOLUME ENGINE · 现金牛</div>
+              <div class="arch-node-name" data-i18n-zh="Blackwell / GB300 Ultra" data-i18n-en="Blackwell / GB300 Ultra">Blackwell / GB300 Ultra</div>
+              <div class="arch-node-desc" data-i18n-zh="FY26–FY27 营收突破两千亿级的核心功臣，GB300 NVL72 推理性能较 GB200 跃升 1.5 倍，精准切入推理侧爆发。" data-i18n-en="Backbone of NVIDIA's $200B+ surge; GB300 NVL72 delivers 1.5x reasoning performance over GB200 to monetize inference scaling.">FY26–FY27 营收突破两千亿级的核心功臣，GB300 NVL72 推理性能较 GB200 跃升 1.5 倍，精准切入推理侧爆发。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="NETWORKING · 第二增长极" data-i18n-en="NETWORKING · $14.8B+/QTR">NETWORKING · 第二增长极</div>
+              <div class="arch-node-name" data-i18n-zh="NVLink 6 + Spectrum-X" data-i18n-en="NVLink 6 + Spectrum-X">NVLink 6 + Spectrum-X</div>
+              <div class="arch-node-desc" data-i18n-zh="机内 NVLink 6 交换机 + 机间 Quantum-X800 / Spectrum-X 以太网 + BlueField-4 DPU，网络营收单季突破 $148 亿。" data-i18n-en="Scale-up NVLink 6 + scale-out Quantum-X800 / Spectrum-X Ethernet + BlueField-4 DPU drove record $14.8B quarterly networking sales.">机内 NVLink 6 交换机 + 机间 Quantum-X800 / Spectrum-X 以太网 + BlueField-4 DPU，网络营收单季突破 $148 亿。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="SOFTWARE MOAT · 高毛利订阅" data-i18n-en="SOFTWARE MOAT · RECURRING">SOFTWARE MOAT · 高毛利订阅</div>
+              <div class="arch-node-name" data-i18n-zh="CUDA-X + NIM + AI Enterprise" data-i18n-en="CUDA-X + NIM + AI Enterprise">CUDA-X + NIM + AI Enterprise</div>
+              <div class="arch-node-desc" data-i18n-zh="以免费 CUDA 绑定算法与算子库，通过 NIM 微服务、NeMo 与 OpenShell 安全架构实现跨云/本地部署的经常性软件收费。" data-i18n-en="Free CUDA developer standard paired with paid NIM microservices, NeMo, and OpenShell agent security for recurring enterprise revenue.">以免费 CUDA 绑定算法与算子库，通过 NIM 微服务、NeMo 与 OpenShell 安全架构实现跨云/本地部署的经常性软件收费。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="PHYSICAL &amp; EDGE AI · 远期期权" data-i18n-en="PHYSICAL &amp; EDGE AI · OPTIONALITY">PHYSICAL &amp; EDGE AI · 远期期权</div>
+              <div class="arch-node-name" data-i18n-zh="RTX 50 · Isaac · Alpamayo" data-i18n-en="RTX 50 · Isaac · Alpamayo">RTX 50 · Isaac · Alpamayo</div>
+              <div class="arch-node-desc" data-i18n-zh="Edge Computing Q3 营收达 $82 亿 (+42% YoY)，涵盖 RTX Spark 笔记本、DGX Spark 本地工作站、Jetson Thor 机器人与智驾。" data-i18n-en="Edge Computing hit $8.2B in Q3 (+42% YoY), spanning RTX Spark PCs, DGX Spark desktops, Jetson Thor robotics, and autonomous driving.">Edge Computing Q3 营收达 $82 亿 (+42% YoY)，涵盖 RTX Spark 笔记本、DGX Spark 本地工作站、Jetson Thor 机器人与智驾。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="OPEN ECOSYSTEM · 竞合破局" data-i18n-en="OPEN ECOSYSTEM · NVLINK FUSION">OPEN ECOSYSTEM · 竞合破局</div>
+              <div class="arch-node-name" data-i18n-zh="NVLink Fusion + 拟收购 Hugging Face" data-i18n-en="NVLink Fusion + Hugging Face Deal">NVLink Fusion + 拟收购 Hugging Face</div>
+              <div class="arch-node-desc" data-i18n-zh="通过 NVLink Fusion 向定制 XPU 开放机架生态，同时宣布拟收购 Hugging Face，从最上游开源模型分发端掌握话语权。" data-i18n-en="NVLink Fusion opens rack-scale interconnect to semi-custom XPUs while the pending Hugging Face acquisition anchors open AI model distribution.">通过 NVLink Fusion 向定制 XPU 开放机架生态，同时宣布拟收购 Hugging Face，从最上游开源模型分发端掌握话语权。</div>
+            </div>
+          </div>
+          <div class="arch-platform-bar">
+            <div class="arch-platform">
+              <strong data-i18n-zh="“反摩尔定律”年度迭代飞轮：每 12 个月发布新架构，让竞品永远追赶上一代" data-i18n-en="Annual Cadence Flywheel: Releasing New Architectures Every 12 Months Keeps Rivals One Generation Behind">“反摩尔定律”年度迭代飞轮：每 12 个月发布新架构，让竞品永远追赶上一代</strong>
+              <span data-i18n-zh="Blackwell -> Blackwell Ultra -> Vera Rubin 的一年一更压缩了竞品研发回收窗口，迫使云厂商维持高溢价采购以保住代差优势。" data-i18n-en="Rapid Blackwell -> Blackwell Ultra -> Vera Rubin cadence compresses rival ROI windows and sustains hyperscaler willingness to pay.">Blackwell -> Blackwell Ultra -> Vera Rubin 的一年一更压缩了竞品研发回收窗口，迫使云厂商维持高溢价采购以保住代差优势。</span>
+            </div>
+            <div class="arch-platform">
+              <strong data-i18n-zh="极轻资产运营杠杆：372B 总资产中固定资产净值仅 $19.2B，靠研发投入撬动千亿毛利" data-i18n-en="Asset-Light Operating Leverage: Only $19.2B Net PP&amp;E on $372.2B Balance Sheet Generates $86.7B Quarterly GP">极轻资产运营杠杆：372B 总资产中固定资产净值仅 $19.2B，靠研发投入撬动千亿毛利</strong>
+              <span data-i18n-zh="Q3 FY27 研发费用仅占营收 6.4% ($7.45B)，SG&amp;A 仅占 1.5% ($1.70B)，造就 66.9% 的惊人营业利润率。" data-i18n-en="Q3 FY27 R&amp;D is just 6.4% of revenue ($7.45B) and SG&amp;A 1.5% ($1.70B), yielding an extraordinary 66.9% GAAP operating margin.">Q3 FY27 研发费用仅占营收 6.4% ($7.45B)，SG&amp;A 仅占 1.5% ($1.70B)，造就 66.9% 的惊人营业利润率。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-bottom: 16px;">
+          <div class="feature-card">
+            <h3 data-i18n-zh="1. 整机柜“系统税”放大单瓦特营收" data-i18n-en="1. Rack-Scale 'System Tax' Maximizes $/GW">1. 整机柜“系统税”放大单瓦特营收</h3>
+            <p data-i18n-rich="pr_desc_0">单卖芯片易受价格透明化冲击；Vera Rubin NVL72 把 CPU、GPU、NVLink 6 交换机、DPU 与液冷参考设计打包，显著提升每 1 GW 数据中心的英伟达价值捕获 <a class="cite-link" href="https://www.simpletechtrend.com/en/post/nvda-q2-fy2027-earnings-vera-rubin-neocloud-en" target="_blank" rel="noopener noreferrer">$/GW Capture ↗</a>。</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n-zh="2. 从“训练垄断”平滑切换至“推理印钞”" data-i18n-en="2. Seamless Pivot from Training to Agentic Inference">2. 从“训练垄断”平滑切换至“推理印钞”</h3>
+            <p data-i18n-rich="pr_desc_1">随着推理侧进入长思维链（Test-time Scaling）与多智能体并发，延迟与 KV Cache 吞吐成为核心瓶颈，Vera Rubin 与 Groq 技术整合强化低延迟推理护城河 <a class="cite-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/" target="_blank" rel="noopener noreferrer">Q3 Release ↗</a>。</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n-zh="3. “资本+算力”生态闭环投资飞轮" data-i18n-en="3. Strategic Equity + Neocloud Flywheel">3. “资本+算力”生态闭环投资飞轮</h3>
+            <p data-i18n-rich="pr_desc_2">英伟达资产负债表持有 $44.2B 公开股权及 $65.5B 非公开战略股权投资（较年初翻近三倍），扶持 CoreWeave、Nebius 等 Neocloud 成为独立于云巨头的算力买家 <a class="cite-link" href="https://sec-api.io/insights/nvidia-nvda-q3-fy2027-earnings-revenue-115-8bn-data-center-107-6bn-q4-outlook-130-0bn-sec-filing-analysis" target="_blank" rel="noopener noreferrer">Neocloud Base ↗</a>。</p>
+          </div>
+        </div>
+
+        <div class="mui-alert" style="margin-bottom: 18px;">
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="财报与治理核验" data-i18n-en="VERIFIED">财报与治理核验</span>
+          <div data-i18n-rich="ch1_alert"><strong>Q3 FY27 核心变动与承诺披露：</strong>截至 2026 年 10 月 25 日，英伟达供应链与产能采购承诺升至 <strong>$3,900 亿美元</strong>（Q2 为 $2,790 亿），总未来承诺 $5,180 亿 + $320 亿 Neocloud 协议；同时 11 月 11 日创始人黄仁勋卸任 CEO 与董事，由 CFO Colette Kress 担任临时 CEO 兼 CFO，Q4 指引仍高达 $1,300 亿美元 <a class="cite-link" href="https://sec-api.io/insights/nvidia-nvda-q3-fy2027-earnings-revenue-115-8bn-data-center-107-6bn-q4-outlook-130-0bn-sec-filing-analysis" target="_blank" rel="noopener noreferrer">SEC Filing ↗</a>。</div>
+        </div>
+
+        <div class="chart-card" style="margin-bottom: 18px;">
+          <div class="chart-toolbar">
+            <div>
+              <div id="ch1ChartTitle" class="chart-title">英伟达历年净营收 ($B) 与同比增速 (%) 爆发轨迹 (FY2023–FY2027E)</div>
+              <div id="ch1ChartSub" class="chart-caption">五年间从 $26.97B 跨越至 FY27 隐含年化 $423.7B，实现近 16 倍体量扩张</div>
+            </div>
+            <div class="mui-segmented" role="tablist">
+              <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA" data-i18n-zh="视图A: FY23–FY27E 年度营收与增速" data-i18n-en="View A: FY23–FY27E Annual Rev &amp; Growth">视图A: FY23–FY27E 年度营收与增速</button>
+              <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB" data-i18n-zh="视图B: Q3 FY26–Q4 FY27E 季度与 DC 占比" data-i18n-en="View B: Quarterly Rev &amp; Data Center Mix">视图B: Q3 FY26–Q4 FY27E 季度与 DC 占比</button>
+            </div>
+          </div>
+          <div id="ch1AxisMeta" class="chart-axis-meta mono"></div>
+          <div class="canvas-stage"><canvas id="chartCh1"></canvas></div>
+          <div class="chart-legend" id="ch1Legend">
+            <button type="button" class="legend-pill" data-ch1-series="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1"></span></button>
+            <button type="button" class="legend-pill" data-ch1-series="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2"></span></button>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="matrix-card">
+            <div class="matrix-card-head">
+              <div class="matrix-card-title" data-i18n-zh="机架级捆绑经济学：NVL72 如何重塑毛利结构" data-i18n-en="Rack-Scale Economics: How NVL72 Reshapes Gross Margin">机架级捆绑经济学：NVL72 如何重塑毛利结构</div>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="72 GPU + 36 CPU" data-i18n-en="72 GPU + 36 CPU">72 GPU + 36 CPU</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mc_body_0">在 Grace Blackwell 与 Vera Rubin 时代，英伟达不再只交付裸芯片，而是交付包含自研 CPU、NVLink 铜缆背板、液冷分配器与 BlueField DPU 的整机柜，使单柜 ASP 跃升至数百万美元级 <a class="cite-link" href="https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/" target="_blank" rel="noopener noreferrer">NVL72 Arch ↗</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail1"><span>展开微观机制拆解</span> <span>⌄</span></button>
+            <div id="matrixDetail1" class="collapse-panel" data-i18n-zh="当整机柜初期爬坡时（如 Q4 FY27 指引毛利率暂回落至 71%–72%），机架组装与 HBM4 成本会短暂摊薄百分比毛利率，但单机柜绝对毛利额仍大幅攀升，随后伴随良率提升重返 74%–75% 区间。" data-i18n-en="Initial rack-scale ramps (such as Q4 FY27's 71%–72% GM guidance) temporarily compress % margins due to system BOM, but absolute gross profit dollars per rack surge and % GM recovers to ~75% at scale.">当整机柜初期爬坡时（如 Q4 FY27 指引毛利率暂回落至 71%–72%），机架组装与 HBM4 成本会短暂摊薄百分比毛利率，但单机柜绝对毛利额仍大幅攀升，随后伴随良率提升重返 74%–75% 区间。</div>
+          </div>
+
+          <div class="matrix-card">
+            <div class="matrix-card-head">
+              <div class="matrix-card-title" data-i18n-zh="网络即算力瓶颈：Spectrum-X 切入以太网主流盘" data-i18n-en="Networking as Compute: Spectrum-X Captures Ethernet AI">网络即算力瓶颈：Spectrum-X 切入以太网主流盘</div>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="Q1 FY27 $14.8B (+199%)" data-i18n-en="Q1 FY27 $14.8B (+199%)">Q1 FY27 $14.8B (+199%)</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mc_body_1">2019 年收购 Mellanox 的战略远见在 2026 年彻底兑现：除高毛利 InfiniBand 外，Spectrum-X 以太网平台成为 Meta、Oracle 等超大规模集群标准，网络业务年化体量已媲美一家大型独立半导体巨头 <a class="cite-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx" target="_blank" rel="noopener noreferrer">Q1 FY27 PR ↗</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail2"><span>展开微观机制拆解</span> <span>⌄</span></button>
+            <div id="matrixDetail2" class="collapse-panel" data-i18n-zh="万卡乃至十万卡集群中，网络拥塞导致的 GPU 空转损失远高于网卡采购成本，因此客户甘愿为端到端调优的 Spectrum-X + ConnectX-9 支付高溢价。" data-i18n-en="In 100k+ GPU clusters, network tail-latency idle losses dwarf NIC prices—giving NVIDIA immense pricing power for end-to-end tuned Spectrum-X + ConnectX-9.">万卡乃至十万卡集群中，网络拥塞导致的 GPU 空转损失远高于网卡采购成本，因此客户甘愿为端到端调优的 Spectrum-X + ConnectX-9 支付高溢价。</div>
+          </div>
+
+          <div class="matrix-card">
+            <div class="matrix-card-head">
+              <div class="matrix-card-title" data-i18n-zh="软件收费漏斗：从 CUDA 免费开源库到 NIM 商业许可" data-i18n-en="Software Monetization Funnel: Free CUDA to Paid NIM">软件收费漏斗：从 CUDA 免费开源库到 NIM 商业许可</div>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="纯软件级毛利" data-i18n-en="SaaS-Grade Margin">纯软件级毛利</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mc_body_2">英伟达将复杂的算子调优、TensorRT-LLM 量化与安全护栏打包进 NIM 微服务与 NVIDIA AI Enterprise，使传统行业客户无需组建百人底层团队即可一键部署生产级 Agentic AI <a class="cite-link" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener noreferrer">AI Enterprise ↗</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail3"><span>展开微观机制拆解</span> <span>⌄</span></button>
+            <div id="matrixDetail3" class="collapse-panel" data-i18n-zh="这种“硬件买断 + 企业软件按年订阅”的双轨制，使英伟达在 ACIE（非云巨头企业与主权 AI 市场，Q3 达 $47.5B）获得了远高于单纯硬件的客户粘性。" data-i18n-en="This 'hardware CapEx + enterprise software subscription' model locks in the $47.5B/qtr ACIE (sovereign &amp; enterprise) segment far beyond hardware alone.">这种“硬件买断 + 企业软件按年订阅”的双轨制，使英伟达在 ACIE（非云巨头企业与主权 AI 市场，Q3 达 $47.5B）获得了远高于单纯硬件的客户粘性。</div>
+          </div>
+
+          <div class="matrix-card">
+            <div class="matrix-card-head">
+              <div class="matrix-card-title" data-i18n-zh="营运资本与客户结构：应收 $81B 背后的信用与集中度博弈" data-i18n-en="Working Capital &amp; Customer Concentration: $81B Receivables">营运资本与客户结构：应收 $81B 背后的信用与集中度博弈</div>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="存货 $39.7B" data-i18n-en="Inventory $39.7B">存货 $39.7B</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mc_body_3">随着营收迈向年化四千亿美元级，英伟达资产负债表上的应收账款升至 $81.03B、存货升至 $39.72B（2026年10月25日），同时用 $24.9B 新发长期债务优化资本结构以支持产能扩张 <a class="cite-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/" target="_blank" rel="noopener noreferrer">Balance Sheet ↗</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail4"><span>展开微观机制拆解</span> <span>⌄</span></button>
+            <div id="matrixDetail4" class="collapse-panel" data-i18n-zh="极高客户集中度（微软、Meta、谷歌、亚马逊、甲骨文占大头）既降低了销售费用率（SG&amp;A 仅 1.5%），也倒逼英伟达通过扶持 Neocloud 与主权 AI 分散单一云厂商砍单风险。" data-i18n-en="Concentrated hyperscaler demand keeps SG&amp;A at just 1.5%, while prompting NVIDIA to cultivate Neoclouds and sovereign AI to diversify buyer risk.">极高客户集中度（微软、Meta、谷歌、亚马逊、甲骨文占大头）既降低了销售费用率（SG&amp;A 仅 1.5%），也倒逼英伟达通过扶持 Neocloud 与主权 AI 分散单一云厂商砍单风险。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 02: Four Dominance Pillars & 5-Axis Moat Radar -->
+      <section id="sec-02" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 02 · FOUR COMPETITIVE PILLARS &amp; 5-AXIS MOAT RADAR</div>
+            <h2 class="sec-h2" data-i18n-zh="二、四大统治支柱：为什么 AMD 与云厂商自研 ASIC 仍难以撼动英伟达？" data-i18n-en="2. Four Dominance Pillars: Why AMD &amp; Custom ASICs Struggle to Displace NVIDIA">二、四大统治支柱：为什么 AMD 与云厂商自研 ASIC 仍难以撼动英伟达？</h2>
+            <p class="sec-sub" data-i18n-zh="点击左侧任一核心壁垒支柱卡片，联动高亮右侧五维竞争护城河雷达图与实证拆解" data-i18n-en="Click any competitive pillar card on the left to highlight its axis on the 5-Axis Moat Radar">点击左侧任一核心壁垒支柱卡片，联动高亮右侧五维竞争护城河雷达图与实证拆解</p>
+          </div>
+          <span class="mui-chip mui-chip-success" data-i18n-zh="护城河定性：全球算力行业最强“生态+系统+供应链”复合垄断" data-i18n-en="Moat Rating: Unmatched Ecosystem + Rack-System + Supply Compound Monopoly">护城河定性：全球算力行业最强“生态+系统+供应链”复合垄断</span>
+        </div>
+
+        <div class="grid-radar">
+          <div class="pillar-stack" id="pillarStack">
+            <button type="button" class="pillar-card active" data-pillar="0">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="01 · CUDA-X + NIM 开发者生态与算子库绝对锁定" data-i18n-en="01 · CUDA-X + NIM Developer &amp; Kernel Library Lock-In">01 · CUDA-X + NIM 开发者生态与算子库绝对锁定</span>
+                <span class="mui-chip mui-chip-primary mono" data-i18n-zh=">500万开发者" data-i18n-en=">5M Developers">&gt;500万开发者</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="历经 20 年沉淀的 cuDNN、NCCL、TensorRT-LLM 与上千个行业加速库，让任何新模型在第一天即默认在 CUDA 上跑出最优吞吐。" data-i18n-en="20 years of cuDNN, NCCL, TensorRT-LLM, and domain libraries ensure every frontier model runs fastest on CUDA on day one.">历经 20 年沉淀的 cuDNN、NCCL、TensorRT-LLM 与上千个行业加速库，让任何新模型在第一天即默认在 CUDA 上跑出最优吞吐。</p>
+            </button>
+            <button type="button" class="pillar-card" data-pillar="1">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="02 · 六芯协同设计与整机柜 (NVL72) 系统工程壁垒" data-i18n-en="02 · 6-Chip Extreme Codesign &amp; NVL72 Rack Engineering">02 · 六芯协同设计与整机柜 (NVL72) 系统工程壁垒</span>
+                <span class="mui-chip mui-chip-success mono" data-i18n-zh="100% 全栈可控" data-i18n-en="Full-Rack Control">100% 全栈可控</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="同时掌握 GPU、CPU、NVLink 交换芯片、SuperNIC 与 DPU 的唯一厂商，消除跨厂商总线兼容与集群调试的木桶效应。" data-i18n-en="The sole vendor controlling GPU, CPU, NVLink switch, SuperNIC, and DPU—eliminating cross-vendor cluster integration bottlenecks.">同时掌握 GPU、CPU、NVLink 交换芯片、SuperNIC 与 DPU 的唯一厂商，消除跨厂商总线兼容与集群调试的木桶效应。</p>
+            </button>
+            <button type="button" class="pillar-card" data-pillar="2">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="03 · 12 个月极致迭代节奏与 MLPerf 全满贯性能代差" data-i18n-en="03 · 12-Month Cadence &amp; MLPerf Clean-Sweep Leadership">03 · 12 个月极致迭代节奏与 MLPerf 全满贯性能代差</span>
+                <span class="mui-chip mui-chip-warning mono" data-i18n-zh="288GB HBM4" data-i18n-en="288GB HBM4">288GB HBM4</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="竞品刚追平 Hopper 时英伟达已量产 Blackwell；竞品瞄准 Blackwell 时 Vera Rubin 已启动史上最快出货爬坡。" data-i18n-en="As rivals match Hopper, NVIDIA scales Blackwell; as they target Blackwell, Vera Rubin enters its fastest production ramp ever.">竞品刚追平 Hopper 时英伟达已量产 Blackwell；竞品瞄准 Blackwell 时 Vera Rubin 已启动史上最快出货爬坡。</p>
+            </button>
+            <button type="button" class="pillar-card" data-pillar="3">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="04 · $390B 供应链预付锁定台积电 CoWoS 与 HBM4 产能" data-i18n-en="04 · $390B Supply Commitments Locking CoWoS &amp; HBM4">04 · $390B 供应链预付锁定台积电 CoWoS 与 HBM4 产能</span>
+                <span class="mui-chip mui-chip-violet mono" data-i18n-zh="$390B 锁单" data-i18n-en="$390B Committed">$390B 锁单</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="联合 Amkor、日月光/SPIL、三星电机与 SK 海力士等全链条扩产，凭借确定性巨额现金预付获得最高良率配额。" data-i18n-en="Joint capacity scaling with TSMC, Amkor, SPIL, and HBM4 memory suppliers secures priority wafer and packaging allocations.">联合 Amkor、日月光/SPIL、三星电机与 SK 海力士等全链条扩产，凭借确定性巨额现金预付获得最高良率配额。</p>
+            </button>
+            <div id="pillarFocusNote" class="mui-alert" style="margin-top: 4px;">
+              <div><strong>当前选中支柱解读（01 软件生态锁定）：</strong>即便云巨头自研 ASIC 拥有理论单位 FLOPS 成本优势，但在应对每周演进的开源与多模态 Agent 模型时，CUDA + NIM 的“开箱即用”仍大幅压缩 TCO 综合上市时间 <a class="cite-link" href="https://safeguard.sh/resources/blog/ai-chip-market-share-2026-nvidia-custom-silicon-training-vs-inference" target="_blank" rel="noopener noreferrer">Market Share ↗</a>。</div>
+            </div>
+          </div>
+
+          <div class="chart-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div class="chart-title" data-i18n-zh="全球 AI 基础设施玩家五维商业护城河雷达图（10分制机构评估）" data-i18n-en="5-Axis AI Infrastructure Moat Radar (10-Point Institutional Score)">全球 AI 基础设施玩家五维商业护城河雷达图（10分制机构评估）</div>
+              <div class="chart-caption" data-i18n-zh="点击下方图例胶囊可单独开关对比曲线，悬停顶点查看精确评分明细" data-i18n-en="Click legend pills below to toggle competitor curves; hover vertices for exact scores">点击下方图例胶囊可单独开关对比曲线，悬停顶点查看精确评分明细</div>
+            </div>
+            <div class="canvas-stage-tall"><canvas id="chartRadar"></canvas></div>
+            <div class="chart-legend" id="radarLegend">
+              <button type="button" class="legend-pill" data-radar-key="s0"><span class="legend-dot" style="background:#3399FF;"></span><span data-i18n-zh="NVIDIA (Vera Rubin / CUDA 全栈)" data-i18n-en="NVIDIA (Vera Rubin / CUDA Stack)">NVIDIA (Vera Rubin / CUDA 全栈)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="s1"><span class="legend-dot" style="background:#22C55E;"></span><span data-i18n-zh="Broadcom (定制 ASIC + 以太网)" data-i18n-en="Broadcom (Custom ASIC + Ethernet)">Broadcom (定制 ASIC + 以太网)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="s2"><span class="legend-dot" style="background:#FFB74D;"></span><span data-i18n-zh="AMD (Instinct MI350/400 + ROCm)" data-i18n-en="AMD (Instinct MI350/400 + ROCm)">AMD (Instinct MI350/400 + ROCm)</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 03: Internal Business Lines & Global Competitor Matrix -->
+      <section id="sec-03" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 03 · BUSINESS SEGMENTS &amp; GLOBAL AI SILICON BENCHMARKING</div>
+            <h2 class="sec-h2" data-i18n-zh="三、英伟达四大业务板块与全球 AI 算力竞争对手横向对比矩阵" data-i18n-en="3. NVIDIA Business Lines &amp; Global AI Compute Competitor Matrix">三、英伟达四大业务板块与全球 AI 算力竞争对手横向对比矩阵</h2>
+            <p class="sec-sub" data-i18n-zh="支持按业务板块、核心产品、营收体量、商业模式或外部竞品关键词实时检索高亮与分类筛选" data-i18n-en="Search and highlight in real time by segment, architecture, revenue scale, or external rival">支持按业务板块、核心产品、营收体量、商业模式或外部竞品关键词实时检索高亮与分类筛选</p>
+          </div>
+          <span id="peerCountBadge" class="mui-chip mui-chip-primary mono"></span>
+        </div>
+
+        <div class="datagrid-toolbar">
+          <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索业务线、芯片架构、营收或竞品名称…" data-ph-zh="搜索业务线、芯片架构、营收或竞品名称…" data-ph-en="Search segment, chip, revenue, or rival…" aria-label="筛选对标矩阵" />
+          <div class="mui-segmented" role="group">
+            <button type="button" id="peerFilterAll" class="mui-seg-btn active" data-peer-filter="all" data-i18n-zh="全部对标项" data-i18n-en="All Benchmarks">全部对标项</button>
+            <button type="button" id="peerFilterInternal" class="mui-seg-btn" data-peer-filter="internal" data-i18n-zh="NVIDIA 内部业务线" data-i18n-en="NVIDIA Business Lines">NVIDIA 内部业务线</button>
+            <button type="button" id="peerFilterExternal" class="mui-seg-btn" data-peer-filter="external" data-i18n-zh="全球外部竞争对手" data-i18n-en="External Rivals">全球外部竞争对手</button>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-bottom: 20px;">
+          <table class="mui-table">
+            <thead>
+              <tr>
+                <th data-i18n-zh="业务板块 / 对标竞品" data-i18n-en="Segment / Competitor">业务板块 / 对标竞品</th>
+                <th data-i18n-zh="核心产品与商业模式" data-i18n-en="Core Product &amp; Monetization">核心产品与商业模式</th>
+                <th data-i18n-zh="技术栈与工程壁垒" data-i18n-en="Tech Stack &amp; Craft">技术栈与工程壁垒</th>
+                <th data-i18n-zh="营收体量与市场份额" data-i18n-en="Revenue &amp; Share">营收体量与市场份额</th>
+                <th data-i18n-zh="盈利能力与定价权" data-i18n-en="Margin &amp; Pricing Power">盈利能力与定价权</th>
+                <th data-i18n-zh="战略定评与权威信源" data-i18n-en="Strategic Takeaway &amp; Source">战略定评与权威信源</th>
+              </tr>
+            </thead>
+            <tbody id="peerTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="2026 年全球 AI 数据中心与芯片玩家年化营收跑道 (Annualized Run-Rate, $B) 对比" data-i18n-en="2026 Global AI Data Center &amp; Silicon Annualized Revenue Run-Rate ($B)">2026 年全球 AI 数据中心与芯片玩家年化营收跑道 (Annualized Run-Rate, $B) 对比</div>
+              <div class="chart-caption" data-i18n-zh="按 Q3 FY27 年化计算，英伟达数据中心业务跑道达 $430.4B，相当于最接近竞争对手合计规模的 3 倍以上" data-i18n-en="At Q3 FY27 pace ($107.6B/qtr), NVIDIA Data Center runs at $430.4B annualized—over 3x the combined pace of top rivals">按 Q3 FY27 年化计算，英伟达数据中心业务跑道达 $430.4B，相当于最接近竞争对手合计规模的 3 倍以上</div>
+            </div>
+            <span class="mui-chip mui-chip-success mono" data-i18n-zh="AI 加速卡份额 ~75%–81%" data-i18n-en="~75%–81% AI Accelerator Share">AI 加速卡份额 ~75%–81%</span>
+          </div>
+          <div class="canvas-stage-bars"><canvas id="chartBars"></canvas></div>
+          <div class="chart-legend">
+            <span class="mui-chip mui-chip-success mono" data-i18n-zh="绿色/蓝色：NVIDIA 核心业务板块年化营收体量 ($B)" data-i18n-en="Green / Blue: NVIDIA Core Segments Annualized Run-Rate ($B)">绿色/蓝色：NVIDIA 核心业务板块年化营收体量 ($B)</span>
+            <span class="mui-chip mui-chip-violet mono" data-i18n-zh="橙色/紫色：Broadcom AI、AMD 数据中心与 AWS 自研芯片参照" data-i18n-en="Amber / Purple: Broadcom AI, AMD Data Center &amp; AWS Chips">橙色/紫色：Broadcom AI、AMD 数据中心与 AWS 自研芯片参照</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 04: Unit Economics & AI Factory Simulator -->
+      <section id="sec-04" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 04 · UNIT ECONOMICS, MARGIN DYNAMICS &amp; AI FACTORY SIMULATOR</div>
+            <h2 class="sec-h2" data-i18n-zh="四、单位经济效益与全周期复利推演：一座 1 GW“AI 工厂”能为英伟达创造多少毛利？" data-i18n-en="4. Unit Economics &amp; AI Factory Simulator: Total Gross Profit per Gigawatt Deployed">四、单位经济效益与全周期复利推演：一座 1 GW“AI 工厂”能为英伟达创造多少毛利？</h2>
+            <p class="sec-sub" data-i18n-zh="拆解“~74% 硬件系统毛利 + Spectrum-X 网络附着 + NIM / AI Enterprise 软件经常性现金流”" data-i18n-en="Unpacking ~74% Rack Hardware GM + Spectrum-X Networking Attach + Recurring NIM / AI Enterprise Software">拆解“~74% 硬件系统毛利 + Spectrum-X 网络附着 + NIM / AI Enterprise 软件经常性现金流”</p>
+          </div>
+          <span class="mui-chip mui-chip-warning mono" data-i18n-zh="Q4 FY27 指引 $130.0B (含第 14 周)" data-i18n-en="Q4 FY27 Guide $130.0B">Q4 FY27 指引 $130.0B (含第 14 周)</span>
+        </div>
+
+        <div class="grid-4" style="margin-bottom: 18px;">
+          <div class="mui-paper kpi-card">
+            <span class="kpi-label mono">DATA CENTER MIX</span>
+            <div class="kpi-value mono" style="color:var(--mui-primary-lighter);">92.9%</div>
+            <p class="kpi-desc" data-i18n-zh="Q3 FY27 数据中心营收 $107.6B 占总营收 92.9%，较 FY26 全年的 89.7% 进一步集中。" data-i18n-en="Data Center hit $107.6B (92.9% of Q3 FY27 sales), up from 89.7% in FY2026.">Q3 FY27 数据中心营收 $107.6B 占总营收 92.9%，较 FY26 全年的 89.7% 进一步集中。</p>
+          </div>
+          <div class="mui-paper kpi-card">
+            <span class="kpi-label mono">GAAP GROSS MARGIN</span>
+            <div class="kpi-value mono" style="color:var(--mui-success-text);">74.8%</div>
+            <p class="kpi-desc" data-i18n-zh="Q3 FY27 单季毛利额达 $86.68B；Q4 因 Vera Rubin 初期爬坡指引 71.0%–72.0%。" data-i18n-en="Q3 FY27 gross profit reached $86.68B; Q4 guides 71.0%–72.0% during early Vera Rubin rack ramp.">Q3 FY27 单季毛利额达 $86.68B；Q4 因 Vera Rubin 初期爬坡指引 71.0%–72.0%。</p>
+          </div>
+          <div class="mui-paper kpi-card">
+            <span class="kpi-label mono">OPERATING LEVERAGE</span>
+            <div class="kpi-value mono" style="color:var(--mui-warning-text);">66.9%</div>
+            <p class="kpi-desc" data-i18n-zh="Q3 运营费用仅 $9.16B (占营收 7.9%)，释放出 $77.52B GAAP 营业利润。" data-i18n-en="Q3 OpEx was only $9.16B (7.9% of revenue), converting directly into $77.52B GAAP operating income.">Q3 运营费用仅 $9.16B (占营收 7.9%)，释放出 $77.52B GAAP 营业利润。</p>
+          </div>
+          <div class="mui-paper kpi-card">
+            <span class="kpi-label mono">HYPERSCALE vs ACIE</span>
+            <div class="kpi-value mono" style="color:var(--mui-violet-text);">$60.1B / $47.5B</div>
+            <p class="kpi-desc" data-i18n-zh="云巨头占数据中心 55.9%，而 AI 云、工业与主权客户 (ACIE) 已撑起 44.1% 半壁江山。" data-i18n-en="Hyperscalers drove 55.9% of Data Center sales while ACIE (AI clouds, industrial, sovereign) reached 44.1%.">云巨头占数据中心 55.9%，而 AI 云、工业与主权客户 (ACIE) 已撑起 44.1% 半壁江山。</p>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="Q3 FY26–Q4 FY27E 季度营收攀升 ($B) 与 GAAP 毛利率 (%) 韧性轨迹" data-i18n-en="Q3 FY26–Q4 FY27E Quarterly Revenue ($B) vs. GAAP Gross Margin (%)">Q3 FY26–Q4 FY27E 季度营收攀升 ($B) 与 GAAP 毛利率 (%) 韧性轨迹</div>
+              <div class="chart-caption" data-i18n-zh="在单季营收翻倍的同时，GAAP 毛利率稳守 71%–75% 高位区间（虚线为 70% 顶级软件级硬件护城河线）" data-i18n-en="While quarterly revenue more than doubled, GAAP gross margin held 71%–75% (dashed line = 70% elite floor)">在单季营收翻倍的同时，GAAP 毛利率稳守 71%–75% 高位区间（虚线为 70% 顶级软件级硬件护城河线）</div>
+            </div>
+            <span class="mui-chip mui-chip-primary mono" data-i18n-zh="毛利率稳守 70%+ 护城河" data-i18n-en="70%+ Gross Margin Moat">毛利率稳守 70%+ 护城河</span>
+          </div>
+          <div class="chart-axis-meta mono">
+            <span style="color:var(--chart-c1);" data-i18n-zh="■ 左轴：单季净营收 ($B)" data-i18n-en="■ Left Axis: Quarterly Revenue ($B)">■ 左轴：单季净营收 ($B)</span>
+            <span style="color:var(--chart-c2);" data-i18n-zh="● 右轴：GAAP 毛利率 (%)" data-i18n-en="● Right Axis: GAAP Gross Margin (%)">● 右轴：GAAP 毛利率 (%)</span>
+          </div>
+          <div class="canvas-stage"><canvas id="chartEps"></canvas></div>
+          <div class="chart-legend" id="epsLegend">
+            <button type="button" class="legend-pill" data-eps-series="rev"><span class="legend-dot" style="background:var(--chart-c1);"></span><span data-i18n-zh="单季净营收 (左轴 · $B)" data-i18n-en="Quarterly Revenue (Left · $B)">单季净营收 (左轴 · $B)</span></button>
+            <button type="button" class="legend-pill" data-eps-series="oci"><span class="legend-dot" style="background:var(--chart-c2);"></span><span data-i18n-zh="GAAP 毛利率 (右轴 · %)" data-i18n-en="GAAP Gross Margin (Right · %)">GAAP 毛利率 (右轴 · %)</span></button>
+            <span class="mui-chip mui-chip-warning mono" data-i18n-zh="--- 70% 毛利率护城河基准线" data-i18n-en="--- 70% Gross Margin Benchmark">--- 70% 毛利率护城河基准线</span>
+          </div>
+        </div>
+
+        <!-- Interactive AI Factory Unit Economics Simulator -->
+        <div class="simulator-grid">
+          <div class="sim-controls">
+            <div>
+              <div class="sec-eyebrow mono" style="margin-bottom:2px;">INTERACTIVE AI FACTORY UNIT ECONOMICS SIMULATOR</div>
+              <h3 style="font-size:1rem;font-weight:800;" data-i18n-zh="AI 工厂年部署规模 × 单 GW 价值捕获 × 软件与网络附着毛利模拟器" data-i18n-en="Annual AI Factory GW Deployed × $/GW Capture × Software/Network Attach GP Simulator">AI 工厂年部署规模 × 单 GW 价值捕获 × 软件与网络附着毛利模拟器</h3>
+            </div>
+            <label class="mui-switch-row" for="simDripToggle">
+              <div>
+                <div style="font-size:0.84rem;font-weight:700;color:var(--text-primary);" data-i18n-zh="开启 Vera Rubin 机架协同 + NIM 软件订阅乘数 (+22% 生态放大)" data-i18n-en="Enable Vera Rubin Rack Codesign + NIM Software Multiplier (+22% Lift)">开启 Vera Rubin 机架协同 + NIM 软件订阅乘数 (+22% 生态放大)</div>
+                <div style="font-size:0.74rem;color:var(--text-secondary);" data-i18n-zh="模拟整机柜 NVL72 价值量提升、Spectrum-X 必选搭售与企业级 AI Enterprise 年费复利" data-i18n-en="Simulates NVL72 rack value lift, Spectrum-X attach, and recurring NVIDIA AI Enterprise licensing">模拟整机柜 NVL72 价值量提升、Spectrum-X 必选搭售与企业级 AI Enterprise 年费复利</div>
+              </div>
+              <input type="checkbox" id="simDripToggle" checked />
+            </label>
+            <div class="preset-stack" role="group">
+              <button type="button" class="preset-btn" data-preset="p1"><span data-i18n-zh="① 定制 ASIC 替代保守情景 (Conservative)" data-i18n-en="① Custom ASIC Competition Conservative Case">① 定制 ASIC 替代保守情景 (Conservative)</span><span class="mono" data-i18n-zh="7 GW/年 · 3年" data-i18n-en="7 GW/yr · 3 Yrs">7 GW/年 · 3年</span></button>
+              <button type="button" class="preset-btn active" data-preset="p2"><span data-i18n-zh="② Vera Rubin 基准情景 (Base)" data-i18n-en="② Vera Rubin Base Case">② Vera Rubin 基准情景 (Base)</span><span class="mono" data-i18n-zh="10 GW/年 · 5年" data-i18n-en="10 GW/yr · 5 Yrs">10 GW/年 · 5年</span></button>
+              <button type="button" class="preset-btn" data-preset="p3"><span data-i18n-zh="③ 主权 AI + 物理 AI 爆发情景 (Bull)" data-i18n-en="③ Sovereign + Physical AI Bull Case">③ 主权 AI + 物理 AI 爆发情景 (Bull)</span><span class="mono" data-i18n-zh="15 GW/年 · 7年" data-i18n-en="15 GW/yr · 7 Yrs">15 GW/年 · 7年</span></button>
+            </div>
+            <div class="slider-group">
+              <div class="slider-head"><span data-i18n-zh="年新增英伟达方案 AI 工厂电力规模 (GW/年)" data-i18n-en="Annual NVIDIA-Powered AI Factory Capacity (GW/yr)">年新增英伟达方案 AI 工厂电力规模 (GW/年)</span><span id="simPrincipalLabel" class="slider-val mono"></span></div>
+              <input type="range" id="simPrincipalSlider" class="mui-slider" min="4" max="20" step="1" value="10" />
+            </div>
+            <div class="slider-group">
+              <div class="slider-head"><span data-i18n-zh="单 GW 算力硬件营收捕获 ($B/GW · 按 74% 毛利率计)" data-i18n-en="Hardware Revenue Capture per GW ($B/GW · at 74% GM)">单 GW 算力硬件营收捕获 ($B/GW · 按 74% 毛利率计)</span><span id="simCagrLabel" class="slider-val mono"></span></div>
+              <input type="range" id="simCagrSlider" class="mui-slider" min="25" max="50" step="1" value="38" />
+            </div>
+            <div class="slider-group">
+              <div class="slider-head"><span data-i18n-zh="网络 (Spectrum-X) 与软件 (NIM) 年化毛利增量 ($B/年)" data-i18n-en="Annual Networking &amp; Software Attach Gross Profit ($B/yr)">网络 (Spectrum-X) 与软件 (NIM) 年化毛利增量 ($B/年)</span><span id="simLiveArpuLabel" class="slider-val mono"></span></div>
+              <input type="range" id="simLiveArpuSlider" class="mui-slider" min="20" max="100" step="5" value="55" />
+            </div>
+            <div class="slider-group">
+              <div class="slider-head"><span data-i18n-zh="测算运营周期 (Years)" data-i18n-en="Simulation Horizon (Years)">测算运营周期 (Years)</span><span id="simYearsLabel" class="slider-val mono"></span></div>
+              <input type="range" id="simYearsSlider" class="mui-slider" min="3" max="10" step="1" value="5" />
+            </div>
+          </div>
+
+          <div class="sim-output-panel">
+            <div class="sim-readouts">
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="预估周期内全栈累计总毛利" data-i18n-en="Projected Cumulative Total Gross Profit">预估周期内全栈累计总毛利</div>
+                <div id="simEndingVal" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);">$0B</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="相对 ~$30B/年 研发投入回报倍数" data-i18n-en="Return Multiple vs. ~$30B/yr R&amp;D Benchmark">相对 ~$30B/年 研发投入回报倍数</div>
+                <div id="simMoicVal" class="sim-stat-num mono" style="color:var(--mui-success-text);">0.00x</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="算力芯片/机柜直接累计毛利" data-i18n-en="Cumulative Compute Hardware GP">算力芯片/机柜直接累计毛利</div>
+                <div id="simNetGainVal" class="sim-stat-num mono">$0B</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="网络与软件生态附着累计毛利" data-i18n-en="Cumulative Network &amp; Software GP">网络与软件生态附着累计毛利</div>
+                <div id="simMidVal" class="sim-stat-num mono">$0B</div>
+              </div>
+            </div>
+            <div class="canvas-stage-sim"><canvas id="chartSim"></canvas></div>
+            <div class="chart-legend" style="margin-top:4px;">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="━ 算力硬件 + 网络与软件生态累计总毛利" data-i18n-en="━ Compute + Network/Software Cumulative GP">━ 算力硬件 + 网络与软件生态累计总毛利</span>
+              <span class="mui-chip mono" data-i18n-zh="- - 仅算力硬件直接毛利基准线" data-i18n-en="- - Compute Hardware GP Baseline">- - 仅算力硬件直接毛利基准线</span>
+            </div>
+            <div class="chart-caption" data-i18n-zh="拖动左侧滑块或切换情景预设，悬停曲线可逐年对比“单一算力硬件毛利”与“网络+软件生态连带复利”剪刀差。" data-i18n-en="Adjust sliders or presets; hover along the curve to inspect year-by-year compute hardware GP vs. network/software attach compounding.">拖动左侧滑块或切换情景预设，悬停曲线可逐年对比“单一算力硬件毛利”与“网络+软件生态连带复利”剪刀差。</div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 18px;">
+          <div class="mui-alert mui-alert-success" style="flex-direction:column; gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;"><span class="mui-chip mui-chip-success mono">STRUCTURAL MOAT</span><strong data-i18n-zh="核心商业壁垒与正向复利定评" data-i18n-en="Core Structural Moat &amp; Catalysts">核心商业壁垒与正向复利定评</strong></div>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-rich="moat_pos"><strong>1. 买芯片即买整个数据中心标准：</strong>通过 Vera Rubin NVL72 与 DSX POD，英伟达实质上定义了全球 AI 工厂的供电、液冷与网络标准。<br/><strong>2. 推理侧规模效应反而强化护城河：</strong>多智能体与实时长文本推理对互联带宽与软件调度要求更高，直接放大了 NVLink 6 与 TensorRT-LLM 的代差优势。<br/><strong>3. 现金流反哺生态投资：</strong>年化千亿级自由现金流支撑股票回购与对 Hugging Face 等上下游的战略并购投资。</p>
+          </div>
+          <div class="mui-alert mui-alert-warning" style="flex-direction:column; gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;"><span class="mui-chip mui-chip-warning mono">CRITICAL LENS</span><strong data-i18n-zh="客观风险、成本张力与跟踪要点" data-i18n-en="Key Risks, Tensions &amp; Watchpoints">客观风险、成本张力与跟踪要点</strong></div>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-rich="moat_risk"><strong>1. 超大规模云厂商自研 ASIC 分流：</strong>Google TPU、AWS Trainium 与 Broadcom 定制芯片正持续瓜分特定内部推理负载（AI 芯片份额呈温和分散趋势）。<br/><strong>2. $390B 供应链锁单与周期反转风险：</strong>巨额不可取消长期采购承诺在需求高景气时是护城河，一旦下游 AI 变现放缓将转为资产负债表重压。<br/><strong>3. 地缘管制与后黄仁勋时代治理考题：</strong>Q4 指引继续剔除中国数据中心算力收入；黄仁勋于 2026 年 11 月 11 日卸任后，新任正式 CEO 遴选与董事会独立委员会调查进展需密切跟踪。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 05: Generational Roadmap & 2026 Battles -->
+      <section id="sec-05" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 05 · BUSINESS MODEL EVOLUTION &amp; FOUR 2026 MILESTONES</div>
+            <h2 class="sec-h2" data-i18n-zh="五、英伟达商业模式三幕演进史与 2026 四大标志性战役复盘" data-i18n-en="5. Three-Act Business Model Evolution &amp; Four Defining 2026 Battles">五、英伟达商业模式三幕演进史与 2026 四大标志性战役复盘</h2>
+            <p class="sec-sub" data-i18n-zh="从 1993 年桌面图形卡、2006 年 CUDA 播种，到 Mellanox 互联并购与 Vera Rubin AI 工厂时代" data-i18n-en="From 1993 PC graphics and 2006 CUDA seeding to Mellanox networking and the Vera Rubin AI Factory era">从 1993 年桌面图形卡、2006 年 CUDA 播种，到 Mellanox 互联并购与 Vera Rubin AI 工厂时代</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="1993 显卡 → 2026 AI 工厂帝国" data-i18n-en="1993 GPU → 2026 AI Factory Empire">1993 显卡 → 2026 AI 工厂帝国</span>
+        </div>
+
+        <div class="mui-timeline">
+          <div class="timeline-step">
+            <span class="timeline-dot"></span>
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;" data-i18n-zh="第一幕 · 独立 GPU 霸主与 CUDA 十年暗棋 (1993–2012) —— 用游戏现金流养活通用计算生态" data-i18n-en="Act I · Discrete GPU Dominance &amp; CUDA Seeding (1993–2012)">第一幕 · 独立 GPU 霸主与 CUDA 十年暗棋 (1993–2012) —— 用游戏现金流养活通用计算生态</strong>
+              <span class="mui-chip mono" data-i18n-zh="2006 CUDA 诞生" data-i18n-en="2006 CUDA Launch">2006 CUDA 诞生</span>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-rich="act_desc_0">以 GeForce 确立桌面游戏显卡统治地位后，英伟达顶住短期毛利压力在全系消费卡中标配 CUDA 架构，在高校与科研机构无声种下百万级并行计算开发者种子 <a class="cite-link" href="https://investor.nvidia.com/financial-info/financial-reports/default.aspx" target="_blank" rel="noopener noreferrer">NVDA IR ↗</a>。</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-dot" style="background:#3399FF;"></span>
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;" data-i18n-zh="第二幕 · 深度学习爆发与 Mellanox 战略并购 (2013–2022) —— 数据中心成为集群而非单卡" data-i18n-en="Act II · Deep Learning &amp; Mellanox Interconnect Pivot (2013–2022)">第二幕 · 深度学习爆发与 Mellanox 战略并购 (2013–2022) —— 数据中心成为集群而非单卡</strong>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="$6.9B 并购 Mellanox" data-i18n-en="$6.9B Mellanox Deal">$6.9B 并购 Mellanox</span>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-rich="act_desc_1">Volta/Ampere 引入 Tensor Core 引爆大模型训练，2020 年完成收购 Mellanox 打通 InfiniBand 与高速以太网，正式宣告“整个数据中心就是一台计算机”的战略范式。</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-dot" style="background:#22C55E;"></span>
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;" data-i18n-zh="第三幕 · 机架级 AI 工厂与物理 AI 全面统治 (2023–2026+) —— 冲击四千亿年化营收巅峰" data-i18n-en="Act III · Rack-Scale AI Factories &amp; Vera Rubin Era (2023–2026+)">第三幕 · 机架级 AI 工厂与物理 AI 全面统治 (2023–2026+) —— 冲击四千亿年化营收巅峰</strong>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="Q3 FY27 $115.84B/季" data-i18n-en="Q3 FY27 $115.84B/Qtr">Q3 FY27 $115.84B/季</span>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-rich="act_desc_2">Hopper 破局、Blackwell 放量、Vera Rubin NVL72 在 Q3 FY27 极速量产，叠加 NIM 软件与物理 AI（Jetson Thor/Alpamayo），营收从 FY23 $27B 跃升至年化超 $4,300 亿 <a class="cite-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/" target="_blank" rel="noopener noreferrer">Q3 FY27 ↗</a>。</p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 18px;">
+          <div class="feature-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="mui-chip mui-chip-error mono" data-i18n-zh="战役 01 · Q3 FY27" data-i18n-en="Battle 01 · Q3 FY27">战役 01 · Q3 FY27</span>
+              <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="单季破千亿美元" data-i18n-en="$115.8B Single Qtr">单季破千亿美元</span>
+            </div>
+            <h3 data-i18n-zh="人类半导体史上首个单季破千亿美元营收里程碑" data-i18n-en="First $100B+ Semiconductor Quarter in History">人类半导体史上首个单季破千亿美元营收里程碑</h3>
+            <p data-i18n-rich="bat_desc_0">Q3 FY27 单季营收达 $115.84B (+103.2% YoY)，且 Q4 指引直指 $130.0B，彻底打破“AI 基建见顶”市场质疑 <a class="cite-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/" target="_blank" rel="noopener noreferrer">Q3 PR ↗</a>。</p>
+          </div>
+          <div class="feature-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="战役 02 · 2026.10" data-i18n-en="Battle 02 · Oct 2026">战役 02 · 2026.10</span>
+              <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="史上最快产品爬坡" data-i18n-en="Fastest Ramp">史上最快产品爬坡</span>
+            </div>
+            <h3 data-i18n-zh="Vera Rubin NVL72 极速出货与六芯生态全面落地" data-i18n-en="Vera Rubin NVL72 Launches Across Hyperscalers">Vera Rubin NVL72 极速出货与六芯生态全面落地</h3>
+            <p data-i18n-rich="bat_desc_1">Azure、Google Cloud、OCI、CoreWeave 与 Nebius 同步上线 Vera Rubin 集群，验证一年一代极速交付体系 <a class="cite-link" href="https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer" target="_blank" rel="noopener noreferrer">Rubin Stack ↗</a>。</p>
+          </div>
+          <div class="feature-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="战役 03 · 2026.11" data-i18n-en="Battle 03 · Nov 2026">战役 03 · 2026.11</span>
+              <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="开源 AI 入口整合" data-i18n-en="Open AI Hub">开源 AI 入口整合</span>
+            </div>
+            <h3 data-i18n-zh="宣布拟收购 Hugging Face，贯通开源模型分发枢纽" data-i18n-en="Pending Hugging Face Acquisition Anchors Open AI">宣布拟收购 Hugging Face，贯通开源模型分发枢纽</h3>
+            <p data-i18n-rich="bat_desc_2">在推出 Nemotron 科学模型与 OpenShell 代理安全架构同时拟收购 Hugging Face，将开源社区工作流深度绑定至 NIM 与 CUDA <a class="cite-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/" target="_blank" rel="noopener noreferrer">HF Deal ↗</a>。</p>
+          </div>
+          <div class="feature-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="战役 04 · 2026 全年" data-i18n-en="Battle 04 · FY2027">战役 04 · 2026 全年</span>
+              <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="Edge +42% 至 $8.2B" data-i18n-en="Edge +42% to $8.2B">Edge +42% 至 $8.2B</span>
+            </div>
+            <h3 data-i18n-zh="Edge &amp; Physical AI 多点开花：从端侧大模型到人形机器人" data-i18n-en="Edge &amp; Physical AI Scales to $8.2B/Qtr">Edge &amp; Physical AI 多点开花：从端侧大模型到人形机器人</h3>
+            <p data-i18n-rich="bat_desc_3">RTX Spark PC、DGX Spark 64GB、奔驰/沃尔沃智驾与 Jetson Thor 人形机器人推动边缘计算单季跃升至 $8.2B <a class="cite-link" href="https://www.credenceresearch.com/news/nvidia-q3-fiscal-2027-revenue-115-8-billion-vera-rubin-interim-ceo-kress" target="_blank" rel="noopener noreferrer">Edge Growth ↗</a>。</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="mui-alert"><div><strong data-i18n-zh="商业铁律一：" data-i18n-en="Law 01: ">商业铁律一：</strong><span data-i18n-zh="硬件只是载体，开发者工具链与算子标准（CUDA-X）才是决定算力生态能否收割超额毛利的真正税基。" data-i18n-en="Silicon is the delivery vehicle; developer toolchains and kernel standards (CUDA-X) are the true tax base behind 74%+ gross margins.">硬件只是载体，开发者工具链与算子标准（CUDA-X）才是决定算力生态能否收割超额毛利的真正税基。</span></div></div>
+          <div class="mui-alert"><div><strong data-i18n-zh="商业铁律二：" data-i18n-en="Law 02: ">商业铁律二：</strong><span data-i18n-zh="当算力迈入万卡集群，谁能同时控制计算、CPU 调度与机间网络（NVLink + Spectrum-X），谁就能把单品竞争变为系统碾压。" data-i18n-en="At 100k-GPU scale, owning compute, CPU orchestration, and fabric (NVLink + Spectrum-X) turns chip competition into system-level lock-in.">当算力迈入万卡集群，谁能同时控制计算、CPU 调度与机间网络（NVLink + Spectrum-X），谁就能把单品竞争变为系统碾压。</span></div></div>
+          <div class="mui-alert"><div><strong data-i18n-zh="商业铁律三：" data-i18n-en="Law 03: ">商业铁律三：</strong><span data-i18n-zh="轻晶圆厂模式 + 每年一代极速迭代 + 巨额供应链锁单，构建了半导体史上罕见的“高周转、高毛利、高壁垒”三角平衡。" data-i18n-en="Fabless agility + annual architecture cadence + $390B supply commitments create a rare high-margin, high-barrier semiconductor flywheel.">轻晶圆厂模式 + 每年一代极速迭代 + 巨额供应链锁单，构建了半导体史上罕见的“高周转、高毛利、高壁垒”三角平衡。</span></div></div>
+        </div>
+      </section>
+
+      <!-- Section 06: Interactive Checklist -->
+      <section id="sec-06" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 06 · INTERACTIVE BUSINESS MODEL MOAT CHECKLIST</div>
+            <h2 class="sec-h2" data-i18n-zh="六、英伟达商业模式护城河与周期韧性核查清单" data-i18n-en="6. NVIDIA Business Model Moat &amp; Cycle Durability Checklist">六、英伟达商业模式护城河与周期韧性核查清单</h2>
+            <p class="sec-sub" data-i18n-zh="用于持续跟踪检验英伟达的定价权、软件变现、供应链约束与治理过渡（勾选状态保存在本地）" data-i18n-en="Audit pricing power, software attach, supply commitments, and governance transition across quarters (saved locally)">用于持续跟踪检验英伟达的定价权、软件变现、供应链约束与治理过渡（勾选状态保存在本地）</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono"></span>
+            <button type="button" id="checkAllBtn" class="mui-btn" data-i18n-zh="全部勾选" data-i18n-en="Check All">全部勾选</button>
+            <button type="button" id="resetCheckBtn" class="mui-btn" data-i18n-zh="重置清单" data-i18n-en="Reset">重置清单</button>
+          </div>
+        </div>
+        <div class="progress-track"><div id="checklistProgressBar" class="progress-fill"></div></div>
+        <div id="checklistContainer" class="checklist-grid"></div>
+      </section>
+
+      <!-- Section 07: Primary Sources Footer -->
+      <footer id="sec-07" class="mui-paper section-block" style="padding: 22px 26px;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;">
+          <strong style="font-size:0.92rem;" data-i18n-zh="权威数据来源与一手财报/新闻稿核验索引（SEC Filings · NVIDIA IR &amp; Newsroom · 行业市场审计）" data-i18n-en="Primary Official Filings &amp; Source Verification Index (SEC Filings · NVIDIA IR · Market Audits)">权威数据来源与一手财报/新闻稿核验索引（SEC Filings · NVIDIA IR &amp; Newsroom · 行业市场审计）</strong>
+          <span class="mui-chip mono">MUI High-Clarity Architecture · Offline Ready</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;" data-i18n-zh="本报告所有营收、毛利率、现金流、供应链承诺及市场份额数据均核验自 NVIDIA Corporation Q3 FY2027 财报新闻稿、SEC Form 10-K/8-K/CFO Commentary、NVIDIA 官方架构白皮书及行业分析报告，仅供商业模式研究参考，不构成任何证券投资建议。" data-i18n-en="All revenue, margin, cash flow, supply commitment, and market share metrics are verified against NVIDIA Q3 FY2027 earnings releases, SEC Form 10-K/8-K/CFO Commentary, official architecture disclosures, and industry analyses. For business model research only; not investment advice.">本报告所有营收、毛利率、现金流、供应链承诺及市场份额数据均核验自 NVIDIA Corporation Q3 FY2027 财报新闻稿、SEC Form 10-K/8-K/CFO Commentary、NVIDIA 官方架构白皮书及行业分析报告，仅供商业模式研究参考，不构成任何证券投资建议。</p>
+        <ul class="sources-list">
+          <li><span class="mono">[01]</span><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/" target="_blank" rel="noopener noreferrer">NVIDIA IR: Q3 FY2027 Financial Results ($115.8B Revenue, 74.8% GAAP GM, Vera Rubin Ramp) ↗</a></li>
+          <li><span class="mono">[02]</span><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27cfocommentary.htm" target="_blank" rel="noopener noreferrer">SEC EDGAR: NVIDIA CFO Commentary on Q3 FY2027 Results ↗</a></li>
+          <li><span class="mono">[03]</span><a href="https://sec-api.io/insights/nvidia-nvda-q3-fy2027-earnings-revenue-115-8bn-data-center-107-6bn-q4-outlook-130-0bn-sec-filing-analysis" target="_blank" rel="noopener noreferrer">SEC Filing Analysis: Q3 FY27 Hyperscale ($60.1B) vs ACIE ($47.5B), $390B Supply Commitments &amp; CEO Transition ↗</a></li>
+          <li><span class="mono">[04]</span><a href="https://www.geminiq.com/blog/nvidia-10k-analysis-2026" target="_blank" rel="noopener noreferrer">FY2026 Form 10-K Analysis: $215.94B Annual Revenue (+65.5%), 71.07% Gross Margin &amp; Working Capital ↗</a></li>
+          <li><span class="mono">[05]</span><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx" target="_blank" rel="noopener noreferrer">NVIDIA IR: Q1 FY2027 Results ($81.6B Revenue, $14.8B Record Data Center Networking) ↗</a></li>
+          <li><span class="mono">[06]</span><a href="https://developer.nvidia.com/blog/inside-the-nvidia-rubin-platform-six-new-chips-one-ai-supercomputer/" target="_blank" rel="noopener noreferrer">NVIDIA Developer: Inside the Vera Rubin Platform — Six New Chips, One AI Supercomputer ↗</a></li>
+          <li><span class="mono">[07]</span><a href="https://safeguard.sh/resources/blog/ai-chip-market-share-2026-nvidia-custom-silicon-training-vs-inference" target="_blank" rel="noopener noreferrer">Safeguard / Silicon Analysts: 2026 AI Chip Market Share (NVIDIA ~75%–81%, Broadcom, AMD, TPU, Trainium) ↗</a></li>
+          <li><span class="mono">[08]</span><a href="https://www.macrotrends.net/stocks/charts/NVDA/nvidia/revenue" target="_blank" rel="noopener noreferrer">Macrotrends: NVIDIA Annual Revenue History FY2023–FY2026 &amp; TTM ($361.8B) ↗</a></li>
+        </ul>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../../_shared/a603f7c741c6cc70.js"></script>
+</body>
+</html>

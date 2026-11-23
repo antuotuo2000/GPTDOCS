@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix 12 大核心业务深度研报中枢（当前：核心订阅与定价权）| 数据中心</title>
+  <meta name="description" content="01 · 核心付费订阅与定价权 — FY26E 营收 $51.1B (+13%) · Q3&#x27;26 营业利润率 34.6%" />
+  <script src="../../_shared/41d271b26a8a7d41.js"></script>
+  <link rel="stylesheet" href="../../_shared/3d809ba4d5c8ffd6.css">
+  
+  
+  <link rel="stylesheet" href="../../_shared/449f6527706d5467.css">
+
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/07a99b3b6abef645.css">
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+  <div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky MUI High-Clarity Frosted Glass AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span id="appbarMonogram" class="brand-monogram mono">SV</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+          <a class="crumb-link hide-sm" href="../../index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg><span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span></a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="01 · 核心付费订阅与定价权" data-i18n-en="01 · Core SVOD &amp; Pricing">01 · 核心付费订阅与定价权</span>
+        </nav>
+        <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="FY26E 营收 $51.1B (+13%)" data-i18n-en="FY26E Rev $51.1B (+13%)">FY26E 营收 $51.1B (+13%)</span>
+        <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="Q3&#x27;26 营业利润率 34.6%" data-i18n-en="Q3&#x27;26 Op Margin 34.6%">Q3&#x27;26 营业利润率 34.6%</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换奈飞业务…" aria-label="快速跳转章节或奈飞业务" data-ph-zh="检索章节或切换奈飞业务…" data-ph-en="Jump to section or Netflix business…" data-aria-zh="快速跳转章节或奈飞业务" data-aria-en="Quick jump to chapter or Netflix business" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Centered Shell -->
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Navigation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">CORE ENGINE · 01/12</span>
+        </div>
+        <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="核心订阅矩阵与定价权" data-i18n-en="Core SVOD &amp; Pricing Power">核心订阅矩阵与定价权</div>
+        <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="美区 $8.99/$17.99/$24.99 三级阶梯 · 覆盖 325M+ 付费家庭与近10亿观众" data-i18n-en="US $8.99/$17.99/$24.99 3-Tier Ladder · 325M+ Paid Households &amp; ~1B Viewers">美区 $8.99/$17.99/$24.99 三级阶梯 · 覆盖 325M+ 付费家庭与近10亿观众</p>
+
+        <div class="sidebar-mini-kpis" id="sideMiniKpis">
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="FY26E 全年营收指引" data-i18n-en="FY26E Revenue Guide">FY26E 全年营收指引</span><span class="sidebar-mini-val mono" data-i18n-zh="$51.1B" data-i18n-en="$51.1B">$51.1B</span></div>
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="Q3&#x27;26 单季营业利润率" data-i18n-en="Q3&#x27;26 Operating Margin">Q3&#x27;26 单季营业利润率</span><span class="sidebar-mini-val mono" data-i18n-zh="34.6%" data-i18n-en="34.6%">34.6%</span></div>
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="全球付费家庭底座" data-i18n-en="Global Paid Households">全球付费家庭底座</span><span class="sidebar-mini-val mono" data-i18n-zh="325M+" data-i18n-en="325M+">325M+</span></div>
+        </div>
+      </div>
+
+      <!-- Unified MUI Navigation Card: Site Portal Nav + Report TOC -->
+      <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Site Links &amp; Table of Contents">
+        <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="NFLX">
+          <div class="co-side-head">
+            <span class="co-side-title mono">NFLX · 02/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="Netflix_11_Movie_IPs.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="Netflix_11_Movie_IPs.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="software" data-i18n-zh="软件生态 (2)" data-i18n-en="software (2)">软件生态 (2)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="software" href="Netflix_11_Movie_IPs.html" title="Netflix 11 大核心原创电影 IP 深度研报中枢（KPop猎魔女团·利刃出鞘·惊天营救·纳尼亚·桑德勒·巨怪等）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Netflix 11 大核心原创电影 IP 深度研报中枢（KPop猎魔女团·利刃出鞘·惊天营救·纳尼亚·桑德勒·巨怪等）" data-i18n-en="Netflix 11 IP Deep DiveReport (KPop · · · · ·)">Netflix 11 大核心原创电影 IP 深度研报中枢（KPop猎魔女团·利刃出鞘·惊天营救·纳尼亚·桑德勒·巨怪等）</span><span class="co-hub-meta mono">software</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="software" href="nflx_biz_12_open_connect_ai.html" title="Netflix 12 大核心业务深度研报中枢（当前：核心订阅与定价权）"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Netflix 12 大核心业务深度研报中枢（当前：核心订阅与定价权）" data-i18n-en="Netflix 12 Deep DiveReport (: &amp;)">Netflix 12 大核心业务深度研报中枢（当前：核心订阅与定价权）</span><span class="co-hub-meta mono">software</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+        <div class="nav-divider"></div>
+
+        <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="00 · 核心论点与财务记分牌" data-i18n-en="00 · Verdict &amp; Financial Scorecard">00 · 核心论点与财务记分牌</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="01 · 业务架构与双视图趋势" data-i18n-en="01 · Architecture &amp; Dual-View Trends">01 · 业务架构与双视图趋势</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="02 · 四大支柱与五维护城河" data-i18n-en="02 · 4 Pillars &amp; 5-Axis Moat Radar">02 · 四大支柱与五维护城河</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="03 · 竞品与标杆矩阵对标" data-i18n-en="03 · Peer &amp; Benchmark Matrix">03 · 竞品与标杆矩阵对标</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="04 · 单元经济学与飞轮模拟器" data-i18n-en="04 · Unit Economics &amp; LTV Simulator">04 · 单元经济学与飞轮模拟器</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="05 · 三幕演进与2026关键战役" data-i18n-en="05 · 3-Act Evolution &amp; 2026 Battles">05 · 三幕演进与2026关键战役</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="06 · 机构尽调护城河核验清单" data-i18n-en="06 · Institutional Moat Checklist">06 · 机构尽调护城河核验清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="07 · SEC财报与一手信源索引" data-i18n-en="07 · SEC Filings &amp; Primary Sources">07 · SEC财报与一手信源索引</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Compact MUI Page Utility Controls -->
+      
+    </aside>
+
+    <!-- Main Analytical Content -->
+    <main class="main-content">
+      <!-- Netflix 12 Core Businesses Interactive Switcher (Exact image_f21250.jpg Layout) -->
+      <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="Netflix 12大核心业务切换台">
+        <div class="ip-hub-top">
+          <div class="ip-hub-title-group">
+            <span class="mui-chip mui-chip-primary mono">NETFLIX 12 CORE BUSINESSES</span>
+            <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="Netflix 12 大核心业务独立深度研报切换中枢（点击任一业务实时重绘全部 8 大章节与 5 张高分交互图表）" data-i18n-en="Netflix 12 Core Businesses Monograph Hub (Click any business to dynamically render all 8 chapters &amp; 5 HiDPI charts)">Netflix 12 大核心业务独立深度研报切换中枢（点击任一业务实时重绘全部 8 大章节与 5 张高分交互图表）</span>
+          </div>
+          <div class="ip-hub-controls">
+            <button type="button" id="prevIpBtn" class="mui-btn" title="切换至上一项业务 (快捷键 [)" data-title-zh="切换至上一项业务 (快捷键 [)" data-title-en="Previous Business (Shortcut [)">
+              <span>←</span> <span data-i18n-zh="上一业务" data-i18n-en="Prev Biz">上一业务</span>
+            </button>
+            <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一项业务 (快捷键 ])" data-title-zh="切换至下一项业务 (快捷键 ])" data-title-en="Next Business (Shortcut ])">
+              <span data-i18n-zh="下一业务" data-i18n-en="Next Biz">下一业务</span> <span>→</span>
+            </button>
+            <a id="openStandalonePageLink" href="./nflx_biz_01_svod_pricing.html" class="mui-btn mui-btn-primary" style="text-decoration:none;" title="打开当前选中奈飞业务的独立单文件网页" data-title-zh="打开当前选中奈飞业务的独立单文件网页" data-title-en="Open standalone HTML page for the active Netflix business"><span id="openStandalonePageText" data-i18n-zh="打开《核心订阅与定价权》独立网页 ↗" data-i18n-en="Open Core SVOD &amp; Pricing Page ↗">打开《核心订阅与定价权》独立网页 ↗</span></a>
+            
+            <button type="button" id="hubExportFullBtn" class="mui-btn" title="导出包含全部 12 大奈飞业务的完整中枢单文件 HTML" data-title-zh="导出包含全部 12 大奈飞业务的完整中枢单文件 HTML" data-title-en="Download full 12-business All-in-One HTML">
+              <span data-i18n-zh="导出全集 HTML" data-i18n-en="Export Full HTML">导出全集 HTML</span>
+            </button>
+          </div>
+        </div>
+        <div class="ip-pill-grid" id="ipPillGrid">
+          <button type="button" class="ip-pill-btn active" data-switch-ip="01_svod_pricing_tiers" aria-pressed="true"><span class="ip-pill-mono mono">SV</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="01_svod_pricing_tiers">01. 核心订阅与定价权</span><span class="ip-pill-meta mono" data-pill-meta="01_svod_pricing_tiers">$51.1B FY26E · 325M+ 家庭 · Core SVOD &amp; Pricing</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="02_ads_tier_adtech" aria-pressed="false"><span class="ip-pill-mono mono">AD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="02_ads_tier_adtech">02. 广告套餐与自研AdTech</span><span class="ip-pill-meta mono" data-pill-meta="02_ads_tier_adtech">250M+ MAV · ~$2.7B FY26E · Ad Tier &amp; Ads Suite</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="03_paid_sharing_bundles" aria-pressed="false"><span class="ip-pill-mono mono">BD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="03_paid_sharing_bundles">03. 付费共享与渠道聚合</span><span class="ip-pill-meta mono" data-pill-meta="03_paid_sharing_bundles">Extra $6.99/$8.99 · 法国TF1+ · Paid Sharing &amp; Bundles</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="04_english_series" aria-pressed="false"><span class="ip-pill-mono mono">EN</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="04_english_series">04. 英语旗舰原创剧集</span><span class="ip-pill-meta mono" data-pill-meta="04_english_series">Wednesday S2 124M · ST5 94M · Flagship English Series</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="05_non_english_local" aria-pressed="false"><span class="ip-pill-mono mono">LO</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="05_non_english_local">05. 非英语本土原创矩阵</span><span class="ip-pill-meta mono" data-pill-meta="05_non_english_local">占总时长 33.3% · 50+制片国 · Non-English Originals</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="06_films_animation" aria-pressed="false"><span class="ip-pill-mono mono">FM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="06_films_animation">06. 原创电影与动画工作室</span><span class="ip-pill-meta mono" data-pill-meta="06_films_animation">KPop 482M破纪录 · 动画8%时长 · Original Films &amp; Animation</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="07_unscripted_comedy_podcasts" aria-pressed="false"><span class="ip-pill-mono mono">UN</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="07_unscripted_comedy_podcasts">07. 纪实综艺、喜剧与播客</span><span class="ip-pill-meta mono" data-pill-meta="07_unscripted_comedy_podcasts">Sean Combs 50.8M · 印度日播#1 · Unscripted, Comedy &amp; Podcasts</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="08_third_party_licensing" aria-pressed="false"><span class="ip-pill-mono mono">LC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="08_third_party_licensing">08. 第三方版权与协同飞轮</span><span class="ip-pill-meta mono" data-pill-meta="08_third_party_licensing">迪士尼冰川时代 · $34.6B资产 · 3P Studio Licensing</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="09_live_sports_events" aria-pressed="false"><span class="ip-pill-mono mono">LV</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="09_live_sports_events">09. 体育赛事与超级直播</span><span class="ip-pill-meta mono" data-pill-meta="09_live_sports_events">WWE周均3.4M · NFL圣诞/世界杯 · Live Sports &amp; Tentpoles</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="10_netflix_games" aria-pressed="false"><span class="ip-pill-mono mono">GM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="10_netflix_games">10. 云游戏与儿童互动生态</span><span class="ip-pill-meta mono" data-pill-meta="10_netflix_games">TV云游11x · Playground 3x · Cloud TV Games &amp; Playground</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="11_netflix_house_cp" aria-pressed="false"><span class="ip-pill-mono mono">HS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="11_netflix_house_cp">11. Netflix House与消费品</span><span class="ip-pill-meta mono" data-pill-meta="11_netflix_house_cp">费城/达拉斯10万呎 · 2027赌城 · Netflix House &amp; Retail CP</span></span></button>
+          <button type="button" class="ip-pill-btn" data-switch-ip="12_open_connect_ai_tech" aria-pressed="false"><span class="ip-pill-mono mono">AI</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="12_open_connect_ai_tech">12. Open Connect与AI底座</span><span class="ip-pill-meta mono" data-pill-meta="12_open_connect_ai_tech">&gt;95%本地卸载 · $587M收购AI · Open Connect CDN &amp; GenAI</span></span></button>
+        </div>
+      </section>
+      <!-- Dynamic Monograph Sections Host (00 - 07) -->
+      <div id="ipSectionsHost"><noscript><p style="padding:16px;">请启用 JavaScript 以交互浏览 Netflix 12 大业务完整图表与模拟器。</p></noscript><div id="ssrPreviewMarker" style="display:none;"></div></div>
+    </main>
+  </div>
+
+  <script src="../../_shared/b4c9bf732ac9b259.js"></script>
+</body>
+</html>
