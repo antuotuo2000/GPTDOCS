@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Western Digital 西部数据全线产品与服务 10 大板块深度研报中枢（Q1 FY27 $4.38B 全景拆解）| 数据中心</title>
+ <meta name="description" content="Western Digital (WDC) 西部数据剥离闪存业务后全线 10 大产品与服务矩阵深度商业研报中枢：覆盖 Ultrastar 数据中心硬盘、OpenFlex 平台、WD Gold/Red/Purple/Black/Blue、My Passport/My Book、My Cloud 及软件服务。" />
+ <script src="../../_shared/ab20d96b702d5a05.js"></script>
+ <link rel="stylesheet" href="../../_shared/4804968f711d86dd.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI High-Clarity AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">DC</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation"><a class="crumb-link hide-sm" href="../../index.html"><span class="portal-menu-text" data-portal-zh="数据中心" data-portal-en="Research Hub">数据中心</span></a><span class="hide-sm" aria-hidden="true">/</span>
+ <span class="crumb-link hide-sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg><span data-i18n-zh="WDC 数据中心" data-i18n-en="WDC Research Hub">WDC 数据中心</span></span>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="Ultrastar DC 企业级硬盘研报" data-i18n-en="Ultrastar DC Enterprise HDD">Ultrastar DC 企业级硬盘研报</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="Q1'27 Cloud $3.87B (+54%)" data-i18n-en="Q1'27 Cloud $3.87B (+54%)">Q1'27 Cloud $3.87B (+54%)</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="223 EB 近线出货 · 47% 份额" data-i18n-en="223 EB Nearline · 47% Share">223 EB 近线出货 · 47% 份额</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换西数产品…" aria-label="快速跳转章节或产品线" data-ph-zh="检索章节或切换西数产品…" data-ph-en="Jump to section or WDC product…" data-aria-zh="快速跳转章节或产品线" data-aria-en="Quick jump to chapter or WDC product" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ 
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">WDC · #1 CLOUD ENGINE (88% REV)</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="Ultrastar DC 企业级硬盘" data-i18n-en="Ultrastar DC Enterprise HDD">Ultrastar DC 企业级硬盘</div>
+ <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="223 EB 单季近线出货 × 11 碟氦气封装 × 32TB UltraSMR 量产与 40TB/100TB 路线图" data-i18n-en="223 EB quarterly nearline × 11-disk HelioSeal × 32TB UltraSMR &amp; 40TB/100TB roadmap">223 EB 单季近线出货 × 11 碟氦气封装 × 32TB UltraSMR 量产与 40TB/100TB 路线图</p>
+ <div class="sidebar-mini-kpis" id="sideMiniKpis">
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="Q1'27 Cloud 分部营收" data-i18n-en="Q1'27 Cloud Revenue">Q1'27 Cloud 分部营收</span><span class="sidebar-mini-val mono" data-i18n-zh="$3.87B (+54% YoY)" data-i18n-en="$3.87B (+54% YoY)">$3.87B (+54% YoY)</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="全球容量出货份额" data-i18n-en="Global Capacity Share">全球容量出货份额</span><span class="sidebar-mini-val mono" data-i18n-zh="47% (行业 #1)" data-i18n-en="47% (#1 Global)">47% (行业 #1)</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="最高单盘容量路线" data-i18n-en="Capacity Roadmap">最高单盘容量路线</span><span class="sidebar-mini-val mono" data-i18n-zh="32TB → 40TB → 100TB" data-i18n-en="32TB → 40TB → 100TB">32TB → 40TB → 100TB</span></div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="章节目录" data-aria-zh="章节目录" data-aria-en="Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="WDC">
+          <div class="co-side-head">
+            <span class="co-side-title mono">WDC · 01/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../SeniorExecutive/western_digital_wdc_18_mui_monograph.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../SeniorExecutive/western_digital_wdc_18_mui_monograph.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="western_digital_10_q1_fy27_4_38b.html" title="Western Digital 西部数据全线产品与服务 10 大板块深度研报中枢（Q1 FY27 $4.38B 全景拆解）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Western Digital 西部数据全线产品与服务 10 大板块深度研报中枢（Q1 FY27 $4.38B 全景拆解）" data-i18n-en="Western Digital &amp; 10 Deep DiveReport (Q1 FY27 $4.38B OverviewBreakdown)">Western Digital 西部数据全线产品与服务 10 大板块深度研报中枢（Q1 FY27 $4.38B 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../SeniorExecutive/western_digital_wdc_18_mui_monograph.html" title="Western Digital (WDC) 18 大核心高管与董事会全景深度研报中枢 | MUI Monograph"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Western Digital (WDC) 18 大核心高管与董事会全景深度研报中枢 | MUI Monograph" data-i18n-en="Western Digital (WDC) 18 &amp; OverviewDeep DiveReport | MUI Monograph">Western Digital (WDC) 18 大核心高管与董事会全景深度研报中枢 | MUI Monograph</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心经营指标" data-i18n-en="Executive Summary &amp; Core KPIs">执行摘要与核心经营指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="ePMR + UltraSMR 技术底座与 AI 数据湖飞轮" data-i18n-en="ePMR + UltraSMR Stack &amp; AI Data Lake">ePMR + UltraSMR 技术底座与 AI 数据湖飞轮</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大商业支柱与五维护城河雷达" data-i18n-en="4 Commercial Pillars &amp; Moat Radar">四大商业支柱与五维护城河雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="全球企业级近线硬盘横向对标" data-i18n-en="Global Nearline HDD Benchmarking">全球企业级近线硬盘横向对标</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="单元经济学与 AI 容量变现模拟器" data-i18n-en="Unit Economics &amp; AI Capacity Simulator">单元经济学与 AI 容量变现模拟器</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="架构演进时间轴与技术路线战役" data-i18n-en="Evolution Timeline &amp; Tech Battles">架构演进时间轴与技术路线战役</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="Ultrastar 护城河核查清单" data-i18n-en="Ultrastar Moat Checklist">Ultrastar 护城河核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="一手SEC财报与权威核验信源" data-i18n-en="Primary SEC Filings &amp; Verified Sources">一手SEC财报与权威核验信源</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+ <!-- Western Digital 10 All-Products & Services Portfolio Interactive Switcher -->
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="西部数据 10 大产品与服务矩阵切换台">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">WDC 10 ALL-PRODUCTS &amp; SERVICES PORTFOLIO</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="西部数据 (NASDAQ: WDC) 全线 10 大产品与服务板块深度研报中枢（剥离闪存后纯 HDD · 存储平台 · 个人云与软件服务全景）" data-i18n-en="Western Digital (NASDAQ: WDC) 10 Products &amp; Services Monograph Hub (Pure-Play HDD, Data Center Platforms, Personal Cloud &amp; Services)">西部数据 (NASDAQ: WDC) 全线 10 大产品与服务板块深度研报中枢（剥离闪存后纯 HDD · 存储平台 · 个人云与软件服务全景）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" class="mui-btn" title="切换至上一产品线 (快捷键 [)" data-title-zh="切换至上一产品线 (快捷键 [)" data-title-en="Previous Product Line (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一产品" data-i18n-en="Prev">上一产品</span>
+ </button>
+ <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一产品线 (快捷键 ])" data-title-zh="切换至下一产品线 (快捷键 ])" data-title-en="Next Product Line (Shortcut ])">
+ <span data-i18n-zh="下一产品" data-i18n-en="Next">下一产品</span> <span>→</span>
+ </button>
+ <button type="button" id="hubFocusModeBtn" class="mui-btn" data-i18n-zh="单品沉浸阅读 ▴" data-i18n-en="Single-Product Focus ▴">单品沉浸阅读 ▴</button>
+ 
+ </div>
+ </div>
+
+ <div class="hub-summary-strip">
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="FY2026 集团总营收 (纯 HDD)" data-i18n-en="FY2026 Consolidated Revenue">FY2026 集团总营收 (纯 HDD)</span>
+ <span class="hub-sum-val mono">$12.92B (+36% YoY)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Q1 FY27 营收 / Non-GAAP 毛利率" data-i18n-en="Q1 FY27 Rev / Non-GAAP GM">Q1 FY27 营收 / Non-GAAP 毛利率</span>
+ <span class="hub-sum-val mono">$4.38B (+55%) · 58.1% GM</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Q1 FY27 云端占比 / 总容量" data-i18n-en="Q1 FY27 Cloud Mix / Total EB">Q1 FY27 云端占比 / 总容量</span>
+ <span class="hub-sum-val mono">88% Cloud · 248 EB</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="全球 HDD 容量份额 / FCF" data-i18n-en="Global Capacity Share / FY26 FCF">全球 HDD 容量份额 / FCF</span>
+ <span class="hub-sum-val mono">47% (#1) · $3.51B FCF</span>
+ </div>
+ </div>
+
+ <div class="hub-cat-bar">
+ <div class="hub-cat-pills" role="tablist" aria-label="西部数据产品线大类筛选">
+ <button type="button" class="hub-cat-btn active" data-cat-filter="all" data-i18n-zh="全部 10 大产品与服务" data-i18n-en="All 10 Pillars">全部 10 大产品与服务</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="enterprise_dc" data-i18n-zh="企业级与数据中心 (01–02)" data-i18n-en="Enterprise &amp; DC (01–02)">企业级与数据中心 (01–02)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="pro_internal" data-i18n-zh="专业与内置硬盘 (03–07)" data-i18n-en="Pro &amp; Internal (03–07)">专业与内置硬盘 (03–07)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="consumer_services" data-i18n-zh="外置·个人云与服务 (08–10)" data-i18n-en="External, Cloud &amp; Services (08–10)">外置·个人云与服务 (08–10)</button>
+ </div>
+ <span class="mono" style="font-size:0.73rem;color:var(--text-muted);" data-i18n-zh="提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节" data-i18n-en="Tip: Press [ / ] to cycle products · Press ⌘K to jump">提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节</span>
+ </div>
+
+ <div class="ip-pill-grid" id="ipPillGrid">
+ <button type="button" class="ip-pill-btn active" data-switch-ip="ultrastar_dc_hdd" aria-pressed="true"><span class="ip-pill-mono mono">DC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ultrastar_dc_hdd">01. Ultrastar DC 企业级硬盘</span><span class="ip-pill-meta mono" data-pill-meta="ultrastar_dc_hdd">Cloud $3.87B/季 · 47%份额 · Ultrastar DC Enterprise HDD</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ultrastar_openflex_platforms" aria-pressed="false"><span class="ip-pill-mono mono">OP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ultrastar_openflex_platforms">02. Ultrastar &amp; OpenFlex 存储平台</span><span class="ip-pill-meta mono" data-pill-meta="ultrastar_openflex_platforms">Data102 3PB+ · 71.4GB/s · Ultrastar &amp; OpenFlex Platforms</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="wd_gold_enterprise" aria-pressed="false"><span class="ip-pill-mono mono">GD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="wd_gold_enterprise">03. WD Gold 企业级硬盘</span><span class="ip-pill-meta mono" data-pill-meta="wd_gold_enterprise">1TB–26TB · 250万h MTBF · WD Gold Enterprise HDD</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="wd_red_nas" aria-pressed="false"><span class="ip-pill-mono mono">RD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="wd_red_nas">04. WD Red NAS 网络存储</span><span class="ip-pill-meta mono" data-pill-meta="wd_red_nas">NASware · 2TB–26TB CMR · WD Red Plus &amp; Pro NAS</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="wd_purple_surveillance" aria-pressed="false"><span class="ip-pill-mono mono">PR</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="wd_purple_surveillance">05. WD Purple AI 监控</span><span class="ip-pill-meta mono" data-pill-meta="wd_purple_surveillance">64路HD + 32路AI流 · WD Purple AI Surveillance</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="wd_black_gaming" aria-pressed="false"><span class="ip-pill-mono mono">BK</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="wd_black_gaming">06. WD_BLACK 游戏存储</span><span class="ip-pill-meta mono" data-pill-meta="wd_black_gaming">7200RPM · P10/D10 12TB · WD_BLACK Gaming HDD</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="wd_blue_client" aria-pressed="false"><span class="ip-pill-mono mono">BL</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="wd_blue_client">07. WD Blue PC 内置盘</span><span class="ip-pill-meta mono" data-pill-meta="wd_blue_client">Client $320M (+119%) · WD Blue PC Client HDD</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="my_passport_my_book" aria-pressed="false"><span class="ip-pill-mono mono">MP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="my_passport_my_book">08. My Passport / My Book 外置</span><span class="ip-pill-meta mono" data-pill-meta="my_passport_my_book">Consumer $193M · 44TB Duo · My Passport &amp; My Book</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="my_cloud_home_os" aria-pressed="false"><span class="ip-pill-mono mono">MC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="my_cloud_home_os">09. My Cloud 私有云</span><span class="ip-pill-meta mono" data-pill-meta="my_cloud_home_os">免月费私有云 · OS 5 · My Cloud Home &amp; OS 5</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="wd_software_services" aria-pressed="false"><span class="ip-pill-mono mono">SV</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="wd_software_services">10. 软件与企业支持服务</span><span class="ip-pill-meta mono" data-pill-meta="wd_software_services">Acronis · Ontrack · B2B · Software &amp; Enterprise Services</span></span></button>
+ </div>
+ </section>
+
+ <!-- Dynamic Monograph Sections Host (00 - 07) -->
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="产品战略定评：AI 数据湖时代最具定价权的近线容量基础设施" data-i18n-en="Verdict: The Highest-Pricing-Power Nearline Storage Engine of the AI Era">产品战略定评：AI 数据湖时代最具定价权的近线容量基础设施</span><span class="mui-chip" data-i18n-zh="演进轨迹：FY25 ($9.52B) → FY26 ($12.92B) → Q1'27 Cloud $3.87B/季" data-i18n-en="Trajectory: FY25 ($9.52B) → FY26 ($12.92B) → Q1'27 Cloud $3.87B/qtr">演进轨迹：FY25 ($9.52B) → FY26 ($12.92B) → Q1'27 Cloud $3.87B/季</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="数据基准：2026-10 WDC Q1'27 财报核验" data-i18n-en="Baseline: Oct 2026 WDC Q1'27 Verified">数据基准：2026-10 WDC Q1'27 财报核验</span></div><div class="hero-overline mono"><span data-i18n-zh="PRODUCT 01 · 占集团总营收 88% × 非GAAP毛利率 58.1% × 单季近线 223 EB × 11碟氦气密封" data-i18n-en="PRODUCT 01 · 88% OF WDC REVENUE × 58.1% NON-GAAP GM × 223 EB NEARLINE × 11-DISK HELIOSEAL">PRODUCT 01 · 占集团总营收 88% × 非GAAP毛利率 58.1% × 单季近线 223 EB × 11碟氦气密封</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">Ultrastar DC 企业级硬盘深度研报：<span class="gradient-accent">分拆闪存后，WDC 如何靠 11 碟 ePMR 与 UltraSMR 统治 AI 数据湖？</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">2025 年 2 月完成 Sandisk 闪存业务分拆后，Western Digital 彻底转型为纯粹的企业级大容量存储龙头。2026 年 10 月公布的 Q1 FY2027 财报显示，<strong>Cloud 分部单季营收飙升至约 $38.7 亿美元（同比 +54%，占集团总营收 88%）</strong>，近线出货高达 <strong>223 EB</strong>，带动集团 Non-GAAP 毛利率跃升至 <strong>58.1%</strong> <a class="cite-link" href="https://www.investing.com/news/company-news/western-digital-q1fy27-slides-margins-surge-as-cloud-revenue-hits-88-93CH-4967696" target="_blank" rel="noopener noreferrer">Q1'27 Slides ↗</a>。依托 11 碟 HelioSeal 氦气平台、ePMR 与 UltraSMR，Ultrastar DC HC590 (26TB CMR) 与 HC690 (32TB UltraSMR) 正加速向 40TB ePMR 及 100TB HAMR 演进 <a class="cite-link" href="https://www.westerndigital.com/company/newsroom/press-releases/2026/2026-02-03-western-digital-accelerates-storage-innovation-for-ai-era" target="_blank" rel="noopener noreferrer">Innovation Day ↗</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="11 碟 HelioSeal 氦气封装良率壁垒" data-i18n-en="11-Disk HelioSeal Yield Moat">11 碟 HelioSeal 氦气封装良率壁垒</h3><p data-i18n-zh="全球率先量产 11 碟平台，在标准 3.5 英寸盘体中多塞入 1 张盘片，在不更换磁记录介质的前提下直接提升 ~10% 单盘容量。" data-i18n-en="Industry-first 11-disk helium-sealed chassis adds a full platter inside a standard 3.5-inch form factor for ~10% higher density.">全球率先量产 11 碟平台，在标准 3.5 英寸盘体中多塞入 1 张盘片，在不更换磁记录介质的前提下直接提升 ~10% 单盘容量。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="ePMR + HAMR 共用架构平滑演进" data-i18n-en="Dual-Path ePMR &amp; HAMR Commonality">ePMR + HAMR 共用架构平滑演进</h3><p data-i18n-zh="40TB UltraSMR ePMR 已进入两家超大规模云厂商认证（2026 下半年量产），HAMR 同步认证并于 2027 年爬坡，2029 年直指 100TB。" data-i18n-en="40TB UltraSMR ePMR is qualifying with two hyperscalers for 2H26 ramp alongside 2027 HAMR, targeting 100TB by 2029.">40TB UltraSMR ePMR 已进入两家超大规模云厂商认证（2026 下半年量产），HAMR 同步认证并于 2027 年爬坡，2029 年直指 100TB。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="寡头供给纪律重塑 $/TB 定价权" data-i18n-en="Oligopoly Discipline &amp; Pricing Power">寡头供给纪律重塑 $/TB 定价权</h3><p data-i18n-zh="全球仅余 WDC、Seagate、Toshiba 三家厂商，WDC 占据 47% 容量份额；单季 $/TB 同比提升约 28%，推动毛利率突破 58%。" data-i18n-en="In a 3-player global oligopoly where WDC holds 47% capacity share, disciplined capex lifted Q1'27 revenue/TB ~28% YoY.">全球仅余 WDC、Seagate、Toshiba 三家厂商，WDC 占据 47% 容量份额；单季 $/TB 同比提升约 28%，推动毛利率突破 58%。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q1 FY27 Cloud 分部营收" data-i18n-en="Q1 FY27 Cloud Revenue">Q1 FY27 Cloud 分部营收</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="占集团 88%" data-i18n-en="88% of WDC">占集团 88%</span></div><div class="kpi-value mono" data-i18n-zh="$3.87B" data-i18n-en="$3.87B">$3.87B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">同比 +54%，超大规模云厂商 AI 训练数据湖与冷热分层驱动 <a class="cite-link" href="https://www.investing.com/news/company-news/western-digital-q1fy27-slides-margins-surge-as-cloud-revenue-hits-88-93CH-4967696" target="_blank" rel="noopener noreferrer">Q1'27 ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q1 FY27 近线容量出货" data-i18n-en="Q1 FY27 Nearline Shipments">Q1 FY27 近线容量出货</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="总出货 248 EB" data-i18n-en="248 EB Total">总出货 248 EB</span></div><div class="kpi-value mono" data-i18n-zh="223 EB" data-i18n-en="223 EB">223 EB</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">总出货容量由 Q4'25 的 190 EB 连升 5 季至 Q1'27 的 248 EB <a class="cite-link" href="https://www.stocktitan.net/articles/western-digital-q1-fiscal-2027-earnings-hard-drive-prices-ai" target="_blank" rel="noopener noreferrer">StockTitan ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q1 FY27 非GAAP毛利率" data-i18n-en="Q1 FY27 Non-GAAP GM">Q1 FY27 非GAAP毛利率</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="Q2'27 指引 60.5%" data-i18n-en="Q2'27 Guide 60.5%">Q2'27 指引 60.5%</span></div><div class="kpi-value mono" data-i18n-zh="58.1%" data-i18n-en="58.1%">58.1%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">较 FY25 的 39.4% 暴涨 +1,870 bps，彻底摆脱周期谷底 <a class="cite-link" href="https://investor.wdc.com/static-files/d4c70967-9cf8-45ff-ba15-93de77163154" target="_blank" rel="noopener noreferrer">WDC PR ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="全球 HDD 容量份额" data-i18n-en="Global HDD Capacity Share">全球 HDD 容量份额</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="三强寡头 #1" data-i18n-en="Oligopoly #1">三强寡头 #1</span></div><div class="kpi-value mono" data-i18n-zh="47%" data-i18n-en="47%">47%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">领先 Seagate (42%) 与 Toshiba (11%)，稳居大容量出货第一 <a class="cite-link" href="https://www.forbes.com/sites/tomcoughlin/2025/12/19/digital-storage-and-memory-projections-for-2026-part-1/" target="_blank" rel="noopener noreferrer">Forbes ↗</a></p></div></div></section>
+    </div>
+ </main>
+ </div>
+
+ <script src="../../_shared/8c4ea044370aca09.js"></script>
+</body>
+</html>

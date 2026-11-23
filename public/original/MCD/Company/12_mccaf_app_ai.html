@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-density="comfortable">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+ <title>麦当劳全线 12 大核心产品与服务深度商业研报中枢（汉堡·鸡肉·薯条·早餐·McCafé·开心乐园餐·App会员·外送·得来速·自助点餐·特许地产·边缘AI）| 麦当劳商业数据中心</title>
+ <meta name="description" content="基于麦当劳 FY2025 10-K 与 Q1–Q3 2026 官方财报核验，逐一深度拆解麦当劳全线 12 大核心产品与服务的产品架构、竞争护城河、单元经济模型与 5 年复利推演。" />
+ <script src="../../_shared/30c964d6b70a6860.js"></script>
+ <link rel="stylesheet" href="../../_shared/6a788b40b2a2cc4c.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">BM</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+ <a class="crumb-link hide-sm" href="../../index.html">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="麦当劳商业数据中心" data-i18n-en="McDonald's Research Hub">麦当劳商业数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="麦当劳经典汉堡与牛肉产品矩阵研报" data-i18n-en="McDonald&#x27;s Core Burgers &amp; Beef Monograph">麦当劳经典汉堡与牛肉产品矩阵研报</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-md" data-i18n-zh="系统销售 ~$25B+/年" data-i18n-en="~$25B+ Annual Sales">系统销售 ~$25B+/年</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-md" data-i18n-zh="Big Mac · Best Burger · Big Arch" data-i18n-en="Big Mac · Best Burger · Big Arch">Big Mac · Best Burger · Big Arch</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换产品…" aria-label="快速跳转章节或产品" data-ph-zh="检索章节或切换产品…" data-ph-en="Jump to chapter or product…" data-aria-zh="快速跳转章节或产品" data-aria-en="Quick jump to chapter or product" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+
+ <div class="mui-lang-switch hide-sm" role="group" aria-label="排版密度切换" data-aria-zh="排版密度切换" data-aria-en="Reading Density">
+ 
+ 
+ </div>
+
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换高清晰浅色 / 零噪点深空暗色" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换高清晰浅色 / 零噪点深空暗色" data-title-en="Toggle Crisp Light / Deep-Space Dark">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ <span id="appbarThemeLabel" class="hide-sm">清晰浅色</span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与产品导航" data-aria-zh="研究章节目录与产品导航" data-aria-en="Report Chapters &amp; Product Nav">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">MCD · #1 CORE ICON</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="经典汉堡与牛肉矩阵" data-i18n-en="Core Burgers &amp; Beef">经典汉堡与牛肉矩阵</div>
+ <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="Big Mac 全球锚定 × Best Burger 工艺升级 × 2026 Big Arch 大单品美国登陆" data-i18n-en="Big Mac global anchor × Best Burger sear upgrade × 2026 Big Arch US launch">Big Mac 全球锚定 × Best Burger 工艺升级 × 2026 Big Arch 大单品美国登陆</p>
+ <div class="sidebar-mini-kpis" id="sideMiniKpis"></div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="产品切换与章节目录" data-aria-zh="产品切换与章节目录" data-aria-en="Product Links &amp; Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="MCD">
+          <div class="co-side-head">
+            <span class="co-side-title mono">MCD · 01/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../SeniorExecutive/mcdonald_s_14_kempczinski_borden_anderson_steijaert_baroni_flatley_mcdonald_board.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../SeniorExecutive/mcdonald_s_14_kempczinski_borden_anderson_steijaert_baroni_flatley_mcdonald_board.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="12_mccaf_app_ai.html" title="麦当劳全线 12 大核心产品与服务深度商业研报中枢（汉堡·鸡肉·薯条·早餐·McCafé·开心乐园餐·App会员·外送·得来速·自助点餐·特许地产·边缘AI）| 麦当劳商业数据中心"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="麦当劳全线 12 大核心产品与服务深度商业研报中枢（汉堡·鸡肉·薯条·早餐·McCafé·开心乐园餐·App会员·外送·得来速·自助点餐·特许地产·边缘AI）| 麦当劳商业数据中心" data-i18n-en="12 &amp; Deep Dive Report ( · · · ·McCafé· ·App · · · · · AI)| Data Center">麦当劳全线 12 大核心产品与服务深度商业研报中枢（汉堡·鸡肉·薯条·早餐·McCafé·开心乐园餐·App会员·外送·得来速·自助点餐·特许地产·边缘AI）| 麦当劳商业数据中心</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../SeniorExecutive/mcdonald_s_14_kempczinski_borden_anderson_steijaert_baroni_flatley_mcdonald_board.html" title="McDonald&#x27;s 麦当劳 14 大核心高管与治理层全景深度研报中枢（Kempczinski·Borden·Anderson·Steijaert·Baroni·Flatley·McDonald·Board）"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="McDonald&#x27;s 麦当劳 14 大核心高管与治理层全景深度研报中枢（Kempczinski·Borden·Anderson·Steijaert·Baroni·Flatley·McDonald·Board）" data-i18n-en="McDonald&#x27;s 14 &amp; OverviewDeep DiveReport (Kempczinski·Borden·Anderson·Steijaert·Baroni·Flatley·McDonald·Board)">McDonald&#x27;s 麦当劳 14 大核心高管与治理层全景深度研报中枢（Kempczinski·Borden·Anderson·Steijaert·Baroni·Flatley·McDonald·Board）</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ <div class="nav-section-label" data-i18n-zh="当前产品研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">当前产品研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList"><li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心经营指标" data-i18n-en="Executive Summary &amp; Core KPIs">执行摘要与核心经营指标</span></a></li><li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="Best Burger 工艺与供应链底座" data-i18n-en="Best Burger Craft &amp; Supply Stack">Best Burger 工艺与供应链底座</span></a></li><li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大商业支柱与五维护城河雷达" data-i18n-en="4 Commercial Pillars &amp; Moat Radar">四大商业支柱与五维护城河雷达</span></a></li><li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="全球汉堡竞品横向对标矩阵" data-i18n-en="Global Burger Competitor Matrix">全球汉堡竞品横向对标矩阵</span></a></li><li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="单品单元经济学与复利模拟器" data-i18n-en="Unit Economics &amp; Profit Simulator">单品单元经济学与复利模拟器</span></a></li><li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="产品演进时间轴与四大战略战役" data-i18n-en="Evolution Timeline &amp; Key Battles">产品演进时间轴与四大战略战役</span></a></li><li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="汉堡业务护城河跟踪核查清单" data-i18n-en="Burgers Moat Verification Checklist">汉堡业务护城河跟踪核查清单</span></a></li><li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="一手 SEC 财报与权威核验信源" data-i18n-en="Primary SEC Filings &amp; Verified Sources">一手 SEC 财报与权威核验信源</span></a></li></ul>
+ </nav>
+
+ 
+ </aside>
+
+ <main class="main-content">
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="麦当劳 12 大核心产品与服务切换中枢">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">MCDONALD'S · 12 CORE PRODUCTS &amp; SERVICES</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="麦当劳全线 12 大核心产品与服务独立商业研报切换中枢（点击任一板块实时重绘全部 8 大章节、5 张高分图表与盈利推演器）" data-i18n-en="McDonald's 12 Core Products &amp; Services Monograph Hub (Click any item to dynamically render all 8 chapters, 5 charts &amp; ROI simulator)">麦当劳全线 12 大核心产品与服务独立商业研报切换中枢（点击任一板块实时重绘全部 8 大章节、5 张高分图表与盈利推演器）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" class="mui-btn" title="切换上一项 (快捷键 [)" data-title-zh="切换上一项 (快捷键 [)" data-title-en="Previous Item (Shortcut [)"><span>←</span> <span data-i18n-zh="上一项" data-i18n-en="Prev">上一项</span></button>
+ <button type="button" id="nextIpBtn" class="mui-btn" title="切换下一项 (快捷键 ])" data-title-zh="切换下一项 (快捷键 ])" data-title-en="Next Item (Shortcut ])"><span data-i18n-zh="下一项" data-i18n-en="Next">下一项</span> <span>→</span></button>
+ <a data-open-standalone-link="1" class="mui-btn" href="?product=burgers_beef" target="_blank" rel="noopener"><span data-open-standalone-text="1" data-i18n-zh="打开《经典汉堡与牛肉》独立页 ↗" data-i18n-en="Open Core Burgers &amp; Beef Page ↗">打开《经典汉堡与牛肉》独立页 ↗</span></a>
+ 
+ </div>
+ </div>
+ <div class="hub-cat-bar" role="tablist">
+ <button type="button" class="hub-cat-btn active" data-hub-cat="all" data-i18n-zh="全部板块 (12)" data-i18n-en="All (12)">全部板块 (12)</button>
+ <button type="button" class="hub-cat-btn" data-hub-cat="core_food" data-i18n-zh="核心餐食 (01–03)" data-i18n-en="Core Food (01–03)">核心餐食 (01–03)</button>
+ <button type="button" class="hub-cat-btn" data-hub-cat="daypart_bev" data-i18n-zh="时段与饮品 (04–06)" data-i18n-en="Dayparts &amp; Bev (04–06)">时段与饮品 (04–06)</button>
+ <button type="button" class="hub-cat-btn" data-hub-cat="digital_ops" data-i18n-zh="数字与履约 (07–10)" data-i18n-en="Digital &amp; Ops (07–10)">数字与履约 (07–10)</button>
+ <button type="button" class="hub-cat-btn" data-hub-cat="biz_tech" data-i18n-zh="商业与技术 (11–12)" data-i18n-en="Biz &amp; Tech (11–12)">商业与技术 (11–12)</button>
+ </div>
+ <div class="ip-pill-grid"><button type="button" class="ip-pill-btn active" data-switch-ip="burgers_beef" data-prod-group="core_food" aria-pressed="true"><span class="ip-pill-mono mono">BM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="burgers_beef">01. 经典汉堡与牛肉</span><span class="ip-pill-meta mono" data-pill-meta="burgers_beef">~$25B+/年 · Big Mac</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="chicken_nuggets" data-prod-group="core_food" aria-pressed="false"><span class="ip-pill-mono mono">MC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="chicken_nuggets">02. 鸡肉品类与麦乐鸡</span><span class="ip-pill-meta mono" data-pill-meta="chicken_nuggets">~$25B+/年 · 与牛肉齐平</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="fries_sides_value" data-prod-group="core_food" aria-pressed="false"><span class="ip-pill-mono mono">FF</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="fries_sides_value">03. 薯条小食与 McValue</span><span class="ip-pill-meta mono" data-pill-meta="fries_sides_value">超高毛利 · 2025价值引擎</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="breakfast_mcmuffin" data-prod-group="daypart_bev" aria-pressed="false"><span class="ip-pill-mono mono">BF</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="breakfast_mcmuffin">04. 早餐时段与麦满分</span><span class="ip-pill-meta mono" data-pill-meta="breakfast_mcmuffin">高毛利早市 · 蛋麦满分</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="mccafe_cosmcs_beverages" data-prod-group="daypart_bev" aria-pressed="false"><span class="ip-pill-mono mono">CF</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="mccafe_cosmcs_beverages">05. McCafé 与 CosMc&#x27;s 饮品</span><span class="ip-pill-meta mono" data-pill-meta="mccafe_cosmcs_beverages">$3B+ 咖啡 · 下午茶特饮</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="happy_meal_ip" data-prod-group="daypart_bev" aria-pressed="false"><span class="ip-pill-mono mono">HM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="happy_meal_ip">06. 开心乐园餐与 IP 联动</span><span class="ip-pill-meta mono" data-pill-meta="happy_meal_ip">世界最大玩具分销商</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="mcd_app_loyalty" data-prod-group="digital_ops" aria-pressed="false"><span class="ip-pill-mono mono">MY</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="mcd_app_loyalty">07. App 与会员积分系统</span><span class="ip-pill-meta mono" data-pill-meta="mcd_app_loyalty">2.1亿活跃 · $41B TTM</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="mcdelivery_omnichannel" data-prod-group="digital_ops" aria-pressed="false"><span class="ip-pill-mono mono">DL</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="mcdelivery_omnichannel">08. McDelivery 外送网络</span><span class="ip-pill-meta mono" data-pill-meta="mcdelivery_omnichannel">$16B+ 外送 · 全球 QSR #1</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="drive_thru_ready_arrival" data-prod-group="digital_ops" aria-pressed="false"><span class="ip-pill-mono mono">DT</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="drive_thru_ready_arrival">09. Drive-Thru 得来速</span><span class="ip-pill-meta mono" data-pill-meta="drive_thru_ready_arrival">~70% 美国渠道 · AI语音</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="kiosk_dinein_experience" data-prod-group="digital_ops" aria-pressed="false"><span class="ip-pill-mono mono">KS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="kiosk_dinein_experience">10. 自助点餐机与门店体验</span><span class="ip-pill-meta mono" data-pill-meta="kiosk_dinein_experience">高客单+15% · 触屏增销</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="franchise_realestate" data-prod-group="biz_tech" aria-pressed="false"><span class="ip-pill-mono mono">FR</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="franchise_realestate">11. 特许经营与地产帝国</span><span class="ip-pill-meta mono" data-pill-meta="franchise_realestate">95%特许 · 46%营业利润</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="google_cloud_edge_tech" data-prod-group="biz_tech" aria-pressed="false"><span class="ip-pill-mono mono">TC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="google_cloud_edge_tech">12. Google Cloud 边缘与 AI</span><span class="ip-pill-meta mono" data-pill-meta="google_cloud_edge_tech">千店边缘计算 · Archy AI</span></span></button></div>
+ </section>
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="产品战略定评：全球快餐业认知度最高、供应链标准化最极致的现金流基石" data-i18n-en="Verdict: Global QSR's Most Iconic, Standardized Beef Cash-Flow Anchor">产品战略定评：全球快餐业认知度最高、供应链标准化最极致的现金流基石</span><span class="mui-chip" data-i18n-zh="追踪窗口：1967 Big Mac → Best Burger 升级 → 2026.03 Big Arch 美国上市" data-i18n-en="Window: 1967 Big Mac → Best Burger Rollout → Mar 2026 Big Arch US">追踪窗口：1967 Big Mac → Best Burger 升级 → 2026.03 Big Arch 美国上市</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="数据基准：2026-11 SEC 10-K / Q3 2026 核验" data-i18n-en="Baseline: Nov 2026 SEC Verified">数据基准：2026-11 SEC 10-K / Q3 2026 核验</span></div><div class="hero-overline mono"><span data-i18n-zh="PRODUCT 01 · ~$25B+ 年系统销售额 × 45,356 家全球门店 × Best Burger 热压融酪工艺 × Big Arch 高客单增量" data-i18n-en="PRODUCT 01 · ~$25B+ Annual System Sales × 45,356 Stores × Best Burger Craft × Big Arch Premium Lift">PRODUCT 01 · ~$25B+ 年系统销售额 × 45,356 家全球门店 × Best Burger 热压融酪工艺 × Big Arch 高客单增量</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">经典汉堡与牛肉矩阵深度研报：<span class="gradient-accent">从 Big Mac 全球价格锚到 Best Burger 与 Big Arch 的高客单跃迁</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">牛肉汉堡是麦当劳跨越近七十年的绝对心智锚点，年系统销售额稳居 <strong>$250 亿美元以上</strong>量级（占全球 $1,390 亿+ 系统销售基盘近两成）<a class="cite-link" href="https://corporate.mcdonalds.com/corpmcd/our-stories/article/Q4-full-year-2025-results.html" target="_blank" rel="noopener noreferrer">FY25 财报 ↗</a> <a class="cite-link" href="https://www.wattagnet.com/poultry-future/consumer-trends/article/15663719/mcdonalds-chicken-revenue-now-equal-to-beef" target="_blank" rel="noopener noreferrer">品类基准 ↗</a>。面对高品质汉堡品牌分流，麦当劳通过 <strong>Best Burger</strong>（小批量煎制、融化芝士、温热松软面包）全面提升复购口感，并于 2026 年 3 月将国际爆款双层四分之一磅 <strong>Big Arch Burger</strong> 正式引入美国市场，以高溢价大单品对冲堂食客流波动 <a class="cite-link" href="https://www.mensjournal.com/food/food-drink-mcdonalds-menu-changes-2026" target="_blank" rel="noopener noreferrer">2026 菜单 ↗</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="巨无霸指数级全球国民心智" data-i18n-en="Unmatched Global Brand Equity">巨无霸指数级全球国民心智</h3><p data-i18n-zh="Big Mac 与 Quarter Pounder 构成跨文化国民级硬通货，极低教育成本支撑新市场快速冷启动与稳态客流。" data-i18n-en="Big Mac and Quarter Pounder act as universal QSR benchmarks, minimizing customer acquisition costs in all 100+ markets.">Big Mac 与 Quarter Pounder 构成跨文化国民级硬通货，极低教育成本支撑新市场快速冷启动与稳态客流。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="Best Burger 工艺重构口感壁垒" data-i18n-en="Best Burger Kitchen Quality Lift">Best Burger 工艺重构口感壁垒</h3><p data-i18n-zh="缩短单批煎制量、洋葱直接撒在热肉饼上锁香、芝士提前回温融化，在不增加外部设备投资下显着拉升满意度。" data-i18n-en="Smaller-batch grilling, onions added directly on the grill, and warmer melted cheese lift taste scores without heavy CapEx.">缩短单批煎制量、洋葱直接撒在热肉饼上锁香、芝士提前回温融化，在不增加外部设备投资下显着拉升满意度。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="Big Arch 填补高客单饥饿带" data-i18n-en="Big Arch Captures Premium Check">Big Arch 填补高客单饥饿带</h3><p data-i18n-zh="双层 1/4 磅牛肉饼配三片白切达与 Big Arch 特调酱，精准对标 Five Guys/Shake Shack 客群并维持 QSR 速度。" data-i18n-en="Two quarter-pound patties, three white cheddar slices, and tangy Big Arch sauce capture fast-casual cravings at QSR speed.">双层 1/4 磅牛肉饼配三片白切达与 Big Arch 特调酱，精准对标 Five Guys/Shake Shack 客群并维持 QSR 速度。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="牛肉品类年系统销售" data-i18n-en="Beef Annual System Sales">牛肉品类年系统销售</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="核心百亿级支柱" data-i18n-en="Core Mega-Category">核心百亿级支柱</span></div><div class="kpi-value mono" data-i18n-zh="~$25B+" data-i18n-en="~$25B+">~$25B+</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">与鸡肉品类并列集团两大 $250亿+ 超级食物平台，贡献核心租金与特许权使用费基盘 <a class="cite-link" href="https://www.wattagnet.com/poultry-future/consumer-trends/article/15663719/mcdonalds-chicken-revenue-now-equal-to-beef" target="_blank" rel="noopener noreferrer">营收口径 ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="集团 FY25 总系统销售" data-i18n-en="FY25 Systemwide Sales">集团 FY25 总系统销售</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="同比 +7%" data-i18n-en="+7% YoY">同比 +7%</span></div><div class="kpi-value mono" data-i18n-zh="$139B+" data-i18n-en="$139B+">$139B+</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">FY2025 全球系统销售额首破 1,390 亿美元，Q3 2026 单季达 $380 亿+（+4%）<a class="cite-link" href="https://corporate.mcdonalds.com/corpmcd/our-stories/article/Q4-full-year-2025-results.html" target="_blank" rel="noopener noreferrer">FY25 ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="2026 Big Arch 美国落地" data-i18n-en="Big Arch US Debut">2026 Big Arch 美国落地</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="2026.03 正式上线" data-i18n-en="Mar 2026 Launch">2026.03 正式上线</span></div><div class="kpi-value mono" data-i18n-zh="2 × 1/4 lb" data-i18n-en="2 × 1/4 lb">2 × 1/4 lb</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">在加拿大、欧洲试水成功后于 2026 年 3 月 3 日登陆美国，拉动高客单组合购买 <a class="cite-link" href="https://www.mensjournal.com/food/food-drink-mcdonalds-menu-changes-2026" target="_blank" rel="noopener noreferrer">新品核验 ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="全球餐厅覆盖网络" data-i18n-en="Global Footprint">全球餐厅覆盖网络</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="2025年末核验" data-i18n-en="YE2025 Verified">2025年末核验</span></div><div class="kpi-value mono" data-i18n-zh="45,356 店" data-i18n-en="45,356 Stores">45,356 店</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">超百家市场统一冷链与肉饼标准，实现全球供应链规模采购最低单位成本 <a class="cite-link" href="https://en.wikipedia.org/wiki/McDonald%27s" target="_blank" rel="noopener noreferrer">门店数 ↗</a></p></div></div></section>
+    </div>
+ </main>
+ </div>
+
+ <script src="../../_shared/828c0e2d3dc9f941.js"></script>
+</body>
+</html>

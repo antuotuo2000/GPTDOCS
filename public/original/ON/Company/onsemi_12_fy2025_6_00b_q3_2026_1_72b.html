@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>onsemi 安森美半导体全产品与服务 12 大板块深度研报中枢（FY2025 $6.00B · Q3 2026 $1.72B 全景拆解）| 数据中心</title>
+ <meta name="description" content="ON Semiconductor (onsemi, NASDAQ: ON) 全系列 12 大产品与服务矩阵深度商业研报中枢（FY2025 营收 $5,995.4M、Q3 2026 营收 $1,722.3M +11% YoY、Non-GAAP GM 41.2%、FCF $489M 28%）：覆盖 EliteSiC、GaNEXUS/vGaN、车规 IGBT/VE-Trac、AI 数据中心电源与 Ferric IVR、Treo 65nm BCD、PMIC/eFuse、10BASE-T1S、Hyperlux CIS、iToF/SPAD、Elite Power Simulator、定制 ASIC/代工及车规零缺陷 LTSA 服务。" />
+ <script src="../../_shared/8bb21429b650b62d.js"></script>
+ <link rel="stylesheet" href="../../_shared/da855b29faa4452c.css">
+
+
+ <link rel="stylesheet" href="../../_shared/33905cb27b41a624.css">
+
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI High-Clarity AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">ES</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+ <a class="crumb-link hide-sm" href="../../index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg><span data-i18n-zh="onsemi (NASDAQ: ON)" data-i18n-en="onsemi (NASDAQ: ON)">onsemi (NASDAQ: ON)</span></a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="01 · EliteSiC 碳化硅功率矩阵" data-i18n-en="01 · EliteSiC Power Portfolio">01 · EliteSiC 碳化硅功率矩阵</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="PSG 核心引擎 · Q3 26 $889.9M (+21%)" data-i18n-en="PSG Core · Q3 26 $889.9M (+21%)">PSG 核心引擎 · Q3 26 $889.9M (+21%)</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="衬底→模块垂直整合 · M4 新一代" data-i18n-en="Substrate-to-Module · M4 Gen">衬底→模块垂直整合 · M4 新一代</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换安森美产品…" aria-label="快速跳转章节或产品线" data-ph-zh="检索章节或切换安森美产品…" data-ph-en="Jump to section or onsemi product…" data-aria-zh="快速跳转章节或产品线" data-aria-en="Quick jump to chapter or onsemi product" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ 
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">ONSEMI CORE · #1 POWER ENGINE</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="01 · EliteSiC 碳化硅功率矩阵" data-i18n-en="01 · EliteSiC Power Portfolio">01 · EliteSiC 碳化硅功率矩阵</div>
+ <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="从 200mm 晶锭长晶到 EliteSiC M4 裸片与车规主驱模块 × 800V/900V EV 与储能/AI 高压供电核心底座" data-i18n-en="End-to-end 200mm SiC boule-to-module integration × EliteSiC M4 × 800V/900V EV traction &amp; AI/energy power">从 200mm 晶锭长晶到 EliteSiC M4 裸片与车规主驱模块 × 800V/900V EV 与储能/AI 高压供电核心底座</p>
+
+ <div class="sidebar-mini-kpis" id="sideMiniKpis">
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="所属事业部 (PSG Q3 26)" data-i18n-en="Segment (PSG Q3 26)">所属事业部 (PSG Q3 26)</span><span class="sidebar-mini-val mono" data-i18n-zh="$889.9M (+21% YoY)" data-i18n-en="$889.9M (+21% YoY)">$889.9M (+21% YoY)</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="FY2025 PSG 全年营收" data-i18n-en="FY2025 PSG Revenue">FY2025 PSG 全年营收</span><span class="sidebar-mini-val mono" data-i18n-zh="$2,805.1M (46.8%)" data-i18n-en="$2,805.1M (46.8%)">$2,805.1M (46.8%)</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="核心工艺与新品里程碑" data-i18n-en="Key Node &amp; Launch">核心工艺与新品里程碑</span><span class="sidebar-mini-val mono" data-i18n-zh="EliteSiC M4 · 200mm" data-i18n-en="EliteSiC M4 · 200mm">EliteSiC M4 · 200mm</span></div>
+ </div>
+ </div>
+
+ <!-- Unified MUI Navigation Card: Site Portal Nav + Report TOC -->
+ <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Site Links &amp; Table of Contents">
+ <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="ON">
+          <div class="co-side-head">
+            <span class="co-side-title mono">ON · 01/01</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="onsemi_12_fy2025_6_00b_q3_2026_1_72b.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="onsemi_12_fy2025_6_00b_q3_2026_1_72b.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (1)" data-i18n-en="All (1)">全部 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="onsemi_12_fy2025_6_00b_q3_2026_1_72b.html" title="onsemi 安森美半导体全产品与服务 12 大板块深度研报中枢（FY2025 $6.00B · Q3 2026 $1.72B 全景拆解）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="onsemi 安森美半导体全产品与服务 12 大板块深度研报中枢（FY2025 $6.00B · Q3 2026 $1.72B 全景拆解）" data-i18n-en="onsemi Semiconductor &amp; 12 Deep DiveReport (FY2025 $6.00B · Q3 2026 $1.72B OverviewBreakdown)">onsemi 安森美半导体全产品与服务 12 大板块深度研报中枢（FY2025 $6.00B · Q3 2026 $1.72B 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+ <div class="nav-divider"></div>
+
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary &amp; KPIs">执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="EliteSiC 碳化硅技术架构与矩阵" data-i18n-en="EliteSiC Power Architecture &amp; Stack">EliteSiC 碳化硅技术架构与矩阵</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大竞争支柱与五维雷达" data-i18n-en="4 Moat Pillars &amp; 5-Axis Radar">四大竞争支柱与五维雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="产品矩阵与全球竞品对标" data-i18n-en="Product &amp; Competitor Matrix">产品矩阵与全球竞品对标</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="单位经济学与生态复利模拟" data-i18n-en="Unit Economics &amp; LTV Sim">单位经济学与生态复利模拟</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="演进路线与 2026 关键战役" data-i18n-en="Roadmap &amp; 2026 Milestones">演进路线与 2026 关键战役</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="护城河与韧性核查清单" data-i18n-en="Moat Verification Checklist">护城河与韧性核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="SEC 财报与官方信源索引" data-i18n-en="SEC Filings &amp; Official Sources">SEC 财报与官方信源索引</span></a></li>
+ </ul>
+ </nav>
+
+ <!-- Compact MUI Page Utility Controls -->
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+ <!-- onsemi 12 All-Products & Services Portfolio Interactive Switcher -->
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="onsemi 12大全系列产品与服务切换台">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">ONSEMI 12 ALL-PRODUCTS &amp; SERVICES PORTFOLIO</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="安森美半导体 (onsemi) 全系列 12 大产品与服务板块深度研报中枢（100% 覆盖宽禁带功率 · 模拟连接 · 智能感知 · 仿真/代工/LTSA 服务）" data-i18n-en="onsemi 12 All-Products &amp; Services Deep-Dive Monograph Hub (100% Coverage Across PSG Power, AMG Analog, ISG Sensing &amp; Engineering Services)">安森美半导体 (onsemi) 全系列 12 大产品与服务板块深度研报中枢（100% 覆盖宽禁带功率 · 模拟连接 · 智能感知 · 仿真/代工/LTSA 服务）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" class="mui-btn" title="切换至上一产品线 (快捷键 [)" data-title-zh="切换至上一产品线 (快捷键 [)" data-title-en="Previous Product Line (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一产品" data-i18n-en="Prev">上一产品</span>
+ </button>
+ <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一产品线 (快捷键 ])" data-title-zh="切换至下一产品线 (快捷键 ])" data-title-en="Next Product Line (Shortcut ])">
+ <span data-i18n-zh="下一产品" data-i18n-en="Next">下一产品</span> <span>→</span>
+ </button>
+ <button type="button" id="hubFocusModeBtn" class="mui-btn" title="展开或收起 12 大产品切换矩阵" data-title-zh="展开或收起 12 大产品切换矩阵" data-title-en="Toggle 12-Product Switcher Grid">单品沉浸阅读 ▴</button>
+ 
+ </div>
+ </div>
+
+ <div class="hub-summary-strip">
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="FY2025 全年 | Q3 2026 营收" data-i18n-en="FY2025 | Q3 2026 Revenue">FY2025 全年 | Q3 2026 营收</span>
+ <span class="hub-sum-val mono">$6.00B | $1.72B (+11%)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="PSG 功率 | Non-GAAP 毛利率" data-i18n-en="PSG Power | Non-GAAP GM">PSG 功率 | Non-GAAP 毛利率</span>
+ <span class="hub-sum-val mono">$889.9M (+21%) · 41.2% GM</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="AMG 模拟 | ISG 智能感知" data-i18n-en="AMG Analog | ISG Sensing">AMG 模拟 | ISG 智能感知</span>
+ <span class="hub-sum-val mono">$597.3M (+9% QoQ) · $235.1M</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Q3 FCF | AI 数据中心电源" data-i18n-en="Q3 FCF | AI Data Center">Q3 FCF | AI 数据中心电源</span>
+ <span class="hub-sum-val mono">$489M (28%) · $180M (+175%)</span>
+ </div>
+ </div>
+
+ <div class="hub-cat-bar">
+ <div class="hub-cat-pills" role="tablist" aria-label="安森美产品线大类筛选">
+ <button type="button" class="hub-cat-btn active" data-cat-filter="all" data-i18n-zh="全部 12 大产品与服务" data-i18n-en="All 12 Pillars">全部 12 大产品与服务</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="power_wbg" data-i18n-zh="功率与宽禁带 PSG (01–04)" data-i18n-en="Power &amp; WBG (01–04)">功率与宽禁带 PSG (01–04)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="analog_sensing" data-i18n-zh="模拟与图像感知 AMG/ISG (05–08)" data-i18n-en="Analog &amp; CIS (05–08)">模拟与图像感知 AMG/ISG (05–08)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="depth_services" data-i18n-zh="3D 感知与服务生态 (09–12)" data-i18n-en="3D Sensing &amp; Services (09–12)">3D 感知与服务生态 (09–12)</button>
+ </div>
+ <span class="mono" style="font-size:0.73rem;color:var(--text-muted);" data-i18n-zh="提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节" data-i18n-en="Tip: Press [ / ] to cycle products · Press ⌘K to jump">提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节</span>
+ </div>
+
+ <div class="ip-pill-grid" id="ipPillGrid">
+ <button type="button" class="ip-pill-btn active" data-switch-ip="elitesic" aria-pressed="true"><span class="ip-pill-mono mono">ES</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="elitesic">01. EliteSiC 碳化硅功率矩阵</span><span class="ip-pill-meta mono" data-pill-meta="elitesic">PSG $890M/Q (+21%) · M4首发 · EliteSiC Power Portfolio</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="gan_vgan" aria-pressed="false"><span class="ip-pill-mono mono">GN</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="gan_vgan">02. GaNEXUS 与垂直氮化镓 (vGaN)</span><span class="ip-pill-meta mono" data-pill-meta="gan_vgan">40V–1200V · GM/GF合作 · GaNEXUS &amp; Vertical GaN</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="si_power_modules" aria-pressed="false"><span class="ip-pill-mono mono">PM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="si_power_modules">03. 车规 IGBT、MOSFET 与智能模块</span><span class="ip-pill-meta mono" data-pill-meta="si_power_modules">PSG 核心基盘 · VE-Trac/SPM · IGBTs, MOSFETs &amp; Power Modules</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ai_dc_power" aria-pressed="false"><span class="ip-pill-mono mono">AI</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ai_dc_power">04. AI 数据中心供电与 Ferric IVR</span><span class="ip-pill-meta mono" data-pill-meta="ai_dc_power">Q3 $180M (+175%) · 2030 &gt;$3B · AI Data Center Power &amp; Ferric</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="treo_platform" aria-pressed="false"><span class="ip-pill-mono mono">TR</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="treo_platform">05. Treo 65nm BCD 模拟与混合信号平台</span><span class="ip-pill-meta mono" data-pill-meta="treo_platform">65nm BCD · 1V–90V · Zonal · Treo 65nm BCD Analog Platform</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="pmic_drivers" aria-pressed="false"><span class="ip-pill-mono mono">GD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="pmic_drivers">06. 栅极驱动、电源管理 IC 与电路保护</span><span class="ip-pill-meta mono" data-pill-meta="pmic_drivers">AMG $597M/Q · 隔离驱动/eFuse · Gate Drivers, PMICs &amp; Protection</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ivn_connectivity" aria-pressed="false"><span class="ip-pill-mono mono">CN</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ivn_connectivity">07. 车载网络、接口芯片与无线连接</span><span class="ip-pill-meta mono" data-pill-meta="ivn_connectivity">10BASE-T1S · CAN/LIN · BLE · IVN, Interfaces &amp; Wireless Connectivity</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="hyperlux_cis" aria-pressed="false"><span class="ip-pill-mono mono">HL</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="hyperlux_cis">08. Hyperlux 图像传感器与汽车视觉</span><span class="ip-pill-meta mono" data-pill-meta="hyperlux_cis">ISG $928M · 150dB HDR ADAS · Hyperlux CMOS Image Sensors</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="depth_optical" aria-pressed="false"><span class="ip-pill-mono mono">DS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="depth_optical">09. iToF、SPAD/SiPM 与电感/超声传感</span><span class="ip-pill-meta mono" data-pill-meta="depth_optical">Hyperlux ID AF0130 · LiDAR · iToF, SPAD/SiPM, Inductive &amp; Ultrasonic</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="eda_simulation" aria-pressed="false"><span class="ip-pill-mono mono">ED</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="eda_simulation">10. Elite Power Simulator 与数字孪生服务</span><span class="ip-pill-meta mono" data-pill-meta="eda_simulation">在线仿真 · PLECS · Power Tree · Elite Power Simulator &amp; Design Services</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="foundry_asic" aria-pressed="false"><span class="ip-pill-mono mono">FD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="foundry_asic">11. 定制 ASIC/SoC、SiP 与晶圆代工服务</span><span class="ip-pill-meta mono" data-pill-meta="foundry_asic">300mm · SC5/SP65 · 军工医疗 · Custom ASIC/SoC, SiP &amp; Foundry Services</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="auto_reliability_ltsa" aria-pressed="false"><span class="ip-pill-mono mono">QA</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="auto_reliability_ltsa">12. 车规零缺陷认证、样品交付与长期供货服务</span><span class="ip-pill-meta mono" data-pill-meta="auto_reliability_ltsa">AEC-Q100 · ISO 26262 · LTSA · Automotive QA, Sample Fulfillment &amp; LTSA Services</span></span></button>
+ </div>
+ </section>
+
+ <!-- Dynamic Monograph Sections Host (00 - 07) -->
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="战略定评：全球唯二实现“长晶→外延→晶圆→封装模块”全栈垂直整合的车规 SiC 龙头" data-i18n-en="Verdict: Vertically Integrated SiC Leader from Boule Growth to Automotive Traction Modules">战略定评：全球唯二实现“长晶→外延→晶圆→封装模块”全栈垂直整合的车规 SiC 龙头</span><span class="mui-chip" data-i18n-zh="核心家族：EliteSiC M4 / M3e MOSFET · Bare Die · Cascode/Combo JFET · Si/SiC 混合模块" data-i18n-en="Lineup: EliteSiC M4 / M3e MOSFETs · Bare Die · Cascode/Combo JFETs · Si/SiC Hybrid Modules">核心家族：EliteSiC M4 / M3e MOSFET · Bare Die · Cascode/Combo JFET · Si/SiC 混合模块</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="最新基准：2026年11月 M4 发布 · NIO 900V 扩产" data-i18n-en="Milestone: Nov 2026 M4 Launch · NIO 900V Ramp">最新基准：2026年11月 M4 发布 · NIO 900V 扩产</span></div><div class="hero-overline mono"><span data-i18n-zh="CORE THESIS · 端到端垂直整合构筑良率与成本护城河 × Q3 2026 PSG 营收大涨 +21% 至 $8.90 亿" data-i18n-en="CORE THESIS · Substrate-to-Module Vertical Integration × Q3 2026 PSG Surges +21% YoY to $889.9M">CORE THESIS · 端到端垂直整合构筑良率与成本护城河 × Q3 2026 PSG 营收大涨 +21% 至 $8.90 亿</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">安森美半导体 <span class="gradient-accent">EliteSiC 碳化硅全栈功率矩阵</span>：如何以垂直整合领跑 800V EV、光伏储能与 AI 供电？</h1><p class="lead-prose" data-i18n-rich="lead_prose">作为安森美最大收入引擎 <strong>Power Solutions Group (PSG)</strong>（FY2025 营收 <strong>$2,805.1M</strong>，Q3 2026 同比飙升 <strong>+21% 至 $889.9M</strong> <a class="cite-link" href="https://investor.onsemi.com/news-releases/news-release-details/onsemi-reports-third-quarter-2026-results" target="_blank" rel="noopener noreferrer">Q3 2026 ↗</a>）的技术皇冠，<strong>EliteSiC</strong> 彻底打通了从 SiC 晶体生长、外延、150mm/200mm 晶圆制造到车规级功率模块的完整链条 <a class="cite-link" href="https://www.onsemi.com/products/silicon-carbide-sic-power" target="_blank" rel="noopener noreferrer">EliteSiC ↗</a>。2026 年 11 月发布的最新一代 <strong>EliteSiC M4</strong> 进一步推高功率密度与比导通电阻表现 <a class="cite-link" href="https://www.onsemi.com/company/newsroom/news-and-insights/onsemi-s-elitesic-m4-pushes-power-density-higher-as-energy-demands-grow" target="_blank" rel="noopener noreferrer">M4 Launch ↗</a>，并与蔚来 (NIO) 扩大 900V 电驱平台战略合作 <a class="cite-link" href="https://www.onsemi.com/company/newsroom/news-and-insights/onsemi-and-nio-expand-strategic-collaboration-to-accelerate-next-generation-900v-ev-platforms" target="_blank" rel="noopener noreferrer">NIO 900V ↗</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="衬底到模块垂直整合壁垒" data-i18n-en="End-to-End Vertical Integration">衬底到模块垂直整合壁垒</h3><p data-i18n-zh="自控 SiC 长晶炉与外延工艺，消除上游衬底卡脖子并确保车规级缺陷密度与交付稳定性。" data-i18n-en="undefined">自控 SiC 长晶炉与外延工艺，消除上游衬底卡脖子并确保车规级缺陷密度与交付稳定性。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="EliteSiC M4 与 M3e 性能代际领先" data-i18n-en="EliteSiC M4 &amp; M3e Density Leadership">EliteSiC M4 与 M3e 性能代际领先</h3><p data-i18n-zh="针对主驱逆变器与超充桩优化开关损耗与热阻，2026年11月M4家族进一步压缩芯片面积与封装体积。" data-i18n-en="undefined">针对主驱逆变器与超充桩优化开关损耗与热阻，2026年11月M4家族进一步压缩芯片面积与封装体积。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="横跨 EV、储能与 AI 数据中心" data-i18n-en="Tri-Market High-Voltage TAM">横跨 EV、储能与 AI 数据中心</h3><p data-i18n-zh="一套宽禁带技术同时覆盖 800V/900V 纯电主驱、光储逆变器、固态断路器与 AI 机架高压 PSU。" data-i18n-en="undefined">一套宽禁带技术同时覆盖 800V/900V 纯电主驱、光储逆变器、固态断路器与 AI 机架高压 PSU。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q3 2026 PSG 事业部营收" data-i18n-en="Q3 2026 PSG Revenue">Q3 2026 PSG 事业部营收</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="同比 +21%" data-i18n-en="+21% YoY">同比 +21%</span></div><div class="kpi-value mono" data-i18n-zh="$889.9M" data-i18n-en="$889.9M">$889.9M</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">占集团总营收 51.7%，环比再增 +7% <a class="cite-link" href="https://investor.onsemi.com/news-releases/news-release-details/onsemi-reports-third-quarter-2026-results" target="_blank" rel="noopener noreferrer">Q3 26 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY2025 PSG 全年营收" data-i18n-en="FY2025 PSG Revenue">FY2025 PSG 全年营收</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="占集团 46.8%" data-i18n-en="46.8% Share">占集团 46.8%</span></div><div class="kpi-value mono" data-i18n-zh="$2,805.1M" data-i18n-en="$2,805.1M">$2,805.1M</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">穿越行业去库存周期仍稳居近 $28.1 亿基本盘 <a class="cite-link" href="https://investor.onsemi.com/news-releases/news-release-details/onsemi-reports-fourth-quarter-and-full-year-2025-results-0" target="_blank" rel="noopener noreferrer">FY25 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="晶圆厂综合稼动率" data-i18n-en="Fab Utilization Rate">晶圆厂综合稼动率</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="Q3 2026 企稳" data-i18n-en="Q3 2026 Stabilized">Q3 2026 企稳</span></div><div class="kpi-value mono" data-i18n-zh="83%" data-i18n-en="83%">83%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">推动集团 Non-GAAP 毛利率连续 5 季回升至 41.2% <a class="cite-link" href="https://www.fool.com/earnings/call-transcripts/2026/11/02/on-semiconductor-on-q3-2026-earnings-call-transcript/" target="_blank" rel="noopener noreferrer">Q3 Call ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="SiC 产品耐压覆盖范围" data-i18n-en="Voltage Coverage">SiC 产品耐压覆盖范围</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="650V–1700V+" data-i18n-en="650V–1700V+">650V–1700V+</span></div><div class="kpi-value mono" data-i18n-zh="1200V 主流" data-i18n-en="1200V Core">1200V 主流</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">覆盖 650V/750V/1200V/1700V MOSFET、JFET 与模块 <a class="cite-link" href="https://www.onsemi.com/products/silicon-carbide-sic-power" target="_blank" rel="noopener noreferrer">Specs ↗</a>。</p></div></div></section>
+    </div>
+ </main>
+ </div>
+
+ <script src="../../_shared/dc93545a3e290564.js"></script>
+</body>
+</html>
