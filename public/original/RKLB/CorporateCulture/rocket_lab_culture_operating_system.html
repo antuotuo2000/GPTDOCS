@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-report-family="rklb" data-imported-report>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="火箭实验室 Rocket Lab Corporation (NASDAQ: RKLB) 企业文化与组织操作系统蓝图：跨洋全栈组织拓扑沙盘、2×2文化操作码与工程带宽罗盘、三代治理演进、全球航天组织基因竞技场与扩张熵增推演器（基于 HBR R2602K、FY2025 10-K、Q3 2026 10-Q 与 2026 DEF 14A）。" />
+  <title>Rocket Lab RKLB 企业文化与组织操作系统 | 数据中心</title>
+  
+  
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/rocket_lab_culture_operating_system.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">RKLB</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <span class="crumb-label hide-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </span>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="火箭实验室 Rocket Lab 企业文化与组织操作系统" data-i18n-en="Rocket Lab Organizational Operating System">火箭实验室 Rocket Lab 企业文化与组织操作系统</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">ORG OS · C0–C4</span>
+        <span class="mui-chip mui-chip-success mono hide-sm">SINGLE ERP · CHIEF ENGINEER</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索组织模块 C0–C4…" aria-label="快速跳转模块" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <button type="button" id="topDownloadBtn" class="mui-dl-btn" title="下载独立 HTML 网页">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-i18n-zh="下载 HTML" data-i18n-en="Download">下载 HTML</span>
+        </button>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <!-- Left Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="组织操作系统模块与套件导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">RKLB · ORG OS BLUEPRINT</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="Rocket Lab 组织操作系统" data-i18n-en="Rocket Lab Organizational OS">Rocket Lab 组织操作系统</div>
+        <p class="sidebar-subtitle" data-i18n-zh="解构 3,217 人如何跨美新德加四国协同运转百发火箭产线、55+ 颗在研军民卫星与 $80 亿 Iridium 并购整合并保持零官僚熵增" data-i18n-en="How 3,217 staff across US, NZ, Canada &amp; Germany run an 8-day rocket line, 55+ spacecraft in build, and $8B Iridium integration without bureaucratic bloat">解构 3,217 人如何跨美新德加四国协同运转百发火箭产线、55+ 颗在研军民卫星与 $80 亿 Iridium 并购整合并保持零官僚熵增</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="操作系统内核" data-i18n-en="OS Kernel">操作系统内核</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="首席工程师 + 单一ERP" data-i18n-en="Chief Eng + Single ERP">首席工程师 + 单一ERP</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="在研整星 / 造箭节拍" data-i18n-en="Sats in Build / Cadence">在研整星 / 造箭节拍</span>
+            <span class="sidebar-mini-val mono">55+ Sats · 8 Days</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="9M26 毛利覆盖研发率" data-i18n-en="9M26 GP / R&amp;D Cover">9M26 毛利覆盖研发率</span>
+            <span class="sidebar-mini-val mono">96.1% GAAP / 109% NG</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="套件导航与模块目录">
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="RKLB"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-group-label" data-i18n-zh="操作系统架构目录 (C0–C4)" data-i18n-en="OS Architecture (C0–C4)">操作系统架构目录 (C0–C4)</div>
+        <ul id="tocList" class="mui-nav-list">
+          <li><a class="mui-nav-link active" href="#sec-c0"><span class="nav-idx mono">C0</span><span data-i18n-zh="跨洋全栈组织拓扑沙盘" data-i18n-en="Org Topology Sandbox">跨洋全栈组织拓扑沙盘</span></a></li>
+          <li><a class="mui-nav-link" href="#sec-c1"><span class="nav-idx mono">C1</span><span data-i18n-zh="2×2 操作码与工程带宽罗盘" data-i18n-en="2×2 Codes &amp; Bandwidth Dial">2×2 操作码与工程带宽罗盘</span></a></li>
+          <li><a class="mui-nav-link" href="#sec-c2"><span class="nav-idx mono">C2</span><span data-i18n-zh="三代治理演进与研发自造血" data-i18n-en="3-Era Governance Scrubber">三代治理演进与研发自造血</span></a></li>
+          <li><a class="mui-nav-link" href="#sec-c3"><span class="nav-idx mono">C3</span><span data-i18n-zh="全球组织基因竞技与阴阳对立" data-i18n-en="Genome Arena &amp; Yin-Yang">全球组织基因竞技与阴阳对立</span></a></li>
+          <li><a class="mui-nav-link" href="#sec-c4"><span class="nav-idx mono">C4</span><span data-i18n-zh="扩张熵增推演与六大铁律审计" data-i18n-en="Entropy Sim &amp; 6-Law Audit">扩张熵增推演与六大铁律审计</span></a></li>
+        </ul>
+      </nav>
+
+      
+    </aside>
+
+    <!-- Main Blueprint Modules -->
+    <main class="main-col main-content">
+      <!-- C0: Topology Hero + Interactive Sandbox Switcher -->
+      <section id="sec-c0" class="os-module mui-paper">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+          <span class="mui-chip mui-chip-primary mono">MODULE C0 · ORG TOPOLOGY KERNEL</span>
+          <span class="mui-chip mui-chip-success mono">3,217 GLOBAL ENGINEERS &amp; BUILDERS</span>
+          <span class="mui-chip mui-chip-violet mono">US · NZ · CANADA · GERMANY</span>
+        </div>
+        <span class="os-overline">ORGANIZATIONAL OPERATING SYSTEM BLUEPRINT</span>
+        <h1 class="os-h1" data-i18n-zh="火箭实验室 Rocket Lab 组织操作系统蓝图：以“首席工程师直管 + 单一 ERP 垂直脊柱”重构太空与防务工业生产力" data-i18n-en="Rocket Lab Organizational Operating System: Rewiring Space &amp; Defense Productivity via Chief-Engineer Governance &amp; Single-ERP Verticality">火箭实验室 Rocket Lab 组织操作系统蓝图：以“首席工程师直管 + 单一 ERP 垂直脊柱”重构太空与防务工业生产力</h1>
+        <p class="os-lead">
+          <span data-i18n-zh="为什么传统军工巨头造一颗国防跟踪卫星需要 5–7 年和数亿美元成本加成预算，而 Rocket Lab 能在固定总价下同时推进 55+ 颗在研航天器、保持每 8 天造 1 枚 Electron 火箭，并斩获超 $35.7 亿在手订单？答案不在于某一项孤立专利，而在于其底层“组织操作系统（Organizational OS）”：用职能工程主线取代事业部割据，把 7 家并购硬科技子公司强制熔接在同一套数字制造底座之上" data-i18n-en="Why do legacy defense primes take 5–7 years on cost-plus budgets to field defense satellites while Rocket Lab builds 55+ spacecraft concurrently under firm-fixed-price contracts, produces an Electron rocket every 8 days, and scales backlog to $3.57B? The answer lies in its Organizational OS: replacing divisional profit-center silos with Chief-Engineer direct ownership and one unified ERP spine across 7 acquired subsystem leaders">为什么传统军工巨头造一颗国防跟踪卫星需要 5–7 年和数亿美元成本加成预算，而 Rocket Lab 能在固定总价下同时推进 55+ 颗在研航天器、保持每 8 天造 1 枚 Electron 火箭，并斩获超 $35.7 亿在手订单？答案不在于某一项孤立专利，而在于其底层“组织操作系统（Organizational OS）”：用职能工程主线取代事业部割据，把 7 家并购硬科技子公司强制熔接在同一套数字制造底座之上</span>
+          <a class="cite-link" href="https://hbsp.harvard.edu/product/R2602K-PDF-ENG" target="_blank" rel="noopener noreferrer">HBR R2602K ↗</a>
+          <a class="cite-link" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>。
+        </p>
+
+        <div class="quote-ribbon">
+          <span data-i18n-zh="与拥有无限私人资本的对手同台竞争，迫使我们把每一美元资本约束都锤炼成组织效率武器：拒绝空谈演示稿，只用入轨硬件说话；把关键供应链握在自己手里，做聪明而可靠的快，而不是鲁莽的快。" data-i18n-en="Competing against rivals with virtually unlimited personal fortunes forced us to turn capital discipline into an organizational weapon: ship working orbital hardware rather than slideware, own critical bottlenecks vertically, and practice smart speed without compromising flight reliability.">与拥有无限私人资本的对手同台竞争，迫使我们把每一美元资本约束都锤炼成组织效率武器：拒绝空谈演示稿，只用入轨硬件说话；把关键供应链握在自己手里，做聪明而可靠的快，而不是鲁莽的快。</span>
+          <cite data-i18n-zh="—— 彼得·贝克爵士 (Sir Peter Beck) 思想精髓提炼，参见《哈佛商业评论》2026年3–4月刊 (R2602K)" data-i18n-en="— Paraphrased synthesis of Sir Peter Beck's operating philosophy in Harvard Business Review (Mar/Apr 2026, R2602K)">—— 彼得·贝克爵士 (Sir Peter Beck) 思想精髓提炼，参见《哈佛商业评论》2026年3–4月刊 (R2602K)</cite>
+        </div>
+
+        <div class="topo-box">
+          <div class="topo-head">
+            <strong style="font-size:0.94rem;" data-i18n-zh="交互式组织拓扑对照沙盘：点击切换两类航天工业架构" data-i18n-en="Interactive Org Topology Sandbox: Toggle Aerospace Operating Architectures">交互式组织拓扑对照沙盘：点击切换两类航天工业架构</strong>
+            <div class="mui-segmented" id="topoSwitch">
+              <button type="button" class="mui-seg-btn active" data-topo="rklb" data-i18n-zh="Rocket Lab：端到端垂直脊柱 + 单一ERP" data-i18n-en="Rocket Lab: Vertical Spine + Single ERP">Rocket Lab：端到端垂直脊柱 + 单一ERP</button>
+              <button type="button" class="mui-seg-btn" data-topo="legacy" data-i18n-zh="传统军工巨头：四级分包 + 成本加成孤岛" data-i18n-en="Legacy Prime: 4-Tier Cost-Plus Silos">传统军工巨头：四级分包 + 成本加成孤岛</button>
+            </div>
+          </div>
+          <div class="topo-stage" id="topoStage"></div>
+          <div class="topo-verdict" id="topoVerdict"></div>
+        </div>
+      </section>
+
+      <!-- C1: 2x2 Cultural Operating Codes Bento + Engineering Bandwidth Dial -->
+      <section id="sec-c1" class="os-module mui-paper">
+        <span class="os-overline">MODULE C1 · 2×2 OPERATING CODES &amp; BANDWIDTH DIAL</span>
+        <h2 class="os-h2" data-i18n-zh="四大文化操作码（2×2 Bento）与管理层工程带宽罗盘" data-i18n-en="2×2 Cultural Operating Codes &amp; Engineering Bandwidth Dial">四大文化操作码（2×2 Bento）与管理层工程带宽罗盘</h2>
+        <p class="os-lead" data-i18n-zh="点击左侧 2×2 象限任一文化操作码，右侧罗盘与四维工程带宽条将实时解析 Rocket Lab 如何在“自主掌控（Owning）、硬件迭代（Iterating）、并购内化（Integrating）与授权执行（Delegating）”之间分配组织算力。" data-i18n-en="Click any quadrant in the 2×2 Operating Code grid to inspect how Rocket Lab allocates organizational bandwidth across Owning, Iterating, Integrating, and Delegating.">点击左侧 2×2 象限任一文化操作码，右侧罗盘与四维工程带宽条将实时解析 Rocket Lab 如何在“自主掌控（Owning）、硬件迭代（Iterating）、并购内化（Integrating）与授权执行（Delegating）”之间分配组织算力。</p>
+
+        <div class="split-75">
+          <div class="quad-grid" id="quadGrid">
+            <button type="button" class="quad-card active" data-quad="0">
+              <span class="quad-code mono">CODE Q1 · FIERCE EFFICIENCY</span>
+              <h3 data-i18n-zh="极致资本效率 × 8号铁丝工程学" data-i18n-en="Fierce Efficiency × No. 8 Wire">极致资本效率 × 8号铁丝工程学</h3>
+              <p data-i18n-zh="拒绝豪华总部与冗余中台：破产拍卖抄底长滩五轴产线、自研自动化铺丝设备，用同行 1/5 资本开支跑通轨道火箭与卫星量产。" data-i18n-en="Zero vanity spend: acquire distressed CNC factories at pennies on the dollar and engineer custom robotic tooling at 1/5 peer CapEx.">拒绝豪华总部与冗余中台：破产拍卖抄底长滩五轴产线、自研自动化铺丝设备，用同行 1/5 资本开支跑通轨道火箭与卫星量产。</p>
+            </button>
+            <button type="button" class="quad-card" data-quad="1">
+              <span class="quad-code mono">CODE Q2 · SHOW, DON'T TELL</span>
+              <h3 data-i18n-zh="硬件实证主义 × 吃帽认错透明门禁" data-i18n-en="Show Don't Tell × Radical Candor">硬件实证主义 × 吃帽认错透明门禁</h3>
+              <p data-i18n-zh="战略预判错了就公开吃帽转向 Neutron；外包前穹顶发现孔隙就主动公告推迟至2027年并收回内制，绝不带隐患上发射台。" data-i18n-en="Eat your hat publicly when market physics shift; halt and internalize composite dome production when contractor voids appear.">战略预判错了就公开吃帽转向 Neutron；外包前穹顶发现孔隙就主动公告推迟至2027年并收回内制，绝不带隐患上发射台。</p>
+            </button>
+            <button type="button" class="quad-card" data-quad="2">
+              <span class="quad-code mono">CODE Q3 · SMART SPEED</span>
+              <h3 data-i18n-zh="聪明速度 × 零委员会扁平拍板" data-i18n-en="Smart Speed × Zero-Committee Execution">聪明速度 × 零委员会扁平拍板</h3>
+              <p data-i18n-zh="砍掉多级汇报链，系统主任工程师直通 CEO/COO；依托自有玛希亚 LC-1 与沃洛普斯发射场实现每 8 天出厂 1 枚火箭。" data-i18n-en="Lead responsible engineers connect directly to Chief Engineer &amp; COO; private launch ranges sustain an 8-day rocket build tempo.">砍掉多级汇报链，系统主任工程师直通 CEO/COO；依托自有玛希亚 LC-1 与沃洛普斯发射场实现每 8 天出厂 1 枚火箭。</p>
+            </button>
+            <button type="button" class="quad-card" data-quad="3">
+              <span class="quad-code mono">CODE Q4 · M&amp;A VERTICAL PLAYBOOK</span>
+              <h3 data-i18n-zh="纪律并购 × 90天部组件垂直内化" data-i18n-en="Disciplined M&amp;A × 90-Day Integration">纪律并购 × 90天部组件垂直内化</h3>
+              <p data-i18n-zh="专挑拥有太空飞行遗产但缺量产能力的隐形冠军（SolAero/Sinclair/Mynaric/GEOST），注入自动化制造纪律并保留外部商售收入。" data-i18n-en="Acquire flight-proven bottleneck suppliers, inject high-rate manufacturing discipline within 90 days, and sell both internally and externally.">专挑拥有太空飞行遗产但缺量产能力的隐形冠军（SolAero/Sinclair/Mynaric/GEOST），注入自动化制造纪律并保留外部商售收入。</p>
+            </button>
+          </div>
+
+          <div class="dial-panel" id="dialInspector">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <strong id="dialTitle" style="font-size:0.92rem;">CODE Q1 · 工程带宽配置罗盘</strong>
+              <span class="mui-chip mui-chip-primary mono" id="dialBadge">CAPEX DISCIPLINE</span>
+            </div>
+            <div class="canvas-box" style="height:175px;"><canvas id="dialCanvas"></canvas></div>
+            <div class="bw-bars">
+              <div class="bw-row">
+                <div class="bw-lbl"><span data-i18n-zh="核心瓶颈自研掌控 (Owning)" data-i18n-en="Bottleneck Owning">核心瓶颈自研掌控 (Owning)</span><b class="mono" id="bwVal0">92%</b></div>
+                <div class="bw-track"><div class="bw-fill" id="bwFill0" style="width:92%;"></div></div>
+              </div>
+              <div class="bw-row">
+                <div class="bw-lbl"><span data-i18n-zh="高频硬件实测迭代 (Iterating)" data-i18n-en="Hardware Iterating">高频硬件实测迭代 (Iterating)</span><b class="mono" id="bwVal1">88%</b></div>
+                <div class="bw-track"><div class="bw-fill" id="bwFill1" style="width:88%;"></div></div>
+              </div>
+              <div class="bw-row">
+                <div class="bw-lbl"><span data-i18n-zh="跨基地ERP垂直整合 (Integrating)" data-i18n-en="Single-ERP Integrating">跨基地ERP垂直整合 (Integrating)</span><b class="mono" id="bwVal2">90%</b></div>
+                <div class="bw-track"><div class="bw-fill" id="bwFill2" style="width:90%;"></div></div>
+              </div>
+              <div class="bw-row">
+                <div class="bw-lbl"><span data-i18n-zh="一线主任工程师授权 (Delegating)" data-i18n-en="Frontline Lead Delegating">一线主任工程师授权 (Delegating)</span><b class="mono" id="bwVal3">84%</b></div>
+                <div class="bw-track"><div class="bw-fill" id="bwFill3" style="width:84%;"></div></div>
+              </div>
+            </div>
+            <p id="dialDesc" style="font-size:0.77rem;color:var(--text-secondary);line-height:1.58;"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- C2: 3-Era Governance Scrubber & Dual-View Canvas -->
+      <section id="sec-c2" class="os-module mui-paper">
+        <span class="os-overline">MODULE C2 · 3-ERA GOVERNANCE SCRUBBER &amp; R&amp;D SELF-FUNDING</span>
+        <h2 class="os-h2" data-i18n-zh="三代组织治理演进与“毛利覆盖研发”自造血拐点" data-i18n-en="3-Era Governance Scrubber &amp; Gross-Profit-to-R&amp;D Self-Funding Inflection">三代组织治理演进与“毛利覆盖研发”自造血拐点</h2>
+        <p class="os-lead">
+          <span data-i18n-zh="切换上方时代标签审视治理内核跃迁：截至 2026 年前九个月（9M 2026），Rocket Lab 的 GAAP 毛利（$2.511 亿）已覆盖高达 96.1% 的 GAAP 研发费用（$2.613 亿），Non-GAAP 毛利（$2.859 亿）对 Non-GAAP 研发的覆盖率更达 109.4%——标志着公司即使在 Neutron 研发峰值期也已跨越“主业毛利养活前沿研发”的制度拐点" data-i18n-en="Scrub across three organizational eras below: in 9M 2026, Rocket Lab's GAAP Gross Profit ($251.1M) covered 96.1% of GAAP R&amp;D ($261.3M), while Non-GAAP GP ($285.9M) exceeded R&amp;D at 109.4% coverage—proving Space Systems + Electron gross profit now self-funds peak Neutron R&amp;D">切换上方时代标签审视治理内核跃迁：截至 2026 年前九个月（9M 2026），Rocket Lab 的 GAAP 毛利（$2.511 亿）已覆盖高达 96.1% 的 GAAP 研发费用（$2.613 亿），Non-GAAP 毛利（$2.859 亿）对 Non-GAAP 研发的覆盖率更达 109.4%——标志着公司即使在 Neutron 研发峰值期也已跨越“主业毛利养活前沿研发”的制度拐点</span>
+          <a class="cite-link" href="https://sec-api.io/insights/rocket-lab-rklb-q3-2026-earnings-3-57bn-backlog-neutron-moved-to-2027-and-the-pending-iridium-deal-sec-filing-analysis" target="_blank" rel="noopener noreferrer">9M 2026 10-Q 数据 ↗</a>。
+        </p>
+
+        <div class="mui-segmented" id="eraTabs" style="margin-bottom:16px;">
+          <button type="button" class="mui-seg-btn" data-era="0" data-i18n-zh="Era I · 2006–2016 极客车间内核" data-i18n-en="Era I · 2006–2016 Kiwi Garage Kernel">Era I · 2006–2016 极客车间内核</button>
+          <button type="button" class="mui-seg-btn" data-era="1" data-i18n-zh="Era II · 2017–2024 双总部并购底盘" data-i18n-en="Era II · 2017–2024 Dual-Hub Roll-Up">Era II · 2017–2024 双总部并购底盘</button>
+          <button type="button" class="mui-seg-btn active" data-era="2" data-i18n-zh="Era III · 2025–2026+ 全栈防务与星座OS" data-i18n-en="Era III · 2025–2026+ Prime &amp; Constellation OS">Era III · 2025–2026+ 全栈防务与星座OS</button>
+        </div>
+
+        <div class="split-66">
+          <div class="sub-panel" id="eraCard"></div>
+          <div class="sub-panel">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+              <strong style="font-size:0.92rem;" data-i18n-zh="组织杠杆演进图谱 (2021–2026)" data-i18n-en="Organizational Leverage Trajectory (2021–2026)">组织杠杆演进图谱 (2021–2026)</strong>
+              <div class="mui-segmented" id="eraChartTabs">
+                <button type="button" class="mui-seg-btn active" data-era-chart="rdgp" data-i18n-zh="毛利覆盖研发率 (%)" data-i18n-en="GP / R&amp;D Coverage (%)">毛利覆盖研发率 (%)</button>
+                <button type="button" class="mui-seg-btn" data-era-chart="revemp" data-i18n-zh="人均创收跃升 ($K)" data-i18n-en="Rev / Employee ($K)">人均创收跃升 ($K)</button>
+              </div>
+            </div>
+            <div class="canvas-box"><canvas id="eraCanvas"></canvas></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C3: Global Org Genome Arena & Yin-Yang Contrasts -->
+      <section id="sec-c3" class="os-module mui-paper">
+        <span class="os-overline">MODULE C3 · GLOBAL ORG GENOME ARENA &amp; YIN-YANG CONTRASTS</span>
+        <h2 class="os-h2" data-i18n-zh="全球航天组织基因竞技场与三大“阴阳对立”边界" data-i18n-en="Global Space Org Genome Arena &amp; 3 Yin-Yang Structural Contrasts">全球航天组织基因竞技场与三大“阴阳对立”边界</h2>
+        <p class="os-lead">
+          <span data-i18n-zh="任何卓越组织操作系统都由其“坚决不做什么”所定义。通过对比全球 7 家代表性太空与国防企业的增速/利润率分布，并拆解三组结构性阴阳张力，可以清晰识别 Rocket Lab 组织基因的护城河边界" data-i18n-en="Great organizational operating systems are defined as much by what they refuse to do as what they pursue. Comparing 7 aerospace peers alongside three Yin-Yang contrasts clarifies Rocket Lab's structural boundaries">任何卓越组织操作系统都由其“坚决不做什么”所定义。通过对比全球 7 家代表性太空与国防企业的增速/利润率分布，并拆解三组结构性阴阳张力，可以清晰识别 Rocket Lab 组织基因的护城河边界</span>
+          <a class="cite-link" href="https://newmarketpitch.com/blogs/news/space-economy-top-revenue" target="_blank" rel="noopener noreferrer">2026 太空营收对标 ↗</a>。
+        </p>
+
+        <div class="split-75">
+          <div class="sub-panel">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+              <strong style="font-size:0.92rem;" data-i18n-zh="七大太空与防务企业组织效率竞技场" data-i18n-en="7-Peer Space &amp; Defense Genome Arena">七大太空与防务企业组织效率竞技场</strong>
+              <div class="mui-segmented" id="genomeTabs">
+                <button type="button" class="mui-seg-btn active" data-gen-tab="growth" data-i18n-zh="营收同比增速 (%)" data-i18n-en="YoY Revenue Growth (%)">营收同比增速 (%)</button>
+                <button type="button" class="mui-seg-btn" data-gen-tab="margin" data-i18n-zh="GAAP毛利 / 经营利润率 (%)" data-i18n-en="GAAP GM / Op Margin (%)">GAAP毛利 / 经营利润率 (%)</button>
+              </div>
+            </div>
+            <div class="canvas-box"><canvas id="genomeCanvas"></canvas></div>
+          </div>
+
+          <div class="yy-stack">
+            <div class="yy-card">
+              <h4 data-i18n-zh="对立一：Rocket Lab vs 传统成本加成军工 (洛马/诺格/波音)" data-i18n-en="Contrast 1: Rocket Lab vs. Cost-Plus Legacy Primes">对立一：Rocket Lab vs 传统成本加成军工 (洛马/诺格/波音)</h4>
+              <p data-i18n-zh="【阳】Rocket Lab 拥抱固定总价合同与自研标准平台（Flatellite/Lightning），省下的每一分 BOM 成本归属股东毛利；【阴】传统巨头依赖客户全额报销研发超支，组织激励天然滑向人员臃肿与延期。" data-i18n-en="[Yang] Rocket Lab thrives on Firm-Fixed-Price contracts and modular platforms where BOM savings expand margin; [Yin] Cost-Plus primes are structurally incentivized toward headcount bloat and multi-year delays.">【阳】Rocket Lab 拥抱固定总价合同与自研标准平台（Flatellite/Lightning），省下的每一分 BOM 成本归属股东毛利；【阴】传统巨头依赖客户全额报销研发超支，组织激励天然滑向人员臃肿与延期。</p>
+            </div>
+            <div class="yy-card">
+              <h4 data-i18n-zh="对立二：Rocket Lab vs SpaceX" data-i18n-en="Contrast 2: Rocket Lab vs. SpaceX">对立二：Rocket Lab vs SpaceX</h4>
+              <p data-i18n-zh="【阳】Rocket Lab 坚持开放商售部组件生态（向全行业出售太阳翼、飞轮与激光终端）及上市公司透明治理（85.7%独董）；【阴】SpaceX 封闭内部供应链并与客户在星座端正面竞争，迫使众多卫星商与盟国机构将 Rocket Lab 视为核心独立替代方。" data-i18n-en="[Yang] Rocket Lab operates as an open merchant supplier of solar/wheels/laser links with 85.7% independent public governance; [Yin] SpaceX's closed stack competes directly with satellite customers, driving constellation operators to RKLB.">【阳】Rocket Lab 坚持开放商售部组件生态（向全行业出售太阳翼、飞轮与激光终端）及上市公司透明治理（85.7%独董）；【阴】SpaceX 封闭内部供应链并与客户在星座端正面竞争，迫使众多卫星商与盟国机构将 Rocket Lab 视为核心独立替代方。</p>
+            </div>
+            <div class="yy-card">
+              <h4 data-i18n-zh="对立三：Rocket Lab vs 纯小型火箭新创公司" data-i18n-en="Contrast 3: Rocket Lab vs. Pure-Play Small Launchers">对立三：Rocket Lab vs 纯小型火箭新创公司</h4>
+              <p data-i18n-zh="【阳】早于同行五年看清“单靠小火箭天花板有限”，果断将发射作为信任漏斗，构筑 80.2% 营收占比的太空系统与 $80亿 Iridium 星座服务；【阴】纯卖发射船票的新创普遍倒在固定制造摊销与现金流枯竭前夜。" data-i18n-en="[Yang] Recognized early that small launch TAM alone is capped, turning Electron into a funnel for 80.2% Space Systems revenue and Iridium recurring cash flow; [Yin] Launch-only peers struggled with under-absorbed factory overhead.">【阳】早于同行五年看清“单靠小火箭天花板有限”，果断将发射作为信任漏斗，构筑 80.2% 营收占比的太空系统与 $80亿 Iridium 星座服务；【阴】纯卖发射船票的新创普遍倒在固定制造摊销与现金流枯竭前夜。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cc-table-wrap">
+          <table class="cc-table">
+            <thead>
+              <tr>
+                <th data-i18n-zh="公司" data-i18n-en="Company">公司</th>
+                <th data-i18n-zh="核心操作系统内核" data-i18n-en="OS Kernel">核心操作系统内核</th>
+                <th data-i18n-zh="供应链垂直度" data-i18n-en="Supply Verticality">供应链垂直度</th>
+                <th data-i18n-zh="合同与变现模型" data-i18n-en="Monetization Model">合同与变现模型</th>
+                <th data-i18n-zh="治理对齐特征" data-i18n-en="Governance Alignment">治理对齐特征</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-rklb">
+                <td><a href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts" target="_blank" rel="noopener noreferrer"><strong>Rocket Lab (RKLB) ↗</strong></a></td>
+                <td data-i18n-zh="首席工程师 + 单一ERP跨洋脊柱" data-i18n-en="Chief Engineer + Single-ERP Spine">首席工程师 + 单一ERP跨洋脊柱</td>
+                <td data-i18n-zh="极高（自研+7次并购内化）" data-i18n-en="Very High (In-house + 7 M&amp;As)">极高（自研+7次并购内化）</td>
+                <td data-i18n-zh="固定总价整星/发射 + 拟并Iridium订阅" data-i18n-en="FFP Prime/Launch + Pending IRDM SaaS">固定总价整星/发射 + 拟并Iridium订阅</td>
+                <td data-i18n-zh="$1 CEO年薪 · 85.7%独董 · 90.5%赞成率" data-i18n-en="$1 CEO Base · 85.7% Ind. · 90.5% Say-on-Pay">$1 CEO年薪 · 85.7%独董 · 90.5%赞成率</td>
+              </tr>
+              <tr>
+                <td><a href="https://newmarketpitch.com/blogs/news/space-economy-top-revenue" target="_blank" rel="noopener noreferrer">SpaceX ↗</a></td>
+                <td data-i18n-zh="创始人绝对集权极速试错制" data-i18n-en="Founder Command Rapid Iteration">创始人绝对集权极速试错制</td>
+                <td data-i18n-zh="极高（封闭全自研体系）" data-i18n-en="Extreme (Closed Proprietary Stack)">极高（封闭全自研体系）</td>
+                <td data-i18n-zh="Starlink 消费者/企业订阅 + 商业发射" data-i18n-en="Starlink Subscriptions + Launch">Starlink 消费者/企业订阅 + 商业发射</td>
+                <td data-i18n-zh="超级投票权集中 · 资本密集冲锋" data-i18n-en="Super-Voting Control · Mega-CapEx">超级投票权集中 · 资本密集冲锋</td>
+              </tr>
+              <tr>
+                <td><a href="https://newmarketpitch.com/blogs/news/space-economy-top-revenue" target="_blank" rel="noopener noreferrer">Planet Labs (PL) ↗</a></td>
+                <td data-i18n-zh="敏捷立方星迭代 + 云端地球数据SaaS" data-i18n-en="Agile Dove Fleet + EO Data SaaS">敏捷立方星迭代 + 云端地球数据SaaS</td>
+                <td data-i18n-zh="中等（自造遥感星，外购发射）" data-i18n-en="Medium (In-house EO sats, external launch)">中等（自造遥感星，外购发射）</td>
+                <td data-i18n-zh="55.4% 高毛利遥感数据订阅" data-i18n-en="55.4% GM Geospatial Data Subscriptions">55.4% 高毛利遥感数据订阅</td>
+                <td data-i18n-zh="公益企业(PBC)使命驱动架构" data-i18n-en="Public Benefit Corp (PBC) Charter">公益企业(PBC)使命驱动架构</td>
+              </tr>
+              <tr>
+                <td><a href="https://newmarketpitch.com/blogs/news/space-economy-top-revenue" target="_blank" rel="noopener noreferrer">Redwire (RDW) ↗</a></td>
+                <td data-i18n-zh="多子公司并购联邦制平台" data-i18n-en="Federated M&amp;A Holding Model">多子公司并购联邦制平台</td>
+                <td data-i18n-zh="中高（专攻展开机构/太阳翼）" data-i18n-en="Med-High (Deployables &amp; Solar)">中高（专攻展开机构/太阳翼）</td>
+                <td data-i18n-zh="宇航子系统分包供货 (24.1% GM)" data-i18n-en="Tier-1/2 Subsystem Supplier (24.1% GM)">宇航子系统分包供货 (24.1% GM)</td>
+                <td data-i18n-zh="私募股权整合背景驱动" data-i18n-en="PE Roll-Up Heritage">私募股权整合背景驱动</td>
+              </tr>
+              <tr>
+                <td><a href="https://sec-api.io/insights/firefly-aerospace-fly-q3-2026-earnings-revenue-110-7m-backlog-1-67bn-ast-deal-about-1-3bn-sec-filing-analysis" target="_blank" rel="noopener noreferrer">Firefly Aerospace (FLY) ↗</a></td>
+                <td data-i18n-zh="快速响应运载与轨间飞行器工程制" data-i18n-en="Responsive Launch &amp; OTV Engineering">快速响应运载与轨间飞行器工程制</td>
+                <td data-i18n-zh="中高（碳纤维箭体与发动机自制）" data-i18n-en="Med-High (In-house composites/engines)">中高（碳纤维箭体与发动机自制）</td>
+                <td data-i18n-zh="商业星座发射 + NASA月球任务 (22.9% GM)" data-i18n-en="Constellation Launch + CLPS (22.9% GM)">商业星座发射 + NASA月球任务 (22.9% GM)</td>
+                <td data-i18n-zh="新晋IPO扩张治理架构" data-i18n-en="Newly Listed Growth Governance">新晋IPO扩张治理架构</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm" target="_blank" rel="noopener noreferrer">Lockheed Martin Space ↗</a></td>
+                <td data-i18n-zh="大型事业部矩阵 + 四级外部供应商网" data-i18n-en="Divisional Matrix + 4-Tier Supply Web">大型事业部矩阵 + 四级外部供应商网</td>
+                <td data-i18n-zh="偏低（高度依赖外部子系统分包）" data-i18n-en="Low (Heavy Tier-1/2 Subcontracting)">偏低（高度依赖外部子系统分包）</td>
+                <td data-i18n-zh="成本加成 + 多年战略防务合同 (9.5% OpM)" data-i18n-en="Cost-Plus &amp; Strategic Defense (9.5% OpM)">成本加成 + 多年战略防务合同 (9.5% OpM)</td>
+                <td data-i18n-zh="职业经理人稳健分红回购导向" data-i18n-en="Institutional Dividend/Buyback Focus">职业经理人稳健分红回购导向</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- C4: Scaling & M&A Entropy Simulator + 6-Law OS Audit -->
+      <section id="sec-c4" class="os-module mui-paper">
+        <span class="os-overline">MODULE C4 · SCALING ENTROPY SIMULATOR &amp; 6-LAW OS AUDIT</span>
+        <h2 class="os-h2" data-i18n-zh="规模扩张与并购熵增推演器 × 六大组织铁律健康度审计" data-i18n-en="Scaling &amp; M&amp;A Entropy Simulator × 6-Law Organizational OS Audit">规模扩张与并购熵增推演器 × 六大组织铁律健康度审计</h2>
+        <p class="os-lead" data-i18n-zh="随着员工突破 3,217 人并即将吸纳 Iridium 全球通信团队，Rocket Lab 面临的核心组织命题是如何抵御“大企业官僚熵增”。拖动左侧滑块模拟并行项目数、部组件内化率与并购整合时滞对组织效率曲线的冲击；右侧勾选六大铁律完成 OS 健康度自检。" data-i18n-en="As Rocket Lab scales past 3,217 employees toward closing the ~$8.0B Iridium merger, its primary challenge is resisting bureaucratic entropy. Adjust the sliders to stress-test synergy, velocity, and margin impact, and audit the 6 OS Laws on the right.">随着员工突破 3,217 人并即将吸纳 Iridium 全球通信团队，Rocket Lab 面临的核心组织命题是如何抵御“大企业官僚熵增”。拖动左侧滑块模拟并行项目数、部组件内化率与并购整合时滞对组织效率曲线的冲击；右侧勾选六大铁律完成 OS 健康度自检。</p>
+
+        <div class="split-57">
+          <div class="sub-panel">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <strong style="font-size:0.92rem;" data-i18n-zh="并购与多线作战熵增压力模拟器" data-i18n-en="Multi-Program &amp; M&amp;A Entropy Simulator">并购与多线作战熵增压力模拟器</strong>
+              <span class="mui-chip mui-chip-primary mono">STRESS SIM</span>
+            </div>
+            <div class="slider-row">
+              <div class="slider-lbl"><span data-i18n-zh="并行重大宇航/国防项目数" data-i18n-en="Concurrent Major Programs">并行重大宇航/国防项目数</span><b class="mono" id="entLblProg">12 个</b></div>
+              <input type="range" id="entPrograms" min="4" max="24" step="1" value="12" />
+            </div>
+            <div class="slider-row">
+              <div class="slider-lbl"><span data-i18n-zh="核心部组件自研内化率 (%)" data-i18n-en="In-House Subsystem Verticalization (%)">核心部组件自研内化率 (%)</span><b class="mono" id="entLblVert">82%</b></div>
+              <input type="range" id="entVertical" min="35" max="95" step="1" value="82" />
+            </div>
+            <div class="slider-row">
+              <div class="slider-lbl"><span data-i18n-zh="并购后单一 ERP 整合时滞 (月)" data-i18n-en="Post-M&amp;A ERP Integration Lag (Mos)">并购后单一 ERP 整合时滞 (月)</span><b class="mono" id="entLblLag">3 个月</b></div>
+              <input type="range" id="entLag" min="1" max="18" step="1" value="3" />
+            </div>
+            <div class="score-trio">
+              <div class="score-pill"><b class="mono" id="scoreSynergy">91/100</b><span data-i18n-zh="全栈协同指数" data-i18n-en="Stack Synergy">全栈协同指数</span></div>
+              <div class="score-pill"><b class="mono" id="scoreVelocity">87/100</b><span data-i18n-zh="工程交付速度" data-i18n-en="Exec Velocity">工程交付速度</span></div>
+              <div class="score-pill"><b class="mono" id="scoreMargin">+5.8pp</b><span data-i18n-zh="稳态毛利净增厚" data-i18n-en="Margin Accretion">稳态毛利净增厚</span></div>
+            </div>
+            <div class="canvas-box" style="height:205px;"><canvas id="entropyCanvas"></canvas></div>
+          </div>
+
+          <div class="sub-panel">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+              <strong style="font-size:0.92rem;" data-i18n-zh="Rocket Lab 组织操作系统六大铁律审计" data-i18n-en="6-Law Organizational OS Health Audit">Rocket Lab 组织操作系统六大铁律审计</strong>
+              <div style="display:flex;align-items:center;gap:6px;">
+                <span class="mui-chip mui-chip-success mono" id="auditScoreChip">6 / 6 ACTIVE</span>
+                <button type="button" class="tool-btn" id="auditToggleAllBtn" data-i18n-zh="全选 / 重置" data-i18n-en="Toggle All">全选 / 重置</button>
+              </div>
+            </div>
+            <div class="audit-list" id="cultureAuditList">
+              <label class="audit-item">
+                <input type="checkbox" data-os-law="l1" checked />
+                <div>
+                  <b data-i18n-zh="铁律 01 · 拒绝事业部内部转移定价（Zero Transfer-Pricing Friction）" data-i18n-en="Law 01 · Zero Internal Transfer-Pricing Friction">铁律 01 · 拒绝事业部内部转移定价（Zero Transfer-Pricing Friction）</b>
+                  <span data-i18n-zh="SolAero 光伏、Sinclair 飞轮与 Mynaric 激光终端对内直供 SDA 整星项目不收内部溢价，确保主承包竞标报价极具杀伤力。" data-i18n-en="SolAero, Sinclair &amp; Mynaric feed internal SDA prime satellite builds at true cost without divisional markup.">SolAero 光伏、Sinclair 飞轮与 Mynaric 激光终端对内直供 SDA 整星项目不收内部溢价，确保主承包竞标报价极具杀伤力。</span>
+                </div>
+              </label>
+              <label class="audit-item">
+                <input type="checkbox" data-os-law="l2" checked />
+                <div>
+                  <b data-i18n-zh="铁律 02 · 外包掉链子即启动垂直自制（Bottleneck Internalization）" data-i18n-en="Law 02 · Automatic Bottleneck Internalization">铁律 02 · 外包掉链子即启动垂直自制（Bottleneck Internalization）</b>
+                  <span data-i18n-zh="如 2026年10月 Neutron 承包商前穹顶出现孔隙后立即切换至自有 AFP 机器人铺放机生产，绝不受制于低效外部供应商。" data-i18n-en="When a third-party Neutron forward dome showed voids in Oct 2026, production shifted immediately onto Rocket Lab's in-house robotic AFP machine.">如 2026年10月 Neutron 承包商前穹顶出现孔隙后立即切换至自有 AFP 机器人铺放机生产，绝不受制于低效外部供应商。</span>
+                </div>
+              </label>
+              <label class="audit-item">
+                <input type="checkbox" data-os-law="l3" checked />
+                <div>
+                  <b data-i18n-zh="铁律 03 · 发射场主权自有（Owned Launch Range Sovereignty）" data-i18n-en="Law 03 · Owned Launch Range Sovereignty">铁律 03 · 发射场主权自有（Owned Launch Range Sovereignty）</b>
+                  <span data-i18n-zh="自建运营新西兰玛希亚 LC-1 与弗吉尼亚沃洛普斯 LC-2/LC-3 专用发射台，消除国家靶场排期拥堵。" data-i18n-en="Owning Mahia LC-1 and dedicated Wallops LC-2/LC-3 pads eliminates range congestion and unlocks responsive launch windows.">自建运营新西兰玛希亚 LC-1 与弗吉尼亚沃洛普斯 LC-2/LC-3 专用发射台，消除国家靶场排期拥堵。</span>
+                </div>
+              </label>
+              <label class="audit-item">
+                <input type="checkbox" data-os-law="l4" checked />
+                <div>
+                  <b data-i18n-zh="铁律 04 · 创始人与高管利益下沉一线研发（$1 Base + RSU Reinvestment）" data-i18n-en="Law 04 · Founder Skin-in-the-Game ($1 Base + RSU Forfeiture)">铁律 04 · 创始人与高管利益下沉一线研发（$1 Base + RSU Reinvestment）</b>
+                  <span data-i18n-zh="CEO $1 年薪并注销 39.2万股 RSU 反哺工程预算，杜绝管理层脱离车间的贵族化倾向。" data-i18n-en="CEO $1 base salary and 392K RSU forfeiture signal unmistakable capital priority: frontline engineering over executive perks.">CEO $1 年薪并注销 39.2万股 RSU 反哺工程预算，杜绝管理层脱离车间的贵族化倾向。</span>
+                </div>
+              </label>
+              <label class="audit-item">
+                <input type="checkbox" data-os-law="l5" checked />
+                <div>
+                  <b data-i18n-zh="铁律 05 · 商售与自用双轮检验（Merchant + Captive Dual Validation）" data-i18n-en="Law 05 · Merchant + Captive Dual Market Discipline">铁律 05 · 商售与自用双轮检验（Merchant + Captive Dual Validation）</b>
+                  <span data-i18n-zh="内部部组件团队必须持续在公开市场赢取外部卫星客户订单，防止因内部包销而丧失技术与成本竞争力。" data-i18n-en="Subsystem units must continue winning external commercial orders so internal supply never breeds complacency.">内部部组件团队必须持续在公开市场赢取外部卫星客户订单，防止因内部包销而丧失技术与成本竞争力。</span>
+                </div>
+              </label>
+              <label class="audit-item">
+                <input type="checkbox" data-os-law="l6" checked />
+                <div>
+                  <b data-i18n-zh="铁律 06 · 以高毛利经常性服务锁定硬件周期（Iridium Cash Shield）" data-i18n-en="Law 06 · Recurring Constellation Cash Shield (Iridium)">铁律 06 · 以高毛利经常性服务锁定硬件周期（Iridium Cash Shield）</b>
+                  <span data-i18n-zh="并入 Iridium 时保持其电信级网络高可靠运营独立性，同时用 Neutron + Flatellite 将其下一代星座更新资本开支砍半。" data-i18n-en="Preserve Iridium's 99.9%+ network operations reliability while using Neutron + Flatellite to slash next-gen constellation replacement CapEx.">并入 Iridium 时保持其电信级网络高可靠运营独立性，同时用 Neutron + Flatellite 将其下一代星座更新资本开支砍半。</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="src-grid">
+          <a class="src-item" href="https://hbsp.harvard.edu/product/R2602K-PDF-ENG" target="_blank" rel="noopener noreferrer">
+            <b>Harvard Business Review · R2602K (2026)</b>
+            <span>Sir Peter Beck 四大组织与竞争原则原始出处。</span>
+          </a>
+          <a class="src-item" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts" target="_blank" rel="noopener noreferrer">
+            <b>Rocket Lab Q3 2026 Earnings Release</b>
+            <span>$267.8M 营收、38.4% Non-GAAP GM、+$7.2M OCF 与 $3.57B Backlog。</span>
+          </a>
+          <a class="src-item" href="https://www.sec.gov/Archives/edgar/data/1819994/000175392626000568/g085462_8k-rocket.htm" target="_blank" rel="noopener noreferrer">
+            <b>SEC Form 8-K (Mar 30, 2026)</b>
+            <span>CEO $1.00 基本年薪与 392,155 股 RSU 注销法定披露。</span>
+          </a>
+          <a class="src-item" href="https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm" target="_blank" rel="noopener noreferrer">
+            <b>SEC 2026 DEF 14A Proxy Statement</b>
+            <span>85.7% 董事会独立性、88:1 薪酬比及洛马/太空军背景董事治理结构。</span>
+          </a>
+          <a class="src-item" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully" target="_blank" rel="noopener noreferrer">
+            <b>Rocket Lab – Iridium ~$8.0B Acquisition</b>
+            <span>端到端太空基础设施与全球 L 波段卫星通信整合架构。</span>
+          </a>
+          <a class="src-item" href="https://www.spacecapital.com/blogs/rocket-lab-the-discipline-of-audacity-the-art-of-precision" target="_blank" rel="noopener noreferrer">
+            <b>Space Capital Deep Profile</b>
+            <span>Rocket Lab: The Discipline of Audacity, The Art of Precision。</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  
+<script src="../../_shared/rocket_lab_culture_operating_system.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

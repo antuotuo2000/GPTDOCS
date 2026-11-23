@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html data-report-family="birkenstock" data-imported-report lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="勃肯公司 Birkenstock (NYSE: BIRK) 商业模式全景架构拆解：€55 EVA零买量引流漏斗、百年软木鞋床解剖学锁死、单客3.6双复购LTV、70%–80%饥饿配额全价机器与12–18个月极速回本直营舰队（基于FY2025 20-F与Q3 FY2026 6-K）。" />
+  <title>勃肯 BIRK 商业模式架构深度拆解 | 数据中心</title>
+  
+  
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/birkenstock_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="展开或收起目录侧边栏">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">BIRK</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="../../index.html" data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="勃肯公司 (Birkenstock) 商业模式架构拆解" data-i18n-en="Birkenstock (BIRK) Business Model Architecture">勃肯公司 (Birkenstock) 商业模式架构拆解</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">NYSE: BIRK</span>
+        <span class="mui-chip mui-chip-success mono hide-sm">FY25 €2.10B · Q3 EBITDA 33.7%</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索商业飞轮或指标…" aria-label="快速跳转模块" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与站点导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">BIRK · BUSINESS MODEL</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="勃肯商业模式架构图谱" data-i18n-en="Birkenstock Business Model">勃肯商业模式架构图谱</div>
+        <p class="sidebar-subtitle" data-i18n-zh="€55 EVA零买量引流 × 德国鞋床塑形锁死 × 3.6双复购LTV × 70%–80%饥饿配货与59.1%奢品毛利" data-i18n-en="€55 EVA Zero-CAC Funnel × Orthopedic Footbed Lock-In × 3.6-Pair LTV × Engineered Scarcity">€55 EVA零买量引流 × 德国鞋床塑形锁死 × 3.6双复购LTV × 70%–80%饥饿配货与59.1%奢品毛利</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="功能鞋床 + 民主版奢品配额" data-i18n-en="Footbed + Scarcity">功能鞋床 + 民主版奢品配额</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="B2B / DTC 渠道结构" data-i18n-en="B2B / DTC Mix">B2B / DTC 渠道结构</span>
+            <span class="sidebar-mini-val mono">62% vs 38%</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="全价率 / 单店回本" data-i18n-en="Full-Price / Payback">全价率 / 单店回本</span>
+            <span class="sidebar-mini-val mono">&gt;90% · 12–18月</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与架构目录">
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="BIRK"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+        <ul class="mui-nav-list">
+          <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+          <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+          <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润瀑布流与四级价格带" data-i18n-en="Profit Waterfall &amp; Ladder">利润瀑布流与四级价格带</span></a></li>
+          <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="足弓塑形棘轮与3.6双LTV" data-i18n-en="Footbed Ratchet &amp; 3.6x LTV">足弓塑形棘轮与3.6双LTV</span></a></li>
+          <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="极速回本门店与EPS推演器" data-i18n-en="Store Payback &amp; EPS Lab">极速回本门店与EPS推演器</span></a></li>
+          <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="巨头范式矩阵与关税压测" data-i18n-en="Peer Matrix &amp; Tariff Stress">巨头范式矩阵与关税压测</span></a></li>
+        </ul>
+      </nav>
+
+      </aside>
+
+    <!-- Main Distinct Non-Linear Workspace -->
+    <main class="bm-workspace">
+
+      <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+      <section id="mod-deck" class="bm-command-deck">
+        <div class="bm-thesis-deck">
+          <div>
+            <div class="bm-badge-row">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：零买量解剖学漏斗 × 民主版爱马仕配额机" data-i18n-en="ARCHETYPE: Zero-CAC Orthopedic Funnel × Democratic Hermès Scarcity">商业范式：零买量解剖学漏斗 × 民主版爱马仕配额机</span>
+              <span class="mui-chip mui-chip-success mono">FY2025 20-F · Q3 FY26 6-K</span>
+              <span class="mui-chip mui-chip-violet mono">全价率 &gt;90% · 人均 3.6 双</span>
+            </div>
+
+            <h1 class="bm-display-h1" data-i18n-zh="勃肯公司商业模式解构：<span class='bm-gradient-txt'>用 €55 EVA 零代言引流，靠百年软木鞋床锁死 3.6 双复购与 59% 奢品毛利</span>" data-i18n-en="Deconstructing Birkenstock's Business Model: <span class='bm-gradient-txt'>Acquire via €55 EVA at Zero Ad Tax, Compound via 3.6-Pair Footbed Lock-In &amp; 59% Gross Margin</span>">
+              勃肯公司商业模式解构：<span class="bm-gradient-txt">用 €55 EVA 零代言引流，靠百年软木鞋床锁死 3.6 双复购与 59% 奢品毛利</span>
+            </h1>
+
+            <p class="bm-lead">
+              华尔街最初常将勃肯误读为受时尚周期摆布的“夏季凉鞋单品公司”，但其真实经济引擎是一台<strong>“大众定价、顶奢纪律”的三阶现金流机器</strong>：第一阶以约 <strong>90% 自然口碑触达（零明星代言费）</strong>与 €55 入门级 EVA 涉水凉鞋完成“带高毛利的逆向获客”
+              <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1977102/000119312523233488/d541624df1.htm" target="_blank" rel="noopener noreferrer">SEC F-1 披露 ↗</a>；第二阶依靠德国自造软木乳胶鞋床随体温与足弓踩踏产生的<strong>专属塑形棘轮效应</strong>，驱动消费者向 €120–€240 经典麂皮与闭口鞋（Boston / Naples 占总营收达 <strong>38%</strong>）升级，实现美国成熟客群<strong>人均拥有 3.6 双</strong>
+              <a class="cite-link" href="https://quartr.com/insights/edge/deutsche-qualitaet-the-story-of-birkenstock" target="_blank" rel="noopener noreferrer">Quartr CMD ↗</a>；第三阶通过<strong>工程化配额分销（仅满足批发订单 70%–80%）</strong>锁死全渠道 <strong>&gt;90% 正价销售率</strong>，将 <strong>59.1% 毛利率</strong>高效沉淀为 <strong>31.8%–33.7% 的调整后 EBITDA 利润率</strong>
+              <a class="cite-link" href="https://www.birkenstock-holding.com/media/document/73985536-d719-473e-bd3a-cfb54205f0db/assets/BIRK_Earnings_Release_6-K_Q3_26.pdf?disposition=inline" target="_blank" rel="noopener noreferrer">Q3 FY26 6-K ↗</a>。
+            </p>
+          </div>
+
+          <div class="bm-lens-panel">
+            <div class="bm-lens-head">
+              <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);">切换商业本质透镜：</span>
+              <div class="mui-segmented" id="lensTabs">
+                <button type="button" class="mui-seg-btn active" data-lens="0">① 零代言自然获客漏斗</button>
+                <button type="button" class="mui-seg-btn" data-lens="1">② 单一鞋床×四级价格剪刀差</button>
+                <button type="button" class="mui-seg-btn" data-lens="2">③ 饥饿配额保值引擎</button>
+              </div>
+            </div>
+            <div class="bm-equation-bar mono" id="lensFormula">
+              营业利润率优势 (EBIT 26.2% vs 耐克 8.3%) = 奢品级毛利率 (59.1%) - $0 天价球星代言税 + 90%+ 自然口碑获客
+            </div>
+            <div class="bm-lens-body" id="lensBody">
+              传统运动鞋巨头每年必须将 10%–12% 的总营收（如耐克年投 $47.5亿）支付给体育明星与流量平台维持热度；勃肯将营销建立在“穿十年不坏的足弓矫形口碑”与文化自发破圈（如电影《芭比》名场面）上，省下的整块营销税直接转化为行业顶尖的 EBITDA 现金流。
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Live Financial Telemetry Ledger -->
+        <aside class="bm-telemetry-ledger" aria-label="FY2025 与 Q3 FY2026 核心经济遥测">
+          <div class="bm-ledger-head">
+            <div class="bm-ledger-title">
+              <span class="bm-pulse-dot"></span>
+              <span>BIRK 商业模型核心遥测账本</span>
+            </div>
+            <a class="cite-link mono" href="https://www.sec.gov/Archives/edgar/data/1977102/000119312525323599/birk-20250930.htm" target="_blank" rel="noopener noreferrer">20-F &amp; 6-K ↗</a>
+          </div>
+
+          <div class="bm-telemetry-rows">
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl">FY25 全年营收 (B2B 62% / DTC 38%)</span>
+                <span class="bm-tel-val mono">€2,097.4M</span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:62%;"></div>
+                <div style="width:38%;background:#16A34A;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>B2B €1,297.9M</span><span>DTC €794.8M (毛利率更高)</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl">Q3 FY26 创纪录单季营收与 EBITDA 率</span>
+                <span class="bm-tel-val mono">€719.5M <small style="font-size:0.74rem;color:var(--mui-success-text);">+15% cc</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:84%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>Q3 Adj. EBITDA €242.5M (33.7%)</span><span>DTC +16% cc 领跑</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl">品类结构去季节化 (凉鞋 62% / 闭口鞋 38%)</span>
+                <span class="bm-tel-val mono">38.0% <small style="font-size:0.74rem;color:var(--mui-primary-lighter);">vs FY21 15%</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:62%;"></div>
+                <div style="width:38%;background:#7C3AED;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>Boston / Tokio / Naples 领衔</span><span>推升双均价 ASP</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl">全球自营直营门店 × 极速回本周期</span>
+                <span class="bm-tel-val mono">124 家 / 12–18月</span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:78%;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>亚太 53 · EMEA 50 · 美洲 21</span><span>FY26 指引 €2.30–2.35B</span></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+      <section id="mod-pipeline" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 01 · END-TO-END VALUE CAPTURE PIPELINE</span>
+            <h2 class="bm-h2">五阶商业价值传导沙盘：从德国软木鞋床母体到每股收益复利</h2>
+            <p class="bm-head-desc">点击下方任一价值链节点，拆解该环节的制造壁垒、定价权来源与量化转化公式。</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono">点击节点交互拆解 (01 → 05)</span>
+        </div>
+
+        <div class="bm-pipeline-track" id="pipelineTrack">
+          <button type="button" class="bm-node-btn active" data-node="0">
+            <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">CORE IP</span></div>
+            <div class="bm-node-title">百年软木乳胶鞋床解剖学心智</div>
+            <div class="bm-node-kpi mono">100% 德国制造 · 零换代报废</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="1">
+            <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">PRICE LADDER</span></div>
+            <div class="bm-node-title">EVA 引流与闭口鞋价格阶梯</div>
+            <div class="bm-node-kpi mono">€55 入门 → €500 1774高定</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="2">
+            <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">SCARCITY VALVE</span></div>
+            <div class="bm-node-title">70%–80% 工程化饥饿配额</div>
+            <div class="bm-node-kpi mono">全渠道 &gt;90% 正价实现率</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="3">
+            <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">FOOT LOCK-IN</span></div>
+            <div class="bm-node-title">足弓专属塑形与多双收藏复购</div>
+            <div class="bm-node-kpi mono">成熟客群人均拥有 3.6 双</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="4">
+            <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">DTC &amp; BUYBACK</span></div>
+            <div class="bm-node-title">高毛利直营扩张与降债回购</div>
+            <div class="bm-node-kpi mono">门店12–18月回本 · €2亿回购</div>
+          </button>
+        </div>
+
+        <div class="bm-node-inspector" id="nodeInspector">
+          <div class="bm-ins-prose">
+            <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · 1896 ANATOMICAL FOOTBED MONOPOLY</span>
+            <h3 id="nodeTitle">四层天然材质鞋床：把“快消易耗品”变成超越潮流周期的矫形基础设施</h3>
+            <p id="nodeDesc">
+              勃肯自 1896 年发明弹性鞋床以来，底层四层复合工艺（底层黄麻稳定结构 + 葡萄牙橡树软木与天然乳胶烘焙核心 + 上层密集黄麻吸湿排汗 + 顶级绒面牛皮亲肤衬里）逾百年未曾改变。这不仅使模具折旧与原材料采购具备惊人的规模经济，更彻底免除了传统鞋企“每季押注新鞋型、一旦押错全线打折计提”的致命宿命。
+            </p>
+            <div class="bm-ins-formula mono" id="nodeFormula">
+              商业传导：100% 德国自产鞋床 + 零季节性过时风险 → 季末库存无需打折倾销 → 锁定 ~59%–62% 行业顶级毛利率
+            </div>
+          </div>
+          <div class="bm-ins-kpis" id="nodeKpis">
+            <div class="bm-ins-card"><b class="mono">100%</b><span>全球每一块勃肯鞋床德国自产</span></div>
+            <div class="bm-ins-card"><b class="mono">&gt;90%</b><span>软木/皮革/铜扣源自欧洲本土</span></div>
+            <div class="bm-ins-card"><b class="mono">50+ 道工序</b><span>自动化激光裁切结合匠人贴合</span></div>
+            <div class="bm-ins-card"><b class="mono">0 过时减值</b><span>四大常青款畅销 50–60 年不衰</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 2: 7:5 SPLIT — P&L WATERFALL + 4-TIER SILHOUETTE PRICE ARCHITECTURE -->
+      <section id="mod-profit-pool" class="bm-split-75">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN TRAJECTORY</span>
+              <h3>FY2025 €20.97亿 损益转化瀑布流与双渠道扩张轨迹</h3>
+            </div>
+            <div class="mui-segmented" id="pChartTabs">
+              <button type="button" class="mui-seg-btn active" data-pview="waterfall">营收→净利瀑布流</button>
+              <button type="button" class="mui-seg-btn" data-pview="scissors">B2B vs DTC 增长轨迹</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="profitCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            数据核验：<a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1977102/000119312525323599/birk-20250930.htm" target="_blank" rel="noopener noreferrer">FY2025 Form 20-F ↗</a> 与
+            <a class="cite-link" href="https://www.birkenstock-holding.com/media/document/73985536-d719-473e-bd3a-cfb54205f0db/assets/BIRK_Earnings_Release_6-K_Q3_26.pdf?disposition=inline" target="_blank" rel="noopener noreferrer">Q3 FY26 6-K ↗</a>。
+            注意勃肯极高的中台效率：由于零明星代言费且 B2B 批发（占 62%）无需承担门店租金与导购人工，<strong>集团调整后 EBITDA 利润率高达 31.8%（Q3 FY26 达 33.7%）</strong>。
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02B · SINGLE-FOOTBED 4-TIER PRICE LADDER</span>
+              <h3>同一鞋床母体上的四级价格阶梯（€55 → €500+）</h3>
+            </div>
+            <div class="mui-segmented" id="tierFilter">
+              <button type="button" class="mui-seg-btn active" data-tcat="all">全部</button>
+              <button type="button" class="mui-seg-btn" data-tcat="core">引流与常青</button>
+              <button type="button" class="mui-seg-btn" data-tcat="elev">高ASP升级</button>
+            </div>
+          </div>
+
+          <div class="bm-tier-list" id="tierList">
+            <div class="bm-tier-card" data-tier="core">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">① 入门漏斗层：EVA 防水轻量化系列（Arizona EVA / Mogami）</span>
+                <span class="mui-chip mui-chip-primary mono">€55 – €75</span>
+              </div>
+              <div class="bm-tier-desc">2015 年推出的一体成型德国产 EVA 水洗凉鞋，以亲民门槛精准拦截海滩、健身房与 Gen Z 年轻初购客群，充当软木正装款的体验跳板。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="core">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">② 现金牛基石层：经典软木双带/夹趾凉鞋（Arizona / Madrid / Gizeh）</span>
+                <span class="mui-chip mui-chip-success mono">€110 – €150</span>
+              </div>
+              <div class="bm-tier-desc">油蜡皮、绒面麂皮与 Birko-Flor 经典矩阵，具备极强年均温和提价能力与复购粘性，贡献稳健高周转基本盘。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="elev">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">③ 全季扩容高 ASP 层：闭口包头鞋与靴履（Boston / Tokio / Naples）</span>
+                <span class="mui-chip mui-chip-violet mono">€160 – €240 (占38%)</span>
+              </div>
+              <div class="bm-tier-desc">客单价较传统凉鞋高出 35%–60%，不仅将穿着场景延伸至秋冬通勤与办公室，更成为近年营收增速与单客价值跃升的第一功臣。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="elev">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">④ 顶奢光环定锚层：巴黎 1774 高定线与奢牌联名（Dior / Etro / Uerzell）</span>
+                <span class="mui-chip mui-chip-warning mono">€395 – €500+</span>
+              </div>
+              <div class="bm-tier-desc">极小批量顶级意大利/德国皮料与先锋设计，入驻全球顶奢买手店，向上拉开整个品牌的价格想象力天花板 <a class="cite-link" href="https://quartr.com/insights/edge/deutsche-qualitaet-the-story-of-birkenstock" target="_blank" rel="noopener noreferrer">2026 CMD Slide ↗</a>。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 3: 5:7 REVERSED SPLIT — BIOMECHANICAL RATCHET & 3.6-PAIR COHORT LTV -->
+      <section id="mod-cohort" class="bm-split-57">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03A · BIOMECHANICAL MOLDING RATCHET</span>
+              <h3>单客分层经济模型：为什么美国老客人均拥有 3.6 双？</h3>
+            </div>
+          </div>
+
+          <div class="mui-segmented" id="cohortTabs">
+            <button type="button" class="mui-seg-btn" data-cohort="entry">EVA 尝鲜新客 (1双)</button>
+            <button type="button" class="mui-seg-btn active" data-cohort="fan">核心软木老客 (3.6双均值)</button>
+            <button type="button" class="mui-seg-btn" data-cohort="collector">全季收藏死忠 (6双+)</button>
+          </div>
+
+          <div class="bm-cohort-metrics" id="cohortMetrics">
+            <div class="bm-cohort-stat">
+              <div class="lbl">典型鞋柜组合</div>
+              <div class="val" style="font-size:0.93rem;">EVA + Arizona + Boston + 居家毛拖</div>
+              <div class="delta">覆盖沙滩 / 夏街 / 秋冬通勤 / 室内</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">复购自然发生率</div>
+              <div class="val mono">&gt;70%</div>
+              <div class="delta">零付费召回广告投入</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">单双折算综合均价</div>
+              <div class="val mono">~€145</div>
+              <div class="delta">DTC 直营客单显著高于批发</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">5年累计单客毛利 LTV</div>
+              <div class="val mono">€335+</div>
+              <div class="delta">约为单双尝鲜客的 4.5 倍</div>
+            </div>
+          </div>
+
+          <div class="bm-ratchet-note" id="cohortNote">
+            <strong>生物力学“磨合棘轮效应（Break-In Ratchet）”：</strong>新买的勃肯软木鞋床偏硬，但经过 2–3 周行走后，软木乳胶会顺应穿着者独一无二的足底压力分布形成<strong>专属 3D 足模印记</strong>。一旦双脚习惯了这种量身定制般的足弓承托，再穿回平底普通鞋便极易感到足底疲劳——生理习惯把一次性买鞋转化成了跨越春夏秋冬的品类收集癖。
+          </div>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03B · COHORT LTV &amp; MARKETING TAX ARBITRAGE</span>
+              <h3>三类客群 5 年累计毛利曲线 vs 行业“营销买量税”对比</h3>
+            </div>
+            <div class="mui-segmented" id="cChartTabs">
+              <button type="button" class="mui-seg-btn active" data-cview="ltv">5年单客毛利累积 (€)</button>
+              <button type="button" class="mui-seg-btn" data-cview="mkt">全价率 vs EBITDA 率优势</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="cohortCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            关键差异：由于老客复购占比逾七成且无需支付天价球星代言费，勃肯能够把每一分产品溢价留在公司账上（EBITDA 率 31.8% vs 传统运动巨头 10%–16%）
+            <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1977102/000119312523233488/d541624df1.htm" target="_blank" rel="noopener noreferrer">SEC F-1 客群调研 ↗</a>。
+          </p>
+        </div>
+      </section>
+
+      <!-- MODULE 4: 6:6 DUAL WORKBENCH — STORE PAYBACK / LEVERAGE + 5Y EPS COMPOUNDER -->
+      <section id="mod-capital" class="bm-split-66">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04A · DELEVERAGING &amp; RETAIL STORE ECONOMICS</span>
+              <h3>IPO 后极速去杠杆轨迹与直营门店扩张矩阵（124 家）</h3>
+            </div>
+            <div class="mui-segmented" id="kChartTabs">
+              <button type="button" class="mui-seg-btn active" data-kview="lev">净杠杆率下降轨迹 (x)</button>
+              <button type="button" class="mui-seg-btn" data-kview="stores">全球124家直营店分布</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="capitalCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            资本效率亮点：自营零售门店单店建店 CapEx 仅 <strong>€40万–€80万</strong>，平均 <strong>12–18 个月极速回本</strong>，而 DTC 毛利率比批发高出逾 1,000bps；同时净债务/EBITDA 杠杆已从 IPO 前逾 3.5x 降至 FY25 末的 <strong>1.5x</strong>（2026 叠加 €2亿+ 回购维持在 ~1.6–1.7x 健康区间）
+            <a class="cite-link" href="https://www.fool.com/earnings/call-transcripts/2026/02/12/birkenstock-birk-q1-2026-earnings-transcript/" target="_blank" rel="noopener noreferrer">Q1 FY26 披露 ↗</a>。
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EPS COMPOUNDER</span>
+              <h3>FY2026–FY2030 量价齐升与回购缩股 EPS 推演器</h3>
+            </div>
+            <div class="mui-segmented" id="simPresets">
+              <button type="button" class="mui-seg-btn" data-preset="bear">关税逆风</button>
+              <button type="button" class="mui-seg-btn active" data-preset="base">CMD基准</button>
+              <button type="button" class="mui-seg-btn" data-preset="bull">亚太超周期</button>
+            </div>
+          </div>
+
+          <div class="bm-sim-sliders">
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span>年均销量双数增速 (Unit Volume CAGR)</span><b class="mono" id="lblUnitCagr">10.0%</b></div>
+              <input type="range" id="inpUnitCagr" min="4" max="15" step="0.5" value="10.0" />
+            </div>
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span>年均 ASP 均价提升 (闭口鞋+DTC+提价)</span><b class="mono" id="lblAspCagr">4.0%</b></div>
+              <input type="range" id="inpAspCagr" min="0" max="8" step="0.5" value="4.0" />
+            </div>
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span>年均净回购缩股率 (Share Retirement)</span><b class="mono" id="lblBuyRate">2.2%</b></div>
+              <input type="range" id="inpBuyRate" min="0" max="4.5" step="0.2" value="2.2" />
+            </div>
+          </div>
+
+          <div class="bm-sim-outputs">
+            <div class="bm-sim-out"><b class="mono" id="simRevOut">€3.96B</b><span>FY30E 总营收</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simEbitdaOut">€1.27B</b><span>FY30E Adj. EBITDA</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simEpsOut">€4.28</b><span>FY30E 摊薄 EPS</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simCagrOut">+17.2%</b><span>EPS 复合增速</span></div>
+          </div>
+
+          <div class="bm-canvas-box" style="height:170px;">
+            <canvas id="simMiniCanvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 5: PEER ARCHETYPE MATRIX & STRESS AUDIT -->
+      <section id="mod-matrix" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; STRESS AUDIT</span>
+            <h2 class="bm-h2">全球鞋服与奢侈巨头商业范式对标及三大风险压测</h2>
+            <p class="bm-head-desc">对比六大标杆商业模型的毛利、制造资本强度与营销税负，并核查关税、汇率与扩产风险。</p>
+          </div>
+          <div class="mui-segmented" id="peerFilter">
+            <button type="button" class="mui-seg-btn active" data-pcat="all">全部标杆 (6)</button>
+            <button type="button" class="mui-seg-btn" data-pcat="craft">自有工坊/高稀缺</button>
+            <button type="button" class="mui-seg-btn" data-pcat="oem">外包代工鞋企</button>
+          </div>
+        </div>
+
+        <div class="bm-table-wrap">
+          <table class="bm-table" id="peerTable">
+            <thead>
+              <tr>
+                <th>公司与代码</th>
+                <th>核心商业模式原型</th>
+                <th>综合毛利率</th>
+                <th>CapEx / 营收强度</th>
+                <th>终端正价与渠道特征</th>
+                <th>模式终极壁垒与核心脆弱点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-birk" data-row-cat="craft">
+                <td><strong>Birkenstock (BIRK)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+                <td>德国自造鞋床 + 70–80%饥饿配货 + 零代言</td>
+                <td class="mono">59.1%</td>
+                <td class="mono" style="color:var(--mui-warning-text);">~5.2% (扩建德国厂)</td>
+                <td class="mono" style="color:var(--mui-success-text);">&gt;90% 全价 (B2B 62% / DTC 38%)</td>
+                <td>百年鞋床+3.6双复购；脆弱点在美欧关税与欧元汇率波动</td>
+              </tr>
+              <tr data-row-cat="craft">
+                <td><strong>Hermès (RMS.PA)</strong></td>
+                <td>法国本土皮具工坊 + 配额等待名单</td>
+                <td class="mono">~71.0%</td>
+                <td class="mono">~7.2% (€1.16B/€16B)</td>
+                <td class="mono" style="color:var(--mui-success-text);">100% 直营零折扣</td>
+                <td>顶奢金字塔皇冠；产能受手工皮具匠培训速度刚性约束</td>
+              </tr>
+              <tr data-row-cat="oem craft">
+                <td><strong>Deckers (DECK)</strong></td>
+                <td>HOKA 跑鞋创新 + UGG 稀缺配货 + 亚洲代工</td>
+                <td class="mono">57.7%</td>
+                <td class="mono" style="color:var(--mui-success-text);">~1.5% ($85M/$5.47B)</td>
+                <td class="mono">高全价率 · DTC 约 43%</td>
+                <td>轻资产高 FCF 转化；需警惕跑鞋新势力分流与代工关税</td>
+              </tr>
+              <tr data-row-cat="oem">
+                <td><strong>On Holding (ONON)</strong></td>
+                <td>瑞士中底研发 + 越南代工 + 高端运动零售</td>
+                <td class="mono">62.8%</td>
+                <td class="mono">~3.0%–3.5%</td>
+                <td class="mono">高端定价 · 直营高速扩张</td>
+                <td>毛利率领跑运动鞋；门店与赛事营销开支压制短期净利率</td>
+              </tr>
+              <tr data-row-cat="oem">
+                <td><strong>Crocs (CROX)</strong></td>
+                <td>Croslite 注塑外包 + 智必星联名高周转</td>
+                <td class="mono">~58.0%</td>
+                <td class="mono" style="color:var(--mui-success-text);">~1.8%–2.2%</td>
+                <td class="mono">促销弹性较大 · 电商占比高</td>
+                <td>单品模具极轻资产；受 HEYDUDE 并购拖累与潮流波动扰动</td>
+              </tr>
+              <tr data-row-cat="oem">
+                <td><strong>NIKE (NKE)</strong></td>
+                <td>全球多运动矩阵 + 100%代工 + 球星代言</td>
+                <td class="mono">42.9%</td>
+                <td class="mono">~1.0%–1.5%</td>
+                <td class="mono" style="color:var(--mui-error-text);">经典款去库存 · 营销占 10.2%</td>
+                <td>全球运动第一心智；面临大中华区下滑与渠道重整阵痛</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bm-stress-grid">
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-error mono">STRESS 01 · US TARIFFS &amp; EUR/USD FX</span>
+              <h4>95% 德国产对美国关税与强欧元的毛利敏感度</h4>
+              <p>美洲贡献勃肯逾 51% 营收，而产线集中于德国欧盟区。FY2026 美国关税与美元走弱合计带来约 <strong>200–250bps 短期毛利率逆风</strong>（拉动全年毛利率指引阶段性落于 57.0%–57.5%）。管理层通过每年中个位数精准提价（按单品、材质与地区差异化调价）及新厂固定成本摊薄稳步对冲
+                <a class="cite-link" href="https://www.athenic.com/finance/BIRK/bull-bear" target="_blank" rel="noopener noreferrer">Q3 关税解析 ↗</a>。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：美欧贸易关税与终端提价传导率</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-warning mono">STRESS 02 · CLOSED-TOE LABOR HOURS</span>
+              <h4>闭口鞋工时激增与新厂爬坡折旧考验</h4>
+              <p>自 IPO 以来勃肯出货双数增长约 25%，但因 Boston/Naples 等闭口鞋工序更复杂，<strong>生产总工时激增逾 50%</strong>。2026 年底 Görlitz 与葡萄牙 Arouca 扩建完工、2027 年 Wittichenau 工厂投产是释放闭口鞋产能瓶颈的关键验证节点
+                <a class="cite-link" href="https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101691302" target="_blank" rel="noopener noreferrer">S&amp;P 产能追踪 ↗</a>。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：Wittichenau 与 Arouca 扩产良率爬坡</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-violet mono">STRESS 03 · LEVERAGE &amp; PE OVERHANG</span>
+              <h4>€9亿新发债、股票回购与大股东减持消化</h4>
+              <p>2026 年 6 月公司发行 €9亿 4.50% 优先票据并加码股份回购，标普将展望调为负面（BB+）；但 2026 年 8 月二次配售配合公司直接赎回注销 1,276 万股，既消除了大股东减持摊薄，又使公众流通盘结构更趋健康。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：净债务/EBITDA 杠杆率向 &lt;1.5x 回归</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIMARY SOURCES -->
+      <section class="bm-panel" aria-label="权威财报与行业信源">
+        <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+          <div>
+            <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+            <h2 class="bm-h2">权威财报、SEC 监管文件与第三方研究信源</h2>
+          </div>
+        </div>
+        <div class="bm-sources-grid">
+          <a class="bm-source-item" href="https://www.birkenstock-holding.com/media/document/73985536-d719-473e-bd3a-cfb54205f0db/assets/BIRK_Earnings_Release_6-K_Q3_26.pdf?disposition=inline" target="_blank" rel="noopener noreferrer">
+            <b>Birkenstock Q3 FY2026 Form 6-K Official Release ↗</b>
+            <span>Q3营收€719.5M (+15% cc)、DTC +16% cc、33.7% Adj. EBITDA率、124家门店及全年上调指引</span>
+          </a>
+          <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1977102/000119312525323599/birk-20250930.htm" target="_blank" rel="noopener noreferrer">
+            <b>Birkenstock Holding plc FY2025 Form 20-F ↗</b>
+            <span>FY25营收€2,097.4M、毛利率59.1%、B2B/DTC与三大区域完整财务审计报表</span>
+          </a>
+          <a class="bm-source-item" href="https://www.fool.com/earnings/call-transcripts/2026/02/12/birkenstock-birk-q1-2026-earnings-transcript/" target="_blank" rel="noopener noreferrer">
+            <b>Q1 FY2026 Earnings Call Transcript ↗</b>
+            <span>管理层披露 70%–80% 批发订单满足率、&gt;90% 全价率、€40–80万建店成本及 12–18 个月回本</span>
+          </a>
+          <a class="bm-source-item" href="https://quartr.com/insights/edge/deutsche-qualitaet-the-story-of-birkenstock" target="_blank" rel="noopener noreferrer">
+            <b>Quartr: Deutsche Qualität &amp; 2026 CMD Price Ladder ↗</b>
+            <span>闭口鞋占比从15%升至38%、Arizona €55–€500价格带与工时效率深度解析</span>
+          </a>
+          <a class="bm-source-item" href="https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101691302" target="_blank" rel="noopener noreferrer">
+            <b>S&amp;P Global Ratings Credit Note (June 2026) ↗</b>
+            <span>€900M 2033优先票据、€120M年度扩产CapEx与自由经营现金流预测</span>
+          </a>
+          <a class="bm-source-item" href="https://reboundcapital.substack.com/p/deep-dive-birkenstock-birk" target="_blank" rel="noopener noreferrer">
+            <b>2026 Capital Markets Day Multi-Year Algorithm ↗</b>
+            <span>2026–2028净增€10亿营收、销量+10% CAGR及EPS 15%–17% CAGR目标拆解</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  
+<script src="../../_shared/birkenstock_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

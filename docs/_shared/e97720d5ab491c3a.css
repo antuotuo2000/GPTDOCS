@@ -1,3 +1,4 @@
+@import url('./device-mode.css');
 
     /* ==========================================================================
        Sci-Fi Strategic Observatory & Blueprint Telemetry System
@@ -220,7 +221,7 @@
       body:not(.sim-narrow) .m-container { padding: 0 26px; }
     }
     body.sim-narrow .m-container {
-      max-width: 430px !important;
+      max-width: var(--preview-width, 430px) !important;
       padding: 0 14px !important;
     }
 
@@ -1693,7 +1694,7 @@
     @media (min-width: 1024px) {
       body:not(.sim-narrow) .m-bottom-dock-wrap { display: none !important; }
     }
-    body.sim-narrow .m-bottom-dock-wrap { max-width: 406px; }
+    body.sim-narrow .m-bottom-dock-wrap { max-width: calc(var(--preview-width, 430px) - 24px); }
     html[data-theme="dark"] .m-bottom-dock-wrap {
       background: rgba(9, 18, 32, 0.52);
       border-color: rgba(148, 187, 232, 0.24);
@@ -1841,3 +1842,8 @@
     }
     #mToast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
   
+
+/* Keep preview controls accessible at both device widths. */
+body.sim-narrow .m-appbar { flex-wrap: wrap; height: auto; gap: 10px; padding-block: 12px; }
+body.sim-narrow .m-head-actions { flex-wrap: wrap; }
+body.sim-ipad .m-feed-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }

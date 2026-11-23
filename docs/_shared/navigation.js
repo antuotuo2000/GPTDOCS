@@ -102,6 +102,10 @@
         const cards = [...grid.querySelectorAll('.ip-pill-btn')].filter(card => card.getClientRects().length);
         if (!cards.length) return;
         const icons = cards.map(card => card.querySelector('.ip-pill-mono')).filter(Boolean);
+        for (const icon of icons) {
+          const chinesePair = /^\p{Script=Han}{2}$/u.test(icon.textContent.trim());
+          if (icon.classList.contains('topic-icon-han') !== chinesePair) icon.classList.toggle('topic-icon-han', chinesePair);
+        }
         const iconWidth = Math.ceil(Math.max(28, ...icons.map(icon => Math.max(icon.scrollWidth + 2, icon.getBoundingClientRect().width))));
         grid.style.setProperty('--topic-icon-width', `${iconWidth}px`);
         const titleWidth = Math.ceil(Math.max(0, ...cards.map(card => {
@@ -138,4 +142,74 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
   else start();
+})();
+
+/* Older mobile browsers may still zoom on a second tap over plain content. */
+(() => {
+  let start, previous;
+  const mobile = () => innerWidth < 1024 || matchMedia('(pointer: coarse)').matches;
+  document.addEventListener('touchstart', event => {
+    if (!mobile() || event.touches.length !== 1) { start = previous = null; return; }
+    const touch = event.touches[0];
+    start = { x: touch.clientX, y: touch.clientY, time: performance.now() };
+  }, { passive: true });
+  document.addEventListener('touchmove', event => {
+    if (!start) return;
+    const touch = event.touches[0];
+    if (event.touches.length !== 1 || Math.hypot(touch.clientX - start.x, touch.clientY - start.y) > 12) {
+      start = previous = null;
+    }
+  }, { passive: true });
+  document.addEventListener('touchend', event => {
+    if (!start || event.touches.length || performance.now() - start.time > 300) {
+      start = previous = null; return;
+    }
+    const tap = start; start = null;
+    const repeat = previous && tap.time - previous.time < 320 && Math.hypot(tap.x - previous.x, tap.y - previous.y) < 24;
+    previous = tap;
+    // Controls keep their native clicks, focus and editing behavior.
+    const interactive = event.target instanceof Element && event.target.closest('a,button,input,textarea,select,label,[role="button"],[contenteditable]');
+    if (repeat && !interactive && event.cancelable) event.preventDefault();
+  }, { passive: false });
+  document.addEventListener('dblclick', event => {
+    if (mobile() && event.cancelable) event.preventDefault();
+  }, { passive: false });
+})();
+
+/* Align blueprint lines through card boundaries without fixed-background seams. */
+(() => {
+  function start() {
+    const main=document.querySelector('main');
+    if(!main)return;
+    const sidebar=document.querySelector('.mui-sidebar');
+    const selector='.mui-paper,.hero-card,.chart-card,.ip-hub-banner,.arch-blueprint,.bm-lens-panel,.bm-panel,.bm-subpanel,.bm-canvas-box,.ft-panel,.cc-panel,.ip-panel,.section-card,.research-card,.analysis-card,.product-card,.content-card,.executive-card,.cc-hero-shell,.bm-thesis-deck,.bm-telemetry-ledger,.ft-manifesto,.ft-horizon-radar,.ft-val-board';
+    let queued=false;
+    function schedule(){
+      if(queued)return;queued=true;
+      requestAnimationFrame(()=>{
+        queued=false;
+        for(const panel of [...main.querySelectorAll(selector),...document.querySelectorAll('.mui-sidebar .sidebar-card')]){
+          if(!panel.getClientRects().length)continue;
+          const style=getComputedStyle(panel);
+          if(!style.backgroundImage.includes('linear-gradient')||!style.backgroundImage.includes('1px'))continue;
+          const rect=panel.getBoundingClientRect();
+          if(!panel.classList.contains('report-grid-surface'))panel.classList.add('report-grid-surface');
+          panel.style.setProperty('--report-grid-x',`${-(rect.left+scrollX)}px`);
+          panel.style.setProperty('--report-grid-y',`${-(rect.top+scrollY)}px`);
+        }
+      });
+    }
+    new ResizeObserver(schedule).observe(main);
+    new MutationObserver(schedule).observe(main,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['class','hidden','open']});
+    if(sidebar){
+      new ResizeObserver(schedule).observe(sidebar);
+      new MutationObserver(schedule).observe(sidebar,{childList:true,subtree:true,characterData:true});
+      sidebar.addEventListener('transitionend',schedule);
+      sidebar.addEventListener('scroll',schedule,{passive:true});
+    }
+    window.addEventListener('resize',schedule);
+    document.fonts.ready.then(schedule);
+    schedule();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();

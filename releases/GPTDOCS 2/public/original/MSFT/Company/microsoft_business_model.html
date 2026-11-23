@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-report-family="msft" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="微软公司 Microsoft Corporation (NASDAQ: MSFT) 商业模式全景架构拆解：Entra身份与M365企业席位阶梯、Azure $1,327亿年化算力底座、$6,780亿商业RPO合同锁死、$757亿递延收入浮存金与高强度AI基建下的正向自由现金流机器（基于 FY2026 10-K 与 Q1 FY2027 最新财报）。" />
+ <title>微软 Microsoft MSFT 商业模式架构拆解 | 数据中心</title>
+ 
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/microsoft_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted Glass MUI AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">MSFT</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <span class="crumb-label hide-sm">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </span>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="微软公司 (Microsoft) 商业模式架构拆解" data-i18n-en="Microsoft Corp. Business Model Architecture">微软公司 (Microsoft) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: MSFT</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY26 $331.8B · Q127 Azure +48%</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="exportHtmlBtn" class="mui-dl-btn" title="下载独立 HTML 文件">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+ <span class="hide-sm" data-i18n-zh="下载 HTML" data-i18n-en="Download .html">下载 HTML</span>
+ </button>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与套系导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">MSFT · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="微软商业模式架构图谱" data-i18n-en="Microsoft Business Model Blueprint">微软商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="企业身份与工作流垄断 × E3→E5→Copilot 席位提价 × Azure $1,327亿年化算力网 × $6,780亿 RPO 合同池" data-i18n-en="Entra Identity Lock-In × E3→E5→Copilot Seat Ladder × $132.7B Run-Rate Azure × $678B RPO Backlog">企业身份与工作流垄断 × E3→E5→Copilot 席位提价 × Azure $1,327亿年化算力网 × $6,780亿 RPO 合同池</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="B2B 席位税 + AI 云水电煤" data-i18n-en="Seat Tax + AI Cloud Utility">B2B 席位税 + AI 云水电煤</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="毛利率 / 营业利润率" data-i18n-en="Gross / Op Margin">毛利率 / 营业利润率</span>
+ <span class="sidebar-mini-val mono">67.9% · 46.8% (Q1: 49.8%)</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业 RPO / 递延收入" data-i18n-en="Comm. RPO / Unearned">商业 RPO / 递延收入</span>
+ <span class="sidebar-mini-val mono">$678B · $75.7B</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="套系导航与架构目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="MSFT"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与云栈拆解" data-i18n-en="Profit Waterfall &amp; Cloud Stack">利润池瀑布流与云栈拆解</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="席位提价棘轮与单企 LTV" data-i18n-en="Seat Ratchet &amp; Enterprise LTV">席位提价棘轮与单企 LTV</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="$678B RPO浮存与复利模拟" data-i18n-en="$678B RPO &amp; EPS Compounder">$678B RPO浮存与复利模拟</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="巨头范式矩阵与压测核查" data-i18n-en="Peer Matrix &amp; Stress Audit">巨头范式矩阵与压测核查</span></a></li>
+ </ul>
+ </nav>
+
+ </aside>
+
+ <!-- Main Non-Linear Workspace -->
+ <main class="bm-workspace main-content">
+
+ <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：B2B 生产力席位年金 × AI 算力公用事业收费站" data-i18n-en="ARCHETYPE: B2B Seat Annuity × AI Compute Utility Tollbooth">商业范式：B2B 生产力席位年金 × AI 算力公用事业收费站</span>
+ <span class="mui-chip mui-chip-success mono">FY2026 10-K + Q1 FY27 审计口径</span>
+ <span class="mui-chip mui-chip-violet mono">Op Margin 46.8% → Q1 49.8%</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="微软公司商业模式解构：<span class='bm-gradient-txt'>靠 59.9% 营业利润率的 M365 席位税造血，筑就 $6,780亿 履约合同的全球 AI 算力电网</span>" data-i18n-en="Deconstructing Microsoft's Business Model: <span class='bm-gradient-txt'>59.9% Op-Margin M365 Seat Annuity Funding a $678B-Backlog Global AI Compute Grid</span>">
+ 微软公司商业模式解构：<span class="bm-gradient-txt">靠 59.9% 营业利润率的 M365 席位税造血，筑就 $6,780亿 履约合同的全球 AI 算力电网</span>
+ </h1>
+
+ <p class="bm-lead" id="heroLeadText">
+ 如果说苹果是“高毛利消费硬件漏斗 + 25亿个人终端生态税”，微软则是人类商业史上最精密的<strong>企业级双螺旋复利机器</strong>：第一重螺旋是以 Entra 身份认证、Windows 与 Office/Teams 构建全球企业数字底座，在 FY2026 创造 <strong>$1,400.0亿 生产力业务营收与高达 59.9% 的营业利润率（$838.8亿 营业利润）</strong>，并通过 E3→E5 安全包与 <strong>3,000万+ 付费席位的 M365 Copilot</strong> 原地拔高单席位 ARPU
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">SEC FY26 财报 ↗</a>；第二重螺旋是将这套巨额现金牛投入全球超大规模 AI 数据中心，推动 <strong>Azure 年营收首破 $1,000亿</strong>，并在 Q1 FY2027 加速飙升 <strong>+48% 至单季 $331.7亿（年化运行率 $1,327亿）</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">SEC Q1 FY27 ↗</a>。更关键的是，凭借 <strong>$6,780亿 商业剩余履约义务（RPO，含 OpenAI $2,500亿增量云合约）</strong>与 <strong>$757亿 账面预收递延收入</strong>，微软在 FY26 砸下 <strong>$1,159.5亿 现金资本开支</strong>的同时，依然斩获 <strong>$669.9亿 正向自由现金流</strong>，成为唯一兼具千亿级 CapEx 进攻力与近 $500亿股东现金回报的超级云巨头
+ <a class="cite-link" href="https://www.microsoft.com/investor/reports/ar26/index.html" target="_blank" rel="noopener noreferrer">2026 年报 ↗</a>。
+ </p>
+ </div>
+
+ <!-- Interactive 3-Lens Business Formula Switcher -->
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 零边际席位提价阶梯" data-i18n-en="① Zero-CAC Seat Upsell">① 零边际席位提价阶梯</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 算力→Token 经营杠杆" data-i18n-en="② Cloud Operating Leverage">② 算力→Token 经营杠杆</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ $678B RPO 与预收浮存" data-i18n-en="③ $678B RPO &amp; Cash Float">③ $678B RPO 与预收浮存</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 企业客户终身净值 = 存量席位数 × [E3 ($36) → E5 ($57) → M365 Copilot (+$30) → Agent 365 按量消耗] × ~98%+ 企业续约底座
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 独立 SaaS 厂商每卖出一款安全、协作或 AI 工具都要支付高昂销售佣金；而微软通过企业级协议（Enterprise Agreement）将 Teams、Defender 安全与 Copilot 打包进同一张 IT 采购账单，实现<strong>“无需新增获客成本的原地 ARPU 翻倍”</strong>。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: Live Financial Telemetry Ledger -->
+ <aside class="bm-telemetry-ledger" aria-label="FY2026 与 Q1 FY27 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="FY26 全年 &amp; Q1 FY27 核心遥测账本" data-i18n-en="FY26 &amp; Q1 FY27 Telemetry Ledger">FY26 全年 &amp; Q1 FY27 核心遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">10-K 审计表 ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY26 总营收 (服务及云占 80.5%)" data-i18n-en="FY26 Total Revenue (80.5% Service &amp; Cloud)">FY26 总营收 (服务及云占 80.5%)</span>
+ <span class="bm-tel-val mono">$331.84B <small style="font-size:0.73rem;color:var(--mui-success-text);">+17.8%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:80.5%;"></div>
+ <div style="width:19.5%;background:#7C3AED;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Service &amp; Cloud $267.1B</span><span>Product $64.7B (81.3% GM)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="营业利润率跃升 (Q1 FY27 创 49.8% 极值)" data-i18n-en="Operating Margin (Record 49.8% in Q1 FY27)">营业利润率跃升 (Q1 FY27 创 49.8% 极值)</span>
+ <span class="bm-tel-val mono">46.8% <small style="font-size:0.73rem;color:var(--mui-success-text);">$155.2B</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:67.9%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>FY26 综合毛利 $225.5B (67.9%)</span><span>GAAP 净利 $133.7B (+31.3%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="Q1 FY27 新分部：Agents &amp; Infra 占比 83.2%" data-i18n-en="Q1 FY27 Realignment: Agents &amp; Infra = 83.2%">Q1 FY27 新分部：Agents &amp; Infra 占比 83.2%</span>
+ <span class="bm-tel-val mono">$92.28B <small style="font-size:0.73rem;color:var(--mui-success-text);">单季 +19%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:83.2%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ <div style="width:16.8%;background:#D97706;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Azure 单季 $33.17B (+48%)</span><span>M365 Cloud 单季 $27.78B</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="商业履约积压订单 (RPO) × 经营现金流" data-i18n-en="Commercial RPO × Operating Cash Flow">商业履约积压订单 (RPO) × 经营现金流</span>
+ <span class="bm-tel-val mono">$678B / $182.9B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:92%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>FY26 现金 CapEx $115.9B</span><span>正向 FCF $67.0B · 回馈 $48.7B</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END B2B &amp; AI VALUE PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从企业身份入口到 $6,780亿 确定性履约水库" data-i18n-en="5-Node Value Pipeline: From Entra Identity Lock-In to $678B Contracted Backlog">五阶商业价值传导沙盘：从企业身份入口到 $6,780亿 确定性履约水库</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解微软如何将全球财富 500 强的 IT 预算层层转化为高利润率复利现金流。" data-i18n-en="Select any node to inspect how Microsoft converts Fortune 500 IT budgets into high-margin recurring cash flow.">点击下方任一价值链节点，拆解微软如何将全球财富 500 强的 IT 预算层层转化为高利润率复利现金流。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">IDENTITY ROOT</span></div>
+ <div class="bm-node-title" data-i18n-zh="Entra 身份与工作流事实标准" data-i18n-en="Entra ID &amp; Workflow Root">Entra 身份与工作流事实标准</div>
+ <div class="bm-node-kpi mono">组织级数据图谱 Work IQ 锚点</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">SEAT LADDER</span></div>
+ <div class="bm-node-title" data-i18n-zh="E3→E5→Copilot 席位提价阶梯" data-i18n-en="E3→E5→Copilot ARPU Ladder">E3→E5→Copilot 席位提价阶梯</div>
+ <div class="bm-node-kpi mono">PBP $140.0B · 59.9% 营业利润率</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">CLOUD FLEET</span></div>
+ <div class="bm-node-title" data-i18n-zh="Azure 全球同构算力电网" data-i18n-en="Azure Global Compute Grid">Azure 全球同构算力电网</div>
+ <div class="bm-node-kpi mono">单季 $33.17B (+48% YoY)</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">AGENTIC LAYER</span></div>
+ <div class="bm-node-title" data-i18n-zh="多模型 Foundry 与 Agent 365" data-i18n-en="Multi-Model Foundry &amp; Agent 365">多模型 Foundry 与 Agent 365</div>
+ <div class="bm-node-kpi mono">3,000万+ M365 Copilot 付费席位</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">RPO RESERVOIR</span></div>
+ <div class="bm-node-title" data-i18n-zh="预收递延浮存与研发/算力再投" data-i18n-en="$678B RPO &amp; Positive FCF">预收递延浮存与研发/算力再投</div>
+ <div class="bm-node-kpi mono">RPO $678B · OCF $182.9B</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · ENTERPRISE IDENTITY &amp; WORKFLOW MONOPOLY</span>
+ <h3 id="nodeTitle">Entra ID + Windows + Office + GitHub：卡住全球企业“人、代码与权限”的咽喉</h3>
+ <p id="nodeDesc">
+ 正如苹果用 Apple ID 锁住个人消费者，微软用 Microsoft Entra（原 Azure AD）、Exchange 邮件树、SharePoint 文档库与 GitHub 代码库锁住了全球几乎所有跨国企业的组织架构与权限图谱（Microsoft Graph / Work IQ）。企业替换单一聊天或网盘工具或许可行，但剥离整套身份认证、安全合规与文档协同底座无异于“在线更换企业中枢神经系统”。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 商业传导：Entra 身份主权 + 零边际分发渠道（Teams / Defender 捆绑） → 令独立垂直 SaaS 竞争对手极难突破微软企业协议护城河
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">$214.4B</b><span>FY2026 Microsoft Cloud 总营收</span></div>
+ <div class="bm-ins-card"><b class="mono">64.6%</b><span>云业务占全集团总营收比重</span></div>
+ <div class="bm-ins-card"><b class="mono">8.0%</b><span>销售与营销费率（四年持续摊薄）</span></div>
+ <div class="bm-ins-card"><b class="mono">$35.6B</b><span>FY26 统一全栈研发池投入</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: 7:5 SPLIT — PROFIT WATERFALL & MICROSOFT CLOUD 4-TIER STACK -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; OPERATING LEVERAGE</span>
+ <h3 data-i18n-zh="FY2026 $3,318亿 价值转化瀑布流与利润率逆势扩张" data-i18n-en="FY2026 $331.8B P&amp;L Waterfall &amp; Operating Leverage">FY2026 $3,318亿 价值转化瀑布流与利润率逆势扩张</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→OCF→FCF 瀑布流" data-i18n-en="Rev → OCF → FCF">营收→OCF→FCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="6期毛利 vs 营业利润率" data-i18n-en="Gross vs Op Margin">6期毛利 vs 营业利润率</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption" data-i18n-zh="核心财务反差：尽管 AI 基建折旧使综合毛利率微调至 67.9%，但微软严控人员编制（同比减员 5,000 人）使 OpEx 仅增 7.4%，反而推动营业利润率创下 FY26 46.8% 与 Q1 FY27 49.8% 的历史巅峰。" data-i18n-en="Key financial insight: Even as AI infrastructure depreciation nudged gross margin to 67.9%, strict headcount discipline (-5,000 FTEs YoY; OpEx +7.4%) drove operating margin to record highs of 46.8% in FY26 and 49.8% in Q1 FY27.">
+ 核心财务反差：尽管 AI 基建折旧使综合毛利率微调至 67.9%，但微软严控人员编制（同比减员 5,000 人）使 OpEx 仅增 7.4%，反而推动营业利润率创下 FY26 46.8% 与 Q1 FY27 49.8% 的历史巅峰
+ <a class="cite-link" href="https://sec-api.io/insights/financial-analysis-of-microsoft-fy2026-capital-intensity-against-a-record-margin" target="_blank" rel="noopener noreferrer">FY26 利润拆解 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · Q1 FY27 $76.8B AGENTS &amp; INFRA STACK</span>
+ <h3 data-i18n-zh="新双分部架构下四大变现引擎（占总营收 83.2%）" data-i18n-en="4 Monetization Pillars of Agents &amp; Infra (83.2% of Sales)">新双分部架构下四大变现引擎（占总营收 83.2%）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="consumption" data-i18n-zh="按量算力" data-i18n-en="Consumption">按量算力</button>
+ <button type="button" class="mui-seg-btn" data-tcat="seat" data-i18n-zh="席位订阅" data-i18n-en="Per-Seat">席位订阅</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="consumption">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="① Azure 核心算力、数据平台与 Foundry 推理" data-i18n-en="① Azure Compute, Data Fabric &amp; AI Foundry">① Azure 核心算力、数据平台与 Foundry 推理</span>
+ <span class="mui-chip mui-chip-success mono">Q1 $33.17B (+48% YoY)</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="Q1 FY27 微软史上首次单独披露 Azure 季度美元营收达 $331.65亿（年化逾 $1,327亿），由企业核心云迁移、Microsoft Fabric 数据底座与 OpenAI/多模型 Token 推理按量计费共同驱动。" data-i18n-en="Disclosed standalone in dollars for the first time in Q1 FY27 at $33.17B ($132.7B annualized run-rate), powered by core cloud migrations, Fabric data workloads, and multi-model token consumption.">Q1 FY27 微软史上首次单独披露 Azure 季度美元营收达 $331.65亿（年化逾 $1,327亿），由企业核心云迁移、Microsoft Fabric 数据底座与 OpenAI/多模型 Token 推理按量计费共同驱动。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="seat">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="② Microsoft 365 商业与个人云席位年金" data-i18n-en="② Microsoft 365 Commercial &amp; Consumer Cloud">② Microsoft 365 商业与个人云席位年金</span>
+ <span class="mui-chip mui-chip-primary mono">Q1 $27.78B (+17% YoY)</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="全球逾 4 亿商业付费席位的超级印钞机；依靠 E5 高阶安全合规渗透与超过 3,000 万付费席位的 M365 Copilot 附加包，以接近 80% 软件毛利率源源不断输血 AI 基建。" data-i18n-en="The cash-cow seat annuity: E5 security upgrades and 30M+ paid M365 Copilot add-on seats compound ARPU at ~80% software gross margins.">全球逾 4 亿商业付费席位的超级印钞机；依靠 E5 高阶安全合规渗透与超过 3,000 万付费席位的 M365 Copilot 附加包，以接近 80% 软件毛利率源源不断输血 AI 基建。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="seat">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="③ 企业混合云许可、Dynamics 365 与 LinkedIn" data-i18n-en="③ Hybrid Server Licensing, Dynamics &amp; LinkedIn">③ 企业混合云许可、Dynamics 365 与 LinkedIn</span>
+ <span class="mui-chip mui-chip-violet mono">Q1 许可 $8.41B + 行业云 $5.34B</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="Windows Server / SQL Server 混合云许可锁定金融政企核心库，Dynamics 365 在 ERP/CRM 市场持续抢占传统厂商份额，LinkedIn 掌控全球高净值职场图谱。" data-i18n-en="Windows/SQL Server hybrid licensing anchors regulated enterprises while Dynamics 365 takes ERP/CRM share and LinkedIn monetizes the global professional graph.">Windows Server / SQL Server 混合云许可锁定金融政企核心库，Dynamics 365 在 ERP/CRM 市场持续抢占传统厂商份额，LinkedIn 掌控全球高净值职场图谱。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="consumption">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="④ 端到端安全护盾（Defender/Entra）与 GitHub 开发者税" data-i18n-en="④ End-to-End Security Suite &amp; GitHub Copilot">④ 端到端安全护盾（Defender/Entra）与 GitHub 开发者税</span>
+ <span class="mui-chip mui-chip-warning mono">$20B+ 安全业务体量</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="横跨多云的身份、终端与安全智能体（Security Copilot）使安全从成本中心变为高粘性捆绑包；GitHub Copilot 则占据全球 AI 编程助手的绝对首发身位。" data-i18n-en="Cross-cloud identity, endpoint protection, and Security Copilot consolidate fragmented point vendors while GitHub Copilot leads AI software engineering.">横跨多云的身份、终端与安全智能体（Security Copilot）使安全从成本中心变为高粘性捆绑包；GitHub Copilot 则占据全球 AI 编程助手的绝对首发身位。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: 5:7 SPLIT — ENTERPRISE SEAT RATCHET COHORT & SEGMENT PROFIT SHARE -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · ENTERPRISE SEAT EXPANSION RATCHET</span>
+ <h3 data-i18n-zh="单客户分层经济模型：一张企业合同如何撬动 3.3 倍毛利？" data-i18n-en="Enterprise Unit Economics: 3.3x Gross Profit per Seat">单客户分层经济模型：一张企业合同如何撬动 3.3 倍毛利？</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="e3" data-i18n-zh="标准协同户 (M365 E3)" data-i18n-en="Standard (M365 E3)">标准协同户 (M365 E3)</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="e5" data-i18n-zh="安全全栈户 (M365 E5)" data-i18n-en="Security Suite (M365 E5)">安全全栈户 (M365 E5)</button>
+ <button type="button" class="mui-seg-btn" data-cohort="ai" data-i18n-zh="智能体前沿户 (E5+Copilot+Agent)" data-i18n-en="Frontier AI (E5+Copilot+Agents)">智能体前沿户 (E5+Copilot+Agent)</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat">
+ <div class="lbl">典型订阅组合</div>
+ <div class="val" style="font-size:0.93rem;">Office + Teams + Defender + Power BI</div>
+ <div class="delta">替代 5–8 家独立第三方安全/BI工具</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">标杆目录单价 (每席位/月)</div>
+ <div class="val mono">$57 / 月</div>
+ <div class="delta">较 E3 ($36) 提价 +58%</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">企业净留存与续约韧性</div>
+ <div class="val mono">&gt;98%</div>
+ <div class="delta">安全合规与身份策略深度锁死</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">千人规模企业 5年累计毛利</div>
+ <div class="val mono">$2.74M</div>
+ <div class="delta">边际交付毛利率 ~80%</div>
+ </div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>“CIO 总拥有成本（TCO）套利”棘轮效应：</strong>当企业从 E3 升级至 E5 时，虽然向微软多付 $21/人/月，但可一次性退订外部独立的终端杀毒、单点登录、云访问安全与数据分析软件（合计往往超 $45/月）——<strong>客户省了总预算，微软却吃下了全量钱包份额</strong>
+ <a class="cite-link" href="https://www.microsoft.com/investor/reports/ar26/index.html" target="_blank" rel="noopener noreferrer">2026 年报 PBP 披露 ↗</a>。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · COHORT LTV &amp; SEGMENT PROFIT ENGINE</span>
+ <h3 data-i18n-zh="千席企业 5 年累计毛利曲线与分部营收/营业利润占比对比" data-i18n-en="5Y Per-1,000-Seat Gross Profit &amp; Segment Profit Share">千席企业 5 年累计毛利曲线与分部营收/营业利润占比对比</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="ltv" data-i18n-zh="千席5年毛利累积 ($M)" data-i18n-en="5Y 1k-Seat LTV ($M)">千席5年毛利累积 ($M)</button>
+ <button type="button" class="mui-seg-btn" data-cview="share" data-i18n-zh="分部营收 vs 营业利润占比" data-i18n-en="Rev vs OpInc Share">分部营收 vs 营业利润占比</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption" data-i18n-zh="数据核验：FY26 传统三分部中 PBP 以 42.2% 营收贡献了 54.0% 营业利润（59.9% 营业利润率）；Q1 FY27 重组后 Agents & Infra 单季贡献 83.2% 营收与高达 88.3% 的全集团营业利润（$405.6亿 / $459.2亿）。" data-i18n-en="Verified data: In FY26, PBP generated 54.0% of operating income on 42.2% of revenue (59.9% margin); in Q1 FY27, realigned Agents & Infra contributed 83.2% of revenue and 88.3% of total operating income ($40.56B / $45.92B).">
+ 数据核验：FY26 传统三分部中 PBP 以 42.2% 营收贡献了 54.0% 营业利润（59.9% 营业利润率）；Q1 FY27 重组后 Agents &amp; Infra 单季贡献 83.2% 营收与高达 88.3% 的全集团营业利润（$405.6亿 / $459.2亿）
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">Q1 FY27 分部表 ↗</a>。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: 6:6 DUAL WORKBENCH — $678B RPO & CAPEX CASH ENGINE + 5Y EPS COMPOUNDER -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · $678B RPO BACKLOG &amp; CAPEX CASH COVERAGE</span>
+ <h3 data-i18n-zh="$6,780亿 商业履约积压池与最后一家正自由现金流超算巨头" data-i18n-en="$678B Commercial RPO &amp; Positive FCF Through Peak CapEx">$6,780亿 商业履约积压池与最后一家正自由现金流超算巨头</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="rpo" data-i18n-zh="商业 RPO 跃迁 ($B)" data-i18n-en="Commercial RPO ($B)">商业 RPO 跃迁 ($B)</button>
+ <button type="button" class="mui-seg-btn" data-kview="capex" data-i18n-zh="经营现金流 vs CapEx ($B)" data-i18n-en="OCF vs CapEx ($B)">经营现金流 vs CapEx ($B)</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption" data-i18n-zh="确定性密码：微软并非“盲目先建机房再找客户”——截至 FY26 末已签约未确认商业合同（RPO）暴涨 84% 至 $6,780亿（相当于 2.0 倍全年总营收），叠加以预收年费为主的 $757亿 账面递延收入浮存金，支撑 $1,829亿 OCF 全额覆盖 $1,159亿 现金 CapEx 后仍净剩 $670亿 FCF。" data-i18n-en="Demand-backed buildout: Commercial RPO surged +84% YoY to $678B at FY26-end (2.0x annual revenue), paired with $75.7B in unearned revenue float, enabling $182.9B OCF to self-fund $115.9B cash CapEx and still leave $67.0B in FCF.">
+ 确定性密码：微软并非“盲目先建机房再找客户”——截至 FY26 末已签约未确认商业合同（RPO）暴涨 84% 至 $6,780亿（相当于 2.0 倍全年总营收），叠加以预收年费为主的 $757亿 账面递延收入浮存金，支撑 $1,829亿 OCF 全额覆盖 $1,159亿 现金 CapEx 后仍净剩 $670亿 FCF
+ <a class="cite-link" href="https://seekingalpha.com/article/4969976-microsoft-the-last-hyperscaler-with-positive-free-cash-flow" target="_blank" rel="noopener noreferrer">现金流韧性分析 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EPS &amp; FCF COMPOUNDER</span>
+ <h3 data-i18n-zh="FY2027–FY2031 算力收获期与每股收益情景推演器" data-i18n-en="FY2027–FY2031 CapEx Harvest &amp; EPS Simulator">FY2027–FY2031 算力收获期与每股收益情景推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="重折旧压制" data-i18n-en="Bear">重折旧压制</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="基准收获" data-i18n-en="Base">基准收获</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="Agent爆发" data-i18n-en="Bull">Agent爆发</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="Agents &amp; Infra 年化增速 (FY27–31 CAGR)" data-i18n-en="Agents &amp; Infra Revenue CAGR">Agents &amp; Infra 年化增速 (FY27–31 CAGR)</span><b class="mono" id="lblCloudCagr">18.5%</b></div>
+ <input type="range" id="inpCloudCagr" min="10" max="26" step="0.5" value="18.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="Devices &amp; Consumer 年化增速" data-i18n-en="Devices &amp; Consumer CAGR">Devices &amp; Consumer 年化增速</span><b class="mono" id="lblDevCagr">2.5%</b></div>
+ <input type="range" id="inpDevCagr" min="-4" max="8" step="0.5" value="2.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="FY31E 稳态 CapEx / 营收强度 (当前 34.9%)" data-i18n-en="FY31E Terminal CapEx / Revenue (Now 34.9%)">FY31E 稳态 CapEx / 营收强度 (当前 34.9%)</span><b class="mono" id="lblCapexPct">22.0%</b></div>
+ <input type="range" id="inpCapexPct" min="14" max="34" step="1" value="22" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$716B</b><span data-i18n-zh="FY31E 总营收" data-i18n-en="FY31E Revenue">FY31E 总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simFcfOut">$218B</b><span data-i18n-zh="FY31E 自由现金流" data-i18n-en="FY31E FCF">FY31E 自由现金流</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEpsOut">$36.84</b><span data-i18n-zh="FY31E 稀释 EPS" data-i18n-en="FY31E Diluted EPS">FY31E 稀释 EPS</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simCagrOut">+15.5%</b><span data-i18n-zh="5年 EPS 复合增速" data-i18n-en="5Y EPS CAGR">5年 EPS 复合增速</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: GLOBAL MEGA-CAP ARCHETYPE MATRIX & STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球商业巨头模型横向对标与微软三大核心风险压测" data-i18n-en="Global Mega-Cap Business Model Matrix &amp; Stress Audit">全球商业巨头模型横向对标与微软三大核心风险压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比微软与苹果、亚马逊、谷歌、英伟达及 Salesforce 的盈利质量与资本强度，并追踪三大压力因子。" data-i18n-en="Benchmarking Microsoft against Apple, Amazon, Alphabet, NVIDIA, and Salesforce across margin, CapEx, and risks.">对比微软与苹果、亚马逊、谷歌、英伟达及 Salesforce 的盈利质量与资本强度，并追踪三大压力因子。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="cloud" data-i18n-zh="超大规模云/AI" data-i18n-en="Hyperscalers">超大规模云/AI</button>
+ <button type="button" class="mui-seg-btn" data-pcat="saas" data-i18n-zh="软件生态/终端税" data-i18n-en="SaaS / Ecosystem">软件生态/终端税</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th data-i18n-zh="公司与代码" data-i18n-en="Company">公司与代码</th>
+ <th data-i18n-zh="核心商业模式原型" data-i18n-en="Core Business Archetype">核心商业模式原型</th>
+ <th data-i18n-zh="综合毛利率 / 营业利润率" data-i18n-en="Gross / Op Margin">综合毛利率 / 营业利润率</th>
+ <th data-i18n-zh="CapEx / 营收强度" data-i18n-en="CapEx Intensity">CapEx / 营收强度</th>
+ <th data-i18n-zh="预收/履约护城河" data-i18n-en="Backlog / Float">预收/履约护城河</th>
+ <th data-i18n-zh="模式终极壁垒与核心脆弱点" data-i18n-en="Ultimate Moat &amp; Key Vulnerability">模式终极壁垒与核心脆弱点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-msft" data-row-cat="cloud saas">
+ <td><strong>Microsoft (MSFT)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>B2B 身份/M365 席位税 + Azure AI 算力电网</td>
+ <td class="mono">67.9% / 46.8% (Q1: 49.8%)</td>
+ <td class="mono" style="color:var(--mui-warning-text);">34.9% ($115.9B 重基建)</td>
+ <td class="mono" style="color:var(--mui-success-text);">$678B RPO · $75.7B 预收</td>
+ <td>全球企业工作流锁死；短期受 AI 机房折旧、电力瓶颈与 OpenAI 集中度考验</td>
+ </tr>
+ <tr data-row-cat="saas">
+ <td><strong>Apple (AAPL)</strong></td>
+ <td>自研硅片旗舰硬件漏斗 + 25亿终端零CAC服务税</td>
+ <td class="mono">48.8% / ~33.9%</td>
+ <td class="mono" style="color:var(--mui-success-text);">1.9% ($9.0B 极致轻资产)</td>
+ <td class="mono" style="color:var(--mui-success-text);">-58 天负营运资本浮存</td>
+ <td>端侧算力由消费者买单、FCF 转化率 &gt;100%；面临欧美反垄断与硬件关税扰动</td>
+ </tr>
+ <tr data-row-cat="cloud">
+ <td><strong>Amazon (AMZN)</strong></td>
+ <td>全球自营/第三方履约网络 + AWS IaaS 霸主 + 零售广告</td>
+ <td class="mono">~50% / ~11%–12%</td>
+ <td class="mono" style="color:var(--mui-error-text);">~16%–19% (超千亿重投入)</td>
+ <td class="mono">$180B+ AWS 履约积压</td>
+ <td>AWS 基础设施广度极深；缺乏类似 Office 365 的上层 SaaS 高毛利造血垫</td>
+ </tr>
+ <tr data-row-cat="cloud saas">
+ <td><strong>Alphabet (GOOGL)</strong></td>
+ <td>全球搜索意图竞价垄断 + YouTube + TPU 自研全栈云</td>
+ <td class="mono">~58% / ~32%–34%</td>
+ <td class="mono" style="color:var(--mui-warning-text);">~19%–22% (TPU自研省成本)</td>
+ <td class="mono">$100B+ Cloud 积压订单</td>
+ <td>TPU 垂直整合具备推理成本优势；核心搜索现金牛需防御生成式问答分流</td>
+ </tr>
+ <tr data-row-cat="cloud">
+ <td><strong>NVIDIA (NVDA)</strong></td>
+ <td>CUDA 开发者生态锁死 + AI 数据中心机柜级军火商</td>
+ <td class="mono">~71%–75% / ~62%</td>
+ <td class="mono" style="color:var(--mui-success-text);">~2%–3% (台积电代工)</td>
+ <td class="mono">主权云与超算预付锁产</td>
+ <td>吞噬云巨头 CapEx 红利；长期需应对微软 Maia 200 等大客户自研推理芯片分流</td>
+ </tr>
+ <tr data-row-cat="saas">
+ <td><strong>Salesforce (CRM)</strong></td>
+ <td>企业 CRM 应用软件订阅 + Agentforce 工作流</td>
+ <td class="mono">~77% / ~21%–33%(Non-GAAP)</td>
+ <td class="mono" style="color:var(--mui-success-text);">~2.0% (纯软件轻资产)</td>
+ <td class="mono">~$63B RPO 订阅合同</td>
+ <td>客户关系数据深厚，但底层缺乏自有超大规模云算力，面临微软 Dynamics + Copilot 捆绑挤压</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · CAPEX DEPRECIATION WAVE</span>
+ <h4>千亿美元 AI 资本开支折旧洪峰：云毛利率承压几何？</h4>
+ <p>FY26 微软现金购置物业设备飙升 80% 至 $1,159.5亿（Q1 FY27 单季含融资租赁达 $452亿），推动折旧摊销升至 $385.3亿，令 Microsoft Cloud 毛利率由 69% 回落至 ~66%
+ <a class="cite-link" href="https://www.tamtam.ai/c/microsoft/account-plan" target="_blank" rel="noopener noreferrer">云毛利跟踪 ↗</a>。缓冲垫在于机房土建寿命长达 15–20 年，且 CPU/GPU 服务器算力同构可随时在训练、推理与传统 Azure 负载间动态切换。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：Microsoft Cloud 毛利率能否企稳于 65%+ 区间</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · OPENAI RPO CONCENTRATION</span>
+ <h4>$6,780亿 RPO 中的 OpenAI 集中度与协议重构</h4>
+ <p>分析显示微软商业 RPO 中约 40%–45% 与 OpenAI 2025 年 10 月签署的 $2,500亿 Azure 增量采购承诺相关；2026 年 4 月双方修订协议取消排他算力限制
+ <a class="cite-link" href="https://nextfinancial.substack.com/p/the-48-hour-reset-why-the-microsoftopenai" target="_blank" rel="noopener noreferrer">协议深度复盘 ↗</a>。微软的对冲牌是：锁定 OpenAI 27% PBC 股权与直至 2032 年的底层模型 IP 授权，同时在 Foundry 全面引入 Anthropic、Llama 与自研 MAI 模型。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：非 OpenAI 企业客户 Azure AI 消耗占比提升速度</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · CYBERSECURITY, TAX &amp; ANTITRUST</span>
+ <h4>国家级网络安全信任、$289亿 IRS 税务争议与监管</h4>
+ <p>作为全球政企基础设施底座，任何重大安全漏洞都会直接威胁其“信任溢价”（微软已将 SFI 安全纳入全员硬性绩效考核）；同时需跟踪欧盟云捆绑/AI 监管审查及美国国税局（IRS）针对历史转移定价提出的 $289亿补税争议进展
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm" target="_blank" rel="noopener noreferrer">FY26 10-K 风险披露 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：SFI 零信任安全里程碑与欧美云反垄断合规</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES FOOTER -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威 SEC 财报、2026 股东信与研究信源" data-i18n-en="Verified SEC Filings, 2026 Annual Report &amp; Research Sources">权威 SEC 财报、2026 股东信与研究信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">
+ <b>SEC EX-99.1: Microsoft FY2026 Q4 &amp; Full-Year Results ↗</b>
+ <span>官方披露 FY26 营收 $331.84B (+18%)、营业利润 $155.24B、GAAP 净利 $133.75B、OCF $182.94B 与 RPO $678B</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">
+ <b>SEC EX-99.1: Microsoft Q1 FY2027 Results (Oct 28, 2026) ↗</b>
+ <span>首次按 Agents &amp; Infra ($76.8B) 与 Devices &amp; Consumer ($15.5B) 披露，单季 Azure $33.17B (+48%)</span>
+ </a>
+ <a class="bm-source-item" href="https://www.microsoft.com/investor/reports/ar26/index.html" target="_blank" rel="noopener noreferrer">
+ <b>Microsoft 2026 Annual Report &amp; Satya Nadella Letter ↗</b>
+ <span>Microsoft Cloud $214.4B、Azure 年破 $1,000亿、M365 Copilot 超 3,000万席位及 $60B 回购计划明细</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm" target="_blank" rel="noopener noreferrer">
+ <b>Microsoft Corp. FY2026 SEC Form 10-K Filing ↗</b>
+ <span>分部成本构成、223,000 全职员工职能分布、数据中心租赁承诺与 IRS 税务及法律风险披露</span>
+ </a>
+ <a class="bm-source-item" href="https://sec-api.io/insights/financial-analysis-of-microsoft-fy2026-capital-intensity-against-a-record-margin" target="_blank" rel="noopener noreferrer">
+ <b>FY2022–FY2026 Capital Intensity vs. Record Operating Margin ↗</b>
+ <span>五年分部营收复合增速、PBP 59.9% 营业利润率压舱石与 AI 资本强度深度财务复盘</span>
+ </a>
+ <a class="bm-source-item" href="https://seekingalpha.com/article/4969976-microsoft-the-last-hyperscaler-with-positive-free-cash-flow" target="_blank" rel="noopener noreferrer">
+ <b>Hyperscaler Free Cash Flow Resilience Benchmark (Nov 2026) ↗</b>
+ <span>横向对比超大规模云厂商 AI 资本开支周期中微软保持正向自由现金流的独特商业结构</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/microsoft_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

@@ -1,23 +1,11 @@
-/* Raised geometric blocks behind frosted reading panels. */
+/* Reading-panel depth over the shared home and report wallpaper. */
 :root, html[data-theme="light"] {
-  --bg-canvas: #dce5f0;
-  --hero-glow: linear-gradient(135deg, rgba(255, 255, 255, .14), transparent 65%);
-  --canvas-grid: url('./reading-relief-light.svg');
   --reading-shadow: inset 0 1px 1px rgba(255, 255, 255, .9), inset 0 -1px 1px rgba(56, 78, 108, .12), 0 14px 28px -12px rgba(31, 52, 84, .32), 0 2px 5px rgba(31, 52, 84, .1);
 }
 html[data-theme="dark"] {
-  --bg-canvas: #101a2a;
-  --hero-glow: linear-gradient(135deg, rgba(114, 155, 205, .035), transparent 65%);
-  --canvas-grid: url('./reading-relief-dark.svg');
   --reading-shadow: inset 0 1px 1px rgba(200, 225, 255, .2), inset 0 -1px 1px rgba(0, 0, 0, .5), 0 14px 28px -10px rgba(0, 0, 0, .6);
-}
-html body, html body::before {
-  background-size: 100% 100%, 480px 320px !important;
-  background-repeat: no-repeat, repeat !important;
-}
-@media (max-width: 1023px) {
-  html body::before { background-size: 100% 100%, 360px 240px !important; }
 }
 html[data-theme] main :is(.mui-paper, .hero-card, .chart-card, .ip-hub-banner, .bm-panel, .ft-panel, .cc-panel, .ip-panel) {
   box-shadow: var(--reading-shadow);
 }
+html[data-theme] .mui-sidebar .sidebar-card { box-shadow: var(--reading-shadow) !important; }

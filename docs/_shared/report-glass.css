@@ -28,6 +28,7 @@ main :is(.mui-paper, .hero-card, .feature-card, .matrix-card, .chart-card,
   backdrop-filter: blur(14px) saturate(130%);
   -webkit-backdrop-filter: blur(14px) saturate(130%);
 }
+html[data-theme] .mui-sidebar .sidebar-card,
 html[data-theme] main :is(.mui-paper, .hero-card, .chart-card, .ip-hub-banner,
     .bm-lens-panel, .bm-panel, .ft-panel, .cc-panel, .ip-panel, .section-card,
     .research-card, .analysis-card, .product-card, .content-card, .executive-card) {
@@ -51,11 +52,11 @@ main .hub-cat-bar {
   margin-bottom: 14px;
 }
 /* Restore the original fine blueprint grid above the frosted reading surface. */
+html[data-theme] .mui-sidebar .sidebar-card,
 html[data-theme] main :is(.mui-paper, .hero-card, .chart-card, .ip-hub-banner,
     .arch-blueprint, .bm-lens-panel, .bm-panel, .bm-subpanel, .bm-canvas-box,
     .ft-panel, .cc-panel, .ip-panel, .section-card, .research-card,
-    .analysis-card, .product-card, .content-card, .executive-card),
-html[data-theme] .sidebar-card {
+    .analysis-card, .product-card, .content-card, .executive-card) {
   background-image: var(--blueprint-grid) !important;
   background-size: 28px 28px !important;
   background-repeat: repeat !important;

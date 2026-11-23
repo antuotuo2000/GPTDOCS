@@ -1,0 +1,21 @@
+/* Layout gaps show the wallpaper, never an extra sheet of stacked glass. */
+html[data-theme] main :is(.bm-command-deck,.ft-explorer) {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important; border-radius: 0 !important; padding: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+}
+/* One continuous blueprint origin across neighboring and nested panels. */
+html[data-theme] .mui-sidebar .report-grid-surface,
+html[data-theme] main .report-grid-surface {
+  background-origin: border-box !important;
+  background-clip: padding-box !important;
+  background-position: var(--report-grid-x,0px) var(--report-grid-y,0px) !important;
+}
+/* Inner panes inherit the parent's blur instead of sampling adjacent card edges. */
+html[data-theme] main :is(.mui-paper,.hero-card,.bm-panel,.ft-panel,.cc-panel,.cc-hero-shell,.bm-thesis-deck,.bm-telemetry-ledger,.ft-manifesto,.ft-horizon-radar)
+  :is(.mui-paper,.chart-card,.bm-lens-panel,.bm-subpanel,.bm-canvas-box,.ft-subbox,.ft-val-board,.cc-subbox) {
+  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}

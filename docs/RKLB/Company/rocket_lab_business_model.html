@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-report-family="rklb" data-imported-report>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="火箭实验室 Rocket Lab Corporation (NASDAQ: RKLB) 商业模式全景架构拆解：高频发射入口漏斗、80%营收占比太空系统主承包商、$35.7亿在手订单与$4.24亿客户预收浮存金、拟$80亿并购Iridium构建端到端太空应用现金牛（基于 FY2025 10-K 与 Q3 2026 10-Q）。" />
+  <title>Rocket Lab RKLB 商业模式架构拆解 | 数据中心</title>
+  
+  
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/rocket_lab_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky Frosted Glass MUI AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">RKLB</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <span class="crumb-label hide-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </span>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="火箭实验室 (Rocket Lab) 商业模式架构拆解" data-i18n-en="Rocket Lab Business Model Architecture">火箭实验室 (Rocket Lab) 商业模式架构拆解</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: RKLB</span>
+        <span class="mui-chip mui-chip-success mono hide-sm">Q3 2026 10-Q · Backlog $3.57B</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <button type="button" id="topDownloadBtn" class="mui-dl-btn" title="下载独立 HTML 网页">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-i18n-zh="下载 HTML" data-i18n-en="Download">下载 HTML</span>
+        </button>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与套件导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">RKLB · BUSINESS MODEL</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="Rocket Lab 商业模式图谱" data-i18n-en="Rocket Lab Business Model">Rocket Lab 商业模式图谱</div>
+        <p class="sidebar-subtitle" data-i18n-zh="100次高频发射入口 × 80%营收占比太空系统主承包商 × $4.24亿客户预收浮存金 × 拟$80亿并购Iridium卫星通信现金牛" data-i18n-en="100-Launch Orbital Funnel × 80% Space Systems Prime × $424M Customer Float × Pending $8B Iridium Cash Engine">100次高频发射入口 × 80%营收占比太空系统主承包商 × $4.24亿客户预收浮存金 × 拟$80亿并购Iridium卫星通信现金牛</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="火箭引流 + 星网复利" data-i18n-en="Launch + Space Prime">火箭引流 + 星网复利</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="Q3营收 / 同比增速" data-i18n-en="Q3 Rev / YoY">Q3营收 / 同比增速</span>
+            <span class="sidebar-mini-val mono">$267.8M · +72.7%</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="在手订单 / 净现金" data-i18n-en="Backlog / Net Cash">在手订单 / 净现金</span>
+            <span class="sidebar-mini-val mono">$3.57B · +$4.70B</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="套件导航与架构目录">
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="RKLB"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+        <ul class="mui-nav-list" id="tocList">
+          <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与三阶公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与三阶公式</span></a></li>
+          <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶端到端价值链沙盘" data-i18n-en="5-Node End-to-End Pipeline">五阶端到端价值链沙盘</span></a></li>
+          <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="营收毛利瀑布与系统四层塔" data-i18n-en="P&amp;L Waterfall &amp; 4-Tier Stack">营收毛利瀑布与系统四层塔</span></a></li>
+          <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="全栈搭售棘轮与合同LTV" data-i18n-en="Cross-Sell Ratchet &amp; LTV">全栈搭售棘轮与合同LTV</span></a></li>
+          <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="预收浮存金与并表推演器" data-i18n-en="Customer Float &amp; 5Y Lab">预收浮存金与并表推演器</span></a></li>
+          <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="商业航天对标矩阵与压测" data-i18n-en="Space Peer Matrix &amp; Stress">商业航天对标矩阵与压测</span></a></li>
+        </ul>
+      </nav>
+
+      </aside>
+
+    <!-- Main Distinct Non-Linear Workspace -->
+    <main class="bm-workspace main-content">
+
+      <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+      <section id="mod-deck" class="bm-command-deck">
+        <div class="bm-thesis-deck">
+          <div>
+            <div class="bm-badge-row">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：高频入轨运载入口 × 垂直整星国防主承包商 × L波段星座年金" data-i18n-en="ARCHETYPE: Orbital Launch Funnel × Space Systems Prime × L-Band Constellation Annuity">商业范式：高频入轨运载入口 × 垂直整星国防主承包商 × L波段星座年金</span>
+              <span class="mui-chip mui-chip-success mono">Q3 2026 10-Q 审计核验</span>
+              <span class="mui-chip mui-chip-violet mono">100 次 Electron 发射 · 59 连胜</span>
+            </div>
+
+            <h1 class="bm-display-h1" data-i18n-zh="Rocket Lab 商业模式解构：<span class='bm-gradient-txt'>以火箭高频发射卡位稀缺入口，靠 80% 占比的太空系统与 $80亿 铱星网络收割全栈复利</span>" data-i18n-en="Deconstructing Rocket Lab's Business Model: <span class='bm-gradient-txt'>Capture Access via Cadence Launch, Compound via 80% Space Systems &amp; $8B Iridium Network</span>">
+              Rocket Lab 商业模式解构：<span class="bm-gradient-txt">以火箭高频发射卡位稀缺入口，靠 80% 占比的太空系统与 $80亿 铱星网络收割全栈复利</span>
+            </h1>
+
+            <p class="bm-lead" id="heroLeadText">
+              资本市场早年常将 <strong>Rocket Lab (NASDAQ: RKLB)</strong> 简单归类为“小型火箭发射商”，但翻开其 2026 年三季报，这实质上是一台沿袭 SpaceX 终局路径、唯一在美股公开交易的<strong>“三级端到端太空复利机器”</strong>：第一级凭借全球商业发射频次第二的 <strong>Electron 与 HASTE 高超音速火箭</strong>（2026 年 11 月 14 日达成历史性第 100 次发射、连续 59 发成功，每 8 天下线一枚）垄断专车入轨信用入口，Q3 发射营收 <strong>$53.1M（分部毛利率 35.3%，发射积压订单暴涨至 $18.5亿 / 117 发）</strong>
+              <a class="cite-link" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>；
+              第二级将发射信任顺势转化为整星制造与核心部组件垄断，推动 <strong>Space Systems（太空系统）</strong>在 Q3 贡献 <strong>$214.8M 营收（占总营收 80.2%，同比激增 +88.1%）</strong>，豪取美国太空发展局（SDA）逾 <strong>$13.3亿</strong> 星座主承包大单
+              <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1819994/000181999426000012/rklb-02262026ex991.htm" target="_blank" rel="noopener noreferrer">FY25 年报公报 ↗</a>；
+              第三级通过现金对价已全额募资到位的 <strong>~$80亿美元并购 Iridium（铱星通信）</strong>，一步跨入拥有 <strong>255万+ 订阅用户、66 颗在轨卫星、全球 L 波段频谱与 57% OEBITDA 利润率（$4.95亿/年）</strong>的太空通信经常性现金牛
+              <a class="cite-link" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully" target="_blank" rel="noopener noreferrer">Iridium 并购公报 ↗</a>。
+            </p>
+          </div>
+
+          <!-- Interactive 3-Lens Business Formula Switcher -->
+          <div class="bm-lens-panel">
+            <div class="bm-lens-head">
+              <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+              <div class="mui-segmented" id="lensTabs">
+                <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 火箭引流×整星放大器" data-i18n-en="① Launch-to-Bus Multiplier">① 火箭引流×整星放大器</button>
+                <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 垂直整合毛利跃迁" data-i18n-en="② Vertical BOM Margin">② 垂直整合毛利跃迁</button>
+                <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 预收浮存×铱星现金牛" data-i18n-en="③ Customer Float &amp; Iridium">③ 预收浮存×铱星现金牛</button>
+              </div>
+            </div>
+            <div class="bm-equation-bar mono" id="lensFormula">
+              单任务全栈价值 = 专车发射费 ($7.8M–$70M) + 整星平台与载荷合同 ($25M–$45M/颗) + 在轨L波段通信订阅年金 (57% OEBITDA)
+            </div>
+            <div class="bm-lens-body" id="lensBody">
+              纯火箭初创公司困于单次运费天花板与发射窗口波动（过去十年逾 60 家小型火箭商折戟），而 Rocket Lab 把火箭变成<strong>“零获客成本的信任漏斗”</strong>——先为全球逾 1,700 次太空任务供应太阳翼、反作用飞轮、分离环与激光终端，再以整星总包商身份承接百亿级国防星座。
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Live Financial Telemetry Ledger -->
+        <aside class="bm-telemetry-ledger" aria-label="Q3 2026 核心经济遥测">
+          <div class="bm-ledger-head">
+            <div class="bm-ledger-title">
+              <span class="bm-pulse-dot"></span>
+              <span data-i18n-zh="Q3 2026 商业模型核心遥测账本" data-i18n-en="Q3 2026 Business Model Telemetry">Q3 2026 商业模型核心遥测账本</span>
+            </div>
+            <a class="cite-link mono" href="https://sec-api.io/insights/rocket-lab-rklb-q3-2026-earnings-3-57bn-backlog-neutron-moved-to-2027-and-the-pending-iridium-deal-sec-filing-analysis" target="_blank" rel="noopener noreferrer">10-Q 拆解 ↗</a>
+          </div>
+
+          <div class="bm-telemetry-rows">
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="Q3 单季总营收 (系统 80.2% / 发射 19.8%)" data-i18n-en="Q3 Total Revenue (80.2% Sys / 19.8% Launch)">Q3 单季总营收 (系统 80.2% / 发射 19.8%)</span>
+                <span class="bm-tel-val mono">$267.83M <small style="font-size:0.73rem;color:var(--mui-success-text);">+72.7%</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:80.2%;"></div>
+                <div style="width:19.8%;background:#16A34A;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>Space Systems $214.8M (+88%)</span><span>Launch $53.1M (+30%)</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="在手订单储备 Backlog (单季净增 $12.1亿)" data-i18n-en="Total Backlog (+$1.21B QoQ Surge)">在手订单储备 Backlog (单季净增 $12.1亿)</span>
+                <span class="bm-tel-val mono">$3.57B <small style="font-size:0.73rem;color:var(--mui-success-text);">+51.7% QoQ</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:51.8%;"></div>
+                <div style="width:48.2%;background:#7C3AED;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>发射 $1.85B (117发/16发Neutron)</span><span>太空系统 $1.72B (55+在研星)</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="毛利率扩张阶梯 (FY21 -3.0% → 9M26)" data-i18n-en="Gross Margin Trajectory (9M26 Non-GAAP)">毛利率扩张阶梯 (FY21 -3.0% → 9M26)</span>
+                <span class="bm-tel-val mono">38.4% <small style="font-size:0.73rem;color:var(--mui-primary-lighter);">Non-GAAP</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:76%;background:linear-gradient(90deg,#0073E6,#16A34A);"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>Q3 GAAP GM 33.6% (超指引)</span><span>9M26 Non-GAAP GM 40.7%</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="资产负债表净现金 &amp; 客户预收浮存金" data-i18n-en="Net Cash Fortress &amp; Customer Float">资产负债表净现金 &amp; 客户预收浮存金</span>
+                <span class="bm-tel-val mono">$4.70B / $424M</span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:94%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>有息负债仅 $3.0M · Q3 OCF +$7.2M</span><span>Iridium 现金对价已全额到位</span></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+      <section id="mod-pipeline" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 01 · END-TO-END SPACE VALUE CAPTURE PIPELINE</span>
+            <h2 class="bm-h2" data-i18n-zh="五阶太空价值链传导沙盘：从底层宇航级部组件到在轨通信订阅年金" data-i18n-en="5-Node Space Value Pipeline: From Merchant Components to Orbital Subscription Annuity">五阶太空价值链传导沙盘：从底层宇航级部组件到在轨通信订阅年金</h2>
+            <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链环节，拆解 Rocket Lab 如何内化供应商毛利、打破传统军工成本加成潜规则并锁死全周期现金流。" data-i18n-en="Click any node in the horizontal pipeline to inspect Rocket Lab's vertical BOM control, pricing power, and unit economics.">点击下方任一价值链环节，拆解 Rocket Lab 如何内化供应商毛利、打破传统军工成本加成潜规则并锁死全周期现金流。</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+        </div>
+
+        <div class="bm-pipeline-track" id="pipelineTrack">
+          <button type="button" class="bm-node-btn active" data-node="0">
+            <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">SUBSYSTEMS</span></div>
+            <div class="bm-node-title" data-i18n-zh="宇航级核心部组件军火商" data-i18n-en="Merchant Component Arsenal">宇航级核心部组件军火商</div>
+            <div class="bm-node-kpi mono">赋能全球 1,700+ 次太空任务</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="1">
+            <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">PRIME BUS</span></div>
+            <div class="bm-node-title" data-i18n-zh="整星平台与光电载荷总包" data-i18n-en="Spacecraft &amp; EO/IR Prime">整星平台与光电载荷总包</div>
+            <div class="bm-node-kpi mono">SDA &gt;$1.33B · 55+颗在造卫星</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="2">
+            <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">CADENCE LAUNCH</span></div>
+            <div class="bm-node-title" data-i18n-zh="高频专车入轨与高超音速靶机" data-i18n-en="Electron &amp; HASTE Cadence">高频专车入轨与高超音速靶机</div>
+            <div class="bm-node-kpi mono">100次发射 · 8天造1枚火箭</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="3">
+            <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">MEDIUM REUSE</span></div>
+            <div class="bm-node-title" data-i18n-zh="Neutron 可复用中型星座运力" data-i18n-en="Neutron Medium-Lift Fleet">Neutron 可复用中型星座运力</div>
+            <div class="bm-node-kpi mono">首飞前已锁 16 发 · $70M/发</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="4">
+            <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">SPACE APPS</span></div>
+            <div class="bm-node-title" data-i18n-zh="Iridium 频谱与全球在轨订阅网" data-i18n-en="Iridium L-Band Annuity">Iridium 频谱与全球在轨订阅网</div>
+            <div class="bm-node-kpi mono">255万+订户 · $495M OEBITDA</div>
+          </button>
+        </div>
+
+        <div class="bm-node-inspector" id="nodeInspector">
+          <div class="bm-ins-prose">
+            <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · MERCHANT SPACECRAFT SUBSYSTEMS</span>
+            <h3 id="nodeTitle">底层宇航部组件“卖铲人”：竞争对手每造一颗卫星，都在给 Rocket Lab 交过路费</h3>
+            <p id="nodeDesc">
+              通过精准并购整合 Sinclair（飞轮与星敏）、PSC（Lightband 星箭分离装置）、SolAero（全球稀缺空间级三结砷化镓太阳电池）、ASI（飞行软件）、Mynaric（激光通信终端）与 Motiv（空间机械臂），Rocket Lab 把行业最卡脖子的供应链瓶颈全部收归麾下。对外赚取高毛利部组件现货现金流，对内消除自身星座造星的三级供应商加价与交期延误。
+            </p>
+            <div class="bm-ins-formula mono" id="nodeFormula">
+              商业传导：掌控空间太阳能、激光终端与姿控飞轮 → Q3 产品类营收达 $197.5M（+89.8% YoY），直接推动毛利率超预期突破 38.4% (Non-GAAP)
+            </div>
+          </div>
+          <div class="bm-ins-kpis" id="nodeKpis">
+            <div class="bm-ins-card"><b class="mono">1,700+</b><span>搭载 RKLB 部件的全球航天任务</span></div>
+            <div class="bm-ins-card"><b class="mono">$26.0M</b><span>Mynaric 激光终端 Q3 单季并表贡献</span></div>
+            <div class="bm-ins-card"><b class="mono">$197.5M</b><span>Q3 2026 产品收入 (+89.8% YoY)</span></div>
+            <div class="bm-ins-card"><b class="mono">40%–50%+</b><span>成熟宇航级核心部件稳态毛利带</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 2: 7:5 ASYMMETRIC SPLIT (REVENUE/MARGIN WATERFALL + 4-TIER SPACE SYSTEMS STACK) -->
+      <section id="mod-profit-pool" class="bm-split-75">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02A · SCALE INFLECTION &amp; MARGIN SCISSORS</span>
+              <h3 data-i18n-zh="TTM $8.82亿 / 2026E ~$9.82亿 损益结构与六年毛利率大反转" data-i18n-en="TTM $881.9M P&amp;L Structure &amp; 6-Year Margin Inflection">TTM $8.82亿 / 2026E ~$9.82亿 损益结构与六年毛利率大反转</h3>
+            </div>
+            <div class="mui-segmented" id="pChartTabs">
+              <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="9M26 损益与现金桥" data-i18n-en="9M26 P&amp;L Bridge">9M26 损益与现金桥</button>
+              <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="6年毛利与亏损收敛曲线" data-i18n-en="6Y Margin Inflection">6年毛利与亏损收敛曲线</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="profitCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption" data-i18n-zh="数据核验：源自 Q3 2026 Form 10-Q 与 FY2025 Form 10-K。GAAP 毛利率已从 FY21 的 -3.0% 跃升至 TTM Q3 2026 的 36.2%（9M26 Non-GAAP 毛利率达 40.7%）；当前会计亏损主要源于 Neutron 研发峰值投入（9M26 研发 $261.3M），一旦 2027 年转入商业发射，研发费用率将迎来断崖式下行。" data-i18n-zh-raw="1" data-i18n-en="Verified per Q3 2026 Form 10-Q &amp; FY2025 Form 10-K. GAAP Gross Margin surged from -3.0% (FY21) to 36.2% TTM Q3 2026 (40.7% Non-GAAP in 9M26); current operating loss is intentionally driven by peak Neutron R&amp;D ($261.3M in 9M26) ahead of 2027 commercial flight.">
+            数据核验：源自
+            <a class="cite-link" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts" target="_blank" rel="noopener noreferrer">Q3 2026 10-Q ↗</a> 与
+            <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm" target="_blank" rel="noopener noreferrer">FY2025 10-K ↗</a>。
+            GAAP 毛利率已从 FY21 的 -3.0% 跃升至 TTM Q3 2026 的 <strong>36.2%</strong>（9M26 Non-GAAP 毛利率达 <strong>40.7%</strong>）；当前会计营业亏损主要源于 Neutron 研发峰值投入（9M26 研发 $261.3M）。
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02B · $1.72B SPACE SYSTEMS &amp; PRIME STACK</span>
+              <h3 data-i18n-zh="太空系统四层变现金字塔（占 Q3 营收 80.2%）" data-i18n-en="4-Tier Space Systems Stack (80.2% of Q3 Revenue)">太空系统四层变现金字塔（占 Q3 营收 80.2%）</h3>
+            </div>
+            <div class="mui-segmented" id="tierFilter">
+              <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+              <button type="button" class="mui-seg-btn" data-tcat="prime" data-i18n-zh="整星总包" data-i18n-en="Prime Bus">整星总包</button>
+              <button type="button" class="mui-seg-btn" data-tcat="comp" data-i18n-zh="高毛利部件" data-i18n-en="Subsystems">高毛利部件</button>
+            </div>
+          </div>
+
+          <div class="bm-tier-list" id="tierList">
+            <div class="bm-tier-card" data-tier="prime">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name" data-i18n-zh="① 国防导弹预警与传输层星座主承包 (SDA Prime)" data-i18n-en="① Defense Missile-Tracking &amp; Transport Prime">① 国防导弹预警与传输层星座主承包 (SDA Prime)</span>
+                <span class="mui-chip mui-chip-primary mono">&gt;$1.33B 合同额</span>
+              </div>
+              <div class="bm-tier-desc">直接击败传统军工五巨头，连夺 SDA Tranche 2（$5.15亿/18颗）与 Tranche 3（$8.16亿/18颗）导弹跟踪主承包合同，外加太空军 SB-AMTI（$3.97亿 Flatellite 星座）。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="comp">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name" data-i18n-zh="② 空间太阳能与吉瓦级轨道 AI 算力阵列 (SolAero)" data-i18n-en="② Space Solar &amp; Orbital AI Power Arrays">② 空间太阳能与吉瓦级轨道 AI 算力阵列 (SolAero)</span>
+                <span class="mui-chip mui-chip-success mono">全球唯二美系产能</span>
+              </div>
+              <div class="bm-tier-desc">掌握高效率抗辐射空间级太阳电池片核心产能，并于 2025–2026 推出面向千米级太空数据中心的硅基高功率太阳翼，卡位天基 AI 能源底座。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="comp">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name" data-i18n-zh="③ 星间激光通信与光电红外载荷 (Mynaric + GEOST)" data-i18n-en="③ Laser Comms &amp; EO/IR Payloads">③ 星间激光通信与光电红外载荷 (Mynaric + GEOST)</span>
+                <span class="mui-chip mui-chip-violet mono">$453M 并购合龙</span>
+              </div>
+              <div class="bm-tier-desc">收购 GEOST（$2.92亿，光电/红外导弹预警载荷）与德国 Mynaric（$1.61亿，CONDOR 激光终端），完成从“卖卫星底盘”向“高附加值传感器载荷”的惊险一跃。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="prime">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name" data-i18n-zh="④ 商业星座代工与深空探测平台 (Photon / Explorer)" data-i18n-en="④ Commercial Constellations &amp; Deep-Space">④ 商业星座代工与深空探测平台 (Photon / Explorer)</span>
+                <span class="mui-chip mui-chip-warning mono">55+ 颗在造航天器</span>
+              </div>
+              <div class="bm-tier-desc">为 Globalstar 交付 8 颗手机直连卫星底盘，并以传统深空任务约十分之一的低成本成功交付 NASA 双星火星探测任务 ESCAPADE。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 3: REVERSED 5:7 SPLIT — MISSION COHORT ECONOMICS & ORBITAL MONOPOLY -->
+      <section id="mod-cohort" class="bm-split-57">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03A · END-TO-END RATCHET ECONOMICS</span>
+              <h3 data-i18n-zh="客户分层单项目经济模型：从单发专车到十亿级全栈总包" data-i18n-en="Customer Tier Unit Economics: From Single Launch to $1B+ Prime">客户分层单项目经济模型：从单发专车到十亿级全栈总包</h3>
+            </div>
+          </div>
+
+          <div class="mui-segmented" id="cohortTabs">
+            <button type="button" class="mui-seg-btn" data-cohort="solo" data-i18n-zh="单次专车客户 (Electron)" data-i18n-en="Dedicated Launch">单次专车客户 (Electron)</button>
+            <button type="button" class="mui-seg-btn active" data-cohort="constellation" data-i18n-zh="商业星座包船户 (Neutron)" data-i18n-en="Constellation Multi-Launch">商业星座包船户 (Neutron)</button>
+            <button type="button" class="mui-seg-btn" data-cohort="defense" data-i18n-zh="国防端到端主承包 (U.S. Gov)" data-i18n-en="Defense End-to-End Prime">国防端到端主承包 (U.S. Gov)</button>
+          </div>
+
+          <div class="bm-cohort-metrics" id="cohortMetrics">
+            <div class="bm-cohort-stat">
+              <div class="lbl">典型合同标的</div>
+              <div class="val" style="font-size:0.95rem;">Neutron 多发星座部署 + 分离机构</div>
+              <div class="delta">首飞前已获 5 家星座商连签 8 发</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">单发/单合同基准规模</div>
+              <div class="val mono">$70M / 发</div>
+              <div class="delta">Q3 新签 8 发总额超 $515M</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">目标复飞稳态毛利率</div>
+              <div class="val mono">40% – 50%+</div>
+              <div class="delta">一子级海上/陆地复用 + 整流罩连体回收</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">5年单客全栈潜力 LTV</div>
+              <div class="val mono">$350M – $600M</div>
+              <div class="delta">叠加太阳翼、激光终端与补网发射</div>
+            </div>
+          </div>
+
+          <div class="bm-ratchet-note" id="cohortNote">
+            <strong>全栈搭售棘轮（One-Stop Orbital Ratchet）：</strong>随着 SpaceX 逐步将重心转向巨型 Starship 并缩减外部猎鹰 9 号拼车排期，商业与国防星座运营商极度渴求<strong>第二家可靠中大型运载商</strong>；而一旦客户采用 Rocket Lab 的 Flatellite 扁平卫星平台与 Mynaric 激光终端，其构型天然适配 Neutron“河马嘴”整流罩，从而把造星、发射与在轨管理锁死在同一张合同中
+            <a class="cite-link" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-lands-over-515m-neutron-launch-deals-constellation" target="_blank" rel="noopener noreferrer">Neutron $515M 公告 ↗</a>。
+          </div>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03B · LAUNCH CADENCE &amp; BACKLOG MIX</span>
+              <h3 data-i18n-zh="全球小型入轨垄断度与五大季度 Backlog 爆发曲线" data-i18n-en="Small-Launch Cadence Dominance &amp; 5-Quarter Backlog Explosion">全球小型入轨垄断度与五大季度 Backlog 爆发曲线</h3>
+            </div>
+            <div class="mui-segmented" id="cChartTabs">
+              <button type="button" class="mui-seg-btn active" data-cview="backlog" data-i18n-zh="5季度在手订单跃升 ($B)" data-i18n-en="5Q Backlog Surge ($B)">5季度在手订单跃升 ($B)</button>
+              <button type="button" class="mui-seg-btn" data-cview="cadence" data-i18n-zh="Electron 发射频次与单发经济" data-i18n-en="Launch Cadence &amp; Unit Cost">Electron 发射频次与单发经济</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="cohortCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            行业事实核验：截至 2026 年 11 月 14 日，Electron 完成第 100 次发射并创下连续 59 次入轨成功纪录
+            <a class="cite-link" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-launch-milestone-100th-electron-rocket-week" target="_blank" rel="noopener noreferrer">第100次发射公报 ↗</a>，Q3 单发平均成本降至 $5.0M（去年同期 $5.9M），单发毛利空间稳步扩阔。
+          </p>
+        </div>
+      </section>
+
+      <!-- MODULE 4: 6:6 DUAL WORKBENCH — CUSTOMER FLOAT / CASH FORTRESS + 5Y PRO FORMA SIMULATOR -->
+      <section id="mod-capital" class="bm-split-66">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04A · CUSTOMER ADVANCES FLOAT &amp; $4.7B CASH FORTRESS</span>
+              <h3 data-i18n-zh="$4.24亿客户预收款浮存金与 $47.0亿零杠杆现金堡垒" data-i18n-en="$423.6M Customer Advances Float &amp; $4.70B Net-Cash Fortress">$4.24亿客户预收款浮存金与 $47.0亿零杠杆现金堡垒</h3>
+            </div>
+            <div class="mui-segmented" id="kChartTabs">
+              <button type="button" class="mui-seg-btn active" data-kview="cash" data-i18n-zh="现金堡垒与净负债演变" data-i18n-en="Cash &amp; Net Cash ($B)">现金堡垒与净负债演变</button>
+              <button type="button" class="mui-seg-btn" data-kview="float" data-i18n-zh="合同预收浮存金 vs 政府占比" data-i18n-en="Contract Float &amp; Gov Mix">合同预收浮存金 vs 政府占比</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="capitalCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            资本运作亮点：Q3 2026 资产负债表上<strong>合同负债（Contract Liabilities，即客户里程碑预收款）飙升至 $423.6M</strong>（较 2025 年底 $195.4M 翻倍有余），单季净预收流入助推 GAAP 经营现金流首次转正（+$7.2M）；同时公司通过 ATM 股权融资提前募足并购铱星所需全部现金，期末坐拥 <strong>$4.70B 现金及证券</strong>、而有息债务仅剩 $3.0M
+            <a class="cite-link" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-fully-funds-iridium-acquisition-including-completion" target="_blank" rel="noopener noreferrer">全额募资完成公报 ↗</a>。
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR PRO FORMA COMPOUNDER</span>
+              <h3 data-i18n-zh="2026E–2031E 商业模式复利与 Iridium 并表推演实验室" data-i18n-en="2026E–2031E Revenue &amp; Pro Forma EBITDA Simulator">2026E–2031E 商业模式复利与 Iridium 并表推演实验室</h3>
+            </div>
+            <div class="mui-segmented" id="simPresets">
+              <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="独立保守" data-i18n-en="Standalone Bear">独立保守</button>
+              <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="并表基准" data-i18n-en="Pro Forma Base">并表基准</button>
+              <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="星网超周期" data-i18n-en="Constellation Bull">星网超周期</button>
+            </div>
+          </div>
+
+          <div class="bm-sim-sliders">
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span data-i18n-zh="内生太空系统与发射年均增速 (Organic CAGR)" data-i18n-en="Organic Launch + Space Systems CAGR">内生太空系统与发射年均增速 (Organic CAGR)</span><b class="mono" id="lblOrgCagr">28.0%</b></div>
+              <input type="range" id="inpOrgCagr" min="12" max="45" step="1" value="28" />
+            </div>
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span data-i18n-zh="Neutron 2031E 年发射频次 ($70M/发)" data-i18n-en="2031E Annual Neutron Flights ($70M/flight)">Neutron 2031E 年发射频次 ($70M/发)</span><b class="mono" id="lblNeuFlights">14 发/年</b></div>
+              <input type="range" id="inpNeuFlights" min="4" max="26" step="1" value="14" />
+            </div>
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span data-i18n-zh="叠加 Iridium 星座并表与 D2D 协同增厚 (2027中交割)" data-i18n-en="Include Iridium Merger ($0.9B+ Rev · 57% OEBITDA)">叠加 Iridium 星座并表与 D2D 协同增厚 (2027中交割)</span><b class="mono" id="lblIrdmBoost">开启 (+100%)</b></div>
+              <input type="range" id="inpIrdmBoost" min="0" max="100" step="100" value="100" />
+            </div>
+          </div>
+
+          <div class="bm-sim-outputs">
+            <div class="bm-sim-out"><b class="mono" id="simRevOut">$5.51B</b><span data-i18n-zh="FY31E 总营收" data-i18n-en="FY31E Revenue">FY31E 总营收</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simGmOut">47.8%</b><span data-i18n-zh="FY31E 综合毛利率" data-i18n-en="FY31E Gross Margin">FY31E 综合毛利率</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simEbitdaOut">$1.86B</b><span data-i18n-zh="FY31E 调整后 EBITDA" data-i18n-en="FY31E Adj. EBITDA">FY31E 调整后 EBITDA</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simMarginOut">33.8%</b><span data-i18n-zh="EBITDA 利润率" data-i18n-en="EBITDA Margin">EBITDA 利润率</span></div>
+          </div>
+
+          <div class="bm-canvas-box" style="height:175px;">
+            <canvas id="simMiniCanvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 5: SPACE PEER ARCHETYPE MATRIX & STRESS AUDIT -->
+      <section id="mod-matrix" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 05 · SPACE ECONOMY ARCHETYPE MATRIX &amp; STRESS AUDIT</span>
+            <h2 class="bm-h2" data-i18n-zh="全球太空经济六大标杆商业模型对标与三大核心风险压测" data-i18n-en="Global Space Economy Peer Matrix &amp; 3-Pillar Stress Audit">全球太空经济六大标杆商业模型对标与三大核心风险压测</h2>
+            <p class="bm-head-desc" data-i18n-zh="对比商业航天新贵与传统国防巨头的收入规模、毛利结构与现金储备（截至 Q3 2026 SEC 披露口径），并审视三大关键执行风险。" data-i18n-en="Benchmarking Rocket Lab against SpaceX, NewSpace peers, and legacy defense primes on SEC-filed Q3 2026 metrics.">对比商业航天新贵与传统国防巨头的收入规模、毛利结构与现金储备（截至 Q3 2026 SEC 披露口径），并审视三大关键执行风险。</p>
+          </div>
+          <div class="mui-segmented" id="peerFilter">
+            <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+            <button type="button" class="mui-seg-btn" data-pcat="end2end" data-i18n-zh="端到端/星座服务" data-i18n-en="End-to-End / Comms">端到端/星座服务</button>
+            <button type="button" class="mui-seg-btn" data-pcat="hw" data-i18n-zh="运载/航天器制造" data-i18n-en="Launch / Spacecraft">运载/航天器制造</button>
+          </div>
+        </div>
+
+        <div class="bm-table-wrap">
+          <table class="bm-table" id="peerTable">
+            <thead>
+              <tr>
+                <th>公司与代码</th>
+                <th>核心商业模式原型</th>
+                <th>最新营收规模</th>
+                <th>毛利率 / 营业利润率</th>
+                <th>在手订单 / 净现金</th>
+                <th>模式终极壁垒与核心脆弱点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-rklb" data-row-cat="end2end hw">
+                <td><strong>Rocket Lab (RKLB)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+                <td>高频火箭入口 + 垂直整星总包 + 拟并购 Iridium 星座</td>
+                <td class="mono">TTM $0.88B (26E ~$0.98B)</td>
+                <td class="mono">36.2% GAAP GM (38.4% Q3 Non-GAAP)</td>
+                <td class="mono" style="color:var(--mui-success-text);">Backlog $3.57B · 净现金 +$4.70B</td>
+                <td>美股唯一端到端全栈标的；考验点在 Neutron 2027 首飞与铱星FCC审批</td>
+              </tr>
+              <tr data-row-cat="end2end hw">
+                <td><strong>SpaceX (2026 IPO)</strong></td>
+                <td>可复用猎鹰/星舰垄断运力 + Starlink 千万订户现金牛</td>
+                <td class="mono">FY25 $18.67B (Q3星链 $5.25B)</td>
+                <td class="mono" style="color:var(--mui-success-text);">Starlink 高毛利经常性订阅驱动</td>
+                <td class="mono">全球 ~80%+ 入轨吨位份额</td>
+                <td>内部发射成本极低闭环无敌；客户担忧与 Starlink 同业竞争而分流订单至 RKLB</td>
+              </tr>
+              <tr data-row-cat="end2end">
+                <td><strong>Iridium (IRDM · 拟被RKLB并购)</strong></td>
+                <td>66颗LEO交联星网 + 全球L波段频谱安全语音/IoT/PNT</td>
+                <td class="mono">TTM $0.90B (FY25 $871.7M)</td>
+                <td class="mono" style="color:var(--mui-success-text);">19.0% 营业利润率 · 57% OEBITDA</td>
+                <td class="mono">255万+ 计费订户 · 净债 -$2.04B</td>
+                <td>高现金流公用事业属性（FCF率 30.7%）；并入 RKLB 后消除外部换星发射溢价</td>
+              </tr>
+              <tr data-row-cat="hw">
+                <td><strong>Intuitive Machines (LUNR)</strong></td>
+                <td>月球着陆与近地空间通信网 + 并购 Lanteris 整星制造</td>
+                <td class="mono">TTM $0.49B (Q2'26 $206.2M)</td>
+                <td class="mono">Q2 毛利率 ~17.4% · 营业亏损 -27.5%</td>
+                <td class="mono">Backlog $1.80B · 净现金持平</td>
+                <td>深空与月球基础设施卡位深；无自有运载火箭，受外部发射排期制约</td>
+              </tr>
+              <tr data-row-cat="hw">
+                <td><strong>Firefly Aerospace (FLY)</strong></td>
+                <td>Alpha 火箭 + Blue Ghost 月球着陆器 + SciTec 国防软件</td>
+                <td class="mono">TTM $0.29B (Q3'26 $110.7M)</td>
+                <td class="mono">22.9% GAAP GM · 营业亏损 -118%</td>
+                <td class="mono">Backlog $1.67B · 净现金 +$0.6B</td>
+                <td>增速迅猛且获洛马多发订单；Alpha 历史发射稳定性与规模化良率仍在爬坡</td>
+              </tr>
+              <tr data-row-cat="hw">
+                <td><strong>Lockheed Martin Space (LMT)</strong></td>
+                <td>传统军工主承包商（成本加成与大型高轨国家安全星）</td>
+                <td class="mono">Q3'26 单季 $3.49B (+3.8%)</td>
+                <td class="mono">分部营业利润率 9.5%</td>
+                <td class="mono">传统高轨/战略导弹存量底座</td>
+                <td>深厚军方关系网；但在低轨分布式敏捷固定总价星座竞争中屡被 RKLB 分食</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bm-stress-grid">
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-error mono">STRESS 01 · NEUTRON 2027 TIMELINE</span>
+              <h4>Neutron 复合材料贮箱前顶盖更换与首飞推迟风险</h4>
+              <p>继 2026 年 1 月一子级静水压试验破裂后，2026 年 10 月在复合材料推进剂贮箱前顶盖中检出制造空隙（voids），管理层坚持零带病上天原则将首飞调整至 <strong>2027 年</strong>。值得关注的是，透明工程披露并未动摇客户信心，Q3 仍新签 8 发（&gt;$515M）订单且未触发存量 16 发合同退订
+              <a class="cite-link" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-provides-update-neutron-development-and-adjusts" target="_blank" rel="noopener noreferrer">Neutron 10月公告 ↗</a>。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：一子级新顶盖低温静压与 Archimedes 点火进展</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-warning mono">STRESS 02 · IRIDIUM MERGER &amp; DILUTION</span>
+              <h4>~$80亿并购 Iridium 监管审批与股本摊薄消化</h4>
+              <p>虽然 HSR 反垄断等待期已于 2026 年 8 月届满、Iridium 股东大会于 9 月 24 日高票批准且 $19.44亿现金部分已通过 ATM 全额募足，交易仍需完成 <strong>FCC 频谱牌照转让、DCSA 安全审查及海外电信监管批准</strong>（预计 2027 年中交割）；同时总股本升至 ~6.80亿股（交割后预计再增发约 4,250 万股）需靠并表现金流消化
+              <a class="cite-link" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/iridium-stockholders-approve-acquisition-rocket-lab" target="_blank" rel="noopener noreferrer">股东批准公告 ↗</a>。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：FCC 频谱过户审批与 2027 年中交割时间表</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-violet mono">STRESS 03 · U.S. GOV CONCENTRATION (42%)</span>
+              <h4>单一最大美国政府客户占比升至 42% 与固定总价履约</h4>
+              <p>9M 2026 最大美国政府客户贡献达 <strong>42% 营收（约 $294.9M）</strong>，且 2025 年 10 月联邦政府停摆曾短暂延缓合同拨款与 Wallops 靶场排期；此外早年部分卫星平台合同（如 2022 年 MDA 17 颗卫星底盘）面临固定总价进度考核条款，要求极强的内部供应链成本控制
+              <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm" target="_blank" rel="noopener noreferrer">10-K 风险因素 ↗</a>。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：SDA 卫星批次交付里程碑与 Iridium 商业收入冲抵</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIMARY SOURCES FOOTER -->
+      <section class="bm-panel" aria-label="权威财报与行业信源">
+        <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+          <div>
+            <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+            <h2 class="bm-h2" data-i18n-zh="权威 SEC 监管文件、官方业绩公报与并购协议信源" data-i18n-en="Verified SEC Filings, Earnings Releases &amp; M&amp;A Disclosures">权威 SEC 监管文件、官方业绩公报与并购协议信源</h2>
+          </div>
+        </div>
+        <div class="bm-sources-grid">
+          <a class="bm-source-item" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts" target="_blank" rel="noopener noreferrer">
+            <b>Rocket Lab Q3 2026 Financial Results (Nov 9, 2026) ↗</b>
+            <span>创纪录单季营收 $267.83M (+72.7% YoY)、$3.57B Backlog、+$7.2M 经营现金流与 $4.70B 现金储备</span>
+          </a>
+          <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm" target="_blank" rel="noopener noreferrer">
+            <b>Rocket Lab SEC Form 10-K (FY2025 Annual Report) ↗</b>
+            <span>全年营收 $601.8M (+38%)、Launch $199.0M / Space Systems $402.8M 分部拆解及 62 项法定风险因素</span>
+          </a>
+          <a class="bm-source-item" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully" target="_blank" rel="noopener noreferrer">
+            <b>Definitive Agreement to Acquire Iridium (~$8.0B EV) ↗</b>
+            <span>每股 $54 名义对价并购 66 颗 LEO 卫星、全球 L 波段频谱、255万+订户与 $495M OEBITDA 现金流底座</span>
+          </a>
+          <a class="bm-source-item" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-lands-over-515m-neutron-launch-deals-constellation" target="_blank" rel="noopener noreferrer">
+            <b>Neutron Lands &gt;$515M in Q3 Constellation Deals ↗</b>
+            <span>五家星座运营商新签 8 次 Neutron 发射合同，首飞前累计储备达 16 发、基准票价升至 $70M/发</span>
+          </a>
+          <a class="bm-source-item" href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-launch-milestone-100th-electron-rocket-week" target="_blank" rel="noopener noreferrer">
+            <b>Milestone 100th Electron Launch (Nov 2026) ↗</b>
+            <span>全球最快突破百次发射的小型商业运载火箭，连续 59 次成功入轨、制造节拍提速至每 8 天 1 枚</span>
+          </a>
+          <a class="bm-source-item" href="https://sec-api.io/insights/rocket-lab-rklb-q3-2026-earnings-3-57bn-backlog-neutron-moved-to-2027-and-the-pending-iridium-deal-sec-filing-analysis" target="_blank" rel="noopener noreferrer">
+            <b>SEC EDGAR Filing Cross-Sectional Analysis (Q3 2026) ↗</b>
+            <span>FY2021–TTM Q3 2026 完整财务比率、客户集中度（42%）、并购对价明细与商业航天同行估值对照</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  
+<script src="../../_shared/rocket_lab_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

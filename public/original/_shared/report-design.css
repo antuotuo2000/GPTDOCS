@@ -1,3 +1,4 @@
+@import url('./device-mode.css');
 /* Canonical design: DYP/Company/DuanYongping.html. One stylesheet for all linked reports. */
 @import url('./f4b006b3bf2d8efb.css');
 @import url('./fac57b26aa692610.css');
@@ -8,30 +9,27 @@
 @import url('./fixed-backdrop.css');
 @import url('./report-glass.css');
 @import url('./report-reading.css');
+@import url('./report-surfaces.css');
 @import url('./report-header.css');
 
 /* Reset page-specific background layers and chrome to the reference values. */
 body::before, body::after { content: none !important; }
 .mui-appbar { box-shadow: none !important; }
 .sidebar-card {
-  background: var(--report-frost) !important;
-  backdrop-filter: blur(24px) saturate(120%);
-  -webkit-backdrop-filter: blur(24px) saturate(120%);
   border-radius: 14px !important;
   border: 1px solid var(--border-subtle) !important;
-  box-shadow: var(--shadow-card) !important;
 }
-.mui-sidebar { background: transparent !important; }
+.mui-sidebar {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  gap: 16px !important;
+}
 .mui-sidebar :is(.co-hub-pills, .co-hub-pill:not(.active), .co-hub-item:not(.active)) {
-  background: var(--report-frost-soft) !important;
-  backdrop-filter: blur(14px) saturate(130%);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
-}
-@media (max-width: 1023px) {
-  .mui-sidebar {
-    backdrop-filter: blur(16px) saturate(150%);
-    -webkit-backdrop-filter: blur(16px) saturate(150%);
-  }
+  background: transparent !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 /* The longest title sets a shared text width; secondary text is clipped to it. */
@@ -59,6 +57,14 @@ body::before, body::after { content: none !important; }
   flex: 0 0 var(--topic-icon-width, 28px);
   width: var(--topic-icon-width, 28px);
   min-width: var(--topic-icon-width, 28px);
+}
+#ipHubSwitcher .ip-pill-mono.topic-icon-han {
+  white-space: nowrap !important;
+  word-break: keep-all;
+  writing-mode: horizontal-tb;
+  font-size: .64rem !important;
+  line-height: 1;
+  padding-inline: 2px;
 }
 #ipHubSwitcher .ip-pill-text {
   flex: 0 0 auto;
@@ -116,4 +122,35 @@ body::before, body::after { content: none !important; }
 }
 @media (max-width: 760px) {
   .arch-nodes { --arch-columns: 1; grid-template-columns: minmax(0, 1fr) !important; grid-auto-rows: auto; }
+}
+
+/* Let category groups shrink and wrap inside every report switcher. */
+.main-content :is(.ip-hub-filter-row, .hub-cat-bar) { min-width: 0; max-width: 100%; }
+.main-content :is(.ip-hub-filter-row, .hub-cat-bar) :is(.mui-segmented, .hub-cat-pills) {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap !important;
+}
+.main-content :is(.ip-hub-filter-row, .hub-cat-bar) :is(.mui-seg-btn, .hub-cat-btn) {
+  max-width: 100%;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+
+/* Apply the tap policy to report controls and nested content as well as the page. */
+html body :is(.mui-appbar, .mui-sidebar, .main-content),
+html body :is(.mui-appbar, .mui-sidebar, .main-content) * {
+  touch-action: manipulation !important;
+}
+
+/* Keep light-theme sidebar text readable on untinted glass. */
+html[data-theme="light"] .mui-sidebar {
+  --text-primary: #101C2B;
+  --text-secondary: #24364B;
+  --text-muted: #3F5166;
+}
+@media (max-width: 1023px) {
+  /* Dim the article beside the drawer, never the content behind its glass. */
+  #portalDetailBackdrop { left: min(320px, 88vw); }
 }

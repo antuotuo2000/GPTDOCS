@@ -1512,14 +1512,6 @@
         renderAll();
       });
 
-      document.getElementById('simWidthBtn').addEventListener('click', function () {
-        state.simNarrow = !state.simNarrow;
-        document.body.classList.toggle('sim-narrow', state.simNarrow);
-        this.classList.toggle('active', state.simNarrow);
-        document.getElementById('simWidthLabel').textContent = state.simNarrow ? '恢复宽屏' : '手机窄屏';
-        renderAll();
-      });
-
       document.getElementById('watchFilterBtn').addEventListener('click', function () {
         state.watchOnly = !state.watchOnly;
         if (state.watchOnly && state.tab === 'discover') state.tab = 'feed';
