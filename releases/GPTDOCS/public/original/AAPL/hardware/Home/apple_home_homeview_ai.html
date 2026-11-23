@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告 | 数据中心</title>
+ <meta name="description" content="Apple Home 智能家居产品线深度研究报告：2026 年 10 月史诗级全系换代（Apple HomeView 7 英寸触控屏 A18+8GB 中枢、A19+N1 第四代 Apple TV 4K、S10 HomePod mini 2 及 LG/施耐德联名安防矩阵）、正向硬件毛利铁律对比亚马逊 Echo 补贴亏损模式及 iCloud+ 零额外月费安防闭环。" />
+ <meta name="keywords" content="Apple Home, Apple HomeView, Apple TV 4K A19, HomePod mini 2, HomePod 2, Apple Home Collection, Matter, Thread, HomeKit Secure Video" />
+ <link rel="stylesheet" href="../../../_shared/fdcaa4e44bad2723.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI Frosted Glass AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-i18n-title-zh="展开/收起章节目录" data-i18n-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">Home</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="../../../index.html">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="Apple Home 智能家居与端侧中枢研报" data-i18n-en="Apple Home &amp; HomeView AI Hub Report">Apple Home 智能家居与端侧中枢研报</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">PRODUCT · Apple Home</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">2026.10 Overhaul · HomeView &amp; A19 TV</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或指标…" data-i18n-ph-zh="检索章节或指标…" data-i18n-ph-en="Jump to chapter or KPI…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">APPLE HOME · SEGMENT DEEP DIVE</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="Apple Home 家居业务深度研报" data-i18n-en="Apple Home Segment Monograph">Apple Home 家居业务深度研报</div>
+ <p class="sidebar-subtitle" data-i18n-zh="HomeView 7&quot; 触控屏 A18 中枢 × A19+N1 Apple TV 4K × 拒绝负毛利硬件补贴的隐私闭环" data-i18n-en="HomeView 7&quot; A18 Smart Display × A19+N1 Apple TV 4K × Positive-Margin Privacy Flywheel">HomeView 7&quot; 触控屏 A18 中枢 × A19+N1 Apple TV 4K × 拒绝负毛利硬件补贴的隐私闭环</p>
+
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="2026.10 四大主机矩阵" data-i18n-en="Oct 2026 Hub Lineup">2026.10 四大主机矩阵</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="$149 – $349 正毛利带" data-i18n-en="$149 – $349 Positive GM">$149 – $349 正毛利带</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="HomePod 营收份额 / 销量" data-i18n-en="Speaker Rev / Unit Share">HomePod 营收份额 / 销量</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="~13.3% 营收 · ~5% 销量" data-i18n-en="~13.3% Rev · ~5% Units">~13.3% 营收 · ~5% 销量</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="FY26 备货库存同比激增" data-i18n-en="FY26 Inventory Ramp">FY26 备货库存同比激增</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="$14.54B (+154.3%)" data-i18n-en="$14.54B (+154.3%)">$14.54B (+154.3%)</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Unified MUI Navigation Card: Site Portal Nav + Report TOC -->
+ <nav class="sidebar-card" aria-label="站点导航与章节目录">
+ <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="AAPL">
+          <div class="co-side-head">
+            <span class="co-side-title mono">AAPL · 09/14</span>
+            <a href="../../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../Airpods/apple_airpods_h2.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../Vision_pro/apple_vision_pro_m5_r1_b2b.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (14)" data-i18n-en="All (14)">全部 (14)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (2)" data-i18n-en="Company (2)">公司深度 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="CorporateCulture" data-i18n-zh="企业文化 (2)" data-i18n-en="CorporateCulture (2)">企业文化 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Other" data-i18n-zh="Other (1)" data-i18n-en="Other (1)">Other (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="hardware" data-i18n-zh="硬件产品 (8)" data-i18n-en="hardware (8)">硬件产品 (8)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../../Company/Apple_Business_Model_Analysis.html" title="苹果公司 Apple Inc. (AAPL) 商业模式架构深度拆解"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 Apple Inc. (AAPL) 商业模式架构深度拆解" data-i18n-en="Apple Inc. Apple Inc. (AAPL) Business Model Deep DiveBreakdown">苹果公司 Apple Inc. (AAPL) 商业模式架构深度拆解</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="Company" href="../../Company/Apple_Future_Horizon_2030_Blueprint.html" title="苹果公司 2026–2032 未来战略与新增长曲线观测站"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 2026–2032 未来战略与新增长曲线观测站" data-i18n-en="Apple Inc. 2026–2032 &amp;">苹果公司 2026–2032 未来战略与新增长曲线观测站</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="CorporateCulture" href="../../CorporateCulture/Apple_Corporate_Culture_Analysis.html" title="苹果公司 Apple Inc. (AAPL) 企业文化与组织架构深度研究报告"><span class="co-hub-ticker mono">03</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 Apple Inc. (AAPL) 企业文化与组织架构深度研究报告" data-i18n-en="Apple Inc. Apple Inc. (AAPL) Corporate Culture &amp; Org Architecture Deep Dive">苹果公司 Apple Inc. (AAPL) 企业文化与组织架构深度研究报告</span><span class="co-hub-meta mono">CorporateCulture</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="CorporateCulture" href="../../CorporateCulture/Apple_Corporate_Culture_Blueprint.html" title="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承"><span class="co-hub-ticker mono">04</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承" data-i18n-en="AppleCorporate Culture &amp;:, &amp;">苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承</span><span class="co-hub-meta mono">CorporateCulture</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="Other" href="../../Others/Apple_Corporate_Culture_Blueprint.html" title="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承"><span class="co-hub-ticker mono">05</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承" data-i18n-en="AppleCorporate Culture &amp;:, &amp;">苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承</span><span class="co-hub-meta mono">Others</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../../SeniorExecutive/Steve Jobs/steve_jobs_1955_2011_15.html" title="史蒂夫·乔布斯 Steve Jobs (1955–2011) 深度商业与产品战略研究报告"><span class="co-hub-ticker mono">06</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="史蒂夫·乔布斯 Steve Jobs (1955–2011) 深度商业与产品战略研究报告" data-i18n-en="Steve Jobs (1955–2011) Business &amp; Product Strategy Deep Dive">史蒂夫·乔布斯 Steve Jobs (1955–2011) 深度商业与产品战略研究报告</span><span class="co-hub-meta mono">SeniorExecutive/Steve Jobs</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../Apple_12_Products.single.html" title="Apple 苹果全产品线 12 大板块深度研报中枢（FY2026 $478.83B 全景拆解）"><span class="co-hub-ticker mono">07</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple 苹果全产品线 12 大板块深度研报中枢（FY2026 $478.83B 全景拆解）" data-i18n-en="Apple 12 Deep DiveReport (FY2026 $478.83B OverviewBreakdown)">Apple 苹果全产品线 12 大板块深度研报中枢（FY2026 $478.83B 全景拆解）</span><span class="co-hub-meta mono">hardware</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../Airpods/apple_airpods_h2.html" title="Apple AirPods 声学穿戴产品力、H2 计算音频与千亿商业模式深度研究报告"><span class="co-hub-ticker mono">08</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple AirPods 声学穿戴产品力、H2 计算音频与千亿商业模式深度研究报告" data-i18n-en="Apple AirPods, H2 &amp; 00MBusiness ModelDeep Dive Research Report">Apple AirPods 声学穿戴产品力、H2 计算音频与千亿商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/Airpods</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="hardware" href="apple_home_homeview_ai.html" title="Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告"><span class="co-hub-ticker mono">09</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告" data-i18n-en="Apple Home, HomeView AI &amp; Business ModelDeep Dive Research Report">Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/Home</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../Vision_pro/apple_vision_pro_m5_r1_b2b.html" title="Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告"><span class="co-hub-ticker mono">10</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告" data-i18n-en="Apple Vision Pro, M5+R1 &amp; B2B Business ModelDeep Dive Research Report">Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/Vision_pro</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../Watch/apple_watch_iwatch.html" title="Apple Watch (iWatch) 智能手表产品力、医疗健康壁垒与单机经济深度研究报告"><span class="co-hub-ticker mono">11</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple Watch (iWatch) 智能手表产品力、医疗健康壁垒与单机经济深度研究报告" data-i18n-en="Apple Watch (iWatch), &amp; Deep Dive Research Report">Apple Watch (iWatch) 智能手表产品力、医疗健康壁垒与单机经济深度研究报告</span><span class="co-hub-meta mono">hardware/Watch</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../iPhone/Apple_iPhone_Strategy_Blueprint.html" title="苹果 iPhone 产品线工程与双波段定价战略图谱"><span class="co-hub-ticker mono">12</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果 iPhone 产品线工程与双波段定价战略图谱" data-i18n-en="Apple iPhone &amp;">苹果 iPhone 产品线工程与双波段定价战略图谱</span><span class="co-hub-meta mono">hardware/iPhone</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../iPhone/iPhone.html" title="苹果公司 Apple Inc. (NASDAQ: AAPL) &amp; iPhone 生态深度研究报告"><span class="co-hub-ticker mono">13</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 Apple Inc. (NASDAQ: AAPL) &amp; iPhone 生态深度研究报告" data-i18n-en="Apple Inc. Apple Inc. (NASDAQ: AAPL) &amp; iPhone Deep Dive Research Report">苹果公司 Apple Inc. (NASDAQ: AAPL) &amp; iPhone 生态深度研究报告</span><span class="co-hub-meta mono">hardware/iPhone</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../ipad/apple_ipad_oled.html" title="Apple iPad 平板产品力、串联 OLED 与搭售商业模式深度研究报告"><span class="co-hub-ticker mono">14</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple iPad 平板产品力、串联 OLED 与搭售商业模式深度研究报告" data-i18n-en="Apple iPad, OLED &amp; Business ModelDeep Dive Research Report">Apple iPad 平板产品力、串联 OLED 与搭售商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/ipad</span></span></a>
+          </div>
+          <script src="../../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+ <div class="nav-divider"></div>
+
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span data-i18n-zh="执行摘要与 2026 换代总览" data-i18n-en="Executive Summary &amp; 2026 Reset">执行摘要与 2026 换代总览</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span data-i18n-zh="五维家居硬件矩阵与算力跃迁" data-i18n-en="5-Pillar Hardware &amp; A18/A19 Leap">五维家居硬件矩阵与算力跃迁</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span data-i18n-zh="四大护城河支柱与生态雷达" data-i18n-en="4 Core Moat Pillars &amp; Home Radar">四大护城河支柱与生态雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span data-i18n-zh="全球智能家居竞品与 BOM 拆解" data-i18n-en="Smart Home Peers &amp; BOM Contrast">全球智能家居竞品与 BOM 拆解</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span data-i18n-zh="拒绝补贴单机经济与毛利推演" data-i18n-en="Anti-Loss-Leader Economics &amp; Sim">拒绝补贴单机经济与毛利推演</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span data-i18n-zh="十年客厅战略演进与关键战役" data-i18n-en="10-Yr Living Room Arc &amp; Battles">十年客厅战略演进与关键战役</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span data-i18n-zh="Apple Home 护城河核查清单" data-i18n-en="Smart Home Moat Checklist">Apple Home 护城河核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span data-i18n-zh="数据来源与拆解公告核验索引" data-i18n-en="Primary Releases &amp; Sources">数据来源与拆解公告核验索引</span></a></li>
+ </ul>
+ </nav>
+
+ <!-- Compact MUI Page Utility Controls (Appearance Switch + Export/Print) -->
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+
+ <!-- 00 Executive Summary & KPIs -->
+ <section id="sec-00" class="mui-paper hero-card section-block">
+ <div class="status-strip">
+ <span class="mui-chip mui-chip-primary" data-i18n-zh="战略转折定评：2026年10月13日四箭齐发，告别五年沉寂构建“端侧 Apple Intelligence 家庭神经中枢”" data-i18n-en="Strategic Verdict: Oct 13, 2026 Quadruple Launch Transforms Apple Home Into a Local AI Ambient Hub">战略转折定评：2026年10月13日四箭齐发，告别五年沉寂构建“端侧 Apple Intelligence 家庭神经中枢”</span>
+ <span class="mui-chip" data-i18n-zh="演进主线：客厅盒子与高价音箱试水 (2015–2020) · Matter/Thread 铺路 (2021–2025) · HomeView 视觉 AI 中枢引爆 (2026.10)" data-i18n-en="Arc: Apple TV &amp; Hi-Fi Trial (2015–20) · Matter/Thread Base (2021–25) · HomeView &amp; A19 AI Hub (Oct 2026)">演进主线：客厅盒子与高价音箱试水 (2015–2020) · Matter/Thread 铺路 (2021–2025) · HomeView 视觉 AI 中枢引爆 (2026.10)</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="数据基准：2026.10 全系发布 / iFixit 首拆" data-i18n-en="Baseline: Oct 2026 Launch / Nov 17 iFixit Teardown">数据基准：2026.10 全系发布 / iFixit 首拆</span>
+ </div>
+
+ <div class="hero-overline mono">
+ <span data-i18n-zh="CORE THESIS · HomeView 7&quot; 触控中枢 (A18+8GB) × A19+N1 Apple TV 4K × 零附加月费隐私安防 × 严守正毛利铁律" data-i18n-en="CORE THESIS · HomeView 7&quot; Hub (A18+8GB) × A19+N1 Apple TV 4K × Zero-Extra-Fee Secure Video × Margin Discipline">CORE THESIS · HomeView 7&quot; 触控中枢 (A18+8GB) × A19+N1 Apple TV 4K × 零附加月费隐私安防 × 严守正毛利铁律</span>
+ </div>
+
+ <h1 class="hero-h1" data-i18n-html-zh="Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与商业模式深度研究报告：&lt;span class=&quot;gradient-accent&quot;&gt;不打 $39 赔本补贴战，以旗舰硅基算力与家庭隐私重构客厅控制权&lt;/span&gt;" data-i18n-html-en="Apple Home Product Architecture, HomeView AI Hub &amp;amp; Business Model Deep Dive: &lt;span class=&quot;gradient-accent&quot;&gt;Rejecting Loss-Leader Subsidies for Local AI Silicon &amp;amp; Privacy-First Home Lock-In&lt;/span&gt;">Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与商业模式深度研究报告：<span class="gradient-accent">不打 $39 赔本补贴战，以旗舰硅基算力与家庭隐私重构客厅控制权</span></h1>
+ <p class="lead-prose" data-i18n-html-zh="在亚马逊 Echo 与 Google Nest 靠 $39–$99 负毛利倾销铺满数亿家庭的十年里，苹果智能家居为何一直按兵不动，直到 &lt;strong&gt;2026 年 10 月 13 日&lt;/strong&gt; 才突然一次性引爆史上最大规模硬件重构？当天苹果同步发布全新品类 &lt;strong&gt;7 英寸方形触控中枢 Apple HomeView（$299，搭载 A18 + 8GB 内存 + 12MP 人脸感知）&lt;/strong&gt;、跃升四代芯片的 &lt;strong&gt;第四代 Apple TV 4K（$299，A19 + 自研 N1 Wi-Fi 7 + 首配机身三麦免提语音）&lt;/strong&gt;、&lt;strong&gt;HomePod mini 2（$149，S10 + Sound Glow 光效）&lt;/strong&gt; 以及联合 LG 与施耐德打造的 &lt;strong&gt;Apple Home Collection 安防门锁温控矩阵（$39.95–$399.95）&lt;/strong&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HomeView ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Apple TV 4K A19 ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Home Collection ↗&lt;/a&gt;。当亚马逊因 Echo Show 15 物料成本（$309）倒挂售价（$249）深陷硬件巨亏、被迫加收 $19.99/月 Alexa+ 订阅与屏幕广告时，苹果坚守 &lt;strong&gt;$149–$349 全线正向硬件毛利&lt;/strong&gt;，并以 iCloud+ 内含的端到端加密安防录像锁死高净值苹果家庭复购飞轮 &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Echo Loss Teardown ↗&lt;/a&gt;。" data-i18n-html-en="After watching Amazon Echo and Google Nest flood homes with $39–$99 loss-leader speakers for a decade, why did Apple wait until &lt;strong&gt;October 13, 2026&lt;/strong&gt; to unleash its largest-ever living-room overhaul? In a single sweep, Apple debuted &lt;strong&gt;Apple HomeView ($299, 7&quot; square Liquid Retina touch hub with A18 + 8GB LPDDR5X + 12MP face-aware Glanceable UI)&lt;/strong&gt;, &lt;strong&gt;Apple TV 4K 4th Gen ($299, A19 + N1 Wi-Fi 7 + built-in 3-mic far-field array)&lt;/strong&gt;, &lt;strong&gt;HomePod mini 2 ($149, S10 + Sound Glow)&lt;/strong&gt;, and the co-engineered LG/Schneider &lt;strong&gt;Apple Home Collection ($39.95–$399.95)&lt;/strong&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HomeView ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Apple TV 4K A19 ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Home Collection ↗&lt;/a&gt;. While Amazon&#x27;s Echo Show 15 ($309 BOM vs. $249 MSRP) bled hardware cash and forced $19.99/mo Alexa+ fees and home-screen ads, Apple enforces &lt;strong&gt;$149–$349 positive hardware margins&lt;/strong&gt; paired with zero-extra-fee iCloud+ HomeKit Secure Video &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Echo Loss Teardown ↗&lt;/a&gt;.">在亚马逊 Echo 与 Google Nest 靠 $39–$99 负毛利倾销铺满数亿家庭的十年里，苹果智能家居为何一直按兵不动，直到 <strong>2026 年 10 月 13 日</strong> 才突然一次性引爆史上最大规模硬件重构？当天苹果同步发布全新品类 <strong>7 英寸方形触控中枢 Apple HomeView（$299，搭载 A18 + 8GB 内存 + 12MP 人脸感知）</strong>、跃升四代芯片的 <strong>第四代 Apple TV 4K（$299，A19 + 自研 N1 Wi-Fi 7 + 首配机身三麦免提语音）</strong>、<strong>HomePod mini 2（$149，S10 + Sound Glow 光效）</strong> 以及联合 LG 与施耐德打造的 <strong>Apple Home Collection 安防门锁温控矩阵（$39.95–$399.95）</strong> <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/" target="_blank" rel="noopener noreferrer">HomeView ↗</a> <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/" target="_blank" rel="noopener noreferrer">Apple TV 4K A19 ↗</a> <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/" target="_blank" rel="noopener noreferrer">Home Collection ↗</a>。当亚马逊因 Echo Show 15 物料成本（$309）倒挂售价（$249）深陷硬件巨亏、被迫加收 $19.99/月 Alexa+ 订阅与屏幕广告时，苹果坚守 <strong>$149–$349 全线正向硬件毛利</strong>，并以 iCloud+ 内含的端到端加密安防录像锁死高净值苹果家庭复购飞轮 <a class="cite-link" href="https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15" target="_blank" rel="noopener noreferrer">Echo Loss Teardown ↗</a>。</p>
+
+ <div class="grid-3" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div class="mui-avatar-icon">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+ </div>
+ <h3 data-i18n-zh="HomeView 7 英寸端侧 AI 触控新物种" data-i18n-en="HomeView 7&quot; Square A18 + 8GB AI Hub">HomeView 7 英寸端侧 AI 触控新物种</h3>
+ <p data-i18n-zh="支持台式半球底座与磁吸挂墙双形态，12MP 摄像头走近自动识别最多 6 位家庭成员切换专属看板，同屏监看 9 路加密安防画面。" data-i18n-en="Tabletop or wall-mounted 1088×1088 touch hub recognizes up to 6 family members on approach and streams a 9-camera Secure Video grid.">支持台式半球底座与磁吸挂墙双形态，12MP 摄像头走近自动识别最多 6 位家庭成员切换专属看板，同屏监看 9 路加密安防画面。</p>
+ </div>
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="18" rx="1.5"/><rect x="14" y="3" width="7" height="18" rx="1.5"/></svg>
+ </div>
+ <h3 data-i18n-zh="A19 + N1 打造客厅最强算力与四音箱全景声" data-i18n-en="A19 + N1 Apple TV 4K &amp; 4-HomePod Surround">A19 + N1 打造客厅最强算力与四音箱全景声</h3>
+ <p data-i18n-zh="第四代 Apple TV 4K 首度内置远场三麦克风免提唤醒 Siri AI，并支持最多 4 台 HomePod 无线组建自动声场校准杜比全景声影院。" data-i18n-en="4th-gen Apple TV 4K adds built-in far-field mics for hands-free Siri AI and wirelessly pairs up to 4 HomePods in calibrated Dolby Atmos.">第四代 Apple TV 4K 首度内置远场三麦克风免提唤醒 Siri AI，并支持最多 4 台 HomePod 无线组建自动声场校准杜比全景声影院。</p>
+ </div>
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+ </div>
+ <h3 data-i18n-zh="零独立月费安防 vs 竞品 $180–$240/年订阅" data-i18n-en="Zero Extra Camera Fees via Existing iCloud+">零独立月费安防 vs 竞品 $180–$240/年订阅</h3>
+ <p data-i18n-zh="Apple Home Collection 2.5K 摄像头与门铃录像在本地 A18/A19 中枢分析加密后直传 iCloud+，不占云存储配额且无需额外买安防月费。" data-i18n-en="Home Collection 2.5K cameras analyze video locally on A18/A19 hubs and store end-to-end encrypted clips in iCloud+ with zero extra monthly fee.">Apple Home Collection 2.5K 摄像头与门铃录像在本地 A18/A19 中枢分析加密后直传 iCloud+，不占云存储配额且无需额外买安防月费。</p>
+ </div>
+ </div>
+
+ <div class="grid-4">
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="智能音箱营收份额 vs 销量份额" data-i18n-en="Smart Speaker Rev vs. Unit Share">智能音箱营收份额 vs 销量份额</span>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="~2.8倍溢价倍率" data-i18n-en="~2.8x Value Multiplier">~2.8倍溢价倍率</span>
+ </div>
+ <div class="kpi-value mono">13.3% / 4.7%</div>
+ <p class="kpi-desc" data-i18n-html-zh="HomePod 年出货约 620 万台（占全球 ~4.7%），却在 $158 亿全球智能音箱市场斩获约 $21 亿（13.3%）销售额 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.marketresearchfuture.com/reports/smart-speaker-market-2286&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;MRFR Speaker ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.businessofapps.com/data/apple-statistics/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Unit Est ↗&lt;/a&gt;。" data-i18n-html-en="On ~6.2M annual HomePod units (~4.7% volume share), Apple captures ~$2.1B (~13.3%) of the $15.8B global smart speaker market &lt;a class=&quot;cite-link&quot; href=&quot;https://www.marketresearchfuture.com/reports/smart-speaker-market-2286&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;MRFR Speaker ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.businessofapps.com/data/apple-statistics/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Unit Est ↗&lt;/a&gt;.">HomePod 年出货约 620 万台（占全球 ~4.7%），却在 $158 亿全球智能音箱市场斩获约 $21 亿（13.3%）销售额 <a class="cite-link" href="https://www.marketresearchfuture.com/reports/smart-speaker-market-2286" target="_blank" rel="noopener noreferrer">MRFR Speaker ↗</a> <a class="cite-link" href="https://www.businessofapps.com/data/apple-statistics/" target="_blank" rel="noopener noreferrer">Unit Est ↗</a>。</p>
+ </div>
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="Apple HomeView 首发定价" data-i18n-en="Apple HomeView Launch MSRP">Apple HomeView 首发定价</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="A18 + 8GB LPDDR5X" data-i18n-en="A18 + 8GB LPDDR5X">A18 + 8GB LPDDR5X</span>
+ </div>
+ <div class="kpi-value mono">$299</div>
+ <p class="kpi-desc" data-i18n-html-zh="2026-11-13 正式开售，iFixit 首拆核实搭载 A18、8GB SK 海力士 LPDDR5X 与 64GB 铠侠闪存，切入 $54.9 亿带屏中枢市场 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;iFixit HomeView ↗&lt;/a&gt;。" data-i18n-html-en="Shipped Nov 13, 2026; iFixit confirmed A18 + 8GB SK hynix LPDDR5X + 64GB Kioxia NAND targeting the $5.49B smart display market &lt;a class=&quot;cite-link&quot; href=&quot;https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;iFixit HomeView ↗&lt;/a&gt;.">2026-11-13 正式开售，iFixit 首拆核实搭载 A18、8GB SK 海力士 LPDDR5X 与 64GB 铠侠闪存，切入 $54.9 亿带屏中枢市场 <a class="cite-link" href="https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward" target="_blank" rel="noopener noreferrer">iFixit HomeView ↗</a>。</p>
+ </div>
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="FY26 季末备货库存跃升" data-i18n-en="FY26 Year-End Inventory Surge">FY26 季末备货库存跃升</span>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="同比激增 +154.3%" data-i18n-en="+154.3% YoY Ramp">同比激增 +154.3%</span>
+ </div>
+ <div class="kpi-value mono">$14.54B</div>
+ <p class="kpi-desc" data-i18n-html-zh="苹果 FY26 资产负债表存货由 $57.18 亿飙至 $145.41 亿，支撑 10–11 月 HomeView、Apple TV 4K 与 OLED 新品密集铺货 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/a8-kex991q4202609262026.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;SEC FY26 8-K ↗&lt;/a&gt;。" data-i18n-html-en="Apple&#x27;s FY26 ending inventory jumped +154.3% YoY from $5.72B to $14.54B ahead of Nov 2026 HomeView, Apple TV 4K &amp; OLED launches &lt;a class=&quot;cite-link&quot; href=&quot;https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/a8-kex991q4202609262026.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;SEC FY26 8-K ↗&lt;/a&gt;.">苹果 FY26 资产负债表存货由 $57.18 亿飙至 $145.41 亿，支撑 10–11 月 HomeView、Apple TV 4K 与 OLED 新品密集铺货 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/a8-kex991q4202609262026.htm" target="_blank" rel="noopener noreferrer">SEC FY26 8-K ↗</a>。</p>
+ </div>
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="对比竞品带屏音箱毛利差" data-i18n-en="Margin Spread vs. Echo Show">对比竞品带屏音箱毛利差</span>
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="Echo Show 15 倒挂 -24%" data-i18n-en="Echo Show 15 at -24% GM">Echo Show 15 倒挂 -24%</span>
+ </div>
+ <div class="kpi-value mono">+50~60 pts</div>
+ <p class="kpi-desc" data-i18n-html-zh="TechInsights 实拆亚马逊 Echo Show 15 物料 $309 却卖 $249（毛利 -24%），而苹果全系提价至 $149–$349 严守正毛利 &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;TechInsights Echo ↗&lt;/a&gt;。" data-i18n-html-en="Amazon sold Echo Show 15 at $249 against a $309.14 BOM (-24% margin), whereas Apple&#x27;s $149–$349 hubs preserve ~30%–38% hardware GM &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;TechInsights Echo ↗&lt;/a&gt;.">TechInsights 实拆亚马逊 Echo Show 15 物料 $309 却卖 $249（毛利 -24%），而苹果全系提价至 $149–$349 严守正毛利 <a class="cite-link" href="https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15" target="_blank" rel="noopener noreferrer">TechInsights Echo ↗</a>。</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- 01 Product Architecture & Revenue Engine -->
+ <section id="sec-01" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 01 · OCT 2026 FIVE-PILLAR SMART HOME OVERHAUL</div>
+ <h2 class="sec-h2" data-i18n-zh="一、2026年10月五维家居矩阵大换血：端侧 AI 算力首次全面接管客厅、厨房与玄关" data-i18n-en="1. October 2026 Five-Pillar Overhaul: Local AI Silicon Takes Over Living Room &amp; Entryway">一、2026年10月五维家居矩阵大换血：端侧 AI 算力首次全面接管客厅、厨房与玄关</h2>
+ <p class="sec-sub" data-i18n-zh="全部于 2026 年 10 月 30 日至 11 月 13 日出货计入 FY2027 Q1 假日季，终结长达 4–5 年的旧芯片断代" data-i18n-en="Shipping Oct 30 – Nov 13, 2026 into Q1 FY27—replacing 4–5 year old silicon with A19, A18, S10 &amp; N1">全部于 2026 年 10 月 30 日至 11 月 13 日出货计入 FY2027 Q1 假日季，终结长达 4–5 年的旧芯片断代</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="Thread 边界路由全标配 · 本地运行 Siri AI" data-i18n-en="Universal Thread Border Routers · On-Device Siri AI">Thread 边界路由全标配 · 本地运行 Siri AI</span>
+ </div>
+
+ <div class="arch-blueprint">
+ <div class="arch-hub">
+ <div class="arch-hub-title" data-i18n-zh="HomeOS / tvOS 27.2 家庭计算底座 × Matter 1.4 &amp; Thread 网格网络 × HomeKit Secure Video 端侧加密安防" data-i18n-en="HomeView / tvOS 27.2 Ambient OS × Matter 1.4 &amp; Thread Mesh × Local HomeKit Secure Video">HomeOS / tvOS 27.2 家庭计算底座 × Matter 1.4 &amp; Thread 网格网络 × HomeKit Secure Video 端侧加密安防</div>
+ <div class="arch-hub-sub" data-i18n-zh="以 A18/A19 高算力家庭中枢在局域网内完成人脸/包裹/异响识别，彻底告别云端隐私裸奔与按摄像头收月费套路" data-i18n-en="Runs facial, package &amp; alarm recognition locally on A18/A19 home hubs—eliminating cloud snooping and per-camera fees">以 A18/A19 高算力家庭中枢在局域网内完成人脸/包裹/异响识别，彻底告别云端隐私裸奔与按摄像头收月费套路</div>
+ </div>
+ <div class="arch-nodes">
+ <div class="arch-node">
+ <div class="arch-node-tag mono" data-i18n-zh="AMBIENT HUB · 全新品类旗舰" data-i18n-en="AMBIENT HUB · NEW CATEGORY">AMBIENT HUB · 全新品类旗舰</div>
+ <div class="arch-node-name" data-i18n-zh="Apple HomeView ($299 · 7&quot; 触控屏)" data-i18n-en="Apple HomeView ($299 · 7&quot; Display)">Apple HomeView ($299 · 7&quot; 触控屏)</div>
+ <div class="arch-node-desc" data-i18n-zh="1088×1088 方形屏，A18 + 8GB RAM + 64GB，Wi-Fi 6E/BT 6/Thread，12MP 摄像头支持最多 6 人走近人脸识别专属桌面，台式/挂墙双款式。" data-i18n-en="1088×1088 display, A18 + 8GB RAM + 64GB, Wi-Fi 6E/BT 6/Thread, 12MP camera w/ 6-person face-ID Glanceable dashboards, tabletop or wall mount.">1088×1088 方形屏，A18 + 8GB RAM + 64GB，Wi-Fi 6E/BT 6/Thread，12MP 摄像头支持最多 6 人走近人脸识别专属桌面，台式/挂墙双款式。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono" data-i18n-zh="LIVING ROOM · 客厅算力怪兽" data-i18n-en="LIVING ROOM · A19 + N1">LIVING ROOM · 客厅算力怪兽</div>
+ <div class="arch-node-name" data-i18n-zh="Apple TV 4K 第四代 ($299 · 128GB)" data-i18n-en="Apple TV 4K 4th Gen ($299 · 128GB)">Apple TV 4K 第四代 ($299 · 128GB)</div>
+ <div class="arch-node-desc" data-i18n-zh="A19 (CPU +50%, GPU 2x, 硬件 AV1) + 自研 N1 (Wi-Fi 7 6GHz) + 千兆网口，首配机身远场三麦免提 Siri AI，支持 4 台 HomePod 无线环绕声。" data-i18n-en="A19 (+50% CPU, 2x GPU, AV1) + N1 Wi-Fi 7 + GigE, first built-in 3-mic far-field array for hands-free Siri AI &amp; 4-HomePod Dolby Atmos.">A19 (CPU +50%, GPU 2x, 硬件 AV1) + 自研 N1 (Wi-Fi 7 6GHz) + 千兆网口，首配机身远场三麦免提 Siri AI，支持 4 台 HomePod 无线环绕声。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono" data-i18n-zh="ACOUSTIC MESH · 房间音频节点" data-i18n-en="ACOUSTIC MESH · S10 + UWB">ACOUSTIC MESH · 房间音频节点</div>
+ <div class="arch-node-name" data-i18n-zh="HomePod mini 2 ($149) &amp; HomePod 2 ($349)" data-i18n-en="HomePod mini 2 ($149) &amp; HomePod 2 ($349)">HomePod mini 2 ($149) &amp; HomePod 2 ($349)</div>
+ <div class="arch-node-desc" data-i18n-zh="mini 2 升级 S10 芯片、Wi-Fi 6E、二代 UWB 接力、Sound Glow 顶部声光屏及温湿度/烟雾报警识别；大号 HomePod 2 ($349) 镇守高保真重低音。" data-i18n-en="mini 2 upgrades to S10, Wi-Fi 6E, UWB handoff, Sound Glow top display &amp; temp/smoke detection; full-size HomePod 2 ($349) anchors Hi-Fi bass.">mini 2 升级 S10 芯片、Wi-Fi 6E、二代 UWB 接力、Sound Glow 顶部声光屏及温湿度/烟雾报警识别；大号 HomePod 2 ($349) 镇守高保真重低音。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono" data-i18n-zh="PERIPHERAL RING · 联名安防外设" data-i18n-en="PERIPHERAL RING · LG &amp; SCHNEIDER">PERIPHERAL RING · 联名安防外设</div>
+ <div class="arch-node-name" data-i18n-zh="Apple Home Collection ($39.95–$399.95)" data-i18n-en="Apple Home Collection ($39.95–$399.95)">Apple Home Collection ($39.95–$399.95)</div>
+ <div class="arch-node-desc" data-i18n-zh="苹果工业设计联合 LG/施耐德出品：2.5K 室内/室外/门铃/庭院灯摄像机 ($199.95–$399.95)、Aliro UWB 门锁 ($349.95) 与温控器 ($199.95)。" data-i18n-en="Co-engineered w/ LG &amp; Schneider: 2.5K Indoor/Doorbell/Outdoor/Floodlight cams ($199.95–$399.95), UWB/Aliro Lock ($349.95) &amp; Thermostats ($199.95).">苹果工业设计联合 LG/施耐德出品：2.5K 室内/室外/门铃/庭院灯摄像机 ($199.95–$399.95)、Aliro UWB 门锁 ($349.95) 与温控器 ($199.95)。</div>
+ </div>
+ </div>
+ <div class="arch-platform-bar">
+ <div class="arch-platform">
+ <strong data-i18n-zh="CarPlay 式“iPhone 投射生态”：无需开发者重写智能屏幕 App" data-i18n-en="CarPlay-Style Paired iPhone App Projection (Zero Cold-Start Friction)">CarPlay 式“iPhone 投射生态”：无需开发者重写智能屏幕 App</strong>
+ <span data-i18n-zh="HomeView 不设冗余独立应用商店，而是直接安全镜像用户配对 iPhone 上的音乐、菜谱、日程与安防小组件，彻底避开当年初代 Apple Watch 应用冷启动陷阱。" data-i18n-en="Rather than forcing devs to maintain a separate display App Store, HomeView projects widgets and media directly from paired iPhones.">HomeView 不设冗余独立应用商店，而是直接安全镜像用户配对 iPhone 上的音乐、菜谱、日程与安防小组件，彻底避开当年初代 Apple Watch 应用冷启动陷阱。</span>
+ </div>
+ <div class="arch-platform">
+ <strong data-i18n-zh="ADT 专业上门安装合作 + Aliro 超宽带（UWB）走近无感开锁标准" data-i18n-en="ADT Pro Installation Partnership + Aliro UWB Hands-Free Unlock">ADT 专业上门安装合作 + Aliro 超宽带（UWB）走近无感开锁标准</strong>
+ <span data-i18n-zh="联合北美安防龙头 ADT 解决硬接线可视门铃、庭院灯与智能门锁入户安装门槛，用 iPhone/Watch UWB 走近自动解锁。" data-i18n-en="Partners with ADT for turnkey hardwired installation of Floodlight Cameras, Video Doorbells, and UWB/NFC Home Key deadbolts.">联合北美安防龙头 ADT 解决硬接线可视门铃、庭院灯与智能门锁入户安装门槛，用 iPhone/Watch UWB 走近自动解锁。</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="grid-3" style="margin-bottom: 16px;">
+ <div class="feature-card">
+ <h3 data-i18n-zh="1. 全线锚定 $149–$349 溢价区间，绝不陪跑 $49 补贴泥潭" data-i18n-en="1. Strict $149–$349 Pricing Floor—Zero $49 Loss-Leader Subsidies">1. 全线锚定 $149–$349 溢价区间，绝不陪跑 $49 补贴泥潭</h3>
+ <p data-i18n-html-zh="经历 2026 年 6 月存储涨价调整与 10 月新品迭代后，HomePod mini 2 定价 $149、Apple TV 4K 取消 64GB 统一升至 $299、HomeView 定价 $299，确保每卖出一台硬件本身即创造丰厚正向毛利 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/06/25/apple-tv-and-homepod-price-increases/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;2026 Home Pricing ↗&lt;/a&gt;。" data-i18n-html-en="With HomePod mini 2 at $149 and both HomeView and 128GB Apple TV 4K at $299, every unit generates positive hardware gross profit on day one &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/06/25/apple-tv-and-homepod-price-increases/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;2026 Home Pricing ↗&lt;/a&gt;.">经历 2026 年 6 月存储涨价调整与 10 月新品迭代后，HomePod mini 2 定价 $149、Apple TV 4K 取消 64GB 统一升至 $299、HomeView 定价 $299，确保每卖出一台硬件本身即创造丰厚正向毛利 <a class="cite-link" href="https://www.macrumors.com/2026/06/25/apple-tv-and-homepod-price-increases/" target="_blank" rel="noopener noreferrer">2026 Home Pricing ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <h3 data-i18n-zh="2. 联合 LG 与施耐德“轻资产贴牌共研”切入重安防品类" data-i18n-en="2. Asset-Light Co-Engineering with LG &amp; Schneider Electric">2. 联合 LG 与施耐德“轻资产贴牌共研”切入重安防品类</h3>
+ <p data-i18n-html-zh="智能门锁、高压温控器与户外防水洪光灯售后维护极重；苹果掌控工业设计、HomeKit 协议与渠道定价，交由 LG 与施耐德制造履约，兼顾生态完整度与轻资产高周转 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;LG/Schneider Co-Dev ↗&lt;/a&gt;。" data-i18n-html-en="Apple controls UX, industrial cohesion, and Secure Video encryption while offloading HVAC/lock manufacturing liability to LG and Schneider &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;LG/Schneider Co-Dev ↗&lt;/a&gt;.">智能门锁、高压温控器与户外防水洪光灯售后维护极重；苹果掌控工业设计、HomeKit 协议与渠道定价，交由 LG 与施耐德制造履约，兼顾生态完整度与轻资产高周转 <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/" target="_blank" rel="noopener noreferrer">LG/Schneider Co-Dev ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <h3 data-i18n-zh="3. 四台 HomePod 无线组网向 Sonos 家庭影院腹地发起猛攻" data-i18n-en="3. 4-Speaker Wireless Atmos Surround Challenging Sonos">3. 四台 HomePod 无线组网向 Sonos 家庭影院腹地发起猛攻</h3>
+ <p data-i18n-html-zh="新款 Apple TV 4K 解锁最多 4 台 HomePod / mini 2 混搭组建自动房间声学测距的无线环绕声系统（4×$149+$299=$895），直接切入 Sonos Arc Ultra 万元级家庭影院价格带 &lt;a class=&quot;cite-link&quot; href=&quot;https://support.apple.com/en-us/149359&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;4-HomePod Surround ↗&lt;/a&gt;。" data-i18n-html-en="Apple TV 4K (A19) pairs up to 4 HomePods or mini 2 units for auto-calibrated spatial surround—driving multi-unit cart sizes straight into Sonos territory &lt;a class=&quot;cite-link&quot; href=&quot;https://support.apple.com/en-us/149359&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;4-HomePod Surround ↗&lt;/a&gt;.">新款 Apple TV 4K 解锁最多 4 台 HomePod / mini 2 混搭组建自动房间声学测距的无线环绕声系统（4×$149+$299=$895），直接切入 Sonos Arc Ultra 万元级家庭影院价格带 <a class="cite-link" href="https://support.apple.com/en-us/149359" target="_blank" rel="noopener noreferrer">4-HomePod Surround ↗</a>。</p>
+ </div>
+ </div>
+
+ <div class="mui-alert" style="margin-bottom: 18px;">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="关键节点" data-i18n-en="MILESTONE">关键节点</span>
+ <div data-i18n-html-zh="&lt;strong&gt;iFixit 2026年11月17日首拆揭示高配存储成本与欧盟合规留白：&lt;/strong&gt;实拆证实 $299 的 HomeView 为本地流畅驱动 Siri AI 与多路人脸识别，硬塞入与 iPhone 同级的 &lt;strong&gt;A18 芯片 + 8GB SK 海力士 LPDDR5X 内存&lt;/strong&gt;；同时受欧盟《数字市场法》（DMA）互操作条款影响，HomeView 首发暂未在欧盟 27 国上市 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;iFixit HomeView Teardown ↗&lt;/a&gt;。" data-i18n-html-en="&lt;strong&gt;Nov 17, 2026 iFixit Teardown &amp;amp; EU DMA Exclusion:&lt;/strong&gt; Teardown confirmed HomeView packs a full &lt;strong&gt;A18 SoC + 8GB SK hynix LPDDR5X&lt;/strong&gt; to run local Siri AI and multi-camera vision—justifying its $299 price—while Apple initially withheld EU launch amid Digital Markets Act interoperability rules &lt;a class=&quot;cite-link&quot; href=&quot;https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;iFixit HomeView Teardown ↗&lt;/a&gt;."><strong>iFixit 2026年11月17日首拆揭示高配存储成本与欧盟合规留白：</strong>实拆证实 $299 的 HomeView 为本地流畅驱动 Siri AI 与多路人脸识别，硬塞入与 iPhone 同级的 <strong>A18 芯片 + 8GB SK 海力士 LPDDR5X 内存</strong>；同时受欧盟《数字市场法》（DMA）互操作条款影响，HomeView 首发暂未在欧盟 27 国上市 <a class="cite-link" href="https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward" target="_blank" rel="noopener noreferrer">iFixit HomeView Teardown ↗</a>。</div>
+ </div>
+
+ <div class="chart-card" style="margin-bottom: 18px;">
+ <div class="chart-toolbar">
+ <div>
+ <div id="ch1ChartTitle" class="chart-title">2024–2029E 全球智能带屏中枢市场规模 ($B) 与 Apple Home 独立营收估算 ($B)</div>
+ <div id="ch1ChartSub" class="chart-caption">左轴为 Mordor Intelligence 全球智能显示屏市场规模（CAGR ~16.6%）；右轴为 HomeView + TV + HomePod 硬件规模演进</div>
+ </div>
+ <div class="mui-segmented" role="tablist" aria-label="第一章图表视图切换">
+ <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA" data-i18n-zh="视图A: 全球带屏中枢高增赛道" data-i18n-en="View A: Smart Display Market Ramp">视图A: 全球带屏中枢高增赛道</button>
+ <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB" data-i18n-zh="视图B: 2026 苹果家居提价前后对比" data-i18n-en="View B: Pre- vs. Post-2026 MSRP Ladder">视图B: 2026 苹果家居提价前后对比</button>
+ </div>
+ </div>
+ <div id="ch1AxisMeta" class="chart-axis-meta mono"></div>
+ <div class="canvas-stage">
+ <canvas id="chartCh1"></canvas>
+ </div>
+ <div class="chart-legend" id="ch1Legend">
+ <button type="button" class="legend-pill" data-ch1-series="s1"><span id="ch1Dot1" class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1"></span></button>
+ <button type="button" class="legend-pill" data-ch1-series="s2"><span id="ch1Dot2" class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2"></span></button>
+ </div>
+ </div>
+
+ <div class="grid-2">
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="Apple HomeView ($299)：7 英寸方形屏 + 6 人走近识别看板" data-i18n-en="Apple HomeView ($299): 7&quot; Glanceable UI &amp; 6-Person Face Recognition">Apple HomeView ($299)：7 英寸方形屏 + 6 人走近识别看板</div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="2026.11.13 首销" data-i18n-en="Shipped Nov 13, 2026">2026.11.13 首销</span>
+ </div>
+ <p class="matrix-card-body" data-i18n-html-zh="配备 7 英寸 1088×1088（500 nits）Liquid Retina 触控屏、双全频单元 + 下沉式低音炮 + 双无源辐射器；利用 12MP Center Stage 摄像头与传感器实现 Glanceable UI：远看显极简时钟天气，走近自动认出家庭成员呈现专属日程与音乐 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Meet HomeView ↗&lt;/a&gt;。" data-i18n-html-en="Pairs a 7&quot; 1088×1088 (500-nit) touchscreen with dual full-range drivers + down-firing woofer; 12MP camera powers Glanceable UI that shifts from ambient clock at a distance to personalized dashboards for up to 6 household members &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Meet HomeView ↗&lt;/a&gt;.">配备 7 英寸 1088×1088（500 nits）Liquid Retina 触控屏、双全频单元 + 下沉式低音炮 + 双无源辐射器；利用 12MP Center Stage 摄像头与传感器实现 Glanceable UI：远看显极简时钟天气，走近自动认出家庭成员呈现专属日程与音乐 <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/" target="_blank" rel="noopener noreferrer">Meet HomeView ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail1"><span>展开微观技术与商业机制</span> <span>⌄</span></button>
+ <div class="collapse-panel" id="matrixDetail1" data-i18n-html-zh="提供白、黑、浅蓝、柔粉四款圆润半球音响底座版，或搭配施耐德电气定制挂墙支架/86底盒面板（$59.95–$129.95）直接替代传统墙面安防中控屏。" data-i18n-html-en="Available in 4 tabletop speaker-base colors or 2 flush wall-mount finishes with optional Schneider Electric wall plates and gang-box adapters ($59.95–$129.95).">提供白、黑、浅蓝、柔粉四款圆润半球音响底座版，或搭配施耐德电气定制挂墙支架/86底盒面板（$59.95–$129.95）直接替代传统墙面安防中控屏。</div>
+ </div>
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="第四代 Apple TV 4K ($299)：A19 + 自研 N1 Wi-Fi 7 + 免提三麦" data-i18n-en="Apple TV 4K 4th Gen ($299): A19 + N1 Wi-Fi 7 &amp; Built-In Far-Field Mics">第四代 Apple TV 4K ($299)：A19 + 自研 N1 Wi-Fi 7 + 免提三麦</div>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="跨越 4 代芯片升级" data-i18n-en="4-Gen Silicon Jump">跨越 4 代芯片升级</span>
+ </div>
+ <p class="matrix-card-body" data-i18n-html-zh="直接从 2022 款 A15 跃升至 3nm A19 芯片（CPU 提速 50%、GPU 翻倍并原生支持硬件光线追踪与 AV1 解码）及苹果自研 N1 无线芯片（Wi-Fi 7 6GHz / BT 6 / Thread），机身首次植入三麦克风阵列实现无遥控器远场唤醒 Siri AI &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Apple TV 4K ↗&lt;/a&gt;。" data-i18n-html-en="Jumps four generations from A15 to A19 (+50% CPU, 2x GPU w/ hardware ray tracing &amp; AV1) plus Apple&#x27;s N1 Wi-Fi 7 / Thread chip and built-in 3-mic far-field array for hands-free Siri AI &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Apple TV 4K ↗&lt;/a&gt;.">直接从 2022 款 A15 跃升至 3nm A19 芯片（CPU 提速 50%、GPU 翻倍并原生支持硬件光线追踪与 AV1 解码）及苹果自研 N1 无线芯片（Wi-Fi 7 6GHz / BT 6 / Thread），机身首次植入三麦克风阵列实现无遥控器远场唤醒 Siri AI <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/" target="_blank" rel="noopener noreferrer">Apple TV 4K ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail2"><span>展开微观技术与商业机制</span> <span>⌄</span></button>
+ <div class="collapse-panel" id="matrixDetail2" data-i18n-html-zh="精简为单一 128GB 千兆网口满血版（$299），标配内置查找扬声器的 USB-C Siri Remote（单售 $59），即使电视息屏待机亦可充当全屋常驻语音 AI 管家。" data-i18n-html-en="Consolidated into a single 128GB Gigabit Ethernet SKU ($299) bundled with a Find My speaker-equipped USB-C Siri Remote ($59 standalone).">精简为单一 128GB 千兆网口满血版（$299），标配内置查找扬声器的 USB-C Siri Remote（单售 $59），即使电视息屏待机亦可充当全屋常驻语音 AI 管家。</div>
+ </div>
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="HomePod mini 2 ($149)：S10 芯片、Sound Glow 与全屋网格神经末梢" data-i18n-en="HomePod mini 2 ($149): S10 Chip, Sound Glow &amp; Room-by-Room Mesh">HomePod mini 2 ($149)：S10 芯片、Sound Glow 与全屋网格神经末梢</div>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="2026.10.30 开售" data-i18n-en="Shipped Oct 30, 2026">2026.10.30 开售</span>
+ </div>
+ <p class="matrix-card-body" data-i18n-html-zh="时隔五年全面升级 Apple S10 芯片、Wi-Fi 6E、Bluetooth 6、二代超宽带（UWB）近场音乐接力与全新 Sound Glow 顶部动态光效屏，内置温湿度传感器与烟雾/一氧化碳警报声识别推送 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HomePod mini 2 ↗&lt;/a&gt;。" data-i18n-html-en="First refresh in five years brings the S10 SiP, Wi-Fi 6E, BT 6, UWB proximity handoff, a vibrant Sound Glow top surface, temp/humidity sensing &amp; smoke/CO alarm alerts &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HomePod mini 2 ↗&lt;/a&gt;.">时隔五年全面升级 Apple S10 芯片、Wi-Fi 6E、Bluetooth 6、二代超宽带（UWB）近场音乐接力与全新 Sound Glow 顶部动态光效屏，内置温湿度传感器与烟雾/一氧化碳警报声识别推送 <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/" target="_blank" rel="noopener noreferrer">HomePod mini 2 ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail3"><span>展开微观技术与商业机制</span> <span>⌄</span></button>
+ <div class="collapse-panel" id="matrixDetail3" data-i18n-html-zh="作为卧室、书房与儿童房最低门槛的 Thread 边界路由器与对讲（Intercom）节点，两只立体声配对 ($298) 或四只环绕配对 ($596) 显著放大单户购买台数。" data-i18n-html-en="Acts as an affordable bedroom/office Thread border router and Intercom node while encouraging 2-unit stereo ($298) and 4-unit Atmos ($596) multi-packs.">作为卧室、书房与儿童房最低门槛的 Thread 边界路由器与对讲（Intercom）节点，两只立体声配对 ($298) 或四只环绕配对 ($596) 显著放大单户购买台数。</div>
+ </div>
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="Apple Home Collection：无独立订阅费的 2.5K 安防与 UWB 门锁" data-i18n-en="Apple Home Collection: Zero-Monthly-Fee 2.5K Cameras &amp; Aliro UWB Lock">Apple Home Collection：无独立订阅费的 2.5K 安防与 UWB 门锁</div>
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="LG / 施耐德联合工程" data-i18n-en="LG / Schneider Co-Eng">LG / 施耐德联合工程</span>
+ </div>
+ <p class="matrix-card-body" data-i18n-html-zh="涵盖室内摄像机 ($199.95)、可视门铃 ($249.95)、户外摄像机 ($299.95)、洪光灯摄像机 ($399.95)、UWB 智能门锁 ($349.95) 与温控器 ($199.95)，彻底打平前代第三方 HomeKit 外设碎片化体验 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Home Collection ↗&lt;/a&gt;。" data-i18n-html-en="Spans 2.5K Indoor ($199.95), Video Doorbell ($249.95), Outdoor ($299.95), Floodlight Cam ($399.95), Aliro UWB Deadbolt ($349.95) &amp; Thermostats ($199.95) &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Home Collection ↗&lt;/a&gt;.">涵盖室内摄像机 ($199.95)、可视门铃 ($249.95)、户外摄像机 ($299.95)、洪光灯摄像机 ($399.95)、UWB 智能门锁 ($349.95) 与温控器 ($199.95)，彻底打平前代第三方 HomeKit 外设碎片化体验 <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/" target="_blank" rel="noopener noreferrer">Home Collection ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail4"><span>展开微观技术与商业机制</span> <span>⌄</span></button>
+ <div class="collapse-panel" id="matrixDetail4" data-i18n-html-zh="对比 Ring / Google Nest 每年需额外支付 $100–$200 摄像头云录像订阅费，苹果直接复用家庭既有的 iCloud+ 套餐（50GB 绑 1 路、200GB 绑 5 路、2TB+ 不限路数且不扣容量），长期 TCO 反而更省。" data-i18n-html-en="Unlike Ring or Google Home Premium ($100–$200/yr camera cloud fees), encrypted 10-day video history is included free inside existing iCloud+ plans without counting against storage quotas.">对比 Ring / Google Nest 每年需额外支付 $100–$200 摄像头云录像订阅费，苹果直接复用家庭既有的 iCloud+ 套餐（50GB 绑 1 路、200GB 绑 5 路、2TB+ 不限路数且不扣容量），长期 TCO 反而更省。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 02 Four Core Moat Pillars & Radar -->
+ <section id="sec-02" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 02 · CORE MOAT PILLARS &amp; COMPETITIVE RADAR</div>
+ <h2 class="sec-h2" data-i18n-zh="二、Apple Home 四大核心护城河：端侧家庭隐私、正毛利商业纪律、iCloud+ 捆绑与开放标准" data-i18n-en="2. Four Structural Moat Pillars: Local Privacy, Margin Discipline, iCloud+ TCO &amp; Matter/Aliro">二、Apple Home 四大核心护城河：端侧家庭隐私、正毛利商业纪律、iCloud+ 捆绑与开放标准</h2>
+ <p class="sec-sub" data-i18n-zh="点击左侧任一护城河卡片，看懂为什么苹果在智能家居市场份额不高却拥有最健康的商业闭环" data-i18n-en="Click any moat card on the left to inspect how Apple avoids the smart-home subsidy trap">点击左侧任一护城河卡片，看懂为什么苹果在智能家居市场份额不高却拥有最健康的商业闭环</p>
+ </div>
+ <span class="mui-chip mui-chip-success" data-i18n-zh="护城河定性：生态防御与高净值锁定型 (Ecosystem Retention Moat)" data-i18n-en="Moat Rating: High-Net-Worth Ecosystem Lock-In Moat">护城河定性：生态防御与高净值锁定型 (Ecosystem Retention Moat)</span>
+ </div>
+
+ <div class="grid-radar">
+ <div class="pillar-stack" id="pillarStack">
+ <button type="button" class="pillar-card active" data-pillar="0">
+ <div class="pillar-head">
+ <span class="pillar-title" data-i18n-zh="01 · 端侧本地 AI 视觉计算与零广告零监听家庭隐私铁律" data-i18n-en="01 · On-Device Local AI Processing &amp; Zero-Ad Home Privacy">01 · 端侧本地 AI 视觉计算与零广告零监听家庭隐私铁律</span>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="Zero Home Ads" data-i18n-en="Zero Home Ads">Zero Home Ads</span>
+ </div>
+ <p class="pillar-desc" data-i18n-zh="家庭内部摄像头画面、家人面容识别与语音指令优先在家庭局域网内的 HomeView (A18) 或 Apple TV 4K (A19) 本地完成推理，绝不像竞品在厨房屏幕上轮播赞助商横幅广告。" data-i18n-en="Processes indoor camera feeds, facial ID, and Siri AI locally on A18/A19 home hubs—with zero sponsored home-screen ads or voice-data harvesting.">家庭内部摄像头画面、家人面容识别与语音指令优先在家庭局域网内的 HomeView (A18) 或 Apple TV 4K (A19) 本地完成推理，绝不像竞品在厨房屏幕上轮播赞助商横幅广告。</p>
+ </button>
+ <button type="button" class="pillar-card" data-pillar="1">
+ <div class="pillar-head">
+ <span class="pillar-title" data-i18n-zh="02 · 严守正向硬件毛利率，免疫“硬件巨亏 + 订阅难补”死胡同" data-i18n-en="02 · Positive Hardware Margin Discipline vs. Rival Subsidy Bleed">02 · 严守正向硬件毛利率，免疫“硬件巨亏 + 订阅难补”死胡同</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="No Loss Leaders" data-i18n-en="No Loss Leaders">No Loss Leaders</span>
+ </div>
+ <p class="pillar-desc" data-i18n-zh="拒绝用亏损硬件冲虚假装机量，单台 $149–$349 硬件即贡献正向毛利，避免了亚马逊设备部门累计亏损百亿美元后被迫裁员与强收 $19.99/月 AI 订阅费的战略被动。" data-i18n-en="Every $149–$349 Apple Home hub earns positive gross margin upfront, avoiding the multi-billion-dollar hardware losses that forced rivals into steep monthly AI paywalls.">拒绝用亏损硬件冲虚假装机量，单台 $149–$349 硬件即贡献正向毛利，避免了亚马逊设备部门累计亏损百亿美元后被迫裁员与强收 $19.99/月 AI 订阅费的战略被动。</p>
+ </button>
+ <button type="button" class="pillar-card" data-pillar="2">
+ <div class="pillar-head">
+ <span class="pillar-title" data-i18n-zh="03 · iCloud+ / Apple One 零边际安防费用与全屋沉没成本锁定" data-i18n-en="03 · Zero-Extra-Fee iCloud+ Secure Video &amp; Physical Switching Cost">03 · iCloud+ / Apple One 零边际安防费用与全屋沉没成本锁定</span>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="Zero Extra Sub" data-i18n-en="Zero Extra Sub">Zero Extra Sub</span>
+ </div>
+ <p class="pillar-desc" data-i18n-zh="一旦用户在墙面装好 HomeView、门前装好可视门铃与 Aliro UWB 门锁，全家人苹果钱包钥匙与不限路数 2TB iCloud+ 加密录像将把整户家庭未来十年的换机锁定在 iOS 阵营。" data-i18n-en="Hardwired wall mounts, Apple Wallet UWB Home Keys, and unlimited Secure Video cameras inside 2TB iCloud+ lock entire multi-person households into iOS for a decade.">一旦用户在墙面装好 HomeView、门前装好可视门铃与 Aliro UWB 门锁，全家人苹果钱包钥匙与不限路数 2TB iCloud+ 加密录像将把整户家庭未来十年的换机锁定在 iOS 阵营。</p>
+ </button>
+ <button type="button" class="pillar-card" data-pillar="3">
+ <div class="pillar-head">
+ <span class="pillar-title" data-i18n-zh="04 · Matter / Thread / Aliro 跨品牌协议底座化解外设稀缺短板" data-i18n-en="04 · Matter, Thread &amp; Aliro Open Standards Erasing Device Gaps">04 · Matter / Thread / Aliro 跨品牌协议底座化解外设稀缺短板</span>
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="Thread Mesh" data-i18n-en="Thread Mesh">Thread Mesh</span>
+ </div>
+ <p class="pillar-desc" data-i18n-zh="通过主导 Matter 与 Aliro 智能门锁标准并在全系中枢标配 Thread 边界路由器，让数千款原本只支持 Alexa/米家的第三方灯具插座无缝原生接入苹果家庭 App。" data-i18n-en="Co-founding Matter and Aliro while embedding Thread border routers across every Apple hub opened thousands of third-party accessories to Apple Home.">通过主导 Matter 与 Aliro 智能门锁标准并在全系中枢标配 Thread 边界路由器，让数千款原本只支持 Alexa/米家的第三方灯具插座无缝原生接入苹果家庭 App。</p>
+ </button>
+ <div id="pillarFocusNote" class="mui-alert" style="margin-top: 4px;">
+ <div><strong>当前选中支柱解读（01 家庭隐私红线）：</strong>客厅与卧室是用户隐私最敏感的私密领地；亚马逊 Echo Show 强推全屏轮播广告引发大量高端用户反感，为无广告的 HomeView 腾出巨大替代窗口 <a class="cite-link" href="https://support.apple.com/en-us/149438" target="_blank" rel="noopener noreferrer">HomeView Privacy ↗</a>。</div>
+ </div>
+ </div>
+
+ <div class="chart-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+ <div>
+ <div class="chart-title" data-i18n-zh="全球五大智能家居与客厅音频生态五维能力雷达图（10分制评估）" data-i18n-en="5-Axis Smart Home &amp; Living-Room Ecosystem Competitiveness Radar (10-Point Scale)">全球五大智能家居与客厅音频生态五维能力雷达图（10分制评估）</div>
+ <div class="chart-caption" data-i18n-zh="点击下方图例胶囊可开关对比曲线，悬停顶点查看细分维度评分" data-i18n-en="Click legend pills below to toggle peer curves; hover vertices for exact scores">点击下方图例胶囊可开关对比曲线，悬停顶点查看细分维度评分</div>
+ </div>
+ <div class="canvas-stage-tall">
+ <canvas id="chartRadar"></canvas>
+ </div>
+ <div class="chart-legend" id="radarLegend">
+ <button type="button" class="legend-pill" data-radar-key="s1"><span class="legend-dot" style="background:#3399FF;"></span><span data-i18n-zh="Apple Home (HomeView / A19 TV)" data-i18n-en="Apple Home (HomeView / A19 TV)">Apple Home (HomeView / A19 TV)</span></button>
+ <button type="button" class="legend-pill" data-radar-key="s2"><span class="legend-dot" style="background:#22C55E;"></span><span data-i18n-zh="Amazon Echo / Alexa+ 生态" data-i18n-en="Amazon Echo / Alexa+ Ecosystem">Amazon Echo / Alexa+ 生态</span></button>
+ <button type="button" class="legend-pill" data-radar-key="s3"><span class="legend-dot" style="background:#FFB74D;"></span><span data-i18n-zh="Sonos / 小米 AIoT (取各自长板均值)" data-i18n-en="Sonos Audio / Xiaomi AIoT Peers">Sonos / 小米 AIoT (取各自长板均值)</span></button>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 03 Global Peer Matrix & BOM Breakdown -->
+ <section id="sec-03" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 03 · GLOBAL COMPETITIVE MATRIX &amp; BOM TEARDOWN</div>
+ <h2 class="sec-h2" data-i18n-zh="三、全球五大客厅与智能家居对手矩阵及苹果 vs 亚马逊硬件 BOM 路线拆解" data-i18n-en="3. Top-5 Smart Home Peer Matrix &amp; Apple Home vs. Echo BOM Architecture">三、全球五大客厅与智能家居对手矩阵及苹果 vs 亚马逊硬件 BOM 路线拆解</h2>
+ <p class="sec-sub" data-i18n-zh="支持按平台（Amazon Alexa+ / Google Gemini Home / Sonos / Roku / 小米 AIoT）实时筛选对比" data-i18n-en="Filter or search across Amazon Alexa+, Google Nest/TV, Sonos, Roku, and Xiaomi AIoT">支持按平台（Amazon Alexa+ / Google Gemini Home / Sonos / Roku / 小米 AIoT）实时筛选对比</p>
+ </div>
+ <span id="peerCountBadge" class="mui-chip mui-chip-primary mono"></span>
+ </div>
+
+ <div class="datagrid-toolbar">
+ <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索平台、新品 (HomeView / Echo Show / Sonos / 小米) 或月费…" data-i18n-ph-zh="搜索平台、新品 (HomeView / Echo Show / Sonos / 小米) 或月费…" data-i18n-ph-en="Search platform, hub (HomeView / Echo Show / Sonos / Xiaomi), or fee…" aria-label="筛选竞争对手" />
+ <div class="mui-segmented" role="group" aria-label="竞争阵营筛选">
+ <button type="button" class="mui-seg-btn active" data-peer-filter="all" data-i18n-zh="全部核心对手" data-i18n-en="All Key Rivals">全部核心对手</button>
+ <button type="button" class="mui-seg-btn" data-peer-filter="g1" data-i18n-zh="北美语音与电视巨头 (Amazon / Google / Roku)" data-i18n-en="U.S. Voice &amp; CTV Giants">北美语音与电视巨头 (Amazon / Google / Roku)</button>
+ <button type="button" class="mui-seg-btn" data-peer-filter="g2" data-i18n-zh="高端音响与全屋硬件 (Sonos / 小米 AIoT)" data-i18n-en="Premium Audio &amp; Full-Stack AIoT">高端音响与全屋硬件 (Sonos / 小米 AIoT)</button>
+ </div>
+ </div>
+
+ <div class="table-wrap" style="margin-bottom: 20px;">
+ <table class="mui-table" aria-label="全球核心竞品横向对比表">
+ <thead>
+ <tr>
+ <th data-i18n-zh="生态平台与 2026 主力硬件" data-i18n-en="Platform &amp; 2026 Flagships">生态平台与 2026 主力硬件</th>
+ <th data-i18n-zh="核心芯片与大模型助手" data-i18n-en="Silicon &amp; AI Assistant">核心芯片与大模型助手</th>
+ <th data-i18n-zh="装机规模或市场份额" data-i18n-en="Installed Base / Market Share">装机规模或市场份额</th>
+ <th data-i18n-zh="硬件定价与云订阅收费模式" data-i18n-en="Hardware MSRP &amp; Cloud Fees">硬件定价与云订阅收费模式</th>
+ <th data-i18n-zh="单机硬件毛利特征" data-i18n-en="Hardware Margin Profile">单机硬件毛利特征</th>
+ <th data-i18n-zh="对比 Apple Home 优劣势及信源" data-i18n-en="Assessment vs. Apple Home &amp; Source">对比 Apple Home 优劣势及信源</th>
+ </tr>
+ </thead>
+ <tbody id="peerTableBody"></tbody>
+ </table>
+ </div>
+
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title" data-i18n-zh="Apple HomeView ($299 估算 ~$185 BOM) 硬件成本结构拆解 vs 传统智能音箱迁移（%）" data-i18n-en="Apple HomeView ($299 · Est. ~$185 BOM) Cost Breakdown vs. Legacy Smart Speakers (%)">Apple HomeView ($299 估算 ~$185 BOM) 硬件成本结构拆解 vs 传统智能音箱迁移（%）</div>
+ <div class="chart-caption" data-i18n-zh="综合 iFixit 2026-11-17 实拆（A18 + 8GB 海力士 LPDDR5X + 64GB 铠侠闪存 + 7&quot; 屏）与 TechInsights HomePod 声学拆解基准" data-i18n-en="Synthesized from iFixit&#x27;s Nov 17, 2026 HomeView teardown (A18 + 8GB SK hynix LPDDR5X + 64GB NAND) &amp; TechInsights HomePod data">综合 iFixit 2026-11-17 实拆（A18 + 8GB 海力士 LPDDR5X + 64GB 铠侠闪存 + 7&quot; 屏）与 TechInsights HomePod 声学拆解基准</div>
+ </div>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="A18 + 8GB LPDDR5X 占 BOM 约 38%" data-i18n-en="A18 + 8GB LPDDR5X Drives ~38% of BOM">A18 + 8GB LPDDR5X 占 BOM 约 38%</span>
+ </div>
+ <div class="canvas-stage-bars">
+ <canvas id="chartBars"></canvas>
+ </div>
+ <div class="chart-legend">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="蓝色/琥珀色：A18 处理器 + 8GB LPDDR5X/64GB 存储与 7 英寸 1088×1088 触控屏 + 12MP 摄像头" data-i18n-en="Blue / Amber: A18 SoC + 8GB LPDDR5X/64GB NAND &amp; 7&quot; 1088×1088 Touch Display + 12MP Camera">蓝色/琥珀色：A18 处理器 + 8GB LPDDR5X/64GB 存储与 7 英寸 1088×1088 触控屏 + 12MP 摄像头</span>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="绿色/紫色：多单元声学腔体电源模块与 Wi-Fi 6E / BT 6 / Thread 射频及挂墙结构件" data-i18n-en="Green / Purple: Multi-Driver Acoustic/PSU Subsystem &amp; Wi-Fi 6E / Thread RF + Enclosure">绿色/紫色：多单元声学腔体电源模块与 Wi-Fi 6E / BT 6 / Thread 射频及挂墙结构件</span>
+ </div>
+ </div>
+ </section>
+
+ <!-- 04 Unit Economics & 5-Year Gross Profit Simulator -->
+ <section id="sec-04" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 04 · UNIT ECONOMICS &amp; 5-YEAR GROSS PROFIT SIMULATOR</div>
+ <h2 class="sec-h2" data-i18n-zh="四、“拒绝赔本补贴”单机经济模型（Anti-Loss-Leader Economics）与五年毛利推演" data-i18n-en="4. Anti-Loss-Leader Unit Economics &amp; 5-Year Gross Profit Simulator">四、“拒绝赔本补贴”单机经济模型（Anti-Loss-Leader Economics）与五年毛利推演</h2>
+ <p class="sec-sub" data-i18n-zh="模拟 HomeView + A19 Apple TV 4K + 多房间 HomePod + LG/施耐德安防套装组合下的生态营收与硬件毛利池" data-i18n-en="Modeling Multi-Device Home Shipments × HomeView/Collection Bundle Lift × Hardware BOM Ratio over 5 years">模拟 HomeView + A19 Apple TV 4K + 多房间 HomePod + LG/施耐德安防套装组合下的生态营收与硬件毛利池</p>
+ </div>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="全系正向硬件毛利 · 叠加 iCloud+ 零流失率" data-i18n-en="Positive Hardware GM + Near-Zero iCloud+ Churn">全系正向硬件毛利 · 叠加 iCloud+ 零流失率</span>
+ </div>
+
+ <div class="grid-4" style="margin-bottom: 18px;">
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">4-HOMEPOD ATMOS CART</span>
+ <div class="kpi-value mono" style="color: var(--mui-primary-lighter);">$895–$1,695</div>
+ <p class="kpi-desc" data-i18n-zh="Apple TV 4K ($299) 搭配 4 只 mini 2 ($596) 或 4 只 HomePod 2 ($1,396)，把单户客厅客单价拉升至千元级。" data-i18n-en="Apple TV 4K ($299) + four mini 2s ($596) or four HomePods ($1,396) lifts living-room cart size to $895–$1,695.">Apple TV 4K ($299) 搭配 4 只 mini 2 ($596) 或 4 只 HomePod 2 ($1,396)，把单户客厅客单价拉升至千元级。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">5-YR CAMERA CLOUD SAVINGS</span>
+ <div class="kpi-value mono" style="color: var(--mui-success-text);">$600–$1,000</div>
+ <p class="kpi-desc" data-i18n-zh="对比竞品每年 $120–$200 摄像头云存储月费，既有 2TB iCloud+ 家庭五年可省下高达千元额外安防订阅支出。" data-i18n-en="Existing 2TB iCloud+ households save $600–$1,000 over 5 years vs. $120–$200/yr Ring or Nest camera plans.">对比竞品每年 $120–$200 摄像头云存储月费，既有 2TB iCloud+ 家庭五年可省下高达千元额外安防订阅支出。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">SPEAKER REVENUE PREMIUM</span>
+ <div class="kpi-value mono" style="color: var(--mui-warning-text);">2.8x <span style="font-size:0.85rem;font-weight:600;">Share/Unit</span></div>
+ <p class="kpi-desc" data-i18n-zh="不足 5% 的智能音箱销量份额即兑现逾 13% 行业总营收，证明高端声学中枢无需卷低价。" data-i18n-en="Captures ~13.3% of global smart speaker dollars on &lt;5% unit share through disciplined $149–$349 pricing.">不足 5% 的智能音箱销量份额即兑现逾 13% 行业总营收，证明高端声学中枢无需卷低价。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">SVOD CROSS-DEVICE REACH</span>
+ <div class="kpi-value mono" style="color: var(--mui-violet-text);">22.0%</div>
+ <p class="kpi-desc" data-i18n-zh="Parks Associates 统计美国家庭 Apple TV+ 渗透率已达 22%，与新款 A19 硬件形成软硬双向拉动。" data-i18n-en="Apple TV+ reached 22% of U.S. broadband households, reinforcing demand for the A19 Apple TV 4K flagship.">Parks Associates 统计美国家庭 Apple TV+ 渗透率已达 22%，与新款 A19 硬件形成软硬双向拉动。</p>
+ </div>
+ </div>
+
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title" data-i18n-zh="行业商业模式大分野：四大智能家居硬件阵营代表单品零售均价 ($) vs 硬件端估算毛利率 (%)" data-i18n-en="Smart Home Business Model Divergence: Representative Hub MSRP ($) vs. Est. Hardware GM (%)">行业商业模式大分野：四大智能家居硬件阵营代表单品零售均价 ($) vs 硬件端估算毛利率 (%)</div>
+ <div class="chart-caption" data-i18n-zh="柱状图（左轴）为主力带屏/客厅旗舰单价；折线（右轴）为纯硬件毛利率（亚马逊 Echo Show 15 拆解实测倒挂 -24%）" data-i18n-en="Bars (left axis): Flagship hub/audio MSRP ($); Line (right axis): Est. hardware gross margin (Echo Show 15 at -24%)">柱状图（左轴）为主力带屏/客厅旗舰单价；折线（右轴）为纯硬件毛利率（亚马逊 Echo Show 15 拆解实测倒挂 -24%）</div>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="苹果与 Sonos 坚守正毛利 · 互联网巨头硬件补贴" data-i18n-en="Apple &amp; Sonos Positive GM vs. Ad-Subsidized Rivals">苹果与 Sonos 坚守正毛利 · 互联网巨头硬件补贴</span>
+ </div>
+ <div class="chart-axis-meta mono">
+ <span style="color:var(--chart-c1);" data-i18n-zh="■ 左轴：主力客厅/带屏中枢官方售价 ($)" data-i18n-en="■ Left Axis: Flagship Hub / Audio MSRP ($)">■ 左轴：主力客厅/带屏中枢官方售价 ($)</span>
+ <span style="color:var(--chart-c2);" data-i18n-zh="● 右轴：硬件端估算毛利率 (%)" data-i18n-en="● Right Axis: Est. Hardware Gross Margin (%)">● 右轴：硬件端估算毛利率 (%)</span>
+ </div>
+ <div class="canvas-stage">
+ <canvas id="chartEps"></canvas>
+ </div>
+ <div class="chart-legend" id="epsLegend">
+ <button type="button" class="legend-pill" data-eps-series="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span data-i18n-zh="代表性带屏/音响硬件官方定价 (左轴 · $)" data-i18n-en="Representative Smart Hub / Audio MSRP (Left · $)">代表性带屏/音响硬件官方定价 (左轴 · $)</span></button>
+ <button type="button" class="legend-pill" data-eps-series="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span data-i18n-zh="单机纯硬件估算毛利率 (右轴 · %)" data-i18n-en="Estimated Hardware Gross Margin (Right · %)">单机纯硬件估算毛利率 (右轴 · %)</span></button>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="--- 0% 硬件盈亏平衡生死线" data-i18n-en="--- 0% Hardware Breakeven Line">--- 0% 硬件盈亏平衡生死线</span>
+ </div>
+ </div>
+
+ <div class="simulator-grid">
+ <div class="sim-controls">
+ <div>
+ <div class="sec-eyebrow mono" style="margin-bottom:2px;">INTERACTIVE UNIT ECONOMICS SIMULATOR</div>
+ <h3 style="font-size:1rem;font-weight:800;" data-i18n-zh="Apple Home 全屋矩阵五年硬件营收与毛利推演测算器" data-i18n-en="Apple Home 5-Year Hardware Revenue &amp; Gross Profit Simulator">Apple Home 全屋矩阵五年硬件营收与毛利推演测算器</h3>
+ </div>
+
+ <label class="mui-switch-row" for="simMixToggle">
+ <div>
+ <div style="font-size:0.84rem;font-weight:700;color:var(--text-primary);" data-i18n-zh="计入 HomeView 挂墙配件与 Apple Home Collection 安防套装搭售 (+$48 综合均价)" data-i18n-en="Include HomeView Mounts &amp; Home Collection Camera/Lock Attach (+$48 ASP)">计入 HomeView 挂墙配件与 Apple Home Collection 安防套装搭售 (+$48 综合均价)</div>
+ <div style="font-size:0.74rem;color:var(--text-secondary);" data-i18n-zh="模拟多房间购买摄像机、可视门铃、UWB 门锁与施耐德挂墙面板对客单价的拉动" data-i18n-en="Simulates multi-device attach of 2.5K cameras, video doorbells, UWB locks &amp; Schneider wall mounts">模拟多房间购买摄像机、可视门铃、UWB 门锁与施耐德挂墙面板对客单价的拉动</div>
+ </div>
+ <input type="checkbox" id="simMixToggle" checked />
+ </label>
+
+ <div class="preset-stack" role="group" aria-label="单机经济情景预设">
+ <button type="button" class="preset-btn active" data-preset="p1">
+ <span data-i18n-zh="① FY2027 全系换代首年基准 (HomeView+A19 TV)" data-i18n-en="① FY2027 Full-Refresh Baseline">① FY2027 全系换代首年基准 (HomeView+A19 TV)</span>
+ <span class="mono" data-i18n-zh="18M台 · ~$5.0B营收" data-i18n-en="18M · ~$5.0B Rev">18M台 · ~$5.0B营收</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p2">
+ <span data-i18n-zh="② 全屋安防门锁套装高渗透上行" data-i18n-en="② Whole-Home Security &amp; Atmos Bull">② 全屋安防门锁套装高渗透上行</span>
+ <span class="mono" data-i18n-zh="25M台 · 多房间放量" data-i18n-en="25M · Multi-Room">25M台 · 多房间放量</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p3">
+ <span data-i18n-zh="③ $299 高定价抑制销量保守情景" data-i18n-en="③ $299 Price-Sensitivity Conservative">③ $299 高定价抑制销量保守情景</span>
+ <span class="mono" data-i18n-zh="12M台 · 纯主机口径" data-i18n-en="12M · Hub Only">12M台 · 纯主机口径</span>
+ </button>
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span data-i18n-zh="年均 Apple Home 全系设备总出货 (Million Units)" data-i18n-en="Annual Total Apple Home Units (Million Devices)">年均 Apple Home 全系设备总出货 (Million Units)</span>
+ <span id="simUnitsLabel" class="slider-val mono"></span>
+ </div>
+ <input type="range" id="simUnitsSlider" class="mui-slider" min="8" max="32" step="1" value="18" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span data-i18n-zh="中枢与音箱基础出厂均价 ASP (USD)" data-i18n-en="Base Hub &amp; Speaker Net ASP (USD)">中枢与音箱基础出厂均价 ASP (USD)</span>
+ <span id="simAspLabel" class="slider-val mono"></span>
+ </div>
+ <input type="range" id="simAspSlider" class="mui-slider" min="175" max="310" step="5" value="230" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span data-i18n-zh="含 A18/A19 存储与联名分成硬件成本率 (%)" data-i18n-en="Hardware BOM &amp; Co-Engineering Partner Ratio (%)">含 A18/A19 存储与联名分成硬件成本率 (%)</span>
+ <span id="simBomLabel" class="slider-val mono"></span>
+ </div>
+ <input type="range" id="simBomSlider" class="mui-slider" min="54" max="74" step="0.5" value="64.5" />
+ </div>
+ </div>
+
+ <div class="sim-output-panel">
+ <div class="sim-readouts">
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="年化 Apple Home 生态总营收" data-i18n-en="Annualized Apple Home Net Revenue">年化 Apple Home 生态总营收</div>
+ <div id="simAnnualRevVal" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);"></div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="年化硬件毛利润 / 隐含毛利率" data-i18n-en="Annual Gross Profit / Implied GM%">年化硬件毛利润 / 隐含毛利率</div>
+ <div id="simAnnualGpVal" class="sim-stat-num mono" style="color:var(--mui-success-text);"></div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="综合单件 ARPU / 单件毛利额" data-i18n-en="Blended ARPU / Gross Profit per Device">综合单件 ARPU / 单件毛利额</div>
+ <div id="simPerUnitVal" class="sim-stat-num mono"></div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="5 年累计创造家居硬件毛利池" data-i18n-en="5-Year Cumulative Gross Profit Pool">5 年累计创造家居硬件毛利池</div>
+ <div id="simFiveYrVal" class="sim-stat-num mono"></div>
+ </div>
+ </div>
+
+ <div class="canvas-stage-sim">
+ <canvas id="chartSim"></canvas>
+ </div>
+ <div class="chart-legend" style="margin-top:4px;">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="━ 累计产品线净营收轨迹 (5年)" data-i18n-en="━ Cumulative Segment Net Revenue (5Y)">━ 累计产品线净营收轨迹 (5年)</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="- - 累计创造硬件毛利润池 (5年)" data-i18n-en="- - Cumulative Hardware Gross Profit (5Y)">- - 累计创造硬件毛利润池 (5年)</span>
+ </div>
+ <div class="chart-caption" data-i18n-zh="悬停曲线可逐年对比不同销量、高溢价配置搭售与 BOM 成本假设下的 5 年累计营收与毛利润。" data-i18n-en="Hover along the curves to inspect year-by-year cumulative segment revenue vs. hardware gross profit.">悬停曲线可逐年对比不同销量、高溢价配置搭售与 BOM 成本假设下的 5 年累计营收与毛利润。</div>
+ </div>
+ </div>
+
+ <div class="grid-2" style="margin-top: 18px;">
+ <div class="mui-alert mui-alert-success" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-success mono">STRUCTURAL MOAT</span>
+ <strong data-i18n-zh="Apple Home 真正的战略价值远超账面硬件营收" data-i18n-en="Why Apple Home Punches Above Its Direct Hardware Revenue">Apple Home 真正的战略价值远超账面硬件营收</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-html-zh="&lt;strong&gt;1. 整户家庭零流失生态水泥：&lt;/strong&gt;当门锁、监控与客厅音响绑定 Apple Home，全家 iPhone 与 iCloud+ 2TB 订阅续费率近乎 100%。&lt;br/&gt;&lt;strong&gt;2. 端侧边缘算力富余：&lt;/strong&gt;家里常电在线的 A18/A19 中枢为全屋低功耗传感器提供免费本地大模型算力。&lt;br/&gt;&lt;strong&gt;3. 健康的单位经济：&lt;/strong&gt;不陷 $39 低价补贴泥潭，每一代新品均实现自负盈亏与高质量现金流。" data-i18n-html-en="&lt;strong&gt;1. Multi-Person Household Churn Killer:&lt;/strong&gt; Wall-mounted hubs, UWB Home Keys, and iCloud+ video lock entire families into iPhone.&lt;br/&gt;&lt;strong&gt;2. Always-Powered Local AI Compute:&lt;/strong&gt; Plugged-in A18/A19 hubs run heavy vision and Siri AI locally.&lt;br/&gt;&lt;strong&gt;3. Sustainable Unit Economics:&lt;/strong&gt; Zero loss-leader burn."><strong>1. 整户家庭零流失生态水泥：</strong>当门锁、监控与客厅音响绑定 Apple Home，全家 iPhone 与 iCloud+ 2TB 订阅续费率近乎 100%。<br/><strong>2. 端侧边缘算力富余：</strong>家里常电在线的 A18/A19 中枢为全屋低功耗传感器提供免费本地大模型算力。<br/><strong>3. 健康的单位经济：</strong>不陷 $39 低价补贴泥潭，每一代新品均实现自负盈亏与高质量现金流。</p>
+ </div>
+
+ <div class="mui-alert mui-alert-warning" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-warning mono">RISK &amp; HEADWINDS</span>
+ <strong data-i18n-zh="客观短板与市场扩张阻力" data-i18n-en="Structural Constraints &amp; Expansion Hurdles">客观短板与市场扩张阻力</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-html-zh="&lt;strong&gt;1. $299 起步门槛限制大众普及率：&lt;/strong&gt;Apple TV 4K 由 $129 涨至 $299（远高于 $50–$99 Roku/Fire TV），注定聚焦高净值果粉家庭而非大众下沉市场。&lt;br/&gt;&lt;strong&gt;2. 欧盟 DMA 法规导致首发缺席欧洲：&lt;/strong&gt;HomeView 因 iPhone 投射互操作审查暂缓欧盟 27 国上市，短期损失约四分之一发达市场增量 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;EU Exclusion ↗&lt;/a&gt;。&lt;br/&gt;&lt;strong&gt;3. 无自营白电大家电：&lt;/strong&gt;冰洗空等重资产家电仍需依赖 Matter 协议兼容美的、LG、三星等第三方品牌。" data-i18n-html-en="&lt;strong&gt;1. High $299 Entry Price Ceiling:&lt;/strong&gt; Eliminating the $129 Apple TV 4K cedes budget streaming volume to $50–$99 Roku and Fire TV sticks.&lt;br/&gt;&lt;strong&gt;2. Initial EU DMA Launch Exclusion:&lt;/strong&gt; Withholding HomeView from EU markets at launch caps near-term European volume &lt;a class=&quot;cite-link&quot; href=&quot;https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;EU Exclusion ↗&lt;/a&gt;.&lt;br/&gt;&lt;strong&gt;3. Reliance on Matter for Major Appliances:&lt;/strong&gt; Apple does not build HVAC units, washers, or refrigerators."><strong>1. $299 起步门槛限制大众普及率：</strong>Apple TV 4K 由 $129 涨至 $299（远高于 $50–$99 Roku/Fire TV），注定聚焦高净值果粉家庭而非大众下沉市场。<br/><strong>2. 欧盟 DMA 法规导致首发缺席欧洲：</strong>HomeView 因 iPhone 投射互操作审查暂缓欧盟 27 国上市，短期损失约四分之一发达市场增量 <a class="cite-link" href="https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward" target="_blank" rel="noopener noreferrer">EU Exclusion ↗</a>。<br/><strong>3. 无自营白电大家电：</strong>冰洗空等重资产家电仍需依赖 Matter 协议兼容美的、LG、三星等第三方品牌。</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- 05 Historical Evolution & Landmark Battles -->
+ <section id="sec-05" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 05 · PARADIGM EVOLUTION &amp; LANDMARK BATTLES</div>
+ <h2 class="sec-h2" data-i18n-zh="五、十年客厅与家居演进复盘：从初代 HomePod 定价折戟到 2026 端侧 AI 中枢全面合龙" data-i18n-en="5. Ten-Year Smart Home Evolution: From Original HomePod Stumble to Oct 2026 AI Hub">五、十年客厅与家居演进复盘：从初代 HomePod 定价折戟到 2026 端侧 AI 中枢全面合龙</h2>
+ <p class="sec-sub" data-i18n-zh="十年试错与耐心蛰伏：为什么苹果等到端侧大模型与 Matter 标准成熟才发起总攻" data-i18n-en="Why Apple waited for Matter maturity and on-device LLMs before launching HomeView &amp; Home Collection">十年试错与耐心蛰伏：为什么苹果等到端侧大模型与 Matter 标准成熟才发起总攻</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="2014 HomeKit → 2026.10 五维全屋引爆" data-i18n-en="2014 HomeKit → Oct 2026 Full-Home Blitz">2014 HomeKit → 2026.10 五维全屋引爆</span>
+ </div>
+
+ <div class="mui-timeline">
+ <div class="timeline-step">
+ <span class="timeline-dot"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;" data-i18n-zh="第一幕 · 纯音质执念与早期试水 (2014–2020) —— 初代 $349 HomePod 叫好不叫座" data-i18n-en="Act I · Hi-Fi Purism &amp; Early Trials (2014–2020) — Original $349 HomePod Niche">第一幕 · 纯音质执念与早期试水 (2014–2020) —— 初代 $349 HomePod 叫好不叫座</strong>
+ <span class="mui-chip mono" data-i18n-zh="重音质轻智能导致初期受挫" data-i18n-en="Great Sound, Limited Smart Reach">重音质轻智能导致初期受挫</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-html-zh="2014 年推出 HomeKit 框架，2018 年发布初代 $349 HomePod（BOM 高达 $216）；虽声学素质惊艳，但因早期 Siri 能力受限、封闭生态外设稀少且亚马逊以 $39 Echo Dot 疯狂补贴，初代大号 HomePod 一度于 2021 年初停产调整。" data-i18n-html-en="Apple launched HomeKit (2014) and the $349 original HomePod ($216 BOM, 2018); superb acoustics couldn&#x27;t overcome early Siri limits and $39 Echo Dot subsidies, prompting a 2021 pause.">2014 年推出 HomeKit 框架，2018 年发布初代 $349 HomePod（BOM 高达 $216）；虽声学素质惊艳，但因早期 Siri 能力受限、封闭生态外设稀少且亚马逊以 $39 Echo Dot 疯狂补贴，初代大号 HomePod 一度于 2021 年初停产调整。</p>
+ </div>
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#3399FF;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;" data-i18n-zh="第二幕 · $99 mini 破冰与 Matter/Thread 协议统一战线 (2020–2025)" data-i18n-en="Act II · HomePod mini Volume Pivot &amp; Matter/Thread Standardization (2020–2025)">第二幕 · $99 mini 破冰与 Matter/Thread 协议统一战线 (2020–2025)</strong>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="打通跨品牌底层连接底座" data-i18n-en="Laying the Matter/Thread Mesh">打通跨品牌底层连接底座</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-html-zh="2020 年底推出 $99 HomePod mini 迅速将苹果智能音箱销量推升数倍，2023 年复活 $299 二代 HomePod，并联合行业巨头共同推出 Matter 与 Aliro 智能家居互通标准，扫清第三方外设接入障碍 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.techinsights.com/blog/apple-homepod-teardown-and-cost-comparison&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HomePod Teardown ↗&lt;/a&gt;。" data-i18n-html-en="HomePod mini ($99, late 2020) scaled unit volume while Apple co-architected Matter, Thread, and Aliro standards to unify fragmented smart-home accessories &lt;a class=&quot;cite-link&quot; href=&quot;https://www.techinsights.com/blog/apple-homepod-teardown-and-cost-comparison&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HomePod Teardown ↗&lt;/a&gt;.">2020 年底推出 $99 HomePod mini 迅速将苹果智能音箱销量推升数倍，2023 年复活 $299 二代 HomePod，并联合行业巨头共同推出 Matter 与 Aliro 智能家居互通标准，扫清第三方外设接入障碍 <a class="cite-link" href="https://www.techinsights.com/blog/apple-homepod-teardown-and-cost-comparison" target="_blank" rel="noopener noreferrer">HomePod Teardown ↗</a>。</p>
+ </div>
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#22C55E;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;" data-i18n-zh="第三幕 · 2026年10月13日全系端侧 AI 换代 —— HomeView 与安防外设补齐最后拼图 (2026+)" data-i18n-en="Act III · Oct 13, 2026 Generational Blitz — HomeView, A19 TV &amp; Home Collection (2026+)">第三幕 · 2026年10月13日全系端侧 AI 换代 —— HomeView 与安防外设补齐最后拼图 (2026+)</strong>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="全线升级 A19 / A18 / S10 / N1" data-i18n-en="A19 / A18 / S10 / N1 Convergence">全线升级 A19 / A18 / S10 / N1</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-html-zh="当竞品深陷补贴亏损泥潭之际，苹果一举推出 7 英寸 HomeView ($299)、A19+N1 第四代 Apple TV 4K ($299)、S10 HomePod mini 2 ($149) 与 LG/施耐德联名安防矩阵，正式建成端侧 AI 家庭中枢闭环 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Oct 2026 Overhaul ↗&lt;/a&gt;。" data-i18n-html-en="Unleashed HomeView ($299), A19+N1 Apple TV 4K ($299), S10 HomePod mini 2 ($149), and the LG/Schneider Home Collection to anchor local Siri AI in the home &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Oct 2026 Overhaul ↗&lt;/a&gt;.">当竞品深陷补贴亏损泥潭之际，苹果一举推出 7 英寸 HomeView ($299)、A19+N1 第四代 Apple TV 4K ($299)、S10 HomePod mini 2 ($149) 与 LG/施耐德联名安防矩阵，正式建成端侧 AI 家庭中枢闭环 <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/" target="_blank" rel="noopener noreferrer">Oct 2026 Overhaul ↗</a>。</p>
+ </div>
+ </div>
+
+ <div class="grid-2" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="战役 01 · 2018–2026" data-i18n-en="Battle 01 · 2018–2026">战役 01 · 2018–2026</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="战略定力之战" data-i18n-en="Strategic Patience">战略定力之战</span>
+ </div>
+ <h3 data-i18n-zh="熬死互联网巨头的“负毛利硬件补贴战”" data-i18n-en="Outlasting Big Tech&#x27;s Multi-Billion-Dollar Smart Speaker Loss-Leader Era">熬死互联网巨头的“负毛利硬件补贴战”</h3>
+ <p data-i18n-html-zh="亚马逊曾靠亏本卖硬件抢下逾 5 亿台装机，却因语音购物变现失败而在 2025–2026 被迫转向屏幕广告与 $19.99/月收费，印证了苹果坚守正向硬件毛利的长期主义预判 &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Subsidy Reversal ↗&lt;/a&gt;。" data-i18n-html-en="Rivals lost billions subsidizing cheap speakers for voice-shopping commissions that never materialized—validating Apple&#x27;s refusal to sell negative-margin hardware &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Subsidy Reversal ↗&lt;/a&gt;.">亚马逊曾靠亏本卖硬件抢下逾 5 亿台装机，却因语音购物变现失败而在 2025–2026 被迫转向屏幕广告与 $19.99/月收费，印证了苹果坚守正向硬件毛利的长期主义预判 <a class="cite-link" href="https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15" target="_blank" rel="noopener noreferrer">Subsidy Reversal ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="战役 02 · 2026.10" data-i18n-en="Battle 02 · Oct 2026">战役 02 · 2026.10</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="生态冷启动巧思" data-i18n-en="Zero-Friction UX">生态冷启动巧思</span>
+ </div>
+ <h3 data-i18n-zh="HomeView 采用“iPhone 无线投射”避开独立应用商店荒漠" data-i18n-en="Solving Smart-Display App Scarcity via Paired-iPhone Widget Projection">HomeView 采用“iPhone 无线投射”避开独立应用商店荒漠</h3>
+ <p data-i18n-html-zh="带屏音箱最大痛点是第三方开发者不愿专门适配小众方形屏幕；HomeView 借鉴 CarPlay 架构直接调用配对 iPhone 应用，上市首日即坐拥丰富生态 &lt;a class=&quot;cite-link&quot; href=&quot;https://support.apple.com/en-us/149438&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HomeView Architecture ↗&lt;/a&gt;。" data-i18n-html-en="Smart displays historically suffered from abandoned third-party apps; mirroring paired iPhone widgets gives HomeView instant day-one utility &lt;a class=&quot;cite-link&quot; href=&quot;https://support.apple.com/en-us/149438&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HomeView Architecture ↗&lt;/a&gt;.">带屏音箱最大痛点是第三方开发者不愿专门适配小众方形屏幕；HomeView 借鉴 CarPlay 架构直接调用配对 iPhone 应用，上市首日即坐拥丰富生态 <a class="cite-link" href="https://support.apple.com/en-us/149438" target="_blank" rel="noopener noreferrer">HomeView Architecture ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="战役 03 · 2026.10" data-i18n-en="Battle 03 · Oct 2026">战役 03 · 2026.10</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="安防商业颠覆" data-i18n-en="Cloud Fee Disruption">安防商业颠覆</span>
+ </div>
+ <h3 data-i18n-zh="用“iCloud+ 免额外安防月费”精准刺穿 Ring 与 Nest 利润腹地" data-i18n-en="Undercutting Ring &amp; Google Nest Monthly Cloud Fees via Existing iCloud+">用“iCloud+ 免额外安防月费”精准刺穿 Ring 与 Nest 利润腹地</h3>
+ <p data-i18n-html-zh="家用摄像头真正的暴利在每年 $100–$200 云录像费；苹果将多路 2.5K 加密录像免费纳入存量果粉早已开通的 iCloud+，大幅降低全屋安防长期持有成本 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Secure Video TCO ↗&lt;/a&gt;。" data-i18n-html-en="Bundling 10-day encrypted camera storage free inside existing iCloud+ tiers neutralizes Ring and Nest&#x27;s primary subscription profit pool &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Secure Video TCO ↗&lt;/a&gt;.">家用摄像头真正的暴利在每年 $100–$200 云录像费；苹果将多路 2.5K 加密录像免费纳入存量果粉早已开通的 iCloud+，大幅降低全屋安防长期持有成本 <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/" target="_blank" rel="noopener noreferrer">Secure Video TCO ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="战役 04 · 2026.10" data-i18n-en="Battle 04 · Oct 2026">战役 04 · 2026.10</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="自研无线合龙" data-i18n-en="N1 Wireless Debut">自研无线合龙</span>
+ </div>
+ <h3 data-i18n-zh="第四代 Apple TV 4K 换装自研 N1 无线芯片，打通全屋 Wi-Fi 7 + Thread 骨干网" data-i18n-en="Deploying Apple&#x27;s In-House N1 Wi-Fi 7 / Thread Chip as the Living-Room Backbone">第四代 Apple TV 4K 换装自研 N1 无线芯片，打通全屋 Wi-Fi 7 + Thread 骨干网</h3>
+ <p data-i18n-html-zh="N1 将 6GHz Wi-Fi 7、Bluetooth 6 与 Thread 边界路由单芯集成，既降低博通外购成本，又保障 4 台 HomePod 全景声与 9 路高清监控零卡顿并发 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;N1 in Apple TV 4K ↗&lt;/a&gt;。" data-i18n-html-en="Apple&#x27;s N1 chip unifies 6GHz Wi-Fi 7, BT 6, and Thread mesh—replacing Broadcom silicon while powering 4-speaker Atmos and 9-cam streams &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;N1 in Apple TV 4K ↗&lt;/a&gt;.">N1 将 6GHz Wi-Fi 7、Bluetooth 6 与 Thread 边界路由单芯集成，既降低博通外购成本，又保障 4 台 HomePod 全景声与 9 路高清监控零卡顿并发 <a class="cite-link" href="https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/" target="_blank" rel="noopener noreferrer">N1 in Apple TV 4K ↗</a>。</p>
+ </div>
+ </div>
+
+ <div class="grid-3">
+ <div class="mui-alert">
+ <div data-i18n-html-zh="&lt;strong&gt;家居法则一：&lt;/strong&gt;家庭私密空间容不下侵入式屏幕广告——端侧本地 AI 隐私保护是撬动高净值家庭付费的头号杠杆。" data-i18n-html-en="&lt;strong&gt;Home Law 01:&lt;/strong&gt; Kitchens and bedrooms reject intrusive screen ads—on-device local privacy commands premium willingness to pay."><strong>家居法则一：</strong>家庭私密空间容不下侵入式屏幕广告——端侧本地 AI 隐私保护是撬动高净值家庭付费的头号杠杆。</div>
+ </div>
+ <div class="mui-alert">
+ <div data-i18n-html-zh="&lt;strong&gt;家居法则二：&lt;/strong&gt;绝不用负毛利硬件赌虚无的后向语音抽成，把安防云存储变为 iCloud+ 留存钩子才是更高级的复利。" data-i18n-html-en="&lt;strong&gt;Home Law 02:&lt;/strong&gt; Never subsidize hardware for speculative voice commerce; use zero-extra-fee camera storage to cement iCloud+ retention."><strong>家居法则二：</strong>绝不用负毛利硬件赌虚无的后向语音抽成，把安防云存储变为 iCloud+ 留存钩子才是更高级的复利。</div>
+ </div>
+ <div class="mui-alert">
+ <div data-i18n-html-zh="&lt;strong&gt;家居法则三：&lt;/strong&gt;用自研 A18/A19 把核心中枢做重，用联名共研（LG/施耐德）与 Matter 协议把长尾外设做轻。" data-i18n-html-en="&lt;strong&gt;Home Law 03:&lt;/strong&gt; Own the high-compute AI hubs directly while scaling cameras, locks, and HVAC asset-light via partners and Matter."><strong>家居法则三：</strong>用自研 A18/A19 把核心中枢做重，用联名共研（LG/施耐德）与 Matter 协议把长尾外设做轻。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 06 Interactive Hardware Moat Checklist -->
+ <section id="sec-06" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 06 · INTERACTIVE HARDWARE MOAT CHECKLIST</div>
+ <h2 class="sec-h2" data-i18n-zh="六、Apple Home 智能家居与端侧中枢护城河交互式核查清单" data-i18n-en="6. Interactive Apple Home &amp; Ambient AI Hub Moat Checklist">六、Apple Home 智能家居与端侧中枢护城河交互式核查清单</h2>
+ <p class="sec-sub" data-i18n-zh="用于持续跟踪 2026 年 10 月大换代后 HomeView 渗透率、多设备搭售率与欧洲监管破局进展" data-i18n-en="Evaluate post-Oct 2026 HomeView adoption, Home Collection attach, margin discipline, and EU rollout">用于持续跟踪 2026 年 10 月大换代后 HomeView 渗透率、多设备搭售率与欧洲监管破局进展</p>
+ </div>
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono"></span>
+ <button type="button" id="checkAllBtn" class="mui-btn" data-i18n-zh="全部勾选" data-i18n-en="Check All">全部勾选</button>
+ <button type="button" id="resetCheckBtn" class="mui-btn" data-i18n-zh="重置清单" data-i18n-en="Reset">重置清单</button>
+ </div>
+ </div>
+
+ <div class="progress-track" aria-label="核查完成度进度条">
+ <div id="checklistProgressBar" class="progress-fill"></div>
+ </div>
+
+ <div id="checklistContainer" class="checklist-grid"></div>
+ </section>
+
+ <!-- 07 Primary Sources & Disclosure Footer -->
+ <footer id="sec-07" class="mui-paper section-block" style="padding: 22px 26px;">
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;">
+ <strong style="font-size:0.92rem;" data-i18n-zh="数据来源与一手财报 / 发布会 / 行业拆解核验索引（SEC EDGAR &amp; Official Releases）" data-i18n-en="Primary Filings, Newsroom Releases &amp; Teardown Sources Index (SEC EDGAR &amp; Research)">数据来源与一手财报 / 发布会 / 行业拆解核验索引（SEC EDGAR &amp; Official Releases）</strong>
+ <span class="mui-chip mono">MUI Branding UI Architecture · Offline Ready</span>
+ </div>
+ <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;" data-i18n-zh="本研报严格聚焦 Apple Home 智能家居产品线（Apple HomeView、Apple TV 4K、HomePod、HomePod mini 及 Apple Home Collection），所有 2026 年 10 月发布规格、定价、iFixit 拆解、Echo Show 成本对比及竞品财报数据均核验自 Apple Newsroom、SEC EDGAR、iFixit、TechInsights、Sonos 及 Parks Associates 公开披露。" data-i18n-en="Strictly scoped to the Apple Home product line (HomeView, Apple TV 4K, HomePod, HomePod mini &amp; Apple Home Collection). All Oct 2026 launch specs, MSRPs, iFixit/TechInsights teardowns, and peer metrics are verified against Apple Newsroom, SEC EDGAR, iFixit, TechInsights, Sonos, and Parks Associates.">本研报严格聚焦 Apple Home 智能家居产品线（Apple HomeView、Apple TV 4K、HomePod、HomePod mini 及 Apple Home Collection），所有 2026 年 10 月发布规格、定价、iFixit 拆解、Echo Show 成本对比及竞品财报数据均核验自 Apple Newsroom、SEC EDGAR、iFixit、TechInsights、Sonos 及 Parks Associates 公开披露。</p>
+ <ul class="sources-list">
+ <li><span class="mono">[01]</span><a href="https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/" target="_blank" rel="noopener noreferrer">Apple Newsroom: Meet Apple HomeView — 7&quot; Display, A18 &amp; Glanceable UI at $299 (2026-10-13) ↗</a></li>
+ <li><span class="mono">[02]</span><a href="https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/" target="_blank" rel="noopener noreferrer">Apple Newsroom: Apple Unveils the New Apple TV 4K with A19, N1 Wi-Fi 7 &amp; Built-In Mics (2026-10-13) ↗</a></li>
+ <li><span class="mono">[03]</span><a href="https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/" target="_blank" rel="noopener noreferrer">Apple Newsroom: Apple Announces Next-Generation HomePod mini 2 with S10 &amp; Sound Glow (2026-10-13) ↗</a></li>
+ <li><span class="mono">[04]</span><a href="https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/" target="_blank" rel="noopener noreferrer">Apple Newsroom: Introducing Apple Home Collection Co-Engineered with LG &amp; Schneider (2026-10-13) ↗</a></li>
+ <li><span class="mono">[05]</span><a href="https://www.ifixit.com/News/120317/homeview-teardown-a-surprising-step-backward" target="_blank" rel="noopener noreferrer">iFixit Teardown: Apple HomeView Teardown — A18, 8GB SK hynix LPDDR5X &amp; 64GB NAND (2026-11-17) ↗</a></li>
+ <li><span class="mono">[06]</span><a href="https://support.apple.com/en-us/149438" target="_blank" rel="noopener noreferrer">Apple Support Official Technical Specifications: Apple HomeView (149438) &amp; Apple TV 4K A19 (149359) ↗</a></li>
+ <li><span class="mono">[07]</span><a href="https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/a8-kex991q4202609262026.htm" target="_blank" rel="noopener noreferrer">SEC Form 8-K Q4 FY2026: Balance Sheet Inventories ($14,541M, +154.3% YoY) &amp; Wearables/Home Sales ↗</a></li>
+ <li><span class="mono">[08]</span><a href="https://electronics360.globalspec.com/article/18358/techinsights-teardown-amazon-echo-show-15" target="_blank" rel="noopener noreferrer">TechInsights Teardown via Electronics360: Amazon Echo Show 15 $309.14 BOM vs. $249 MSRP Analysis ↗</a></li>
+ <li><span class="mono">[09]</span><a href="https://www.techinsights.com/blog/apple-homepod-teardown-and-cost-comparison" target="_blank" rel="noopener noreferrer">TechInsights Blog: Apple HomePod Teardown &amp; Acoustic Component Cost Comparison ($216 BOM) ↗</a></li>
+ <li><span class="mono">[10]</span><a href="https://www.businesswire.com/news/home/20261110256954/en/Sonos-Reports-Fourth-Quarter-and-Fiscal-2026-Results" target="_blank" rel="noopener noreferrer">Sonos FY2026 Earnings Release: $1.547B Revenue (+7% YoY) &amp; 46.9% GAAP Gross Margin (2026-11-10) ↗</a></li>
+ <li><span class="mono">[11]</span><a href="https://www.aboutamazon.com/news/devices/new-alexa-devices-2026" target="_blank" rel="noopener noreferrer">AboutAmazon Official: 2026 Echo Dot Max, Echo Show 8/11 &amp; Alexa+ Hardware Lineup ↗</a></li>
+ <li><span class="mono">[12]</span><a href="https://www.parksassociates.com/blogs/pr-video-services-ott-pay-tv/roku-and-samsung-dominate-connected-tv-platforms" target="_blank" rel="noopener noreferrer">Parks Associates Connected TV Tracker: Roku, Samsung &amp; Apple TV+ U.S. Household Penetration ↗</a></li>
+ </ul>
+ </footer>
+
+ </main>
+ </div>
+
+ <script src="../../../_shared/eef36d59aa0a66d1.js"></script>
+</body>
+</html>

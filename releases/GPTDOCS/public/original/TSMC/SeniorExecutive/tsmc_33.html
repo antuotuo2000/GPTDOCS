@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>TSMC 台积电 33 大核心高管全景深度研报中枢（魏哲家·秦永沛·米玉杰·侯永清·张晓强·黄仁昭·方淑华等）</title>
+ <link rel="stylesheet" href="../../_shared/4224f3de8f5d09cc.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <meta name="description" content="2024年6月接任董事长并续任总裁，正式完成刘德音退休后的权力交接。1998年加入台积电前曾任特许半导体技术资深副总、意法半导体资深经理及德州仪器研发成员。在他的统筹下，2026年Q3营收达NT$1.49兆（+50.9% YoY），HPC占比攀升至67.9%，2nm晶圆单季营收突破NT$1,031亿。 台积电官方履历 ↗ 2026.09 持股 6-K ↗ Q3 2026 财报 ↗">
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI Frosted Glass AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">CW</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation"><a class="crumb-link hide-sm" href="../../index.html"><span class="portal-menu-text" data-portal-zh="数据中心" data-portal-en="Research Hub">数据中心</span></a><span class="hide-sm" aria-hidden="true">/</span>
+ <span class="crumb-link hide-sm">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="TSMC 台积电" data-i18n-en="TSMC Hub">TSMC 台积电</span>
+ </span>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="魏哲家 (Dr. C.C. Wei) · 董事长暨总裁" data-i18n-en="Dr. C.C. Wei · Chairman and Chief Executive Officer">魏哲家 (Dr. C.C. Wei) · 董事长暨总裁</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="核心决策层 · 1998年入职" data-i18n-en="C-Suite · Joined 1998">核心决策层 · 1998年入职</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="持股 8,356,985" data-i18n-en="8,356,985 Shares">持股 8,356,985</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换高管…" aria-label="快速跳转章节或高管" data-ph-zh="检索章节或切换高管…" data-ph-en="Jump to section or Executive…" data-aria-zh="快速跳转章节或高管" data-aria-en="Quick jump to chapter or Executive" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与高管档案" data-aria-zh="研究章节目录与高管档案" data-aria-en="Report Chapters & Executive Profile">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">TSMC · C-SUITE & CO-COOS</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title">魏哲家 深度档案</div>
+ <p id="sideCardSub" class="sidebar-subtitle">1998年入职台积电（在职 28 年）· 董事长暨总裁</p>
+ <div class="sidebar-mini-kpis" id="sideMiniKpis"></div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="章节目录" data-aria-zh="章节目录" data-aria-en="Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="TSMC">
+          <div class="co-side-head">
+            <span class="co-side-title mono">TSMC · 02/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../Company/tsmc_12_q3_26_46_72b.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../Company/tsmc_12_q3_26_46_72b.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../Company/tsmc_12_q3_26_46_72b.html" title="TSMC 台积电全产品线与服务 12 大板块深度研报中枢（Q3&#x27;26 $46.72B 全景拆解）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="TSMC 台积电全产品线与服务 12 大板块深度研报中枢（Q3&#x27;26 $46.72B 全景拆解）" data-i18n-en="TSMC &amp; 12 Deep DiveReport (Q3&#x27;26 $46.72B OverviewBreakdown)">TSMC 台积电全产品线与服务 12 大板块深度研报中枢（Q3&#x27;26 $46.72B 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="SeniorExecutive" href="tsmc_33.html" title="TSMC 台积电 33 大核心高管全景深度研报中枢（魏哲家·秦永沛·米玉杰·侯永清·张晓强·黄仁昭·方淑华等）"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="TSMC 台积电 33 大核心高管全景深度研报中枢（魏哲家·秦永沛·米玉杰·侯永清·张晓强·黄仁昭·方淑华等）" data-i18n-en="TSMC 33 OverviewDeep DiveReport ( · · · · · ·)">TSMC 台积电 33 大核心高管全景深度研报中枢（魏哲家·秦永沛·米玉杰·侯永清·张晓强·黄仁昭·方淑华等）</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0">执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1">控制跨度与组织蓝图</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2">领导力支柱与五维雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3">高管持股与同业横评</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4">资本效率与价值沙盘</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5">职业进阶与四大硬仗</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6">高管履职核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7">SEC 财报与官方信源</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+ <!-- TSMC 33 Senior Executives Interactive Switcher -->
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="台积电 33 位核心高管切换中枢">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">TSMC · 33 SENIOR EXECUTIVES</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="台积电 (TSMC) 全量 33 位高管独立研报切换中枢（点击任一高管实时重绘全部 8 大章节与 5 张高分图表）" data-i18n-en="TSMC All 33 Senior Executives Monograph Switcher (Click any leader to dynamically render 8 chapters & 5 charts)">台积电 (TSMC) 全量 33 位高管独立研报切换中枢（点击任一高管实时重绘全部 8 大章节与 5 张高分图表）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" data-hub-nav="prev" class="mui-btn" title="切换至上一位高管 (快捷键 [)" data-title-zh="切换至上一位高管 (快捷键 [)" data-title-en="Previous Executive (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一高管" data-i18n-en="Prev Exec">上一高管</span>
+ </button>
+ <button type="button" id="nextIpBtn" data-hub-nav="next" class="mui-btn" title="切换至下一位高管 (快捷键 ])" data-title-zh="切换至下一位高管 (快捷键 ])" data-title-en="Next Executive (Shortcut ])">
+ <span data-i18n-zh="下一高管" data-i18n-en="Next Exec">下一高管</span> <span>→</span>
+ </button>
+ <button type="button" id="openStandalonePageBtn" data-standalone-ctrl="btn" class="mui-btn mui-btn-primary" title="下载当前选中高管的独立单文件网页" data-title-zh="下载当前选中高管的独立单文件网页" data-title-en="Download standalone HTML page for active executive">
+ <span id="openStandalonePageText" data-i18n-zh="导出《魏哲家》独立研报 ⬇" data-i18n-en="Download Dr. C.C. Wei HTML ⬇">导出《魏哲家》独立研报 ⬇</span>
+ </button>
+ </div>
+ </div>
+ <div class="exec-cat-bar">
+ <div class="exec-cat-pills" role="tablist" aria-label="高管职级与战线分类筛选">
+ <button type="button" class="exec-cat-btn active" data-filter-cat="all" data-i18n-zh="全部高管 (33)" data-i18n-en="All Executives (33)">全部高管 (33)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="c_suite" data-i18n-zh="核心决策层 (5)" data-i18n-en="C-Suite & Co-COOs (5)">核心决策层 (5)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="ops" data-i18n-zh="营运与制造 (9)" data-i18n-en="Operations & Fab (9)">营运与制造 (9)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="rd" data-i18n-zh="研发与技术 (9)" data-i18n-en="R&D & Technology (9)">研发与技术 (9)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="corp" data-i18n-zh="财务法务与职能 (6)" data-i18n-en="Corp Functions & BD (6)">财务法务与职能 (6)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="regional" data-i18n-zh="海外子公司总裁 (4)" data-i18n-en="Regional Presidents (4)">海外子公司总裁 (4)</button>
+ </div>
+ <span class="exec-cat-note mono" data-i18n-zh="支持 URL 锚点直达 (#exec=cc_wei) · 快捷键 [ / ] 切换 · ⌘K 搜索" data-i18n-en="Deep-link via #exec=id · Keys [ / ] to step · ⌘K quick jump">支持 URL 锚点直达 (#exec=cc_wei) · 快捷键 [ / ] 切换 · ⌘K 搜索</span>
+ </div>
+ <div class="ip-pill-grid" id="ipPillGrid">
+ <button type="button" class="ip-pill-btn active" data-switch-ip="cc_wei" data-exec-cat="c_suite" aria-pressed="true">
+ <span class="ip-pill-mono mono">CW</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="cc_wei">01. 魏哲家</span>
+ <span class="ip-pill-meta mono" data-pill-meta="cc_wei">1998 · 8,356,985 · Dr. C.C. Wei</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="yp_chyn" data-exec-cat="c_suite" aria-pressed="false">
+ <span class="ip-pill-mono mono">YC</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="yp_chyn">02. 秦永沛</span>
+ <span class="ip-pill-meta mono" data-pill-meta="yp_chyn">1987 · 9,394,246 · Y.P. Chyn</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="yj_mii" data-exec-cat="c_suite" aria-pressed="false">
+ <span class="ip-pill-mono mono">YM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="yj_mii">03. 米玉杰</span>
+ <span class="ip-pill-meta mono" data-pill-meta="yj_mii">1994 · 1,286,261 · Dr. Y.J. Mii</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="cliff_hou" data-exec-cat="c_suite" aria-pressed="false">
+ <span class="ip-pill-mono mono">CH</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="cliff_hou">04. 侯永清</span>
+ <span class="ip-pill-meta mono" data-pill-meta="cliff_hou">1997 · 771,229 · Dr. Cliff Hou</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="kevin_zhang" data-exec-cat="c_suite" aria-pressed="false">
+ <span class="ip-pill-mono mono">KZ</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="kevin_zhang">05. 张晓强</span>
+ <span class="ip-pill-meta mono" data-pill-meta="kevin_zhang">2016 · 349,976 · Dr. Kevin Zhang</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="yl_wang" data-exec-cat="ops" aria-pressed="false">
+ <span class="ip-pill-mono mono">YW</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="yl_wang">06. 王英郎</span>
+ <span class="ip-pill-meta mono" data-pill-meta="yl_wang">1992 · 1,510,802 · Dr. Y.L. Wang</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ts_chang" data-exec-cat="ops" aria-pressed="false">
+ <span class="ip-pill-mono mono">TC</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="ts_chang">07. 张宗生</span>
+ <span class="ip-pill-meta mono" data-pill-meta="ts_chang">1995 · 346,580 · Dr. T.S. Chang</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="jun_he" data-exec-cat="ops" aria-pressed="false">
+ <span class="ip-pill-mono mono">JH</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="jun_he">08. 何军</span>
+ <span class="ip-pill-meta mono" data-pill-meta="jun_he">2017 · 140,735 · Dr. Jun He</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="arthur_chuang" data-exec-cat="ops" aria-pressed="false">
+ <span class="ip-pill-mono mono">AC</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="arthur_chuang">09. 庄子寿</span>
+ <span class="ip-pill-meta mono" data-pill-meta="arthur_chuang">1989 · 3,509,368 · Dr. Arthur Chuang</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ray_chuang" data-exec-cat="ops" aria-pressed="false">
+ <span class="ip-pill-mono mono">RC</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="ray_chuang">10. 庄瑞萍</span>
+ <span class="ip-pill-meta mono" data-pill-meta="ray_chuang">1997 · 365,239 · Ray Chuang</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="yk_hwang" data-exec-cat="ops" aria-pressed="false">
+ <span class="ip-pill-mono mono">YH</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="yk_hwang">11. 黄远国</span>
+ <span class="ip-pill-meta mono" data-pill-meta="yk_hwang">1995 · 营运与晶圆制造 · Y.K. Hwang</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="bz_tien" data-exec-cat="ops" aria-pressed="false">
+ <span class="ip-pill-mono mono">BT</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="bz_tien">12. 田博仁</span>
+ <span class="ip-pill-meta mono" data-pill-meta="bz_tien">1998 · 营运与晶圆制造 · B.Z. Tien</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="yh_wu" data-exec-cat="ops" aria-pressed="false">
+ <span class="ip-pill-mono mono">YW</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="yh_wu">13. 吴怡璜</span>
+ <span class="ip-pill-meta mono" data-pill-meta="yh_wu">1995 · 营运与晶圆制造 · Y.H. Wu</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="span_lu" data-exec-cat="ops" aria-pressed="false">
+ <span class="ip-pill-mono mono">SL</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="span_lu">14. 吕金盛</span>
+ <span class="ip-pill-meta mono" data-pill-meta="span_lu">1998 · 营运与晶圆制造 · Span Lu</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="michael_wu" data-exec-cat="rd" aria-pressed="false">
+ <span class="ip-pill-mono mono">MW</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="michael_wu">15. 吴显扬</span>
+ <span class="ip-pill-meta mono" data-pill-meta="michael_wu">1996 · 842,052 · Dr. Michael Wu</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="geoffrey_yeap" data-exec-cat="rd" aria-pressed="false">
+ <span class="ip-pill-mono mono">GY</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="geoffrey_yeap">16. 叶主辉</span>
+ <span class="ip-pill-meta mono" data-pill-meta="geoffrey_yeap">2016 · 243,383 · Dr. Geoffrey Yeap</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="min_cao" data-exec-cat="rd" aria-pressed="false">
+ <span class="ip-pill-mono mono">MC</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="min_cao">17. 曹敏</span>
+ <span class="ip-pill-meta mono" data-pill-meta="min_cao">2002 · 555,230 · Dr. Min Cao</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="simon_jang" data-exec-cat="rd" aria-pressed="false">
+ <span class="ip-pill-mono mono">SJ</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="simon_jang">18. 章勋明</span>
+ <span class="ip-pill-meta mono" data-pill-meta="simon_jang">1993 · 454,054 · Dr. Simon Jang</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="cs_yoo" data-exec-cat="rd" aria-pressed="false">
+ <span class="ip-pill-mono mono">CY</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="cs_yoo">19. 游秋山</span>
+ <span class="ip-pill-meta mono" data-pill-meta="cs_yoo">1988 · 2,877,621 · Dr. C.S. Yoo</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="lc_lu" data-exec-cat="rd" aria-pressed="false">
+ <span class="ip-pill-mono mono">LL</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="lc_lu">20. 鲁立忠</span>
+ <span class="ip-pill-meta mono" data-pill-meta="lc_lu">2000 · 299,891 · Dr. L.C. Lu</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="kc_hsu" data-exec-cat="rd" aria-pressed="false">
+ <span class="ip-pill-mono mono">KH</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="kc_hsu">21. 徐国晋</span>
+ <span class="ip-pill-meta mono" data-pill-meta="kc_hsu">2019 · 199,099 · K.C. Hsu</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ss_lin" data-exec-cat="rd" aria-pressed="false">
+ <span class="ip-pill-mono mono">SL</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="ss_lin">22. 林学仕</span>
+ <span class="ip-pill-meta mono" data-pill-meta="ss_lin">2000 · 研发与前瞻技术 · Dr. S.S. Lin</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="yc_ku" data-exec-cat="rd" aria-pressed="false">
+ <span class="ip-pill-mono mono">YK</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="yc_ku">23. 辜耀进</span>
+ <span class="ip-pill-meta mono" data-pill-meta="yc_ku">1999 · 研发与前瞻技术 · Dr. Y.C. Ku</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="wendell_huang" data-exec-cat="corp" aria-pressed="false">
+ <span class="ip-pill-mono mono">WH</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="wendell_huang">24. 黄仁昭</span>
+ <span class="ip-pill-meta mono" data-pill-meta="wendell_huang">1999 · 1,831,856 · Wendell Huang</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="sylvia_fang" data-exec-cat="corp" aria-pressed="false">
+ <span class="ip-pill-mono mono">SF</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="sylvia_fang">25. 方淑华</span>
+ <span class="ip-pill-meta mono" data-pill-meta="sylvia_fang">1995 · 1,350,801 · Sylvia Fang</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="jonathan_lee" data-exec-cat="corp" aria-pressed="false">
+ <span class="ip-pill-mono mono">JL</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="jonathan_lee">26. 李俊贤</span>
+ <span class="ip-pill-meta mono" data-pill-meta="jonathan_lee">2007 · 524,913 · Jonathan Lee</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="chris_lin" data-exec-cat="corp" aria-pressed="false">
+ <span class="ip-pill-mono mono">CL</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="chris_lin">27. 林宏达</span>
+ <span class="ip-pill-meta mono" data-pill-meta="chris_lin">2021 · 164,372 · Dr. Chris Horng-Dar Lin</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ph_chen" data-exec-cat="corp" aria-pressed="false">
+ <span class="ip-pill-mono mono">PC</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="ph_chen">28. 陈培宏</span>
+ <span class="ip-pill-meta mono" data-pill-meta="ph_chen">1990 · 财务法务与职能 · P.H. Chen</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="lipen_yuan" data-exec-cat="corp" aria-pressed="false">
+ <span class="ip-pill-mono mono">LY</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="lipen_yuan">29. 袁立本</span>
+ <span class="ip-pill-meta mono" data-pill-meta="lipen_yuan">2011 · 财务法务与职能 · Dr. Lipen Yuan</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="sajiv_dalal" data-exec-cat="regional" aria-pressed="false">
+ <span class="ip-pill-mono mono">SD</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="sajiv_dalal">30. Sajiv Dalal</span>
+ <span class="ip-pill-meta mono" data-pill-meta="sajiv_dalal">1999 · 海外子公司总裁 · Sajiv Dalal</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="christopher_thomas" data-exec-cat="regional" aria-pressed="false">
+ <span class="ip-pill-mono mono">CT</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="christopher_thomas">31. Christopher Thomas</span>
+ <span class="ip-pill-meta mono" data-pill-meta="christopher_thomas">2026 · 2026年新任 · Christopher Thomas</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="makoto_onodera" data-exec-cat="regional" aria-pressed="false">
+ <span class="ip-pill-mono mono">MO</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="makoto_onodera">32. 小野寺诚</span>
+ <span class="ip-pill-meta mono" data-pill-meta="makoto_onodera">1997 · 海外子公司总裁 · Makoto Onodera</span>
+ </span>
+</button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="roger_luo" data-exec-cat="regional" aria-pressed="false">
+ <span class="ip-pill-mono mono">RL</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="roger_luo">33. 罗镇球</span>
+ <span class="ip-pill-meta mono" data-pill-meta="roger_luo">1994 · 海外子公司总裁 · Roger Luo</span>
+ </span>
+</button>
+ </div>
+ </section>
+
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="核心定评：双首长制终结后的绝对统帅：以CoWoS与N2/A16驱动AI时代58.7%营业利益率" data-i18n-en="Verdict: Unified Chairman &amp; CEO: Driving 58.7% Operating Margin via AI, N2 &amp; Global Expansion">核心定评：双首长制终结后的绝对统帅：以CoWoS与N2/A16驱动AI时代58.7%营业利益率</span><span class="mui-chip" data-i18n-zh="履历跨度：美国耶鲁大学电机工程博士；国立交通大学电机学士/硕士 → 1998 入职台积电 → 董事长暨总裁" data-i18n-en="Trajectory: Ph.D. EE, Yale University; B.S./M.S. EE, NCTU → TSMC (1998) → Chairman and Chief Executive Officer">履历跨度：美国耶鲁大学电机工程博士；国立交通大学电机学士/硕士 → 1998 入职台积电 → 董事长暨总裁</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="数据基准：2026-11-21 SEC &amp; TSMC 核验" data-i18n-en="Baseline: Nov 21, 2026 SEC &amp; TSMC Verified">数据基准：2026-11-21 SEC &amp; TSMC 核验</span></div><div class="hero-overline mono"><span data-i18n-zh="核心决策层 · 1998年入职 (28年资历) × 核心战略统帅" data-i18n-en="TSMC C-SUITE &amp; CO-COOS · JOINED 1998 (28-YR TENURE) × 核心战略统帅">核心决策层 · 1998年入职 (28年资历) × 核心战略统帅</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">魏哲家 (Dr. C.C. Wei) 深度解构：<span class="gradient-accent">董事长暨总裁</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">2024年6月接任董事长并续任总裁，正式完成刘德音退休后的权力交接。1998年加入台积电前曾任特许半导体技术资深副总、意法半导体资深经理及德州仪器研发成员。在他的统筹下，2026年Q3营收达NT$1.49兆（+50.9% YoY），HPC占比攀升至67.9%，2nm晶圆单季营收突破NT$1,031亿。 <a class="cite-link" href="https://www.tsmc.com/schinese/aboutTSMC/executives" target="_blank" rel="noopener noreferrer">台积电官方履历 ↗</a> <a class="cite-link" href="https://www.stocktitan.net/sec-filings/TSM/6-k-taiwan-semiconductor-manufacturing-co-ltd-current-report-foreign--7730089c84e5.html" target="_blank" rel="noopener noreferrer">2026.09 持股 6-K ↗</a> <a class="cite-link" href="https://sec-api.io/insights/tsmc-tsm-q3-2026-earnings-nt-1-49tn-revenue-58-7-operating-margin-and-a-us-52-3bn-to-us-54-3bn-q4-outlook-sec-filing-analysis" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a></p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="组织定位与管辖核心" data-i18n-en="Organizational Mandate">组织定位与管辖核心</h3><p data-i18n-zh="现任 董事长暨总裁，隶属台积电 核心决策层 关键阵线，拥有 美国耶鲁大学电机工程博士；国立交通大学电机学士/硕士 背景。" data-i18n-en="Serves as Chairman and Chief Executive Officer within TSMC's TSMC C-Suite &amp; Co-COOs pillar (Ph.D. EE, Yale University; B.S./M.S. EE, NCTU).">现任 董事长暨总裁，隶属台积电 核心决策层 关键阵线，拥有 美国耶鲁大学电机工程博士；国立交通大学电机学士/硕士 背景。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="持股绑定与零质押治理" data-i18n-en="Equity &amp; Zero-Pledge Alignment">持股绑定与零质押治理</h3><p data-i18n-zh="2026年9月30日 Form 6-K 申报：8,356,985（变动 +204,375），全体高管零股票质押。" data-i18n-en="Sep 30, 2026 Form 6-K: 8,356,985 (delta: +204,375); zero share pledges.">2026年9月30日 Form 6-K 申报：8,356,985（变动 +204,375），全体高管零股票质押。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="Q3 2026 经营绩效底座" data-i18n-en="Q3 2026 Operating Anchor">Q3 2026 经营绩效底座</h3><p data-i18n-zh="支撑台积电 Q3 合并营收达 NT$1.49兆（+50.9% YoY），2nm 晶圆营收首破 NT$1,031亿。" data-i18n-en="Powers Q3 2026 revenue of NT$1.49T (+50.9% YoY) with 2nm reaching NT$103.1B.">支撑台积电 Q3 合并营收达 NT$1.49兆（+50.9% YoY），2nm 晶圆营收首破 NT$1,031亿。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="台积电在职年限" data-i18n-en="TSMC Tenure">台积电在职年限</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="1998 入职" data-i18n-en="Joined 1998">1998 入职</span></div><div class="kpi-value mono" data-i18n-zh="28 年" data-i18n-en="28 Yrs">28 年</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">自 1998 年加入以来深度参与关键技术与营运跃迁 <a class="cite-link" href="https://www.tsmc.com/schinese/aboutTSMC/executives" target="_blank" rel="noopener noreferrer">官方履历 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="申报持股 (2026/09/30)" data-i18n-en="Reported Shares (9/30/26)">申报持股 (2026/09/30)</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="+204,375" data-i18n-en="+204,375">+204,375</span></div><div class="kpi-value mono" data-i18n-zh="8,356,985" data-i18n-en="8,356,985">8,356,985</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">核验自 2026年10月22日 SEC Form 6-K 月度内部人持股报告 <a class="cite-link" href="https://www.stocktitan.net/sec-filings/TSM/6-k-taiwan-semiconductor-manufacturing-co-ltd-current-report-foreign--7730089c84e5.html" target="_blank" rel="noopener noreferrer">Form 6-K ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q3 2026 集团营收与盈利" data-i18n-en="Q3 2026 TSMC Revenue &amp; OM">Q3 2026 集团营收与盈利</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="营业利益率 58.7%" data-i18n-en="58.7% Op. Margin">营业利益率 58.7%</span></div><div class="kpi-value mono" data-i18n-zh="NT$1.49兆" data-i18n-en="$46.72B">NT$1.49兆</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">同比大增 50.9%，净利 NT$7,630.6亿，稀释 EPS NT$29.43 <a class="cite-link" href="https://sec-api.io/insights/tsmc-tsm-q3-2026-earnings-nt-1-49tn-revenue-58-7-operating-margin-and-a-us-52-3bn-to-us-54-3bn-q4-outlook-sec-filing-analysis" target="_blank" rel="noopener noreferrer">Q3 财报 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY26 资本开支与技术标签" data-i18n-en="FY26 CapEx &amp; Credentials">FY26 资本开支与技术标签</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="核心决策层" data-i18n-en="TSMC C-Suite &amp; Co-COOs">核心决策层</span></div><div class="kpi-value mono" data-i18n-zh="$60B–$64B" data-i18n-en="$60B–$64B">$60B–$64B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">核心资质：核心战略统帅；护航全球高强度扩厂周期 <a class="cite-link" href="https://sec-api.io/insights/tsmc-tsm-q3-2026-earnings-nt-1-49tn-revenue-58-7-operating-margin-and-a-us-52-3bn-to-us-54-3bn-q4-outlook-sec-filing-analysis" target="_blank" rel="noopener noreferrer">CapEx 核验 ↗</a>。</p></div></div></section>
+    </div>
+ </main>
+ </div>
+
+ <script src="../../_shared/84af9a82099bf44a.js"></script>
+</body>
+</html>

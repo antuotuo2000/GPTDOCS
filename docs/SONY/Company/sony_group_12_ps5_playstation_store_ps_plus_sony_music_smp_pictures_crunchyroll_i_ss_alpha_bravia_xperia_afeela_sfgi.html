@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-density="comfortable">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+ <title>Sony Group 全线 12 款核心产品与服务深度商业研报中枢（PS5·PlayStation Store·PS Plus·Sony Music·SMP·Pictures/Crunchyroll·I&amp;SS·Alpha·BRAVIA·Xperia·AFEELA·SFGI）</title>
+ <meta name="description" content="基于 Sony Group FY2025 与 Q2 FY2026 SEC Form 6-K &amp; Supplemental Information 官方财报核验，逐一深度拆解索尼全线 12 款核心产品与服务的技术底座、竞争护城河、单元经济模型与多周期复利推演。" />
+ <script src="../../_shared/30c964d6b70a6860.js"></script>
+ <link rel="stylesheet" href="../../_shared/0ed8fa9f9052d4cc.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">PS</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+ <a class="crumb-link hide-sm" href="../../index.html">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="Sony 商业研报中枢" data-i18n-en="Sony Research Hub">Sony 商业研报中枢</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="PlayStation 5 与主机硬件研报" data-i18n-en="PlayStation 5 &amp; Hardware Monograph">PlayStation 5 与主机硬件研报</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-md" data-i18n-zh="G&amp;NS Q2'26 ¥1,208.5B (+9%)" data-i18n-en="G&amp;NS Q2'26 ¥1,208.5B (+9%)">G&amp;NS Q2'26 ¥1,208.5B (+9%)</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-md" data-i18n-zh="累计出货 9,700万+ 台" data-i18n-en="97M+ Lifetime Shipped">累计出货 9,700万+ 台</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换产品…" aria-label="快速跳转章节或产品" data-ph-zh="检索章节或切换产品…" data-ph-en="Jump to chapter or product…" data-aria-zh="快速跳转章节或产品" data-aria-en="Quick jump to chapter or product" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+
+ <div class="mui-lang-switch hide-sm" role="group" aria-label="排版密度切换" data-aria-zh="排版密度切换" data-aria-en="Reading Density">
+ 
+ 
+ </div>
+
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换高清晰浅色 / 零噪点深空暗色" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换高清晰浅色 / 零噪点深空暗色" data-title-en="Toggle Crisp Light / Deep-Space Dark">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ <span id="appbarThemeLabel" class="hide-sm">清晰浅色</span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与产品导航" data-aria-zh="研究章节目录与产品导航" data-aria-en="Report Chapters &amp; Product Nav">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">SONY · #1 HARDWARE GATEWAY</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="PS5 与主机硬件" data-i18n-en="PS5 &amp; Console Hardware">PS5 与主机硬件</div>
+ <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="9,700万+ 装机基盘 × 日本高性能主机 91% 份额 × PS5 Pro/Portal 生态入口" data-i18n-en="97M+ installed base × 91% Japan high-end console share × PS5 Pro &amp; Portal gateway">9,700万+ 装机基盘 × 日本高性能主机 91% 份额 × PS5 Pro/Portal 生态入口</p>
+ <div class="sidebar-mini-kpis" id="sideMiniKpis"></div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="章节目录" data-aria-zh="章节目录" data-aria-en="Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="SONY">
+          <div class="co-side-head">
+            <span class="co-side-title mono">SONY · 01/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../SeniorExecutive/22.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../SeniorExecutive/22.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="sony_group_12_ps5_playstation_store_ps_plus_sony_music_smp_pictures_crunchyroll_i_ss_alpha_bravia_xperia_afeela_sfgi.html" title="Sony Group 全线 12 款核心产品与服务深度商业研报中枢（PS5·PlayStation Store·PS Plus·Sony Music·SMP·Pictures/Crunchyroll·I&amp;SS·Alpha·BRAVIA·Xperia·AFEELA·SFGI）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Sony Group 全线 12 款核心产品与服务深度商业研报中枢（PS5·PlayStation Store·PS Plus·Sony Music·SMP·Pictures/Crunchyroll·I&amp;SS·Alpha·BRAVIA·Xperia·AFEELA·SFGI）" data-i18n-en="Sony Group 12 &amp; Deep Dive Report (PS5·PlayStation Store·PS Plus·Sony Music·SMP·Pictures/Crunchyroll·I&amp;SS·Alpha·BRAVIA·Xperia·AFEELA·SFGI)">Sony Group 全线 12 款核心产品与服务深度商业研报中枢（PS5·PlayStation Store·PS Plus·Sony Music·SMP·Pictures/Crunchyroll·I&amp;SS·Alpha·BRAVIA·Xperia·AFEELA·SFGI）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../SeniorExecutive/22.html" title="索尼集团 22 位核心高管全景深度研报中枢（十时裕树·吉田宪一郎·陶琳·御供俊元·西野秀明·指田慎二·贝克尔等）"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="索尼集团 22 位核心高管全景深度研报中枢（十时裕树·吉田宪一郎·陶琳·御供俊元·西野秀明·指田慎二·贝克尔等）" data-i18n-en="22 OverviewDeep DiveReport ( · · · · · ·)">索尼集团 22 位核心高管全景深度研报中枢（十时裕树·吉田宪一郎·陶琳·御供俊元·西野秀明·指田慎二·贝克尔等）</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ <div class="nav-section-label" data-i18n-zh="当前产品研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">当前产品研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0">执行摘要与核心经营指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1">主机硬件架构与装机飞轮</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2">四大商业支柱与五维护城河雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3">全球主机与掌机硬件横向对标</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4">硬件盈利、内存成本与生命周期推演</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5">世代演进时间轴与关键战役</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6">主机硬件商业护城河核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7">一手财报与权威核验信源</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <main class="main-content">
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="Sony 12款核心产品切换中枢">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">SONY GROUP · 12 FLAGSHIP PRODUCTS</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="Sony 全线 12 款核心产品与服务独立商业研报切换中枢（点击任一产品实时重绘全部 8 大章节、5 张高分图表与盈利推演器）" data-i18n-en="Sony Group 12 Flagship Products &amp; Services Monograph Hub (Click any product to dynamically render all 8 chapters, 5 charts &amp; ROI simulator)">Sony 全线 12 款核心产品与服务独立商业研报切换中枢（点击任一产品实时重绘全部 8 大章节、5 张高分图表与盈利推演器）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" class="mui-btn" title="切换上一款产品 (快捷键 [)" data-title-zh="切换上一款产品 (快捷键 [)" data-title-en="Previous Product (Shortcut [)"><span>←</span> <span data-i18n-zh="上一产品" data-i18n-en="Prev">上一产品</span></button>
+ <button type="button" id="nextIpBtn" class="mui-btn" title="切换下一款产品 (快捷键 ])" data-title-zh="切换下一款产品 (快捷键 ])" data-title-en="Next Product (Shortcut ])"><span data-i18n-zh="下一产品" data-i18n-en="Next">下一产品</span> <span>→</span></button>
+ 
+ </div>
+ </div>
+ <div class="hub-cat-bar" role="tablist">
+ <button type="button" class="hub-cat-btn active" data-hub-cat="all" data-i18n-zh="全部产品 (12)" data-i18n-en="All (12)">全部产品 (12)</button>
+ <button type="button" class="hub-cat-btn" data-hub-cat="gns" data-i18n-zh="游戏与网络服务 (01–03)" data-i18n-en="Gaming &amp; Network (01–03)">游戏与网络服务 (01–03)</button>
+ <button type="button" class="hub-cat-btn" data-hub-cat="music_pic" data-i18n-zh="音乐与影视 IP (04–06)" data-i18n-en="Music &amp; Pictures (04–06)">音乐与影视 IP (04–06)</button>
+ <button type="button" class="hub-cat-btn" data-hub-cat="iss_ets" data-i18n-zh="传感芯片与影音硬件 (07–09)" data-i18n-en="Sensors &amp; AV Hardware (07–09)">传感芯片与影音硬件 (07–09)</button>
+ <button type="button" class="hub-cat-btn" data-hub-cat="mobility_eco" data-i18n-zh="移动、出行与生态 (10–12)" data-i18n-en="Mobility &amp; Ecosystem (10–12)">移动、出行与生态 (10–12)</button>
+ </div>
+ <div class="ip-pill-grid" id="ipPillGrid"><button type="button" class="ip-pill-btn active" data-switch-ip="ps5_console_hardware" data-prod-group="gns" aria-pressed="true"><span class="ip-pill-mono mono">PS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ps5_console_hardware">01. PS5 与主机硬件</span><span class="ip-pill-meta mono" data-pill-meta="ps5_console_hardware">9,700万+台 · 日本91%份额</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="playstation_store_studios" data-prod-group="gns" aria-pressed="false"><span class="ip-pill-mono mono">ST</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="playstation_store_studios">02. PS Store 与第一方游戏</span><span class="ip-pill-meta mono" data-pill-meta="playstation_store_studios">85% 数字占比 · Wolverine 240万</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="playstation_plus_psn" data-prod-group="gns" aria-pressed="false"><span class="ip-pill-mono mono">PN</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="playstation_plus_psn">03. PS Plus 与 PSN 网络</span><span class="ip-pill-meta mono" data-pill-meta="playstation_plus_psn">1.27亿 MAU · 单季 $1.37B (+19.7%)</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="sony_music_recorded" data-prod-group="music_pic" aria-pressed="false"><span class="ip-pill-mono mono">SM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="sony_music_recorded">04. Sony Music 唱片流媒体</span><span class="ip-pill-meta mono" data-pill-meta="sony_music_recorded">Q2 ¥598.4B (+10%) · OP ¥122.8B</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="sony_music_publishing" data-prod-group="music_pic" aria-pressed="false"><span class="ip-pill-mono mono">MP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="sony_music_publishing">05. Sony Music 版权曲库</span><span class="ip-pill-meta mono" data-pill-meta="sony_music_publishing">全球 #1 曲库 · 并购 Recognition</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="sony_pictures_crunchyroll" data-prod-group="music_pic" aria-pressed="false"><span class="ip-pill-mono mono">SP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="sony_pictures_crunchyroll">06. Sony Pictures 与 Crunchyroll</span><span class="ip-pill-meta mono" data-pill-meta="sony_pictures_crunchyroll">Q2 OP ¥92.6B (+568%) · 2,100万订户</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="iss_cmos_sensors" data-prod-group="iss_ets" aria-pressed="false"><span class="ip-pill-mono mono">IS</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="iss_cmos_sensors">07. I&SS / LYTIA 图像传感器</span><span class="ip-pill-meta mono" data-pill-meta="iss_cmos_sensors">Q2 OP ¥154.6B (26.8%利润率) · 全球#1</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="alpha_cinema_cameras" data-prod-group="iss_ets" aria-pressed="false"><span class="ip-pill-mono mono">AL</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="alpha_cinema_cameras">08. Alpha 相机与 Cinema Line</span><span class="ip-pill-meta mono" data-pill-meta="alpha_cinema_cameras">无反连续3年#1 · 29.9% 全画幅份额</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="bravia_audio_headphones" data-prod-group="iss_ets" aria-pressed="false"><span class="ip-pill-mono mono">BA</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="bravia_audio_headphones">09. BRAVIA 电视与 WH-1000XM 音频</span><span class="ip-pill-meta mono" data-pill-meta="bravia_audio_headphones">TCL 49/51 合资 · WH-1000XM6 旗舰</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="xperia_mobile_ecosystem" data-prod-group="mobility_eco" aria-pressed="false"><span class="ip-pill-mono mono">XP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="xperia_mobile_ecosystem">10. Xperia 旗舰手机生态</span><span class="ip-pill-meta mono" data-pill-meta="xperia_mobile_ecosystem">创作者利基 · Xperia 1 VIII</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="sony_honda_afeela_ev" data-prod-group="mobility_eco" aria-pressed="false"><span class="ip-pill-mono mono">AF</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="sony_honda_afeela_ev">11. AFEELA 智能电动汽车</span><span class="ip-pill-meta mono" data-pill-meta="sony_honda_afeela_ev">$89.9K–$102.9K · 加州首发</span></span></button><button type="button" class="ip-pill-btn" data-switch-ip="sony_financial_ai_ecosystem" data-prod-group="mobility_eco" aria-pressed="false"><span class="ip-pill-mono mono">SF</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="sony_financial_ai_ecosystem">12. 索尼金融分拆与 AI 生态</span><span class="ip-pill-meta mono" data-pill-meta="sony_financial_ai_ecosystem">2025.10 东证分拆上市 · <20%参股</span></span></button></div>
+ </section>
+
+ <div id="ipSectionsHost">
+  <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="产品战略定评：索尼娱乐帝国的客厅算力底座与高净值玩家获客漏斗" data-i18n-en="Verdict: Living-Room Compute Gateway &amp; High-LTV Player Acquisition Funnel">产品战略定评：索尼娱乐帝国的客厅算力底座与高净值玩家获客漏斗</span><span class="mui-chip" data-i18n-zh="追踪窗口：FY2025 (¥4,685.7B) → Q2 FY2026 (¥1,208.5B) → FY26 指引 ¥4,830B" data-i18n-en="Window: FY2025 (¥4,685.7B) → Q2 FY2026 (¥1,208.5B) → FY26 Guide ¥4,830B">追踪窗口：FY2025 (¥4,685.7B) → Q2 FY2026 (¥1,208.5B) → FY26 指引 ¥4,830B</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="数据基准：2026-11 SEC 6-K 核验" data-i18n-en="Baseline: Nov 2026 SEC 6-K Verified">数据基准：2026-11 SEC 6-K 核验</span></div><div class="hero-overline mono"><span data-i18n-zh="PRODUCT 01 · 累计出货 9,700万+ 台 × 2.7:1 领先 Xbox × 日本高性能主机 91% 份额" data-i18n-en="PRODUCT 01 · 97M+ Units Shipped × 2.7:1 Lead Over Xbox × 91% Japan High-End Share">PRODUCT 01 · 累计出货 9,700万+ 台 × 2.7:1 领先 Xbox × 日本高性能主机 91% 份额</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">PlayStation 5 与主机硬件深度商业研报：<span class="gradient-accent">出货进入成熟期后，索尼如何靠定价权与生态留存实现利润暴增 83%？</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">截至 2026 年 9 月 30 日，PlayStation 5 全球累计出货量已突破 <strong>9,700 万台</strong>（Q2 FY26 单季出货 260 万台，同比下降约 35%），尽管硬件销量随生命周期步入第 6 年自然放缓，但凭借年内两次精准提价与供应链降本，G&NS 分部 Q2 FY26 营业利润同比飙升 <strong>+83% 至 ¥2,201 亿日元</strong> <a class="cite-link" href="https://www.sony.com/en/SonyInfo/IR/library/er/pdf/26q2_sonyspeech.pdf" target="_blank" rel="noopener noreferrer">Q2'26 财报 ↗</a>。索尼已锁定本财年及下一财年所需内存供应，确保硬件盈利能力不受上游涨价侵蚀 <a class="cite-link" href="https://shattered.io/sony-playstation-profit-2026/" target="_blank" rel="noopener noreferrer">Shattered ↗</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="2.7:1 压倒性装机壁垒" data-i18n-en="2.7:1 Installed Base Dominance">2.7:1 压倒性装机壁垒</h3><p data-i18n-zh="全球主机销量以 2.7:1 领先 Xbox Series X/S，在日本高性能主机市场更是占据 91% 绝对垄断，迫使第三方厂商优先适配 PS5。" data-i18n-en="Outsells Xbox Series X/S 2.7:1 globally and commands 91% of Japan's high-performance console market, locking in third-party dev priority.">全球主机销量以 2.7:1 领先 Xbox Series X/S，在日本高性能主机市场更是占据 91% 绝对垄断，迫使第三方厂商优先适配 PS5。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="单机定价权与内存成本对冲" data-i18n-en="Pricing Power &amp; Memory Hedge">单机定价权与内存成本对冲</h3><p data-i18n-zh="一年内两次上调主机售价并优化促销策略，成功抵消上游 DRAM/NAND 涨价压力，维持硬件毛利率与 FY25 持平。" data-i18n-en="Two strategic price hikes and supply alignment offset rising memory costs, keeping FY26 hardware profitability on par with FY25.">一年内两次上调主机售价并优化促销策略，成功抵消上游 DRAM/NAND 涨价压力，维持硬件毛利率与 FY25 持平。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="周边矩阵扩展 ARPU 边界" data-i18n-en="Peripheral Matrix Expands ARPU">周边矩阵扩展 ARPU 边界</h3><p data-i18n-zh="PS5 Pro、PlayStation Portal 串流掌机、DualSense Edge 手柄及 PS VR2 构成高毛利硬件附件生态，提升单户硬件贡献。" data-i18n-en="PS5 Pro, PlayStation Portal, DualSense Edge, and PS VR2 add high-margin hardware attach revenue per household.">PS5 Pro、PlayStation Portal 串流掌机、DualSense Edge 手柄及 PS VR2 构成高毛利硬件附件生态，提升单户硬件贡献。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="PS5 累计出货量" data-i18n-en="PS5 Lifetime Shipments">PS5 累计出货量</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="2026.09 核验" data-i18n-en="Sep 2026 Verified">2026.09 核验</span></div><div class="kpi-value mono" data-i18n-zh="9,700万+ 台" data-i18n-en="97M+ Units">9,700万+ 台</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">Q1 FY26 达 9,530 万台，Q2 新增 260 万台突破 9,700 万大关，正向 1 亿台里程碑冲刺 <a class="cite-link" href="https://shattered.io/sony-playstation-profit-2026/" target="_blank" rel="noopener noreferrer">Shattered ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="G&amp;NS Q2 FY26 营业利润" data-i18n-en="G&amp;NS Q2 FY26 OP">G&amp;NS Q2 FY26 营业利润</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="创Q2历史新高" data-i18n-en="Record Q2 OP">创Q2历史新高</span></div><div class="kpi-value mono" data-i18n-zh="¥220.1B" data-i18n-en="¥220.1B">¥220.1B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">同比大增 +83%（剔除上年 Bungie 减值后仍增 +29%），分部营收达 ¥1,208.5B <a class="cite-link" href="https://www.sony.com/en/SonyInfo/IR/library/er/pdf/26q2_supplement.pdf" target="_blank" rel="noopener noreferrer">26Q2 Supp ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY26 G&amp;NS 全年指引" data-i18n-en="FY26 G&amp;NS Guidance">FY26 G&amp;NS 全年指引</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="Q2 再度上调" data-i18n-en="Raised in Q2">Q2 再度上调</span></div><div class="kpi-value mono" data-i18n-zh="¥4.83T / ¥700B" data-i18n-en="¥4.83T / ¥700B">¥4.83T / ¥700B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">营收指引上调 6% 至 4.83 万亿日元，营业利润上调 6% 至 7,000 亿日元 <a class="cite-link" href="https://finance.biggo.com/quote/SONY/earnings-call/US_SONY_2026-11-05" target="_blank" rel="noopener noreferrer">Earnings Call ↗</a></p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="高性能主机日本份额" data-i18n-en="Japan High-End Share">高性能主机日本份额</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="近乎垄断" data-i18n-en="Near Monopoly">近乎垄断</span></div><div class="kpi-value mono" data-i18n-zh="91.0%" data-i18n-en="91.0%">91.0%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">全球销量 2.7:1 领先 Xbox，活跃玩家生态沉没成本使跨平台迁移率降低 70% <a class="cite-link" href="https://assets.zyrosite.com/AE0aDPpwPGCpQx09/article-1---volume-2-issue-3-2026-R584uKYZ69RSID2S.pdf" target="_blank" rel="noopener noreferrer">MyResearchGo ↗</a></p></div></div></section>
+ </div>
+ </main>
+ </div>
+
+ <script src="../../_shared/527d57f5bed0b60c.js"></script>
+</body>
+</html>

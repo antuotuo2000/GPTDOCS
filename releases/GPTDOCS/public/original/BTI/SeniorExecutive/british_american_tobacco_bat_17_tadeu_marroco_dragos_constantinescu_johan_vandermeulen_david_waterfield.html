@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>British American Tobacco (BAT) 17 位核心高管与董事全景深度研报中枢（Tadeu Marroco·Dragos Constantinescu·Johan Vandermeulen·David Waterfield 等）</title>
+ <meta name="description" content="British American Tobacco (BAT) 全量 17 位核心高管与董事会核心成员深度研报中枢：涵盖 Tadeu Marroco、Dragos Constantinescu、Johan Vandermeulen、David Waterfield、Fred Monteiro、Pascale Meulemeester、Celina Li、Luciano Comin、Kingsley Wheaton、James Barrett、Javed Iqbal、Zafar Khan、Dr Cora Koppe-Stahrenberg、Paul McCrory、Dr James Murphy、Luc Jobin 与 Karen Guerra。" />
+ <meta name="keywords" content="BAT, British American Tobacco, 英美烟草, 管理团队, Tadeu Marroco, Dragos Constantinescu, Johan Vandermeulen, David Waterfield, Celina Li, Luc Jobin, MUI" />
+ <link rel="stylesheet" href="../../_shared/3d809ba4d5c8ffd6.css">
+ <!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+
+ <link rel="stylesheet" href="../../_shared/f3718f1ede67af30.css">
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI Frosted Glass AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">TM</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+ <a class="crumb-link hide-sm" href="../../index.html">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="BAT 高管研报中枢" data-i18n-en="BAT Leadership Hub">BAT 高管研报中枢</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="Tadeu Marroco · 集团首席执行官" data-i18n-en="Tadeu Marroco · Chief Executive">Tadeu Marroco · 集团首席执行官</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm">Management Board</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm">CEO · 1992 Souza Cruz</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换高管…" aria-label="快速跳转章节或高管" data-ph-zh="检索章节或切换高管…" data-ph-en="Jump to section or Executive…" data-aria-zh="快速跳转章节或高管" data-aria-en="Quick jump to chapter or Executive" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">BRITISH AMERICAN TOBACCO · LEADERSHIP</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="Tadeu Marroco 深度档案" data-i18n-en="Tadeu Marroco Monograph">Tadeu Marroco 深度档案</div>
+ <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="集团首席执行官 · 1992年加入Souza Cruz" data-i18n-en="Chief Executive · Joined Souza Cruz 1992">集团首席执行官 · 1992年加入Souza Cruz</p>
+
+ <div class="sidebar-mini-kpis" id="sideMiniKpis"></div>
+ </div>
+
+ <!-- Unified MUI Navigation Card: Group Summary + Report TOC -->
+ <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Site Links &amp; Table of Contents">
+ <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="BTI">
+          <div class="co-side-head">
+            <span class="co-side-title mono">BTI · 02/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../Company/british_american_tobacco_8_fy2025_25_61b.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../Company/british_american_tobacco_8_fy2025_25_61b.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../Company/british_american_tobacco_8_fy2025_25_61b.html" title="British American Tobacco 英美烟草全产品线与服务 8 大板块深度研报中枢（FY2025 £25.61B 全景拆解）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="British American Tobacco 英美烟草全产品线与服务 8 大板块深度研报中枢（FY2025 £25.61B 全景拆解）" data-i18n-en="British American Tobacco &amp; 8 Deep DiveReport (FY2025 £25.61B OverviewBreakdown)">British American Tobacco 英美烟草全产品线与服务 8 大板块深度研报中枢（FY2025 £25.61B 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="SeniorExecutive" href="british_american_tobacco_bat_17_tadeu_marroco_dragos_constantinescu_johan_vandermeulen_david_waterfield.html" title="British American Tobacco (BAT) 17 位核心高管与董事全景深度研报中枢（Tadeu Marroco·Dragos Constantinescu·Johan Vandermeulen·David Waterfield 等）"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="British American Tobacco (BAT) 17 位核心高管与董事全景深度研报中枢（Tadeu Marroco·Dragos Constantinescu·Johan Vandermeulen·David Waterfield 等）" data-i18n-en="British American Tobacco (BAT) 17 &amp; OverviewDeep DiveReport (Tadeu Marroco·Dragos Constantinescu·Johan Vandermeulen·David Waterfield)">British American Tobacco (BAT) 17 位核心高管与董事全景深度研报中枢（Tadeu Marroco·Dragos Constantinescu·Johan Vandermeulen·David Waterfield 等）</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+ <div class="nav-divider"></div>
+
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary &amp; KPIs">执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="权力版图与指挥架构" data-i18n-en="Command Architecture">权力版图与指挥架构</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大支柱与五维雷达" data-i18n-en="4 Pillars &amp; 5-Axis Radar">四大支柱与五维雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="内外部同业横向对标" data-i18n-en="Peer Benchmarking Matrix">内外部同业横向对标</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="资本配置与价值沙盘" data-i18n-en="Capital &amp; Value Simulator">资本配置与价值沙盘</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="三幕履历与关键战役" data-i18n-en="Career &amp; Defining Battles">三幕履历与关键战役</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="高管治理尽调核查单" data-i18n-en="Governance Checklist">高管治理尽调核查单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="官方披露与信源索引" data-i18n-en="Official Source Index">官方披露与信源索引</span></a></li>
+ </ul>
+ </nav>
+
+ <!-- Compact MUI Page Utility Controls -->
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+
+ <!-- BAT 17 Senior Executives Interactive Switcher -->
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="英美烟草 (BAT) 17位核心高管与董事切换中枢">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">BRITISH AMERICAN TOBACCO · 17 LEADERS</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="英美烟草（BAT）全量 17 位核心高管与董事独立研报切换中枢（点击任一高管实时重绘全部 8 大章节与 5 张高分图表）" data-i18n-en="BAT All 17 Management Board &amp; Key Directors Monograph Switcher (Click any leader to dynamically render 8 chapters &amp; 5 charts)">英美烟草（BAT）全量 17 位核心高管与董事独立研报切换中枢（点击任一高管实时重绘全部 8 大章节与 5 张高分图表）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" data-hub-nav="prev" class="mui-btn" title="切换至上一位高管 (快捷键 [)" data-title-zh="切换至上一位高管 (快捷键 [)" data-title-en="Previous Executive (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一高管" data-i18n-en="Prev Exec">上一高管</span>
+ </button>
+ <button type="button" id="nextIpBtn" data-hub-nav="next" class="mui-btn" title="切换至下一位高管 (快捷键 ])" data-title-zh="切换至下一位高管 (快捷键 ])" data-title-en="Next Executive (Shortcut ])">
+ <span data-i18n-zh="下一高管" data-i18n-en="Next Exec">下一高管</span> <span>→</span>
+ </button>
+ <button type="button" id="openStandalonePageLink" data-standalone-ctrl="btn" class="mui-btn mui-btn-primary" title="导出当前选中高管的独立单文件网页" data-title-zh="导出当前选中高管的独立单文件网页" data-title-en="Download standalone HTML page for active executive">
+ <span id="openStandalonePageText" data-i18n-zh="导出《Tadeu Marroco》独立研报 ⬇" data-i18n-en="Download Tadeu Marroco HTML ⬇">导出《Tadeu Marroco》独立研报 ⬇</span>
+ </button>
+ 
+ </div>
+ </div>
+ <div class="exec-cat-bar">
+ <div class="exec-cat-pills" role="tablist" aria-label="高管职级与战线分类筛选">
+ <button type="button" class="exec-cat-btn active" data-filter-cat="all" data-i18n-zh="全部高管与治理层 (17)" data-i18n-en="All Leaders &amp; Board (17)">全部高管与治理层 (17)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="csuite" data-i18n-zh="集团 C-Suite 统帅 (4)" data-i18n-en="Group C-Suite (4)">集团 C-Suite 统帅 (4)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="regional" data-i18n-zh="三大战区总裁与候任 (4)" data-i18n-en="Regional Directors (4)">三大战区总裁与候任 (4)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="functional" data-i18n-zh="职能、运营与科学官 (7)" data-i18n-en="Functional, Ops &amp; Science (7)">职能、运营与科学官 (7)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="governance" data-i18n-zh="主董事会治理中枢 (2)" data-i18n-en="Main Board Governance (2)">主董事会治理中枢 (2)</button>
+ </div>
+ <span class="exec-cat-note mono" data-i18n-zh="支持 URL 锚点直达 (#exec=tadeu_marroco) · 快捷键 [ / ] 切换 · ⌘K 搜索" data-i18n-en="Deep-link via #exec=id · Keys [ / ] to step · ⌘K quick jump">支持 URL 锚点直达 (#exec=tadeu_marroco) · 快捷键 [ / ] 切换 · ⌘K 搜索</span>
+ </div>
+ <div class="ip-pill-grid" id="ipPillGrid">
+ <button type="button" class="ip-pill-btn active" data-switch-ip="tadeu_marroco" data-exec-cat="csuite" aria-pressed="true">
+ <span class="ip-pill-mono mono">TM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="tadeu_marroco">01. Tadeu Marroco</span>
+ <span class="ip-pill-meta mono" data-pill-meta="tadeu_marroco">FY25 £25.61B · +7.9% H1'26 EPS · 集团首席执行官 (CEO)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="dragos_constantinescu" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">DC</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="dragos_constantinescu">02. Dragos Constantinescu</span>
+ <span class="ip-pill-meta mono" data-pill-meta="dragos_constantinescu">£820k Base · 2026.09 履新 · 首席财务官 (CFO)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="johan_vandermeulen" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">JV</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="johan_vandermeulen">03. Johan Vandermeulen</span>
+ <span class="ip-pill-meta mono" data-pill-meta="johan_vandermeulen">1992入职 · 2014入管委会 · 首席运营官 (COO)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="david_waterfield" data-exec-cat="regional" aria-pressed="false">
+ <span class="ip-pill-mono mono">DW</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="david_waterfield">04. David Waterfield</span>
+ <span class="ip-pill-meta mono" data-pill-meta="david_waterfield">U.S. £11.53B · +8.5% H1'26 · 雷诺兹美国总裁兼CEO</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="fred_monteiro" data-exec-cat="regional" aria-pressed="false">
+ <span class="ip-pill-mono mono">FM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="fred_monteiro">05. Fred Monteiro</span>
+ <span class="ip-pill-meta mono" data-pill-meta="fred_monteiro">AME £9.31B · +3.3% FY25 · 美洲与欧洲区域总监 (AME)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="pascale_meulemeester" data-exec-cat="regional" aria-pressed="false">
+ <span class="ip-pill-mono mono">PM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="pascale_meulemeester">06. Pascale Meulemeester</span>
+ <span class="ip-pill-meta mono" data-pill-meta="pascale_meulemeester">2027.03 接任 CMO · APMEA 总监 → 候任 CMO</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="celina_li" data-exec-cat="regional" aria-pressed="false">
+ <span class="ip-pill-mono mono">CL</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="celina_li">07. Celina Li</span>
+ <span class="ip-pill-meta mono" data-pill-meta="celina_li">2027.01 入管委会 · 原可口可乐/Ocean Spray · 候任 APMEA 区域总监</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="luciano_comin" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">LC</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="luciano_comin">08. Luciano Comin</span>
+ <span class="ip-pill-meta mono" data-pill-meta="luciano_comin">34年老兵 · 2027.02 荣休 · 首席营销官 (2027.02 荣休)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="kingsley_wheaton" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">KW</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="kingsley_wheaton">09. Kingsley Wheaton</span>
+ <span class="ip-pill-meta mono" data-pill-meta="kingsley_wheaton">2012入管委会 · 资历最深 · 首席企业事务官 (CCO)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="james_barrett" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">JB</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="james_barrett">10. James Barrett</span>
+ <span class="ip-pill-meta mono" data-pill-meta="james_barrett">1996管培生 · 掌管M&A与风投 · 业务发展总监 (战略/并购)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="javed_iqbal" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">JI</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="javed_iqbal">11. Javed Iqbal</span>
+ <span class="ip-pill-meta mono" data-pill-meta="javed_iqbal">2025–26 临时CFO · 30年老兵 · 数字与信息总监 (前临时CFO)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="zafar_khan" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">ZK</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="zafar_khan">12. Zafar Khan</span>
+ <span class="ip-pill-meta mono" data-pill-meta="zafar_khan">1996入职 · 2021入管委会 · 集团运营总监 (供应链/制造)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="cora_koppe_stahrenberg" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">CK</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="cora_koppe_stahrenberg">13. Dr Cora Koppe-Stahrenberg</span>
+ <span class="ip-pill-meta mono" data-pill-meta="cora_koppe_stahrenberg">2023.11入职 · 六西格玛黑带大师 · 首席人力资源官 (CPO)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="paul_mccrory" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">PMc</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="paul_mccrory">14. Paul McCrory</span>
+ <span class="ip-pill-meta mono" data-pill-meta="paul_mccrory">2026.01 转任 GC · 前公司秘书 · 法务总监兼总法律顾问</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="dr_james_murphy" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">JM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="dr_james_murphy">15. Dr James Murphy</span>
+ <span class="ip-pill-meta mono" data-pill-meta="dr_james_murphy">2005入职 · Omni™ 科学领军人 · 研发与科学总监</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="luc_jobin" data-exec-cat="governance" aria-pressed="false">
+ <span class="ip-pill-mono mono">LJ</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="luc_jobin">16. Luc Jobin</span>
+ <span class="ip-pill-meta mono" data-pill-meta="luc_jobin">2021履新主席 · 2026延任两年 · 主董事会主席 (Chair)</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="karen_guerra" data-exec-cat="governance" aria-pressed="false">
+ <span class="ip-pill-mono mono">KG</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="karen_guerra">17. Karen Guerra</span>
+ <span class="ip-pill-meta mono" data-pill-meta="karen_guerra">2026履新SID · 前Swedish Match董事 · 高级独立董事 (SID)</span>
+ </span>
+ </button>
+ </div>
+ </section>
+
+ <!-- Dynamic Monograph Sections Host (00 - 07) -->
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="集团首席执行官 (CEO)" data-i18n-en="Chief Executive">集团首席执行官 (CEO)</span><span class="mui-chip" data-i18n-zh="巴西籍 · 34年BAT资历" data-i18n-en="Brazilian · 34-Yr BAT Veteran">巴西籍 · 34年BAT资历</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="Horizon 2030 掌舵人" data-i18n-en="Horizon 2030 Architect">Horizon 2030 掌舵人</span></div><div class="hero-overline mono"><span data-i18n-zh="CHAPTER 00 · 最高统帅与资本配置中枢" data-i18n-en="CHAPTER 00 · SUPREME COMMAND &amp; CAPITAL ALLOCATION HUB">CHAPTER 00 · 最高统帅与资本配置中枢</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">Tadeu Marroco：<span class="gradient-accent">以高质量增长重塑无烟未来</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">1992年从巴西子公司 Souza Cruz 起步的财务与转型老兵，2023年5月出任集团 CEO 后确立“高质量增长（Quality Growth）”与“Horizon 2030”战略<a class='cite-link' href='https://www.bat.com/who-we-are/our-leadership/management-board/tadeu-marroco' target='_blank'>[官网履历]</a>。在他任内，BAT 无烟产品（Smokeless）收入占比在 2026 年上半年升至 19.8%，成人消费者达 3,500 万，并重回 3–5% 营收与 5–8% 调整后摊薄 EPS 增长算法<a class='cite-link' href='https://www.bat.com/media/press-releases/_2026/july/half-year-report-for-the-six-months-to-30-june-2026' target='_blank'>[H1 2026]</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="可燃烟草现金牛 × 新品类盈利跃迁" data-i18n-en="Combustibles Cash Engine × New Category Margin Inflection">可燃烟草现金牛 × 新品类盈利跃迁</h3><p data-i18n-zh="坚持“以可燃业务价值反哺新品类”，2025年新品类贡献利润大增 77.1% 至 £4.27亿，2026年9月资本市场日更确立 2030 年新品类贡献利润率 ≥30% 目标&lt;a class='cite-link' href='https://www.bat.com/media/press-releases/_2026/september/bat-2026-capital-markets-day' target='_blank'&gt;[CMD 2026]&lt;/a&gt;。" data-i18n-en="Funds transformation via resilient combustibles pricing while scaling New Category profitability: FY25 contribution jumped 77.1% to £427m, targeting ≥30% contribution margin by 2030&lt;a class='cite-link' href='https://www.bat.com/media/press-releases/_2026/september/bat-2026-capital-markets-day' target='_blank'&gt;[CMD 2026]&lt;/a&gt;.">坚持“以可燃业务价值反哺新品类”，2025年新品类贡献利润大增 77.1% 至 £4.27亿，2026年9月资本市场日更确立 2030 年新品类贡献利润率 ≥30% 目标<a class="cite-link" href="https://www.bat.com/media/press-releases/_2026/september/bat-2026-capital-markets-day" target="_blank" rel="noopener noreferrer">[CMD 2026]</a>。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="2.0–2.5x 去杠杆与股东回报纪律" data-i18n-en="2.0–2.5x Deleveraging &amp; Capital Return Discipline">2.0–2.5x 去杠杆与股东回报纪律</h3><p data-i18n-zh="2024–2030年预计创造超 £500亿自由现金流，2026年底将净负债/EBITDA 压降至 2.0–2.5x 区间，同时维持英镑股息增长与 £13亿年度股票回购&lt;a class='cite-link' href='https://www.bat.com/media/press-releases/_2026/april/agm-2026-chairs-address' target='_blank'&gt;[AGM 2026]&lt;/a&gt;。" data-i18n-en="Targets &gt;£50bn cumulative FCF (2024–2030), bringing leverage inside 2.0–2.5x by end-2026 alongside progressive sterling dividends and a £1.3bn 2026 share buy-back&lt;a class='cite-link' href='https://www.bat.com/media/press-releases/_2026/april/agm-2026-chairs-address' target='_blank'&gt;[AGM 2026]&lt;/a&gt;.">2024–2030年预计创造超 £500亿自由现金流，2026年底将净负债/EBITDA 压降至 2.0–2.5x 区间，同时维持英镑股息增长与 £13亿年度股票回购<a class="cite-link" href="https://www.bat.com/media/press-releases/_2026/april/agm-2026-chairs-address" target="_blank" rel="noopener noreferrer">[AGM 2026]</a>。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="Velo Plus 破局美国与美英薪酬接轨" data-i18n-en="U.S. Velo Plus Breakthrough &amp; Talent Retention">Velo Plus 破局美国与美英薪酬接轨</h3><p data-i18n-zh="依托 Reynolds 分销网推动 Velo Plus 在美实现三位数增长（全美第二）；2025年推动薪酬政策向美国同业接轨，以解决高管空缺与留才痛点&lt;a class='cite-link' href='https://tobaccoreporter.com/2025/02/18/potential-compensation-boon-for-bat-ceo/' target='_blank'&gt;[Pay Policy]&lt;/a&gt;。" data-i18n-en="Leveraged Reynolds' U.S. distribution to propel Velo Plus to #2 market position; updated 2025 executive pay framework to close U.S. talent competitiveness gaps&lt;a class='cite-link' href='https://tobaccoreporter.com/2025/02/18/potential-compensation-boon-for-bat-ceo/' target='_blank'&gt;[Pay Policy]&lt;/a&gt;.">依托 Reynolds 分销网推动 Velo Plus 在美实现三位数增长（全美第二）；2025年推动薪酬政策向美国同业接轨，以解决高管空缺与留才痛点<a class="cite-link" href="https://tobaccoreporter.com/2025/02/18/potential-compensation-boon-for-bat-ceo/" target="_blank" rel="noopener noreferrer">[Pay Policy]</a>。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY2025 集团总营收" data-i18n-en="FY2025 Group Revenue">FY2025 集团总营收</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="核心指标" data-i18n-en="KEY KPI">核心指标</span></div><div class="kpi-value mono" data-i18n-zh="£25,610m" data-i18n-en="£25,610m">£25,610m</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">恒定汇率 +2.1% · H1'26 +2.9%</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="H1 2026 无烟收入占比" data-i18n-en="H1 2026 Smokeless Share">H1 2026 无烟收入占比</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="核心指标" data-i18n-en="KEY KPI">核心指标</span></div><div class="kpi-value mono" data-i18n-zh="19.8%" data-i18n-en="19.8%">19.8%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">较 FY25 +1.6 ppts · 3,500万用户</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="2026 EPS 增长指引" data-i18n-en="FY26 Adj. Diluted EPS Guide">2026 EPS 增长指引</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="核心指标" data-i18n-en="KEY KPI">核心指标</span></div><div class="kpi-value mono" data-i18n-zh="5–8%" data-i18n-en="5–8%">5–8%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">H1'26 实际 +7.9% (恒定汇率)</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="2026 股票回购规模" data-i18n-en="2026 Share Buy-back">2026 股票回购规模</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="核心指标" data-i18n-en="KEY KPI">核心指标</span></div><div class="kpi-value mono" data-i18n-zh="£1.3B" data-i18n-en="£1.3B">£1.3B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">2024–2030 FCF 目标 >£500亿</p></div></div></section>
+    </div>
+
+ </main>
+ </div>
+
+ <script src="../../_shared/a9f4b3badb288e9f.js"></script>
+</body>
+</html>

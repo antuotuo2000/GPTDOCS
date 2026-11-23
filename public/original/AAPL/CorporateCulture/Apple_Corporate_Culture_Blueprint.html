@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="苹果公司 Apple Inc. (NASDAQ: AAPL) 企业文化与组织操作系统图谱：1997单一损益表革命、职能制集权、专家领导专家、DRI直接责任人、Apple University 极简审美与三代领导力演进（基于 HBR Podolny & Hansen 及 FY2026 财报）。" />
+  <title>苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承 | 数据中心</title>
+  
+  <link rel="stylesheet" href="../../_shared/b56ed99c64805243.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky Frosted Glass MUI AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">AAPL</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="../../index.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="苹果企业文化与组织操作系统图谱" data-i18n-en="Apple Organizational OS &amp; Culture Blueprint">苹果企业文化与组织操作系统图谱</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">SINGLE P&amp;L</span>
+        <span class="mui-chip mui-chip-violet mono hide-sm">HBR · Podolny &amp; Hansen</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索文化法则或高管…" aria-label="快速跳转模块" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <!-- Left Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="组织文化模块与站点导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-violet mono">AAPL · ORG OPERATING SYSTEM</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="苹果组织操作系统图谱" data-i18n-en="Apple Organizational OS">苹果组织操作系统图谱</div>
+        <p class="sidebar-subtitle" data-i18n-zh="1997单一损益表革命 × 职能制专家治企 × DRI直接责任人 × Apple University 毕加索极简教化" data-i18n-en="1997 Single-P&L Revolution × Experts Leading Experts × DRI Accountability × Apple University">1997单一损益表革命 × 职能制专家治企 × DRI直接责任人 × Apple University 毕加索极简教化</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="权力底座" data-i18n-en="Org Architecture">权力底座</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="职能制 · 唯一 P&amp;L" data-i18n-en="Functional · 1 P&amp;L">职能制 · 唯一 P&amp;L</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="FY26 编制 / 人均创收" data-i18n-en="Headcount / Rev/Emp">FY26 编制 / 人均创收</span>
+            <span class="sidebar-mini-val mono">16.7万 · $2.87M</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="问责机制" data-i18n-en="Accountability">问责机制</span>
+            <span class="sidebar-mini-val mono">DRI + Top 100 峰会</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与组织图谱目录">
+        <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="AAPL">
+          <div class="co-side-head">
+            <span class="co-side-title mono">AAPL · 04/14</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="Apple_Corporate_Culture_Analysis.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../Others/Apple_Corporate_Culture_Blueprint.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (14)" data-i18n-en="All (14)">全部 (14)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (2)" data-i18n-en="Company (2)">公司深度 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="CorporateCulture" data-i18n-zh="企业文化 (2)" data-i18n-en="CorporateCulture (2)">企业文化 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Other" data-i18n-zh="Other (1)" data-i18n-en="Other (1)">Other (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="hardware" data-i18n-zh="硬件产品 (8)" data-i18n-en="hardware (8)">硬件产品 (8)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../Company/Apple_Business_Model_Analysis.html" title="苹果公司 Apple Inc. (AAPL) 商业模式架构深度拆解"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 Apple Inc. (AAPL) 商业模式架构深度拆解" data-i18n-en="Apple Inc. Apple Inc. (AAPL) Business Model Deep DiveBreakdown">苹果公司 Apple Inc. (AAPL) 商业模式架构深度拆解</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="Company" href="../Company/Apple_Future_Horizon_2030_Blueprint.html" title="苹果公司 2026–2032 未来战略与新增长曲线观测站"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 2026–2032 未来战略与新增长曲线观测站" data-i18n-en="Apple Inc. 2026–2032 &amp;">苹果公司 2026–2032 未来战略与新增长曲线观测站</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="CorporateCulture" href="Apple_Corporate_Culture_Analysis.html" title="苹果公司 Apple Inc. (AAPL) 企业文化与组织架构深度研究报告"><span class="co-hub-ticker mono">03</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 Apple Inc. (AAPL) 企业文化与组织架构深度研究报告" data-i18n-en="Apple Inc. Apple Inc. (AAPL) Corporate Culture &amp; Org Architecture Deep Dive">苹果公司 Apple Inc. (AAPL) 企业文化与组织架构深度研究报告</span><span class="co-hub-meta mono">CorporateCulture</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="CorporateCulture" href="Apple_Corporate_Culture_Blueprint.html" title="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承"><span class="co-hub-ticker mono">04</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承" data-i18n-en="AppleCorporate Culture &amp;:, &amp;">苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承</span><span class="co-hub-meta mono">CorporateCulture</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="Other" href="../Others/Apple_Corporate_Culture_Blueprint.html" title="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承"><span class="co-hub-ticker mono">05</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承" data-i18n-en="AppleCorporate Culture &amp;:, &amp;">苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承</span><span class="co-hub-meta mono">Others</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../SeniorExecutive/Steve Jobs/steve_jobs_1955_2011_15.html" title="史蒂夫·乔布斯 Steve Jobs (1955–2011) 深度商业与产品战略研究报告"><span class="co-hub-ticker mono">06</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="史蒂夫·乔布斯 Steve Jobs (1955–2011) 深度商业与产品战略研究报告" data-i18n-en="Steve Jobs (1955–2011) Business &amp; Product Strategy Deep Dive">史蒂夫·乔布斯 Steve Jobs (1955–2011) 深度商业与产品战略研究报告</span><span class="co-hub-meta mono">SeniorExecutive/Steve Jobs</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../hardware/Apple_12_Products.single.html" title="Apple 苹果全产品线 12 大板块深度研报中枢（FY2026 $478.83B 全景拆解）"><span class="co-hub-ticker mono">07</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple 苹果全产品线 12 大板块深度研报中枢（FY2026 $478.83B 全景拆解）" data-i18n-en="Apple 12 Deep DiveReport (FY2026 $478.83B OverviewBreakdown)">Apple 苹果全产品线 12 大板块深度研报中枢（FY2026 $478.83B 全景拆解）</span><span class="co-hub-meta mono">hardware</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../hardware/Airpods/apple_airpods_h2.html" title="Apple AirPods 声学穿戴产品力、H2 计算音频与千亿商业模式深度研究报告"><span class="co-hub-ticker mono">08</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple AirPods 声学穿戴产品力、H2 计算音频与千亿商业模式深度研究报告" data-i18n-en="Apple AirPods, H2 &amp; 00MBusiness ModelDeep Dive Research Report">Apple AirPods 声学穿戴产品力、H2 计算音频与千亿商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/Airpods</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../hardware/Home/apple_home_homeview_ai.html" title="Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告"><span class="co-hub-ticker mono">09</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告" data-i18n-en="Apple Home, HomeView AI &amp; Business ModelDeep Dive Research Report">Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/Home</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../hardware/Vision_pro/apple_vision_pro_m5_r1_b2b.html" title="Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告"><span class="co-hub-ticker mono">10</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告" data-i18n-en="Apple Vision Pro, M5+R1 &amp; B2B Business ModelDeep Dive Research Report">Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/Vision_pro</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../hardware/Watch/apple_watch_iwatch.html" title="Apple Watch (iWatch) 智能手表产品力、医疗健康壁垒与单机经济深度研究报告"><span class="co-hub-ticker mono">11</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple Watch (iWatch) 智能手表产品力、医疗健康壁垒与单机经济深度研究报告" data-i18n-en="Apple Watch (iWatch), &amp; Deep Dive Research Report">Apple Watch (iWatch) 智能手表产品力、医疗健康壁垒与单机经济深度研究报告</span><span class="co-hub-meta mono">hardware/Watch</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../hardware/iPhone/Apple_iPhone_Strategy_Blueprint.html" title="苹果 iPhone 产品线工程与双波段定价战略图谱"><span class="co-hub-ticker mono">12</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果 iPhone 产品线工程与双波段定价战略图谱" data-i18n-en="Apple iPhone &amp;">苹果 iPhone 产品线工程与双波段定价战略图谱</span><span class="co-hub-meta mono">hardware/iPhone</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../hardware/iPhone/iPhone.html" title="苹果公司 Apple Inc. (NASDAQ: AAPL) &amp; iPhone 生态深度研究报告"><span class="co-hub-ticker mono">13</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 Apple Inc. (NASDAQ: AAPL) &amp; iPhone 生态深度研究报告" data-i18n-en="Apple Inc. Apple Inc. (NASDAQ: AAPL) &amp; iPhone Deep Dive Research Report">苹果公司 Apple Inc. (NASDAQ: AAPL) &amp; iPhone 生态深度研究报告</span><span class="co-hub-meta mono">hardware/iPhone</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../hardware/ipad/apple_ipad_oled.html" title="Apple iPad 平板产品力、串联 OLED 与搭售商业模式深度研究报告"><span class="co-hub-ticker mono">14</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple iPad 平板产品力、串联 OLED 与搭售商业模式深度研究报告" data-i18n-en="Apple iPad, OLED &amp; Business ModelDeep Dive Research Report">Apple iPad 平板产品力、串联 OLED 与搭售商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/ipad</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+        <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="组织架构图谱 (C0–C4)" data-i18n-en="Culture OS Modules (C0–C4)">组织架构图谱 (C0–C4)</div>
+        <ul class="mui-nav-list">
+          <li><a href="#sec-c0" class="mui-nav-link active"><span class="nav-idx mono">C0</span><span data-i18n-zh="单一P&amp;L拓扑与初创悖论" data-i18n-en="Single-P&amp;L Topology">单一P&amp;L拓扑与初创悖论</span></a></li>
+          <li><a href="#sec-c1" class="mui-nav-link"><span class="nav-idx mono">C1</span><span data-i18n-zh="四大文化基因与领导力罗盘" data-i18n-en="4 Cultural Codes &amp; Dial">四大文化基因与领导力罗盘</span></a></li>
+          <li><a href="#sec-c2" class="mui-nav-link"><span class="nav-idx mono">C2</span><span data-i18n-zh="三代治理演进时间轴工作台" data-i18n-en="3-Era Governance Timeline">三代治理演进时间轴工作台</span></a></li>
+          <li><a href="#sec-c3" class="mui-nav-link"><span class="nav-idx mono">C3</span><span data-i18n-zh="巨头组织基因光谱与人效战" data-i18n-en="Mega-Cap Org Genome">巨头组织基因光谱与人效战</span></a></li>
+          <li><a href="#sec-c4" class="mui-nav-link"><span class="nav-idx mono">C4</span><span data-i18n-zh="组织熵增模拟器与六律体检" data-i18n-en="Scaling Stress &amp; 6-Law Audit">组织熵增模拟器与六律体检</span></a></li>
+        </ul>
+      </nav>
+    
+</aside>
+
+    <!-- Main Bespoke Organizational OS Workspace -->
+    <main class="cc-workspace">
+
+      <!-- MODULE C0: TOPOLOGY HERO + INTERACTIVE SINGLE-P&L VS MULTI-P&L ORG SWITCHER -->
+      <section id="sec-c0" class="cc-hero-shell">
+        <div class="cc-hero-top">
+          <div>
+            <div class="cc-badge-row">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="世界最大初创公司 (World's Biggest Startup)" data-i18n-en="WORLD'S BIGGEST STARTUP">世界最大初创公司 (World's Biggest Startup)</span>
+              <span class="mui-chip mui-chip-success mono">营收较 1997 扩张逾 60 倍</span>
+              <span class="mui-chip mui-chip-violet mono">零事业部总经理制</span>
+            </div>
+
+            <h1 class="cc-h1" data-i18n-zh="苹果企业文化与组织操作系统：<span class='cc-grad'>为什么一家 $4,788亿 商业帝国仍拒绝设立事业部损益表？</span>" data-i18n-en="Apple's Cultural Operating System: <span class='cc-grad'>Why a $478.8B Empire Still Forbids Business-Unit P&amp;Ls</span>">
+              苹果企业文化与组织操作系统：<span class="cc-grad">为什么一家 $4,788亿 商业帝国仍拒绝设立事业部损益表？</span>
+            </h1>
+
+            <p class="cc-lead">
+              几乎所有跨过百亿美元营收门槛的现代跨国企业，都会自然演化为按产品线切割的<strong>“事业部总经理制（Multi-Division P&amp;L）”</strong>。但 1997 年史蒂夫·乔布斯重返濒临破产的苹果时，在<strong>同一天内解雇了全部事业部总经理</strong>，把整家公司合并进<strong>唯一一张损益表（Single P&amp;L）</strong>，并重构为按专业能力划分的<strong>职能制组织（Functional Organization）</strong>
+              <a class="cite-link" href="https://www.apple.com/careers/pdf/HBR_How_Apple_Is_Organized_For_Innovation-4.pdf" target="_blank" rel="noopener noreferrer">HBR · Podolny &amp; Hansen ↗</a>。
+              令人震撼的是，即便今天苹果营收高达 <strong>$4,788.3亿</strong>、全职员工达 <strong>16.7万人</strong>
+              <a class="cite-link" href="https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/" target="_blank" rel="noopener noreferrer">FY26 Q4 财报 ↗</a>，iPhone、Mac 或 AirPods 依然没有各自独立的财务损益表——全公司只有 CFO 掌握唯一一张财务报表，从制度根源上消灭了大企业“部门本位主义”与内部转移定价内耗。
+            </p>
+
+            <div class="cc-quote-Ribbon">
+              <strong>核心制度洞察（Joel Podolny · 前 Apple University 院长）：</strong>“将决策权赋予最有专业深度的人（Experts Leading Experts），而不是最懂看财务报表的通才总经理；当硬件、芯片、软件与工业设计不为各自部门利润率争抢地盘时，跨部门激烈辩论的唯一裁判标准就只剩下用户体验本身。”
+              <a class="cite-link" href="https://store.hbr.org/product/how-apple-is-organized-for-innovation/R2006F" target="_blank" rel="noopener noreferrer">HBR R2006F ↗</a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Org-Chart Topology Switcher -->
+          <div class="cc-topology-box">
+            <div class="cc-topo-head">
+              <strong style="font-size:0.84rem;" data-i18n-zh="组织权力拓扑对比沙盘" data-i18n-en="Org Power Topology Sandbox">组织权力拓扑对比沙盘</strong>
+              <div class="mui-segmented" id="topoSwitch">
+                <button type="button" class="mui-seg-btn active" data-topo="apple" data-i18n-zh="苹果：职能制 + 单一P&amp;L" data-i18n-en="Apple: Functional 1-P&amp;L">苹果：职能制 + 单一P&amp;L</button>
+                <button type="button" class="mui-seg-btn" data-topo="legacy" data-i18n-zh="传统巨头：事业部割据" data-i18n-en="Legacy: Siloed BU P&amp;Ls">传统巨头：事业部割据</button>
+              </div>
+            </div>
+
+            <div class="cc-topo-stage" id="topoStage">
+              <div class="cc-topo-hub mono">CEO (John Ternus) × CFO 唯一损益表池 ($478.8B)</div>
+              <div class="cc-topo-spokes">
+                <div class="cc-spoke"><b>芯片技术 SVP</b>Johny Srouji · A/M/C 硅片跨全品类无偿共享</div>
+                <div class="cc-spoke"><b>软件工程 SVP</b>Craig Federighi · 6大OS共享内核与端侧 AI</div>
+                <div class="cc-spoke"><b>硬件工程 SVP</b>全系结构/声学/光学相机模组统一攻坚</div>
+                <div class="cc-spoke"><b>工业与人机设计</b>Squircle 曲率与交互规范全局一票否决权</div>
+                <div class="cc-spoke"><b>服务生态 SVP</b>Eddy Cue · 零内耗预装 iCloud / Pay / Music</div>
+                <div class="cc-spoke"><b>全球运营/零售</b>Sabih Khan · 统一采购锁产能 + 540店零折扣</div>
+              </div>
+              <div class="cc-topo-outcome">
+                结果：相机团队不为自身利润惜售算法，Mac 主动配合 iPhone 连续互通，新品敢于自我革命（iPhone 吞噬 iPod）
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE C1: 2x2 CULTURAL OPERATING CODE BENTO + DISCRETIONARY LEADERSHIP DIAL -->
+      <section id="sec-c1" class="cc-panel">
+        <div class="cc-panel-head">
+          <div>
+            <span class="cc-kicker mono">MODULE C1 · FOUR CULTURAL OPERATING CODES &amp; DISCRETIONARY LEADERSHIP</span>
+            <h2 class="cc-h2" data-i18n-zh="四大文化底层代码与“审慎领导力”时间分配罗盘" data-i18n-en="4 Cultural Operating Codes & Discretionary Leadership Dial">四大文化底层代码与“审慎领导力”时间分配罗盘</h2>
+            <p class="cc-sub" data-i18n-zh="点击左侧任一文化象限，查看其内部运作铁律及对应的苹果副总裁/总监精力分配结构（源自 Apple University 高管课程）。" data-i18n-en="Click any quadrant to inspect its internal operating rule and VP/Director time allocation.">点击左侧任一文化象限，查看其内部运作铁律及对应的苹果副总裁/总监精力分配结构（源自 Apple University 高管课程）。</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击象限切换解析 (Q1–Q4)" data-i18n-en="Interactive 2×2 Matrix">点击象限切换解析 (Q1–Q4)</span>
+        </div>
+
+        <div class="cc-code-layout">
+          <div class="cc-quad-grid" id="quadGrid">
+            <button type="button" class="cc-quad-card active" data-quad="0">
+              <div>
+                <div class="cc-quad-top"><span class="cc-quad-num mono">Q1</span><span class="mui-chip mui-chip-primary mono">EXPERTS LEADING EXPERTS</span></div>
+                <h3>专家领导专家 &amp; 沉浸魔鬼细节</h3>
+                <p>苹果高管必须是所在领域的顶级技术权威：相机团队负责人必须是计算摄影专家而非职业经理人；甚至连圆角矩形都拒绝普通圆弧而强制采用曲率连续的“超椭圆（Squircle）”以消除反光突变。</p>
+              </div>
+              <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表案例：超椭圆圆角 · 超过 40 轮金属阳极氧化打样 →</span>
+            </button>
+
+            <button type="button" class="cc-quad-card" data-quad="1">
+              <div>
+                <div class="cc-quad-top"><span class="cc-quad-num mono">Q2</span><span class="mui-chip mui-chip-success mono">DRI &amp; TOP 100</span></div>
+                <h3>DRI 直接责任人 &amp; 秘密百人峰会</h3>
+                <p>任何跨部门会议议程的每个事项旁必须写明唯一一个名字——DRI（Directly Responsible Individual），杜绝委员会集体推诿；每年机密 Top 100 峰会跨职级选拔核心贡献者直通战略核心。</p>
+              </div>
+              <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表案例：MobileMe 问责重组并蜕变为 15亿订阅 iCloud →</span>
+            </button>
+
+            <button type="button" class="cc-quad-card" data-quad="2">
+              <div>
+                <div class="cc-quad-top"><span class="cc-quad-num mono">Q3</span><span class="mui-chip mui-chip-warning mono">RADICAL FOCUS</span></div>
+                <h3>残酷减法哲学 &amp; 物理级保密室</h3>
+                <p>“决定不做什么，与决定做什么同样重要。”16.7万名员工仅聚焦不足 30 款在售核心硬件，每条主力产品线年均产出逾百亿美元，配合黑布遮盖与分级门禁守住首发惊喜。</p>
+              </div>
+              <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表案例：1997 砍掉 70% 杂乱机型 · 主动终结高投入造车项目 →</span>
+            </button>
+
+            <button type="button" class="cc-quad-card" data-quad="3">
+              <div>
+                <div class="cc-quad-top"><span class="cc-quad-num mono">Q4</span><span class="mui-chip mui-chip-violet mono">APPLE UNIVERSITY</span></div>
+                <h3>Apple University 毕加索公牛教化</h3>
+                <p>2008 年由乔布斯亲手创立并礼聘耶鲁商学院院长 Joel Podolny 执掌，不教财务建模，而是用毕加索《公牛》11 幅石版画拆解“如何剥离冗余直至神韵本质”，让基因跨越创始人生命周期。</p>
+              </div>
+              <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表案例：78键谷歌电视遥控器 vs 3键 Apple TV 遥控器教学案 →</span>
+            </button>
+          </div>
+
+          <!-- Right: Podolny & Hansen Discretionary Leadership Dial -->
+          <div class="cc-dial-card" id="dialInspector">
+            <div>
+              <span class="mui-chip mui-chip-violet mono" id="dialBadge">HBR · DISCRETIONARY LEADERSHIP MODEL</span>
+              <h3 id="dialTitle" style="font-size:1.03rem;font-weight:800;margin:8px 0 6px;">专家治企三大硬指标：深度专业 × 细节沉浸 × 协同辩论</h3>
+              <p id="dialDesc" style="font-size:0.81rem;color:var(--text-secondary);line-height:1.65;">
+                据 Podolny 与 Hansen 在《哈佛商业评论》披露，当苹果规模扩大 40–60 倍后，VP 与总监无法再亲历每一颗螺丝，因此进化出<strong>“审慎领导力模型（Discretionary Leadership）”</strong>——动态分配在核心亲抓（Owning）、新知深潜（Learning）、方法传授（Teaching）与授权下放（Delegating）上的时间权重
+                <a class="cite-link" href="https://www.apple.com/careers/pdf/HBR_How_Apple_Is_Organized_For_Innovation-4.pdf" target="_blank" rel="noopener noreferrer">HBR 原文 ↗</a>。
+              </p>
+            </div>
+
+            <div class="cc-alloc-bars">
+              <div class="cc-alloc-row">
+                <div class="cc-alloc-lbl"><span>Owning（核心高价值细节亲自拍板）</span><span class="mono" id="pctOwn">40%</span></div>
+                <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barOwn" style="width:40%;background:#0073E6;"></div></div>
+              </div>
+              <div class="cc-alloc-row">
+                <div class="cc-alloc-lbl"><span>Learning（跨入端侧 AI / 折叠铰链等新专业域）</span><span class="mono" id="pctLearn">30%</span></div>
+                <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barLearn" style="width:30%;background:#7C3AED;"></div></div>
+              </div>
+              <div class="cc-alloc-row">
+                <div class="cc-alloc-lbl"><span>Teaching（通过评审会向下一梯队传授审美标准）</span><span class="mono" id="pctTeach">15%</span></div>
+                <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barTeach" style="width:15%;background:#16A34A;"></div></div>
+              </div>
+              <div class="cc-alloc-row">
+                <div class="cc-alloc-lbl"><span>Delegating（成熟常规模块彻底放权给一线 DRI）</span><span class="mono" id="pctDel">15%</span></div>
+                <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barDel" style="width:15%;background:#D97706;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE C2: 3-ERA LEADERSHIP TIMELINE SCRUBBER & REVENUE-PER-EMPLOYEE CANVAS -->
+      <section id="sec-c2" class="cc-panel">
+        <div class="cc-panel-head">
+          <div>
+            <span class="cc-kicker mono">MODULE C2 · THREE-GENERATION CULTURAL EVOLUTION (1997–2026+)</span>
+            <h2 class="cc-h2" data-i18n-zh="三代最高统帅的文化演进：从“海盗拯救者”到“跨半世纪制度机器”" data-i18n-en="Three-Era Leadership Evolution: From Pirate Rebel to Institutional Machine">三代最高统帅的文化演进：从“海盗拯救者”到“跨半世纪制度机器”</h2>
+            <p class="cc-sub" data-i18n-zh="切换三代管理纪元，对比组织治理重心如何在保留“单一损益表职能制”底座的同时完成自我迭代。" data-i18n-en="Scrub across Apple's three post-1997 leadership eras to inspect governance continuity and evolution.">切换三代管理纪元，对比组织治理重心如何在保留“单一损益表职能制”底座的同时完成自我迭代。</p>
+          </div>
+        </div>
+
+        <div class="cc-era-tabs" id="eraTabs">
+          <button type="button" class="cc-era-tab" data-era="0">
+            <span class="cc-era-yr mono">ERA I · 1997 – 2011</span>
+            <span class="cc-era-leader">史蒂夫·乔布斯 Steve Jobs</span>
+            <span class="cc-era-tag">废除事业部 · 2×2 聚焦 · 奠定 DRI 与苹果大学</span>
+          </button>
+          <button type="button" class="cc-era-tab" data-era="1">
+            <span class="cc-era-yr mono">ERA II · 2011 – 2026.08</span>
+            <span class="cc-era-leader">蒂姆·库克 Tim Cook</span>
+            <span class="cc-era-tag">供应链零库存交响乐 · Apple Silicon 独立 · 服务破千亿</span>
+          </button>
+          <button type="button" class="cc-era-tab active" data-era="2">
+            <span class="cc-era-yr mono">ERA III · 2026.09+ 新纪元</span>
+            <span class="cc-era-leader">约翰·特努斯 John Ternus</span>
+            <span class="cc-era-tag">纯血硬件工程统帅接棒 · 折叠机破局与端侧 Siri AI</span>
+          </button>
+        </div>
+
+        <div class="cc-split-66">
+          <div class="cc-subbox" id="eraCard">
+            <div>
+              <span class="mui-chip mui-chip-primary mono" id="eraBadge">ERA III · ENGINEERING-LED AI &amp; FORM-FACTOR RENAISSANCE</span>
+              <h3 id="eraTitle" style="font-size:1.05rem;font-weight:800;margin:8px 0;">约翰·特努斯时代（库克转任执行董事长）：老兵回归产品工程第一性原理</h3>
+              <p id="eraDesc" style="font-size:0.84rem;color:var(--text-secondary);line-height:1.72;">
+                在库克掌舵 15 年将苹果推上 $5万亿市值后，深耕苹果硬件工程逾二十年、主导过 iPad、Mac 向 Apple Silicon 迁移及 iPhone 架构重构的 John Ternus 接任 CEO。这一交接本身就是<strong>“专家领导专家”文化的最高加冕</strong>：在端侧 AI 算力重构、首款折叠机 iPhone Duo 与触控 Mac 破局的关键十年，最高决策权重新回到最懂硅片、结构与工业工程的产品老兵手中
+                <a class="cite-link" href="https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/" target="_blank" rel="noopener noreferrer">FY26 Q4 财报 ↗</a>。
+              </p>
+            </div>
+            <div class="cc-era-kpis" id="eraKpis">
+              <div class="cc-era-kpi"><b class="mono">$478.83B</b><span>FY2026 历史新高总营收</span></div>
+              <div class="cc-era-kpi"><b class="mono">$2.87M / 人</b><span>16.7万全职员工超高人效</span></div>
+              <div class="cc-era-kpi"><b class="mono">48.8%</b><span>全栈自研推升综合毛利率</span></div>
+              <div class="cc-era-kpi"><b class="mono">600+ 硬件团队</b><span>跨芯片/相机/材料无孤岛会战</span></div>
+            </div>
+          </div>
+
+          <div class="cc-subbox">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+              <strong style="font-size:0.92rem;">组织规模化奇迹：人效跃迁与跨部门协同红利</strong>
+              <div class="mui-segmented" id="eChartTabs">
+                <button type="button" class="mui-seg-btn active" data-eview="revemp" data-i18n-zh="人均创收跃迁" data-i18n-en="Rev / Employee">人均创收跃迁</button>
+                <button type="button" class="mui-seg-btn" data-eview="rd" data-i18n-zh="研发杠杆转化" data-i18n-en="R&amp;D Leverage">研发杠杆转化</button>
+              </div>
+            </div>
+            <div class="cc-canvas-wrap">
+              <canvas id="eraCanvas"></canvas>
+            </div>
+            <p style="font-size:0.75rem;color:var(--text-muted);">
+              注：尽管员工数从 1997 年不足万人增至 16.7 万人（含零售店团队），人均创收仍高达 <strong>$287万美元</strong>；若剔除直营零售店编制、仅按研发与总部人员测算，核心工程人效超过 $500万/人
+              <a class="cite-link" href="https://fortune.com/article/how-apple-works-inside-the-worlds-biggest-startup/" target="_blank" rel="noopener noreferrer">Fortune 深度调查 ↗</a>。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE C3: MEGA-CAP CULTURAL GENOME ARENA & YIN-YANG CONTRASTS -->
+      <section id="sec-c3" class="cc-panel">
+        <div class="cc-panel-head">
+          <div>
+            <span class="cc-kicker mono">MODULE C3 · GLOBAL TECH &amp; COMPOUNDER CULTURAL GENOME</span>
+            <h2 class="cc-h2" data-i18n-zh="全球商业巨头组织基因光谱：集权协同 vs 事业部矩阵 vs 极端分权" data-i18n-en="Global Mega-Cap Cultural Genome: Functional Synergy vs Divisional vs Decentralization">全球商业巨头组织基因光谱：集权协同 vs 事业部矩阵 vs 极端分权</h2>
+            <p class="cc-sub" data-i18n-zh="商业史上不存在唯一正确的组织模板，关键在于组织权力结构是否与商业模式的 SKU 宽度和耦合深度严丝合缝。" data-i18n-en="Organizational architecture must match product coupling depth and SKU breadth.">商业史上不存在唯一正确的组织模板，关键在于组织权力结构是否与商业模式的 SKU 宽度和耦合深度严丝合缝。</p>
+          </div>
+          <div class="mui-segmented" id="gChartTabs">
+            <button type="button" class="mui-seg-btn active" data-gview="emp" data-i18n-zh="人均创收对比 ($M)" data-i18n-en="Rev / Employee ($M)">人均创收对比 ($M)</button>
+            <button type="button" class="mui-seg-btn" data-gview="opm" data-i18n-zh="综合毛利率对比 (%)" data-i18n-en="Gross Margin (%)">综合毛利率对比 (%)</button>
+          </div>
+        </div>
+
+        <div class="cc-split-75">
+          <div class="cc-subbox">
+            <div class="cc-canvas-wrap" style="height:300px;">
+              <canvas id="genomeCanvas"></canvas>
+            </div>
+            <p style="font-size:0.75rem;color:var(--text-muted);">
+              观察结论：坚持<strong>“无事业部割据 + 软硬全栈耦合”</strong>的两大科技巨头——<strong>NVIDIA</strong>（黄仁勋约 60 名高管扁平直报）与 <strong>Apple</strong>（单一 P&amp;L 职能集权）——双双创下硬科技领域最高的人均创收与现金流利润率。
+            </p>
+          </div>
+
+          <div class="cc-duel-list">
+            <div class="cc-duel-card">
+              <h4><span>苹果 vs 伯克希尔：人类商业史的“阴阳两极”</span><span class="mui-chip mui-chip-primary mono">集权协同 vs 联邦自治</span></h4>
+              <p>巴菲特的伯克希尔旗下铁路、保险、糖果互不关联，因此采取“总部27人极端放权 + 独立子账本”；而苹果的芯片、OS 与云服务必须毫秒级咬合，因此必须采取“极端中心化职能协同 + 唯一损益表”——两者恰是各自商业形态的最优解。</p>
+            </div>
+            <div class="cc-duel-card">
+              <h4><span>苹果 vs 亚马逊：为什么苹果不能学“双披萨团队”？</span><span class="mui-chip mui-chip-warning mono">深度耦合 vs 解耦 API</span></h4>
+              <p>亚马逊电商与 AWS 拥有数百万 SKU 与数百项微服务，必须靠自治小团队（Two-Pizza Teams）独立迭代；而苹果若把相机、电池与主板拆成独立自负盈亏的小组，机身内部 0.1 毫米的空间妥协将永远无法达成。</p>
+            </div>
+            <div class="cc-duel-card">
+              <h4><span>苹果 vs 英伟达：同为全栈职能制，唯一分野在“保密”</span><span class="mui-chip mui-chip-violet mono">隔舱保密 vs 全员透明</span></h4>
+              <p>英伟达通过全员可见的“Top-5 邮件”实现光速信息广播；苹果则因面向全球数十亿大众消费者、防止提前泄密冻结当季购机需求（奥斯本效应），演化出严格的物理隔舱保密文化。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cc-table-wrap">
+          <table class="cc-table">
+            <thead>
+              <tr>
+                <th>标杆企业</th>
+                <th>组织架构范式</th>
+                <th>核心文化信条</th>
+                <th>员工规模与人效</th>
+                <th>组织适配边界与潜在暗礁</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-apple">
+                <td><strong>Apple (AAPL)</strong></td>
+                <td>职能制集权 + 全公司唯一 P&amp;L</td>
+                <td>专家领导专家 · DRI 问责 · 极致减法</td>
+                <td class="mono">16.7万人 · $2.87M/人</td>
+                <td>极度依赖顶层品味与精简 SKU；一旦战线过宽易引发高管协调拥堵</td>
+              </tr>
+              <tr>
+                <td><strong>NVIDIA (NVDA)</strong></td>
+                <td>超扁平蛛网职能制 (~60直报CEO)</td>
+                <td>无事业部墙 · Top-5 直通邮件 · 光速执行</td>
+                <td class="mono">~4.2万人 · ~$5.14M/人</td>
+                <td>算力软硬一体效率登峰造极；对创始人个人精力带宽要求极高</td>
+              </tr>
+              <tr>
+                <td><strong>Microsoft (MSFT)</strong></td>
+                <td>三大业务集团事业部矩阵</td>
+                <td>成长型思维 (Growth Mindset) · 开放结盟</td>
+                <td class="mono">~22.3万人 · ~$1.49M/人</td>
+                <td>适合覆盖企业软件百花齐放；消费硬件与系统原生融合度弱于苹果</td>
+              </tr>
+              <tr>
+                <td><strong>Amazon (AMZN)</strong></td>
+                <td>解耦服务化 + 双披萨自治团队</td>
+                <td>Day 1 客户痴迷 · 六页纸叙事备忘录</td>
+                <td class="mono">~155万人(含履约)</td>
+                <td>横向孵化新业务（AWS/广告）能力极强；跨部门终端体验偶有割裂</td>
+              </tr>
+              <tr>
+                <td><strong>Berkshire (BRK)</strong></td>
+                <td>27人总部 + 60+子公司极端分权</td>
+                <td>声誉铁律 · 经营权下放 + 资本权集中</td>
+                <td class="mono">~39万人 (子公司自治)</td>
+                <td>零总部官僚摩擦；不适用于需要跨子公司联合研发底层技术的行业</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- MODULE C4: ORGANIZATIONAL ENTROPY SIMULATOR & 6-LAW DIAGNOSTIC CHECKLIST -->
+      <section id="sec-c4" class="cc-panel">
+        <div class="cc-panel-head">
+          <div>
+            <span class="cc-kicker mono">MODULE C4 · SCALING BOTTLENECK SIMULATOR &amp; 6-LAW HEALTH AUDIT</span>
+            <h2 class="cc-h2" data-i18n-zh="职能制规模化瓶颈推演器与“苹果组织六律”自检清单" data-i18n-en="Functional-Org Bottleneck Simulator & 6-Law Cultural Audit">职能制规模化瓶颈推演器与“苹果组织六律”自检清单</h2>
+            <p class="cc-sub" data-i18n-zh="验证为什么苹果必须死守“少而精 SKU”与“专家型高管”——拖动滑块观察战线膨胀对苹果协同效率的冲击。" data-i18n-en="Simulate how SKU sprawl or generalist management impacts Apple's functional synergy.">验证为什么苹果必须死守“少而精 SKU”与“专家型高管”——拖动滑块观察战线膨胀对苹果协同效率的冲击。</p>
+          </div>
+          <span class="mui-chip mui-chip-success mono" id="auditScoreChip">文化自检核验：0 / 6 项</span>
+        </div>
+
+        <div class="cc-split-57">
+          <div class="cc-subbox">
+            <div class="cc-sliders">
+              <div class="cc-slider-item">
+                <div class="cc-slider-lbl"><span>在售硬件产品线数量 (Hero SKU Lines)</span><b class="mono" id="valSkus">26 款 (极简区)</b></div>
+                <input type="range" id="rngSkus" min="15" max="120" step="5" value="26" />
+              </div>
+              <div class="cc-slider-item">
+                <div class="cc-slider-lbl"><span>专家型领导占比 (Domain Expert Ratio)</span><b class="mono" id="valExp">90%</b></div>
+                <input type="range" id="rngExp" min="35" max="95" step="5" value="90" />
+              </div>
+              <div class="cc-slider-item">
+                <div class="cc-slider-lbl"><span>跨职能会签拥堵度 (Cross-SVP Bottleneck)</span><b class="mono" id="valLag">18% (低摩擦)</b></div>
+                <input type="range" id="rngLag" min="10" max="75" step="5" value="18" />
+              </div>
+            </div>
+
+            <div class="cc-sim-scores">
+              <div class="cc-sim-score"><b class="mono" id="outSynergy">93 / 100</b><span>软硬芯耦合度</span></div>
+              <div class="cc-sim-score"><b class="mono" id="outVelocity">88 / 100</b><span>跨部门拍板速度</span></div>
+              <div class="cc-sim-score"><b class="mono" id="outGmPrem">+11.8pp</b><span>文化溢价毛利贡献</span></div>
+            </div>
+
+            <div class="cc-canvas-wrap" style="height:155px;">
+              <canvas id="entropyCanvas"></canvas>
+            </div>
+          </div>
+
+          <div class="cc-subbox">
+            <strong style="font-size:0.92rem;">苹果企业文化持续性跟踪核查表（点击勾选自动保存状态）</strong>
+            <div class="cc-audit-list" id="cultureAuditList">
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c1" />
+                <div><b>1. 唯一损益表防线未破</b><span>硬件、芯片、软件团队是否仍无独立部门利润考核，杜绝内部结算墙？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c2" />
+                <div><b>2. 最高层专家型血统延续</b><span>CEO（John Ternus）与核心 SVP 是否均为一线深耕数十年的硬核技术权威？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c3" />
+                <div><b>3. 敢于砍掉高沉没成本庸作</b><span>面对无法建立体验代差的项目（如整车制造），能否果断止损抽调算力转向 AI？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c4" />
+                <div><b>4. DRI 单点问责清零推诿</b><span>Siri AI 重构与折叠屏良率攻坚是否明确唯一 DRI 负责人而非联席委员会？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c5" />
+                <div><b>5. 保密传统与开源 AI 人才平衡</b><span>在维持未发布硬件机密性的同时，能否为顶尖大模型研究员提供论文发表空间？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c6" />
+                <div><b>6. 自我颠覆勇气（iPad/Touch Mac）</b><span>是否依然允许新形态产品（iPhone Duo 折叠机、触控 Mac）主动侵蚀存量产品线？</span></div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIMARY SOURCES -->
+      <section class="cc-panel" aria-label="权威学术与商业文献信源">
+        <div class="cc-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+          <div>
+            <span class="cc-kicker mono">VERIFIED PRIMARY LITERATURE &amp; FILINGS</span>
+            <h2 class="cc-h2" data-i18n-zh="权威管理学文献、官方财报与深度调查信源" data-i18n-en="Verified Academic Papers, Official Filings & Investigative Sources">权威管理学文献、官方财报与深度调查信源</h2>
+          </div>
+        </div>
+        <div class="cc-sources-grid">
+          <a class="cc-source-card" href="https://www.apple.com/careers/pdf/HBR_How_Apple_Is_Organized_For_Innovation-4.pdf" target="_blank" rel="noopener noreferrer">
+            <b>HBR: How Apple Is Organized for Innovation (PDF) ↗</b>
+            <span>Joel M. Podolny &amp; Morten T. Hansen 权威论文：单一损益表、专家领导专家、Squircle 圆角与审慎领导力模型</span>
+          </a>
+          <a class="cc-source-card" href="https://store.hbr.org/product/how-apple-is-organized-for-innovation/R2006F" target="_blank" rel="noopener noreferrer">
+            <b>Harvard Business Review R2006F Archive ↗</b>
+            <span>1997 年乔布斯一日裁撤全部事业部总经理及营收规模扩张逾 40 倍后的组织演进研究</span>
+          </a>
+          <a class="cc-source-card" href="https://fortune.com/article/how-apple-works-inside-the-worlds-biggest-startup/" target="_blank" rel="noopener noreferrer">
+            <b>Fortune: Inside the World's Biggest Startup ↗</b>
+            <span>首次完整披露苹果内部 DRI（直接责任人）、Top 100 机密峰会、MobileMe 问责整顿与“说不的权力”</span>
+          </a>
+          <a class="cc-source-card" href="https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/" target="_blank" rel="noopener noreferrer">
+            <b>Apple FY2026 Q4 &amp; Annual Financial Release ↗</b>
+            <span>FY2026 创纪录营收、六大操作系统协同生态及全新 Siri AI 与触控 Mac 产品线官方声明</span>
+          </a>
+          <a class="cc-source-card" href="https://www.apple.com/newsroom/2026/01/apple-reports-first-quarter-results/" target="_blank" rel="noopener noreferrer">
+            <b>Apple FY2026 Q1 Installed Base Milestone ↗</b>
+            <span>全球 25 亿+ 活跃设备基数与用户满意度/忠诚度创历史新高官方披露</span>
+          </a>
+          <a class="cc-source-card" href="https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm" target="_blank" rel="noopener noreferrer">
+            <b>Apple Inc. SEC Form 10-K Human Capital &amp; Org Filing ↗</b>
+            <span>全职员工构成、研发投入强度及组织治理风险因素法定披露</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../../_shared/e8852455780a3584.js"></script>
+</body>
+</html>

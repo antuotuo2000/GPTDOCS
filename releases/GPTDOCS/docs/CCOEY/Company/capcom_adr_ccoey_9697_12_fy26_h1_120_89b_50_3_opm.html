@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>卡普空 Capcom (ADR: CCOEY / 9697) 全产品与服务 12 大板块深度研报中枢（FY26 H1 ¥120.89B · 50.3% OPM 全景拆解）</title>
+  <meta name="description" content="CAPCOM CO., LTD. (ADR: CCOEY / TYO: 9697) 全系列 12 大产品与服务板块深度商业研报中枢（FY2025 ¥195.37B、H1 FY2026 ¥120.89B +49.0% YoY、50.3% 营业利润率）：覆盖生化危机、怪物猎人、街头霸王、鬼泣、经典合集、新/复兴 IP、RE ENGINE、数字目录、街机门店、智能柏青嫂、全球电竞与影视授权。" />
+  <script src="../../_shared/0bbd482927ad79b5.js"></script>
+  <link rel="stylesheet" href="../../_shared/3d809ba4d5c8ffd6.css">
+  
+  
+  <link rel="stylesheet" href="../../_shared/449f6527706d5467.css">
+
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky MUI High-Clarity AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span id="appbarMonogram" class="brand-monogram mono">RE</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+          <a class="crumb-link hide-sm" href="../../index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg><span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span></a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="01 · 生化危机全系矩阵（Requiem · RE4R · RE2R · Village）" data-i18n-en="01 · Resident Evil Franchise (Requiem · RE4R · RE2R · Village)">01 · 生化危机全系矩阵（Requiem · RE4R · RE2R · Village）</span>
+        </nav>
+        <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="系列累计 218.0M 套 (#1)" data-i18n-en="218.0M Cumulative Units (#1)">系列累计 218.0M 套 (#1)</span>
+        <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="Requiem 8.51M · 利润压舱石" data-i18n-en="Requiem 8.51M · Profit Anchor">Requiem 8.51M · 利润压舱石</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换卡普空产品…" aria-label="快速跳转章节或产品线" data-ph-zh="检索章节或切换卡普空产品…" data-ph-en="Jump to section or Capcom pillar…" data-aria-zh="快速跳转章节或板块" data-aria-en="Quick jump to chapter or Capcom pillar" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Centered Shell -->
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Navigation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">CAPCOM CORE · #1 IP ENGINE</span>
+        </div>
+        <div class="sidebar-title" id="sideCardTitle" data-i18n-zh="01 · 生化危机 (Resident Evil)" data-i18n-en="01 · Resident Evil Series">01 · 生化危机 (Resident Evil)</div>
+        <p id="sideCardSub" class="sidebar-sub" data-i18n-zh="累计 2.18 亿套全球第一恐怖动作 IP × Requiem 五天破 500 万套 × 重制版长尾现金牛" data-i18n-en="218M cumulative units × Requiem 5M in 5 days (8.51M by Sep 2026) × Remake catalog cash cow">累计 2.18 亿套全球第一恐怖动作 IP × Requiem 五天破 500 万套 × 重制版长尾现金牛</p>
+
+        <div class="sidebar-mini-kpis" id="sideMiniKpis">
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="系列累计总销量 (至26Q2)" data-i18n-en="Series Cumulative Sales">系列累计总销量 (至26Q2)</span><span class="sidebar-mini-val mono" data-i18n-zh="218.0M 套" data-i18n-en="218.0M Units">218.0M 套</span></div>
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="新作 Requiem 销量" data-i18n-en="RE Requiem Sales">新作 Requiem 销量</span><span class="sidebar-mini-val mono" data-i18n-zh="8.51M 套" data-i18n-en="8.51M Units">8.51M 套</span></div>
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="白金榜主力重制/正统作" data-i18n-en="Top Remake/Mainline">白金榜主力重制/正统作</span><span class="sidebar-mini-val mono" data-i18n-zh="RE2R 20.38M" data-i18n-en="RE2R 20.38M">RE2R 20.38M</span></div>
+        </div>
+      </div>
+
+      <!-- Unified MUI Navigation Card: Site Portal Nav + Report TOC -->
+      <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Site Links &amp; Table of Contents">
+        <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="CCOEY">
+          <div class="co-side-head">
+            <span class="co-side-title mono">CCOEY · 01/01</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="capcom_adr_ccoey_9697_12_fy26_h1_120_89b_50_3_opm.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="capcom_adr_ccoey_9697_12_fy26_h1_120_89b_50_3_opm.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (1)" data-i18n-en="All (1)">全部 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="capcom_adr_ccoey_9697_12_fy26_h1_120_89b_50_3_opm.html" title="卡普空 Capcom (ADR: CCOEY / 9697) 全产品与服务 12 大板块深度研报中枢（FY26 H1 ¥120.89B · 50.3% OPM 全景拆解）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="卡普空 Capcom (ADR: CCOEY / 9697) 全产品与服务 12 大板块深度研报中枢（FY26 H1 ¥120.89B · 50.3% OPM 全景拆解）" data-i18n-en="Capcom (ADR: CCOEY / 9697) &amp; 12 Deep DiveReport (FY26 H1 ¥120.89B · 50.3% OPM OverviewBreakdown)">卡普空 Capcom (ADR: CCOEY / 9697) 全产品与服务 12 大板块深度研报中枢（FY26 H1 ¥120.89B · 50.3% OPM 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+        <div class="nav-divider"></div>
+
+        <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary &amp; KPIs">执行摘要与核心指标</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="生化危机产品矩阵与技术底座" data-i18n-en="Resident Evil Lineup &amp; Tech Stack">生化危机产品矩阵与技术底座</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大竞争支柱与五维雷达" data-i18n-en="4 Moat Pillars &amp; 5-Axis Radar">四大竞争支柱与五维雷达</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="内部阶梯与全球竞品横向对比" data-i18n-en="Internal Tier &amp; Global Benchmarks">内部阶梯与全球竞品横向对比</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="单品经济学与长尾复利模拟" data-i18n-en="Unit Economics &amp; Catalog Sim">单品经济学与长尾复利模拟</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="代际演进与2026标志性战役" data-i18n-en="Roadmap &amp; 2026 Milestones">代际演进与2026标志性战役</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="商业护城河核查清单" data-i18n-en="Moat Verification Checklist">商业护城河核查清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="官方财报与销量信源索引" data-i18n-en="IR Filings &amp; Source Index">官方财报与销量信源索引</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Compact MUI Page Utility Controls -->
+      
+    </aside>
+
+    <!-- Main Analytical Content -->
+    <main class="main-content">
+      <!-- Capcom Product Switcher -->
+      <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="卡普空12大全系列产品与服务切换台">
+        <div class="ip-hub-top">
+          <div class="ip-hub-title-group">
+            <span class="mui-chip mui-chip-primary mono">CAPCOM (ADR: CCOEY / 9697) 12-PILLAR PORTFOLIO</span>
+            <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="卡普空 Capcom 全系列 12 大产品与服务板块深度研报中枢（100% 覆盖核心游戏 IP · RE ENGINE 与数字发行 · 街机柏青嫂与电竞影视）" data-i18n-en="Capcom Co., Ltd. (ADR: CCOEY) 12-Pillar Monograph Hub (100% Coverage Across Game IPs, RE ENGINE/Digital &amp; Offline/Media)">卡普空 Capcom 全系列 12 大产品与服务板块深度研报中枢（100% 覆盖核心游戏 IP · RE ENGINE 与数字发行 · 街机柏青嫂与电竞影视）</span>
+          </div>
+          <div class="ip-hub-controls">
+            <button type="button" id="prevIpBtn" class="mui-btn" title="切换至上一板块 (快捷键 [)" data-title-zh="切换至上一板块 (快捷键 [)" data-title-en="Previous Pillar (Shortcut [)">
+              <span>←</span> <span data-i18n-zh="上一板块" data-i18n-en="Prev">上一板块</span>
+            </button>
+            <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一板块 (快捷键 ])" data-title-zh="切换至下一板块 (快捷键 ])" data-title-en="Next Pillar (Shortcut ])">
+              <span data-i18n-zh="下一板块" data-i18n-en="Next">下一板块</span> <span>→</span>
+            </button>
+            <a id="openCapcomIrLink" href="https://www.capcom.co.jp/ir/english/finance/review.html" target="_blank" rel="noopener noreferrer" class="mui-btn mui-btn-primary" style="text-decoration:none;" title="打开 Capcom 官方 IR 财务数据中心" data-title-zh="打开 Capcom 官方 IR 财务数据中心" data-title-en="Open Capcom Official IR Finance Review"><span data-i18n-zh="Capcom 官方财报 ↗" data-i18n-en="Capcom IR Filings ↗">Capcom 官方财报 ↗</span></a>
+            
+          </div>
+        </div>
+
+        <div class="hub-summary-strip">
+          <div class="hub-sum-item">
+            <span class="hub-sum-lbl mono" data-i18n-zh="FY2025 营收 / H1 FY26 半年" data-i18n-en="FY25 Sales / H1 FY26 6M">FY2025 营收 / H1 FY26 半年</span>
+            <span class="hub-sum-val mono">¥195.37B / ¥120.89B (+49%)</span>
+          </div>
+          <div class="hub-sum-item">
+            <span class="hub-sum-lbl mono" data-i18n-zh="数字内容 OPM / 数字化率" data-i18n-en="Digital OPM / Digital Mix">数字内容 OPM / 数字化率</span>
+            <span class="hub-sum-val mono">61.4% OPM · 93.0% 数字</span>
+          </div>
+          <div class="hub-sum-item">
+            <span class="hub-sum-lbl mono" data-i18n-zh="H1 FY26 营业利润 / 净利率" data-i18n-en="H1 FY26 OP / Group OPM">H1 FY26 营业利润 / 净利率</span>
+            <span class="hub-sum-val mono">¥60.77B · 50.3% OPM</span>
+          </div>
+          <div class="hub-sum-item">
+            <span class="hub-sum-lbl mono" data-i18n-zh="FY26F 全年预期 / ADR (CCOEY)" data-i18n-en="FY26F Guidance / ADR (CCOEY)">FY26F 全年预期 / ADR (CCOEY)</span>
+            <span class="hub-sum-val mono">¥210.0B · $13.93 ($11.85B)</span>
+          </div>
+        </div>
+
+        <div class="hub-cat-bar">
+          <div class="hub-cat-pills" role="tablist" aria-label="卡普空产品与服务大类筛选">
+            <button type="button" class="hub-cat-btn active" data-cat-filter="all" data-i18n-zh="全部 12 大板块" data-i18n-en="All 12 Pillars">全部 12 大板块</button>
+            <button type="button" class="hub-cat-btn" data-cat-filter="core_ip" data-i18n-zh="核心游戏 IP 矩阵 (01–06)" data-i18n-en="Core Game IPs (01–06)">核心游戏 IP 矩阵 (01–06)</button>
+            <button type="button" class="hub-cat-btn" data-cat-filter="tech_digital" data-i18n-zh="自研引擎与数字发行 (07–08)" data-i18n-en="RE ENGINE &amp; Digital (07–08)">自研引擎与数字发行 (07–08)</button>
+            <button type="button" class="hub-cat-btn" data-cat-filter="offline_media" data-i18n-zh="街机·游艺·电竞与影视 (09–12)" data-i18n-en="Arcade, Pachislo &amp; Media (09–12)">街机·游艺·电竞与影视 (09–12)</button>
+          </div>
+          <span class="mono" style="font-size:0.73rem;color:var(--text-muted);" data-i18n-zh="提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意板块或章节" data-i18n-en="Tip: Press [ / ] to cycle pillars · Press ⌘K to jump">提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意板块或章节</span>
+        </div>
+
+        <div class="ip-pill-grid" id="ipPillGrid">
+            <button type="button" class="ip-pill-btn active" data-switch-ip="resident_evil" aria-pressed="true"><span class="ip-pill-mono mono">RE</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="resident_evil">01. 生化危机系列</span><span class="ip-pill-meta mono" data-pill-meta="resident_evil">累计 218M 套 (#1 IP) · Resident Evil</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="monster_hunter" aria-pressed="false"><span class="ip-pill-mono mono">MH</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="monster_hunter">02. 怪物猎人系列</span><span class="ip-pill-meta mono" data-pill-meta="monster_hunter">累计 132M 套 (World 30.8M) · Monster Hunter</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="street_fighter" aria-pressed="false"><span class="ip-pill-mono mono">SF</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="street_fighter">03. 街头霸王系列</span><span class="ip-pill-meta mono" data-pill-meta="street_fighter">累计 60M 套 (SF6 7.5M) · Street Fighter</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="devil_may_cry" aria-pressed="false"><span class="ip-pill-mono mono">DMC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="devil_may_cry">04. 鬼泣系列</span><span class="ip-pill-meta mono" data-pill-meta="devil_may_cry">累计 42M 套 (DMC5 14M+) · Devil May Cry</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="classic_catalog" aria-pressed="false"><span class="ip-pill-mono mono">CL</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="classic_catalog">05. 洛克人·逆转与经典目录</span><span class="ip-pill-meta mono" data-pill-meta="classic_catalog">合计 100M+ 套长尾合集 · Mega Man, Ace Attorney &amp; Catalog</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="new_revived_ip" aria-pressed="false"><span class="ip-pill-mono mono">NW</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="new_revived_ip">06. 鬼武者·龙之信条与新IP</span><span class="ip-pill-meta mono" data-pill-meta="new_revived_ip">PRAGMATA 2.73M · 鬼武者 1.7M · Onimusha, Dragon&#x27;s Dogma &amp; PRAGMATA</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="re_engine_rd" aria-pressed="false"><span class="ip-pill-mono mono">RE</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="re_engine_rd">07. RE ENGINE 与研发</span><span class="ip-pill-meta mono" data-pill-meta="re_engine_rd">61.4% 数字营业利润率 · RE ENGINE &amp; R&amp;D</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="digital_catalog_mobile" aria-pressed="false"><span class="ip-pill-mono mono">DC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="digital_catalog_mobile">08. 数字目录与移动</span><span class="ip-pill-meta mono" data-pill-meta="digital_catalog_mobile">93% 数字占比 · 49.46M 长尾 · Digital &amp; Mobile</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="arcade_operations" aria-pressed="false"><span class="ip-pill-mono mono">AR</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="arcade_operations">09. 街机与直营门店</span><span class="ip-pill-meta mono" data-pill-meta="arcade_operations">63 家门店 · 营收 +26.2% · Arcade Ops</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="amusement_equipments" aria-pressed="false"><span class="ip-pill-mono mono">AE</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="amusement_equipments">10. 游艺设备 (柏青嫂)</span><span class="ip-pill-meta mono" data-pill-meta="amusement_equipments">56.0% OPM · 4.09万台 · Amusement Equip.</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="esports_cpt_sfl" aria-pressed="false"><span class="ip-pill-mono mono">ES</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="esports_cpt_sfl">11. 全球电竞生态</span><span class="ip-pill-meta mono" data-pill-meta="esports_cpt_sfl">CPT · SFL · EVO 纪录 · eSports (CPT/SFL)</span></span></button> <button type="button" class="ip-pill-btn" data-switch-ip="media_licensing_store" aria-pressed="false"><span class="ip-pill-mono mono">ML</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="media_licensing_store">12. 影视动画与授权</span><span class="ip-pill-meta mono" data-pill-meta="media_licensing_store">街霸电影 · DMC S2/S3 · Media &amp; Licensing</span></span></button>
+        </div>
+      </section>
+
+      <!-- Dynamic Monograph Sections Host (00 - 07) -->
+      <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="战略定评：卡普空销量第一、毛利最稳的“双轨重制+正统续作”现金牛" data-i18n-en="Verdict: Capcom's #1 Franchise by Volume &amp; Margin Stability via Dual-Track Remakes + Mainline">战略定评：卡普空销量第一、毛利最稳的“双轨重制+正统续作”现金牛</span><span class="mui-chip" data-i18n-zh="在售核心：RE Requiem (8.51M) · RE2R (20.38M) · RE7 (18.87M) · RE4R (17.15M) · Village (16.27M)" data-i18n-en="Active Core: RE Requiem (8.51M) · RE2R (20.38M) · RE7 (18.87M) · RE4R (17.15M) · Village (16.27M)">在售核心：RE Requiem (8.51M) · RE2R (20.38M) · RE7 (18.87M) · RE4R (17.15M) · Village (16.27M)</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="核验基准：Capcom IR (截至 2026-09-30)" data-i18n-en="Filing Baseline: Capcom IR (As of Sep 30, 2026)">核验基准：Capcom IR (截至 2026-09-30)</span></div><div class="hero-overline mono"><span data-i18n-zh="CORE THESIS · 218M 系列总销量 × RE ENGINE 工业化复用 × 新旧交替零空窗" data-i18n-en="CORE THESIS · 218M Series Sales × RE ENGINE Reuse × Zero-Gap Release Cadence">CORE THESIS · 218M 系列总销量 × RE ENGINE 工业化复用 × 新旧交替零空窗</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">生化危机 (Resident Evil) 深度研报：<span class="gradient-accent">2.18 亿套恐怖帝国如何靠“正统+重制”实现年年印钞？</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">自 1996 年开创生存恐怖品类以来，《生化危机》已成长为卡普空体量最大、生命周期最长的核心支柱，截至 2026 年 9 月 30 日系列累计销量突破 <strong>2.18 亿套</strong> <a class="cite-link" href="https://www.capcom.co.jp/ir/english/business/salesdata.html" target="_blank" rel="noopener noreferrer">Capcom Series Sales ↗</a>。2026 年 2 月 27 日发售的第 9 部正统续作 <strong>《Resident Evil Requiem》</strong> 上线 5 天即破 500 万套、至 9 月末已达 <strong>851 万套</strong>，直接推动卡普空上调 FY2025 全年业绩指引并创下连续 13 年营业利润增长 <a class="cite-link" href="https://www.capcom.co.jp/ir/english/finance/review.html" target="_blank" rel="noopener noreferrer">Capcom FY26 Q2 ↗</a>。更关键的是，《RE2 重制版》（2,038 万套）、《RE7》（1,887 万套）、《RE4 重制版》（1,715 万套）与《RE Village》（1,627 万套）构成的“老品长尾目录”，在几乎零新增研发投入下每年持续贡献数百万套高毛利数字复购 <a class="cite-link" href="https://www.gematsu.com/2026/11/capcom-platinum-titles-sales-update-as-of-september-30-2026" target="_blank" rel="noopener noreferrer">Platinum Titles ↗</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="正统+重制双轨交替消除研发空窗" data-i18n-en="Mainline + Remake Dual Track Eliminates Droughts">正统+重制双轨交替消除研发空窗</h3><p data-i18n-zh="RE7/Village/Requiem 与 RE2R/3R/4R 交替上线，确保每 1–2 年都有重磅大作激活全系列长尾折扣销售。" data-i18n-en="Alternating mainline entries (RE7/Village/Requiem) and modern remakes (RE2R/3R/4R) keeps brand heat continuous.">RE7/Village/Requiem 与 RE2R/3R/4R 交替上线，确保每 1–2 年都有重磅大作激活全系列长尾折扣销售。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="RE ENGINE 资产与工具链高度复用" data-i18n-en="RE ENGINE Asset &amp; Pipeline Standardization">RE ENGINE 资产与工具链高度复用</h3><p data-i18n-zh="同一套渲染、物理与动作捕捉管线横跨 PS5、Xbox Series、Switch 2 与 PC，大幅压缩单作边际开发成本。" data-i18n-en="Shared rendering, physics, and mocap pipelines across PS5, Xbox, Switch 2, and PC compress marginal dev cost.">同一套渲染、物理与动作捕捉管线横跨 PS5、Xbox Series、Switch 2 与 PC，大幅压缩单作边际开发成本。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="数字长尾“折上折”利润率超 80%" data-i18n-en="80%+ Margin on Digital Catalog Tail">数字长尾“折上折”利润率超 80%</h3><p data-i18n-zh="老作研发已在首年完全摊销，Steam 与主机数字商店季节性促销实现近乎纯利润的现金回流。" data-i18n-en="Once launch costs are recouped, seasonal digital discounts on Steam and consoles convert directly into operating profit.">老作研发已在首年完全摊销，Steam 与主机数字商店季节性促销实现近乎纯利润的现金回流。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="系列累计总销量" data-i18n-en="Cumulative Series Sales">系列累计总销量</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="全社 #1 IP" data-i18n-en="#1 Franchise">全社 #1 IP</span></div><div class="kpi-value mono" data-i18n-zh="218.0M" data-i18n-en="218.0M">218.0M</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">截至 2026-09-30 核验，占卡普空历史游戏总销量约三成以上 <a class="cite-link" href="https://www.capcom.co.jp/ir/english/business/salesdata.html" target="_blank" rel="noopener noreferrer">Series Data ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="RE Requiem 半年销量" data-i18n-en="RE Requiem Sales">RE Requiem 半年销量</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="系列最快首销" data-i18n-en="Fastest Launch">系列最快首销</span></div><div class="kpi-value mono" data-i18n-zh="8.51M" data-i18n-en="8.51M">8.51M</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">2026 年 2 月发售，5 天破 500 万套，9 月末达 851 万套 <a class="cite-link" href="https://www.capcom.co.jp/ir/english/news/html/e260316.html" target="_blank" rel="noopener noreferrer">RE Requiem ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="白金榜千万级作品数" data-i18n-en="10M+ Seller Titles">白金榜千万级作品数</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="6 部破千万" data-i18n-en="6x 10M+ Hits">6 部破千万</span></div><div class="kpi-value mono" data-i18n-zh="6 部" data-i18n-en="6 Titles">6 部</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">RE2R (20.38M)、RE7 (18.87M)、RE4R (17.15M)、Village (16.27M)、RE3R (14.93M)、RE5/RE6 <a class="cite-link" href="https://www.gematsu.com/2026/11/capcom-platinum-titles-sales-update-as-of-september-30-2026" target="_blank" rel="noopener noreferrer">Gematsu ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="跨媒介协同延伸" data-i18n-en="Cross-Media Synergy">跨媒介协同延伸</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="全线变现" data-i18n-en="Multi-Segment">全线变现</span></div><div class="kpi-value mono" data-i18n-zh="17K+ 柏青嫂" data-i18n-en="17K+ Pachislo">17K+ 柏青嫂</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">H1 FY26 推出《Biohazard RE:3》智能柏青嫂机台大卖 1.7 万台并联动周边 <a class="cite-link" href="https://www.capcom.co.jp/ir/english/finance/review.html" target="_blank" rel="noopener noreferrer">IR Review ↗</a>。</p></div></div></section>
+    </div>
+    </main>
+  </div>
+
+  <script src="../../_shared/capcom-products.js"></script>
+  <script src="../../_shared/portfolio-engine.js"></script>
+
+</body>
+</html>
