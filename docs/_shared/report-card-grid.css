@@ -1,0 +1,11 @@
+:root {
+  --report-card-grid-line: rgba(0, 115, 230, .05);
+  --report-card-grid:
+    linear-gradient(var(--report-card-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--report-card-grid-line) 1px, transparent 1px);
+  --report-card-grid-size: 28px 28px;
+}
+
+html[data-theme="dark"] {
+  --report-card-grid-line: rgba(51, 153, 255, .065);
+}

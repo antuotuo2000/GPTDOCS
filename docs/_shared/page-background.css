@@ -28,3 +28,7 @@ html body {
 
 /* Avoid double-tap zoom while retaining scrolling and pinch zoom. */
 html, body { touch-action: manipulation; }
+
+/* Apple report canvas palette, shared by home, reports and device previews. */
+:root, html[data-theme="light"] { --bg-canvas:#F3F6FA; --hero-glow:radial-gradient(ellipse 80% 40% at 50% -10%,rgba(0,115,230,.08),rgba(243,246,250,0) 70%); --canvas-grid:none; }
+html[data-theme="dark"] { --bg-canvas:#080E1A; --hero-glow:radial-gradient(ellipse 80% 40% at 50% -10%,rgba(0,115,230,.20),rgba(8,14,26,0) 70%); --canvas-grid:none; }

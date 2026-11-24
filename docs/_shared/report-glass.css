@@ -51,13 +51,13 @@ main .hub-cat-bar {
   overflow: visible;
   margin-bottom: 14px;
 }
-/* Restore the original fine blueprint grid above the frosted reading surface. */
+/* Restore the shared fine grid above the frosted reading surface. */
 html[data-theme] .mui-sidebar .sidebar-card,
 html[data-theme] main :is(.mui-paper, .hero-card, .chart-card, .ip-hub-banner,
     .arch-blueprint, .bm-lens-panel, .bm-panel, .bm-subpanel, .bm-canvas-box,
     .ft-panel, .cc-panel, .ip-panel, .section-card, .research-card,
     .analysis-card, .product-card, .content-card, .executive-card) {
-  background-image: var(--blueprint-grid) !important;
-  background-size: 28px 28px !important;
+  background-image: var(--report-card-grid) !important;
+  background-size: var(--report-card-grid-size) !important;
   background-repeat: repeat !important;
 }

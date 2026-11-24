@@ -1,3 +1,5 @@
+@import url('./report-card-grid.css');
+
 /* All home surfaces use the same clear glass; content and color cues stay distinct. */
 :root {
   --home-glass-edge: rgba(255, 255, 255, .72);
@@ -29,6 +31,16 @@ html[data-theme="dark"] {
 .m-featured-report, .m-doc-card.m-doc-featured {
   background: linear-gradient(130deg, rgba(var(--feature-rgb), .14), transparent 75%) !important;
   border-color: rgba(var(--feature-rgb), .65);
+}
+.m-doc-card {
+  background-image: var(--report-card-grid) !important;
+  background-size: var(--report-card-grid-size) !important;
+}
+.m-doc-card.m-doc-featured {
+  background-image: var(--report-card-grid),
+    linear-gradient(130deg, rgba(var(--feature-rgb), .14), transparent 75%) !important;
+  background-size: var(--report-card-grid-size), var(--report-card-grid-size), 100% 100% !important;
+  background-repeat: repeat, repeat, no-repeat !important;
 }
 .m-featured-kicker, .m-featured-note b {
   color: color-mix(in srgb, rgb(var(--feature-rgb)) 60%, var(--text-primary));
