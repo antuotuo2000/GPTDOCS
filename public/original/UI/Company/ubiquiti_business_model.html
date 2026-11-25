@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="厄比奎蒂 Ubiquiti Inc. (NYSE: UI) 商业模式全景架构拆解：前苹果工程师创立的零传统直销网通异类、72.7% 研发人员占比、3.7% 极低 SG&A 费率、免强制订阅授权费（Zero-License TCO）、Q1 FY2027 单季营收首破 $10.26亿与 93% 创始人持股复利机器。" />
+  <title>厄比奎蒂 Ubiquiti Inc. (UI) 商业模式架构深度拆解 | 数据中心</title>
+  
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/ubiquiti_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">UI</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="https://ir.ui.com/" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="厄比奎蒂 (Ubiquiti) 商业模式架构拆解" data-i18n-en="Ubiquiti Inc. Business Model Architecture">厄比奎蒂 (Ubiquiti) 商业模式架构拆解</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">NYSE: UI</span>
+        <span class="mui-chip mui-chip-success mono hide-sm">FY26 $3.27B · Q1'27 $1.03B</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与站点导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">UI · BUSINESS MODEL</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="厄比奎蒂商业模式图谱" data-i18n-en="Ubiquiti Business Model">厄比奎蒂商业模式图谱</div>
+        <p class="sidebar-subtitle" data-i18n-zh="苹果工业基因硬件 × 零直销社区病毒传播 (3.7% SG&A) × 零强制授权费颠覆思科 × 38.1% 营业利润率复利机器" data-i18n-en="Apple-Grade Industrial Hardware × Zero-Sales-Force Community Viral Loop (3.7% SG&A) × Zero-License TCO × 38.1% Op Margin">苹果工业基因硬件 × 零直销社区病毒传播 (3.7% SG&A) × 零强制授权费颠覆思科 × 38.1% 营业利润率复利机器</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="反收租全栈硬件平台" data-i18n-en="Zero-License Full-Stack">反收租全栈硬件平台</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="SG&amp;A费率 / 营业利润率" data-i18n-en="SG&amp;A / Op Margin">SG&amp;A费率 / 营业利润率</span>
+            <span class="sidebar-mini-val mono">3.7% · 38.1% (Q1'27)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="CapEx强度 / ROIC" data-i18n-en="CapEx / ROIC">CapEx强度 / ROIC</span>
+            <span class="sidebar-mini-val mono">0.6% · 61.4%</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与架构目录">
+
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="UI"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+        <ul class="mui-nav-list" id="tocList">
+          <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+          <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+          <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与双擎拆解" data-i18n-en="Profit Waterfall &amp; Mix">利润池瀑布流与双擎拆解</span></a></li>
+          <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="多品类棘轮与零税TCO碾压" data-i18n-en="UniFi Stack &amp; TCO Moat">多品类棘轮与零税TCO碾压</span></a></li>
+          <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="净现金去杠杆与EPS推演器" data-i18n-en="Zero-Debt &amp; EPS Lab">净现金去杠杆与EPS推演器</span></a></li>
+          <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="网通巨头矩阵与三大压测" data-i18n-en="Peer Matrix &amp; Stress Audit">网通巨头矩阵与三大压测</span></a></li>
+        </ul>
+      </nav>
+
+      
+    </aside>
+
+    <main class="bm-workspace main-content">
+      <!-- MODULE 0: COMMAND DECK -->
+      <section id="mod-deck" class="bm-command-deck">
+        <div class="bm-thesis-deck">
+          <div>
+            <div class="bm-badge-row">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：零传统销售军团 × 免强制License全栈硬件" data-i18n-en="ARCHETYPE: Zero Direct Sales × Zero-License Infrastructure">商业范式：零传统销售军团 × 免强制License全栈硬件</span>
+              <span class="mui-chip mui-chip-success mono">FY2026 10-K &amp; Q1 FY27 10-Q</span>
+              <span class="mui-chip mui-chip-violet mono">ROIC 61.4% · 创始人持股 93.0%</span>
+            </div>
+
+            <h1 class="bm-display-h1" data-i18n-zh="厄比奎蒂商业模式解构：<span class='bm-gradient-txt'>砍掉 30% 企业级销售与订阅寻租税，以 46% 硬件毛利跑出 38% 顶级软件级营业利润率</span>" data-i18n-en="Deconstructing Ubiquiti's Business Model: <span class='bm-gradient-txt'>Eliminating the 30% Sales &amp; Licensing Tax to Convert 46% Gross Margin into 38% Operating Margin</span>">
+              厄比奎蒂商业模式解构：<span class="bm-gradient-txt">砍掉 30% 企业级销售与订阅寻租税，以 46% 硬件毛利跑出 38% 顶级软件级营业利润率</span>
+            </h1>
+
+            <p class="bm-lead">
+              在企业级网络设备行业，思科（Cisco）、HPE Aruba 与飞塔（Fortinet）数十年来奉行同一套寻租铁律：雇佣数万名高薪客户经理与售前团队，再通过昂贵硬件溢价与“不续费即变砖”的强制年度软件授权费转嫁给客户。前苹果无线射频工程师 <strong>Robert J. Pera</strong> 创立的<strong>厄比奎蒂（Ubiquiti Inc., NYSE: UI）</strong>彻底颠覆了这一范式：全公司不养传统直销铁军，<strong>1,818 名员工中 72.7%（1,321 人）为研发工程师，SG&amp;A 销管人员仅 127 人（全年 SG&amp;A 费率低至惊人的 3.7%）</strong>
+              <a class="cite-link" href="https://ir.ui.com/sites/ubiquiti-ir/files/2026-08/ui-06-30-2026-10k-2026.pdf" target="_blank" rel="noopener noreferrer">FY26 10-K ↗</a>；通过向全球系统集成商与 IT 极客社区免费开放 <strong>UniFi OS 全栈控制平面（免强制订阅费）</strong>，厄比奎蒂在将客户 5 年总拥有成本（TCO）压缩 60%+ 的同时，推动 FY2026 营收大涨 <strong>+27.2% 至 $32.74亿</strong>、GAAP 净利达 <strong>$9.60亿（净利率 29.3%）</strong>
+              <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1511737/000151173726000057/exhibit991-063026.htm" target="_blank" rel="noopener noreferrer">Q4 FY26 8-K ↗</a>，更在最新 Q1 FY2027 历史性首破单季十亿美元营收（<strong>$10.26亿，+39.9% YoY，营业利润率高达 38.1%</strong>）
+              <a class="cite-link" href="https://www.stocktitan.net/sec-filings/UI/10-q-ubiquiti-inc-quarterly-earnings-report-252e89d2d26b.html" target="_blank" rel="noopener noreferrer">Q1 FY27 10-Q ↗</a>。
+            </p>
+          </div>
+
+          <div class="bm-lens-panel">
+            <div class="bm-lens-head">
+              <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+              <div class="mui-segmented" id="lensTabs">
+                <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 反收租零授权费飞轮" data-i18n-en="① Anti-Rent Zero-License">① 反收租零授权费飞轮</button>
+                <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 3.7% 费率剪刀差" data-i18n-en="② 3.7% SG&amp;A Arbitrage">② 3.7% 费率剪刀差</button>
+                <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 零股权稀释与93%锁仓" data-i18n-en="③ 0.23% SBC &amp; 93% Stake">③ 零股权稀释与93%锁仓</button>
+              </div>
+            </div>
+            <div class="bm-equation-bar mono" id="lensFormula">
+              营业利润率 (38.1%) = 亲民硬件毛利率 (47.3%) - 精锐研发费率 (5.2%) - 极简销管费率 (4.0%) → 碾压高毛利但高销售费用的传统厂商
+            </div>
+            <div class="bm-lens-body" id="lensBody">
+              传统网通厂商虽拥有 64%–75% 账面毛利率，但每年必须耗费 25%–38% 的营收养活庞大销售代表、渠道返点与市场公关；厄比奎蒂主动让渡 18–25 个百分点的硬件毛利给终端客户并免除软件年费，靠 YouTube 评测、Reddit/UI 社区口碑与 44% 官网直营结账，最终留存了比传统巨头更高的营业利润率！
+            </div>
+          </div>
+        </div>
+
+        <aside class="bm-telemetry-ledger" aria-label="FY2026 & Q1 FY2027 核心经济遥测">
+          <div class="bm-ledger-head">
+            <div class="bm-ledger-title">
+              <span class="bm-pulse-dot"></span>
+              <span data-i18n-zh="FY2026 &amp; Q1 FY27 审计核心遥测账本" data-i18n-en="FY26 &amp; Q1 FY27 Audited Telemetry">FY2026 &amp; Q1 FY27 审计核心遥测账本</span>
+            </div>
+            <a class="cite-link mono" href="https://www.businesswire.com/news/home/20261105710705/en/Ubiquiti-Inc.-Reports-First-Quarter-Fiscal-2027-Financial-Results" target="_blank" rel="noopener noreferrer">Q1 FY27 公报 ↗</a>
+          </div>
+
+          <div class="bm-telemetry-rows">
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="FY26 全年营收 (企业级 UniFi 占 90.8%)" data-i18n-en="FY26 Revenue (Enterprise UniFi = 90.8%)">FY26 全年营收 (企业级 UniFi 占 90.8%)</span>
+                <span class="bm-tel-val mono">$3.27B <small style="font-size:0.74rem;color:var(--mui-success-text);">+27.2%</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:90.8%;"></div>
+                <div style="width:9.2%;background:#D97706;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>Enterprise $2,972.3M (+31.9%)</span><span>UISP $301.9M (-5.5%)</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="Q1 FY27 里程碑单季 (年化破 $41.0亿)" data-i18n-en="Q1 FY27 Milestone Quarter ($4.10B Run-Rate)">Q1 FY27 里程碑单季 (年化破 $41.0亿)</span>
+                <span class="bm-tel-val mono">$1,026.2M <small style="font-size:0.74rem;color:var(--mui-success-text);">+39.9%</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:91.7%;"></div>
+                <div style="width:8.3%;background:#16A34A;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>GAAP 毛利率 47.3% (+130bps)</span><span>GAAP 净利 $320.5M (+54.2%)</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="极致费用纪律 &amp; 股权激励纯度" data-i18n-en="OpEx Discipline &amp; Ultra-Low SBC">极致费用纪律 &amp; 股权激励纯度</span>
+                <span class="bm-tel-val mono">10.0% <small style="font-size:0.74rem;color:var(--mui-primary-lighter);">FY26 总OpEx率</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:62.6%;"></div>
+                <div style="width:37.4%;background:#7C3AED;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>R&amp;D 6.2% ($204.2M) · SG&amp;A 3.7%</span><span>全年 SBC 仅 $7.44M (0.23%营收)</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="现金堡垒 × 零银行债务 × 渠道结构" data-i18n-en="Cash Fortress × Zero Bank Debt × Channels">现金堡垒 × 零银行债务 × 渠道结构</span>
+                <span class="bm-tel-val mono">$845.5M / $0</span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:56%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+                <div style="width:44%;background:#0073E6;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>分销 56% / 官网直营网店 44%</span><span>季息 $1.00/股 · 回购余量 $485M</span></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- MODULE 1: 5-NODE VALUE PIPELINE -->
+      <section id="mod-pipeline" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 01 · END-TO-END VALUE CAPTURE PIPELINE</span>
+            <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：前苹果无线工程师如何造出网通界的“反思科印钞机”" data-i18n-en="5-Node Value Pipeline: How an Ex-Apple RF Engineer Built the Anti-Cisco">五阶商业价值传导沙盘：前苹果无线工程师如何造出网通界的“反思科印钞机”</h2>
+            <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解厄比奎蒂在研发、零销售获客、免授权定价、UniFi全栈扩圈与资本配置上的异端闭环。" data-i18n-en="Click any node below to inspect Ubiquiti's R&D density, zero-CAC community loop, zero-license pricing, full-stack expansion, and capital return.">点击下方任一价值链节点，拆解厄比奎蒂在研发、零销售获客、免授权定价、UniFi全栈扩圈与资本配置上的异端闭环。</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+        </div>
+
+        <div class="bm-pipeline-track" id="pipelineTrack">
+          <button type="button" class="bm-node-btn active" data-node="0">
+            <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">APPLE DNA</span></div>
+            <div class="bm-node-title" data-i18n-zh="苹果级工业设计与软硬同源" data-i18n-en="Apple-DNA Industrial &amp; Firmware">苹果级工业设计与软硬同源</div>
+            <div class="bm-node-kpi mono">72.7% 员工为纯研发 (1,321人)</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="1">
+            <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">ZERO SALES</span></div>
+            <div class="bm-node-title" data-i18n-zh="零直销军团与极客社区裂变" data-i18n-en="Zero Sales Force &amp; Community">零直销军团与极客社区裂变</div>
+            <div class="bm-node-kpi mono">FY26 SG&amp;A 仅 $121.8M (3.7%)</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="2">
+            <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">NO LICENSE</span></div>
+            <div class="bm-node-title" data-i18n-zh="免强制授权费颠覆行业寻租" data-i18n-en="Zero-License TCO Disruption">免强制授权费颠覆行业寻租</div>
+            <div class="bm-node-kpi mono">5年 TCO 较思科 Meraki 省 65%+</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="3">
+            <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">UNIFI OS</span></div>
+            <div class="bm-node-title" data-i18n-zh="单一控制面六大硬件栈吞噬" data-i18n-en="Single-Pane 6-Vertical Land-Grab">单一控制面六大硬件栈吞噬</div>
+            <div class="bm-node-kpi mono">网关→WiFi7→安防AI→门禁→NAS</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="4">
+            <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">OWNER CAPITAL</span></div>
+            <div class="bm-node-title" data-i18n-zh="44%直营网店与零稀释复利" data-i18n-en="44% Direct Store &amp; 0.2% SBC">44%直营网店与零稀释复利</div>
+            <div class="bm-node-kpi mono">TTM FCF $1.03B · 0 银行借款</div>
+          </button>
+        </div>
+
+        <div class="bm-node-inspector" id="nodeInspector">
+          <div class="bm-ins-prose">
+            <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · EX-APPLE RF &amp; DESIGN-HOUSE DNA</span>
+            <h3 id="nodeTitle">把冰冷机房铁盒做成消费电子艺术品：1,321 名精英工程师的软硬一体突袭</h3>
+            <p id="nodeDesc">
+              Robert Pera 于 2003–2005 年在苹果担任无线硬件工程师期间发现，苹果产品品质卓越却受限于封闭桌面场景，而传统企业级网通设备操作反人类且溢价虚高。厄比奎蒂将“铝合金 CNC 工艺、LCM 触控状态屏、Etherlighting™ 发光端口定位与开箱即用 App 引导”注入企业级机柜，在全球台北、里加、布拉格与美国组建分布式精锐小团队，不靠并购拼凑代码，从底层射频固件到 UniFi OS 100% 原生自研。
+            </p>
+            <div class="bm-ins-formula mono" id="nodeFormula">
+              商业传导：100% 原生自研固件（零并购商誉摊销）+ 商用芯片极致调优 → 以中端硬件售价实现 46.2%–47.3% 高毛利率
+            </div>
+          </div>
+          <div class="bm-ins-kpis" id="nodeKpis">
+            <div class="bm-ins-card"><b class="mono">72.7%</b><span>研发人员占总编制比重 (1,321/1,818)</span></div>
+            <div class="bm-ins-card"><b class="mono">$2.26M</b><span>按 Q1'27 年化测算人均创收</span></div>
+            <div class="bm-ins-card"><b class="mono">$1.67M</b><span>账面净无形资产 (几乎零并购泡沫)</span></div>
+            <div class="bm-ins-card"><b class="mono">200+</b><span>覆盖全球国家与地区网络节点</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 2: 7:5 SPLIT — WATERFALL / MARGIN SCISSORS + 4-PILLAR MONETIZATION -->
+      <section id="mod-profit-pool" class="bm-split-75">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN EXPANSION</span>
+              <h3 data-i18n-zh="FY2026 $32.74亿 损益转化瀑布流与毛利率/营业利润率剪刀差" data-i18n-en="FY2026 $3.27B P&amp;L Waterfall &amp; Operating Margin Trajectory">FY2026 $32.74亿 损益转化瀑布流与毛利率/营业利润率剪刀差</h3>
+            </div>
+            <div class="mui-segmented" id="pChartTabs">
+              <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="FY26 营收→FCF 瀑布" data-i18n-en="FY26 Rev→FCF Waterfall">FY26 营收→FCF 瀑布</button>
+              <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="FY22–Q1'27 利润率跃迁" data-i18n-en="FY22–Q1'27 Margin Ramp">FY22–Q1'27 利润率跃迁</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="profitCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            数据核验：<a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1511737/000151173726000057/exhibit991-063026.htm" target="_blank" rel="noopener noreferrer">SEC FY26 Exhibit 99.1 ↗</a> 与
+            <a class="cite-link" href="https://www.stocktitan.net/sec-filings/UI/10-q-ubiquiti-inc-quarterly-earnings-report-252e89d2d26b.html" target="_blank" rel="noopener noreferrer">Q1 FY27 10-Q ↗</a>。
+            核心奇观：在渡过 FY23–FY24 疫情芯片囤货减值周期后，毛利率由 38.4% 强劲修复至 Q1 FY27 的 <strong>47.3%</strong>，而总营业费用仅占营收 <strong>9.1%–10.0%</strong>，释放出 <strong>38.1%</strong> 的惊人营业利润率！
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02B · UNIFI &amp; UISP MONETIZATION ENGINE</span>
+              <h3 data-i18n-zh="四大变现支柱拆解（直营网店 44% + 全球百强分销 56%）" data-i18n-en="4 Monetization Pillars (44% Direct Webstore + 56% Distributors)">四大变现支柱拆解（直营网店 44% + 全球百强分销 56%）</h3>
+            </div>
+            <div class="mui-segmented" id="tierFilter">
+              <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+              <button type="button" class="mui-seg-btn" data-tcat="hw" data-i18n-zh="全栈硬件" data-i18n-en="Hardware">全栈硬件</button>
+              <button type="button" class="mui-seg-btn" data-tcat="sub" data-i18n-zh="可选增值" data-i18n-en="Attach SaaS">可选增值</button>
+            </div>
+          </div>
+
+          <div class="bm-tier-list" id="tierList">
+            <div class="bm-tier-card" data-tier="hw">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">① UniFi 核心网络矩阵（Cloud Gateways + Wi-Fi 7 + Switching）</span>
+                <span class="mui-chip mui-chip-primary mono">Enterprise 占营收 91.7%</span>
+              </div>
+              <div class="bm-tier-desc">从 $199 桌面网关一路覆盖至 $1,999 Enterprise Fortress Gateway (EFG)、100G QSFP28 园区交换机与 E7 Wi-Fi 7 旗舰 AP，驱动 Q1 FY27 企业级营收暴涨 +43.2% 至 $9.41亿。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="hw">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">② 物理安防、门禁楼宇与本地存储（Protect AI / Access / UNAS）</span>
+                <span class="mui-chip mui-chip-success mono">高客单搭售倍增器</span>
+              </div>
+              <div class="bm-tier-desc">一旦客户部署 UniFi 网关，即可零授权费接入 G6/AI 系列安防摄像头、AI Key 边缘算力盒、指纹/NFC 门禁及 UNAS Pro 8 机架存储，将单站点客单价拉升 3–5 倍。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="hw">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">③ UISP 运营商无线宽带基础设施（airMAX / Wave 60GHz / UFiber）</span>
+                <span class="mui-chip mui-chip-warning mono">FY26 $301.9M · Q1 +10.8%</span>
+              </div>
+              <div class="bm-tier-desc">公司起家现金牛业务：为全球偏远地区与新兴市场无线互联网服务商（WISP）提供免频谱许可费的点对多点毫米波与光纤接入设备，Q1 FY27 重回 +10.8% 正增长。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="sub">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">④ 自愿型高毛利云与安全订阅（CyberSecure + Cloud Storage + UI Care）</span>
+                <span class="mui-chip mui-chip-violet mono">递延收入增至 $105.2M</span>
+              </div>
+              <div class="bm-tier-desc">绝不阉割基础功能逼迫续费，而是联合 Proofpoint 与 Cloudflare 提供 95,000+ 实时威胁特征库（CyberSecure）、专业托管云控制器与硬件延保，构建高利润率增量层。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 3: 5:7 REVERSED SPLIT — MULTI-VERTICAL RATCHET & TCO MOAT -->
+      <section id="mod-cohort" class="bm-split-57">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03A · SINGLE-PANE-OF-GLASS RATCHET</span>
+              <h3 data-i18n-zh="单站点扩圈经济模型：为什么装上网关后就会买齐安防与门禁？" data-i18n-en="Site Unit Economics: The UniFi OS Multi-Vertical Ratchet">单站点扩圈经济模型：为什么装上网关后就会买齐安防与门禁？</h3>
+            </div>
+          </div>
+
+          <div class="mui-segmented" id="cohortTabs">
+            <button type="button" class="mui-seg-btn" data-cohort="solo" data-i18n-zh="单品类尝鲜站 (仅AP)" data-i18n-en="AP-Only Entry">单品类尝鲜站 (仅AP)</button>
+            <button type="button" class="mui-seg-btn active" data-cohort="core" data-i18n-zh="标准商业门店 (4栈合一)" data-i18n-en="SMB 4-Stack Site">标准商业门店 (4栈合一)</button>
+            <button type="button" class="mui-seg-btn" data-cohort="ultra" data-i18n-zh="中大型企业园区 (全栈+AI)" data-i18n-en="Enterprise Campus Stack">中大型企业园区 (全栈+AI)</button>
+          </div>
+
+          <div class="bm-cohort-metrics" id="cohortMetrics">
+            <div class="bm-cohort-stat">
+              <div class="lbl">典型硬件拓扑配置</div>
+              <div class="val" style="font-size:0.93rem;">UDM Pro Max + PoE交换机 + 6×U7 Pro + 8×AI安防/门禁</div>
+              <div class="delta">一套 UniFi Site Manager 集中免运维</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">5年强制软件授权年费</div>
+              <div class="val mono">$0 (基础全免费)</div>
+              <div class="delta">对比同规模 Meraki 节省 ~$8,500+ 年费</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">单站点累计硬件客单价</div>
+              <div class="val mono">~$6,800</div>
+              <div class="delta">较纯购买 AP 尝鲜站扩容 6.2 倍</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">跨代增购与系统锁定留存</div>
+              <div class="val mono">&gt;94%</div>
+              <div class="delta">更换品牌需推倒重装网通+监控+门禁</div>
+            </div>
+          </div>
+
+          <div class="bm-ratchet-note" id="cohortNote">
+            <strong>跨品类物理棘轮效应：</strong>传统企业采购往往是“思科管网络、海康/Verkada 管监控、HID 管门禁、群晖管存储”，IT 管理员需维护四套割裂后台并支付四份订阅年费；而 UniFi OS 将<strong>网络、监控、门禁、VoIP 电话、NAS 存储与充电桩</strong>融进同一个零年费界面，每多接入一个子系统，替换整套生态的物理拆改成本就翻倍
+            <a class="cite-link" href="https://ui.com/cloud-gateways/enterprise-scale" target="_blank" rel="noopener noreferrer">UniFi 企业架构 ↗</a>。
+          </div>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03B · TCO DISRUPTION &amp; SITE EXPANSION</span>
+              <h3 data-i18n-zh="100人规模商业园区 5 年总拥有成本 (TCO) 对标与单站毛利曲线" data-i18n-en="100-Seat Site 5-Year TCO Comparison &amp; Cumulative Site Gross Profit">100人规模商业园区 5 年总拥有成本 (TCO) 对标与单站毛利曲线</h3>
+            </div>
+            <div class="mui-segmented" id="cChartTabs">
+              <button type="button" class="mui-seg-btn active" data-cview="tco" data-i18n-zh="5年总拥有成本对比 ($K)" data-i18n-en="5-Year Site TCO ($K)">5年总拥有成本对比 ($K)</button>
+              <button type="button" class="mui-seg-btn" data-cview="ltv" data-i18n-zh="三类站点5年毛利累积" data-i18n-en="5Y Site Gross Profit">三类站点5年毛利累积</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="cohortCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            商业测算依据：<a class="cite-link" href="https://flash.stocksentinel.ai/research/UI" target="_blank" rel="noopener noreferrer">Flash UI 行业成本对比 ↗</a> 与
+            <a class="cite-link" href="https://store.ui.com/us/en/products/efg" target="_blank" rel="noopener noreferrer">Ubiquiti 官方商店公开标价 ↗</a>。
+            即使客户额外选配 $99–$499/年 CyberSecure 威胁情报订阅，UniFi 方案 5 年总成本仍仅为传统硬件+强制每端口/每摄像头订阅方案的 25%–35%。
+          </p>
+        </div>
+      </section>
+
+      <!-- MODULE 4: 6:6 DUAL WORKBENCH — DELEVERAGING / OPEX ANATOMY + 5Y EPS COMPOUNDER -->
+      <section id="mod-capital" class="bm-split-66">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04A · BALANCE SHEET REVERSAL &amp; OPEX EFFICIENCY</span>
+              <h3 data-i18n-zh="从 $11.4亿 负债到净现金 $7.70亿 零借款堡垒 &amp; 行业最低费率解剖" data-i18n-en="From $1.14B Debt to $770M Net Cash Fortress &amp; OpEx Anatomy">从 $11.4亿 负债到净现金 $7.70亿 零借款堡垒 &amp; 行业最低费率解剖</h3>
+            </div>
+            <div class="mui-segmented" id="kChartTabs">
+              <button type="button" class="mui-seg-btn active" data-kview="debt" data-i18n-zh="现金 vs 债务逆转史" data-i18n-en="Cash vs Debt Reversal">现金 vs 债务逆转史</button>
+              <button type="button" class="mui-seg-btn" data-kview="opex" data-i18n-zh="同行 OpEx 费率对比" data-i18n-en="Peer OpEx % Comparison">同行 OpEx 费率对比</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="capitalCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            资本配置纪律：2026年2月27日厄比奎蒂全额清偿定期贷款（截至 Q1 FY27 银行有息借款 <strong>$0</strong>，仅余 $76.0M 经营租赁负债，手握 <strong>$845.5M 现金及短投</strong>）
+            <a class="cite-link" href="https://convexityos.com/blog/ubiquiti-q1-fy2027-parts-squeeze" target="_blank" rel="noopener noreferrer">Convexity 财报拆解 ↗</a>；自 2011 年 IPO（逾 9,000万股）以来累计注销约三分之一总股本至 <strong>6,048万股</strong>。
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EPS COMPOUNDER</span>
+              <h3 data-i18n-zh="FY2027–FY2031 业绩复利与缩股情景推演器" data-i18n-en="FY2027–FY2031 Earnings &amp; Buyback Compounding Simulator">FY2027–FY2031 业绩复利与缩股情景推演器</h3>
+            </div>
+            <div class="mui-segmented" id="simPresets">
+              <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="关税/元器件逆风" data-i18n-en="Tariff Bear">关税/元器件逆风</button>
+              <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="基准稳态复利" data-i18n-en="Base Case">基准稳态复利</button>
+              <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="园区+AI超周期" data-i18n-en="Campus Bull">园区+AI超周期</button>
+            </div>
+          </div>
+
+          <div class="bm-sim-sliders">
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span data-i18n-zh="Enterprise 业务年化增速 (UniFi CAGR)" data-i18n-en="Enterprise UniFi CAGR">Enterprise 业务年化增速 (UniFi CAGR)</span><b class="mono" id="lblEntCagr">16.0%</b></div>
+              <input type="range" id="inpEntCagr" min="5" max="26" step="0.5" value="16.0" />
+            </div>
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span data-i18n-zh="稳态综合毛利率中枢 (Target Gross Margin)" data-i18n-en="Target Steady Gross Margin">稳态综合毛利率中枢 (Target Gross Margin)</span><b class="mono" id="lblGmTarget">46.5%</b></div>
+              <input type="range" id="inpGmTarget" min="39" max="51" step="0.5" value="46.5" />
+            </div>
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span data-i18n-zh="年均净回购缩股率 (Annual Share Retirement)" data-i18n-en="Annual Net Share Retirement">年均净回购缩股率 (Annual Share Retirement)</span><b class="mono" id="lblBuyRate">1.5%</b></div>
+              <input type="range" id="inpBuyRate" min="0" max="3.5" step="0.1" value="1.5" />
+            </div>
+          </div>
+
+          <div class="bm-sim-outputs">
+            <div class="bm-sim-out"><b class="mono" id="simRevOut">$6.57B</b><span data-i18n-zh="FY31E 总营收" data-i18n-en="FY31E Revenue">FY31E 总营收</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simOpmOut">36.7%</b><span data-i18n-zh="FY31E 营业利润率" data-i18n-en="FY31E Op Margin">FY31E 营业利润率</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simEpsOut">$34.48</b><span data-i18n-zh="FY31E 摊薄 EPS" data-i18n-en="FY31E Diluted EPS">FY31E 摊薄 EPS</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simCagrOut">+16.8%</b><span data-i18n-zh="5年 EPS 复合增速" data-i18n-en="5Y EPS CAGR">5年 EPS 复合增速</span></div>
+          </div>
+
+          <div class="bm-canvas-box" style="height:175px;">
+            <canvas id="simMiniCanvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 5: PEER BENCHMARKING & STRESS AUDIT -->
+      <section id="mod-matrix" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; TAIL-RISK STRESS AUDIT</span>
+            <h2 class="bm-h2" data-i18n-zh="全球网络通信与硬科技巨头模型对标及三大尾部风险压测" data-i18n-en="Global Networking &amp; Hard-Tech Peer Matrix &amp; Tail-Risk Audit">全球网络通信与硬科技巨头模型对标及三大尾部风险压测</h2>
+            <p class="bm-head-desc" data-i18n-zh="对比六大标杆企业的毛利、SG&A 负担与商业收费逻辑，并穿透核查厄比奎蒂独特的供应链、治理与合规敞口。" data-i18n-en="Benchmarking Ubiquiti against networking and ecosystem peers while auditing tariff, governance, and compliance risks.">对比六大标杆企业的毛利、SG&amp;A 负担与商业收费逻辑，并穿透核查厄比奎蒂独特的供应链、治理与合规敞口。</p>
+          </div>
+          <div class="mui-segmented" id="peerFilter">
+            <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+            <button type="button" class="mui-seg-btn" data-pcat="net" data-i18n-zh="企业网通/安全" data-i18n-en="Networking/Sec">企业网通/安全</button>
+            <button type="button" class="mui-seg-btn" data-pcat="eco" data-i18n-zh="软硬一体标杆" data-i18n-en="Full-Stack Peers">软硬一体标杆</button>
+          </div>
+        </div>
+
+        <div class="bm-table-wrap">
+          <table class="bm-table" id="peerTable">
+            <thead>
+              <tr>
+                <th>公司与代码</th>
+                <th>核心商业模式原型</th>
+                <th>综合毛利率</th>
+                <th>SG&amp;A 销管费率</th>
+                <th>营业利润率</th>
+                <th>模式终极壁垒与核心脆弱点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-ui" data-row-cat="net eco">
+                <td><strong>Ubiquiti (UI)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+                <td>零直销社区裂变 + 免强制License全栈硬件</td>
+                <td class="mono">46.2% (Q1'27 47.3%)</td>
+                <td class="mono" style="color:var(--mui-success-text);">3.7% (全行业最低)</td>
+                <td class="mono" style="color:var(--mui-success-text);">36.2% (Q1'27 38.1%)</td>
+                <td>极致TCO与44%直营；脆弱点在关税/单源芯片及无大客户驻场团队</td>
+              </tr>
+              <tr data-row-cat="net eco">
+                <td><strong>Arista Networks (ANET)</strong></td>
+                <td>云巨头 AI 数据中心高速交换机 + EOS 软件栈</td>
+                <td class="mono">~64%</td>
+                <td class="mono" style="color:var(--mui-success-text);">~7%–8% (大客户精兵)</td>
+                <td class="mono" style="color:var(--mui-success-text);">~44% (LTM)</td>
+                <td>云厂商AI集群核心受益者；客户集中度高（Meta/微软占比重）</td>
+              </tr>
+              <tr data-row-cat="net">
+                <td><strong>Cisco Systems (CSCO)</strong></td>
+                <td>全球认证渠道军团 + SmartNet/Meraki 强制续费</td>
+                <td class="mono">~64.5%</td>
+                <td class="mono" style="color:var(--mui-warning-text);">~24%–26% (重销售铁军)</td>
+                <td class="mono">~24% (GAAP)</td>
+                <td>$43.5B RPO锁死财富500强与政企；中端市场遭零年费方案持续蚕食</td>
+              </tr>
+              <tr data-row-cat="net">
+                <td><strong>Fortinet (FTNT)</strong></td>
+                <td>自研 FortiASIC 安全网关 + 高毛利安全特征库订阅</td>
+                <td class="mono">~78%–80%</td>
+                <td class="mono" style="color:var(--mui-warning-text);">~34%–37% (高渠道佣金)</td>
+                <td class="mono">~30%–32%</td>
+                <td>ASIC防火墙性能比优异；高度依赖渠道续约周期与高额销售费用投入</td>
+              </tr>
+              <tr data-row-cat="eco">
+                <td><strong>Motorola Solutions (MSI)</strong></td>
+                <td>公共安全专网通信 + Avigilon/Verkada式视频安防云</td>
+                <td class="mono">~51%</td>
+                <td class="mono">~18%–20%</td>
+                <td class="mono">~25%–27%</td>
+                <td>政企长约排他性极强；商业级监控面临 UniFi Protect 零月费冲击</td>
+              </tr>
+              <tr data-row-cat="eco">
+                <td><strong>Apple Inc. (AAPL)</strong></td>
+                <td>自研芯片旗舰硬件漏斗 + 76%毛利生态服务税</td>
+                <td class="mono">48.8%</td>
+                <td class="mono" style="color:var(--mui-success-text);">6.2%</td>
+                <td class="mono">33.0%</td>
+                <td>Pera 创业灵感母体：把苹果软硬一体美学成功移植至企业基础设施</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bm-stress-grid">
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-warning mono">STRESS 01 · TARIFFS &amp; CHIP SUPPLY</span>
+              <h4>中美/越南进口关税波动与单源射频芯片备货周期</h4>
+              <p>公司代工主要位于越南与中国，且高度依赖高通（Qualcomm）与博通（Broadcom）部分单源芯片组。为应对元器件涨价与交期拉长，截至 2026年9月30日公司持有 <strong>$7.79亿库存、$1.10亿供应商押金及 $17.76亿采购承诺</strong>——这次是用丰厚自有现金备货而非像 2022 年举债囤货，但若需求放缓仍存在减值波动风险
+              <a class="cite-link" href="https://www.stocktitan.net/sec-filings/UI/10-q-ubiquiti-inc-quarterly-earnings-report-252e89d2d26b.html" target="_blank" rel="noopener noreferrer">Q1 FY27 风险披露 ↗</a>。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：毛利率能否稳守 45%–47% 区间与库存周转</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-violet mono">STRESS 02 · 93% CONTROL &amp; ZERO GUIDANCE</span>
+              <h4>创始人 93.0% 绝对控盘、7% 极小流通盘与零业绩指引</h4>
+              <p>Robert Pera 实益持有 <strong>5,627.8万股（93.0%）</strong>，公众自由流通股仅约 422 万股（7.0%），且公司从不召开传统华尔街季报电话会、不给定量指引。这种极端“所有者经营”虽彻底消灭了职业经理人短期凑数与 SBC 稀释，但也导致股价单日波动剧烈，并存在关键人物集中风险
+              <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1511737/000151173725000063/ubnt-20251024.htm" target="_blank" rel="noopener noreferrer">SEC DEF 14A ↗</a>。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：$4.85亿剩余回购执行节奏与季度分红连续性</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-error mono">STRESS 03 · EXPORT COMPLIANCE &amp; IP SUITS</span>
+              <h4>跨国分销灰色转运合规、专利诉讼与历史税务争议</h4>
+              <p>由于 56% 营收经由全球逾百家独立分销商出货，公司对终端流向能见度受限（如 2026年8月 SDNY <em>Kovalenko</em> 诉讼指控第三方走私商规避制裁转运天线，及 2026年7月 Velocity Wi-Fi 6 专利诉讼）；此外尚有美国税务法院 ~$50M 争议与香港税务局 $60.3M 退税押金审计在途
+              <a class="cite-link" href="https://flash.stocksentinel.ai/research/UI" target="_blank" rel="noopener noreferrer">Flash 法务追踪 ↗</a>。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：出口合规地理围栏措施与 10-Q 法律事项附注</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIMARY SOURCES -->
+      <section class="bm-panel" aria-label="权威财报与行业信源">
+        <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+          <div>
+            <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+            <h2 class="bm-h2" data-i18n-zh="权威 SEC 监管文件、财报公报与第三方研究信源" data-i18n-en="Verified SEC Filings, Earnings Releases &amp; Research Sources">权威 SEC 监管文件、财报公报与第三方研究信源</h2>
+          </div>
+        </div>
+        <div class="bm-sources-grid">
+          <a class="bm-source-item" href="https://www.stocktitan.net/sec-filings/UI/10-q-ubiquiti-inc-quarterly-earnings-report-252e89d2d26b.html" target="_blank" rel="noopener noreferrer">
+            <b>Ubiquiti Q1 FY2027 Form 10-Q (Ended Sept 30, 2026) ↗</b>
+            <span>单季营收首破 $1,026.25M (+39.9%)、毛利率 47.3%、净利 $320.46M、$845.5M 现金与零银行借款披露</span>
+          </a>
+          <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1511737/000151173726000057/exhibit991-063026.htm" target="_blank" rel="noopener noreferrer">
+            <b>SEC Exhibit 99.1 — Q4 &amp; Full-Year FY2026 Results ↗</b>
+            <span>FY2026 全年营收 $3,274.16M (+27.2%)、Enterprise $2,972.30M、GAAP 净利 $960.30M 与 $500M 回购展期</span>
+          </a>
+          <a class="bm-source-item" href="https://ir.ui.com/sites/ubiquiti-ir/files/2026-08/ui-06-30-2026-10k-2026.pdf" target="_blank" rel="noopener noreferrer">
+            <b>Ubiquiti Inc. FY2026 Form 10-K Annual Report ↗</b>
+            <span>1,818 名全职员工构成（研发 1,321 人 / 销管 127 人）、分区域营收与供应链采购承诺法定披露</span>
+          </a>
+          <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1511737/000151173725000063/ubnt-20251024.htm" target="_blank" rel="noopener noreferrer">
+            <b>Ubiquiti SEC Schedule 14A (DEF 14A Proxy) ↗</b>
+            <span>创始人 Robert J. Pera 持有 56,278,181 股（93.0%）、$0 基本年薪、董事会独立委员会与高管激励详情</span>
+          </a>
+          <a class="bm-source-item" href="https://en.arincen.com/instruments/UI/financials" target="_blank" rel="noopener noreferrer">
+            <b>UI 5-Year Cash Flow &amp; Balance Sheet Series ↗</b>
+            <span>FY2022–FY2026 经营现金流 ($928.68M)、自由现金流 ($908.94M) 与净资产修复完整时间序列</span>
+          </a>
+          <a class="bm-source-item" href="https://flash.stocksentinel.ai/research/UI" target="_blank" rel="noopener noreferrer">
+            <b>Flash Institutional Report: Ubiquiti Inc. (UI) ↗</b>
+            <span>3.7% SG&amp;A 结构性成本护城河、渠道双轨结构（55% 分销 / 45% 直营网店）与法务情景估值分析</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  
+<script src="../../_shared/ubiquiti_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

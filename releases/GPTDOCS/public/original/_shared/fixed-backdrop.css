@@ -1,0 +1,24 @@
+/* A viewport layer stays fixed on mobile browsers, including iOS Safari. */
+@media (max-width: 1023px) {
+  html { background-color: var(--bg-canvas); }
+  html body {
+    isolation: isolate;
+    background: none !important;
+  }
+  html body::before {
+    content: "" !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100lvh;
+    pointer-events: none;
+    z-index: -1;
+    background-color: var(--bg-canvas);
+    /* Match the desktop's layered glow and tiled blueprint texture. */
+    background-image: var(--hero-glow), var(--canvas-grid, none);
+    background-size: 100% 100%, 36px 36px;
+    background-repeat: repeat;
+  }
+}

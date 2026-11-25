@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="安进公司 Amgen Inc. (NASDAQ: AMGN) 商业模式全景架构拆解：人类遗传学靶点验证（deCODE）、四大高壁垒治疗领域（普药/肿瘤/炎症/罕见病）、生物类似药现金牛协同、47.3% Non-GAAP 营业利润率与连续14年股息增长复利机器（基于 FY2025 10-K 与 Q3 2026 财报）。" />
+ <title>安进公司 Amgen Inc. (AMGN) 商业模式架构深度拆解 | 数据中心</title>
+
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/amgen_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">AMGN</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <span class="crumb-link hide-sm">数据中心</span>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="安进公司 (Amgen) 商业模式架构拆解" data-i18n-en="Amgen Inc. Business Model Architecture">安进公司 (Amgen) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: AMGN</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY26E $38.9B–$39.7B</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索管线或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">AMGN · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="安进商业模式架构图谱" data-i18n-en="Amgen Business Model Blueprint">安进商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="人类遗传学靶点验证 × 四大治疗领域矩阵 × 生物类似药防御反攻 × 连续14年股息复利机器" data-i18n-en="Human Genetics Target Validation × 4 Therapeutic Franchises × Biosimilar Counter-Offense × 14-Yr Dividend Compounder">人类遗传学靶点验证 × 四大治疗领域矩阵 × 生物类似药防御反攻 × 连续14年股息复利机器</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span><span class="sidebar-mini-val mono" data-i18n-zh="生物制药平台 + 仿制现金牛" data-i18n-en="Biotech + Biosimilar">生物制药平台 + 仿制现金牛</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="Q3 2026 营业利润率" data-i18n-en="Q3 26 Non-GAAP OPM">Q3 2026 营业利润率</span><span class="sidebar-mini-val mono">47.3% (GAAP 37.5%)</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="十亿美元重磅品种" data-i18n-en="$1B+ Blockbusters">十亿美元重磅品种</span><span class="sidebar-mini-val mono">17 款 (Q3 2026 年化)</span></div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="商业架构目录"><div class="co-side-nav" id="companySubfolderHub" data-co-key="AMGN"><a class="co-side-home" href="../../index.html">首页</a></div>
+ <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck & Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶生物制药价值传导沙盘" data-i18n-en="5-Node Biopharma Pipeline">五阶生物制药价值传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与四大板块拆解" data-i18n-en="P&L Waterfall & 4 Franchises">利润池瀑布流与四大板块拆解</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="新旧动能接棒与放量曲线" data-i18n-en="Growth vs Legacy Transition">新旧动能接棒与放量曲线</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="并购去杠杆与股息复利推演器" data-i18n-en="Deleveraging & EPS Simulator">并购去杠杆与股息复利推演器</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="全球药企对标与三大风险压测" data-i18n-en="Pharma Peer Matrix & Stress">全球药企对标与三大风险压测</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <main class="bm-workspace main-content">
+ <!-- MODULE 0: COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：遗传学靶点验证 × 四大治疗矩阵 × 生物类似药现金盾" data-i18n-en="ARCHETYPE: Human Genetics Engine × 4 Therapeutic Pillars × Biosimilar Shield">商业范式：遗传学靶点验证 × 四大治疗矩阵 × 生物类似药现金盾</span>
+ <span class="mui-chip mui-chip-success mono">Q3 2026 营业利润率 47.3%</span>
+ <span class="mui-chip mui-chip-violet mono">17款年化十亿美元重磅药</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="安进商业模式解构：<span class='bm-gradient-txt'>用人类基因组提升研发胜率，靠四大治疗矩阵与生物制造护城河穿越专利悬崖</span>" data-i18n-en="Deconstructing Amgen's Business Model: <span class='bm-gradient-txt'>Genetics-Validated R&amp;D, Four Therapeutic Franchises &amp; Biomanufacturing Scale</span>">
+ 安进商业模式解构：<span class="bm-gradient-txt">用人类基因组提升研发胜率，靠四大治疗矩阵与生物制造护城河穿越专利悬崖</span>
+ </h1>
+
+ <p class="bm-lead">
+ 生物制药最致命的商业魔咒是“高研发失败率 + 专利到期断崖（LOE）”。安进（<strong>Amgen Inc., NASDAQ: AMGN</strong>）历经 46 年演化出一套独特的<strong>三阶生物制药复利机器</strong>：第一阶以冰岛子公司 <strong>deCODE genetics 逾 200 PB 人类多组学数据</strong>锁定因果靶点，将早期研发胜率提升至行业均值两倍以上；第二阶横跨<strong>心血管代谢、肿瘤、炎症、罕见病</strong>四大领域构建多品种矩阵——2026 年 Q3 单季营收达 <strong>$103.65亿（+8.5% YoY）</strong>，旗下多达 <strong>17 款药物年化销售额突破 $10亿</strong>，以 Repatha（+37%）、Evenity（+39%）、Tezspire（+43%）、Imdelltra（+128%）和 Uplizna（+191%）的放量完全对冲了 Prolia/Xgeva 专利到期冲击
+ <a class="cite-link" href="https://investors.amgen.com/news-releases/news-release-details/amgen-reports-third-quarter-2026-financial-results/" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>；第三阶依托全球生物制剂规模化制造网络同时自建 <strong>$30亿+ 生物类似药防御盾</strong>，将 <strong>47.3% Non-GAAP 营业利润率</strong>转化为强劲自由现金流（9M 2026 达 <strong>$86.2亿</strong>），兼顾 Horizon 并购后迅速去杠杆与连续 14 年股息增长
+ <a class="cite-link" href="https://www.amgen.com/stories/2026/03/2025-letter-to-shareholders" target="_blank" rel="noopener noreferrer">CEO 2025 股东信 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 遗传学靶点降维" data-i18n-en="① Genetics Validation">① 遗传学靶点降维</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 量增价减接棒梯队" data-i18n-en="② Volume-Led Portfolio">② 量增价减接棒梯队</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 生物制造与现金复利" data-i18n-en="③ Scale & Cash Return">③ 生物制造与现金复利</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 研发 ROI = 人类遗传学靶点验证胜率 (~2x+) × 生成生物学蛋白设计提速 ÷ 全球多中心 III 期临床边际成本
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 传统药企靠海量盲筛化合物赌运气，临床 II/III 期折戟率极高；安进通过 deCODE genetics 对数十万人群进行全基因组测序，在人体“自然实验”中直接验证基因突变与疾病因果关系（如 PCSK9 与 Repatha、Lp(a) 与 Olpasiran），大幅提高大分子与多特异性抗体管线成功率。
+ </div>
+ </div>
+ </div>
+
+ <aside class="bm-telemetry-ledger" aria-label="FY2025–2026 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title"><span class="bm-pulse-dot"></span><span data-i18n-zh="AMGN FY25 &amp; Q3 2026 商业遥测账本" data-i18n-en="AMGN FY25 &amp; Q3 2026 Telemetry">AMGN FY25 &amp; Q3 2026 商业遥测账本</span></div>
+ <a class="cite-link mono" href="https://www.tradingview.com/news/tradingview:ee4d2c1899ca4:0-amgen-3q-2026-revenue-10-37b-eps-7-08-10-q-summary/" target="_blank" rel="noopener noreferrer">Q3 10-Q 摘要 ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="2026 全年营收指引 (FY25 $36.75B)" data-i18n-en="FY2026E Revenue Guidance">2026 全年营收指引 (FY25 $36.75B)</span><span class="bm-tel-val mono">$38.9B–$39.7B</span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:95%;"></div></div>
+ <div class="bm-tel-sub mono"><span>9M 2026 营收 $29.04B (+8%)</span><span>Q3 单季 $10.37B (+8.5%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="Q3 2026 盈利能力 (Non-GAAP / GAAP)" data-i18n-en="Q3 26 Operating Margin">Q3 2026 盈利能力 (Non-GAAP / GAAP)</span><span class="bm-tel-val mono">47.3% / 37.5%</span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:71%;background:#16A34A;"></div></div>
+ <div class="bm-tel-sub mono"><span>Non-GAAP 销管费率 17.0%</span><span>R&amp;D 占产品营收 21.4%</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="9M 2026 自由现金流 (FY25 $8.1B)" data-i18n-en="9M 2026 Free Cash Flow">9M 2026 自由现金流 (FY25 $8.1B)</span><span class="bm-tel-val mono">$8.62B <small style="font-size:0.74rem;color:var(--mui-success-text);">+20.7%</small></span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:83%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div></div>
+ <div class="bm-tel-sub mono"><span>9M 经营现金流 $10.43B</span><span>FY26E CapEx ~$2.6B</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="资产负债表去杠杆 (9/30/26)" data-i18n-en="Cash vs Total Debt (9/30/26)">资产负债表去杠杆 (9/30/26)</span><span class="bm-tel-val mono">$13.2B / $54.0B</span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:65%;"></div></div>
+ <div class="bm-tel-sub mono"><span>季度股息 $2.52/股 (+6%)</span><span>Non-GAAP EPS 指引 $22.90–$23.70</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: 5-NODE BIOPHARMA VALUE PIPELINE -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END BIOPHARMA VALUE CAPTURE PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶生物制药价值传导沙盘：从人类基因靶点到全球患者与股东回报" data-i18n-en="5-Node Value-Chain Pipeline: From Human Genetics to Shareholder Compounding">五阶生物制药价值传导沙盘：从人类基因靶点到全球患者与股东回报</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解安进在靶点发现、多特异性技术平台、生物制造、商业化与资本配置的核心壁垒。" data-i18n-en="Select any node in Amgen's value chain to inspect its scientific moat, manufacturing scale, and financial returns.">点击下方任一价值链节点，拆解安进在靶点发现、多特异性技术平台、生物制造、商业化与资本配置的核心壁垒。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">HUMAN DATA</span></div>
+ <div class="bm-node-title" data-i18n-zh="deCODE 人类遗传学靶点发现" data-i18n-en="deCODE Genetics Validation">deCODE 人类遗传学靶点发现</div>
+ <div class="bm-node-kpi mono">&gt;200 PB 基因组与多组学库</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">MODALITIES</span></div>
+ <div class="bm-node-title" data-i18n-zh="BiTE 双抗、偶联体与生成生物学" data-i18n-en="BiTE, APC & Generative Biology">BiTE 双抗、偶联体与生成生物学</div>
+ <div class="bm-node-kpi mono">Imdelltra +128% · MariTide</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">SCALE MFG</span></div>
+ <div class="bm-node-title" data-i18n-zh="北美生物制造与连续灌流工艺" data-i18n-en="U.S. Biomanufacturing Scale">北美生物制造与连续灌流工艺</div>
+ <div class="bm-node-kpi mono">美国本土逾 $31.5亿 扩产投资</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">PORTFOLIO</span></div>
+ <div class="bm-node-title" data-i18n-zh="四大治疗领域 + 生物类似药盾" data-i18n-en="4 Franchises + Biosimilars">四大治疗领域 + 生物类似药盾</div>
+ <div class="bm-node-kpi mono">17款年化 &gt;$1B · 触达1,700万患者</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">CAPITAL RETURN</span></div>
+ <div class="bm-node-title" data-i18n-zh="强现金流去杠杆与股息复利" data-i18n-en="Deleveraging & Dividend Growth">强现金流去杠杆与股息复利</div>
+ <div class="bm-node-kpi mono">连续14年上调股息 ($2.52/季)</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · DECODE GENETICS &amp; CAUSAL TARGETS</span>
+ <h3 id="nodeTitle">人类遗传学导航：用百万级真实人群基因组代替“盲人摸象式”药物筛选</h3>
+ <p id="nodeDesc">
+ 2012 年收购冰岛 deCODE genetics 是安进研发范式的分水岭。借助涵盖数百万人群的深层基因组与多组学数据库（超 200 PB 数据）以及 NVIDIA DGX SuperPOD “Freyja” 超算集群，安进科学家能在立项前验证特定基因变异对人体长期表型的因果影响，从而将宝贵的 III 期临床资金精准投向 Repatha (PCSK9)、Evenity (硬骨素) 与 Olpasiran (Lp(a)) 等高胜率靶点。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 商业传导：遗传学验证靶点进临床胜率显著高于行业均值 → 降低单款重磅新药全周期隐性试错成本
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">200+ PB</b><span>deCODE 人类多组学数据底座</span></div>
+ <div class="bm-ins-card"><b class="mono">$7.3B</b><span>FY2025 全年研发投入 (9M26 $5.7B)</span></div>
+ <div class="bm-ins-card"><b class="mono">21.4%</b><span>Q3 2026 R&amp;D 占产品营收比重</span></div>
+ <div class="bm-ins-card"><b class="mono">1,700万</b><span>全球年度受惠患者总数</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: PROFIT POOL WATERFALL & 4 THERAPEUTIC TIERS -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN ARCHITECTURE</span>
+ <h3 data-i18n-zh="FY2025 $367.5亿 价值转化瀑布流与 5年毛利/研发轨迹" data-i18n-en="FY2025 $36.75B P&L Waterfall & 5Y Margin Trajectory">FY2025 $367.5亿 价值转化瀑布流与 5年毛利/研发轨迹</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→FCF 瀑布流" data-i18n-en="Rev → FCF Waterfall">营收→FCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="5年毛利率与净利率" data-i18n-en="5Y Margin Trend">5年毛利率与净利率</button>
+ </div>
+ </div>
+ <div class="bm-canvas-box"><canvas id="profitCanvas"></canvas></div>
+ <p class="bm-chart-caption">
+ 数据来源：<a class="cite-link" href="https://investors.amgen.com/news-releases/news-release-details/amgen-reports-third-quarter-2026-financial-results/" target="_blank" rel="noopener noreferrer">Amgen Q3 2026 财报 ↗</a> 与
+ <a class="cite-link" href="https://www.amgen.com/stories/2026/03/2025-letter-to-shareholders" target="_blank" rel="noopener noreferrer">FY2025 年报股东信 ↗</a>。注意收购 Horizon 产生的无形资产摊销拉低了 GAAP 营业利润率（Q3 26 为 37.5%），而剔除摊销后的 <strong>Non-GAAP 营业利润率高达 47.3%</strong>，真实反映了生物制药核心造血能力。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · FOUR-PILLAR COMMERCIAL PORTFOLIO</span>
+ <h3 data-i18n-zh="四大治疗领域与生物类似药营收矩阵（Q3 2026 实绩）" data-i18n-en="4-Franchise Revenue Matrix (Q3 2026 Actuals)">四大治疗领域与生物类似药营收矩阵（Q3 2026 实绩）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="growth" data-i18n-zh="高增长引擎" data-i18n-en="Growth">高增长引擎</button>
+ <button type="button" class="mui-seg-btn" data-tcat="cash" data-i18n-zh="成熟/仿制盾" data-i18n-en="Cash/Biosim">成熟/仿制盾</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="growth">
+ <div class="bm-tier-top"><span class="bm-tier-name">① 普药心血管与骨健康 (General Medicine)</span><span class="mui-chip mui-chip-success mono">Repatha $1,085M (+37%)</span></div>
+ <div class="bm-tier-desc">Repatha 单季首破 10 亿美元（VESALIUS-CV 证实全因死亡降 20%），Evenity 增 39% 至 $751M，强力对冲 Prolia 专利到期下滑（$632M, -45%）。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="growth">
+ <div class="bm-tier-top"><span class="bm-tier-name">② 罕见病高壁垒矩阵 (Rare Disease · Horizon)</span><span class="mui-chip mui-chip-primary mono">Uplizna +191% · Krystexxa +31%</span></div>
+ <div class="bm-tier-desc">收购 Horizon 带来的高孤儿药护城河：Q3 26 Tepezza $526M、Uplizna 暴涨 191% 至 $451M、Krystexxa $419M，客群高度粘性且享孤儿药定价保护。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="growth">
+ <div class="bm-tier-top"><span class="bm-tier-name">③ 肿瘤双抗前沿阵线 (Oncology &amp; BiTE)</span><span class="mui-chip mui-chip-violet mono">Imdelltra +128% · Blincyto +27%</span></div>
+ <div class="bm-tier-desc">独家 BiTE 双特异性 T 细胞衔接器平台爆发：Blincyto 单季 $496M、小细胞肺癌重磅药 Imdelltra 暴涨 128% 至 $406M，Vectibix $335M (+18%)。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="cash">
+ <div class="bm-tier-top"><span class="bm-tier-name">④ 炎症自免与生物类似药盾 (Inflammation &amp; Biosimilars)</span><span class="mui-chip mui-chip-warning mono">Tezspire +43% · Pavblu +41%</span></div>
+ <div class="bm-tier-desc">Tezspire 飙升 43% 至 $538M（EoE III 期达标），同时安进以 Eylea 仿制药 Pavblu ($300M, +41%) 与 Amjevita ($191M) 构筑逾 $30亿 生物类似药反攻现金盾。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: PORTFOLIO TRANSITION (GROWTH VS LEGACY) -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · PORTFOLIO GROWTH VS LOE EROSION</span>
+ <h3 data-i18n-zh="三大核心增长梯队：如何消化 Enbrel/Prolia 专利到期？" data-i18n-en="Growth Cohorts: Offsetting Prolia/Xgeva &amp; Enbrel LOE">三大核心增长梯队：如何消化 Enbrel/Prolia 专利到期？</h3>
+ </div>
+ </div>
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn active" data-cohort="core" data-i18n-zh="核心增量六大引擎" data-i18n-en="6 Core Growth Drivers">核心增量六大引擎</button>
+ <button type="button" class="mui-seg-btn" data-cohort="biosim" data-i18n-zh="生物类似药防御矩阵" data-i18n-en="Biosimilar Franchise">生物类似药防御矩阵</button>
+ <button type="button" class="mui-seg-btn" data-cohort="mature" data-i18n-zh="成熟/专利悬崖盘" data-i18n-en="Mature / LOE Base">成熟/专利悬崖盘</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat"><div class="lbl">代表核心品种</div><div class="val" style="font-size:0.90rem;">Repatha·Evenity·Tezspire·Imdelltra·Uplizna·Blincyto</div><div class="delta">均处于专利长保护期</div></div>
+ <div class="bm-cohort-stat"><div class="lbl">Q3 2026 合计单季营收</div><div class="val mono">$3,727M</div><div class="delta">占全公司产品营收 37.7%</div></div>
+ <div class="bm-cohort-stat"><div class="lbl">同比销量增长动能</div><div class="val mono">+27% ~ +191%</div><div class="delta">9M 26 集团销量整体 +10%</div></div>
+ <div class="bm-cohort-stat"><div class="lbl">长周期峰值潜力</div><div class="val mono">$20B+ / 年</div><div class="delta">尚未计入 MariTide 与 Olpasiran</div></div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>以量补价与新陈代谢飞轮：</strong>面对 2026 年 Prolia (-45%) 与 Xgeva (-47%) 生物类似药冲击及 IRA 医保谈判降价，安进 9M 2026 依然凭借 <strong>+10% 的强劲处方销量增长</strong>实现产品营收净增 +7%，证明多引擎接棒已成功跨越最陡峭的专利悬崖期
+ <a class="cite-link" href="https://www.tradingview.com/news/tradingview:ee4d2c1899ca4:0-amgen-3q-2026-revenue-10-37b-eps-7-08-10-q-summary/" target="_blank" rel="noopener noreferrer">Q3 10-Q ↗</a>。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · Q3 2026 TOP PRODUCTS &amp; PHARMA MARGIN BENCHMARK</span>
+ <h3 data-i18n-zh="Q3 2026 十大主力产品同比增速与全球药企盈利对比" data-i18n-en="Q3 2026 Top Products YoY &amp; Pharma Margin Benchmark">Q3 2026 十大主力产品同比增速与全球药企盈利对比</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="prod" data-i18n-zh="Q3 主力产品放量 ($M)" data-i18n-en="Q3 Top Products ($M)">Q3 主力产品放量 ($M)</button>
+ <button type="button" class="mui-seg-btn" data-cview="margin" data-i18n-zh="药企营业/净利率对比" data-i18n-en="Pharma Margin Peer">药企营业/净利率对比</button>
+ </div>
+ </div>
+ <div class="bm-canvas-box"><canvas id="cohortCanvas"></canvas></div>
+ <p class="bm-chart-caption">
+ 数据来源：<a class="cite-link" href="https://investors.amgen.com/news-releases/news-release-details/amgen-reports-third-quarter-2026-financial-results/" target="_blank" rel="noopener noreferrer">Amgen Q3 2026 分产品明细表 ↗</a>。Repatha 单季 $1,085M 成为安进史上最快冲破 40 亿美元年化大关的普药重磅品种。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: DELEVERAGING & 5-YEAR EPS COMPOUNDER -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · POST-HORIZON DELEVERAGING &amp; DIVIDEND STREAK</span>
+ <h3 data-i18n-zh="并购去杠杆轨迹与连续 14 年股息复利机器" data-i18n-en="Post-Horizon Deleveraging &amp; 14-Year Dividend Growth">并购去杠杆轨迹与连续 14 年股息复利机器</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="debt" data-i18n-zh="净债务去杠杆 ($B)" data-i18n-en="Debt vs Cash ($B)">净债务去杠杆 ($B)</button>
+ <button type="button" class="mui-seg-btn" data-kview="div" data-i18n-zh="年度股息与 FCF ($B)" data-i18n-en="FCF &amp; Dividends ($B)">年度股息与 FCF ($B)</button>
+ </div>
+ </div>
+ <div class="bm-canvas-box"><canvas id="capitalCanvas"></canvas></div>
+ <p class="bm-chart-caption">
+ 资本配置纪律：2023 年斥资 $278亿 现金收购 Horizon Therapeutics 后，安进将大额股票回购临时降至最低（2026 Q2–Q3 零回购），优先以每年 $80亿–$100亿+ 自由现金流偿债并累积现金（现金由 2025 年底 $9.1B 增至 2026 年 9 月 $13.2B，净债务降至 $40.8B），同时维持连续 14 年股息增长（$2.52/季）。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR BIOPHARMA EPS COMPOUNDER</span>
+ <h3 data-i18n-zh="FY2027–FY2031 营收接棒与 Non-GAAP EPS 情景推演器" data-i18n-en="FY2027–FY2031 Revenue &amp; Non-GAAP EPS Simulator">FY2027–FY2031 营收接棒与 Non-GAAP EPS 情景推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="LOE 承压" data-i18n-en="Bear">LOE 承压</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="基准接棒" data-i18n-en="Base">基准接棒</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="MariTide爆发" data-i18n-en="Bull">MariTide爆发</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span>集团总营收年化增速 (Revenue CAGR)</span><b class="mono" id="lblRevCagr">7.5%</b></div>
+ <input type="range" id="inpRevCagr" min="1" max="14" step="0.5" value="7.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span>2031E Non-GAAP 营业利润率 (Operating Margin)</span><b class="mono" id="lblOpm">48.5%</b></div>
+ <input type="range" id="inpOpm" min="40" max="54" step="0.5" value="48.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span>去杠杆完成后年均净缩股率 (Share Buyback)</span><b class="mono" id="lblBuyRate">1.6%</b></div>
+ <input type="range" id="inpBuyRate" min="0" max="3.5" step="0.2" value="1.6" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$56.4B</b><span>FY31E 总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simOpOut">$27.4B</b><span>FY31E Non-GAAP 营业利润</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEpsOut">$37.80</b><span>FY31E Non-GAAP EPS</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simCagrOut">+10.1%</b><span>5年 EPS 复合增速</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;"><canvas id="simMiniCanvas"></canvas></div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: GLOBAL BIOPHARMA PEER MATRIX & STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · GLOBAL BIOPHARMA BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球生物医药巨头商业模型横向对标与三大阿喀琉斯之踵压测" data-i18n-en="Global Biopharma Peer Matrix &amp; Key Risk Stress Audit">全球生物医药巨头商业模型横向对标与三大阿喀琉斯之踵压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比五大顶级生物制药巨头的管线焦点、研发密度、利润率与商业护城河，并核查安进面临的专利、药价与临床压测。" data-i18n-en="Benchmarking Amgen against Eli Lilly, AbbVie, Novo Nordisk, and Regeneron, plus LOE &amp; IRA stress tests.">对比五大顶级生物制药巨头的管线焦点、研发密度、利润率与商业护城河，并核查安进面临的专利、药价与临床压测。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部药企 (5)" data-i18n-en="All Peers (5)">全部药企 (5)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="bio" data-i18n-zh="生物技术平台派" data-i18n-en="Biotech Platforms">生物技术平台派</button>
+ <button type="button" class="mui-seg-btn" data-pcat="inc" data-i18n-zh="减重/自免巨头" data-i18n-en="GLP-1 / Immuno">减重/自免巨头</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th>公司与代码</th>
+ <th>核心商业模式与研发引擎</th>
+ <th>年度营收规模 (2025/2026E)</th>
+ <th>GAAP 毛利率 / 营业利润率</th>
+ <th>核心重磅支柱与长线护城河</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-amgen" data-row-cat="bio inc">
+ <td><strong>Amgen (AMGN)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>deCODE 遗传学靶点 + 四大治疗矩阵 + 生物类似药盾</td>
+ <td class="mono">$36.75B (26E ~$39.3B)</td>
+ <td class="mono">70.8% GM · 47.3% Non-GAAP OPM</td>
+ <td>17款十亿美元药分散风险；MariTide 长效减重期权；连续14年加息分红</td>
+ </tr>
+ <tr data-row-cat="inc">
+ <td><strong>Eli Lilly (LLY)</strong></td>
+ <td>GLP-1/GIP 代谢双靶点 + 口服小分子与神经退行性</td>
+ <td class="mono">$65.18B (25A, +45%)</td>
+ <td class="mono">~81% GM · 26.4% 净利率</td>
+ <td>Mounjaro/Zepbound 合计 $36.5B 占营收 56%，成长极快但单品集中度较高</td>
+ </tr>
+ <tr data-row-cat="inc">
+ <td><strong>AbbVie (ABBV)</strong></td>
+ <td>自免迭代接棒 (Skyrizi/Rinvoq) + 神经科学 (Botox)</td>
+ <td class="mono">$61.2B (25A)</td>
+ <td class="mono">~70% GM · 28% EBITDA 率</td>
+ <td>成功用 Skyrizi/Rinvoq ($34.5B 26E) 接棒 Humira 专利悬崖的教科书范本</td>
+ </tr>
+ <tr data-row-cat="bio">
+ <td><strong>Regeneron (REGN)</strong></td>
+ <td>VelociGene 人源化抗体小鼠平台 + 眼科/自免双核</td>
+ <td class="mono">~$14B–$15B (15.4k 员工)</td>
+ <td class="mono">高毛利高研发密度</td>
+ <td>Dupixent 与 Eylea HD 主导，当前正面临安进 Pavblu 生物类似药正面竞争</td>
+ </tr>
+ <tr data-row-cat="inc">
+ <td><strong>Novo Nordisk (NVO)</strong></td>
+ <td>百年胰岛素蛋白工程 + 司美格鲁肽代谢垂直霸主</td>
+ <td class="mono">Ozempic/Wegovy ~$33B</td>
+ <td class="mono">高毛利 · 欧洲重资产扩产</td>
+ <td>先发规模极大，但 2026 年面临礼来竞争与美国 Medicare 药价谈判压力</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · BIOSIMILAR &amp; IRA LOE</span>
+ <h4>Prolia/Xgeva 仿制药冲击与 IRA 医保议价压制</h4>
+ <p>地舒单抗（Prolia/Xgeva）Q3 2026 分别下滑 45% 与 47%，同时 Enbrel 自 2026 年起受美国《通胀削减法案》(IRA) Medicare Part D 政府定价生效影响。对冲关键在于 Repatha、Evenity 与 Tezspire 的放量斜率能否持续覆盖存量衰减。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：Prolia/Xgeva 衰减与 IRA 净价影响</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · MARITIDE PHASE 3 BAR</span>
+ <h4>MariTide 减重 III 期临床数据与 GI 耐受性考验</h4>
+ <p>尽管 MariTide 每月乃至每季度一次的超长效给药机制极具差异化，但礼来与诺和诺德已率先推出口服 GLP-1 与周制剂。若 MARITIME III 期胃肠道（GI）耐受性或减重幅度不及预期，市场隐含的 $10B+ 峰值期权将被下修。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：MARITIME III 期读数与耐受性滴定方案</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · FDA &amp; DEBT OVERHANG</span>
+ <h4>Tavneos 监管听证与 $540亿 负债的利息约束</h4>
+ <p>FDA CDER 曾建议自愿撤回血管炎药物 Tavneos（Q3 26 $105M），安进已于 2026 年 6 月申请听证并提交获益风险证据；同时 $540亿 总债务（9M 净利息支出 $19.8亿）要求管理层严守去杠杆纪律，暂缓大额并购与回购。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：Tavneos 听证进展与净债务/EBITDA 下降斜率</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- SOURCES -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威财报、SEC 监管文件与行业研究信源" data-i18n-en="Verified Financial Filings &amp; Industry Sources">权威财报、SEC 监管文件与行业研究信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://investors.amgen.com/news-releases/news-release-details/amgen-reports-third-quarter-2026-financial-results/" target="_blank" rel="noopener noreferrer">
+ <b>Amgen Q3 2026 Financial Results (Nov 3, 2026) ↗</b>
+ <span>官方披露 Q3 2026 营收 $10.37B、17款十亿美元级产品明细、47.3% Non-GAAP 营业利润率及 2026 全年指引</span>
+ </a>
+ <a class="bm-source-item" href="https://www.amgen.com/stories/2026/03/2025-letter-to-shareholders" target="_blank" rel="noopener noreferrer">
+ <b>Amgen CEO Robert Bradway 2025 Letter to Shareholders ↗</b>
+ <span>FY2025 全年营收 $36.8B、FCF $8.1B、股息 $5.1B、研发 $7.3B 与美国本土 $31.5亿 生物制造扩产详情</span>
+ </a>
+ <a class="bm-source-item" href="https://www.tradingview.com/news/tradingview:ee4d2c1899ca4:0-amgen-3q-2026-revenue-10-37b-eps-7-08-10-q-summary/" target="_blank" rel="noopener noreferrer">
+ <b>Amgen Q3 2026 Form 10-Q Key Metrics Summary ↗</b>
+ <span>9M 2026 产品销售 $27.6B（销量 +10%）、Prolia/Xgeva 仿制药侵蚀幅度及关键 III 期临床汇总</span>
+ </a>
+ <a class="bm-source-item" href="https://www.fiercepharma.com/special-reports/top-20-pharma-companies-2025-revenue" target="_blank" rel="noopener noreferrer">
+ <b>Fierce Pharma: Top 20 Pharma Companies by 2025 Revenue ↗</b>
+ <span>安进与礼来、艾伯维、诺和诺德 2025 年全产品线营收及生物类似药板块 ($3.0B) 横向对标</span>
+ </a>
+ </div>
+ </section>
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/amgen_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

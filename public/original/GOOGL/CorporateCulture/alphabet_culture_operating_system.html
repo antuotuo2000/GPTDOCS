@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="googl" data-imported-report>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="谷歌母公司 Alphabet Inc. (NASDAQ: GOOGL) 企业文化与组织操作系统图谱：2015 Alphabet 控股革命与 2023–2026 Google DeepMind 大一统拓扑、Project Aristotle 心理安全感、OKRs 极限目标、Project Oxygen 管理罗盘与三代治理演进。" />
+  <title>谷歌 Alphabet GOOGL 企业文化与组织操作系统 | 数据中心</title>
+  
+  
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/alphabet_culture_operating_system.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky Frosted AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">GOOGL</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <span class="crumb-label hide-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </span>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="谷歌企业文化与组织操作系统图谱" data-i18n-en="Alphabet Organizational OS & Culture Blueprint">谷歌企业文化与组织操作系统图谱</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">ALPHABET OS</span>
+        <span class="mui-chip mui-chip-violet mono hide-sm">re:Work · Oxygen &amp; Aristotle</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索文化法则或高管…" aria-label="快速跳转模块" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <!-- Left Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="组织文化模块与套件导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-violet mono">GOOGL · ORG OPERATING SYSTEM</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="谷歌组织操作系统图谱" data-i18n-en="Alphabet Organizational OS">谷歌组织操作系统图谱</div>
+        <p class="sidebar-subtitle" data-i18n-zh="Alphabet控股伞 × Google DeepMind战时合流 × 极限OKRs × Project Oxygen/Aristotle实证管理科学" data-i18n-en="Alphabet Holding Umbrella × Unified Google DeepMind × Stretch OKRs × Empirical People Analytics">Alphabet控股伞 × Google DeepMind战时合流 × 极限OKRs × Project Oxygen/Aristotle实证管理科学</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="权力底座" data-i18n-en="Governance">权力底座</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="Class B 10票 + 控股伞" data-i18n-en="10-Vote Class B + Umbrella">Class B 10票 + 控股伞</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="Q3'26 编制 / 年化人效" data-i18n-en="Headcount / Rev/FTE">Q3'26 编制 / 年化人效</span>
+            <span class="sidebar-mini-val mono">20.48万 · $2.49M</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="核心操作系统" data-i18n-en="Cultural Kernel">核心操作系统</span>
+            <span class="sidebar-mini-val mono">OKRs + 心理安全感</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="套件导航与组织图谱目录">
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="GOOGL"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" data-i18n-zh="组织架构图谱 (C0–C4)" data-i18n-en="Culture OS Modules (C0–C4)">组织架构图谱 (C0–C4)</div>
+        <ul class="mui-nav-list">
+          <li><a href="#sec-c0" class="mui-nav-link active"><span class="nav-idx mono">C0</span><span data-i18n-zh="双层控股与AI合流拓扑" data-i18n-en="Umbrella & Unified AI Topology">双层控股与AI合流拓扑</span></a></li>
+          <li><a href="#sec-c1" class="mui-nav-link"><span class="nav-idx mono">C1</span><span data-i18n-zh="四大文化代码与氧气罗盘" data-i18n-en="4 Cultural Codes & Oxygen Dial">四大文化代码与氧气罗盘</span></a></li>
+          <li><a href="#sec-c2" class="mui-nav-link"><span class="nav-idx mono">C2</span><span data-i18n-zh="三代治理演进时间轴工作台" data-i18n-en="3-Era Governance Timeline">三代治理演进时间轴工作台</span></a></li>
+          <li><a href="#sec-c3" class="mui-nav-link"><span class="nav-idx mono">C3</span><span data-i18n-zh="巨头组织基因光谱与阴阳对决" data-i18n-en="Mega-Cap Org Genome Arena">巨头组织基因光谱与阴阳对决</span></a></li>
+          <li><a href="#sec-c4" class="mui-nav-link"><span class="nav-idx mono">C4</span><span data-i18n-zh="共识熵增模拟器与六律体检" data-i18n-en="Consensus Latency & 6-Law Audit">共识熵增模拟器与六律体检</span></a></li>
+        </ul>
+      </nav>
+
+      </aside>
+
+    <!-- Main Bespoke Organizational OS Workspace -->
+    <main class="cc-workspace main-content">
+
+      <!-- MODULE C0: TOPOLOGY HERO + INTERACTIVE TOPOLOGY SWITCHER -->
+      <section id="sec-c0" class="cc-hero-shell">
+        <div class="cc-hero-top">
+          <div>
+            <div class="cc-badge-row">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="世界上最大的计算机科学实验室 (World's Greatest CS Lab)" data-i18n-en="WORLD'S GREATEST COMPUTER SCIENCE LAB">世界上最大的计算机科学实验室 (World's Greatest CS Lab)</span>
+              <span class="mui-chip mui-chip-success mono">年化营收 &gt;$5,100亿</span>
+              <span class="mui-chip mui-chip-violet mono">双层股权 + 统一 AI 引擎室</span>
+            </div>
+
+            <h1 class="cc-h1" data-i18n-zh="谷歌企业文化与组织操作系统：<span class='cc-grad'>如何让 20.5 万名聪明绝顶的极客既保持科学自由，又能打赢 AI 闪电战？</span>" data-i18n-en="Alphabet's Cultural Operating System: <span class='cc-grad'>How 205,000 Elite Technologists Balance Scientific Freedom with Wartime AI Execution</span>">
+              谷歌企业文化与组织操作系统：<span class="cc-grad">如何让 20.5 万名聪明绝顶的极客既保持科学自由，又能打赢 AI 闪电战？</span>
+            </h1>
+
+            <p class="cc-lead" id="c0LeadText">
+              苹果用“1997 单一损益表”解决了硬件工业品的软硬咬合难题，而谷歌在过去二十八年解答了另一个世纪管理难题：<strong>如何管理人类历史上规模最庞大的顶尖算法与系统工程师集群，使其不被大企业科层制窒息？</strong>
+              2015 年拉里·佩奇创立 <strong>Alphabet 控股架构</strong>，将搜索/广告核心现金牛与无人驾驶 Waymo、生命科学等超长周期赌注分账激励
+              <a class="cite-link" href="https://abc.xyz/investor/founders-letters/2015/" target="_blank" rel="noopener noreferrer">G is for Google ↗</a>；而当 2023 年生成式 AI 要求全集团毫秒级协同作战时，CEO 桑达尔·皮查伊又对核心 Google 实施了果断的<strong>“反向再集权手术”</strong>——把各自为战的 Google Brain 与 DeepMind 熔铸为单一 <strong>Google DeepMind 引擎室</strong>，将 Android、Chrome 与 Pixel 收归单一 <strong>Platforms &amp; Devices 兵团</strong>，支撑 Alphabet 在 Q3 2026 创下单季营收 <strong>$1,275.8亿（+25% YoY）</strong>的巅峰战绩
+              <a class="cite-link" href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/" target="_blank" rel="noopener noreferrer">Q3'26 财报致辞 ↗</a>。
+            </p>
+
+            <div class="cc-quote-ribbon">
+              <strong>核心管理学遗产（Google re:Work · Project Aristotle 实证定律）：</strong>“我们原以为打造梦之队只需把牛津、MIT 最聪明的极客凑在一起；但对 180 支团队的数百万组数据回归证明，<strong>团队成员如何彼此对待（心理安全感 Psychological Safety）远比团队里有谁重要得多</strong>。”
+              <a class="cite-link" href="https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness" target="_blank" rel="noopener noreferrer">re:Work 实证报告 ↗</a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Org-Chart Topology Switcher -->
+          <div class="cc-topology-box">
+            <div class="cc-topo-head">
+              <strong style="font-size:0.84rem;" data-i18n-zh="组织权力拓扑演进沙盘" data-i18n-en="Org Power Topology Sandbox">组织权力拓扑演进沙盘</strong>
+              <div class="mui-segmented" id="topoSwitch">
+                <button type="button" class="mui-seg-btn active" data-topo="unified" data-i18n-zh="2026：控股伞 + AI大一统" data-i18n-en="2026: Unified AI Spine">2026：控股伞 + AI大一统</button>
+                <button type="button" class="mui-seg-btn" data-topo="siloed" data-i18n-zh="2022前：科研山头分治" data-i18n-en="Pre-2023: Fragmented Silos">2022前：科研山头分治</button>
+              </div>
+            </div>
+
+            <div class="cc-topo-stage" id="topoStage">
+              <div class="cc-topo-hub mono">Alphabet 顶层 (Pichai × Ashkenazi) · 集团共享 AI 研发池 ($7.7B/季)</div>
+              <div class="cc-topo-spokes">
+                <div class="cc-spoke"><b>Google DeepMind</b>Koray 统管 Gemini 工程 + Demis 主导前沿科学</div>
+                <div class="cc-spoke"><b>AI 算力底座</b>Amin Vahdat · TPU 8t/8i 全局统一配额与外售</div>
+                <div class="cc-spoke"><b>Search &amp; 商业</b>Liz Reid &amp; Schindler · AI Mode 与 UCP 一体推进</div>
+                <div class="cc-spoke"><b>Google Cloud</b>Kurian · $30.7B/季 (+103%) + $29.5B Wiz 融合</div>
+                <div class="cc-spoke"><b>Platforms &amp; 硬件</b>Osterloh · Android/Chrome/Pixel/XR 软硬合流</div>
+                <div class="cc-spoke"><b>Other Bets 隔离伞</b>Waymo 独立融资 ($5B贷款) · GFiber 分拆出表</div>
+              </div>
+              <div class="cc-topo-outcome">
+                战果：Gemini 4 Carbon 登顶全球智能榜首，10亿+ 月活极速落地，Cloud 单季翻倍
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE C1: 2x2 CULTURAL OPERATING CODE BENTO + PEOPLE ANALYTICS DIAL -->
+      <section id="sec-c1" class="cc-panel">
+        <div class="cc-panel-head">
+          <div>
+            <span class="cc-kicker mono">MODULE C1 · FOUR CULTURAL OPERATING CODES &amp; PROJECT OXYGEN DIAL</span>
+            <h2 class="cc-h2" data-i18n-zh="四大文化底层代码与“氧气计划（Project Oxygen）”技术管理者能量罗盘" data-i18n-en="4 Cultural Operating Codes & Project Oxygen Engineering Leadership Dial">四大文化底层代码与“氧气计划（Project Oxygen）”技术管理者能量罗盘</h2>
+            <p class="cc-sub" data-i18n-zh="点击左侧任一文化象限，查看其内部运行机制及谷歌技术主管在四大管理维度上的权重分配（源自 Google re:Work 十年追踪研究）。" data-i18n-en="Click any quadrant to inspect its internal rule and engineering manager bandwidth allocation.">点击左侧任一文化象限，查看其内部运行机制及谷歌技术主管在四大管理维度上的权重分配（源自 Google re:Work 十年追踪研究）。</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击象限切换解析 (Q1–Q4)" data-i18n-en="Interactive 2×2 Matrix">点击象限切换解析 (Q1–Q4)</span>
+        </div>
+
+        <div class="cc-code-layout">
+          <div class="cc-quad-grid" id="quadGrid">
+            <button type="button" class="cc-quad-card active" data-quad="0">
+              <div>
+                <div class="cc-quad-top"><span class="cc-quad-num mono">Q1</span><span class="mui-chip mui-chip-primary mono">PSYCHOLOGICAL SAFETY</span></div>
+                <h3>心理安全感 &amp; 无指责事故复盘 (SRE)</h3>
+                <p>谷歌 SRE（站点可靠性工程）文化铁律：当全球服务宕机或模型出错时，撰写详尽的“无指责事后复盘（Blameless Postmortem）”，严禁惩罚诚实上报隐患的工程师，只升级自动化防呆护栏。</p>
+              </div>
+              <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表遗产：Project Aristotle 180 团队头号效能因子 →</span>
+            </button>
+
+            <button type="button" class="cc-quad-card" data-quad="1">
+              <div>
+                <div class="cc-quad-top"><span class="cc-quad-num mono">Q2</span><span class="mui-chip mui-chip-success mono">STRETCH OKRs &amp; PEERS</span></div>
+                <h3>公开极限 OKRs &amp; 独立同侪委员会</h3>
+                <p>季度 OKRs 全网透明且与年终奖金脱钩，以 0.6–0.7 分校准野心；招聘（Hiring Committee）与晋升（Promo Committee）均基于结构化数据包由跨部门同侪盲审，剥夺主管“山头私权”。</p>
+              </div>
+              <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表遗产：守住 $310,826 中位总薪酬的顶尖人才纯度 →</span>
+            </button>
+
+            <button type="button" class="cc-quad-card" data-quad="2">
+              <div>
+                <div class="cc-quad-top"><span class="cc-quad-num mono">Q3</span><span class="mui-chip mui-chip-warning mono">PROJECT OXYGEN 10 RULES</span></div>
+                <h3>氧气计划：做技术教练而非微观监工</h3>
+                <p>Project Oxygen 提炼出谷歌卓越主管十大准则：排名第一的是“做一名好教练”与“赋能团队拒绝微操（No Micromanaging）”，同时必须具备硬核技术底蕴以帮下属扫清跨部门障碍。</p>
+              </div>
+              <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表遗产：主管向上反馈评分（Upward Feedback）制度 →</span>
+            </button>
+
+            <button type="button" class="cc-quad-card" data-quad="3">
+              <div>
+                <div class="cc-quad-top"><span class="cc-quad-num mono">Q4</span><span class="mui-chip mui-chip-violet mono">AI SELF-BOOTSTRAPPING</span></div>
+                <h3>战时去层级化 &amp; AI 编程自举飞轮</h3>
+                <p>2024–2026 谷歌大幅精简中层汇报链（G&amp;A 费率降至 4.8%），全员接入内部 Gemini 4 Argon/Carbon 智能编程代理，使软件工程师将精力从样板代码转向系统架构创新。</p>
+              </div>
+              <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表遗产：Chrome/Search/Ads 代码产出 +35%、缺陷 -30% →</span>
+            </button>
+          </div>
+
+          <!-- Right: Project Oxygen & People Analytics Dial -->
+          <div class="cc-dial-card" id="dialInspector">
+            <div>
+              <span class="mui-chip mui-chip-violet mono" id="dialBadge">GOOGLE re:Work · PROJECT OXYGEN &amp; ARISTOTLE</span>
+              <h3 id="dialTitle" style="font-size:1.03rem;font-weight:800;margin:8px 0 6px;">心理安全感第一定律：为什么“敢说真话”直接决定十亿级系统稳定性？</h3>
+              <p id="dialDesc" style="font-size:0.81rem;color:var(--text-secondary);line-height:1.65;">
+                与苹果高管“40% 精力亲自拍板微观像素细节”不同，谷歌的业务是由数万名分布式工程师共同维护超大规模实时算法系统。Google People Analytics 证明：技术主管最高价值的杠杆在于<strong>营造高心理安全感、清晰对齐跨团队 OKR 愿景并提供硬核架构指导</strong>，而非替一线工程师做微观拍板
+                <a class="cite-link" href="https://rework.withgoogle.com/intl/en/guides/following-the-data-the-research-behind-great-managers" target="_blank" rel="noopener noreferrer">Project Oxygen 10律 ↗</a>。
+              </p>
+            </div>
+
+            <div class="cc-alloc-bars">
+              <div class="cc-alloc-row">
+                <div class="cc-alloc-lbl"><span>Coaching &amp; Psychological Safety（教练辅导与心理安全护航）</span><span class="mono" id="pctOwn">35%</span></div>
+                <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barOwn" style="width:35%;background:#0073E6;"></div></div>
+              </div>
+              <div class="cc-alloc-row">
+                <div class="cc-alloc-lbl"><span>Technical Architecture &amp; AI Leverage（硬核技术把关与AI工具赋能）</span><span class="mono" id="pctLearn">30%</span></div>
+                <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barLearn" style="width:30%;background:#7C3AED;"></div></div>
+              </div>
+              <div class="cc-alloc-row">
+                <div class="cc-alloc-lbl"><span>Vision &amp; Cross-Google OKR Alignment（愿景拆解与跨部门协同）</span><span class="mono" id="pctTeach">25%</span></div>
+                <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barTeach" style="width:25%;background:#16A34A;"></div></div>
+              </div>
+              <div class="cc-alloc-row">
+                <div class="cc-alloc-lbl"><span>Decisive Execution &amp; Unblocking（果断决策砍除流程阻塞）</span><span class="mono" id="pctDel">10%</span></div>
+                <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barDel" style="width:10%;background:#D97706;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE C2: 3-ERA LEADERSHIP TIMELINE SCRUBBER -->
+      <section id="sec-c2" class="cc-panel">
+        <div class="cc-panel-head">
+          <div>
+            <span class="cc-kicker mono">MODULE C2 · THREE-GENERATION GOVERNANCE EVOLUTION (1998–2026+)</span>
+            <h2 class="cc-h2" data-i18n-zh="三代组织治理演进：从“车库三驾马车”到“年化 $5,100亿 全栈 AI 战舰”" data-i18n-en="Three-Era Governance Evolution: From Garage Triumvirate to $510B+ AI Juggernaut">三代组织治理演进：从“车库三驾马车”到“年化 $5,100亿 全栈 AI 战舰”</h2>
+            <p class="cc-sub" data-i18n-zh="切换三个历史纪元，观察谷歌如何在不同规模体量下动态调节“自下而上自由度”与“自上而下战略集权”的配比。" data-i18n-en="Scrub across Alphabet's three governance eras to inspect how freedom vs. central coordination evolved.">切换三个历史纪元，观察谷歌如何在不同规模体量下动态调节“自下而上自由度”与“自上而下战略集权”的配比。</p>
+          </div>
+        </div>
+
+        <div class="cc-era-tabs" id="eraTabs">
+          <button type="button" class="cc-era-tab" data-era="0">
+            <span class="cc-era-yr mono">ERA I · 1998 – 2014</span>
+            <span class="cc-era-leader">佩奇 &amp; 布林 + 施密特</span>
+            <span class="cc-era-tag">双层股权 IPO · OKRs 奠基 · 20% 时间与七大入口成形</span>
+          </button>
+          <button type="button" class="cc-era-tab" data-era="1">
+            <span class="cc-era-yr mono">ERA II · 2015 – 2022</span>
+            <span class="cc-era-leader">佩奇/皮查伊 + 露丝·波拉特</span>
+            <span class="cc-era-tag">Alphabet 控股伞分账 · AI-First 转型 · 云业务艰难筑底</span>
+          </button>
+          <button type="button" class="cc-era-tab active" data-era="2">
+            <span class="cc-era-yr mono">ERA III · 2023 – 2026+</span>
+            <span class="cc-era-leader">皮查伊 × 阿什肯纳齐 × 哈萨比斯</span>
+            <span class="cc-era-tag">GDM 战时合流 · 软硬合一 · Cloud 翻倍与 $2,000亿基建战</span>
+          </button>
+        </div>
+
+        <div class="cc-split-66">
+          <div class="cc-subbox" id="eraCard">
+            <div>
+              <span class="mui-chip mui-chip-primary mono" id="eraBadge">ERA III · FULL-STACK WARTIME AI UNIFICATION (2023–2026+)</span>
+              <h3 id="eraTitle" style="font-size:1.05rem;font-weight:800;margin:8px 0;">皮查伊全栈统合期：打破学院派温床，锻造科研深度与商业速度合一的铁军</h3>
+              <p id="eraDesc" style="font-size:0.84rem;color:var(--text-secondary);line-height:1.72;">
+                面对 2023 年生成式 AI 浪潮与全球反垄断双线大考，皮查伊联合重返研发一线的谢尔盖·布林、新任 CFO Anat Ashkenazi 及 GDM 核心团队完成了谷歌史上最深刻的组织重塑：合并 Brain 与 DeepMind、合并 Android 与硬件、果断精简行政层级并将每年研发拉升至 $800亿+ 量级，驱动年化人均创收从 2022 年低谷的 $1.49M 飙升至 2026Q3 的 <strong>$2.49M</strong>
+                <a class="cite-link" href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/" target="_blank" rel="noopener noreferrer">Q3'26 战报 ↗</a>。
+              </p>
+            </div>
+            <div class="cc-era-kpis" id="eraKpis">
+              <div class="cc-era-kpi"><b class="mono">$510B+</b><span>Q3 2026 年化总营收规模</span></div>
+              <div class="cc-era-kpi"><b class="mono">$2.49M / 人</b><span>20.48万员工年化超高人效</span></div>
+              <div class="cc-era-kpi"><b class="mono">36.2%</b><span>Google Cloud 分部营业利润率</span></div>
+              <div class="cc-era-kpi"><b class="mono">道指成分股</b><span>2026.06 取代威瑞森纳入 DJIA</span></div>
+            </div>
+          </div>
+
+          <div class="cc-subbox">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+              <strong style="font-size:0.92rem;">十年组织效率验证：人均创收跃迁与研发规模复利</strong>
+              <div class="mui-segmented" id="eChartTabs">
+                <button type="button" class="mui-seg-btn active" data-eview="revemp" data-i18n-zh="人均创收跃迁" data-i18n-en="Rev / Employee">人均创收跃迁</button>
+                <button type="button" class="mui-seg-btn" data-eview="rd" data-i18n-zh="研发与营业利润" data-i18n-en="R&D vs Op Profit">研发与营业利润</button>
+              </div>
+            </div>
+            <div class="cc-canvas-wrap">
+              <canvas id="eraCanvas"></canvas>
+            </div>
+            <p style="font-size:0.75rem;color:var(--text-muted);">
+              数据核验：<a class="cite-link" href="https://bullfincher.io/companies/alphabet/number-of-employees" target="_blank" rel="noopener noreferrer">Alphabet 2016–2025 10-K 员工序列 ↗</a>。2022 年疫情扩招曾使人均创收短暂回落至 $1.49M；经 2023–2026 扁平化与 AI 提效，年化人均创收强劲冲上 <strong>$2.49M</strong>。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE C3: MEGA-CAP CULTURAL GENOME ARENA & YIN-YANG CONTRASTS -->
+      <section id="sec-c3" class="cc-panel">
+        <div class="cc-panel-head">
+          <div>
+            <span class="cc-kicker mono">MODULE C3 · GLOBAL TECH &amp; COMPOUNDER CULTURAL GENOME</span>
+            <h2 class="cc-h2" data-i18n-zh="全球商业巨头组织基因光谱：为什么谷歌与苹果是硅谷完美的“阴阳镜像”？" data-i18n-en="Global Mega-Cap Cultural Genome: Why Google and Apple Are Silicon Valley's Yin & Yang">全球商业巨头组织基因光谱：为什么谷歌与苹果是硅谷完美的“阴阳镜像”？</h2>
+            <p class="cc-sub" data-i18n-zh="商业模式的物理属性决定了组织文化：卖硬件精品必须零容错封闭集权，做信息与AI云生态必须概率迭代与开放平台。" data-i18n-en="Business physics shapes culture: hardware icons demand zero-defect secrecy; AI & search thrive on rapid iteration and open platforms.">商业模式的物理属性决定了组织文化：卖硬件精品必须零容错封闭集权，做信息与AI云生态必须概率迭代与开放平台。</p>
+          </div>
+          <div class="mui-segmented" id="gChartTabs">
+            <button type="button" class="mui-seg-btn active" data-gview="emp" data-i18n-zh="人均创收对比 ($M)" data-i18n-en="Rev / Employee ($M)">人均创收对比 ($M)</button>
+            <button type="button" class="mui-seg-btn" data-gview="opm" data-i18n-zh="综合毛利率对比 (%)" data-i18n-en="Gross Margin (%)">综合毛利率对比 (%)</button>
+          </div>
+        </div>
+
+        <div class="cc-split-75">
+          <div class="cc-subbox">
+            <div class="cc-canvas-wrap" style="height:300px;">
+              <canvas id="genomeCanvas"></canvas>
+            </div>
+            <p style="font-size:0.75rem;color:var(--text-muted);">
+              横向对标洞察：<strong>Alphabet ($2.49M 年化人效 / 59.7% 毛利率)</strong> 兼具苹果级的人均产出规模与高于硬件公司的软件/云综合毛利率，同时于 2026 年获得伯克希尔 $100亿 战略入股背书。
+            </p>
+          </div>
+
+          <div class="cc-duel-list">
+            <div class="cc-duel-card">
+              <h4><span>谷歌 vs 苹果：论文开源影响力 vs 绝密黑布工业品</span><span class="mui-chip mui-chip-primary mono">开放生态 vs 封闭精品</span></h4>
+              <p>苹果硬件一旦开模量产便无法撤回，因此必须靠“唯一损益表+严格物理隔舱保密”追求首发完美；而谷歌搜索与大模型每天在线进行上万次 A/B 灰度实验，靠开放 Android、Kubernetes、TensorFlow/Gemma 标准吸引全球开发者共建生态。</p>
+            </div>
+            <div class="cc-duel-card">
+              <h4><span>谷歌 vs Meta：深科技长线基础设施 vs 社交敏捷闪电战</span><span class="mui-chip mui-chip-warning mono">十年深潜 vs 快速跟随</span></h4>
+              <p>扎克伯格以极强个人集权在推荐算法与开源模型上反应神速；而谷歌凭借学院派长线耐心提前十年布局自研 TPU、光交换机与无人驾驶 Waymo，在重算力物理基建期展现出更深厚的全栈护城河。</p>
+            </div>
+            <div class="cc-duel-card">
+              <h4><span>谷歌 vs 伯克希尔：从学习巴菲特控股伞，到迎来伯克希尔入股</span><span class="mui-chip mui-chip-violet mono">内生孵化 vs 并购联邦</span></h4>
+              <p>佩奇 2015 年设计 Alphabet 时明确致敬巴菲特的控股架构，区别在于伯克希尔收购成熟现金牛，而 Alphabet 孵化自研前沿科技；2026 年 6 月伯克希尔斥资 $100亿 私募认购 Alphabet 股票，完成了一段跨越十年的商业佳话。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cc-table-wrap">
+          <table class="cc-table">
+            <thead>
+              <tr>
+                <th>标杆企业</th>
+                <th>组织架构范式</th>
+                <th>核心文化信条</th>
+                <th>员工规模与人效</th>
+                <th>组织适配边界与潜在暗礁</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-googl">
+                <td><strong>Alphabet (GOOGL)</strong></td>
+                <td>Alphabet 控股伞 + 内部统一 AI 中枢</td>
+                <td>极限 OKRs · 心理安全感 · 10x 登月思维</td>
+                <td class="mono">20.48万人 · $2.49M/人</td>
+                <td>基础科研无敌；需持续警惕和平时期委员会共识拖慢产品收敛</td>
+              </tr>
+              <tr>
+                <td><strong>Apple (AAPL)</strong></td>
+                <td>纯粹职能制集权 + 全公司唯一 P&amp;L</td>
+                <td>专家领导专家 · DRI 问责 · 极致减法</td>
+                <td class="mono">16.7万人 · $2.87M/人</td>
+                <td>软硬一体工业精品巅峰；隔舱保密文化对开源学术人才吸引力较弱</td>
+              </tr>
+              <tr>
+                <td><strong>NVIDIA (NVDA)</strong></td>
+                <td>超扁平蛛网职能制 (~60直报CEO)</td>
+                <td>无事业部墙 · Top-5 邮件 · 光速执行</td>
+                <td class="mono">~4.2万人 · ~$5.14M/人</td>
+                <td>算力军火库极致效率；高度绑定全球 AI 资本开支景气周期</td>
+              </tr>
+              <tr>
+                <td><strong>Microsoft (MSFT)</strong></td>
+                <td>三大企业业务集团事业部矩阵</td>
+                <td>成长型思维 · 企业客户成功与生态结盟</td>
+                <td class="mono">~22.3万人 · ~$1.49M/人</td>
+                <td>B2B 渠道覆盖极强；消费互联网原生爆款孵化能力弱于谷歌</td>
+              </tr>
+              <tr>
+                <td><strong>Amazon (AMZN)</strong></td>
+                <td>契约化 API 解耦 + 双披萨自治小队</td>
+                <td>Day 1 客户痴迷 · 六页纸备忘录 · 节俭</td>
+                <td class="mono">~155万人(含履约)</td>
+                <td>运营执行力极强；严苛节俭文化在争夺诺奖级基础科学家上略逊</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- MODULE C4: CONSENSUS ENTROPY SIMULATOR & 6-LAW DIAGNOSTIC CHECKLIST -->
+      <section id="sec-c4" class="cc-panel">
+        <div class="cc-panel-head">
+          <div>
+            <span class="cc-kicker mono">MODULE C4 · CONSENSUS LATENCY SIMULATOR &amp; 6-LAW HEALTH AUDIT</span>
+            <h2 class="cc-h2" data-i18n-zh="大企业“共识延迟 vs 战时速度”推演器与谷歌组织六律自检清单" data-i18n-en="Consensus Latency vs. Wartime Velocity Simulator & 6-Law Audit">大企业“共识延迟 vs 战时速度”推演器与谷歌组织六律自检清单</h2>
+            <p class="cc-sub" data-i18n-zh="模拟谷歌 2023–2026 组织改革的核心变量：拖动滑块观察“模型团队合流度”、“审批层级”与“内部 AI 编码渗透率”如何改变发版速度。" data-i18n-en="Simulate how AI team unification, management layers, and internal AI coding adoption drive shipping velocity.">模拟谷歌 2023–2026 组织改革的核心变量：拖动滑块观察“模型团队合流度”、“审批层级”与“内部 AI 编码渗透率”如何改变发版速度。</p>
+          </div>
+          <span class="mui-chip mui-chip-success mono" id="auditScoreChip">文化自检核验：0 / 6 项</span>
+        </div>
+
+        <div class="cc-split-57">
+          <div class="cc-subbox">
+            <div class="cc-sliders">
+              <div class="cc-slider-item">
+                <div class="cc-slider-lbl"><span>核心模型与平台合流度 (AI Spine Unification)</span><b class="mono" id="valUni">92% (大一统)</b></div>
+                <input type="range" id="rngUni" min="35" max="98" step="3" value="92" />
+              </div>
+              <div class="cc-slider-item">
+                <div class="cc-slider-lbl"><span>内部 Gemini 4 编码代理渗透率 (AI Coding Leverage)</span><b class="mono" id="valAiCode">85%</b></div>
+                <input type="range" id="rngAiCode" min="10" max="95" step="5" value="85" />
+              </div>
+              <div class="cc-slider-item">
+                <div class="cc-slider-lbl"><span>跨委员会合规与汇报层级摩擦 (Bureaucratic Drag)</span><b class="mono" id="valDrag">22% (战时精简)</b></div>
+                <input type="range" id="rngDrag" min="12" max="75" step="3" value="22" />
+              </div>
+            </div>
+
+            <div class="cc-sim-scores">
+              <div class="cc-sim-score"><b class="mono" id="outShip">91 / 100</b><span>前沿模型发版速度</span></div>
+              <div class="cc-sim-score"><b class="mono" id="outCode">+34%</b><span>人均高质量代码量</span></div>
+              <div class="cc-sim-score"><b class="mono" id="outRoi">32.4%</b><span>稳态营业利润率锚</span></div>
+            </div>
+
+            <div class="cc-canvas-wrap" style="height:155px;">
+              <canvas id="entropyCanvas"></canvas>
+            </div>
+          </div>
+
+          <div class="cc-subbox">
+            <strong style="font-size:0.92rem;">谷歌组织操作系统持续性跟踪核查表（点击勾选自动保存状态）</strong>
+            <div class="cc-audit-list" id="cultureAuditList">
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c1" />
+                <div><b>1. Google DeepMind 单一引擎未分裂</b><span>基础大模型与 TPU 算力调度是否继续保持全局一盘棋，杜绝山头复燃？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c2" />
+                <div><b>2. 2027 工程生产力红利兑现</b><span>全员部署 Gemini 4 Carbon 后，研发人员增速是否显著低于营收增速？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c3" />
+                <div><b>3. 敢于自我革命重构搜索框</b><span>管理层是否坚持“用户体验优先于短期单次变现”，全力推进 AI Mode？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c4" />
+                <div><b>4. Wiz 创业铁军文化无损融合</b><span>$295亿并购完成后，Wiz 团队能否保持独立多云敏捷度而非被大厂流程同化？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c5" />
+                <div><b>5. Other Bets 严格执行外部资本纪律</b><span>Waymo 扩城与 Isomorphic 管线是否持续引入外部定价与里程碑考核？</span></div>
+              </label>
+              <label class="cc-audit-item">
+                <input type="checkbox" data-cchk="c6" />
+                <div><b>6. 顶尖 AI 科学家留存率与人才磁石</b><span>面对初创高薪挖角，GDM 算力充裕度与科学影响力是否稳居行业首选？</span></div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIMARY SOURCES -->
+      <section class="cc-panel" aria-label="权威学术与商业文献信源">
+        <div class="cc-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+          <div>
+            <span class="cc-kicker mono">VERIFIED PRIMARY LITERATURE &amp; FILINGS</span>
+            <h2 class="cc-h2" data-i18n-zh="权威管理学实证文献、创始人公开信与 SEC 监管信源" data-i18n-en="Verified Management Science Papers, Founders' Letters & SEC Filings">权威管理学实证文献、创始人公开信与 SEC 监管信源</h2>
+          </div>
+        </div>
+        <div class="cc-sources-grid">
+          <a class="cc-source-card" href="https://rework.withgoogle.com/intl/en/guides/following-the-data-the-research-behind-great-managers" target="_blank" rel="noopener noreferrer">
+            <b>Google re:Work: Project Oxygen &amp; Project Aristotle ↗</b>
+            <span>谷歌官方二十年管理学实证指南：优秀技术主管十大行为准则与高效团队动力学研究</span>
+          </a>
+          <a class="cc-source-card" href="https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness" target="_blank" rel="noopener noreferrer">
+            <b>Google re:Work: Psychological Safety &amp; Team Dynamics ↗</b>
+            <span>心理安全感（Psychological Safety）、相互依赖、结构清晰度、意义感与影响力五大团队支柱</span>
+          </a>
+          <a class="cc-source-card" href="https://store.hbr.org/product/google-s-project-oxygen-do-managers-matter/313110" target="_blank" rel="noopener noreferrer">
+            <b>Harvard Business Review: Google's Project Oxygen (313110) ↗</b>
+            <span>哈佛商学院经典案例（Garvin, Wagonfeld &amp; Kind）：谷歌如何用统计证据重塑工程师对管理的认知</span>
+          </a>
+          <a class="cc-source-card" href="https://abc.xyz/investor/founders-letters/2015/" target="_blank" rel="noopener noreferrer">
+            <b>Larry Page 2015 Alphabet Letter: "G is for Google" ↗</b>
+            <span>确立 Alphabet 伞状控股公司、核心业务与 Other Bets 独立 CEO 负责制及长线资本配置的纲领文件</span>
+          </a>
+          <a class="cc-source-card" href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank" rel="noopener noreferrer">
+            <b>Sundar Pichai &amp; Demis Hassabis 2026 GDM Memo ↗</b>
+            <span>Google DeepMind 最新双核分工（Koray 统管 Gemini 与产品工程，Demis 聚焦科学突破）及 Jeff Dean 新探索</span>
+          </a>
+          <a class="cc-source-card" href="https://www.sec.gov/Archives/edgar/data/1652044/000130817926000342/goog-20260424.htm" target="_blank" rel="noopener noreferrer">
+            <b>Alphabet 2026 DEF 14A Proxy Statement (SEC) ↗</b>
+            <span>董事会构成（Hennessy, Doerr, Arnold 等）、Class A/B/C 三类股权投票权结构与高管激励计划法定披露</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  
+<script src="../../_shared/alphabet_culture_operating_system.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

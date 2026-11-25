@@ -1,0 +1,67 @@
+
+    /* Exact image_f21250.jpg MUI 6x2 Top Switcher & Hero Surface Fidelity */
+    .ip-hub-banner {
+      padding: 16px 20px !important;
+      border-radius: 14px !important;
+      background-color: var(--bg-paper) !important;
+      border: 1px solid var(--mui-primary-border) !important;
+      box-shadow: var(--shadow-card) !important;
+      background-image: var(--blueprint-grid) !important;
+      background-size: 24px 24px !important;
+    }
+    .ip-hub-top {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      gap: 10px !important;
+      margin-bottom: 12px !important;
+    }
+    .ip-hub-title-group {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      flex-wrap: wrap !important;
+    }
+    .ip-hub-controls {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      flex-wrap: wrap !important;
+    }
+    .ip-pill-grid {
+      display: grid !important;
+      grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+      gap: 8px !important;
+    }
+    @media (max-width: 1023px) {
+      .ip-pill-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+    }
+    @media (max-width: 720px) {
+      .ip-pill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+      .ip-hub-banner { padding: 14px !important; }
+    }
+    @media (max-width: 440px) {
+      .ip-pill-grid { grid-template-columns: minmax(0, 1fr) !important; }
+    }
+    .ip-pill-btn {
+      padding: 8px 10px !important;
+      gap: 8px !important;
+      border-radius: 10px !important;
+    }
+    .ip-pill-mono {
+      width: 28px !important;
+      height: 28px !important;
+      border-radius: 7px !important;
+      font-size: 0.69rem !important;
+    }
+    .ip-pill-name {
+      font-size: 0.79rem !important;
+    }
+    .ip-pill-meta {
+      font-size: 0.67rem !important;
+    }
+    .quick-chapter-strip {
+      display: none !important;
+    }
+  

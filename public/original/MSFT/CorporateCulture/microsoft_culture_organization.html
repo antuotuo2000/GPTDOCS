@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="msft" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>微软 Microsoft MSFT 企业文化与组织架构 | 数据中心</title>
+ <meta name="description" content="微软公司 (Microsoft Corp., NASDAQ: MSFT) 企业文化与组织架构深度研究报告：单一法人统一工程架构 (One Microsoft)、成长型思维 (Growth Mindset / Learn-It-All)、商业CEO与技术核心双核分治、SFI 安全绩效一票否决、FY2026 创纪录 $3,318.4亿营收与 $1,337.5亿净利润及 Q1 FY2027 Agents & Infra 战略重组。" />
+ 
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/microsoft_culture_organization.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">MSFT</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <span class="crumb-label hide-sm">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </span>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="微软公司 (Microsoft) 企业文化与组织架构研报" data-i18n-en="Microsoft Corporate Culture &amp; Org Architecture Report">微软公司 (Microsoft) 企业文化与组织架构研报</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: MSFT</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY2026 10-K · Q1 FY27</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="exportHtmlBtn" class="mui-dl-btn" title="下载独立 HTML 文件">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+ <span class="hide-sm" data-i18n-zh="下载 HTML" data-i18n-en="Download .html">下载 HTML</span>
+ </button>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与套系导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">MSFT · CORPORATE CULTURE</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="微软企业文化研报" data-i18n-en="Microsoft Culture Monograph">微软企业文化研报</div>
+ <p class="sidebar-subtitle" data-i18n-zh="单一实体工程架构 × Learn-It-All 成长型思维 × 商业CEO与技术核心双核分治 × SFI 安全绩效问责" data-i18n-en="Unitary One Microsoft Org × Learn-It-All Growth Mindset × Commercial CEO Split × SFI Accountability">单一实体工程架构 × Learn-It-All 成长型思维 × 商业CEO与技术核心双核分治 × SFI 安全绩效问责</p>
+
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="组织形态" data-i18n-en="Org Model">组织形态</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="单一公司 · 双核分治" data-i18n-en="Unitary · Dual-Core">单一公司 · 双核分治</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="FY26 全职编制 / 人效" data-i18n-en="FY26 FTEs / Rev per FTE">FY26 全职编制 / 人效</span>
+ <span class="sidebar-mini-val mono">22.3万人 · $1.49M</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="营业利润率 / 净利率" data-i18n-en="Op / Net Margin">营业利润率 / 净利率</span>
+ <span class="sidebar-mini-val mono">46.8% (Q1: 49.8%) · 40.3%</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="套系导航与章节目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="MSFT"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-divider"></div>
+
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary &amp; KPIs">执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span data-i18n-zh="单一公司架构与双核变阵" data-i18n-en="Unitary Org &amp; AI Realignment">单一公司架构与双核变阵</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span data-i18n-zh="四大文化支柱与雷达评估" data-i18n-en="4 Cultural Pillars &amp; Radar">四大文化支柱与雷达评估</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span data-i18n-zh="全球科技巨头文化横向对比" data-i18n-en="Global Big Tech Peer Matrix">全球科技巨头文化横向对比</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span data-i18n-zh="文化复利、人效脱钩与推演" data-i18n-en="Margin Leverage &amp; Flywheel">文化复利、人效脱钩与推演</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span data-i18n-zh="三代演进与四大战役复盘" data-i18n-en="3-Era Evolution &amp; Case Studies">三代演进与四大战役复盘</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span data-i18n-zh="微软组织法则核查清单" data-i18n-en="Org Diagnostic Checklist">微软组织法则核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span data-i18n-zh="数据来源与监管核验索引" data-i18n-en="Primary Filings &amp; Sources">数据来源与监管核验索引</span></a></li>
+ </ul>
+ </nav>
+
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+
+ <!-- ================================================================
+ 00 执行摘要与核心指标
+ ================================================================ -->
+ <section id="sec-00" class="mui-paper hero-card section-block">
+ <div class="status-strip">
+ <span class="mui-chip mui-chip-primary" data-i18n-zh="组织史定评：商业史最成功的“大象重舞”范本 —— 从末位淘汰内斗帝国蜕变为 $3.6T+ 智能体平台" data-i18n-en="Verdict: Business History's Greatest Cultural Turnaround — From Stack-Ranking Fiefdoms to a $3.6T+ Agentic Platform">组织史定评：商业史最成功的“大象重舞”范本 —— 从末位淘汰内斗帝国蜕变为 $3.6T+ 智能体平台</span>
+ <span class="mui-chip" data-i18n-zh="研究横跨：盖茨 PC 霸权 (1975–2000) · 鲍尔默孤岛困局 (2000–2014) · 纳德拉重塑与 AI 变阵 (2014–2026+)" data-i18n-en="Scope: Gates PC Era (1975–2000) · Ballmer Silos (2000–2014) · Nadella Renewal &amp; AI Reboot (2014–2026+)">研究横跨：盖茨 PC 霸权 (1975–2000) · 鲍尔默孤岛困局 (2000–2014) · 纳德拉重塑与 AI 变阵 (2014–2026+)</span>
+ <span class="mui-chip mui-chip-success mono">FY2026 10-K &amp; Q1 FY27</span>
+ </div>
+
+ <div class="hero-overline mono">
+ <span>CORE THESIS · 成长型思维 (Learn-It-All) × 单一公司跨栈复用 (One Microsoft) × 商业/技术双核分治 × SFI 安全绩效问责</span>
+ </div>
+
+ <h1 class="hero-h1" data-i18n-zh="微软公司 Microsoft (MSFT) 企业文化与组织架构深度研究报告：<span class='gradient-accent'>“无所不知”到“学无止境”的文化重生，以及 22.3 万人巨舰的 AI 创业化手术</span>" data-i18n-en="Microsoft Corp. (MSFT) Corporate Culture &amp; Organizational Architecture Deep Dive: <span class='gradient-accent'>From 'Know-It-All' Fiefdoms to 'Learn-It-All' Renewal &amp; Startup-Speed AI Execution</span>">
+ 微软公司 Microsoft (MSFT) 企业文化与组织架构深度研究报告：<span class="gradient-accent">“无所不知”到“学无止境”的文化重生，以及 22.3 万人巨舰的 AI 创业化手术</span>
+ </h1>
+
+ <p class="lead-prose">
+ 在硅谷五十年沉浮史中，几乎没有第二家曾陷入“中年官僚病”的初代霸主能连续跨越 PC、云计算与生成式 AI 三次技术大海啸。2014 年萨提亚·纳德拉（Satya Nadella）接棒前，微软曾受困于臭名昭著的<strong>“强制正态分布末位淘汰（Stack Ranking）”</strong>与各自拿枪互指的部门藩篱；纳德拉上任后引入斯坦福心理学家卡罗尔·德韦克的<strong>“成长型思维（Growth Mindset）”</strong>，用“学无止境者（Learn-it-all）”取代“无所不知者（Know-it-all）”，并将 LinkedIn、GitHub、Nuance 与动视暴雪全部融入<strong>单一法人工程与商业主干（One Microsoft，高管不挂财报分部头衔）</strong>
+ <a class="cite-link" href="https://querychart.io/org-templates/microsoft-organizational-structure" target="_blank" rel="noopener noreferrer">组织架构解析 ↗</a>。
+ 据微软 FY2026 Form 10-K 与 Q1 FY2027 财报，面对 AI 时代“大公司体型可能沦为劣势”的警觉，纳德拉果断退役传统庞杂的 SLT 层级、任命 <strong>Judson Althoff 为商业 CEO</strong> 以解放自身深耕底层架构，并在<strong>全职员工同比缩减 5,000 人至 223,000 人（-2.2% YoY）</strong>的同时，创造出全年营收 <strong>$3,318.39亿（+17.8%）</strong>、营业利润 <strong>$1,552.37亿（营业利润率 46.8%，Q1 FY27 进一步飙至 49.8%！）</strong>、GAAP 净利润 <strong>$1,337.49亿（+31.3%）</strong>及人均创收 <strong>$1.49M</strong> 的历史巅峰战绩
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">SEC FY26 8-K ↗</a>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">SEC Q1 FY27 ↗</a>。
+ </p>
+
+ <!-- 3 Core Thesis Cards -->
+ <div class="grid-3" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div class="mui-avatar-icon">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+ </div>
+ <h3 data-i18n-zh="单一实体横向工程栈 (Unitary One Microsoft)" data-i18n-en="Unitary Cross-Segment Engineering Stack">单一实体横向工程栈 (Unitary One Microsoft)</h3>
+ <p data-i18n-zh="对外财报虽披露分部（FY27 起重组为 Agents & Infra 与 Devices & Consumer），但内部无任何高管挂“分部总裁”头衔，云、AI 与安全底层工程横向贯通全产品。" data-i18n-en="Financial segments (now Agents & Infra and Devices & Consumer) are reporting constructs—no executive holds a segment president title, enabling horizontal platform reuse.">对外财报虽披露分部（FY27 起重组为 Agents &amp; Infra 与 Devices &amp; Consumer），但内部无任何高管挂“分部总裁”头衔，云、AI 与安全底层工程横向贯通全产品。</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+ </div>
+ <h3 data-i18n-zh="2026 双核变阵与退役旧 SLT 官僚层" data-i18n-en="2026 Dual-Core Split &amp; Retiring Legacy SLT">2026 双核变阵与退役旧 SLT 官僚层</h3>
+ <p data-i18n-zh="Judson Althoff 升任商业 CEO 统合全球销售与市场，纳德拉直管 ~35 人扁平创业型工程领袖圈并每周主持 Copilot 站会，把 22 万巨舰拉回初创节奏。" data-i18n-en="Judson Althoff runs global commercial operations as CEO of Microsoft Commercial, freeing Nadella to lead a flat 35-person technical builder group and weekly Copilot standups.">Judson Althoff 升任商业 CEO 统合全球销售与市场，纳德拉直管 ~35 人扁平创业型工程领袖圈并每周主持 Copilot 站会，把 22 万巨舰拉回初创节奏。</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+ </div>
+ <h3 data-i18n-zh="SFI 安全入绩效 × AI 时代首次减员提效" data-i18n-en="SFI Comp Mandate × Decoupling Revenue from FTEs">SFI 安全入绩效 × AI 时代首次减员提效</h3>
+ <p data-i18n-zh="将“安全高于一切（Secure Future Initiative）”写入全员绩效考核；同时借内部 AI 提效与 3 天返岗/自愿离职优化，首次在减员 2.2% 下实现营收大涨 18%。" data-i18n-en="Ties every employee's compensation review to Secure Future Initiative (SFI) security metrics while growing FY26 sales +18% on 2.2% fewer FTEs.">将“安全高于一切（Secure Future Initiative）”写入全员绩效考核；同时借内部 AI 提效与 3 天返岗/自愿离职优化，首次在减员 2.2% 下实现营收大涨 18%。</p>
+ </div>
+ </div>
+
+ <!-- 4 KPI Cards -->
+ <div class="grid-4">
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="人均创收与编制脱钩 (FY26)" data-i18n-en="Rev / FTE &amp; Headcount Discipline">人均创收与编制脱钩 (FY26)</span>
+ <span class="mui-chip mui-chip-primary mono">-5,000 人 (-2.2%)</span>
+ </div>
+ <div class="kpi-value mono">$1.49M</div>
+ <p class="kpi-desc">22.3 万名全职员工（研发 7.7 万、运营 8.9 万）人均创收由 FY22 的 $0.90M 跃升至 $1.49M，中位员工年薪达 $215,057 <a class="cite-link" href="https://gloom.sh/stocks/msft/proxy/2026" target="_blank" rel="noopener noreferrer">2026 DEF 14A ↗</a>。</p>
+ </div>
+
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="FY2026 创纪录营收与净利" data-i18n-en="FY2026 Record Revenue &amp; Profit">FY2026 创纪录营收与净利</span>
+ <span class="mui-chip mui-chip-success mono">净利 $133.7B</span>
+ </div>
+ <div class="kpi-value mono">$331.8B</div>
+ <p class="kpi-desc">FY26 总营收同比增长 +17.8%，GAAP 净利润超越苹果达 $1,337.49亿（+31.3%），稀释 EPS $17.95 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">SEC FY26 8-K ↗</a>。</p>
+ </div>
+
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="全栈协同营业利润率巅峰" data-i18n-en="Peak Operating Margin Leverage">全栈协同营业利润率巅峰</span>
+ <span class="mui-chip mui-chip-warning mono">Q1 FY27 达 49.8%</span>
+ </div>
+ <div class="kpi-value mono">46.8%</div>
+ <p class="kpi-desc">尽管投入千亿 AI 基建，严密费用纪律推动营业利润率由 FY22 的 42.1% 连升至 FY26 的 46.8% 及 Q1 FY27 的 49.8% <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">Q1 FY27 8-K ↗</a>。</p>
+ </div>
+
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="商业履约积压池与全栈研发" data-i18n-en="Commercial RPO &amp; R&amp;D Pool">商业履约积压池与全栈研发</span>
+ <span class="mui-chip mui-chip-violet mono">研发 $35.56B</span>
+ </div>
+ <div class="kpi-value mono">$678B</div>
+ <p class="kpi-desc">商业 RPO 同比暴涨 +84% 至 $6,780亿（2.0x 年营收）；FY26 研发投入 $355.62亿 显著高于销售营销费用（$267.10亿） <a class="cite-link" href="https://www.microsoft.com/investor/reports/ar26/index.html" target="_blank" rel="noopener noreferrer">2026 AR ↗</a>。</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 01 单一公司架构与双核变阵
+ ================================================================ -->
+ <section id="sec-01" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 01 · UNITARY ARCHITECTURE &amp; 2026 DUAL-CORE REALIGNMENT</div>
+ <h2 class="sec-h2" data-i18n-zh="一、单一公司架构与 2026 双核变阵：为什么微软没有控股子公司和“分部总裁”？" data-i18n-en="1. Unitary Engineering Backbone &amp; 2026 Dual-Core Split: Why Microsoft Has No Segment Presidents">一、单一公司架构与 2026 双核变阵：为什么微软没有控股子公司和“分部总裁”？</h2>
+ <p class="sec-sub" data-i18n-zh="拆解雷德蒙德最被外界误解的真相：财报分部只是会计汇总口径，底层工程与商业铁军完全横向拉通" data-i18n-en="Inside Redmond's least-understood secret: reporting segments are disclosure constructs over one unified engineering &amp; GTM spine">拆解雷德蒙德最被外界误解的真相：财报分部只是会计汇总口径，底层工程与商业铁军完全横向拉通</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">研发 $35.6B = 1.33x 销售营销费</span>
+ </div>
+
+ <!-- Architectural Blueprint Diagram -->
+ <div class="arch-blueprint">
+ <div class="arch-hub">
+ <div class="arch-hub-title">Microsoft Corp. 核心决策中枢（One Microsoft Way, Redmond · 16 直报核心 + 35 人创业型工程委员会）</div>
+ <div class="arch-hub-sub">双核统帅：Satya Nadella (董事长兼 CEO · 直抓技术架构与 AI) × Judson Althoff (商业 CEO · 统揽全球 GTM/销售/市场/运营) × Amy Hood (CFO)</div>
+ </div>
+ <div class="arch-nodes">
+ <div class="arch-node">
+ <div class="arch-node-tag mono">CLOUD &amp; CORE AI · 算力与开发者栈</div>
+ <div class="arch-node-name">Cloud + AI &amp; CoreAI</div>
+ <div class="arch-node-desc">Scott Guthrie &amp; Jay Parikh：Azure ($33.17B/季)、Maia/Cobalt 自研芯片、Fabric 数据湖、Foundry 与 GitHub 开发者工厂。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono">COPILOT &amp; WORK · 生产力与智能体</div>
+ <div class="arch-node-name">M365, Copilot &amp; Agents</div>
+ <div class="arch-node-desc">Ryan Roslansky &amp; Charles Lamanna：Office 套件、LinkedIn、M365 Copilot (3,000万+席位)、Agent 365 与 Dynamics。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono">CONSUMER AI &amp; XBOX · 前沿模型与娱乐</div>
+ <div class="arch-node-name">Microsoft AI &amp; XBOX</div>
+ <div class="arch-node-desc">Mustafa Suleyman (MAI 超级智能与消费级 Copilot/Bing) &amp; Asha Sharma (2026.02 接掌 Xbox、暴雪与跨端游戏)。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono">SECURITY &amp; QUANTUM · 安全与前沿发现</div>
+ <div class="arch-node-name">Security (SFI) &amp; Discovery</div>
+ <div class="arch-node-desc">Hayete Gallot (10,000人安全工程与零信任护盾) &amp; Jason Zander (Majorana 1 拓扑量子与科学智能体)。</div>
+ </div>
+ </div>
+ <div class="arch-platform-bar">
+ <div class="arch-platform">
+ <strong>并购资产全融合法则（Zero Holding-Company Silos）</strong>
+ <span>不同于 Alphabet 独立孵化子公司，微软将 LinkedIn、GitHub、Nuance 全部折入统一身份、安全与云管理线，实现跨产品交叉复利。</span>
+ </div>
+ <div class="arch-platform">
+ <strong>商业 CEO 集约化铁军 × 每周 Copilot 核心三人站会</strong>
+ <span>Althoff 统合全球 4.3 万销售营销大军对客户输出“一张总账单”；Lamanna、Roslansky 与 Andreou 每周向纳德拉直接对齐智能体迭代。</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- 3 Structural Design Principles -->
+ <div class="grid-3" style="margin-bottom: 16px;">
+ <div class="feature-card">
+ <h3 data-i18n-zh="1. 退役传统 SLT，重建扁平创业型工程圈" data-i18n-en="1. Retiring Legacy SLT for a 35-Leader Builder Circle">1. 退役传统 SLT，重建扁平创业型工程圈</h3>
+ <p>面对 AI 时代初创对手的极速迭代，纳德拉悄然退役了沿用多年的重度官僚化 SLT（高级领导团队）惯例，改由约 35 名贴近代码与模型一线的工程及产品负责人在扁平架构下高频协同决策 <a class="cite-link" href="https://www.businessinsider.com/satya-nadella-microsoft-ai-leadership-reset-2026-5" target="_blank" rel="noopener noreferrer">BI 深度报道 ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <h3 data-i18n-zh="2. 设立“商业 CEO”实现技术与营收双解耦" data-i18n-en="2. Appointing a Commercial CEO to Free Technical Bandwidth">2. 设立“商业 CEO”实现技术与营收双解耦</h3>
+ <p>通过提拔资深商业统帅 Judson Althoff 出任 Microsoft Commercial CEO（整合 CMO Takeshi Numoto 与 COO 运营线），纳德拉将日常企业合同谈判交由专职商业中枢，自身全情投入数据中心架构、芯片与超级智能研发 <a class="cite-link" href="https://timesofindia.indiatimes.com/technology/tech-news/the-year-microsoft-ceo-satya-nadella-appointed-new-ceo-to-run-the-companys-biggest-business-with-the-aim-to-focus-on-/articleshow/126291171.cms" target="_blank" rel="noopener noreferrer">双核改组 ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <h3 data-i18n-zh="3. 从“福利俱乐部”转向高绩效密度与自愿精简" data-i18n-en="3. High-Rigor Performance Bar, 3-Day RTO &amp; VEO Flattening">3. 从“福利俱乐部”转向高绩效密度与自愿精简</h3>
+ <p>首席人力官 Amy Coleman 上任后全面升级绩效考核刚性、推行每周 3 天返岗办公（RTO），并于 2026 年 10 月向约 6 万名 Level 70（VP级）及以下合格员工开放自愿离职计划（VEO），主动削减中层管理冗余 <a class="cite-link" href="https://www.crn.com/news/ai/2026/microsoft-confirms-about-60-000-employees-eligible-for-voluntary-exit-offer" target="_blank" rel="noopener noreferrer">CRN VEO 确认 ↗</a>。</p>
+ </div>
+ </div>
+
+ <div class="mui-alert" style="margin-bottom: 18px;">
+ <span class="mui-chip mui-chip-primary mono">财报重构里程碑</span>
+ <div>
+ <strong>2026年9月历史性分部重组：三大传统板块合并升级为 Agents &amp; Infra + Devices &amp; Consumer</strong> —— 为对齐内部真实的跨栈 AI 管理方式，微软自 FY27Q1 起将企业云、M365 商业与个人云、Copilot 及服务器许可全面归入 <strong>Agents and Infra（单季 $768.0亿，+25% YoY，占全公司 83.2% 营收）</strong>，并史上首次单独披露季度 Azure 美元营收（$331.7亿，+48% YoY） <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">SEC Q1 FY27 ↗</a>。
+ </div>
+ </div>
+
+ <!-- Interactive Chart: View A vs View B -->
+ <div class="chart-card" style="margin-bottom: 18px;">
+ <div class="chart-toolbar">
+ <div>
+ <div id="ch1ChartTitle" class="chart-title">Q1 FY2026 vs Q1 FY2027 新口径核心产品与云服务营收跃升（$B · SEC EX-99.1）</div>
+ <div id="ch1ChartSub" class="chart-caption">首次透明化披露单季美元规模：Azure ($33.17B, +48.2%) 与 M365 Cloud ($27.78B, +17.2%) 双擎合计贡献全公司 66% 营收</div>
+ </div>
+ <div class="mui-segmented" role="tablist" aria-label="第一章图表视图切换">
+ <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA" data-i18n-zh="视图A: 六大产品线单季营收" data-i18n-en="View A: Q1 Product Offerings">视图A: 六大产品线单季营收</button>
+ <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB" data-i18n-zh="视图B: 减员提效与人效跃迁" data-i18n-en="View B: FTE Trim &amp; Rev/FTE">视图B: 减员提效与人效跃迁</button>
+ </div>
+ </div>
+ <div id="ch1AxisMeta" class="chart-axis-meta mono">
+ <span style="color:var(--chart-c1);">■ 蓝色：Q1 FY2026 单季营收 ($B)</span>
+ <span style="color:var(--chart-c2);">■ 绿色：Q1 FY2027 单季营收 ($B · 合计 $92.28B)</span>
+ </div>
+ <div class="canvas-stage">
+ <canvas id="chartCh1"></canvas>
+ </div>
+ <div class="chart-legend" id="ch1Legend">
+ <button type="button" class="legend-pill" data-ch1-series="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1">Q1 FY2026 营收 ($B · 总计 $77.67B)</span></button>
+ <button type="button" class="legend-pill" data-ch1-series="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2">Q1 FY2027 营收 ($B · 总计 $92.28B)</span></button>
+ </div>
+ </div>
+
+ <!-- 4 Expandable Execution Cards -->
+ <div class="grid-2">
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="Cloud + AI 与自研硅片垂直协同（Scott Guthrie × Maia/Cobalt）" data-i18n-en="Cloud + AI &amp; Custom Silicon Co-Design (Scott Guthrie)">Cloud + AI 与自研硅片垂直协同（Scott Guthrie × Maia/Cobalt）</div>
+ <span class="mui-chip mui-chip-primary mono">FY26 CapEx $115.95B</span>
+ </div>
+ <p class="matrix-card-body">在 Scott Guthrie 执掌的 Cloud + AI 体系内，数据中心硬件系统工程、网络光通信与超算编排软件同属一条汇报链，使台积电 3nm Maia 200 推理芯片在流片后数天内即可跑通内部 MAI 大模型负载 <a class="cite-link" href="https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/" target="_blank" rel="noopener noreferrer">Maia 200 ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail1"><span>展开微观执行机制</span> <span>⌄</span></button>
+ <div id="matrixDetail1" class="collapse-panel">截至 2026 年 6 月 30 日，微软物业及设备净值（Net PP&amp;E）一年猛增逾千亿美元至 $3,130.76亿，同时锁定 $1,940.6亿 数据中心采购承诺与 $4,435.1亿 长期租赁算力储备。</div>
+ </div>
+
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="跨应用 Copilot 统一战线（Roslansky × Lamanna × Suleyman）" data-i18n-en="Unified Copilot &amp; Agentic Frontline (Roslansky × Lamanna × Suleyman)">跨应用 Copilot 统一战线（Roslansky × Lamanna × Suleyman）</div>
+ <span class="mui-chip mui-chip-success mono">Copilot 3,000万+ 席位</span>
+ </div>
+ <p class="matrix-card-body">随着老将 Rajesh Jha 功成荣休，LinkedIn CEO Ryan Roslansky 跨界统管 Office 与 M365 Copilot 应用，与执掌智能体平台的 Charles Lamanna 及执掌消费 AI/MAI 模型的 Mustafa Suleyman 形成铁三角协同 <a class="cite-link" href="https://www.businessinsider.com/satya-nadella-microsoft-ai-leadership-reset-2026-5" target="_blank" rel="noopener noreferrer">高管接棒 ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail2"><span>展开微观执行机制</span> <span>⌄</span></button>
+ <div id="matrixDetail2" class="collapse-panel">通过打破 LinkedIn 职场关系图谱、Office 文档图谱与 Dynamics CRM 客户图谱的组织边界，Work IQ 让企业智能体首次拥有完整的跨部门业务记忆。</div>
+ </div>
+
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="安全高于一切：10,000 人 SFI 全员薪酬挂钩改革" data-i18n-en="Security Above All: 10,000-Person SFI Compensation Mandate">安全高于一切：10,000 人 SFI 全员薪酬挂钩改革</div>
+ <span class="mui-chip mui-chip-warning mono">全员绩效硬指标</span>
+ </div>
+ <p class="matrix-card-body">针对早年国家级黑客攻击暴露的历史遗留架构隐患，纳德拉宣布“当安全与新功能冲突时，无条件推迟新功能”，并将安全合规正式纳入全公司所有员工与高管的年度薪酬评估表 <a class="cite-link" href="https://www.businessinsider.com/leaked-microsoft-organizational-chart-shows-top-16-execs-under-nadella-2025-11" target="_blank" rel="noopener noreferrer">SFI 问责制 ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail3"><span>展开微观执行机制</span> <span>⌄</span></button>
+ <div id="matrixDetail3" class="collapse-panel">2026 年 Hayete Gallot 接棒执掌网络安全大群，将零信任默认安全架构延伸至 Windows 内核级 Agent 防护与 Agent 365 审计沙盒。</div>
+ </div>
+
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="游戏与消费终端的利润率重整（Asha Sharma 执掌 Xbox）" data-i18n-en="Gaming &amp; Consumer Margin Discipline (Asha Sharma Leads Xbox)">游戏与消费终端的利润率重整（Asha Sharma 执掌 Xbox）</div>
+ <span class="mui-chip mui-chip-violet mono">跨平台内容变现</span>
+ </div>
+ <p class="matrix-card-body">2026 年 2 月执掌 Xbox 38 年老将 Phil Spencer 退休后，微软未按惯例选拔传统主机硬件人，而是任命前 CoreAI 产品总裁 Asha Sharma 出任 Xbox CEO，果断推动第一方大作跨全平台发行并严控工作室 ROI <a class="cite-link" href="https://blogs.microsoft.com/blog/2026/02/20/asha-sharma-named-evp-and-ceo-microsoft-gaming/" target="_blank" rel="noopener noreferrer">Xbox 换帅公告 ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail4"><span>展开微观执行机制</span> <span>⌄</span></button>
+ <div id="matrixDetail4" class="collapse-panel">Q1 FY27 Devices and Consumer 分部在营收微降 3%（$154.8亿）的情况下，依托搜索广告增长 +12% 与成本精简，营业利润仍逆势增长至 $53.6亿（营业利润率达 34.6%）。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 02 四大文化支柱与创新护城河
+ ================================================================ -->
+ <section id="sec-02" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 02 · CULTURAL PILLARS &amp; INNOVATION MOAT</div>
+ <h2 class="sec-h2" data-i18n-zh="二、四大企业文化支柱：学无止境、One Microsoft、教练式领导力与零信任安全" data-i18n-en="2. Four Cultural Pillars: Learn-It-All, One Microsoft, Model-Coach-Care &amp; SFI Trust">二、四大企业文化支柱：学无止境、One Microsoft、教练式领导力与零信任安全</h2>
+ <p class="sec-sub" data-i18n-zh="点击左侧任一文化支柱卡片，联动查看微软底层组织行为准则与五维文化竞争力雷达画像" data-i18n-en="Click any pillar card on the left to inspect Microsoft's cultural principles and 5-axis radar benchmark">点击左侧任一文化支柱卡片，联动查看微软底层组织行为准则与五维文化竞争力雷达画像</p>
+ </div>
+ <span class="mui-chip mui-chip-success">护城河定性：极宽 (Wide Moat · 企业身份生态 + 开放平台结盟 + 工程韧性)</span>
+ </div>
+
+ <div class="grid-radar">
+ <div class="pillar-stack" id="pillarStack">
+ <button type="button" class="pillar-card active" data-pillar="0">
+ <div class="pillar-head">
+ <span class="pillar-title">01 · 学无止境成长型思维（Learn-It-All Growth Mindset）</span>
+ <span class="mui-chip mui-chip-primary mono">终结零和内斗</span>
+ </div>
+ <p class="pillar-desc">彻底废除迫使同事互相拆台的强制末位淘汰制（Stack Ranking），鼓励跨出舒适区快速试错：即使错过手机系统，也能迅速放下身段在 iOS/Android 与 Linux 上构建云服务霸权。</p>
+ </button>
+
+ <button type="button" class="pillar-card" data-pillar="1">
+ <div class="pillar-head">
+ <span class="pillar-title">02 · 反“非我发明”的生态实用主义（Pragmatic Openness）</span>
+ <span class="mui-chip mui-chip-success mono">多模型 + 开源拥抱</span>
+ </div>
+ <p class="pillar-desc">不同于执着 100% 封闭自研的硬件巨头，微软极具战略弹性：谁的技术最强就第一时间结盟（OpenAI、Anthropic、Arm、Linux、RedHat），同时潜心锻造自有 MAI 模型与 Maia 硅片作为底牌。</p>
+ </button>
+
+ <button type="button" class="pillar-card" data-pillar="2">
+ <div class="pillar-head">
+ <span class="pillar-title">03 · Model · Coach · Care 教练式高绩效管理</span>
+ <span class="mui-chip mui-chip-warning mono">高关怀 × 高标准</span>
+ </div>
+ <p class="pillar-desc">以“以身作则、启发辅导、真诚关怀”塑造管理者标尺；在 AI 竞速期果断纠偏“大锅饭养老”倾向，通过清晰绩效淘汰与扁平化重组保持顶尖人才紧迫感。</p>
+ </button>
+
+ <button type="button" class="pillar-card" data-pillar="3">
+ <div class="pillar-head">
+ <span class="pillar-title">04 · 赢得信任与主权赋能（Customer Trust &amp; SFI）</span>
+ <span class="mui-chip mui-chip-violet mono">不与客户争抢数据</span>
+ </div>
+ <p class="pillar-desc">微软商业契约的灵魂是“赋能客户拥有自己的智能（Build &amp; Own Their Own Intelligence）”——绝不拿企业私有数据训练公有商业模型或与客户主业竞争，赢得全球金融、医疗与主权政府绝对信任。</p>
+ </button>
+
+ <div id="pillarFocusNote" class="mui-alert" style="margin-top: 4px;">
+ <div>
+ <strong>当前选中支柱解读（01 成长型思维）：</strong>纳德拉在 2026 年致股东信中引用古罗马诗人贺拉斯名言“敢于求知，即刻启程（Dare to know. Begin.）”——正是这种承认未知、拒绝守旧的文化，让一家 51 岁老牌软件巨头跑出了超越初创公司的 AI 商业化速度 <a class="cite-link" href="https://www.microsoft.com/investor/reports/ar26/index.html" target="_blank" rel="noopener noreferrer">2026 股东信 ↗</a>。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: 5-Axis Radar Chart -->
+ <div class="chart-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+ <div>
+ <div class="chart-title" data-i18n-zh="微软企业文化五维特征对比雷达图（10分制标杆评估）" data-i18n-en="5-Axis Corporate Culture Benchmark Radar (10-Point Institutional Scale)">微软企业文化五维特征对比雷达图（10分制标杆评估）</div>
+ <div class="chart-caption" data-i18n-zh="点击下方图例胶囊可单独开关对比曲线，悬停顶点查看各维度评分" data-i18n-en="Click legend pills below to toggle peer curves; hover vertices for exact scores">点击下方图例胶囊可单独开关对比曲线，悬停顶点查看各维度评分</div>
+ </div>
+ <div class="canvas-stage-tall">
+ <canvas id="chartRadar"></canvas>
+ </div>
+ <div class="chart-legend" id="radarLegend">
+ <button type="button" class="legend-pill" data-radar-key="msft"><span class="legend-dot" style="background:#3399FF;"></span><span data-i18n-zh="微软 (Microsoft · 开放跨栈平台)" data-i18n-en="Microsoft (MSFT · Open Platform)">微软 (Microsoft · 开放跨栈平台)</span></button>
+ <button type="button" class="legend-pill" data-radar-key="aapl"><span class="legend-dot" style="background:#22C55E;"></span><span data-i18n-zh="苹果 (Apple · 封闭硬件极简)" data-i18n-en="Apple (AAPL · Closed Hardware Craft)">苹果 (Apple · 封闭硬件极简)</span></button>
+ <button type="button" class="legend-pill" data-radar-key="legacy"><span class="legend-dot" style="background:#FFB74D;"></span><span data-i18n-zh="传统企业软件巨头基准" data-i18n-en="Legacy Enterprise Software Peers">传统企业软件巨头基准</span></button>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 03 全球科技巨头文化横向对比
+ ================================================================ -->
+ <section id="sec-03" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 03 · GLOBAL BIG TECH CULTURE BENCHMARKING</div>
+ <h2 class="sec-h2" data-i18n-zh="三、全球五大科技巨头文化横向对比：组织基因、人效密度与利润率统治力" data-i18n-en="3. Global Top-5 Tech Giants Culture Matrix: Org DNA, Productivity &amp; Profitability">三、全球五大科技巨头文化横向对比：组织基因、人效密度与利润率统治力</h2>
+ <p class="sec-sub" data-i18n-zh="支持按企业、掌舵人（纳德拉 / 特努斯 / 黄仁勋 / 贾西 / 皮查伊）或组织机制实时搜索与分类筛选" data-i18n-en="Search or filter in real time by company, steward, or organizational governance model">支持按企业、掌舵人（纳德拉 / 特努斯 / 黄仁勋 / 贾西 / 皮查伊）或组织机制实时搜索与分类筛选</p>
+ </div>
+ <span id="peerCountBadge" class="mui-chip mui-chip-primary mono">显示 5 / 5 家标杆企业</span>
+ </div>
+
+ <div class="datagrid-toolbar">
+ <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索企业、掌舵人、文化关键词 (成长型思维 / 单一P&L / 双披萨)…" aria-label="筛选对比企业" />
+ <div class="mui-segmented" role="group" aria-label="标杆企业分类筛选">
+ <button type="button" class="mui-seg-btn active" data-peer-filter="all" data-i18n-zh="全部巨头" data-i18n-en="All Giants">全部巨头</button>
+ <button type="button" class="mui-seg-btn" data-peer-filter="unitary" data-i18n-zh="统一跨栈协同派" data-i18n-en="Unified Cross-Stack">统一跨栈协同派</button>
+ <button type="button" class="mui-seg-btn" data-peer-filter="modular" data-i18n-zh="模块化分权/控股派" data-i18n-en="Modular / Holding">模块化分权/控股派</button>
+ </div>
+ </div>
+
+ <div class="table-wrap" style="margin-bottom: 20px;">
+ <table class="mui-table" aria-label="全球顶级科技巨头企业文化横向对比表">
+ <thead>
+ <tr>
+ <th data-i18n-zh="企业与文化掌舵人" data-i18n-en="Company &amp; Stewards">企业与文化掌舵人</th>
+ <th data-i18n-zh="底层组织架构形态" data-i18n-en="Organizational Structure">底层组织架构形态</th>
+ <th data-i18n-zh="核心文化与问责机制" data-i18n-en="Culture &amp; Accountability">核心文化与问责机制</th>
+ <th data-i18n-zh="员工规模与人效特征" data-i18n-en="Workforce &amp; Rev / FTE">员工规模与人效特征</th>
+ <th data-i18n-zh="利润率与核心财务表现" data-i18n-en="Margins &amp; Financial Scale">利润率与核心财务表现</th>
+ <th data-i18n-zh="与微软企业文化的异同评估" data-i18n-en="Comparative Fit vs. Microsoft">与微软企业文化的异同评估</th>
+ </tr>
+ </thead>
+ <tbody id="peerTableBody"></tbody>
+ </table>
+ </div>
+
+ <!-- Horizontal Bar Chart: Margins & Workforce Mix -->
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title" data-i18n-zh="组织文化向盈利质量与人才结构的映射：微软核心利润率与 22.3万员工职能分布（%）" data-i18n-en="Translating Culture into Margin Quality &amp; Talent Mix: Microsoft Margins &amp; 223k Workforce (%)">组织文化向盈利质量与人才结构的映射：微软核心利润率与 22.3万员工职能分布（%）</div>
+ <div class="chart-caption">数据来源：Microsoft FY2026 Form 10-K 与 Q1 FY2027 SEC 8-K（运营支持 8.9万 / 产品研发 7.7万 / 销售营销 4.3万 / 综合行政 1.4万）</div>
+ </div>
+ <span class="mui-chip mui-chip-success mono">Q1 FY27 营业利润率 49.8% · 行政岗仅占 6.3%</span>
+ </div>
+ <div class="canvas-stage-bars">
+ <canvas id="chartBars"></canvas>
+ </div>
+ <div class="chart-legend">
+ <span class="mui-chip mui-chip-success mono">绿色/蓝色：分部及集团毛利率与营业利润率 (虚线为 45% 顶级软件营业利润率标杆)</span>
+ <span class="mui-chip mui-chip-violet mono">紫色/琥珀色：产品研发 (34.5%) 与云基础设施运营服务 (39.9%) 合计占全员 74.4%，行政仅占 6.3%</span>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 04 文化复利、人效脱钩与复利推演
+ ================================================================ -->
+ <section id="sec-04" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 04 · CULTURAL COMPOUNDING &amp; OPERATING LEVERAGE</div>
+ <h2 class="sec-h2" data-i18n-zh="四、文化复利与经营杠杆检验：四年净利翻近一倍（$727亿→$1,337亿）与跨代财富推演" data-i18n-en="4. Cultural Compounding &amp; Operating Leverage: Net Profit Nearly Doubled ($72.7B → $133.7B)">四、文化复利与经营杠杆检验：四年净利翻近一倍（$727亿→$1,337亿）与跨代财富推演</h2>
+ <p class="sec-sub" data-i18n-zh="检验“One Microsoft”协同效应的终极试金石：在吞下千亿美元 AI 资本开支的同时，营业利润率不降反创历史新高" data-i18n-en="Ultimate proof of One Microsoft synergy: expanding operating margins to all-time highs even amid $115.9B AI CapEx">检验“One Microsoft”协同效应的终极试金石：在吞下千亿美元 AI 资本开支的同时，营业利润率不降反创历史新高</p>
+ </div>
+ <span class="mui-chip mui-chip-warning mono">FY26 OCF $182.9B · 回馈股东 $48.7B</span>
+ </div>
+
+ <!-- 4 Financial Moat Metric Cards -->
+ <div class="grid-4" style="margin-bottom: 18px;">
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">AGENTS &amp; INFRA OP MARGIN</span>
+ <div class="kpi-value mono" style="color: var(--mui-primary-lighter);">52.8% <span style="font-size:0.85rem;font-weight:600;">(Q1 $40.6B)</span></div>
+ <p class="kpi-desc">Q1 FY27 新核心分部单季营收 $768.0亿、营业利润高达 $405.6亿，凸显云与生产力跨栈复用威力。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">FY2026 OPERATING CASH FLOW</span>
+ <div class="kpi-value mono" style="color: var(--mui-success-text);">$182.9B <span style="font-size:0.85rem;font-weight:600;">(+34.4%)</span></div>
+ <p class="kpi-desc">全球科技业最强经营现金流引擎之一，全额自筹 $1,159.5亿 算力基建后仍余 $669.9亿 自由现金流。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">DIVIDENDS &amp; BUYBACKS (FY26)</span>
+ <div class="kpi-value mono" style="color: var(--mui-warning-text);">$48.7B</div>
+ <p class="kpi-desc">FY26 派发 $264.5亿 现金分红（连续二十余年增长）并回购 $222.7亿 股票（剩余授权 $406亿）。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">RECORD GAAP NET MARGIN</span>
+ <div class="kpi-value mono" style="color: var(--mui-violet-text);">40.3% <span style="font-size:0.85rem;font-weight:600;">($17.95 EPS)</span></div>
+ <p class="kpi-desc">FY26 GAAP 净利率达 40.3%（剔除 OpenAI 投资收益后 Non-GAAP 净利仍达 $1,287.9亿，+22% YoY）。</p>
+ </div>
+ </div>
+
+ <!-- Trend Combo Chart: FY2022–FY2026 GAAP Net Income & Operating Margin -->
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title" data-i18n-zh="FY2022–FY2026 平台协同红利释放期：GAAP 年度净利润 ($B) 与营业利润率 (%)" data-i18n-en="FY2022–FY2026 Platform Synergy Payoff: GAAP Net Income ($B) &amp; Operating Margin (%)">FY2022–FY2026 平台协同红利释放期：GAAP 年度净利润 ($B) 与营业利润率 (%)</div>
+ <div class="chart-caption">柱状图（左轴）为 GAAP 年度净利润；折线（右轴）为全年营业利润率（42.1% → 46.8%，Q1 FY27 进一步突破至 49.8%）</div>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">净利 $72.7B → $133.7B (+83.9%)</span>
+ </div>
+ <div class="chart-axis-meta mono">
+ <span style="color:var(--chart-c1);">■ 左轴：GAAP 年度净利润 ($B)</span>
+ <span style="color:var(--chart-c2);">● 右轴：全年营业利润率 Operating Margin (%)</span>
+ </div>
+ <div class="canvas-stage">
+ <canvas id="chartEps"></canvas>
+ </div>
+ <div class="chart-legend" id="epsLegend">
+ <button type="button" class="legend-pill" data-eps-series="eps"><span class="legend-dot" style="background:var(--chart-c1);"></span><span>GAAP 年度净利润 (左轴 · $B)</span></button>
+ <button type="button" class="legend-pill" data-eps-series="oci"><span class="legend-dot" style="background:var(--chart-c2);"></span><span>全年营业利润率 (右轴 · %)</span></button>
+ <span class="mui-chip mui-chip-warning mono">--- 顶级企业软件营业利润锚 44.0%</span>
+ </div>
+ </div>
+
+ <!-- Interactive Multi-Era Cultural Compounding Simulator -->
+ <div class="simulator-grid">
+ <div class="sim-controls">
+ <div>
+ <div class="sec-eyebrow mono" style="margin-bottom:2px;">INTERACTIVE FLYWHEEL SIMULATOR</div>
+ <h3 style="font-size:1rem;font-weight:800;" data-i18n-zh="微软跨代际组织文化复利推演器" data-i18n-en="Multi-Era Cultural Flywheel Compounding Simulator">微软跨代际组织文化复利推演器</h3>
+ </div>
+
+ <label class="mui-switch-row" for="simDripToggle">
+ <div>
+ <div style="font-size:0.84rem;font-weight:700;color:var(--text-primary);" data-i18n-zh="叠加连涨股息再投与回购增厚 (+1.6%/年)" data-i18n-en="Include Dividend Reinvestment &amp; Buyback Yield (+1.6%/yr)">叠加连涨股息再投与回购增厚 (+1.6%/年)</div>
+ <div style="font-size:0.74rem;color:var(--text-secondary);">映射每年近 $50B 现金分红与持续回购对长期股东总回报（TSR）的复利加速</div>
+ </div>
+ <input type="checkbox" id="simDripToggle" checked />
+ </label>
+
+ <div class="preset-stack" role="group" aria-label="微软历史与前瞻复利预设周期">
+ <button type="button" class="preset-btn active" data-preset="p1">
+ <span>① 2014–2026 纳德拉文化重塑黄金12年</span>
+ <span class="mono">12年 · 24.5%+分红</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p2">
+ <span>② 2001–2013 鲍尔默孤岛内耗停滞对照期</span>
+ <span class="mono">12年 · 1.8%+分红</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p3">
+ <span>③ 2026–2036 智能体与算力收获十年基准</span>
+ <span class="mono">10年 · 13.5%+分红</span>
+ </button>
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span data-i18n-zh="初始投入本金 (USD)" data-i18n-en="Initial Principal (USD)">初始投入本金 (USD)</span>
+ <span id="simPrincipalLabel" class="slider-val mono">$10,000</span>
+ </div>
+ <input type="range" id="simPrincipalSlider" class="mui-slider" min="1000" max="100000" step="1000" value="10000" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span data-i18n-zh="长期持有年限 (Years)" data-i18n-en="Holding Horizon (Years)">长期持有年限 (Years)</span>
+ <span id="simYearsLabel" class="slider-val mono">12 年</span>
+ </div>
+ <input type="range" id="simYearsSlider" class="mui-slider" min="5" max="30" step="1" value="12" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span data-i18n-zh="核心内生年化增值率 (Base CAGR %)" data-i18n-en="Organic Base Return CAGR (%)">核心内生年化增值率 (Base CAGR %)</span>
+ <span id="simCagrLabel" class="slider-val mono">24.5%</span>
+ </div>
+ <input type="range" id="simCagrSlider" class="mui-slider" min="1" max="35" step="0.5" value="24.5" />
+ </div>
+ </div>
+
+ <div class="sim-output-panel">
+ <div class="sim-readouts">
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="期末预估总资产 (Ending Value)" data-i18n-en="Projected Ending Value">期末预估总资产 (Ending Value)</div>
+ <div id="simEndingVal" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);">$161,825</div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="总回报倍数 (MOIC) / 综合年化" data-i18n-en="Total MOIC / Blended CAGR">总回报倍数 (MOIC) / 综合年化</div>
+ <div id="simMoicVal" class="sim-stat-num mono" style="color:var(--mui-success-text);">16.18x · 26.10%</div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="累计净复利收益 (Net Gain)" data-i18n-en="Cumulative Net Gain">累计净复利收益 (Net Gain)</div>
+ <div id="simNetGainVal" class="sim-stat-num mono">$151,825</div>
+ </div>
+ <div class="sim-stat-box">
+ <div id="simMidLabel" class="sim-stat-label">第 6 年中期资产节点</div>
+ <div id="simMidVal" class="sim-stat-num mono">$40,227</div>
+ </div>
+ </div>
+
+ <div class="canvas-stage-sim">
+ <canvas id="chartSim"></canvas>
+ </div>
+ <div class="chart-legend" style="margin-top:4px;">
+ <span class="mui-chip mui-chip-primary mono">━ 含分红复投与回购总资产轨迹</span>
+ <span class="mui-chip mono">- - 仅内生业务股价增值基准</span>
+ </div>
+ <div class="chart-caption">切换预设①与预设②可直观看到：同样一家拥有深厚护城河的公司，在“孤岛末位淘汰内斗期（2001–2013）”与“成长型思维跨栈协同期（2014–2026）”创造了天壤之别的股东回报！</div>
+ </div>
+ </div>
+
+ <!-- Positive vs Critical Lens Dual Cards -->
+ <div class="grid-2" style="margin-top: 18px;">
+ <div class="mui-alert mui-alert-success" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-success mono">ENDURING MOAT</span>
+ <strong>正向组织文化遗产定评</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;">
+ <strong>1. 科技史最强的“战略纠错与联盟吸收力”：</strong>从拥抱 Linux 开源、闪电结盟 OpenAI 到果断转向多模型 Foundry，彻底免疫“非我发明（NIH）”傲慢症。<br/>
+ <strong>2. 大规模并购零消化不良：</strong>LinkedIn（$262亿）、GitHub（$75亿）、Nuance（$197亿）融入单一公司主干后均成为 AI 图谱与开发者生态核心支点。<br/>
+ <strong>3. B2B 信任与合规文化壁垒：</strong>SFI 全员问责加上“不碰客户数据所有权”铁律，使其在大型政企采购中具备极高溢价。
+ </p>
+ </div>
+
+ <div class="mui-alert mui-alert-warning" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-warning mono">CRITICAL LENS</span>
+ <strong>客观局限与组织张力反思</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;">
+ <strong>1. 22.3 万人巨舰的矩阵沟通摩擦：</strong>尽管 2026 年退役旧 SLT 并推出 6 万人合格 VEO 削减中层，跨产品命名混乱（Copilot 多版本重叠）与大企业审批链仍需持续整肃。<br/>
+ <strong>2. 消费级硬件与原生 C 端审美短板：</strong>不同于苹果工业设计一票否决制，微软 B2B 基因使其在 Surface 硬件（Q1 OEM/设备降 22%）与消费社交入口上相对弱势。<br/>
+ <strong>3. 高温关怀文化与硬核绩效整顿的阵痛：</strong>从温和包容迅速切换至严格淘汰、3 天强制返岗与裁撤低效岗位，短期考验内部士气平衡 <a class="cite-link" href="https://shattered.io/microsoft-voluntary-exit-offer-60000-employees-2026/" target="_blank" rel="noopener noreferrer">2026 VEO 观察 ↗</a>。
+ </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 05 三代演进与管理得失复盘
+ ================================================================ -->
+ <section id="sec-05" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 05 · THREE-GENERATION EVOLUTION &amp; LANDMARK BATTLES</div>
+ <h2 class="sec-h2" data-i18n-zh="五、三代文化演进与四大战役复盘：从比尔·盖茨、鲍尔默到纳德拉的半世纪蜕变" data-i18n-en="5. Three-Generation Evolution &amp; Four Landmark Battles (1975–2026+)">五、三代文化演进与四大战役复盘：从比尔·盖茨、鲍尔默到纳德拉的半世纪蜕变</h2>
+ <p class="sec-sub" data-i18n-zh="只有读懂 2000–2014 年“Windows 中心主义”与强制排名如何锁死创新，才能理解今天微软为何如此敬畏平台更迭" data-i18n-en="Understanding how Windows-centrism and stack ranking stalled Microsoft in 2000–2014 explains Nadella's relentless urgency today">只有读懂 2000–2014 年“Windows 中心主义”与强制排名如何锁死创新，才能理解今天微软为何如此敬畏平台更迭</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">1975 创立 → 2026 迈入第 52 年</span>
+ </div>
+
+ <!-- 3-Act MUI Timeline -->
+ <div class="mui-timeline">
+ <div class="timeline-step">
+ <span class="timeline-dot"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;">第一幕 · 极客精英与 PC 桌面帝国崛起 (1975–2000) —— 比尔·盖茨的“让每张办公桌都有一台电脑”</strong>
+ <span class="mui-chip mono">1999 市值首破 $6,000亿</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);">盖茨确立硬核代码评审文化与平台操作系统授权模式，凭借 Windows 与 Office 横扫全球个人电脑时代；但巅峰期的反垄断诉讼与空前垄断利润，也在内部埋下了“Windows 高于一切”的路径依赖种子。</p>
+ </div>
+
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#FFB74D;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;">第二幕 · 诸侯割据与“强制正态排名”失落十年 (2000–2014) —— 鲍尔默时代的组织内耗教训</strong>
+ <span class="mui-chip mui-chip-warning mono">股价横盘十余年</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);">尽管鲍尔默将企业营收翻了三倍并前瞻孵化早期云业务，但内部推行严苛 Stack Ranking（每组必须评出固定比例低绩效者），导致顶尖工程师拒绝与高水平同事同组，且任何威胁 Windows 授权费的移动/跨平台创新均遭内部封杀，痛失智能手机与移动搜索时代。</p>
+ </div>
+
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#22C55E;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;">第三幕 · 成长型思维复兴与 2026 智能体双核变阵 (2014–2026+) —— 纳德拉重塑万亿美元引擎</strong>
+ <span class="mui-chip mui-chip-success mono">市值 ~$3,000亿 → ~$3.6T+</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);">2014 年在微软深耕 22 年的云工程统帅纳德拉出任第三任 CEO：首周即向 iPad 开放 Office，重塑“赋能全球每一人、每一组织成就不凡”使命；2019 起早早押注 OpenAI，并在 2025–2026 年果断推行商业 CEO 分治、退役旧 SLT、发布 Maia 200 / Agent 365，引领智能体纪元 <a class="cite-link" href="https://www.microsoft.com/investor/reports/ar26/index.html" target="_blank" rel="noopener noreferrer">2026 年报 ↗</a>。</p>
+ </div>
+ </div>
+
+ <!-- 4 Landmark Battle Case Studies -->
+ <div class="grid-2" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-success mono">案例 01 · 2014–2018</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">打破 Windows 神坛</span>
+ </div>
+ <h3>Office 全面登陆 iOS/Android 与拥抱 Linux 开源</h3>
+ <p>纳德拉上任首场发布会即打破“Office 只能为 Windows 护航”的内部禁忌，并宣布“Microsoft Loves Linux”收购 GitHub——证明当核心应用脱离旧外壳束缚时，反而能收获数倍规模的云订阅市场。</p>
+ </div>
+
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-primary mono">案例 02 · 2019–2026</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">非对称战略结盟</span>
+ </div>
+ <h3>从 $10亿早押 OpenAI 到 2026“去排他化多模型转身”</h3>
+ <p>早期重金绑定 OpenAI 让微软抢先全行业两年引爆 Copilot；当单一伙伴出现多云诉求时，微软于 2025–2026 漂亮收官重组：锁定 27% 股权、$2,500亿 Azure 订单与 2032 IP 权，同时自建 MAI 超算模型并引入 Anthropic，进退自如 <a class="cite-link" href="https://finance.biggo.com/news/202604271725_Microsoft-OpenAI_Pact_Rewritten" target="_blank" rel="noopener noreferrer">协议演进 ↗</a>。</p>
+ </div>
+
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-error mono">案例 03 · 2023–2026</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">危机驱动制度化改革</span>
+ </div>
+ <h3>安全危机倒逼 SFI 全员薪酬问责重构</h3>
+ <p>面对美国国土安全部审查报告批评，管理层没有公关掩饰，而是抽调 10,000 名工程师暂停部分新特性开发重构底层密钥与身份架构，并将网络安全硬指标直接挂钩全员年终绩效。</p>
+ </div>
+
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-violet mono">案例 04 · 2025–2026</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">反大企业病手术</span>
+ </div>
+ <h3>任命商业 CEO + 退役旧 SLT + Agents &amp; Infra 重组</h3>
+ <p>为防止 22 万人组织在 AI 浪潮中迟钝老化，纳德拉将商业帝国日常运营交由 Judson Althoff，自身回归首席系统架构师角色，推动 Q1 FY27 Azure 逆势加速至 +48%、集团营业利润率逼近 50%。</p>
+ </div>
+ </div>
+
+ <!-- 3 Cultural Laws -->
+ <div class="grid-3">
+ <div class="mui-alert">
+ <div><strong>法则一：</strong>永远不要让昨日最赚钱的现金牛（如昔日 Windows 盒装授权）绑架明日的新平台——主动革自己的命才不会被时代淘汰。</div>
+ </div>
+ <div class="mui-alert">
+ <div><strong>法则二：</strong>用“学无止境（Learn-It-All）”消灭部门内斗，但必须配以严明的高绩效问责与精简层级，防止关怀文化滑向低效大锅饭。</div>
+ </div>
+ <div class="mui-alert">
+ <div><strong>法则三：</strong>在企业级市场，“安全可信 + 客户拥有自身数据与模型主权”是比任何单点炫技都更持久的万亿美元商业护城河。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 06 微软文化法则核查清单
+ ================================================================ -->
+ <section id="sec-06" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 06 · INTERACTIVE ORGANIZATION DIAGNOSTIC CHECKLIST</div>
+ <h2 class="sec-h2" data-i18n-zh="六、“微软文化重生法则”企业平台转型与 AI 组织力交互式核查清单" data-i18n-en="6. Interactive 'Microsoft Culture Laws' Platform Transformation &amp; AI Org Checklist">六、“微软文化重生法则”企业平台转型与 AI 组织力交互式核查清单</h2>
+ <p class="sec-sub" data-i18n-zh="用于诊断大型科技平台或转型期企业是否具备跨代际自我革新与 AI 经营杠杆能力（勾选状态自动保存在本地）" data-i18n-en="Diagnose whether an enterprise software or platform organization exhibits growth-mindset renewal &amp; AI operating leverage">用于诊断大型科技平台或转型期企业是否具备跨代际自我革新与 AI 经营杠杆能力（勾选状态自动保存在本地）</p>
+ </div>
+ <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+ <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono">已核查 3 / 6 项 (50%)</span>
+ <button type="button" id="checkAllBtn" class="mui-btn" data-i18n-zh="全部勾选" data-i18n-en="Check All">全部勾选</button>
+ <button type="button" id="resetCheckBtn" class="mui-btn" data-i18n-zh="重置清单" data-i18n-en="Reset">重置清单</button>
+ </div>
+ </div>
+
+ <div class="progress-track" aria-label="核查完成度进度条">
+ <div id="checklistProgressBar" class="progress-fill"></div>
+ </div>
+
+ <div id="checklistContainer" class="checklist-grid"></div>
+ </section>
+
+ <!-- ================================================================
+ 07 Primary Sources & Disclosure Footer
+ ================================================================ -->
+ <footer id="sec-07" class="mui-paper section-block" style="padding: 22px 26px;">
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;">
+ <strong style="font-size:0.92rem;" data-i18n-zh="数据来源与一手监管/官方核验索引（SEC EDGAR · Microsoft Annual Report · Official Blogs）" data-i18n-en="Primary Regulatory Filings &amp; Official Sources Index (SEC EDGAR · Microsoft IR)">数据来源与一手监管/官方核验索引（SEC EDGAR · Microsoft Annual Report · Official Blogs）</strong>
+ <span class="mui-chip mono">MUI Branding UI Architecture · Offline Ready</span>
+ </div>
+ <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;">
+ 本研报所有财务报表、分部重组、RPO 积压订单、员工人数与职能构成、高管薪酬及产品技术参数均严格核验自美国证监会（SEC EDGAR）、微软 2026 年度报告及官方技术博客，仅供商业与组织管理研究参考，不构成任何投资建议。
+ </p>
+ <ul class="sources-list">
+ <li><span class="mono">[01]</span><a href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">SEC Exhibit 99.1 — Microsoft FY2026 Q4 &amp; Full-Year Financial Results ($331.84B Rev · 2026-07-29) ↗</a></li>
+ <li><span class="mono">[02]</span><a href="https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm" target="_blank" rel="noopener noreferrer">SEC Exhibit 99.1 — Microsoft Q1 FY2027 Results &amp; Agents/Infra Realignment (2026-10-28) ↗</a></li>
+ <li><span class="mono">[03]</span><a href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm" target="_blank" rel="noopener noreferrer">Microsoft Corp. FY2026 Form 10-K Annual Report (223,000 FTEs · Ended June 30, 2026) ↗</a></li>
+ <li><span class="mono">[04]</span><a href="https://www.microsoft.com/investor/reports/ar26/index.html" target="_blank" rel="noopener noreferrer">Microsoft 2026 Annual Report &amp; Satya Nadella Shareholder Letter ("Dare to Know") ↗</a></li>
+ <li><span class="mono">[05]</span><a href="https://www.sec.gov/Archives/edgar/data/789019/000119312526427849/d61756ddef14a.htm" target="_blank" rel="noopener noreferrer">SEC DEF 14A — Microsoft 2026 Proxy Statement (Governance &amp; Compensation) ↗</a></li>
+ <li><span class="mono">[06]</span><a href="https://querychart.io/org-templates/microsoft-organizational-structure" target="_blank" rel="noopener noreferrer">QueryChart — Microsoft Unitary Organizational Structure &amp; Reporting Analysis (2026) ↗</a></li>
+ <li><span class="mono">[07]</span><a href="https://www.businessinsider.com/satya-nadella-microsoft-ai-leadership-reset-2026-5" target="_blank" rel="noopener noreferrer">Business Insider — Microsoft's 2026 AI Reboot: Retiring Legacy SLT &amp; Flatter Teams ↗</a></li>
+ <li><span class="mono">[08]</span><a href="https://www.businessinsider.com/leaked-microsoft-organizational-chart-shows-top-16-execs-under-nadella-2025-11" target="_blank" rel="noopener noreferrer">Business Insider — Inside Satya Nadella's 16 Direct Reports &amp; Commercial CEO Structure ↗</a></li>
+ <li><span class="mono">[09]</span><a href="https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/" target="_blank" rel="noopener noreferrer">Microsoft Official Blog — Maia 200: 3nm Custom AI Accelerator Built for Inference ↗</a></li>
+ <li><span class="mono">[10]</span><a href="https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/" target="_blank" rel="noopener noreferrer">Microsoft Source — Ignite 2026: Agent 365, Work IQ &amp; Enterprise Agentic Trust ↗</a></li>
+ <li><span class="mono">[11]</span><a href="https://blogs.microsoft.com/blog/2026/02/20/asha-sharma-named-evp-and-ceo-microsoft-gaming/" target="_blank" rel="noopener noreferrer">Microsoft Official Blog — Asha Sharma Named EVP &amp; CEO of Xbox (2026-02-20) ↗</a></li>
+ <li><span class="mono">[12]</span><a href="https://sec-api.io/insights/financial-analysis-of-microsoft-fy2026-capital-intensity-against-a-record-margin" target="_blank" rel="noopener noreferrer">SEC-API Financial Study — Microsoft FY2022–FY2026 Segment Margins &amp; Capital Intensity ↗</a></li>
+ </ul>
+ </footer>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/microsoft_culture_organization.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

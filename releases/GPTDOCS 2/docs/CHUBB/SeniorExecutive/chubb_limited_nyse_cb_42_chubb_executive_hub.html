@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>安达保险 (Chubb Limited, NYSE: CB) 42 大核心高管全景深度研报中枢 | Chubb Executive Hub</title>
+ <meta name="description" content="Chubb Limited（安达保险，NYSE: CB）全量 42 位核心高管深度研报中枢：涵盖 Evan G. Greenberg、John W. Keogh、Peter C. Enns、Juan Luis Ortega、Paul McNamee、Seshadri Iyer 等集团 C-Suite、北美产险、国际人寿再保及精算职能高管。" />
+ <link rel="stylesheet" href="../../_shared/8def384e075b5d25.css">
+ <!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+
+ <link rel="stylesheet" href="../../_shared/a7d4b38158c04ffe.css">
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+  <script src="../../_shared/device-mode.js"></script>
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI Frosted Glass AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">EG</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation">
+ <a class="crumb-link hide-sm" href="../../index.html">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="Chubb Limited · 安达保险" data-i18n-en="Chubb Limited (NYSE: CB)">Chubb Limited · 安达保险</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="埃文·格林伯格 (Evan G. Greenberg) · 安达保险集团董事长兼首席执行官" data-i18n-en="Evan G. Greenberg · Chairman &amp; CEO, Chubb Limited">埃文·格林伯格 (Evan G. Greenberg) · 安达保险集团董事长兼首席执行官</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="集团 C-Suite 统帅 · $54.84B" data-i18n-en="Group C-Suite · $54.84B">集团 C-Suite 统帅 · $54.84B</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="CR 85.7% · 2025利润 $9.95B" data-i18n-en="CR 85.7% · FY25 Core $9.95B">CR 85.7% · 2025利润 $9.95B</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换高管…" aria-label="快速跳转章节或高管" data-ph-zh="检索章节或切换高管…" data-ph-en="Jump to section or Executive…" data-aria-zh="快速跳转章节或高管" data-aria-en="Quick jump to chapter or Executive" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">CHUBB LIMITED (NYSE: CB) · #01</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="埃文·格林伯格 深度档案" data-i18n-en="Evan G. Greenberg Monograph">埃文·格林伯格 深度档案</div>
+ <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="2001年加入安达/ACE → 董事长兼CEO" data-i18n-en="Joined 2001 → Chairman &amp; CEO"></p>
+ <div class="sidebar-mini-kpis" id="sideMiniKpis"></div>
+ </div>
+
+ <!-- Unified MUI Navigation Card: Report TOC -->
+ <nav class="sidebar-card" aria-label="章节目录" data-aria-zh="章节目录" data-aria-en="Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="CHUBB">
+          <div class="co-side-head">
+            <span class="co-side-title mono">CHUBB · 02/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../Company/chubb_limited_12.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../Company/chubb_limited_12.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../Company/chubb_limited_12.html" title="安达保险（Chubb Limited）全线 12 大核心产品与服务深度商业研报中枢 | 安达数据中心"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="安达保险（Chubb Limited）全线 12 大核心产品与服务深度商业研报中枢 | 安达数据中心" data-i18n-en="(Chubb Limited) 12 &amp; Deep Dive Report | Data Center">安达保险（Chubb Limited）全线 12 大核心产品与服务深度商业研报中枢 | 安达数据中心</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="SeniorExecutive" href="chubb_limited_nyse_cb_42_chubb_executive_hub.html" title="安达保险 (Chubb Limited, NYSE: CB) 42 大核心高管全景深度研报中枢 | Chubb Executive Hub"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="安达保险 (Chubb Limited, NYSE: CB) 42 大核心高管全景深度研报中枢 | Chubb Executive Hub" data-i18n-en="(Chubb Limited, NYSE: CB) 42 OverviewDeep DiveReport | Chubb Executive Hub">安达保险 (Chubb Limited, NYSE: CB) 42 大核心高管全景深度研报中枢 | Chubb Executive Hub</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary &amp; KPIs">执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="管辖版图与组织架构" data-i18n-en="Span of Control &amp; Org">管辖版图与组织架构</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大领导支柱与能力雷达" data-i18n-en="4 Pillars &amp; 5-Axis Radar">四大领导支柱与能力雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="内部协同与同业巨头横评" data-i18n-en="Internal &amp; Peer Matrix">内部协同与同业巨头横评</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="资本配置效率与价值沙盘" data-i18n-en="Capital &amp; Value Simulator">资本配置效率与价值沙盘</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="职业进阶史与四大硬仗" data-i18n-en="Career Arc &amp; Key Battles">职业进阶史与四大硬仗</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="高管治理履职核查清单" data-i18n-en="Governance Checklist">高管治理履职核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="SEC财报与官方信源索引" data-i18n-en="SEC Filings &amp; Sources">SEC财报与官方信源索引</span></a></li>
+ </ul>
+ </nav>
+
+ <!-- Compact MUI Page Utility Controls -->
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+
+ <!-- Chubb Limited 42 Senior Executives Interactive Switcher -->
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="安达保险 42 位核心高管切换中枢">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">CHUBB LIMITED (NYSE: CB) · 42 SENIOR EXECUTIVES</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="安达保险集团全量 42 位核心高管独立研报切换中枢（点击任一高管实时重绘全部 8 大章节与 5 张高分图表）" data-i18n-en="Chubb Limited All 42 Senior Executives Monograph Switcher (Click any leader to dynamically render 8 chapters &amp; 5 charts)">安达保险集团全量 42 位核心高管独立研报切换中枢（点击任一高管实时重绘全部 8 大章节与 5 张高分图表）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" data-hub-nav="prev" class="mui-btn" title="切换至上一位高管 (快捷键 [)" data-title-zh="切换至上一位高管 (快捷键 [)" data-title-en="Previous Executive (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一高管" data-i18n-en="Prev Exec">上一高管</span>
+ </button>
+ <button type="button" id="nextIpBtn" data-hub-nav="next" class="mui-btn" title="切换至下一位高管 (快捷键 ])" data-title-zh="切换至下一位高管 (快捷键 ])" data-title-en="Next Executive (Shortcut ])">
+ <span data-i18n-zh="下一高管" data-i18n-en="Next Exec">下一高管</span> <span>→</span>
+ </button>
+ <button type="button" id="openStandalonePageLink" data-standalone-ctrl="btn" class="mui-btn mui-btn-primary" title="导出当前选中高管的独立单文件网页" data-title-zh="导出当前选中高管的独立单文件网页" data-title-en="Download standalone HTML page for active executive">
+ <span id="openStandalonePageText" data-i18n-zh="导出《埃文·格林伯格》独立研报 ⬇" data-i18n-en="Download Evan G. Greenberg HTML ⬇">导出《埃文·格林伯格》独立研报 ⬇</span>
+ </button>
+ 
+ </div>
+ </div>
+ <div class="exec-cat-bar">
+ <div class="exec-cat-pills" role="tablist" aria-label="高管职级与战线分类筛选">
+ <button type="button" class="exec-cat-btn active" data-filter-cat="all" data-i18n-zh="全部高管与管理层 (42)" data-i18n-en="All Group Executives (42)">全部高管与管理层 (42)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="csuite" data-i18n-zh="集团 C-Suite 统帅 (12)" data-i18n-en="Group C-Suite (12)">集团 C-Suite 统帅 (12)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="na_pc" data-i18n-zh="北美产险与核保 (12)" data-i18n-en="NA P&amp;C &amp; Underwriting (12)">北美产险与核保 (12)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="intl_life" data-i18n-zh="国际、人寿与再保 (9)" data-i18n-en="Intl, Life &amp; Re (9)">国际、人寿与再保 (9)</button>
+ <button type="button" class="exec-cat-btn" data-filter-cat="functional" data-i18n-zh="精算、法律与职能 (9)" data-i18n-en="Actuarial, Legal &amp; Tech (9)">精算、法律与职能 (9)</button>
+ </div>
+ <span class="exec-cat-note mono" data-i18n-zh="支持 URL 锚点直达 (#exec=evan_greenberg) · 快捷键 [ / ] 切换 · ⌘K 搜索" data-i18n-en="Deep-link via #exec=id · Keys [ / ] to step · ⌘K quick jump">支持 URL 锚点直达 (#exec=evan_greenberg) · 快捷键 [ / ] 切换 · ⌘K 搜索</span>
+ </div>
+ <div class="ip-pill-grid" id="ipPillGrid">
+ <button type="button" class="ip-pill-btn active" data-switch-ip="evan_greenberg" data-exec-cat="csuite" aria-pressed="true">
+ <span class="ip-pill-mono mono">EG</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="evan_greenberg">01. 埃文·格林伯格</span>
+ <span class="ip-pill-meta mono" data-pill-meta="evan_greenberg">$33.18M · CR 85.7% · Evan G. Greenberg</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="john_keogh" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">JK</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="john_keogh">02. 约翰·基奥</span>
+ <span class="ip-pill-meta mono" data-pill-meta="john_keogh">$14.83M · CR 85.7% · John W. Keogh</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="timothy_boroughs" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">TB</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="timothy_boroughs">03. 蒂莫西·伯勒斯</span>
+ <span class="ip-pill-meta mono" data-pill-meta="timothy_boroughs">$168.7B · CR AA/A++ · Timothy Boroughs</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="peter_enns" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">PE</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="peter_enns">04. 彼得·恩斯</span>
+ <span class="ip-pill-meta mono" data-pill-meta="peter_enns">$6.83M · CR 85.7% · Peter C. Enns</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="seshadri_iyer" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">SI</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="seshadri_iyer">05. 塞沙德里·艾耶尔</span>
+ <span class="ip-pill-meta mono" data-pill-meta="seshadri_iyer">$54.84B · CR 85.7% · Seshadri (Sesh) Iyer</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="rainer_kirchgaessner" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">RK</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="rainer_kirchgaessner">06. 莱纳·基希盖斯纳</span>
+ <span class="ip-pill-meta mono" data-pill-meta="rainer_kirchgaessner">$54.84B · CR 85.7% · Rainer Kirchgaessner</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="frances_obrien" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">FO</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="frances_obrien">07. 弗朗西丝·奥布莱恩</span>
+ <span class="ip-pill-meta mono" data-pill-meta="frances_obrien">$54.84B · CR 85.7% · Frances D. O&#x27;Brien</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="jo_ann_rabitz" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">JR</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="jo_ann_rabitz">08. 乔·安·拉比茨</span>
+ <span class="ip-pill-meta mono" data-pill-meta="jo_ann_rabitz">$54.84B · CR 85.7% · Jo Ann Rabitz</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="sean_ringsted" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">SR</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="sean_ringsted">09. 肖恩·林斯泰德</span>
+ <span class="ip-pill-meta mono" data-pill-meta="sean_ringsted">$54.84B · CR 85.7% · Sean Ringsted</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="joseph_wayland" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">JW</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="joseph_wayland">10. 约瑟夫·韦兰</span>
+ <span class="ip-pill-meta mono" data-pill-meta="joseph_wayland">$54.84B · CR 85.7% · Joseph Wayland</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="scott_henck" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">SH</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="scott_henck">11. 斯科特·亨克</span>
+ <span class="ip-pill-meta mono" data-pill-meta="scott_henck">$54.84B · CR 85.7% · Scott Henck</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="christopher_hogan" data-exec-cat="csuite" aria-pressed="false">
+ <span class="ip-pill-mono mono">CH</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="christopher_hogan">12. 克里斯托弗·霍根</span>
+ <span class="ip-pill-meta mono" data-pill-meta="christopher_hogan">$168.7B · CR AA/A++ · Christopher Hogan</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="juan_luis_ortega" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">JO</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="juan_luis_ortega">13. 胡安·路易斯·奥尔特加</span>
+ <span class="ip-pill-meta mono" data-pill-meta="juan_luis_ortega">$6.41M · CR 83.8% · Juan Luis Ortega</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="christopher_maleno" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">CM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="christopher_maleno">14. 克里斯托弗·马莱诺</span>
+ <span class="ip-pill-meta mono" data-pill-meta="christopher_maleno">$31.23B · CR 83.8% · Christopher A. Maleno</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="scott_meyer" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">SM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="scott_meyer">15. 斯科特·迈耶</span>
+ <span class="ip-pill-meta mono" data-pill-meta="scott_meyer">$31.23B · CR 83.8% · Scott A. Meyer</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="matthew_merna" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">MM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="matthew_merna">16. 马修·默纳</span>
+ <span class="ip-pill-meta mono" data-pill-meta="matthew_merna">$21.28B · CR 81.4% · Matthew Merna</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ben_rockwell" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">BR</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="ben_rockwell">17. 本·罗克韦尔</span>
+ <span class="ip-pill-meta mono" data-pill-meta="ben_rockwell">$21.28B · CR 81.4% · Ben Rockwell</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="derek_talbott" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">DT</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="derek_talbott">18. 德里克·塔尔博特</span>
+ <span class="ip-pill-meta mono" data-pill-meta="derek_talbott">$21.28B · CR 81.4% · Derek Talbott</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="melissa_scheffler" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">MS</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="melissa_scheffler">19. 梅丽莎·谢弗勒</span>
+ <span class="ip-pill-meta mono" data-pill-meta="melissa_scheffler">$7.02B · CR 91.5% · Melissa Scheffler</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="scott_arnold" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">SA</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="scott_arnold">20. 斯科特·阿诺德</span>
+ <span class="ip-pill-meta mono" data-pill-meta="scott_arnold">$2.93B · CR 82.3% · Scott Arnold</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="judy_gonsalves" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">JG</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="judy_gonsalves">21. 朱迪·贡萨尔维斯</span>
+ <span class="ip-pill-meta mono" data-pill-meta="judy_gonsalves">$21.28B · CR 81.4% · Judy Gonsalves</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="david_lupica" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">DL</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="david_lupica">22. 大卫·卢皮卡</span>
+ <span class="ip-pill-meta mono" data-pill-meta="david_lupica">$21.28B · CR 81.4% · David Lupica</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="dave_roberts" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">DR</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="dave_roberts">23. 戴夫·罗伯茨</span>
+ <span class="ip-pill-meta mono" data-pill-meta="dave_roberts">$21.28B · CR 81.4% · Dave Roberts</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="michael_mollica" data-exec-cat="na_pc" aria-pressed="false">
+ <span class="ip-pill-mono mono">MC</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="michael_mollica">24. 迈克尔·莫利卡</span>
+ <span class="ip-pill-meta mono" data-pill-meta="michael_mollica">$21.28B · CR 81.4% · Michael C. Mollica</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="paul_mcnamee" data-exec-cat="intl_life" aria-pressed="false">
+ <span class="ip-pill-mono mono">PM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="paul_mcnamee">25. 保罗·麦克纳米</span>
+ <span class="ip-pill-meta mono" data-pill-meta="paul_mcnamee">$15.02B · CR 85.0% · Paul McNamee</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="david_furby" data-exec-cat="intl_life" aria-pressed="false">
+ <span class="ip-pill-mono mono">DF</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="david_furby">26. 大卫·弗比</span>
+ <span class="ip-pill-meta mono" data-pill-meta="david_furby">$15.02B · CR 85.0% · David Furby</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ana_robic" data-exec-cat="intl_life" aria-pressed="false">
+ <span class="ip-pill-mono mono">AR</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="ana_robic">27. 安娜·罗比克</span>
+ <span class="ip-pill-meta mono" data-pill-meta="ana_robic">$15.02B · CR 85.0% · Ana Robic</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="marcos_gunn" data-exec-cat="intl_life" aria-pressed="false">
+ <span class="ip-pill-mono mono">MG</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="marcos_gunn">28. 马科斯·冈恩</span>
+ <span class="ip-pill-meta mono" data-pill-meta="marcos_gunn">$15.02B · CR 85.0% · Marcos Gunn</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="bryce_johns" data-exec-cat="intl_life" aria-pressed="false">
+ <span class="ip-pill-mono mono">BJ</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="bryce_johns">29. 布莱斯·约翰斯</span>
+ <span class="ip-pill-meta mono" data-pill-meta="bryce_johns">$7.28B · CR N/A · Bryce Johns</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="john_thompson" data-exec-cat="intl_life" aria-pressed="false">
+ <span class="ip-pill-mono mono">JT</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="john_thompson">30. 约翰·汤普森</span>
+ <span class="ip-pill-meta mono" data-pill-meta="john_thompson">$15.02B · CR 85.0% · John Thompson</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="bei_zhang" data-exec-cat="intl_life" aria-pressed="false">
+ <span class="ip-pill-mono mono">BZ</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="bei_zhang">31. 张蓓</span>
+ <span class="ip-pill-meta mono" data-pill-meta="bei_zhang">$7.28B · CR N/A · Bei Zhang</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="james_wixtead" data-exec-cat="intl_life" aria-pressed="false">
+ <span class="ip-pill-mono mono">JX</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="james_wixtead">32. 詹姆斯·威克斯蒂德</span>
+ <span class="ip-pill-meta mono" data-pill-meta="james_wixtead">$1.31B · CR 79.3% · James E. Wixtead</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="stephen_haney" data-exec-cat="intl_life" aria-pressed="false">
+ <span class="ip-pill-mono mono">SH2</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="stephen_haney">33. 斯蒂芬·哈尼</span>
+ <span class="ip-pill-meta mono" data-pill-meta="stephen_haney">$21.28B · CR 81.4% · Stephen Haney</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="kevin_rampe" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">KR</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="kevin_rampe">34. 凯文·兰普</span>
+ <span class="ip-pill-meta mono" data-pill-meta="kevin_rampe">$54.84B · CR 85.7% · Kevin M. Rampe</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="margaret_peloso" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">MP</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="margaret_peloso">35. 玛格丽特·佩洛索</span>
+ <span class="ip-pill-meta mono" data-pill-meta="margaret_peloso">$15.02B · CR 85.0% · Margaret Peloso</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="michael_kessler" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">MK</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="michael_kessler">36. 迈克尔·凯斯勒</span>
+ <span class="ip-pill-meta mono" data-pill-meta="michael_kessler">$21.28B · CR 81.4% · Michael Kessler</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="gordon_mackechnie" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">GM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="gordon_mackechnie">37. 戈登·麦凯克尼</span>
+ <span class="ip-pill-meta mono" data-pill-meta="gordon_mackechnie">$54.84B · CR 85.7% · Gordon Mackechnie</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="george_ohsiek" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">GO</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="george_ohsiek">38. 乔治·奥西克</span>
+ <span class="ip-pill-meta mono" data-pill-meta="george_ohsiek">$54.84B · CR 85.7% · George Ohsiek</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="drew_spitzer" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">DS</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="drew_spitzer">39. 德鲁·斯皮策</span>
+ <span class="ip-pill-meta mono" data-pill-meta="drew_spitzer">$54.84B · CR 85.7% · Drew Spitzer</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="amy_well" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">AW</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="amy_well">40. 艾米·威尔</span>
+ <span class="ip-pill-meta mono" data-pill-meta="amy_well">$54.84B · CR 85.7% · Amy Well</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="yancy_molnar" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">YM</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="yancy_molnar">41. 扬西·莫尔纳</span>
+ <span class="ip-pill-meta mono" data-pill-meta="yancy_molnar">$54.84B · CR 85.7% · Yancy Molnar</span>
+ </span>
+ </button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="karen_valanzano" data-exec-cat="functional" aria-pressed="false">
+ <span class="ip-pill-mono mono">KV</span>
+ <span class="ip-pill-text">
+ <span class="ip-pill-name" data-pill-name="karen_valanzano">42. 凯伦·瓦兰扎诺</span>
+ <span class="ip-pill-meta mono" data-pill-meta="karen_valanzano">$54.84B · CR 85.7% · Karen Valanzano</span>
+ </span>
+ </button>
+ </div>
+ </section>
+
+ <!-- Dynamic Monograph Sections Host (00 - 07) -->
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="高管定位：集团 C-Suite 统帅 · 安达保险集团董事长兼首席执行官 (Chairman &amp; CEO)" data-i18n-en="Mandate: Group C-Suite · Chairman &amp; Chief Executive Officer, Chubb Limited / Chubb Group">高管定位：集团 C-Suite 统帅 · 安达保险集团董事长兼首席执行官 (Chairman &amp; CEO)</span><span class="mui-chip" data-i18n-zh="履历跨度：AIG (President &amp; COO) → 2001年加入安达/ACE（25年）" data-i18n-en="Trajectory: AIG (President &amp; COO) → Joined 2001 (25 yrs)">履历跨度：AIG (President &amp; COO) → 2001年加入安达/ACE（25年）</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="数据基准：2026 Q3 &amp; FY25 SEC 核验" data-i18n-en="Baseline: Q3'26 &amp; FY25 SEC Verified">数据基准：2026 Q3 &amp; FY25 SEC 核验</span></div><div class="hero-overline mono"><span data-i18n-zh="CHUBB GROUP EXECUTIVE #01 · NYSE: CB · $54.84B 分部规模 · 2025 P&amp;C CR 85.7%" data-i18n-en="CHUBB GROUP EXECUTIVE #01 · NYSE: CB · $54.84B Scale · FY25 P&amp;C CR 85.7%">CHUBB GROUP EXECUTIVE #01 · NYSE: CB · $54.84B 分部规模 · 2025 P&amp;C CR 85.7%</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">埃文·格林伯格 (Evan G. Greenberg) 深度解构：<span class="gradient-accent">安达保险集团董事长兼首席执行官 (Chairman & CEO)</span></h1><p class="lead-prose" data-i18n-rich="lead_prose"><strong>安达保险集团董事长兼首席执行官 (Chairman & CEO)</strong>。自2004年执掌ACE以来主导2016年并购Chubb、2022年53.6亿美元收购Cigna亚洲业务及控股华泰保险，将集团市值推升至超1410亿美元；2025年核心营业利润达创纪录的99.5亿美元。 集团2025年实现总保费$659.5亿、净保费$548.4亿、核心营业利润创纪录$99.5亿，P&C综合成本率85.7%；2026年前9个月核心营业利润同比大增21.0%至$86.0亿（每股$21.94，+24.5%），P&C综合成本率进一步优化至84.0%，总资产达$2,835亿。<a class="cite-link" href="https://about.chubb.com/who-we-are/leadership/evan-g-greenberg.html" target="_blank" rel="noopener noreferrer">官网履历 ↗</a> <a class="cite-link" href="https://news.chubb.com/2026-02-03-Chubb-Reports-Fourth-Quarter-Net-Income-of-3-21-Billion,-Up-24-7-,-and-Core-Operating-Income-of-2-98-Billion,-Up-21-7-Consolidated-Net-Premiums-Written-of-13-1-Billion,-Up-8-9-,-with-P-C-and-Life-Insurance-Up-7-7-and-16-9-Record-P-C-Combined-Ra" target="_blank" rel="noopener noreferrer">FY25 财报 ↗</a> <a class="cite-link" href="https://news.chubb.com/2026-10-20-Chubb-Reports-Third-Quarter-Per-Share-Net-Income-and-Record-Core-Operating-Income-of-7-30-and-7-66,-Respectively,-Up-4-4-and-0-8-Consolidated-Net-Premiums-Written-of-15-1-Billion,-Up-1-9-,-with-P-C-and-Life-Insurance-Up-1-9-and-1-4-P-C-Combined" target="_blank" rel="noopener noreferrer">Q3'26 财报 ↗</a></p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="Chubb Limited / Chubb Group 全球全业务线" data-i18n-en="Chubb Limited / Chubb Group Global Operations">Chubb Limited / Chubb Group 全球全业务线</h3><p data-i18n-zh="直接统领或支撑Chubb Limited / Chubb Group 全球全业务线（54国及地区，~45,000员工），2025年对应规模 $54.84B，2026年Q3保持高质量运行。" data-i18n-en="Core accountability over Chubb Limited / Chubb Group Global Operations (54 countries, ~45,000 employees) ($54.84B FY25 scale) with disciplined 2026 execution.">直接统领或支撑Chubb Limited / Chubb Group 全球全业务线（54国及地区，~45,000员工），2025年对应规模 $54.84B，2026年Q3保持高质量运行。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="承保护城河：CR 85.7%" data-i18n-en="Underwriting Moat: CR 85.7%">承保护城河：CR 85.7%</h3><p data-i18n-zh="集团5年(2021–2025)平均P&amp;C综合成本率87.1%，2025年创85.7%新低，显著跑赢Travelers(89.9%)与AIG(90.1%)。" data-i18n-en="5-year avg P&amp;C combined ratio of 87.1% (record 85.7% in FY25), outperforming TRV (89.9%) and AIG (90.1%).">集团5年(2021–2025)平均P&amp;C综合成本率87.1%，2025年创85.7%新低，显著跑赢Travelers(89.9%)与AIG(90.1%)。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="股东回报与资本复利" data-i18n-en="Capital &amp; TBVPS Compounding">股东回报与资本复利</h3><p data-i18n-zh="2026年Q3年化核心有形ROE达21.6%，2025年向股东返还$49.1亿（回购$33.9亿+分红$15.2亿），连续31年增派股息。" data-i18n-en="Q3'26 annualized core ROTE of 21.6%, $4.91B FY25 capital returned, and 31 consecutive years of dividend increases.">2026年Q3年化核心有形ROE达21.6%，2025年向股东返还$49.1亿（回购$33.9亿+分红$15.2亿），连续31年增派股息。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="2025 对应板块规模" data-i18n-en="FY25 Segment Scale">2025 对应板块规模</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="$9.95B 核心营业利润" data-i18n-en="$9.95B Core Op. Income">$9.95B 核心营业利润</span></div><div class="kpi-value mono" data-i18n-zh="$54.84B" data-i18n-en="$54.84B">$54.84B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">Q3 2026最新单季：$15.14B (Q3'26)，延续稳健承保增长 <a class="cite-link" href="https://news.chubb.com/2026-10-20-Chubb-Reports-Third-Quarter-Per-Share-Net-Income-and-Record-Core-Operating-Income-of-7-30-and-7-66,-Respectively,-Up-4-4-and-0-8-Consolidated-Net-Premiums-Written-of-15-1-Billion,-Up-1-9-,-with-P-C-and-Life-Insurance-Up-1-9-and-1-4-P-C-Combined" target="_blank" rel="noopener noreferrer">Q3'26 财报 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="2025 综合成本率/评级" data-i18n-en="FY25 Combined Ratio">2025 综合成本率/评级</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="行业顶级承保利润" data-i18n-en="Top-Decile Margin">行业顶级承保利润</span></div><div class="kpi-value mono" data-i18n-zh="85.7%" data-i18n-en="85.7%">85.7%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">2026 Q3最新状态：84.1% (Q3'26)，集团9M26 P&C CR 84.0% <a class="cite-link" href="https://news.chubb.com/2026-02-03-Chubb-Reports-Fourth-Quarter-Net-Income-of-3-21-Billion,-Up-24-7-,-and-Core-Operating-Income-of-2-98-Billion,-Up-21-7-Consolidated-Net-Premiums-Written-of-13-1-Billion,-Up-8-9-,-with-P-C-and-Life-Insurance-Up-7-7-and-16-9-Record-P-C-Combined-Ra" target="_blank" rel="noopener noreferrer">FY25 财报 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="集团 2025 核心营业利润" data-i18n-en="Group FY25 Core Op. Inc.">集团 2025 核心营业利润</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="+8.9% YoY · $24.79/股" data-i18n-en="+8.9% YoY · $24.79/sh">+8.9% YoY · $24.79/股</span></div><div class="kpi-value mono" data-i18n-zh="$9.95B" data-i18n-en="$9.95B">$9.95B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">9M 2026已达$8.60B(+21.0%)，净投资收益$6.95B(FY25) <a class="cite-link" href="https://news.chubb.com/2026-10-20-Chubb-Reports-Third-Quarter-Per-Share-Net-Income-and-Record-Core-Operating-Income-of-7-30-and-7-66,-Respectively,-Up-4-4-and-0-8-Consolidated-Net-Premiums-Written-of-15-1-Billion,-Up-1-9-,-with-P-C-and-Life-Insurance-Up-1-9-and-1-4-P-C-Combined" target="_blank" rel="noopener noreferrer">Q3'26 财报 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="2025 SEC 薪酬与任期" data-i18n-en="FY25 Pay &amp; Tenure">2025 SEC 薪酬与任期</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="2001年加入 · 25年" data-i18n-en="Since 2001 · 25y">2001年加入 · 25年</span></div><div class="kpi-value mono" data-i18n-zh="$33.18M" data-i18n-en="$33.18M">$33.18M</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">此前履历：AIG (President & COO)；长期股权严格挂钩TBVPS与ROE <a class="cite-link" href="https://gloom.sh/stocks/cb/proxy/2026" target="_blank" rel="noopener noreferrer">2026 DEF 14A ↗</a>。</p></div></div></section>
+    </div>
+
+ </main>
+ </div>
+
+ <script src="../../_shared/46c4e405eab60ccf.js"></script>
+</body>
+</html>

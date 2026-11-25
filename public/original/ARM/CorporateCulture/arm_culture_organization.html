@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="arm" data-imported-report>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="安谋控股 Arm Holdings plc (NASDAQ: ARM) 企业文化与组织架构深度研究报告：84.1% 极端工程师密度、中央指令集架构主干 × 三大垂直 AI 事业部矩阵、剑桥每瓦性能基因、Rene Haas 平台与整芯跃迁及高通诉讼/软银控股治理张力（基于 FY2026 20-F 与 H1 FY2027 股东信）。" />
+  <title>安谋 Arm ARM 企业文化与组织架构 | 数据中心</title>
+  
+  
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/arm_culture_organization.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky Frosted Glass MUI AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">ARM</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="#sec-00">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="安谋控股 Arm Holdings 企业文化与组织架构深度研究报告" data-i18n-en="Arm Holdings plc Corporate Culture &amp; Org Architecture Monograph">安谋控股 Arm Holdings 企业文化与组织架构深度研究报告</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: ARM</span>
+        <span class="mui-chip mui-chip-success mono hide-sm">84.1% ENGINEERS · 9,584 FTE</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节、高管或指标…" aria-label="快速跳转章节或高管" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="研报章节与套件导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">ARM · CULTURE MONOGRAPH</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="Arm 企业文化与组织架构研报" data-i18n-en="Arm Culture &amp; Org Monograph">Arm 企业文化与组织架构研报</div>
+        <p class="sidebar-subtitle" data-i18n-zh="剑桥火鸡谷仓极简基因 × 84.1%极端工程师纯度 × 中央指令集主干与三大垂直AI事业部" data-i18n-en="Cambridge Minimalist DNA × 84.1% Engineer Density × Central ISA Spine + 3 Vertical AI BUs">剑桥火鸡谷仓极简基因 × 84.1%极端工程师纯度 × 中央指令集主干与三大垂直AI事业部</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="组织原型" data-i18n-en="Org Archetype">组织原型</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="中央ISA主干 × 垂直AI矩阵" data-i18n-en="ISA Spine × AI BUs">中央ISA主干 × 垂直AI矩阵</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="工程师占比 (FY26)" data-i18n-en="Engineer Share (FY26)">工程师占比 (FY26)</span>
+            <span class="sidebar-mini-val mono">84.1% (8,058 / 9,584)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="控股与治理" data-i18n-en="Ownership">控股与治理</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="软银集团 ~87% 控股" data-i18n-en="SoftBank ~87% Stake">软银集团 ~87% 控股</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与章节目录">
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="ARM"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="深度研报目录 (Ch 00–07)" data-i18n-en="Monograph Chapters (00–07)">深度研报目录 (Ch 00–07)</div>
+        <ul class="mui-nav-list" id="tocList">
+          <li><a href="#sec-00" class="mui-nav-link active"><span class="nav-idx mono">00</span><span data-i18n-zh="执行摘要与核心判断" data-i18n-en="Executive Verdict &amp; KPIs">执行摘要与核心判断</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link"><span class="nav-idx mono">01</span><span data-i18n-zh="中央架构主干与AI事业部" data-i18n-en="Central Spine &amp; 3 AI BUs">中央架构主干与AI事业部</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link"><span class="nav-idx mono">02</span><span data-i18n-zh="四大文化支柱与能力雷达" data-i18n-en="4 Cultural Pillars &amp; Radar">四大文化支柱与能力雷达</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link"><span class="nav-idx mono">03</span><span data-i18n-zh="半导体五巨头组织对标" data-i18n-en="Semiconductor Peer Grid">半导体五巨头组织对标</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link"><span class="nav-idx mono">04</span><span data-i18n-zh="研发杠杆、复利与组织张力" data-i18n-en="R&amp;D Leverage &amp; Tensions">研发杠杆、复利与组织张力</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link"><span class="nav-idx mono">05</span><span data-i18n-zh="三十六年三幕演进与战役" data-i18n-en="3-Act History &amp; Battles">三十六年三幕演进与战役</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link"><span class="nav-idx mono">06</span><span data-i18n-zh="组织健康度六维诊断清单" data-i18n-en="6-Point Diagnostic Audit">组织健康度六维诊断清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link"><span class="nav-idx mono">07</span><span data-i18n-zh="权威一手监管文件与文献" data-i18n-en="Primary Filings &amp; Sources">权威一手监管文件与文献</span></a></li>
+        </ul>
+      </nav>
+
+      
+    </aside>
+
+    <!-- Main Monograph Content -->
+    <main class="mono-main main-content">
+
+      <!-- Ch 00: Executive Summary -->
+      <section id="sec-00" class="mono-section mono-hero">
+        <div class="bm-badge-row" style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span class="mui-chip mui-chip-primary mono">CHAPTER 00 · EXECUTIVE VERDICT</span>
+          <span class="mui-chip mui-chip-success mono">FY2026 REV $4,920M · 97.5% GAAP GM</span>
+          <span class="mui-chip mui-chip-violet mono">Q2 FYE27: 30M+ DEVELOPERS · &gt;10B CHIPS/QTR</span>
+        </div>
+        <h1 class="sec-h1" data-i18n-zh="从剑桥火鸡谷仓到全球 AI 计算母语：<span class='grad-txt'>Arm 84.1% 极端工程师组织与平台化跃迁深度解剖</span>" data-i18n-en="From a Cambridge Turkey Barn to the Lingua Franca of AI Compute: <span class='grad-txt'>Inside Arm's 84.1% Engineer-Pure Organization &amp; Silicon Pivot</span>">从剑桥火鸡谷仓到全球 AI 计算母语：<span class="grad-txt">Arm 84.1% 极端工程师组织与平台化跃迁深度解剖</span></h1>
+
+        <div class="hero-verdict">
+          <strong>核心研判结论：</strong>如果说苹果公司的组织奇迹是用“职能制集权”统御硬件、操作系统与工业设计，那么安谋控股（<strong>Arm Holdings plc</strong>）则是全球半导体史上最极致的<strong>“共享中央研究院型组织”</strong>——截至 2026 年 3 月 31 日（FY2026 财年末），Arm 全球仅凭 <strong>9,584 名全职员工</strong>（其中高达 <strong>8,058 名为研发工程师，占比 84.1%</strong>），便撬动了合作伙伴累计逾 <strong>3,500 亿颗芯片</strong>出货与 <strong>97.5% 的 GAAP 毛利率</strong> <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm" target="_blank" rel="noopener noreferrer">SEC FYE26 Q4 ↗</a>。自 2022 年 2 月前英伟达高管 <strong>Rene Haas</strong> 出任 CEO 以来，Arm 正在经历创立 36 年最剧烈的组织基因重塑：在坚守首席架构师统御<strong>单一指令集（ISA）不分裂</strong>的前提下，重组出 <strong>Cloud AI、Edge AI、Physical AI 三大垂直市场事业部</strong>，并于 2026 年 3 月携手 Meta 推出首款自研 3nm 136 核量产处理器 <strong>Arm AGI CPU</strong>，正式从“只卖图纸的剑桥瑞士中立绅士”蜕变为“剑指 FY2031 $250亿营收的全栈算力平台” <a class="cite-link" href="https://newsroom.arm.com/news/arm-agi-cpu-launch" target="_blank" rel="noopener noreferrer">Arm AGI CPU ↗</a>。
+        </div>
+
+        <div class="thesis-grid">
+          <article class="thesis-card">
+            <span class="mui-chip mui-chip-primary mono" style="align-self:flex-start;">THESIS 01 · R&amp;D DENSITY</span>
+            <h3 data-i18n-zh="84.1% 工程师纯度与 56.4% 研发强度" data-i18n-en="84.1% Engineering Purity &amp; 56.4% R&amp;D Intensity">84.1% 工程师纯度与 56.4% 研发强度</h3>
+            <p>FY2026 Arm 将高达 <strong>$2,776M（占总营收 56.4%）</strong>投入 GAAP 研发（同比激增 +34%），零晶圆厂重资产包袱使公司几乎所有编制都集中于微架构、编译器与子系统验证，充当苹果、英伟达、AWS、联发科共摊成本的底层架构母体 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm" target="_blank" rel="noopener noreferrer">FYE26 Letter ↗</a>。</p>
+          </article>
+          <article class="thesis-card">
+            <span class="mui-chip mui-chip-success mono" style="align-self:flex-start;">THESIS 02 · SPINE × VERTICAL BUs</span>
+            <h3 data-i18n-zh="“中央架构主干 × 三大 AI 事业部”耦合" data-i18n-en="Central ISA Spine × 3 Vertical AI BUs">“中央架构主干 × 三大 AI 事业部”耦合</h3>
+            <p>首席架构师 Richard Grisenthwaite 守护 Armv9/SME2 20 年二进制兼容铁律，严防开源架构常见的碎片化陷阱；前端由 Mohamed Awad（Cloud AI）、Chris Bergey（Edge AI）、Drew Henry（Physical AI）按终端场景交付预集成 CSS 子系统与自研硅片 <a class="cite-link" href="https://www.arm.com/company/leadership" target="_blank" rel="noopener noreferrer">Arm Leadership ↗</a>。</p>
+          </article>
+          <article class="thesis-card">
+            <span class="mui-chip mui-chip-warning mono" style="align-self:flex-start;">THESIS 03 · NEUTRALITY TENSION</span>
+            <h3 data-i18n-zh="“瑞士中立”与“自研整芯”的治理钢丝" data-i18n-en="Walking the Neutrality vs. First-Party Silicon Tightrope">“瑞士中立”与“自研整芯”的治理钢丝</h3>
+            <p>当 Arm 从收取几个点版税跨入单颗数千美元的 AGI CPU 整芯（锚定 FY31 ~$150亿硅片营收），并叠加与高通的许可诉讼及软银集团 <strong>~87% 控股</strong>（关联方收入占 30.5%），如何用客户防火墙维系生态信任成为未来五年核心组织考题 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm" target="_blank" rel="noopener noreferrer">FY26 20-F ↗</a>。</p>
+          </article>
+        </div>
+
+        <div class="kpi-grid-4">
+          <div class="kpi-card">
+            <span class="kpi-lbl" data-i18n-zh="全职员工与工程师纯度 (FY26)" data-i18n-en="FTEs &amp; Engineer Share (FY26)">全职员工与工程师纯度 (FY26)</span>
+            <span class="kpi-val mono">9,584 · 84.1%</span>
+            <span class="kpi-foot">8,058 名研发工程师（同比净增 1,115 名工程师）</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-lbl" data-i18n-zh="FY26 全年营收 / Q2'27 TTM" data-i18n-en="FY26 Revenue / Q2'27 TTM">FY26 全年营收 / Q2'27 TTM</span>
+            <span class="kpi-val mono">$4.92B · $5.47B</span>
+            <span class="kpi-foot">人均年化创收达 ~$570K；连续 5 季增速 &gt;20%</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-lbl" data-i18n-zh="GAAP 毛利率 / Non-GAAP 营业利润率" data-i18n-en="GAAP GM / Non-GAAP Op Margin">GAAP 毛利率 / Non-GAAP 营业利润率</span>
+            <span class="kpi-val mono">97.5% · 43.0%</span>
+            <span class="kpi-foot">FY26 Non-GAAP 营业利润 $2,115M，净现金 $3.60B</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-lbl" data-i18n-zh="累计出货芯片 / 全球开发者" data-i18n-en="Cumulative Chips / Developers">累计出货芯片 / 全球开发者</span>
+            <span class="kpi-val mono">350B+ · 30M+</span>
+            <span class="kpi-foot">Q2 FY27 单季伙伴芯片出货史上首破 100 亿颗 <a class="cite-link" href="https://investors.arm.com/static-files/0b5baa2e-fc47-4d05-b724-e49de7bd4356" target="_blank" rel="noopener noreferrer">Q2 FY27 ↗</a></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ch 01: Organizational Blueprint -->
+      <section id="sec-01" class="mono-section">
+        <div class="sec-head">
+          <div>
+            <span class="sec-kicker mono">CHAPTER 01 · ORGANIZATIONAL ARCHITECTURE BLUEPRINT</span>
+            <h2 class="sec-h2" data-i18n-zh="组织架构图谱：“中央指令集工程主干 × 三大垂直 AI 事业部”双层矩阵" data-i18n-en="Org Blueprint: Central Architecture Spine × Three Market-Led AI Business Units">组织架构图谱：“中央指令集工程主干 × 三大垂直 AI 事业部”双层矩阵</h2>
+            <p class="sec-sub">点击下方任一高管或架构节点，查看其在 Arm 组织矩阵中的管辖权限、关键履历与跨部门接口机制（数据源自 <a href="https://www.arm.com/company/leadership" target="_blank" rel="noopener noreferrer">Arm 官方领导层名录 ↗</a>）。</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono">CLICK ANY NODE TO INSPECT</span>
+        </div>
+
+        <div class="org-blueprint" id="orgBlueprint">
+          <div class="org-ceo-bar org-node active" data-org="ceo" role="button" tabindex="0">
+            <div>
+              <span class="mui-chip mui-chip-primary mono" style="margin-bottom:4px;">CHIEF EXECUTIVE OFFICER &amp; BOARD MEMBER</span>
+              <b style="font-size:0.96rem;">Rene Haas · 首席执行官（2022年2月接任，2013年加入 Arm，前 NVIDIA 计算产品副总裁兼总经理）</b>
+              <small style="color:var(--text-secondary);">同时担任软银集团董事会成员；主导 2023 年纳斯达克 $51/ADS 重返上市、三大垂直 AI BU 重组、CSS 子系统商业化及 2026 Arm AGI CPU 整芯突破</small>
+            </div>
+            <span class="mui-chip mui-chip-success mono">FY22 $2.70B → FY26 $4.92B</span>
+          </div>
+
+          <div>
+            <div class="org-tier-label" data-i18n-zh="第一层：中央架构与工程主干（守护单一 ISA 统一性与可复用 IP 底座）" data-i18n-en="Layer 1: Central Architecture &amp; Engineering Spine (Guarding Single-ISA Coherence)">第一层：中央架构与工程主干（守护单一 ISA 统一性与可复用 IP 底座）</div>
+            <div class="org-node-grid-4">
+              <button type="button" class="org-node" data-org="grisenthwaite">
+                <b>Richard Grisenthwaite</b>
+                <span>EVP, Chief Architect &amp; Fellow</span>
+                <small>剑桥物理系出身，执掌架构逾22年，主导 Armv6–Armv9、CCA 与 SME2，120项专利，2025当选英国皇家工程院院士</small>
+              </button>
+              <button type="button" class="org-node" data-org="campbell">
+                <b>Gary Campbell</b>
+                <span>EVP, Central Engineering</span>
+                <small>1998年以 CPU 设计师加入 Arm；统管全球核心 CPU/GPU/ISP 微架构研发与物理验证方法学</small>
+              </button>
+              <button type="button" class="org-node" data-org="halter">
+                <b>Steve Halter</b>
+                <span>SVP, Solutions Engineering</span>
+                <small>主导先进 3nm/2nm 芯粒互联（UCIe）、SoC 子系统参考集成与硅片流片交付工程</small>
+              </button>
+              <button type="button" class="org-node" data-org="hayes">
+                <b>Eric Hayes</b>
+                <span>EVP, Operations</span>
+                <small>统筹供应链/晶圆代工协同（TSMC N3P）、企业级 EDA 算力底座与跨区域研发运营效率</small>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <div class="org-tier-label" data-i18n-zh="第二层：三大垂直市场 AI 事业部（按终端算力场景交付 CSS 子系统与自研硅片）" data-i18n-en="Layer 2: Three Market-Led Vertical AI Business Units (Delivering CSS &amp; Production Silicon)">第二层：三大垂直市场 AI 事业部（按终端算力场景交付 CSS 子系统与自研硅片）</div>
+            <div class="org-node-grid-3">
+              <button type="button" class="org-node" data-org="awad">
+                <b>Mohamed Awad</b>
+                <span>EVP, Cloud AI Business Unit</span>
+                <small>统管 Neoverse 数据中心服务器（累计超15亿核，头部云商~50%份额）及 136核 Arm AGI CPU 整芯业务</small>
+              </button>
+              <button type="button" class="org-node" data-org="bergey">
+                <b>Chris Bergey</b>
+                <span>EVP, Edge AI Business Unit</span>
+                <small>统管智能手机（&gt;99%份额、Mobile CSS 2 / Lumex）、AI PC（全球出货占比已达~20%）与智能终端</small>
+              </button>
+              <button type="button" class="org-node" data-org="henry">
+                <b>Drew Henry</b>
+                <span>EVP, Physical AI Business Unit</span>
+                <small>合并智能汽车与人形机器人赛道（FY25 车规份额 44%，Q2 FY27 版税 +50% YoY），主导 Zena CSS 与 L4 智驾生态</small>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <div class="org-tier-label" data-i18n-zh="第三层：全球商业化订阅引擎与治理中枢（ATA/AFA 漏斗、财务纪律与人才密度）" data-i18n-en="Layer 3: Global Commercial Engine &amp; Corporate Governance">第三层：全球商业化订阅引擎与治理中枢（ATA/AFA 漏斗、财务纪律与人才密度）</div>
+            <div class="org-node-grid-4">
+              <button type="button" class="org-node" data-org="abbey">
+                <b>Will Abbey</b>
+                <span>EVP &amp; Chief Commercial Officer</span>
+                <small>2004年加入 Arm，兼任安谋科技（Arm China）董事；统管 56 家 ATA 与 329 家 AFA 全球商业授权漏斗</small>
+              </button>
+              <button type="button" class="org-node" data-org="child">
+                <b>Jason Child</b>
+                <span>EVP &amp; Chief Financial Officer</span>
+                <small>前 Splunk CFO 及亚马逊国际 CFO；建立 SaaS 化 ACV/RPO 披露体系与 FY31 $25B/$9+ EPS 资本模型</small>
+              </button>
+              <button type="button" class="org-node" data-org="badani">
+                <b>Ami Badani</b>
+                <span>Chief Marketing Officer</span>
+                <small>前 NVIDIA 数据中心营销副总裁；主导 KleidiAI 与 3,000万+ 全球软件开发者生态运营</small>
+              </button>
+              <button type="button" class="org-node" data-org="eaton">
+                <b>Charlotte Eaton &amp; Spencer Collins</b>
+                <span>Chief People Officer &amp; EVP/CLO</span>
+                <small>守护 84.1% 工程师人才密度与 $10.52亿 SBC 激励保留；CLO 主导知识产权诉讼防线与剥离并购</small>
+              </button>
+            </div>
+          </div>
+
+          <div class="org-inspector" id="orgInspector">
+            <h4 id="orgInsTitle">Rene Haas · 首席执行官：把英伟达全栈商业化速度注入剑桥 36 年架构底座</h4>
+            <p id="orgInsBody">2013 年加入 Arm 执掌 IP 产品事业群（IPG）期间，Haas 力排众议砍掉缺乏商业闭环的边缘项目，重金押注 Neoverse 云服务器路线；2022 年 2 月在英伟达并购案终止当天临危受命接任 CEO。他打破了过去按 CPU/GPU 技术模块各自售卖的部门墙，改组为面向客户整机痛点的 Cloud AI、Edge AI、Physical AI 三大事业部，推动单芯片版税率翻倍的 CSS 子系统与自研 Arm AGI CPU 落地。</p>
+          </div>
+        </div>
+
+        <div class="split-75">
+          <div class="subcard">
+            <div class="subcard-head">
+              <h3 data-i18n-zh="组织重组的财务与人才映射（FY2021–FY2026）" data-i18n-en="Financial &amp; Workforce Impact of Org Restructuring (FY21–FY26)">组织重组的财务与人才映射（FY2021–FY2026）</h3>
+              <div class="mui-segmented" id="ch1Tabs">
+                <button type="button" class="mui-seg-btn active" data-ch1="rev" data-i18n-zh="视图A：授权与版税协同" data-i18n-en="View A: License + Royalty">视图A：授权与版税协同</button>
+                <button type="button" class="mui-seg-btn" data-ch1="fte" data-i18n-zh="视图B：精兵扩编与工程师纯度" data-i18n-en="View B: FTE &amp; Engineer Purity">视图B：精兵扩编与工程师纯度</button>
+              </div>
+            </div>
+            <div class="canvas-wrap"><canvas id="chartCh1"></canvas></div>
+            <p class="chart-note">注：数据源自 SEC FY2026 Form 20-F 与 Q4 FYE26 股东信（截至每年 3 月 31 日财年）。FY23→FY26 全职员工从 5,963 人扩编至 9,584 人（+60.7%），工程师占比稳居 83%–84.1% 高位 <a class="cite-link" href="https://businesstats.com/arm/" target="_blank" rel="noopener noreferrer">SEC 20-F Data ↗</a>。</p>
+          </div>
+
+          <div class="subcard">
+            <div class="subcard-head">
+              <h3 data-i18n-zh="四大核心跨部门协同机制（点击展开）" data-i18n-en="Four Cross-Functional Operating Mechanisms">四大核心跨部门协同机制（点击展开）</h3>
+            </div>
+            <div class="details-stack">
+              <details class="exec-accordion" open>
+                <summary><span>01 · 首席架构师一票否决制（ISA Coherence Gate）</span><span class="mono">+</span></summary>
+                <p>任何垂直事业部为大客户定制子系统时，严禁破坏 Armv9 指令集统一规范。Richard Grisenthwaite 领导的架构委员会拥有跨 BU 一票否决权 <a class="cite-link" href="https://raeng.org.uk/about-us/fellowship/new-fellows-2025/richard-grisenthwaite-freng/" target="_blank" rel="noopener noreferrer">RAEng ↗</a>，确保全球 3,000 万开发者编写的二进制代码无需修改即可跨云端、PC 与手机运行——这正是开源 RISC-V 阵营最难复制的组织护城河。</p>
+              </details>
+              <details class="exec-accordion">
+                <summary><span>02 · CSS 子系统联合特种编队与业务瘦身</span><span class="mono">+</span></summary>
+                <p>为支撑 Neoverse/Lumex/Zena CSS 交付，中央工程部与垂直 BU 组建混编物理实现团队，替客户完成缓存一致性互联与 3nm 时序收敛；同时果断做减法——2025 年 8 月将低附加值 Artisan 基础物理 IP 业务以 $1.31 亿收益剥离给 Cadence，全员聚焦高溢价计算核心 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm" target="_blank" rel="noopener noreferrer">FY26 20-F ↗</a>。</p>
+              </details>
+              <details class="exec-accordion">
+                <summary><span>03 · 双层订阅制商业漏斗（AFA 广撒网 + ATA 锁巨头）</span><span class="mono">+</span></summary>
+                <p>商业团队摒弃传统“一芯片一谈判”博弈摩擦：底层用 Arm Flexible Access（329 家客户）零门槛赋能 AI/机器人初创企业探索设计；顶层用 Arm Total Access（56 家旗舰客户，覆盖超半数 Top 30 客户）锁定多年期一揽子研发路线图，使年化合同价值（ACV）在 Q1 FY27 攀升至 $17.32 亿。</p>
+              </details>
+              <details class="exec-accordion">
+                <summary><span>04 · 自研整芯保密隔离墙（Clean-Room Co-Design）</span><span class="mono">+</span></summary>
+                <p>在开发首款量产服务器芯片 Arm AGI CPU 时，Cloud AI 事业部与首席伙伴 Meta 建立独立工程保密室（Clean-Room），将其与面向 AWS Graviton、NVIDIA Grace、Google Axion 的常规 Neoverse IP 授权支持团队在代码库与商业信息上严格物理隔离，最大限度缓解客户猜忌 <a class="cite-link" href="https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-arm-details-agi-server-cpu-with-two-70-core-n3p-chiplets-touts-2-tb-s-ucie-fabric-link-and-12-channel-memory-controller" target="_blank" rel="noopener noreferrer">Hot Chips 2026 ↗</a>。</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ch 02: 4 Cultural Pillars & 5-Axis Radar -->
+      <section id="sec-02" class="mono-section">
+        <div class="sec-head">
+          <div>
+            <span class="sec-kicker mono">CHAPTER 02 · CULTURAL DNA &amp; FIVE-AXIS RADAR</span>
+            <h2 class="sec-h2" data-i18n-zh="剑桥极简主义遇上硅谷铁腕：四大文化支柱与组织能力雷达" data-i18n-en="Cambridge Minimalism Meets Silicon Valley Velocity: 4 Pillars &amp; Capability Radar">剑桥极简主义遇上硅谷铁腕：四大文化支柱与组织能力雷达</h2>
+            <p class="sec-sub">源于 1990 年剑桥火鸡谷仓“预算匮乏倒逼极致能效”的创立传统，叠加 2022 年后平台商业化纪律。</p>
+          </div>
+        </div>
+
+        <div class="split-66">
+          <div class="pillar-list">
+            <div class="pillar-card">
+              <h4><span class="mui-chip mui-chip-primary mono">PILLAR 01</span><span data-i18n-zh="每瓦性能宗教（Performance-per-Watt Obsession）" data-i18n-en="Performance-per-Watt Obsession">每瓦性能宗教（Performance-per-Watt Obsession）</span></h4>
+              <p>从 Acorn 时代为无风扇微型机设计首颗 RISC 处理器起，“用最少晶体管与最低功耗完成计算”便刻入 Arm 工程师骨髓。这一最初服务手机电池续航的节俭美学，意外在今天成为单座吉瓦级（GW）AI 数据中心突破电力散热瓶颈（单 GW 节省高达 $100 亿 CapEx）的终极武器 <a class="cite-link" href="https://www.cemtek.com.tr/hizmetler/the-official-history-of-arm" target="_blank" rel="noopener noreferrer">Arm History ↗</a>。</p>
+            </div>
+            <div class="pillar-card">
+              <h4><span class="mui-chip mui-chip-success mono">PILLAR 02</span><span data-i18n-zh="伙伴成功优先的“瑞士中立契约”（Partner-First Stewardship）" data-i18n-en="Partner-First Ecosystem Stewardship">伙伴成功优先的“瑞士中立契约”（Partner-First Stewardship）</span></h4>
+              <p>首任 CEO Sir Robin Saxby 立下名言：“Arm 只有先让合作伙伴赚到大钱，自己才能长期收税。”三十余年来，竞争死敌（苹果与三星、英伟达与超算云厂、联发科与车企）之所以敢把身家性命托付给同一套架构，根基在于 Arm 透明对等的授权契约与零晶圆厂竞争承诺。</p>
+            </div>
+            <div class="pillar-card">
+              <h4><span class="mui-chip mui-chip-violet mono">PILLAR 03</span><span data-i18n-zh="二十年尺度的向后兼容工程纪律（Multi-Decade ISA Rigor）" data-i18n-en="Multi-Decade ISA Compatibility Rigor">二十年尺度的向后兼容工程纪律（Multi-Decade ISA Rigor）</span></h4>
+              <p>芯片从架构定义、客户授权、流片验证到汽车或工业设备报废往往横跨 15–20 年（目前约 50% 版税仍来自 10 年前发布的产品）。因此剑桥总部推崇学院派深思熟虑与严苛形式化验证，宁可前期论证两年，绝不把未成熟的指令集推向全球 3,000 万开发者。</p>
+            </div>
+            <div class="pillar-card">
+              <h4><span class="mui-chip mui-chip-warning mono">PILLAR 04</span><span data-i18n-zh="按价值定价的商业果敢（Value-Based Platform Capture）" data-i18n-en="Value-Based Platform Monetization">按价值定价的商业果敢（Value-Based Platform Capture）</span></h4>
+              <p>过去温和的学院文化曾导致 Arm 守着 99% 移动垄断份额却只赚取微薄单颗几美分版税。Rene Haas 注入硅谷结果导向文化：既然 Armv9 安全架构与 CSS 替客户省去数亿美元验证费与一年上市时间，就理直气壮将版税率翻倍（Armv9 ~2x、CSS 再 ~2x），并亲自下场打造 AGI CPU 捕获全额硅片价值。</p>
+            </div>
+          </div>
+
+          <div class="subcard">
+            <div class="subcard-head">
+              <h3 data-i18n-zh="五维组织能力模型对标雷达" data-i18n-en="5-Axis Organizational Capability Radar">五维组织能力模型对标雷达</h3>
+              <div class="mui-segmented" id="radarToggleGroup">
+                <button type="button" class="mui-seg-btn active" data-rpeer="all" data-i18n-zh="三方全显" data-i18n-en="All 3">三方全显</button>
+                <button type="button" class="mui-seg-btn" data-rpeer="nvda" data-i18n-zh="ARM vs NVDA" data-i18n-en="ARM vs NVDA">ARM vs NVDA</button>
+                <button type="button" class="mui-seg-btn" data-rpeer="idm" data-i18n-zh="ARM vs 传统IDM" data-i18n-en="ARM vs IDM">ARM vs 传统IDM</button>
+              </div>
+            </div>
+            <div class="canvas-wrap" style="height:330px;"><canvas id="chartRadar"></canvas></div>
+            <p class="chart-note">蓝色实线为 <strong>Arm (ARM)</strong>（轻资产毛利与生态中立度近乎满分，全栈整芯商业捕获力正通过 CSS 与 AGI CPU 快速补齐）；绿色虚线为 <strong>NVIDIA (NVDA)</strong>（全栈软硬单芯变现极强）；琥珀点线为 <strong>传统 IDM (Intel)</strong>（受制于重资产晶圆厂折旧与历史组织包袱）。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ch 03: Peer DataGrid & Anatomy Bars -->
+      <section id="sec-03" class="mono-section">
+        <div class="sec-head">
+          <div>
+            <span class="sec-kicker mono">CHAPTER 03 · GLOBAL SEMICONDUCTOR ORG BENCHMARK</span>
+            <h2 class="sec-h2" data-i18n-zh="全球半导体五巨头组织形态、工程师密度与人效矩阵" data-i18n-en="Global Semiconductor 5-Peer Governance, Engineer Density &amp; Productivity Matrix">全球半导体五巨头组织形态、工程师密度与人效矩阵</h2>
+            <p class="sec-sub">对比纯 IP 平台（Arm）、EDA/IP 双轮（Synopsys）、全栈 AI 算力霸主（NVIDIA）、纯晶圆代工（TSMC）与传统 IDM（Intel）。</p>
+          </div>
+        </div>
+
+        <div class="grid-toolbar">
+          <div class="mui-segmented" id="peerFilterTabs">
+            <button type="button" class="mui-seg-btn active" data-pcat="ALL" data-i18n-zh="全部五巨头 (5)" data-i18n-en="All Peers (5)">全部五巨头 (5)</button>
+            <button type="button" class="mui-seg-btn" data-pcat="IP" data-i18n-zh="轻资产 IP / EDA" data-i18n-en="IP / EDA">轻资产 IP / EDA</button>
+            <button type="button" class="mui-seg-btn" data-pcat="FABLESS" data-i18n-zh="Fabless 全栈芯片" data-i18n-en="Fabless Silicon">Fabless 全栈芯片</button>
+            <button type="button" class="mui-seg-btn" data-pcat="FAB" data-i18n-zh="晶圆代工与 IDM" data-i18n-en="Foundry &amp; IDM">晶圆代工与 IDM</button>
+          </div>
+          <input type="search" id="peerSearchInput" class="peer-search" placeholder="搜索公司、CEO 或组织特征…" aria-label="过滤对标公司" />
+        </div>
+
+        <div class="table-wrap">
+          <table class="mui-table" id="peerTable">
+            <thead>
+              <tr>
+                <th data-i18n-zh="公司与代码" data-i18n-en="Company">公司与代码</th>
+                <th data-i18n-zh="核心组织架构原型" data-i18n-en="Org Archetype">核心组织架构原型</th>
+                <th data-i18n-zh="全职员工与工程纯度" data-i18n-en="FTE &amp; Eng Share">全职员工与工程纯度</th>
+                <th data-i18n-zh="年度营收与人均创收" data-i18n-en="Rev &amp; Rev/FTE">年度营收与人均创收</th>
+                <th data-i18n-zh="GAAP 毛利率 / 研发率" data-i18n-en="GAAP GM / R&amp;D %">GAAP 毛利率 / 研发率</th>
+                <th data-i18n-zh="核心文化特征与权威来源" data-i18n-en="Cultural Signature &amp; Source">核心文化特征与权威来源</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-arm" data-cat="IP">
+                <td class="mono"><strong>Arm Holdings</strong><br/>NASDAQ: ARM</td>
+                <td>中央 ISA 架构主干 × Cloud/Edge/Physical 三大 AI BU</td>
+                <td class="mono">9,584 FTE<br/><strong>84.1% 工程师</strong></td>
+                <td class="mono">$4.92B (FY26)<br/>~$513K ($570K TTM)</td>
+                <td class="mono"><strong>97.5% GM</strong><br/>56.4% R&amp;D</td>
+                <td>每瓦能效信仰 + 3,000万开发者生态中立 + CSS/AGI整芯跃迁 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm" target="_blank" rel="noopener noreferrer">SEC 6-K ↗</a></td>
+              </tr>
+              <tr data-cat="FABLESS">
+                <td class="mono"><strong>NVIDIA</strong><br/>NASDAQ: NVDA</td>
+                <td>极度扁平“黄仁勋 ~60 直管层” + 全栈软硬一体单轨作战</td>
+                <td class="mono">~42,000 FTE<br/>~74% 研发人员</td>
+                <td class="mono">$215.9B (FY26)<br/><strong>~$5.14M / 人</strong></td>
+                <td class="mono">71.1% GM<br/>~8.6% R&amp;D</td>
+                <td>光速执行（Speed of Light）、零层级政治、CUDA 软硬闭环统治 <a class="cite-link" href="https://www.gradually.ai/en/nvidia-statistics/" target="_blank" rel="noopener noreferrer">NVDA FY26 ↗</a></td>
+              </tr>
+              <tr data-cat="IP">
+                <td class="mono"><strong>Synopsys</strong><br/>NASDAQ: SNPS</td>
+                <td>EDA 电子设计自动化 + 接口/安全硅 IP 事业群矩阵</td>
+                <td class="mono">~20,000 FTE<br/>~78% 工程技术</td>
+                <td class="mono">~$6.1B (FY25)<br/>~$305K / 人</td>
+                <td class="mono">~80.0% GM<br/>~34.0% R&amp;D</td>
+                <td>算法数学密集型 SaaS 订阅粘性，与 Arm 物理实现流程深度互补</td>
+              </tr>
+              <tr data-cat="FAB">
+                <td class="mono"><strong>TSMC 台积电</strong><br/>NYSE: TSM</td>
+                <td>重资产晶圆制造军团纪律 + “绝对不与客户竞争”铁律</td>
+                <td class="mono">~83,000 FTE<br/>制程与产线良率工程</td>
+                <td class="mono">~$90B+ (FY25)<br/>~$1.10M / 人</td>
+                <td class="mono">~56.0% GM<br/>~7.2% R&amp;D</td>
+                <td>张忠谋纯代工中立契约（Arm AGI CPU 首选 N3P 3nm 代工伙伴） <a class="cite-link" href="https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-arm-details-agi-server-cpu-with-two-70-core-n3p-chiplets-touts-2-tb-s-ucie-fabric-link-and-12-channel-memory-controller" target="_blank" rel="noopener noreferrer">N3P ↗</a></td>
+              </tr>
+              <tr data-cat="FAB">
+                <td class="mono"><strong>Intel</strong><br/>NASDAQ: INTC</td>
+                <td>IDM 2.0 产品部门与晶圆代工（Intel Foundry）分拆核算重组</td>
+                <td class="mono">~108,900 FTE<br/>重资产制造+设计混合</td>
+                <td class="mono">~$53.1B (FY25)<br/>~$487K / 人</td>
+                <td class="mono">~33.0% GM<br/>~30.0% R&amp;D</td>
+                <td>x86 历史存量包袱沉重，内部制造与外部代工利益长期博弈</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="subcard">
+          <div class="subcard-head">
+            <h3 data-i18n-zh="Arm FY2026 损益与人才结构六维横截面（占营收/全员百分比）" data-i18n-en="Arm FY2026 P&amp;L &amp; Workforce Structural Ratios (%)">Arm FY2026 损益与人才结构六维横截面（占营收/全员百分比）</h3>
+            <span class="mui-chip mui-chip-primary mono">SEC FYE26 VERIFIED RATIOS</span>
+          </div>
+          <div class="canvas-wrap" style="height:260px;"><canvas id="chartBars"></canvas></div>
+        </div>
+      </section>
+
+      <!-- Ch 04: Financial Leverage, Compounding Simulator & Tensions -->
+      <section id="sec-04" class="mono-section">
+        <div class="sec-head">
+          <div>
+            <span class="sec-kicker mono">CHAPTER 04 · R&amp;D OPERATING LEVERAGE &amp; GOVERNANCE TENSIONS</span>
+            <h2 class="sec-h2" data-i18n-zh="研发经营杠杆、2031 组织复利模拟器与四大治理暗礁" data-i18n-en="R&amp;D Operating Leverage, 2031 Compounding Simulator &amp; Four Governance Tensions">研发经营杠杆、2031 组织复利模拟器与四大治理暗礁</h2>
+            <p class="sec-sub">为什么高达 56.4% 的 GAAP 研发费用率不是亏损负担，而是锁死未来十年高毛利版税与硅片利润池的前置资本开支？</p>
+          </div>
+        </div>
+
+        <div class="kpi-grid-4" style="margin-bottom:18px;">
+          <div class="kpi-card">
+            <span class="kpi-lbl">FY26 经营性现金流 (OCF)</span>
+            <span class="kpi-val mono">$1,524M</span>
+            <span class="kpi-foot">较 FY25 ($397M) 暴增 284%；Q1 FY27 TTM FCF 达 $1.40B</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-lbl">账面现金与短期投资</span>
+            <span class="kpi-val mono">$3,601M</span>
+            <span class="kpi-foot">Q1 FY27 进一步升至 $3,888M，零传统有息银行债务</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-lbl">FY26 股权激励费用 (SBC)</span>
+            <span class="kpi-val mono">$1,052M</span>
+            <span class="kpi-foot">占营收 21.4%（人均 ~$110K SBC），深度绑定顶尖硅架构师</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-lbl">版税跨代生命半衰期</span>
+            <span class="kpi-val mono">~50% ≥10Y</span>
+            <span class="kpi-foot">约一半当期版税来自至少 10 年前发布的经典架构老产品</span>
+          </div>
+        </div>
+
+        <div class="split-66">
+          <div class="subcard">
+            <div class="subcard-head">
+              <h3 data-i18n-zh="FY2022–FY2026 盈利跃迁与超高毛利护城河" data-i18n-en="FY2022–FY2026 Profit Trajectory &amp; Gross Margin Moat">FY2022–FY2026 盈利跃迁与超高毛利护城河</h3>
+              <span class="mui-chip mui-chip-success mono">NON-GAAP EBIT $2.12B</span>
+            </div>
+            <div class="canvas-wrap"><canvas id="chartEps"></canvas></div>
+            <p class="chart-note">柱状为 <strong>Non-GAAP 营业利润 ($M)</strong>（FY23 $783M → FY26 $2,115M，三年增长 170%）；绿线为 <strong>GAAP 毛利率 (%)</strong>（始终稳居 95%–97.5% 软件级区间） <a class="cite-link" href="https://businessquant.com/metrics/arm/profit-after-tax" target="_blank" rel="noopener noreferrer">Profit History ↗</a>。</p>
+          </div>
+
+          <div class="subcard">
+            <div class="subcard-head">
+              <h3 data-i18n-zh="组织转型与人均产出复利推演器 (FY26 → FY31E)" data-i18n-en="Org Transformation &amp; Productivity Simulator (FY26 → FY31E)">组织转型与人均产出复利推演器 (FY26 → FY31E)</h3>
+              <div class="mui-segmented" id="eraSimPresets">
+                <button type="button" class="mui-seg-btn" data-epreset="ip" data-i18n-zh="纯IP守成" data-i18n-en="Pure IP">纯IP守成</button>
+                <button type="button" class="mui-seg-btn active" data-epreset="css" data-i18n-zh="CSS+稳健整芯" data-i18n-en="CSS + Base Chip">CSS+稳健整芯</button>
+                <button type="button" class="mui-seg-btn" data-epreset="agi" data-i18n-zh="FY31 $25B 宏图" data-i18n-en="FY31 $25B Plan">FY31 $25B 宏图</button>
+              </div>
+            </div>
+            <div class="sim-controls">
+              <div class="sim-row">
+                <label><span data-i18n-zh="IP/CSS 业务年复合增速 (CAGR)" data-i18n-en="IP/CSS Revenue CAGR">IP/CSS 业务年复合增速 (CAGR)</span><b id="lblSimIp" class="mono">15.5%</b></label>
+                <input type="range" id="rngSimIp" min="8" max="22" step="0.5" value="15.5" />
+              </div>
+              <div class="sim-row">
+                <label><span data-i18n-zh="FY2031 自研 AGI 芯片营收规模 ($B)" data-i18n-en="FY31 AGI Silicon Revenue ($B)">FY2031 自研 AGI 芯片营收规模 ($B)</span><b id="lblSimChip" class="mono">$9.0B</b></label>
+                <input type="range" id="rngSimChip" min="0" max="16" step="0.5" value="9.0" />
+              </div>
+              <div class="sim-row">
+                <label><span data-i18n-zh="FY2031 预计工程师与员工规模 (FTE)" data-i18n-en="FY31 Projected Headcount (FTE)">FY2031 预计工程师与员工规模 (FTE)</span><b id="lblSimFte" class="mono">14,500</b></label>
+                <input type="range" id="rngSimFte" min="11000" max="19000" step="500" value="14500" />
+              </div>
+            </div>
+            <div class="sim-kpis">
+              <div class="sim-kpi"><b id="outSimRev" class="mono">$19.1B</b><span data-i18n-zh="FY31E 总营收" data-i18n-en="FY31E Total Rev">FY31E 总营收</span></div>
+              <div class="sim-kpi"><b id="outSimPerFte" class="mono">$1.32M</b><span data-i18n-zh="FY31E 人均创收" data-i18n-en="FY31E Rev / FTE">FY31E 人均创收</span></div>
+              <div class="sim-kpi"><b id="outSimEps" class="mono">$7.12</b><span data-i18n-zh="FY31E Non-GAAP EPS" data-i18n-en="FY31E Non-GAAP EPS">FY31E Non-GAAP EPS</span></div>
+            </div>
+            <div class="canvas-wrap" style="height:155px;"><canvas id="chartSim"></canvas></div>
+          </div>
+        </div>
+
+        <div class="alert-dual">
+          <div class="alert-box is-good">
+            <h4 data-i18n-zh="组织结构性复利优势（Verified Strengths）" data-i18n-en="Structural Organizational Strengths">组织结构性复利优势（Verified Strengths）</h4>
+            <ul>
+              <li><strong>前置授权金对冲研发风险：</strong>FY26 授权及其他收入（$2,307M）已覆盖全年 Non-GAAP 研发支出（$1,911M）的 <strong>120.7%</strong>，相当于全球头部科技巨头提前出资供养 Arm 的 8,058 名工程师。</li>
+              <li><strong>无晶圆厂资产负债表免疫周期：</strong>即使半导体周期下行，Arm 无需承担百亿美元晶圆厂折旧或库存减值，毛利率稳居 97%+。</li>
+              <li><strong>3,000 万开发者自发演进壁垒：</strong>KleidiAI 嵌入 PyTorch、Llama.cpp 与 ExecuTorch，新模型发布首日即可在数十亿端侧与云端 Arm CPU 上原生加速 <a class="cite-link" href="https://investors.arm.com/static-files/0b5baa2e-fc47-4d05-b724-e49de7bd4356" target="_blank" rel="noopener noreferrer">Q2 FY27 ↗</a>。</li>
+            </ul>
+          </div>
+          <div class="alert-box is-warn">
+            <h4 data-i18n-zh="四大核心治理与战略张力（Structural Tensions）" data-i18n-en="Four Structural Governance &amp; Strategic Tensions">四大核心治理与战略张力（Structural Tensions）</h4>
+            <ul>
+              <li><strong>客户竞合与高通许可诉讼：</strong>2024 年 12 月陪审团支持高通 Nuvia/Oryon 在 ALA 下的权利；2026 年 10 月陪审团裁定 Arm 扣留交付物违约（判赔高通 $2 名义赔偿），同时在 5 项 TLA 主张上支持 Arm（法官仍待裁决五年版税豁免争议） <a class="cite-link" href="https://www.thestar.com.my/tech/tech-news/2026/10/14/qualcomm-says-jury-found-arm-breached-license-agreement" target="_blank" rel="noopener noreferrer">Reuters/Star ↗</a>。</li>
+              <li><strong>软银集团 ~87% 绝对控股与关联交易：</strong>软银系拥有绝对投票权且公众流通盘仅 ~13%；FY26 来自关联方（软银及安谋科技）营收达 <strong>$1,499M（占总营收 30.5%）</strong>，前五大客户合计占 ~57% <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm" target="_blank" rel="noopener noreferrer">FY26 20-F ↗</a>。</li>
+              <li><strong>安谋科技（Arm China）独立治理风险：</strong>Arm 仅间接持有 ~4.8% 经济权益且无直接运营控制权，FY26 贡献总营收 <strong>~16%</strong>（虽已较 FY23 的 24% 显著去风险）。</li>
+              <li><strong>自研整芯毛利稀释与高额 SBC：</strong>AGI CPU 整芯（目标 Non-GAAP 营业利润率 30%+）放量将拉低集团表观毛利率；且每年逾 $10 亿股权激励（占营收 21.4%）持续摊薄 GAAP 利润。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ch 05: 3-Act History, 4 Landmark Battles & 3 Laws -->
+      <section id="sec-05" class="mono-section">
+        <div class="sec-head">
+          <div>
+            <span class="sec-kicker mono">CHAPTER 05 · 36-YEAR EVOLUTION &amp; LANDMARK BATTLES</span>
+            <h2 class="sec-h2" data-i18n-zh="三十六年三幕组织演进史、四大生死战役与三条文化铁律" data-i18n-en="36-Year Three-Act History, Four Landmark Battles &amp; Three Cultural Laws">三十六年三幕组织演进史、四大生死战役与三条文化铁律</h2>
+          </div>
+        </div>
+
+        <div class="era-cards">
+          <div class="era-card">
+            <span class="mui-chip mui-chip-primary mono" style="align-self:flex-start;">ACT I · 1990–2013</span>
+            <h4>剑桥谷仓创世与 Saxby 合伙人模型</h4>
+            <p>1990年11月由 <strong>Acorn、苹果电脑与 VLSI</strong> 合资创立，12 名剑桥创始工程师在改装火鸡谷仓起步。首任 CEO <strong>Sir Robin Saxby</strong> 因资本不足无法建厂，顺势发明“前置授权费 + 芯片版税”全球合伙人制度；凭借诺基亚 6110（ARM7TDMI）与 2007 初代 iPhone 统御移动互联网，2001–2013 年 Warren East 建立稳健上市治理体系 <a class="cite-link" href="https://www.cemtek.com.tr/hizmetler/the-official-history-of-arm" target="_blank" rel="noopener noreferrer">History ↗</a>。</p>
+          </div>
+          <div class="era-card">
+            <span class="mui-chip mui-chip-violet mono" style="align-self:flex-start;">ACT II · 2013–2022</span>
+            <h4>软银 £243亿私有化逆周期蓄力</h4>
+            <p><strong>Simon Segars</strong> 任内，2016年9月孙正义旗下软银集团以约 <strong>£243亿</strong>全资收购退市。脱离公开市场短期季报束缚后，Arm 牺牲短期利润率将研发编制翻倍，秘密孵化 <strong>Armv9 机密计算与矩阵架构</strong>及专门针对云数据中心的 <strong>Neoverse</strong> 产品线。2020年英伟达拟议收购因全球反垄断监管阻力于 2022年2月8日终止。</p>
+          </div>
+          <div class="era-card">
+            <span class="mui-chip mui-chip-success mono" style="align-self:flex-start;">ACT III · 2022–2026+</span>
+            <h4>Rene Haas 平台新政与自研硅片跃迁</h4>
+            <p><strong>Rene Haas</strong> 接棒后迅速重塑商业纪律，2023年9月以 <strong>$51/ADS</strong> 重返纳斯达克；重组三大垂直 AI 事业部，推出版税率翻倍的 CSS 子系统（签约 23 项），并于 2026年3月联合 Meta 发布首款自研 3nm 136 核 <strong>Arm AGI CPU</strong>，Q2 FY27 单季出货首破 100 亿颗、开发者突破 3,000 万 <a class="cite-link" href="https://www.stocktitan.net/news/ARM/arm-holdings-plc-reports-results-for-the-second-quarter-of-the-av0ndb7sihti.html" target="_blank" rel="noopener noreferrer">Q2 FY27 ↗</a>。</p>
+          </div>
+        </div>
+
+        <div class="battle-grid">
+          <div class="battle-card">
+            <h5>战役一（1993–1998）：Apple Newton 商业失利倒逼开放授权突围</h5>
+            <p>早期寄望于苹果 Newton 掌上电脑独挑大梁受挫后，Saxby 果断确立向德州仪器（TI）、三星、高通全面开放授权，使 ARM7 击败众多专有架构成为全球 2G/3G 手机事实标准，并于 1998 年完成伦敦与纳斯达克双重上市。</p>
+          </div>
+          <div class="battle-card">
+            <h5>战役二（2018–2026）：Neoverse 十年长征攻克 x86 数据中心铁幕</h5>
+            <p>早年服务器试水曾屡遭挫折；2018 年推出专用 Neoverse 品牌并赋能 AWS Graviton、NVIDIA Grace、Google Axion 与 Microsoft Cobalt，至 Q1 FY27 累计服务器核出货突破 <strong>15 亿颗</strong>，头部超算云新部署占比逼近 <strong>50%</strong> <a class="cite-link" href="https://newsroom.arm.com/news/arm-q1-fye27-results" target="_blank" rel="noopener noreferrer">Q1 FY27 ↗</a>。</p>
+          </div>
+          <div class="battle-card">
+            <h5>战役三（2023–2026）：CSS 子系统革命打破“手机销量见顶”魔咒</h5>
+            <p>面对全球智能手机年出货停滞，Haas 拒绝低价内卷，推出预验证 Lumex / Mobile CSS 2 与 SME2 矩阵加速（+70% 端侧 Agentic AI 性能），让前四大安卓手机厂商自愿支付双倍版税换取提前数月流片上市。</p>
+          </div>
+          <div class="battle-card">
+            <h5>战役四（2024–2026）：高通法庭博弈与 Arm AGI CPU 破界立新</h5>
+            <p>在与最大手机客户之一高通围绕 Nuvia 架构授权对簿公堂的同时，Arm 联合 Meta、OpenAI、Cloudflare 等推出台积电 N3P 136 核 AGI CPU（FY27–28 锁定需求超 $20亿），用真实订单证明超大规模客户渴望除 x86 外的定制硅片第二极 <a class="cite-link" href="https://www.arm.com/products/cloud-datacenter/arm-agi-cpu" target="_blank" rel="noopener noreferrer">AGI CPU ↗</a>。</p>
+          </div>
+        </div>
+
+        <div class="laws-strip">
+          <div class="law-pill">第一铁律：每瓦算力极限永远战胜峰值暴力堆料（从口袋手机到吉瓦级 AI 机房皆然）</div>
+          <div class="law-pill">第二铁律：指令集统一性高于一切局部定制利益，绝不允许软件栈分裂</div>
+          <div class="law-pill">第三铁律：替生态省去最痛苦的工程集成摩擦（CSS/KleidiAI），方能共享更高价值份额</div>
+        </div>
+      </section>
+
+      <!-- Ch 06: 6-Item Diagnostic Checklist -->
+      <section id="sec-06" class="mono-section">
+        <div class="sec-head">
+          <div>
+            <span class="sec-kicker mono">CHAPTER 06 · INTERACTIVE ORGANIZATIONAL DIAGNOSTIC</span>
+            <h2 class="sec-h2" data-i18n-zh="Arm 组织演进与战略兑现六维跟踪审计清单" data-i18n-en="6-Point Organizational Health &amp; Execution Diagnostic Checklist">Arm 组织演进与战略兑现六维跟踪审计清单</h2>
+            <p class="sec-sub">勾选你已验证通过的长期组织健康度指标（状态自动保存在浏览器本地存储中）。</p>
+          </div>
+          <button type="button" id="resetDiagBtn" class="co-hub-btn" data-i18n-zh="重置核验进度" data-i18n-en="Reset Audit">重置核验进度</button>
+        </div>
+
+        <div class="diag-bar-wrap">
+          <div class="diag-bar-top">
+            <span id="diagStatusText">当前核验进度：0 / 6 项核心组织指标已确认</span>
+            <span id="diagPctText" class="mono" style="color:var(--mui-primary-lighter);">0%</span>
+          </div>
+          <div class="diag-track"><div id="diagFill" class="diag-fill"></div></div>
+        </div>
+
+        <div class="diag-grid" id="diagGrid">
+          <label class="diag-item">
+            <input type="checkbox" data-diag="d1" />
+            <span>
+              <b>01 · 工程师人才密度守住 &gt;80% 红线且核心 Fellow 零流失</b>
+              <span>核验全职员工中研发工程师占比是否维持在 82%–85% 区间（FY26 为 84.1%），且中央架构主干保持稳定。</span>
+            </span>
+          </label>
+          <label class="diag-item">
+            <input type="checkbox" data-diag="d2" />
+            <span>
+              <b>02 · Arm AGI CPU 首批量产硅片如期交付且不触发核心云客户倒戈</b>
+              <span>跟踪 FY27–FY28 逾 $20亿 AGI CPU 订单交付良率，同时验证 AWS Graviton、NVIDIA Grace、Google Axion 续约稳固。</span>
+            </span>
+          </label>
+          <label class="diag-item">
+            <input type="checkbox" data-diag="d3" />
+            <span>
+              <b>03 · CSS 计算子系统与 ATA 旗舰订阅数量持续扩容</b>
+              <span>核验 CSS 累计授权从 23 项向车规（Zena CSS）与 PC 端持续渗透，ATA 客户数（56家）与 ACV（$17.32亿）稳步增长。</span>
+            </span>
+          </label>
+          <label class="diag-item">
+            <input type="checkbox" data-diag="d4" />
+            <span>
+              <b>04 · 研发费用率随营收规模扩张逐步释放 Non-GAAP 经营杠杆</b>
+              <span>管理层指引随自研硅片与 CSS 进入收获期，费用增速将回落至十几个百分点，验证 IP 业务向 65%+ Non-GAAP 营业利润率靠拢 <a class="cite-link" href="https://www.investing.com/news/company-news/arm-q4-fy2026-slides-15b-chip-revenue-target-9-eps-by-2031-93CH-4665934" target="_blank" rel="noopener noreferrer">FY31 Deck ↗</a>。</span>
+            </span>
+          </label>
+          <label class="diag-item">
+            <input type="checkbox" data-diag="d5" />
+            <span>
+              <b>05 · 高通许可争端终审落地且开源 RISC-V 未动摇主计算核心</b>
+              <span>跟踪特拉华州联邦法院针对高通五年版税豁免争议的法官裁决，确认 RISC-V 仍局限于辅助微控制器而非主 AP/服务器 CPU。</span>
+            </span>
+          </label>
+          <label class="diag-item">
+            <input type="checkbox" data-diag="d6" />
+            <span>
+              <b>06 · 关联交易与单一地区集中度持续健康多元化</b>
+              <span>监测安谋科技收入占比（FY26 ~16%）及软银关联交易（FY26 30.5%）透明度与应收账款周转健康度。</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Ch 07: Verified Primary Sources -->
+      <section id="sec-07" class="mono-section">
+        <div class="sec-head">
+          <div>
+            <span class="sec-kicker mono">CHAPTER 07 · VERIFIED PRIMARY FILINGS &amp; BIBLIOGRAPHY</span>
+            <h2 class="sec-h2" data-i18n-zh="权威一手 SEC 监管披露、股东信与技术文献库（12 项）" data-i18n-en="Verified Primary SEC Filings, Shareholder Letters &amp; Technical References (12)">权威一手 SEC 监管披露、股东信与技术文献库（12 项）</h2>
+          </div>
+        </div>
+        <div class="sources-grid">
+          <a class="source-card" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm" target="_blank" rel="noopener noreferrer">
+            <b>01 · SEC Form 20-F: Arm Holdings plc FY2026 Annual Report ↗</b>
+            <span>1,064,055,252 股普通股、软银 ~87% 控股、关联方收入 $1,499M、安谋科技 ~16% 与 Artisan 剥离披露</span>
+          </a>
+          <a class="source-card" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm" target="_blank" rel="noopener noreferrer">
+            <b>02 · SEC Exhibit 99.2: Q4 &amp; Full-Year FYE26 Shareholder Letter ↗</b>
+            <span>FY26 营收 $4,920M、97.5% GAAP 毛利率、研发 $2,776M、9,584 全职员工与 8,058 名工程师（84.1%）</span>
+          </a>
+          <a class="source-card" href="https://investors.arm.com/static-files/0b5baa2e-fc47-4d05-b724-e49de7bd4356" target="_blank" rel="noopener noreferrer">
+            <b>03 · Arm Q2 FYE27 Shareholder Letter (Ended Sep 30, 2026) ↗</b>
+            <span>单季营收 $1,443M (+27%)、伙伴单季芯片出货首破 100 亿颗、3,000万+ 开发者与 Arm PC ~20% 份额</span>
+          </a>
+          <a class="source-card" href="https://newsroom.arm.com/news/arm-q1-fye27-results" target="_blank" rel="noopener noreferrer">
+            <b>04 · Arm Q1 FYE27 Official Results Release ↗</b>
+            <span>Q1 营收 $1,289M (+22%)、ACV $1,732M、TTM 自由现金流 $1,397M、Neoverse 核心出货超 15 亿颗</span>
+          </a>
+          <a class="source-card" href="https://www.arm.com/company/leadership" target="_blank" rel="noopener noreferrer">
+            <b>05 · Arm Official Executive Leadership Directory ↗</b>
+            <span>Rene Haas、Richard Grisenthwaite、Gary Campbell 及 Cloud/Edge/Physical 三大 AI BU 负责人官方履历</span>
+          </a>
+          <a class="source-card" href="https://raeng.org.uk/about-us/fellowship/new-fellows-2025/richard-grisenthwaite-freng/" target="_blank" rel="noopener noreferrer">
+            <b>06 · Royal Academy of Engineering: Richard Grisenthwaite FREng ↗</b>
+            <span>首席架构师 22+ 年统御 Armv6–Armv9 指令集演进与 120 项核心专利权威介绍</span>
+          </a>
+          <a class="source-card" href="https://newsroom.arm.com/news/arm-agi-cpu-launch" target="_blank" rel="noopener noreferrer">
+            <b>07 · Arm Newsroom: Arm AGI CPU Silicon Launch with Meta ↗</b>
+            <span>2026年3月24日宣布首款自研量产数据中心服务器芯片，单 GW 数据中心最高节省 $100亿 CapEx</span>
+          </a>
+          <a class="source-card" href="https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-arm-details-agi-server-cpu-with-two-70-core-n3p-chiplets-touts-2-tb-s-ucie-fabric-link-and-12-channel-memory-controller" target="_blank" rel="noopener noreferrer">
+            <b>08 · Hot Chips 2026: Arm 136-Core TSMC N3P AGI CPU Architecture ↗</b>
+            <span>双芯粒 70×2 架构、2 TB/s UCIe 互联、12 通道 DDR5-8800 与 300W TDP 详细工程拆解</span>
+          </a>
+          <a class="source-card" href="https://www.investing.com/news/company-news/arm-q4-fy2026-slides-15b-chip-revenue-target-9-eps-by-2031-93CH-4665934" target="_blank" rel="noopener noreferrer">
+            <b>09 · Arm FY2031 Financial Model ($25B Rev &amp; $9+ Non-GAAP EPS) ↗</b>
+            <span>官方拆解 ~$15B 自研硅片（30%+ 营业利润率）与 ~$10B IP/CSS（65%+ 营业利润率）长期蓝图</span>
+          </a>
+          <a class="source-card" href="https://www.cemtek.com.tr/hizmetler/the-official-history-of-arm" target="_blank" rel="noopener noreferrer">
+            <b>10 · The Official History of Arm (1990 Cambridge Founding to IPO) ↗</b>
+            <span>Acorn + Apple + VLSI 剑桥火鸡谷仓 12 人创业史与 Sir Robin Saxby 商业模式起源</span>
+          </a>
+          <a class="source-card" href="https://www.thestar.com.my/tech/tech-news/2026/10/14/qualcomm-says-jury-found-arm-breached-license-agreement" target="_blank" rel="noopener noreferrer">
+            <b>11 · Qualcomm vs. Arm October 2026 Federal Jury Verdict Report ↗</b>
+            <span>特拉华州联邦陪审团关于 ALA 违约 $2 名义赔偿及 5 项 TLA 诉讼主张的最新裁决进展</span>
+          </a>
+          <a class="source-card" href="https://businesstats.com/arm/" target="_blank" rel="noopener noreferrer">
+            <b>12 · BusinessStats SEC 20-F/F-1 Historical Compilation ↗</b>
+            <span>FY2021–FY2026 历年员工总数、研发投入、累计芯片出货量与区域收入结构完整汇总</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  
+<script src="../../_shared/arm_culture_organization.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

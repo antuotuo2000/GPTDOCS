@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="crcl" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Circle Internet Group, Inc. (NYSE: CRCL) 企业文化与组织操作系统图谱：正门合规×开放协议双螺旋拓扑、四大文化底层代码、30%投票权封顶公众治理、三代演进时间轴与组织健康度六律体检（基于 SEC S-1/10-K/2026 DEF 14A 与 Q3 2026 财报）。" />
+ <title>Circle CRCL 企业文化与组织操作系统 | 数据中心</title>
+ 
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/circle_culture_operating_system.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body id="top"><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">CRCL</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="#top">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2zm0 16a6 6 0 1 1 6-6 6.007 6.007 0 0 1-6 6z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="Circle 企业文化与组织操作系统图谱" data-i18n-en="Circle Organizational OS &amp; Culture Blueprint">Circle 企业文化与组织操作系统图谱</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">TECH × POLICY OS</span>
+ <span class="mui-chip mui-chip-violet mono hide-sm">30% VOTING CAP</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索文化法则或模块…" aria-label="快速跳转模块" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="组织文化模块与套件导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-violet mono">CRCL · ORG OPERATING SYSTEM</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="Circle 组织操作系统图谱" data-i18n-en="Circle Organizational OS">Circle 组织操作系统图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="正门合规×开放协议双螺旋 × 市场中立断舍离 × SVB危机全透明刚兑 × 30%票权封顶公众治理" data-i18n-en="Front-Door Compliance × Open Protocol Dual Helix × Market Neutrality × 30% Voting Cap">正门合规×开放协议双螺旋 × 市场中立断舍离 × SVB危机全透明刚兑 × 30%票权封顶公众治理</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="权力拓扑" data-i18n-en="Org Architecture">权力拓扑</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="合规×协议双螺旋" data-i18n-en="Tech-Policy Helix">合规×协议双螺旋</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="精兵编制 / 人效" data-i18n-en="Headcount / Rev/FTE">精兵编制 / 人效</span>
+ <span class="sidebar-mini-val mono">~1,045人 · ~$2.90M</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="治理硬约束" data-i18n-en="Governance Cap">治理硬约束</span>
+ <span class="sidebar-mini-val mono">Class B ≤30% 总票权</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="套件导航与组织图谱目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="CRCL"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-section-label" data-i18n-zh="组织架构图谱 (C0–C4)" data-i18n-en="Culture OS Modules (C0–C4)">组织架构图谱 (C0–C4)</div>
+ <ul class="mui-nav-list">
+ <li><a href="#sec-c0" class="mui-nav-link active"><span class="nav-idx mono">C0</span><span data-i18n-zh="双螺旋拓扑与正门悖论" data-i18n-en="Dual-Helix Topology">双螺旋拓扑与正门悖论</span></a></li>
+ <li><a href="#sec-c1" class="mui-nav-link"><span class="nav-idx mono">C1</span><span data-i18n-zh="四大文化代码与带宽罗盘" data-i18n-en="4 Cultural Codes &amp; Dial">四大文化代码与带宽罗盘</span></a></li>
+ <li><a href="#sec-c2" class="mui-nav-link"><span class="nav-idx mono">C2</span><span data-i18n-zh="三代治理进化时间轴工作台" data-i18n-en="3-Era Governance Timeline">三代治理进化时间轴工作台</span></a></li>
+ <li><a href="#sec-c3" class="mui-nav-link"><span class="nav-idx mono">C3</span><span data-i18n-zh="全球巨头组织基因光谱战" data-i18n-en="Global Org Genome Arena">全球巨头组织基因光谱战</span></a></li>
+ <li><a href="#sec-c4" class="mui-nav-link"><span class="nav-idx mono">C4</span><span data-i18n-zh="合规-速度推演器与六律体检" data-i18n-en="Compliance-Velocity Lab">合规-速度推演器与六律体检</span></a></li>
+ </ul>
+ </nav>
+
+ </aside>
+
+ <!-- Main Bespoke Organizational OS Workspace -->
+ <main class="cc-workspace main-content">
+
+ <!-- MODULE C0: TOPOLOGY HERO + INTERACTIVE DUAL-HELIX VS OFFSHORE TOPOLOGY SWITCHER -->
+ <section id="sec-c0" class="cc-hero-shell">
+ <div class="cc-hero-top">
+ <div>
+ <div class="cc-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="“不归类”的混合特种组织 (Neither Just a Bank Nor Just SaaS)" data-i18n-en="HYBRID INSTITUTIONAL PROTOCOL ORG">“不归类”的混合特种组织 (Neither Just a Bank Nor Just SaaS)</span>
+ <span class="mui-chip mui-chip-success mono">TTM $3.03B 收入 · 12+国数字优先</span>
+ <span class="mui-chip mui-chip-violet mono">30% 创始人票权硬上限</span>
+ </div>
+
+ <h1 class="cc-h1" data-i18n-zh="Circle 企业文化与组织操作系统：<span class='cc-grad'>为什么一家千人协议公司能同时跑赢传统跨国银行与离岸加密巨鳄？</span>" data-i18n-en="Circle's Cultural Operating System: <span class='cc-grad'>How a ~1,045-Person Protocol Org Outmaneuvers Legacy Banks &amp; Offshore Crypto Giants</span>">
+ Circle 企业文化与组织操作系统：<span class="cc-grad">为什么一家千人协议公司能同时跑赢传统跨国银行与离岸加密巨鳄？</span>
+ </h1>
+
+ <p class="cc-lead">
+ 在纽交所 IPO 招股书中，联合创始人兼 CEO <strong>Jeremy Allaire</strong> 写下了一段定义 Circle 组织灵魂的话：“从公开市场视角看，<strong>我们无法被塞进任何一个传统盒子里（We don't fit in a box）</strong>——有人说我们像支付公司，有人说像银行金融机构，还有人说像消费互联网或平台软件公司；真相是我们把这几种基因熔铸成了一体”
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1876042/000119312525126208/d737521ds1a.htm" target="_blank" rel="noopener noreferrer">SEC S-1/A 创始人信 ↗</a>。
+ 传统银行拥有牌照却背负着数十万员工与 1970 年代 COBOL 烟囱账本；离岸加密平台拥有代码速度却随时面临主权封杀与黑箱信任崩塌。Circle 独创了<strong>“央行级合规统帅（Heath Tarbert）× 硅谷云平台极客（Nikhil Chandhok）同桌共治”的单一平台栈操作系统</strong>，以仅约 <strong>1,045–1,100 名精锐员工</strong>支撑每季 <strong>$13.9万亿</strong> 链上清结算
+ <a class="cite-link" href="https://www.businesswire.com/news/home/20261104960710/en/Circle-Reports-Third-Quarter-2026-Results" target="_blank" rel="noopener noreferrer">Q3 2026 官方财报 ↗</a>。
+ </p>
+
+ <div class="cc-quote-ribbon">
+ <strong>核心治理哲学（Jeremy Allaire · 2026 代理声明）：</strong>“重塑全球货币底座不是一场百米冲刺的投机游戏，而是一场横跨数十年的制度与技术长征。通过把正门监管、贝莱德独立储备托管与 30% 创始人投票权上限写进公司宪章，我们让全球央行、跨国企业与开发者相信：USDC 与 Arc 是永远中立、可验证的公共基础设施。”
+ <a class="cite-link" href="https://eco.com/support/en/articles/17272678-circle-ownership-jeremy-allaire-class-b-votes-and-crcl-holders" target="_blank" rel="noopener noreferrer">2026 DEF 14A ↗</a>
+ </div>
+ </div>
+
+ <!-- Right: Interactive Org Topology Switcher -->
+ <div class="cc-topology-box">
+ <div class="cc-topo-head">
+ <strong style="font-size:0.84rem;" data-i18n-zh="组织权力拓扑对比沙盘" data-i18n-en="Org Power Topology Sandbox">组织权力拓扑对比沙盘</strong>
+ <div class="mui-segmented" id="topoSwitch">
+ <button type="button" class="mui-seg-btn active" data-topo="circle" data-i18n-zh="Circle：合规×协议单一栈" data-i18n-en="Circle: Unified Protocol Stack">Circle：合规×协议单一栈</button>
+ <button type="button" class="mui-seg-btn" data-topo="legacy" data-i18n-zh="离岸黑盒 / 传统银行割据" data-i18n-en="Offshore / Legacy Bank Silos">离岸黑盒 / 传统银行割据</button>
+ </div>
+ </div>
+
+ <div class="cc-topo-stage" id="topoStage">
+ <div class="cc-topo-hub mono">CEO (Allaire · 23.9%票权≤30%封顶) × 独立风险与审计委员会</div>
+ <div class="cc-topo-spokes">
+ <div class="cc-spoke"><b>总裁兼法务长</b>Heath Tarbert · OCC/GENIUS/MiCA 牌照先行开路</div>
+ <div class="cc-spoke"><b>产品技术长 CPTO</b>Nikhil Chandhok · Arc L1 / CPN / Gateway 统一栈</div>
+ <div class="cc-spoke"><b>独立储备隔离仓</b>贝莱德 88% 2a-7 美债基金 + 四大月度鉴证</div>
+ <div class="cc-spoke"><b>合规风控内嵌层</b>AML 链上实时追踪与智能合约黑名单风控同构</div>
+ <div class="cc-spoke"><b>开放多链中立层</b>30+ 公链一视同仁 · 零自营交易所利益冲突</div>
+ <div class="cc-spoke"><b>数字优先精兵团</b>12+ 国分布式高密度协作 · 人均创收 ~$2.90M</div>
+ </div>
+ <div class="cc-topo-outcome">
+ 结果：既有华尔街银行信任的 SOX 内控与破产隔离，又有硅谷 SaaS 公司 70% EBITDA 利润率的软件弹性
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE C1: 2x2 CULTURAL OPERATING CODE BENTO + BANDWIDTH DIAL -->
+ <section id="sec-c1" class="cc-panel">
+ <div class="cc-panel-head">
+ <div>
+ <span class="cc-kicker mono">MODULE C1 · FOUR CULTURAL OPERATING CODES &amp; EXECUTIVE BANDWIDTH DIAL</span>
+ <h2 class="cc-h2" data-i18n-zh="四大文化底层代码与高管团队战略带宽分配罗盘" data-i18n-en="4 Cultural Operating Codes &amp; Executive Bandwidth Allocation Dial">四大文化底层代码与高管团队战略带宽分配罗盘</h2>
+ <p class="cc-sub" data-i18n-zh="点击左侧任一文化象限，查看其内部运作铁律及对应的管理层资源与工程带宽配置比重。" data-i18n-en="Click any quadrant to inspect its operating rule and corresponding leadership &amp; engineering allocation.">点击左侧任一文化象限，查看其内部运作铁律及对应的管理层资源与工程带宽配置比重。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击象限切换解析 (Q1–Q4)" data-i18n-en="Interactive 2×2 Matrix">点击象限切换解析 (Q1–Q4)</span>
+ </div>
+
+ <div class="cc-code-layout">
+ <div class="cc-quad-grid" id="quadGrid">
+ <button type="button" class="cc-quad-card active" data-quad="0">
+ <div>
+ <div class="cc-quad-top"><span class="cc-quad-num mono">Q1</span><span class="mui-chip mui-chip-primary mono">FRONT-DOOR INTEGRITY</span></div>
+ <h3>高诚信与“正门监管”一票否决权</h3>
+ <p>任何新产品（无论是 Arc 代币预售、USYC 还是跨境走廊）上线前，必须率先通过法务合规与储备安全评审；宁可牺牲短期野蛮增量，绝不触碰无牌照展业与储备混同红线。</p>
+ </div>
+ <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表机制：2015 首张 BitLicense · 欧盟 MiCA 唯一首发双币合规 →</span>
+ </button>
+
+ <button type="button" class="cc-quad-card" data-quad="1">
+ <div>
+ <div class="cc-quad-top"><span class="cc-quad-num mono">Q2</span><span class="mui-chip mui-chip-success mono">MARKET NEUTRALITY</span></div>
+ <h3>多方共赢与开放协议中立</h3>
+ <p>把 USDC 打造为数字金融世界的 TCP/IP 标准：不偏袒任何单一公链，不自建散户炒币平台与合作伙伴争抢 C 端流量，甘当所有钱包、银行与 ERP 背后的结算水电煤。</p>
+ </div>
+ <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表机制：同时赢得宿敌 Coinbase 与币安的长期战略合作 →</span>
+ </button>
+
+ <button type="button" class="cc-quad-card" data-quad="2">
+ <div>
+ <div class="cc-quad-top"><span class="cc-quad-num mono">Q3</span><span class="mui-chip mui-chip-warning mono">RADICAL SUBTRACTION</span></div>
+ <h3>残酷减法聚焦与极限抗压韧性</h3>
+ <p>三次重大战略断舍离（剥离 Poloniex/SeedInvest、叫停 2022 SPAC、Q3'26 盈利期主动精简 5% 冗余岗位），并在 SVB 危机 72 小时内以全透明披露守住 1:1 刚性兑付底线。</p>
+ </div>
+ <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表机制：全年经调整运营开支严控在 $5.70–$5.85亿 →</span>
+ </button>
+
+ <button type="button" class="cc-quad-card" data-quad="3">
+ <div>
+ <div class="cc-quad-top"><span class="cc-quad-num mono">Q4</span><span class="mui-chip mui-chip-violet mono">CAPPED GOVERNANCE</span></div>
+ <h3>30% 票权封顶与公众级制衡治理</h3>
+ <p>针对全球系统重要性金融基建的身份要求，Circle 在双层股权中独创“Class B 总投票权 ≤30% 硬上限”，并设立独立审计与风险委员会直接监督网络与储备安全。</p>
+ </div>
+ <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表机制：Allaire 持 23.9% 投票权 · 7 人精干高独立性董事会 →</span>
+ </button>
+ </div>
+
+ <!-- Right: Executive & Engineering Bandwidth Dial -->
+ <div class="cc-dial-card" id="dialInspector">
+ <div>
+ <span class="mui-chip mui-chip-violet mono" id="dialBadge">DUAL-HELIX RESOURCE ALLOCATION MODEL</span>
+ <h3 id="dialTitle" style="font-size:1.03rem;font-weight:800;margin:8px 0 6px;">正门合规护城河：把法务牌照与密码学工程焊死在同一张研发桌上</h3>
+ <p id="dialDesc" style="font-size:0.81rem;color:var(--text-secondary);line-height:1.65;">
+ 在传统金融机构中，合规部门往往是阻塞创新的官僚关卡；而在 Circle 内部，合规政策、协议研发、储备风控与全球机构生态按动态权重紧密协同，使《GENIUS 法案》与欧盟 MiCA 落地瞬间即转化为 Circle 独享的准入壁垒
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000062/crcl-20251231.htm" target="_blank" rel="noopener noreferrer">FY25 10-K 披露 ↗</a>。
+ </p>
+ </div>
+
+ <div class="cc-alloc-bars">
+ <div class="cc-alloc-row">
+ <div class="cc-alloc-lbl"><span>Protocol &amp; AI R&amp;D（Arc / CPN / Gateway 底层研发）</span><span class="mono" id="pctProto">40%</span></div>
+ <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barProto" style="width:40%;background:#0073E6;"></div></div>
+ </div>
+ <div class="cc-alloc-row">
+ <div class="cc-alloc-lbl"><span>Regulatory &amp; AML Trust（全球牌照、立法与链上风控）</span><span class="mono" id="pctReg">28%</span></div>
+ <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barReg" style="width:28%;background:#7C3AED;"></div></div>
+ </div>
+ <div class="cc-alloc-row">
+ <div class="cc-alloc-lbl"><span>Institutional Ecosystem（银行 / PSP / 企业 ERP 拓展）</span><span class="mono" id="pctEco">20%</span></div>
+ <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barEco" style="width:20%;background:#16A34A;"></div></div>
+ </div>
+ <div class="cc-alloc-row">
+ <div class="cc-alloc-lbl"><span>Reserve &amp; SOX Assurance（储备流动性与上市内控审计）</span><span class="mono" id="pctRes">12%</span></div>
+ <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barRes" style="width:12%;background:#D97706;"></div></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE C2: 3-ERA GOVERNANCE TIMELINE SCRUBBER -->
+ <section id="sec-c2" class="cc-panel">
+ <div class="cc-panel-head">
+ <div>
+ <span class="cc-kicker mono">MODULE C2 · THREE-STAGE ORGANIZATIONAL EVOLUTION (2013–2026+)</span>
+ <h2 class="cc-h2" data-i18n-zh="三阶段组织操作系统进化：从波士顿极客初创到纽约世贸中心公众金融基建" data-i18n-en="Three-Stage OS Evolution: From Boston Crypto Startup to NYSE Global Financial Infrastructure">三阶段组织操作系统进化：从波士顿极客初创到纽约世贸中心公众金融基建</h2>
+ <p class="cc-sub" data-i18n-zh="点击切换三大历史阶段，对比 Circle 如何在业务剧变中始终坚守“正门合规与开放协议”内核。" data-i18n-en="Scrub across Circle's three organizational eras to inspect strategic pivots and productivity scaling.">点击切换三大历史阶段，对比 Circle 如何在业务剧变中始终坚守“正门合规与开放协议”内核。</p>
+ </div>
+ </div>
+
+ <div class="cc-era-tabs" id="eraTabs">
+ <button type="button" class="cc-era-tab" data-era="0">
+ <span class="cc-era-yr mono">ERA I · 2013 – 2017</span>
+ <span class="cc-era-leader">多线试错与首张牌照破冰期</span>
+ <span class="cc-era-tag">Circle Pay / Trade · 斩获全球 001 号 BitLicense</span>
+ </button>
+ <button type="button" class="cc-era-tab" data-era="1">
+ <span class="cc-era-yr mono">ERA II · 2018 – 2024</span>
+ <span class="cc-era-leader">断舍离聚焦与 SVB 淬火期</span>
+ <span class="cc-era-tag">剥离交易所 All-in USDC · 贝莱德托管 · 迁册特拉华</span>
+ </button>
+ <button type="button" class="cc-era-tab active" data-era="2">
+ <span class="cc-era-yr mono">ERA III · 2025 – 2026+ 新纪元</span>
+ <span class="cc-era-leader">纽交所上市与全栈金融 OS 纪元</span>
+ <span class="cc-era-tag">CRCL 上市 · GENIUS 法案 · Arc 主网与 CPN 爆发</span>
+ </button>
+ </div>
+
+ <div class="cc-split-66">
+ <div class="cc-subbox" id="eraCard">
+ <div>
+ <span class="mui-chip mui-chip-primary mono" id="eraBadge">ERA III · PUBLIC COMPANY GOVERNANCE &amp; ECONOMIC OS ERA</span>
+ <h3 id="eraTitle" style="font-size:1.05rem;font-weight:800;margin:8px 0;">纽交所上市与全栈跃迁期（2025–2026+）：用千人高密度组织重构全球清算网</h3>
+ <p id="eraDesc" style="font-size:0.84rem;color:var(--text-secondary);line-height:1.72;">
+ 2025 年 6 月登陆纽交所不仅为 Circle 带来 $5.83亿 净募资与超过 $27亿 企业流动性储备，更赋予其无与伦比的上市公司信用背书。在 Allaire、Tarbert 与 Chandhok 铁三角带领下，团队在 2025–2026 年密集交付 CPN（$413亿 年化 TPV）、Arc L1 公链主网并签约并购 Tazapay；同时主动精简 5% 冗余岗位、有序推进功勋 CFO 年底交棒，将 TTM 人均创收推升至 ~$290 万美元
+ <a class="cite-link" href="https://www.businesswire.com/news/home/20261104960710/en/Circle-Reports-Third-Quarter-2026-Results" target="_blank" rel="noopener noreferrer">Q3'26 财报 ↗</a>。
+ </p>
+ </div>
+ <div class="cc-era-kpis" id="eraKpis">
+ <div class="cc-era-kpi"><b class="mono">$3.03B</b><span>TTM 总营收与储备收入</span></div>
+ <div class="cc-era-kpi"><b class="mono">~$2.90M / 人</b><span>~1,045人精兵超高人效</span></div>
+ <div class="cc-era-kpi"><b class="mono">70.0%</b><span>Q3'26 经调整 EBITDA / RLDC 率</span></div>
+ <div class="cc-era-kpi"><b class="mono">$13.9T / 季</b><span>占全球稳定币链上交易额 79%</span></div>
+ </div>
+ </div>
+
+ <div class="cc-subbox">
+ <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+ <strong style="font-size:0.92rem;">组织规模化奇迹：单兵人效跃迁与链上结算杠杆</strong>
+ <div class="mui-segmented" id="eChartTabs">
+ <button type="button" class="mui-seg-btn active" data-eview="revemp" data-i18n-zh="人均创收跃迁 ($M)" data-i18n-en="Rev / Employee ($M)">人均创收跃迁 ($M)</button>
+ <button type="button" class="mui-seg-btn" data-eview="vol" data-i18n-zh="季度链上清算额 ($T)" data-i18n-en="Quarterly Onchain Vol ($T)">季度链上清算额 ($T)</button>
+ </div>
+ </div>
+ <div class="cc-canvas-wrap">
+ <canvas id="eraCanvas"></canvas>
+ </div>
+ <p style="font-size:0.75rem;color:var(--text-muted);">
+ 核心洞察：当传统大型清算银行需要数万名后台运营员工处理跨国对账时，Circle 依托智能合约自动清分与 API 自助接入，人均每季度支撑逾 <strong>$133亿美元</strong> 链上美元流转！
+ </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE C3: GLOBAL FINTECH & CRYPTO ORG GENOME ARENA -->
+ <section id="sec-c3" class="cc-panel">
+ <div class="cc-panel-head">
+ <div>
+ <span class="cc-kicker mono">MODULE C3 · GLOBAL FINTECH &amp; CRYPTO CULTURAL GENOME</span>
+ <h2 class="cc-h2" data-i18n-zh="全球金融与科技巨头组织基因光谱：正门协议派 vs 离岸极简派 vs 传统卡网派" data-i18n-en="Global Org Genome Arena: Regulated Protocol vs Offshore Minimalist vs Card Rails">全球金融与科技巨头组织基因光谱：正门协议派 vs 离岸极简派 vs 传统卡网派</h2>
+ <p class="cc-sub" data-i18n-zh="对比五大标杆企业的人均创收效率与经营利润率，剖析三组最具代表性的组织文化阴阳对照。" data-i18n-en="Comparing revenue per employee and operating margins across leading fintech and platform archetypes.">对比五大标杆企业的人均创收效率与经营利润率，剖析三组最具代表性的组织文化阴阳对照。</p>
+ </div>
+ <div class="mui-segmented" id="gChartTabs">
+ <button type="button" class="mui-seg-btn active" data-gview="emp" data-i18n-zh="人均创收对比 ($M)" data-i18n-en="Rev / Employee ($M)">人均创收对比 ($M)</button>
+ <button type="button" class="mui-seg-btn" data-gview="ebm" data-i18n-zh="核心经营利润率 (%)" data-i18n-en="Operating / EBITDA Margin (%)">核心经营利润率 (%)</button>
+ </div>
+ </div>
+
+ <div class="cc-split-75">
+ <div class="cc-subbox">
+ <div class="cc-canvas-wrap" style="height:300px;">
+ <canvas id="genomeCanvas"></canvas>
+ </div>
+ <p style="font-size:0.75rem;color:var(--text-muted);">
+ 观察结论：<strong>Circle (~$2.90M/人)</strong> 的单兵创收密度不仅远超传统卡组织 Visa (~$1.2M/人) 与大型银行，甚至略超硬件与生态霸主 Apple ($2.87M/人)，验证了可编程货币协议惊人的软件杠杆。
+ </p>
+ </div>
+
+ <div class="cc-duel-list">
+ <div class="cc-duel-card">
+ <h4><span>Circle vs Tether：数字美元赛道的“阴阳双生子”</span><span class="mui-chip mui-chip-primary mono">华尔街阳谋 vs 离岸套利</span></h4>
+ <p>Tether 靠不足两百人离岸团队规避美欧严监管、独吞全部国债与黄金收益；Circle 则主动戴上纽交所财报审计、GENIUS 法案与四大月审的“紧箍咒”——短期让渡了合规与渠道成本，长期却垄断了主流金融机构与 SAP 企业工作流的唯一合法通行证。</p>
+ </div>
+ <div class="cc-duel-card">
+ <h4><span>Circle vs 苹果：同样拒绝部门墙，一个锁硬件、一个开协议</span><span class="mui-chip mui-chip-violet mono">开放标准 vs 封闭花园</span></h4>
+ <p>苹果靠封闭软硬件围墙花园锁定 25 亿终端；Circle 则反其道而行，通过开放 CCTP 与 Gateway 让 USDC 无摩擦跨越 30+ 外部公链——因为在货币网络里，<strong>流动性越自由、越无锁定，货币本位霸权就越稳固</strong>。</p>
+ </div>
+ <div class="cc-duel-card">
+ <h4><span>Circle vs 传统跨国银行：代码即合规 vs 人海填表合规</span><span class="mui-chip mui-chip-success mono">智能合约风控 vs 人工后台</span></h4>
+ <p>大型跨国银行为应对反洗钱往往雇佣上万名后台人工审核员；Circle 将制裁筛查、可编程权限与储备核验直接抽象为 API 与链上合约模块，用千人团队实现全天候 7×24 秒级风控。</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="cc-table-wrap">
+ <table class="cc-table">
+ <thead>
+ <tr>
+ <th>标杆企业</th>
+ <th>组织架构范式</th>
+ <th>核心文化信条</th>
+ <th>员工规模与人效</th>
+ <th>组织适配边界与治理挑战</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-circle">
+ <td><strong>Circle (CRCL)</strong></td>
+ <td>合规×工程双螺旋 + 数字优先全球分布式</td>
+ <td>正门监管 · 协议中立 · 30%票权封顶</td>
+ <td class="mono">~1,045人 · ~$2.90M/人</td>
+ <td>兼顾主权信任与公链迭代；需妥善管理 Arc 去中心化治理与 CFO 换届衔接</td>
+ </tr>
+ <tr>
+ <td><strong>Apple (AAPL)</strong></td>
+ <td>职能制集权 + 全公司唯一 P&amp;L</td>
+ <td>专家领导专家 · DRI 问责 · 极致减法</td>
+ <td class="mono">16.7万人 · $2.87M/人</td>
+ <td>软硬一体消费精品天花板；封闭围墙面临欧美反垄断持续审视</td>
+ </tr>
+ <tr>
+ <td><strong>Visa (V)</strong></td>
+ <td>全球区域清算中心 + 四方卡网联盟治理</td>
+ <td>零信贷风险 · 五个九高可用 · 银行中立</td>
+ <td class="mono">~3.1万人 · ~$1.20M/人</td>
+ <td>传统刷卡清算印钞机；正积极拥抱 USDC 以防跨境 B2B 被链上轨道绕开</td>
+ </tr>
+ <tr>
+ <td><strong>Coinbase (COIN)</strong></td>
+ <td>产品事业群矩阵 (零售经纪 / 机构 / Base链)</td>
+ <td>加密原教旨使命聚焦 · 快速商业化变现</td>
+ <td class="mono">~3,900人 · ~$1.65M/人</td>
+ <td>加密交易牛熊周期弹性极大；既是 USDC 核心盟友又存在分润博弈</td>
+ </tr>
+ <tr>
+ <td><strong>Stripe (+ Bridge)</strong></td>
+ <td>高自治产品工程组 + 全球企业直销售前网</td>
+ <td>极致开发者体验 · 长期主义复利文化</td>
+ <td class="mono">~8,000+人 · 高增长未上市</td>
+ <td>Web2 商户覆盖无敌；正通过收购 Bridge 与 Tempo 切入企业稳定币编排</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
+
+ <!-- MODULE C4: COMPLIANCE-VELOCITY SIMULATOR & 6-LAW AUDIT -->
+ <section id="sec-c4" class="cc-panel">
+ <div class="cc-panel-head">
+ <div>
+ <span class="cc-kicker mono">MODULE C4 · COMPLIANCE-VELOCITY SIMULATOR &amp; 6-LAW HEALTH AUDIT</span>
+ <h2 class="cc-h2" data-i18n-zh="“合规深度 vs 协议速度”组织平衡推演器与六律体检表" data-i18n-en="Compliance-Velocity Organizational Simulator &amp; 6-Law Health Audit">“合规深度 vs 协议速度”组织平衡推演器与六律体检表</h2>
+ <p class="cc-sub" data-i18n-zh="拖动滑块模拟司法辖区扩张、自动化合规工程比与平台直存权重对 Circle 机构信任分与利润率的影响。" data-i18n-en="Simulate how automated compliance engineering, multi-chain scope, and direct custody affect trust and margins.">拖动滑块模拟司法辖区扩张、自动化合规工程比与平台直存权重对 Circle 机构信任分与利润率的影响。</p>
+ </div>
+ <span class="mui-chip mui-chip-success mono" id="auditScoreChip">文化自检核验：0 / 6 项</span>
+ </div>
+
+ <div class="cc-split-57">
+ <div class="cc-subbox">
+ <div class="cc-sliders">
+ <div class="cc-slider-item">
+ <div class="cc-slider-lbl"><span>合规风控代码自动化率 (Compliance-as-Code %)</span><b class="mono" id="valAuto">85% (高杠杆)</b></div>
+ <input type="range" id="rngAuto" min="30" max="95" step="5" value="85" />
+ </div>
+ <div class="cc-slider-item">
+ <div class="cc-slider-lbl"><span>原生接入公链与法币走廊数 (Supported Rails)</span><b class="mono" id="valRails">32 条主链</b></div>
+ <input type="range" id="rngRails" min="10" max="80" step="2" value="32" />
+ </div>
+ <div class="cc-slider-item">
+ <div class="cc-slider-lbl"><span>非投机业务纯粹度 / 协议中立度 (Neutrality)</span><b class="mono" id="valNeut">95%</b></div>
+ <input type="range" id="rngNeut" min="40" max="100" step="5" value="95" />
+ </div>
+ </div>
+
+ <div class="cc-sim-scores">
+ <div class="cc-sim-score"><b class="mono" id="outTrust">96 / 100</b><span>主权与机构信任分</span></div>
+ <div class="cc-sim-score"><b class="mono" id="outShip">89 / 100</b><span>跨链协议交付速度</span></div>
+ <div class="cc-sim-score"><b class="mono" id="outOpLev">69.5%</b><span>隐含 EBITDA/RLDC 率</span></div>
+ </div>
+
+ <div class="cc-canvas-wrap" style="height:155px;">
+ <canvas id="entropyCanvas"></canvas>
+ </div>
+ </div>
+
+ <div class="cc-subbox">
+ <strong style="font-size:0.92rem;">Circle 组织操作系统持续性跟踪核查表（点击勾选自动保存状态）</strong>
+ <div class="cc-audit-list" id="cultureAuditList">
+ <label class="cc-audit-item">
+ <input type="checkbox" data-cchk="c1" />
+ <div><b>1. 100% 隔离储备红线未动摇</b><span>是否始终保持 ~88% 贝莱德 2a-7 短债基金 + GSIB 现金，零信贷杠杆放贷？</span></div>
+ </label>
+ <label class="cc-audit-item">
+ <input type="checkbox" data-cchk="c2" />
+ <div><b>2. 协议中立与多链无偏见延续</b><span>Arc 主网上线后，是否依然一视同仁支持以太坊、Solana、Base 等外部公链？</span></div>
+ </label>
+ <label class="cc-audit-item">
+ <input type="checkbox" data-cchk="c3" />
+ <div><b>3. 千人精兵高密度纪律未破</b><span>Tazapay 并购整合后，能否避免人员臃肿并维持 $2.5M+ 人均创收高水位？</span></div>
+ </label>
+ <label class="cc-audit-item">
+ <input type="checkbox" data-cchk="c4" />
+ <div><b>4. CFO 继任者华尔街公信力达标</b><span>2026 年底接替 Jeremy Fox-Geen 的新任 CFO 是否具备顶级上市金融机构资历？</span></div>
+ </label>
+ <label class="cc-audit-item">
+ <input type="checkbox" data-cchk="c5" />
+ <div><b>5. Class B 30% 投票权封顶严守</b><span>公司章程是否继续保持创始人投票权上限与独立风险/审计委员会强监督？</span></div>
+ </label>
+ <label class="cc-audit-item">
+ <input type="checkbox" data-cchk="c6" />
+ <div><b>6. 商业化脱敏利率周期初见成效</b><span>CPN 跨境结算费、CCTP 与平台直存占比是否持续摊薄单一利率与单一渠道依赖？</span></div>
+ </label>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES -->
+ <section class="cc-panel" aria-label="权威治理与监管文献信源">
+ <div class="cc-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="cc-kicker mono">VERIFIED GOVERNANCE &amp; REGULATORY FILINGS</span>
+ <h2 class="cc-h2" data-i18n-zh="权威 SEC 招股书、代理声明与季度财报信源" data-i18n-en="Verified SEC Prospectuses, Proxy Statements &amp; Financial Filings">权威 SEC 招股书、代理声明与季度财报信源</h2>
+ </div>
+ </div>
+ <div class="cc-sources-grid">
+ <a class="cc-source-card" href="https://www.sec.gov/Archives/edgar/data/1876042/000119312525126208/d737521ds1a.htm" target="_blank" rel="noopener noreferrer">
+ <b>SEC Form S-1/A: Jeremy Allaire Founder's Letter ↗</b>
+ <span>详细阐述“走监管正门”、平台优先技术观、12+国/35+州全球团队与不拘传统分类的混合组织基因</span>
+ </a>
+ <a class="cc-source-card" href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000112/crcl-20260401.htm" target="_blank" rel="noopener noreferrer">
+ <b>Circle 2026 Definitive Proxy Statement (DEF 14A) ↗</b>
+ <span>披露董事会审计/风险/薪酬治理架构、高管持股要求、人力资本监督与年度股东大会表决事项</span>
+ </a>
+ <a class="cc-source-card" href="https://eco.com/support/en/articles/17272678-circle-ownership-jeremy-allaire-class-b-votes-and-crcl-holders" target="_blank" rel="noopener noreferrer">
+ <b>2026 Proxy Ownership &amp; 30% Class B Voting Cap Study ↗</b>
+ <span>核验 Jeremy Allaire 23.9% 总表决权构成及全类别 Class B 30% 投票权上限宪章机制</span>
+ </a>
+ <a class="cc-source-card" href="https://www.businesswire.com/news/home/20261104960710/en/Circle-Reports-Third-Quarter-2026-Results" target="_blank" rel="noopener noreferrer">
+ <b>Circle Q3 2026 Financial Results &amp; 5% Realignment Note ↗</b>
+ <span>披露 Q3'26 $865M 收入、70% EBITDA 率及附注(4)约 5% 组织结构主动精简优化详情</span>
+ </a>
+ <a class="cc-source-card" href="https://www.stocktitan.net/sec-filings/CRCL/8-k-circle-internet-group-inc-reports-material-event-0a8184595271.html" target="_blank" rel="noopener noreferrer">
+ <b>SEC Form 8-K: CFO Transition &amp; Board Evolution (Sept 2026) ↗</b>
+ <span>披露联合创始人 Sean Neville 卸任董事及 CFO Jeremy Fox-Geen 留任至 2026 年底平稳交接安排</span>
+ </a>
+ <a class="cc-source-card" href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000062/crcl-20251231.htm" target="_blank" rel="noopener noreferrer">
+ <b>Circle FY2025 SEC Form 10-K Human Capital &amp; Risk Factors ↗</b>
+ <span>披露约 1,100 名全职员工构成、全员年度反洗钱安全培训与全球监管合规体系</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/circle_culture_operating_system.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

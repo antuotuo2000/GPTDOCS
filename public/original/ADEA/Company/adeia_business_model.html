@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Adeia Inc. (NASDAQ: ADEA) 商业模式全景架构拆解：150人纯专利授权印钞机、100%软件级毛利、0.41%极低CapEx强度、混合键合(Hybrid Bonding)AI算力过路费与去杠杆回购复利（基于 FY2025 10-K 与 Q3 2026 财报）。" />
+ <title>Adeia Inc. (ADEA) 商业模式架构深度拆解 | 数据中心</title>
+ 
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/adeia_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">ADEA</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <span class="crumb-current" data-i18n-zh="Adeia Inc. (ADEA) 商业模式架构深度拆解" data-i18n-en="Adeia Inc. (ADEA) Business Model Architecture">Adeia Inc. (ADEA) 商业模式架构深度拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: ADEA</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY25 $443.4M · 9M26 $281.1M</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索模块或财务指标…" aria-label="快速跳转模块" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">ADEA · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="Adeia 商业模式架构图谱" data-i18n-en="Adeia Business Model Blueprint">Adeia 商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="150人纯专利授权印钞机 × 0.41%极低CapEx × 混合键合与流媒体双轮收费站 × 持续去杠杆" data-i18n-en="150-FTE Pure-Play IP Licensor × 0.41% CapEx Intensity × Hybrid Bonding & Media Tollbooth">150人纯专利授权印钞机 × 0.41%极低CapEx × 混合键合与流媒体双轮收费站 × 持续去杠杆</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="无晶圆纯专利收费站" data-i18n-en="Zero-Fab IP Tollbooth">无晶圆纯专利收费站</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="FY25 营业利润 / FCF率" data-i18n-en="FY25 Op / FCF Margin">FY25 营业利润 / FCF率</span>
+ <span class="sidebar-mini-val mono">39.5% · 35.2%</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="专利资产 / 人均创收" data-i18n-en="Patents / Rev per FTE">专利资产 / 人均创收</span>
+ <span class="sidebar-mini-val mono">14,250+ · $2.96M</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="架构目录"><div class="co-side-nav" id="companySubfolderHub" data-co-key="ADEA"><a class="co-side-home" href="../../index.html">首页</a></div>
+ <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck & Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶专利变现传导沙盘" data-i18n-en="5-Node IP Value Pipeline">五阶专利变现传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与四层版税" data-i18n-en="Profit Waterfall & 4-Tier IP">利润池瀑布流与四层版税</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="赛道客户分层与合同积压" data-i18n-en="Segment Cohort & RPO">赛道客户分层与合同积压</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="极简CapEx去杠杆与6亿推演" data-i18n-en="Deleveraging & $600M Lab">极简CapEx去杠杆与6亿推演</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="全球IP巨头对标与风险压测" data-i18n-en="IP Peer Matrix & Stress Audit">全球IP巨头对标与风险压测</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <main class="bm-workspace main-content">
+ <!-- MODULE 0 -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：零制造纯专利收费站 × AI芯片底层互连税" data-i18n-en="ARCHETYPE: Zero-Fab Pure-Play IP Tollbooth × AI Packaging Royalty">商业范式：零制造纯专利收费站 × AI芯片底层互连税</span>
+ <span class="mui-chip mui-chip-success mono">FY25 10-K &amp; Q3 2026</span>
+ <span class="mui-chip mui-chip-violet mono">CapEx 0.41% · S&amp;P BB</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="Adeia (ADEA) 商业模式解构：<span class='bm-gradient-txt'>用 150 名精锐收割 14,250+ 项底层专利税，把芯片厂与流媒体的千亿资本开支化为自由现金流</span>" data-i18n-en="Deconstructing Adeia (ADEA): <span class='bm-gradient-txt'>Monetizing 14,250+ Foundational Patents with 150 Employees at ~0.4% CapEx</span>">
+ Adeia (ADEA) 商业模式解构：<span class="bm-gradient-txt">用 150 名精锐收割 14,250+ 项底层专利税，把芯片厂与流媒体的千亿资本开支化为自由现金流</span>
+ </h1>
+
+ <p class="bm-lead">
+ 如果说苹果靠“25亿活跃硬件 + 76.2% 服务毛利”构建围墙花园，那么 2022 年 10 月从 Xperi 剥离独立上市的 <strong>Adeia Inc. (NASDAQ: ADEA)</strong> 则是半导体与数字娱乐产业链更隐蔽的<strong>“上游纯专利收租者（Pure-Play IP Licensor）”</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1803696/000119312526076549/adea-20251231.htm" target="_blank" rel="noopener noreferrer">FY25 10-K ↗</a>。
+ Adeia 不造一颗晶圆、不建一座服务器机房，仅凭圣何塞总部为核心的约 <strong>150 名全职员工</strong>，掌控逾 <strong>13,750 项（2026 年增至 14,250+ 项）全球专利与申请</strong>（最晚到期延至 2045 年 3 月），向 AMD、Micron、SK hynix、Samsung、Disney、Charter 等巨头征收技术许可费：FY2025 创收 <strong>$4.434 亿（+17.9%）</strong>、GAAP 营业利润率 <strong>39.5%</strong>、调整后 EBITDA 利润率 <strong>62.6%</strong>、自由现金流 <strong>$1.563 亿</strong>，人均创收高达 <strong>$296 万</strong>（甚至高于苹果的 $287 万）
+ <a class="cite-link" href="https://analytics.stackrader.com/company/ADEA" target="_blank" rel="noopener noreferrer">10-K 财务摘要 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 零制造纯毛利漏斗" data-i18n-en="① Zero-COGS IP Funnel">① 零制造纯毛利漏斗</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 诉讼威慑与复利续约" data-i18n-en="② Litigation Backstop">② 诉讼威慑与复利续约</button>
+ <button type="button" class="bm-seg-btn mui-seg-btn" data-lens="2" data-i18n-zh="③ 去杠杆与回购跃迁" data-i18n-en="③ Deleveraging Engine">③ 去杠杆与回购跃迁</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 纯专利商业公式：毛利率 ≈ 100%（无实物 BOM 成本）| FY25 自由现金流 $156.3M ÷ 营收 $443.4M = 35.2% FCF 转化（CapEx 仅 $1.81M）
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 与传统半导体厂需每年砸数百亿美元建晶圆厂不同，Adeia 的“工厂”是专利组合：客户（晶圆厂、HBM 内存巨头与 OTT 流媒体）承担全部制造与内容成本，Adeia 只在每颗芯片或每份订阅中抽取高确定性多年期许可费，2025 年资本开支仅占营收 <strong>0.41%</strong>。
+ </div>
+ </div>
+ </div>
+
+ <aside class="bm-telemetry-ledger" aria-label="FY2025-Q3 2026 核心遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="ADEA 核心经济遥测账本 (FY25 / 9M26)" data-i18n-en="ADEA Business Model Telemetry">ADEA 核心经济遥测账本 (FY25 / 9M26)</span>
+ </div>
+ <a class="cite-link mono" href="https://investors.adeia.com/news-releases/news-release-details/adeia-announces-third-quarter-2026-financial-results" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY25 总营收 / 9M26 前三季营收" data-i18n-en="FY25 Revenue / 9M26 Revenue">FY25 总营收 / 9M26 前三季营收</span>
+ <span class="bm-tel-val mono">$443.4M <small style="font-size:0.74rem;color:var(--mui-success-text);">+17.9%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:81.1%;"></div>
+ <div style="width:18.9%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Media 81.1% (Q3 $65.0M)</span><span>Semi 18.9% (Q3 $15.2M)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY25 调整后 EBITDA / GAAP 营业利润率" data-i18n-en="FY25 Adj. EBITDA / Op Margin">FY25 调整后 EBITDA / GAAP 营业利润率</span>
+ <span class="bm-tel-val mono">62.6% / 39.5%</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:62.6%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>FY26E Adj. EBITDA $201–237M</span><span>GAAP 净利 $111.1M (FY25)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY25 自由现金流 &amp; 9M26 经营现金流" data-i18n-en="FY25 FCF &amp; 9M26 OCF">FY25 自由现金流 &amp; 9M26 经营现金流</span>
+ <span class="bm-tel-val mono">$156.3M <small style="font-size:0.74rem;color:var(--mui-success-text);">35.2% 转化</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:88%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>9M26 OCF $118.2M (+20.5%)</span><span>9M26 CapEx 仅 $2.1M (0.75%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="150名员工人均创收 / 专利护城河" data-i18n-en="Rev per FTE (150) / Patent Assets">150名员工人均创收 / 专利护城河</span>
+ <span class="bm-tel-val mono">$2.96M / 14,250+</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:92%;background:linear-gradient(90deg,#7C3AED,#0073E6);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>长期合同 RPO $491.9M</span><span>长期债降至 $386.5M (S&amp;P BB)</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1 -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END IP MONETIZATION PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶专利变现价值传导沙盘：从底层实验室发明到去杠杆现金复利" data-i18n-en="5-Node IP Value Pipeline: From R&D Invention to Deleveraging Cash Flow">五阶专利变现价值传导沙盘：从底层实验室发明到去杠杆现金复利</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解 Adeia 在半导体封装与媒体交互领域的专利变现闭环。" data-i18n-en="Select any node in the horizontal value chain to inspect Adeia's patent monetization engine.">点击下方任一价值链节点，拆解 Adeia 在半导体封装与媒体交互领域的专利变现闭环。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">R&amp;D + M&amp;A</span></div>
+ <div class="bm-node-title" data-i18n-zh="底层原创研发与高壁垒专利收并购" data-i18n-en="Foundational R&amp;D &amp; Patent Acquisition">底层原创研发与高壁垒专利收并购</div>
+ <div class="bm-node-kpi mono">13,750→14,250+ 项全球专利</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">INDUSTRY ADOPTION</span></div>
+ <div class="bm-node-title" data-i18n-zh="卡位 AI 算力封装与流媒体必经节点" data-i18n-en="Chokepoint Standards (DBI &amp; Media)">卡位 AI 算力封装与流媒体必经节点</div>
+ <div class="bm-node-kpi mono">DBI® 混合键合成 HBM/Logic 刚需</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">ENFORCEMENT</span></div>
+ <div class="bm-node-title" data-i18n-zh="协商授权优先，诉讼威慑兜底" data-i18n-en="Negotiate First, Litigate Last">协商授权优先，诉讼威慑兜底</div>
+ <div class="bm-node-kpi mono">Disney (25.12) &amp; AMD (26.03) 和解签约</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">RECURRING ROYALTY</span></div>
+ <div class="bm-node-title" data-i18n-zh="多年期固定/按量版税与合同积压" data-i18n-en="Multi-Year Recurring Royalties">多年期固定/按量版税与合同积压</div>
+ <div class="bm-node-kpi mono">RPO $491.9M · FY26E $375–415M</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">CAPITAL RETURN</span></div>
+ <div class="bm-node-title" data-i18n-zh="零制造现金流还债、分红与回购" data-i18n-en="Deleveraging, Dividend &amp; Buybacks">零制造现金流还债、分红与回购</div>
+ <div class="bm-node-kpi mono">债降 $100M+ · S&amp;P 升至 BB</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · FOUNDATIONAL R&amp;D &amp; PORTFOLIO CURATION</span>
+ <h3 id="nodeTitle">底层发明孵化器：每年投入 ~15% 营收研发 + 精准补强收购，筑起 20 年有效期专利墙</h3>
+ <p id="nodeDesc">
+ 继承自 Tessera（1990年创立的半导体封装先驱）与 TiVo/Rovi（交互式电视指南先驱），Adeia 每年将约 $6,750 万（FY25 占营收 15.2%）投入前沿研发，并通过小额精准收购（9M26 购入无形资产 $1,500 万）持续扩容。截至 2025 年底拥有约 13,750 项（2026 年增至 14,250+ 项）全球专利与申请，最晚授权专利有效期直抵 2045 年 3 月。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 专利扩张飞轮：2022分拆时 9,500 项 → 2025年底 13,750 项 (+45%) → 2026年 14,250+ 项（覆盖至 2045 年）
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">14,250+</b><span>2026 年全球专利及申请总量</span></div>
+ <div class="bm-ins-card"><b class="mono">$67.5M</b><span>FY2025 研发投入 (15.2% 营收)</span></div>
+ <div class="bm-ins-card"><b class="mono">2045.03</b><span>现有已授权专利最晚到期日</span></div>
+ <div class="bm-ins-card"><b class="mono">150人</b><span>全公司精锐编制（含高密度研发）</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2 -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · FY2025 P&amp;L WATERFALL &amp; 5Y OPERATING LEVERAGE</span>
+ <h3 data-i18n-zh="FY2025 $4.434亿 利润瀑布流与五年自由现金流转化率" data-i18n-en="FY2025 $443.4M Waterfall & 5Y FCF Conversion">FY2025 $4.434亿 利润瀑布流与五年自由现金流转化率</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→FCF 瀑布流" data-i18n-en="Rev → FCF Waterfall">营收→FCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="margins" data-i18n-zh="5年利润率演进" data-i18n-en="5Y Margin Trend">5年利润率演进</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 数据来源：<a class="cite-link" href="https://analytics.stackrader.com/company/ADEA" target="_blank" rel="noopener noreferrer">Adeia FY2025 Form 10-K ↗</a>。
+ 注意纯专利模型的独特会计结构：无实物销售成本（COGS），主要费用为研发（$67.5M）、销管（$119.5M，含股权激励）及无形资产摊销（约 $57M–$65M/年，非现金支出），因此 <strong>FY25 自由现金流（$156.3M）大幅高于 GAAP 净利润（$111.1M）</strong>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · FOUR IP LICENSING TIERS</span>
+ <h3 data-i18n-zh="双支柱四层专利收费矩阵（目标迈向 $600M/年）" data-i18n-en="4-Tier IP Licensing Stack ($600M Target)">双支柱四层专利收费矩阵（目标迈向 $600M/年）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="semi" data-i18n-zh="半导体" data-i18n-en="Semiconductor">半导体</button>
+ <button type="button" class="mui-seg-btn" data-tcat="media" data-i18n-zh="媒体/电商" data-i18n-en="Media/E-Comm">媒体/电商</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="semi">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name">① 半导体混合键合 (DBI® / DBI Ultra™) 与先进节点</span>
+ <span class="mui-chip mui-chip-success mono">目标 $200M/年</span>
+ </div>
+ <div class="bm-tier-desc">AI 数据中心 HBM 高带宽内存堆叠与 3D 逻辑芯片互连必经技术，已签约 AMD (2026.03)、Micron、SK hynix、Samsung、Kioxia、TSMC/UMC 生态链。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="media">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name">② 传统付费电视 (Pay-TV / MVPD) 现金牛底座</span>
+ <span class="mui-chip mui-chip-primary mono">长约续期压舱石</span>
+ </div>
+ <div class="bm-tier-desc">覆盖 Comcast、Charter (2026 Q3 多年期续约)、Cox、Verizon、Altice、Sky 等全球头部有线/卫星运营商，提供高可预测性经常性现金流。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="media">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name">③ OTT 流媒体、社交平台与消费电子</span>
+ <span class="mui-chip mui-chip-violet mono">Disney / TCL / Roku</span>
+ </div>
+ <div class="bm-tier-desc">将内容搜索、个性化推荐与流媒体传输专利向 YouTube、Disney+ (2025.12 签约)、Paramount+、Peacock、X Corp.、TCL (2026 Q3 续约)、LG 与 Roku 扩张。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="media">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name">④ 电商与数字商业生态新蓝海 (E-Commerce)</span>
+ <span class="mui-chip mui-chip-warning mono">目标占总营收 ~10%</span>
+ </div>
+ <div class="bm-tier-desc">2026 Q2 与 RPX 签署涵盖 10 家电商成员企业的突破性协议，Q3 再签体育电商巨头 Fanatics，切入视觉搜索与个性化购物推荐赛道。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3 -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · CUSTOMER &amp; DEAL ECONOMICS</span>
+ <h3 data-i18n-zh="三大客户群经济模型：长约平滑周期 vs 诉讼追缴脉冲" data-i18n-en="Customer Tier Economics: Recurring vs. Catch-Up">三大客户群经济模型：长约平滑周期 vs 诉讼追缴脉冲</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="paytv">Pay-TV 现金牛</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="semi">半导体 AI 增长极</button>
+ <button type="button" class="mui-seg-btn" data-cohort="ott">OTT/电商扩张层</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat">
+ <div class="lbl">代表性签约巨头</div>
+ <div class="val" style="font-size:0.93rem;">AMD · Micron · SK hynix · Kioxia</div>
+ <div class="delta">覆盖存储 HBM 与逻辑芯片</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">2026 Q2 / Q3 单季贡献</div>
+ <div class="val mono">$14.8M / $15.2M</div>
+ <div class="delta">占总营收 ~18.9% 且持续爬坡</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">长期年度营收目标</div>
+ <div class="val mono">$200M / 年</div>
+ <div class="delta">管理层 2026 年上调至 2 亿美元</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">产业投资顺风</div>
+ <div class="val mono">$125B 行业扩产</div>
+ <div class="delta">晶圆与存储厂加速导入混合键合</div>
+ </div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>“AMD 破冰效应”：</strong>2026 年 3 月 AMD 在诉讼后与 Adeia 签署覆盖先进制程与混合键合的多年期许可协议 <a class="cite-link" href="https://www.streetwisereports.com/article/2026/04/14/the-company-quietly-powering-next-generation-ai-chips.html" target="_blank" rel="noopener noreferrer">Streetwise Reports ↗</a>，首次在高性能逻辑芯片（CPU/GPU Chiplet）领域确立 Adeia 混合键合专利的商业标杆，为后续 Broadcom、Intel 与云厂商自研 ASIC 谈判打开大门。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · REVENUE MIX &amp; QUARTERLY CADENCE</span>
+ <h3 data-i18n-zh="媒体 vs 半导体营收结构与 2025–2026 季度脉冲特征" data-i18n-en="Segment Mix & Quarterly Revenue Cadence">媒体 vs 半导体营收结构与 2025–2026 季度脉冲特征</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="cadence" data-i18n-zh="2025–2026 季度营收 ($M)" data-i18n-en="Quarterly Revenue ($M)">2025–2026 季度营收 ($M)</button>
+ <button type="button" class="mui-seg-btn" data-cview="target" data-i18n-zh="当前 vs $600M 远期拼图" data-i18n-en="Current vs $600M Target">当前 vs $600M 远期拼图</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 注意理解 Adeia 财报的<strong>“脉冲性（Lumpiness）”</strong>：2025 Q4 因 Disney 和解确认过往使用追缴收入飙升至 $182.6M，而 2026 Q3 因少数大单跨年签约推迟回落至 $80.2M（全年指引 $375M–$415M）；但截至 2026 年 9 月 30 日，一年以上长期合同履约义务（RPO）仍高达 <strong>$4.919 亿</strong>。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4 -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · RAPID DELEVERAGING &amp; ULTRA-LOW CAPEX</span>
+ <h3 data-i18n-zh="四年暴降债务与 0.4%–0.75% 极致轻资产资本效率" data-i18n-en="Rapid Debt Paydown & Ultra-Low CapEx Efficiency">四年暴降债务与 0.4%–0.75% 极致轻资产资本效率</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="debt" data-i18n-zh="长债余额去杠杆 ($M)" data-i18n-en="Debt Paydown ($M)">长债余额去杠杆 ($M)</button>
+ <button type="button" class="mui-seg-btn" data-kview="capex" data-i18n-zh="CapEx 占营收比 (%)" data-i18n-en="CapEx Intensity (%)">CapEx 占营收比 (%)</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 资本配置纪律：2024 年偿还本金 $114.2M、2025 年偿还 $60.4M、2026 前三季度再偿还 $40.3M，将定期贷款余额压降至 <strong>$386.5M</strong>（S&amp;P 于 2026 年 4 月将信用评级上调至 <strong>BB</strong>，杠杆率降至 1.6x）；同时 9M26 回购股票 $20.0M（尚余 $1.40 亿回购额度）并派发股息 $16.6M
+ <a class="cite-link" href="https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3554519" target="_blank" rel="noopener noreferrer">S&amp;P BB 评级报告 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR $600M TARGET SIMULATOR</span>
+ <h3 data-i18n-zh="FY2026–FY2030 迈向 $600M 营收与 Non-GAAP EPS 推演器" data-i18n-en="FY2026–FY2030 $600M Target & EPS Simulator">FY2026–FY2030 迈向 $600M 营收与 Non-GAAP EPS 推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="合同延期" data-i18n-en="Bear">合同延期</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="6亿蓝图" data-i18n-en="Base">6亿蓝图</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="AI混合键合爆发" data-i18n-en="Bull">AI混合键合爆发</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="2030E 半导体授权年营收 ($M)" data-i18n-en="2030E Semiconductor Revenue ($M)">2030E 半导体授权年营收 ($M)</span><b class="mono" id="lblSemiRev">$200M</b></div>
+ <input type="range" id="inpSemiRev" min="80" max="320" step="10" value="200" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="2030E 媒体/OTT/电商年营收 ($M)" data-i18n-en="2030E Media/OTT/E-Comm Revenue ($M)">2030E 媒体/OTT/电商年营收 ($M)</span><b class="mono" id="lblMediaRev">$400M</b></div>
+ <input type="range" id="inpMediaRev" min="280" max="500" step="10" value="400" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="年均净回购缩股率 (Annual Share Retirement)" data-i18n-en="Annual Net Share Retirement">年均净回购缩股率 (Annual Share Retirement)</span><b class="mono" id="lblBuyRate">2.0%</b></div>
+ <input type="range" id="inpBuyRate" min="0" max="5.0" step="0.5" value="2.0" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$600M</b><span>2030E 总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEbitdaOut">$378M</b><span>2030E Adj. EBITDA</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEpsOut">$2.79</b><span>2030E Non-GAAP EPS</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simFcfOut">$248M</b><span>2030E 自由现金流</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5 -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · GLOBAL IP LICENSOR BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球纯专利与半导体 IP 巨头横向对标及三大风险压测" data-i18n-en="Global IP Licensor Matrix & Three Core Risk Stress Tests">全球纯专利与半导体 IP 巨头横向对标及三大风险压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比 ADEA 与 Arm、高通、InterDigital、Dolby 的商业模式差异，并追踪 Adeia 的核心脆弱点。" data-i18n-en="Benchmarking Adeia against ARM, QCOM, IDCC, and DLB while stress-testing key licensing risks.">对比 ADEA 与 Arm、高通、InterDigital、Dolby 的商业模式差异，并追踪 Adeia 的核心脆弱点。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all">全部标杆 (5)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="pure">纯 IP 授权商</button>
+ <button type="button" class="mui-seg-btn" data-pcat="hybrid">芯片/硬件混合型</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th>公司与代码</th>
+ <th>核心商业模式原型</th>
+ <th>毛利率 / EBITDA 利润率</th>
+ <th>CapEx / 营收强度</th>
+ <th>员工规模与人均创收</th>
+ <th>模式壁垒与估值折价/溢价根源</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-apple" data-row-cat="pure">
+ <td><strong>Adeia (ADEA)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>无晶圆纯专利授权（混合键合 + 媒体交互）</td>
+ <td class="mono">~100% GM / 62.6% Adj. EBITDA</td>
+ <td class="mono" style="color:var(--mui-success-text);">0.41%–0.75% (极致轻资产)</td>
+ <td class="mono">~150 人 · $2.96M/人</td>
+ <td>人效比肩苹果/Arm，但因 Pay-TV 敞口与大单季度波动，估值仅 ~10x–14x</td>
+ </tr>
+ <tr data-row-cat="pure">
+ <td><strong>Arm Holdings (ARM)</strong></td>
+ <td>CPU 架构授权 + 每颗芯片按量版税 (Royalty)</td>
+ <td class="mono">~96% GM / ~42% Adj. Op</td>
+ <td class="mono">~3%–5%</td>
+ <td class="mono">~8,300 人 · ~$0.55M/人</td>
+ <td>生态开发者锁死极深且按颗抽成几乎无诉讼摩擦，享受极高估值倍数</td>
+ </tr>
+ <tr data-row-cat="pure">
+ <td><strong>InterDigital (IDCC)</strong></td>
+ <td>无线通信 (5G/6G) + 视频编解码标准必要专利 (SEP)</td>
+ <td class="mono">~100% GM / ~55%+ EBITDA</td>
+ <td class="mono" style="color:var(--mui-success-text);">&lt; 1%</td>
+ <td class="mono">~450 人 · ~$1.8M+/人</td>
+ <td>商业模式与 ADEA 最接近，依赖 SEP 全球交叉许可与诉讼和解</td>
+ </tr>
+ <tr data-row-cat="pure">
+ <td><strong>Dolby Labs (DLB)</strong></td>
+ <td>音视频编解码 (Atmos/Vision) 品牌认证 + 版税</td>
+ <td class="mono">~88% GM / ~34% EBITDA</td>
+ <td class="mono">~2%–3%</td>
+ <td class="mono">~2,100 人 · ~$0.62M/人</td>
+ <td>拥有 C 端消费品牌心智溢价，但受全球 PC/TV 出货量周期拖累</td>
+ </tr>
+ <tr data-row-cat="hybrid">
+ <td><strong>Qualcomm (QCOM)</strong></td>
+ <td>QCT 手机基带芯片销售 + QTL 专利授权双轮</td>
+ <td class="mono">~56% 综合 GM (QTL &gt;70% EBT)</td>
+ <td class="mono">~3%</td>
+ <td class="mono">~49,000 人 · ~$0.80M/人</td>
+ <td>QTL 利润池极厚，但面临苹果自研 C1X 基带逐步清退的长期逆风</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · DEAL LUMPINESS</span>
+ <h4>签约节奏跨年波动与大客户集中度风险</h4>
+ <p>前五大客户占 2025 年营收的 <strong>55.7%</strong>，且大型谈判常涉“过往使用费追缴”，导致单季营收剧烈震荡（如 25Q4 $182.6M vs 26Q3 $80.2M）。2026 Q3 因少数大单延后，管理层将全年营收指引由 $395M–$435M 下调至 <strong>$375M–$415M</strong> <a class="cite-link" href="https://investors.adeia.com/news-releases/news-release-details/adeia-announces-third-quarter-2026-financial-results" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：RPO 积压与大单跨年落袋进度</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · LITIGATION &amp; PTAB</span>
+ <h4>诉讼成本飙升与专利有效性被挑战（IPR/PTAB）</h4>
+ <p>9M26 诉讼费用达 <strong>$18.5M</strong>（2026 Q2 对 Fubo 提起媒体专利侵权诉讼）。虽然过往在 X Corp.、Disney、Altice 与 AMD 案中均以签约和解告终，但若核心混合键合或媒体专利在 PTAB 无效审查中受挫，将直接削弱议价筹码。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：Fubo 等在审诉讼与 PTAB 裁决</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · PAY-TV DECAY</span>
+ <h4>传统有线电视剪线潮 vs 半导体/OTT 接力赛跑</h4>
+ <p>传统付费电视（Pay-TV）订阅户萎缩持续压低媒体续约基数；Adeia 能否顺利重估，取决于半导体授权（2026 Q3 仅 $15.2M，距 $200M/年目标仍有 3 倍+ 空间）与 OTT/电商/社交新客户的放量速度能否跑赢有线电视自然衰减。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：半导体季度营收能否突破 $25M+</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- SOURCES -->
+ <section class="bm-panel" aria-label="权威财报信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威财报、SEC 监管文件与评级机构信源" data-i18n-en="Verified SEC Filings & Rating Reports">权威财报、SEC 监管文件与评级机构信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1803696/000119312526076549/adea-20251231.htm" target="_blank" rel="noopener noreferrer">
+ <b>Adeia Inc. FY2025 Form 10-K (SEC EDGAR) ↗</b>
+ <span>官方披露 FY25 营收 $443.39M、净利 $111.08M、150 名员工与 13,750 项专利资产</span>
+ </a>
+ <a class="bm-source-item" href="https://investors.adeia.com/news-releases/news-release-details/adeia-announces-third-quarter-2026-financial-results" target="_blank" rel="noopener noreferrer">
+ <b>Adeia Q3 2026 Financial Results (2026-11-02) ↗</b>
+ <span>披露 9M26 营收 $281.08M、OCF $118.25M、债务降至 $386.5M、FY26 指引及 $600M 远期目标</span>
+ </a>
+ <a class="bm-source-item" href="https://analytics.stackrader.com/company/ADEA" target="_blank" rel="noopener noreferrer">
+ <b>Stackrader ADEA 5-Year 10-K Summary (FY21–FY25) ↗</b>
+ <span>完整汇总 FY21–FY25 营收、营业利润、FCF、股息与回购现金流口径</span>
+ </a>
+ <a class="bm-source-item" href="https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3554519" target="_blank" rel="noopener noreferrer">
+ <b>S&amp;P Global Ratings: Adeia Upgraded to BB (2026-04-30) ↗</b>
+ <span>确认 S&amp;P 调整后杠杆率降至 1.6x，年自由现金流预期逾 $1.40 亿</span>
+ </a>
+ <a class="bm-source-item" href="https://www.streetwisereports.com/article/2026/04/14/the-company-quietly-powering-next-generation-ai-chips.html" target="_blank" rel="noopener noreferrer">
+ <b>Streetwise Reports: AMD Hybrid Bonding Deal Analysis ↗</b>
+ <span>深度解析 AMD 2026 年 3 月多年期许可协议对逻辑芯片混合键合商业化的里程碑意义</span>
+ </a>
+ <a class="bm-source-item" href="https://adeia.com/licensing" target="_blank" rel="noopener noreferrer">
+ <b>Adeia Official Selected Licensees Directory ↗</b>
+ <span>官方披露 AMD、Micron、SK hynix、Samsung、Kioxia、Disney+、Comcast 等全行业被许可方名录</span>
+ </a>
+ </div>
+ </section>
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/adeia_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

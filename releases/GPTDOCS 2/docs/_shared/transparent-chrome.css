@@ -1,0 +1,13 @@
+/* Shared untinted glass for desktop and mobile headers. */
+.m-top-chrome, .mui-appbar {
+  background: transparent !important;
+  backdrop-filter: blur(6px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(6px) saturate(150%) !important;
+  box-shadow: none !important;
+}
+.m-top-chrome :is(.m-top-pill, .m-icon-btn, .m-pc-rail-toggle, .m-search-input),
+.mui-appbar :is(.mui-icon-btn, .mui-theme-icon-btn, .mui-lang-switch, .mui-lang-btn, .quick-search-input) {
+  background: transparent !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}

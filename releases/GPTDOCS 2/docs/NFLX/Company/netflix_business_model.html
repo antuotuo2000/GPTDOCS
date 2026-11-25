@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-report-family="nflx" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="奈飞公司 Netflix, Inc. (NASDAQ: NFLX) 商业模式全景架构拆解：全球多语种原创固定成本杠杆、Open Connect ISP 内嵌 CDN、3.25亿+付费家庭与近10亿观众锁死、自研 Netflix Ads Suite 广告变现与 ~1.1x 现金内容纪律及回购复利机器（基于 FY2025 10-K 与 Q3 2026 股东信）。" />
+ <title>奈飞 Netflix NFLX 商业模式架构拆解 | 数据中心</title>
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/netflix_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted Glass MUI AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">NFLX</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="#mod-deck">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="奈飞公司 (Netflix) 商业模式架构拆解" data-i18n-en="Netflix, Inc. Business Model Architecture">奈飞公司 (Netflix) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: NFLX</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY26E $51.1B · 31.5% OI</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div class="mui-segmented hide-sm" id="densityGroup" role="group" aria-label="排版密度切换">
+ <button type="button" class="mui-seg-btn active" data-density-btn="comfort" data-i18n-zh="舒适" data-i18n-en="Comfort">舒适</button>
+ <button type="button" class="mui-seg-btn" data-density-btn="compact" data-i18n-zh="紧凑" data-i18n-en="Compact">紧凑</button>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与专题导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">NFLX · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="奈飞商业模式架构图谱" data-i18n-en="Netflix Business Model Blueprint">奈飞商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="全球固定内容成本杠杆 × 3.25亿+家庭底座 × 自研 Ads Suite 广告飞轮 × ~1.1x 内容摊销纪律与回购注销" data-i18n-en="Fixed Content Cost Leverage × 325M+ Households × In-House Ads Suite × ~1.1x Spend/Amortization & Buybacks">全球固定内容成本杠杆 × 3.25亿+家庭底座 × 自研 Ads Suite 广告飞轮 × ~1.1x 内容摊销纪律与回购注销</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="固定成本摊薄 + 双轨变现" data-i18n-en="Fixed-Cost + SVOD/Ads">固定成本摊薄 + 双轨变现</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="Q3'26 / FY26E 营业利润率" data-i18n-en="Q3'26 / FY26E OI Margin">Q3'26 / FY26E 营业利润率</span>
+ <span class="sidebar-mini-val mono">34.6% · 31.5%</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="现金内容比 / FY26E FCF" data-i18n-en="Spend/Amort · FY26E FCF">现金内容比 / FY26E FCF</span>
+ <span class="sidebar-mini-val mono">~1.1x · ~$12.0B</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="奈飞四页专题与本页模块目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="NFLX"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与四层变现" data-i18n-en="Profit Waterfall &amp; Tiers">利润池瀑布流与四层变现</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="全球四区飞轮与行业集中度" data-i18n-en="Regional Flywheel &amp; Margin">全球四区飞轮与行业集中度</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="1.1x内容纪律与缩股推演器" data-i18n-en="1.1x Ratio &amp; Buyback Lab">1.1x内容纪律与缩股推演器</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="巨头范式矩阵与风险压测" data-i18n-en="Peer Matrix &amp; Stress Audit">巨头范式矩阵与风险压测</span></a></li>
+ </ul>
+ </nav>
+
+ </aside>
+
+ <!-- Main Non-Linear Workspace -->
+ <main class="bm-workspace main-content">
+
+ <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：固定内容成本全球摊薄 × 订阅/广告双轨变现机" data-i18n-en="ARCHETYPE: Global Fixed-Cost Content Leverage × SVOD/Ads Engine">商业范式：固定内容成本全球摊薄 × 订阅/广告双轨变现机</span>
+ <span class="mui-chip mui-chip-success mono">Q3 2026 8-K &amp; FY25 10-K</span>
+ <span class="mui-chip mui-chip-violet mono">CapEx 1.8% · FCF ~$12.0B</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="奈飞公司商业模式解构：<span class='bm-gradient-txt'>用全球最大用户盘摊薄固定内容投入，靠订阅提价、自研广告栈与 ~1.1x 现金纪律复利</span>" data-i18n-en="Deconstructing Netflix's Business Model: <span class='bm-gradient-txt'>Amortize Fixed Content Over ~1B Viewers, Compound via Pricing, Ads Suite &amp; ~1.1x Cash Discipline</span>">
+ 奈飞公司商业模式解构：<span class="bm-gradient-txt">用全球最大用户盘摊薄固定内容投入，靠订阅提价、自研广告栈与 ~1.1x 现金纪律复利</span>
+ </h1>
+
+ <p class="bm-lead" id="heroLeadText">
+ 好莱坞传统制片厂百年来困于“单片票房赌博”与有线电视退订潮，而奈飞（Netflix, NASDAQ: NFLX）早已进化为一台<strong>全球固定成本经营杠杆机器</strong>：一部剧集无论服务 5,000 万还是 <strong>3.25 亿+ 付费家庭（触达近 10 亿全球观众）</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm" target="_blank" rel="noopener noreferrer">Q3 2026 股东信 ↗</a>，其拍摄制作成本完全固定——这意味着第 3 亿名新增订阅用户的边际内容成本趋近于零。依托内嵌于全球 <strong>1,000+ 家电信运营商机房的自研 Open Connect CDN</strong>（零过路费承载全球约 15% 下行流量）
+ <a class="cite-link" href="https://openconnect.netflix.com/" target="_blank" rel="noopener noreferrer">Open Connect ↗</a>、付费共享（Paid Sharing）与月活突破 <strong>2.5 亿+ 观众的自研 Netflix Ads Suite 广告套餐</strong>
+ <a class="cite-link" href="https://about.netflix.com/news/netflix-upfront-2026-get-closer" target="_blank" rel="noopener noreferrer">2026 Upfront ↗</a>，奈飞将全年营收推向 <strong>$511 亿（FY26E 指引 +13% YoY）</strong>、营业利润率拉升至 <strong>31.5%（Q3 单季创 34.6% 历史峰值）</strong>，并将每年约 <strong>$120 亿自由现金流</strong>悉数投入高确定性股票回购注销（剩余授权达 $223 亿）。
+ </p>
+ </div>
+
+ <!-- Interactive 3-Lens Business Formula Switcher -->
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 固定内容成本杠杆" data-i18n-en="① Fixed-Cost Leverage">① 固定内容成本杠杆</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 订阅+广告双引擎" data-i18n-en="② SVOD + Ads Dual ARPU">② 订阅+广告双引擎</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 1.1x摊销纪律与缩股" data-i18n-en="③ 1.1x Cash Ratio &amp; Buybacks">③ 1.1x摊销纪律与缩股</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 单部剧集单次观看成本 = 固定制作/采购额 ÷ 全球 190+ 国总观看量 → 规模越大，对手越无法跟进同等内容预算
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 迪士尼流媒体（FY26E DTC SVOD 营业利润率指引仅 10%）与传统片厂受限于分区域发行和院线窗口期摩擦，而奈飞凭借<strong>非英语本土内容占比超 1/3 的全球化交叉分发</strong>（如韩国、墨西哥、丹麦与日本本土剧集瞬间触达近 10 亿观众），用行业最低的单小时观看摊销成本撑起每年近 $180 亿现金内容弹药库。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: Live Financial Telemetry Ledger -->
+ <aside class="bm-telemetry-ledger" aria-label="2026 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="FY2026E / Q3'26 商业模型遥测账本" data-i18n-en="FY2026E / Q3'26 Business Telemetry">FY2026E / Q3'26 商业模型遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm" target="_blank" rel="noopener noreferrer">SEC Q3'26 8-K ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY2026E 全年营收指引 (FY25 实绩 $45.18B)" data-i18n-en="FY2026E Revenue Guidance (FY25 $45.18B)">FY2026E 全年营收指引 (FY25 实绩 $45.18B)</span>
+ <span class="bm-tel-val mono">$51.1B <small style="font-size:0.74rem;color:var(--mui-success-text);">+13% YoY</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:94.7%;"></div>
+ <div style="width:5.3%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q3'26 实绩 $12.87B (+11.8%)</span><span>FY26E 广告营收 ~$2.7B</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="营业利润率跃迁 (FY22 17.8% → FY26E 31.5%)" data-i18n-en="Operating Margin Expansion (FY22 17.8% → FY26E 31.5%)">营业利润率跃迁 (FY22 17.8% → FY26E 31.5%)</span>
+ <span class="bm-tel-val mono">31.5% <small style="font-size:0.74rem;color:var(--mui-success-text);">+200bps</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:68.5%;"></div>
+ <div style="width:31.5%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q3'26 峰值利润率 34.6%</span><span>Q3'26 营业利润 $4.46B (+37%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="年度自由现金流指引 (物理 CapEx 仅占 1.8%)" data-i18n-en="FY2026E Free Cash Flow (CapEx only 1.8%)">年度自由现金流指引 (物理 CapEx 仅占 1.8%)</span>
+ <span class="bm-tel-val mono">~$12.0B <small style="font-size:0.74rem;color:var(--mui-success-text);">+26.8%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:88%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>FY25 FCF $9.46B</span><span>现金内容/摊销比稳居 ~1.1x</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="全球付费家庭底座 × 广告层月活观众" data-i18n-en="Paid Households × Ads Monthly Viewers">全球付费家庭底座 × 广告层月活观众</span>
+ <span class="bm-tel-val mono">325M+ / 250M+</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:86%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q3'26 创纪录回购 $4.80B</span><span>拆股后 EPS $0.87 (+49% YoY)</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END STREAMING VALUE CAPTURE PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从全球本土爆款工厂到每股现金流复利" data-i18n-en="5-Node Value-Chain Pipeline: From Local Originals Factory to Per-Share FCF">五阶商业价值传导沙盘：从全球本土爆款工厂到每股现金流复利</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解奈飞如何将“内容重投入”转化为高确定性的订阅与广告印钞机。" data-i18n-en="Click any node below to inspect Netflix's pricing power, distribution moat, and unit economics.">点击下方任一价值链节点，拆解奈飞如何将“内容重投入”转化为高确定性的订阅与广告印钞机。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">CONTENT SLATE</span></div>
+ <div class="bm-node-title" data-i18n-zh="本土原创+第三方授权片库" data-i18n-en="Local Originals &amp; Licensing">本土原创+第三方授权片库</div>
+ <div class="bm-node-kpi mono">净内容资产 $34.61B · 非英语&gt;1/3</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">OPEN CONNECT</span></div>
+ <div class="bm-node-title" data-i18n-zh="个性化推荐与 ISP 内嵌 CDN" data-i18n-en="Discovery AI &amp; Open Connect">个性化推荐与 ISP 内嵌 CDN</div>
+ <div class="bm-node-kpi mono">1,000+ ISP · 零骨干网过路费</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">PRICE LADDER</span></div>
+ <div class="bm-node-title" data-i18n-zh="三档价格阶梯与密码共享转化" data-i18n-en="3-Tier Ladder &amp; Paid Sharing">三档价格阶梯与密码共享转化</div>
+ <div class="bm-node-kpi mono">3.25亿+家庭 · 全区留存率攀升</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">ADS &amp; LIVE</span></div>
+ <div class="bm-node-title" data-i18n-zh="自研 Ads Suite 与赛事事件化" data-i18n-en="Netflix Ads Suite &amp; Live Events">自研 Ads Suite 与赛事事件化</div>
+ <div class="bm-node-kpi mono">250M+ MAV · 2030E 目标 $9B</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">1.1x &amp; BUYBACK</span></div>
+ <div class="bm-node-title" data-i18n-zh="预收递延浮存与巨额股票回购" data-i18n-en="Prepaid Float &amp; Share Buybacks">预收递延浮存与巨额股票回购</div>
+ <div class="bm-node-kpi mono">$1.78B 预收款 · Q3回购 $4.80B</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · GLOBAL-LOCAL CONTENT FACTORY &amp; LICENSING</span>
+ <h3 id="nodeTitle">全球 50+ 国本土制片网络 + 头部片厂逆向授权：对手越撤退，奈飞片库越厚</h3>
+ <p id="nodeDesc">
+ 奈飞过去十年在韩国、日本、西班牙、墨西哥、英国、丹麦与印度建立本土原创团队，推动非英语剧集观看占比从十年前不足 10% 跃升至如今超过 1/3（如 2026Q3 丹麦《The Secret Woman》获 4,700 万次观看、墨西哥《Facing El Chapo》获 5,800 万次观看）。与此同时，随着传统媒体迫于债务压力放弃排他闭环，迪士尼（《冰川时代》全系、《波西·杰克逊》）与法国 TF1 纷纷向奈飞开放授权与频道聚合，形成“原创树口碑、授权补时长”的黄金配比。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 商业传导：非英语地区低制作成本 × 全球近 10 亿人同步宣发 + 第三方成熟 IP 授权 → 维持行业最低退订率（Churn）
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">$34.61B</b><span>Q3'26 资产负债表净内容资产</span></div>
+ <div class="bm-ins-card"><b class="mono">&gt;33.3%</b><span>非英语内容占全球总观看时长比</span></div>
+ <div class="bm-ins-card"><b class="mono">$25.22B</b><span>流媒体内容总采购承诺义务</span></div>
+ <div class="bm-ins-card"><b class="mono">~10亿人</b><span>全球触达观众规模（合作首选入口）</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: 7:5 SPLIT — PROFIT WATERFALL CANVAS + 4-TIER MONETIZATION STACK -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; OPERATING MARGIN TRAJECTORY</span>
+ <h3 data-i18n-zh="FY2026E $511亿 价值转化瀑布流与 6 年营业利润率跃迁" data-i18n-en="FY2026E $51.1B P&amp;L Waterfall &amp; 6Y Margin Expansion">FY2026E $511亿 价值转化瀑布流与 6 年营业利润率跃迁</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→FCF 瀑布流" data-i18n-en="Rev → FCF Waterfall">营收→FCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="margins" data-i18n-zh="6年利润率跃升" data-i18n-en="6Y Margin Expansion">6年利润率跃升</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 数据核验自 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm" target="_blank" rel="noopener noreferrer">SEC Q3 2026 Exhibit 99.1 ↗</a> 与
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm" target="_blank" rel="noopener noreferrer">FY2025 Form 10-K ↗</a>。
+ 注：2026 年前三季度 GAAP 净利润达 $123.5 亿（含 Q1 华纳兄弟探索终止并购支付的 $28.0 亿违约金收益），全年预计自由现金流约 $120 亿。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · FOUR-TIER MONETIZATION ARCHITECTURE</span>
+ <h3 data-i18n-zh="奈飞四层收入变现阶梯：把每类价格弹性客群吃干榨净" data-i18n-en="4-Tier Monetization Architecture: Capturing Full Demand Curve">奈飞四层收入变现阶梯：把每类价格弹性客群吃干榨净</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="svod" data-i18n-zh="核心订阅" data-i18n-en="SVOD">核心订阅</button>
+ <button type="button" class="mui-seg-btn" data-tcat="growth" data-i18n-zh="新增量极" data-i18n-en="Ads/Live">新增量极</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="svod">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name">① 标准无广告与 4K 空间音频高级版（Standard &amp; Premium）</span>
+ <span class="mui-chip mui-chip-primary mono">周期提价压舱石</span>
+ </div>
+ <div class="bm-tier-desc">面向价格不敏感的中高收入家庭定期温和提价（如 2026 年价格调整后全球及美国退订率反而同比改善），持续推高单会员平均收入（ARM）。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="growth">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name">② 含广告低门槛套餐 + 自研 Netflix Ads Suite</span>
+ <span class="mui-chip mui-chip-success mono">250M+ 月活观众</span>
+ </div>
+ <div class="bm-tier-desc">低月费吸引价格敏感新户（广告市场约 50% 新注册选择该档），叠加高 CPM 大屏品牌广告与程序化竞价，综合单户总变现（月费+广告）逼近甚至追平标准无广告版。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="svod">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name">③ 付费共享附加席位（Extra Member）与运营商捆绑</span>
+ <span class="mui-chip mui-chip-violet mono">近零边际成本纯利</span>
+ </div>
+ <div class="bm-tier-desc">将昔日上亿“白嫖借号家庭”转化为付费主账号或付费子席位；并在新兴市场联合印度 Flipkart 交易会员、法国 TF1 广电套餐实现极低获客成本渗透。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="growth">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name">④ 顶级赛事直播赞助（WWE / NFL / 拳击）与线下衍生</span>
+ <span class="mui-chip mui-chip-warning mono">DAI 动态插播高溢价</span>
+ </div>
+ <div class="bm-tier-desc">通过 NFL 感恩节前夜与圣诞大战、WWE Raw 周播及 Fury vs. Joshua 世纪拳赛创造“全员同时在线时刻”，搭载动态广告插入（DAI）攫取稀缺品牌赞助预算。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: 5:7 SPLIT — FOUR GLOBAL REGIONS & STREAMING MARGIN SHARE -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · GLOBAL REGIONAL FLYWHEEL (Q3 2026 8-K)</span>
+ <h3 data-i18n-zh="四大大洲区域经济模型：成熟区提 ARM，新兴区扩时长" data-i18n-en="4-Region Unit Economics: ARM Power vs. Penetration Runway">四大大洲区域经济模型：成熟区提 ARM，新兴区扩时长</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn active" data-cohort="ucan" data-i18n-zh="北美主场 (UCAN)" data-i18n-en="UCAN ($5.63B)">北美主场 (UCAN)</button>
+ <button type="button" class="mui-seg-btn" data-cohort="emea" data-i18n-zh="欧洲中东 (EMEA)" data-i18n-en="EMEA ($4.11B)">欧洲中东 (EMEA)</button>
+ <button type="button" class="mui-seg-btn" data-cohort="emerging" data-i18n-zh="拉美与亚太 (LATAM+APAC)" data-i18n-en="LATAM+APAC ($3.14B)">拉美与亚太 (LATAM+APAC)</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat">
+ <div class="lbl">Q3 2026 单季净营收</div>
+ <div class="val mono">$5,628M</div>
+ <div class="delta">+11% YoY（占全集团 43.7%）</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">9M 2026 累计营收</div>
+ <div class="val mono">$16,305M</div>
+ <div class="delta">全球最高单客 ARM 利润池</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">核心增长驱动引擎</div>
+ <div class="val" style="font-size:0.95rem;">提价消化 + NFL/WWE 广告</div>
+ <div class="delta">提价后美国退订率同比下降</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">战略护城河锚点</div>
+ <div class="val" style="font-size:0.95rem;">客厅第一入口（Must-Have）</div>
+ <div class="delta">费城与达拉斯 Netflix House 落地</div>
+ </div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>区域接力复利机制：</strong>北美（UCAN）凭借极高家庭渗透率与 NFL/WWE 直播广告贡献丰厚现金牛；欧洲（EMEA）通过法国 TF1 等本地电视台内嵌聚合加深日常粘性；而印度在 Q3 凭借日播综艺《Lock Upp》与 Flipkart 合作实现<strong>观看时长暴增 +24% YoY、创单季历史最高净增付费户</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm" target="_blank" rel="noopener noreferrer">Q3'26 区域披露 ↗</a>。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · REGIONAL TRAJECTORY &amp; PEER MARGIN CAPTURE</span>
+ <h3 data-i18n-zh="四大区域季度营收轨迹与全球流媒体营业利润率统治度" data-i18n-en="Quarterly Regional Trajectory &amp; Industry Margin Leadership">四大区域季度营收轨迹与全球流媒体营业利润率统治度</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="regions" data-i18n-zh="四区季度营收 ($B)" data-i18n-en="Regional Rev ($B)">四区季度营收 ($B)</button>
+ <button type="button" class="mui-seg-btn" data-cview="share" data-i18n-zh="流媒体营业利润率对比" data-i18n-en="Peer OI Margin (%)">流媒体营业利润率对比</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 同业对标基准：奈飞 FY2026E 营业利润率指引达 <strong>31.5%</strong>（Q3 实绩 34.6%），而迪士尼管理层对 FY2026 娱乐流媒体（DTC SVOD）营业利润率目标仅为 <strong>10.0%</strong>
+ <a class="cite-link" href="https://thewaltdisneycompany.com/press-releases/the-walt-disney-company-reports-fourth-quarter-and-full-year-earnings-for-fiscal-2025/" target="_blank" rel="noopener noreferrer">Disney FY25 财报 ↗</a>，凸显 20 个百分点以上的规模壁垒代差。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: 6:6 DUAL WORKBENCH — 1.1x CONTENT DISCIPLINE & BUYBACKS + 5Y EPS COMPOUNDER -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · ~1.1x CONTENT RATIO &amp; SHARE CANNIBALIZATION</span>
+ <h3 data-i18n-zh="告别负现金流质疑：~1.1x 内容现金纪律与创纪录缩股引擎" data-i18n-en="~1.1x Cash Content Discipline &amp; Record Share Repurchases">告别负现金流质疑：~1.1x 内容现金纪律与创纪录缩股引擎</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="fcf" data-i18n-zh="年度 FCF 大爆发 ($B)" data-i18n-en="Annual FCF Surge ($B)">年度 FCF 大爆发 ($B)</button>
+ <button type="button" class="mui-seg-btn" data-kview="shares" data-i18n-zh="季度摊薄股本缩减" data-i18n-en="Diluted Share Reduction">季度摊薄股本缩减</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 资本配置跃迁：通过将全年现金内容投入与摊销比率锚定在 <strong>~1.1x</strong>（9M26 现金内容新增 $14.93B vs 摊销 $12.76B），叠加 $17.8 亿会员预收递延收入，奈飞 FCF 由 FY22 的 $16.2 亿暴增至 FY26E 的 <strong>~$120 亿</strong>；仅 2026Q3 单季即斥资 <strong>$48.0 亿回购注销 6,390 万股</strong>（占当季 FCF 的 167%）
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm" target="_blank" rel="noopener noreferrer">Q3'26 现金流表 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EPS &amp; FCF COMPOUNDER</span>
+ <h3 data-i18n-zh="FY2027–FY2031 双引擎变现与回购缩股复利推演器" data-i18n-en="FY2027–FY2031 Dual-Engine &amp; Buyback Compounder">FY2027–FY2031 双引擎变现与回购缩股复利推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="竞争逆风" data-i18n-en="Bear">竞争逆风</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="基准复利" data-i18n-en="Base">基准复利</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="广告超周期" data-i18n-en="Bull">广告超周期</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="订阅营收年化增速 (SVOD Revenue CAGR)" data-i18n-en="SVOD Revenue CAGR">订阅营收年化增速 (SVOD Revenue CAGR)</span><b class="mono" id="lblSubCagr">9.5%</b></div>
+ <input type="range" id="inpSubCagr" min="3" max="15" step="0.5" value="9.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="广告业务年化增速 (Ads Revenue CAGR)" data-i18n-en="Ads Revenue CAGR">广告业务年化增速 (Ads Revenue CAGR)</span><b class="mono" id="lblAdCagr">32.0%</b></div>
+ <input type="range" id="inpAdCagr" min="12" max="48" step="1" value="32" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="年均净回购缩股率 (Annual Share Retirement)" data-i18n-en="Annual Net Share Retirement">年均净回购缩股率 (Annual Share Retirement)</span><b class="mono" id="lblBuyRate">2.8%</b></div>
+ <input type="range" id="inpBuyRate" min="0" max="5.0" step="0.2" value="2.8" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$87.0B</b><span data-i18n-zh="FY31E 总营收" data-i18n-en="FY31E Revenue">FY31E 总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simOmOut">36.8%</b><span data-i18n-zh="FY31E 营业利润率" data-i18n-en="FY31E OI Margin">FY31E 营业利润率</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEpsOut">$6.92</b><span data-i18n-zh="FY31E 摊薄 EPS" data-i18n-en="FY31E Diluted EPS">FY31E 摊薄 EPS</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simCagrOut">+16.4%</b><span data-i18n-zh="5年经营EPS复合增速" data-i18n-en="5Y Core EPS CAGR">5年经营EPS复合增速</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: GLOBAL STREAMING & TECH MATRIX + 3 STRESS AUDITS -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球流媒体与平台巨头商业模型对标及三大风险压测" data-i18n-en="Global Streaming &amp; Platform Peer Matrix &amp; Stress Audit">全球流媒体与平台巨头商业模型对标及三大风险压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比纯血固定成本流媒体、UGC 分成视频、版税抽成音频与传统制片厂的盈利本质，并核查三大潜在逆风。" data-i18n-en="Benchmarking Netflix's fixed-cost model against UGC, royalty-split audio, and legacy studios.">对比纯血固定成本流媒体、UGC 分成视频、版税抽成音频与传统制片厂的盈利本质，并核查三大潜在逆风。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (5)" data-i18n-en="All Peers (5)">全部标杆 (5)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="tech" data-i18n-zh="科技/平台流媒体" data-i18n-en="Tech Platforms">科技/平台流媒体</button>
+ <button type="button" class="mui-seg-btn" data-pcat="media" data-i18n-zh="传统传媒/版权方" data-i18n-en="Legacy Media">传统传媒/版权方</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th>公司与代码</th>
+ <th>核心内容与变现模型</th>
+ <th>核心利润率指标</th>
+ <th>内容成本性质</th>
+ <th>资本强度与现金流特征</th>
+ <th>模式终极壁垒与核心脆弱点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-nflx" data-row-cat="tech media">
+ <td><strong>Netflix (NFLX)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>买断式全球原创/授权 + 订阅与自研广告双轨</td>
+ <td class="mono">31.5% FY26E OI (Q3 34.6%)</td>
+ <td class="mono" style="color:var(--mui-success-text);">固定成本摊薄 (无分成负担)</td>
+ <td class="mono" style="color:var(--mui-success-text);">CapEx 1.8% · FCF ~$12.0B</td>
+ <td>近10亿观众摊薄成本 + Open Connect；面临短视频/游戏注意力争夺</td>
+ </tr>
+ <tr data-row-cat="tech">
+ <td><strong>Alphabet / YouTube (GOOGL)</strong></td>
+ <td>零前期制作费 UGC 创作者 55% 广告/订阅分成</td>
+ <td class="mono">集团 31.8% OI (Q3'26)</td>
+ <td class="mono">可变营收分成 (与创作者共担)</td>
+ <td class="mono" style="color:var(--mui-warning-text);">AI 与云数据中心高 CapEx</td>
+ <td>无限长尾内容供应与客厅电视时长领跑；缺乏顶级长剧集独家溢价</td>
+ </tr>
+ <tr data-row-cat="media">
+ <td><strong>Walt Disney (DIS)</strong></td>
+ <td>百年头部电影 IP + 主题公园重资产 + 流媒体矩阵</td>
+ <td class="mono">FY26E DTC SVOD 10.0% OI</td>
+ <td class="mono">固定制作 + 昂贵体育长约</td>
+ <td class="mono" style="color:var(--mui-warning-text);">CapEx ~$9B (游轮与乐园扩建)</td>
+ <td>线下体验与衍生品飞轮无敌；传统线性电视网萎缩拖累整体增速</td>
+ </tr>
+ <tr data-row-cat="tech">
+ <td><strong>Spotify (SPOT)</strong></td>
+ <td>全球音乐/播客/有声书流媒体订阅 + 广告</td>
+ <td class="mono">Q4'25 毛利 33.1% / OI 15.5%</td>
+ <td class="mono" style="color:var(--mui-error-text);">约 ~68% 刚性唱片版税分成</td>
+ <td class="mono" style="color:var(--mui-success-text);">极轻资产 · 2.9亿付费订户</td>
+ <td>歌单社交粘性极强；三大唱片公司集中议价锁死毛利率天花板</td>
+ </tr>
+ <tr data-row-cat="media">
+ <td><strong>Warner Bros. Discovery (WBD)</strong></td>
+ <td>HBO 精品剧集 + 电影院线 + 有线电视网</td>
+ <td class="mono">Q1'26 净亏 $(2.92)B (含违约金)</td>
+ <td class="mono">高杠杆并购债务与重组减值</td>
+ <td class="mono" style="color:var(--mui-error-text);">有线电视融冰压制估值弹性</td>
+ <td>拥有顶级影视工业积淀，但并购杠杆与线性网络下滑迫使其并购易主</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · ATTENTION SHARE &amp; HOURS</span>
+ <h4>观看时长增速放缓与 YouTube /《GTA VI》注意力争夺</h4>
+ <p>投资者高度关注奈飞单户观看时长增速：YouTube 在客厅大屏占据免费碎片时间，而超级游戏大作亦争夺黄金时段。奈飞的对冲策略是聚焦<strong>“高质量共鸣时长（Quality Engagement）”</strong>而非廉价刷屏，并引入日播真人秀（如印度《Lock Upp》拉动当地时长 +24%）、法国 TF1 实时频道与重大体育直播。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：半年度 Engagement Report 总观看小时增速</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · AD-TECH ROLLOUT PACE</span>
+ <h4>广告业务变现爬坡节奏（FY26E $2.7B vs 原预期 $3.0B）</h4>
+ <p>管理层在 Q3 2026 股东信中坦诚，因部分广告产品功能上线节奏略慢于原计划，2026 全年广告营收预计约为 <strong>$27 亿（略低于此前约 $30 亿预期）</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm" target="_blank" rel="noopener noreferrer">Q3'26 指引微调 ↗</a>。但随着程序化 DSP 归因打通及 2027 年 3 月起向 15 个新国家铺开广告层，长期 $90 亿目标空间依然充沛。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：2027 春季 15 国广告套餐扩容与 CPM 定价力</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · SPORTS RIGHTS &amp; FX INFLATION</span>
+ <h4>体育版权竞价通胀与海外汇率折算波动</h4>
+ <p>逾 56% 营收来自北美以外市场使美元走强时产生折算逆风，同时市场担忧直播体育拖累利润率。奈飞严守<strong>“只买事件化赛事、拒签亏损全季常规赛”</strong>纪律（NFL 圣诞双赛 + WWE + 女足世界杯），配合汇率对冲锁住 31.5% 营业利润率底线。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：现金内容投入/摊销比能否严守 ~1.1x 红线</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES FOOTER -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威 SEC 财报、官方公报与行业核验信源" data-i18n-en="Verified SEC Filings, Official Releases &amp; Research Sources">权威 SEC 财报、官方公报与行业核验信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm" target="_blank" rel="noopener noreferrer">
+ <b>Netflix Q3 2026 Shareholder Letter (SEC Ex-99.1) ↗</b>
+ <span>官方披露 Q3 营收 $12.874B、34.6% 创纪录营业利润率、$4.8B 回购及 FY26 $51.1B 营收指引</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm" target="_blank" rel="noopener noreferrer">
+ <b>Netflix FY2025 Form 10-K Annual Report ↗</b>
+ <span>FY2025 营收 $45.183B、营业利润 $13.327B (29.5%)、FCF $9.46B 与约 16,000 名全职员工审计数据</span>
+ </a>
+ <a class="bm-source-item" href="https://about.netflix.com/news/netflix-upfront-2026-get-closer" target="_blank" rel="noopener noreferrer">
+ <b>Netflix Upfront 2026 Official Release ↗</b>
+ <span>含广告套餐全球月活观众突破 2.5 亿（250M+ MAV）、自研 Netflix Ads Suite 与 15 国扩容计划</span>
+ </a>
+ <a class="bm-source-item" href="https://openconnect.netflix.com/" target="_blank" rel="noopener noreferrer">
+ <b>Netflix Open Connect Global CDN Architecture ↗</b>
+ <span>内嵌全球超 1,000 家电信运营商（ISP）网络边缘服务器、承载全球约 15% 下行流量的自研分发底座</span>
+ </a>
+ <a class="bm-source-item" href="https://www.forbes.com/sites/andymeek/2026/04/26/netflixs-new-stock-buyback-is-bigger-than-its-entire-2026-content-budget/" target="_blank" rel="noopener noreferrer">
+ <b>Forbes: Netflix $25B Share Buyback &amp; Capital Discipline ↗</b>
+ <span>果断放弃跟进华纳兄弟探索高溢价竞标、落袋 $2.8B 违约金并新增超大规模股票回购授权纪实</span>
+ </a>
+ <a class="bm-source-item" href="https://thewaltdisneycompany.com/press-releases/the-walt-disney-company-reports-fourth-quarter-and-full-year-earnings-for-fiscal-2025/" target="_blank" rel="noopener noreferrer">
+ <b>Disney FY2025 Earnings &amp; FY26 DTC Margin Benchmark ↗</b>
+ <span>传统传媒龙头流媒体业务（10% DTC SVOD 营业利润率指引）与集团营收规模横向对标信源</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/netflix_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

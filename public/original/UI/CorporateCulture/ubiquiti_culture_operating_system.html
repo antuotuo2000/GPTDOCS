@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="厄比奎蒂 Ubiquiti Inc. (NYSE: UI) 企业文化与组织操作系统图谱：反官僚创始人模式（Founder Mode）拓扑切换器、2×2 文化操作密码本、工程/销售资源杠杆拨盘、三阶段组织演进时间轴、全球科技组织基因象限图与组织熵增压力模拟器。" />
+  <title>厄比奎蒂企业文化与组织操作系统图谱 | 数据中心</title>
+  
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/ubiquiti_culture_operating_system.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">UI</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="https://ir.ui.com/" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="厄比奎蒂企业文化与组织操作系统图谱" data-i18n-en="Ubiquiti Organizational OS & Culture Blueprint">厄比奎蒂企业文化与组织操作系统图谱</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">NYSE: UI</span>
+        <span class="mui-chip mui-chip-violet mono hide-sm">FOUNDER MODE OS · 04/04</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索组织模块或代码…" aria-label="快速跳转组织模块" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="组织操作系统目录与站点导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-violet mono">UI · ORG OS 04/04</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="厄比奎蒂组织操作系统" data-i18n-en="Ubiquiti Organizational OS">厄比奎蒂组织操作系统</div>
+        <p class="sidebar-subtitle" data-i18n-zh="解码 Robert Pera 的“反官僚创始人模式（Founder Mode）”：单一 CODM 神经中枢 × 10.4:1 研发/销管人头比 × 抗组织熵增模拟器" data-i18n-en="Decoding Robert Pera's Anti-Bureaucracy Founder Mode OS: Single CODM × 10.4:1 R&D-to-SG&A Headcount Ratio × Entropy Simulator">解码 Robert Pera 的“反官僚创始人模式（Founder Mode）”：单一 CODM 神经中枢 × 10.4:1 研发/销管人头比 × 抗组织熵增模拟器</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="研发/SG&amp;A 人头比" data-i18n-en="R&amp;D / SG&amp;A Staff Ratio">研发/SG&amp;A 人头比</span>
+            <span class="sidebar-mini-val mono">10.4 : 1 (1321/127)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="总营业费用率 (Q1'27)" data-i18n-en="Total OpEx % (Q1'27)">总营业费用率 (Q1'27)</span>
+            <span class="sidebar-mini-val mono">9.1% (R&amp;D 5.2%+SG&amp;A 4.0%)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="并购净无形资产" data-i18n-en="Net Intangibles">并购净无形资产</span>
+            <span class="sidebar-mini-val mono">$1.67M (近乎零商誉)</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与系统模块">
+
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="UI"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="组织操作系统模块 (C0–C4)" data-i18n-en="OS Blueprint Modules (C0–C4)">组织操作系统模块 (C0–C4)</div>
+        <ul class="mui-nav-list" id="tocList">
+          <li><a class="mui-nav-link active" href="#sec-c0"><span class="nav-idx mono">C0</span><span data-i18n-zh="创始人模式拓扑切换器" data-i18n-en="Founder Mode Topology">创始人模式拓扑切换器</span></a></li>
+          <li><a class="mui-nav-link" href="#sec-c1"><span class="nav-idx mono">C1</span><span data-i18n-zh="2×2 文化密码本与费率拨盘" data-i18n-en="2×2 Codes & OpEx Dial">2×2 文化密码本与费率拨盘</span></a></li>
+          <li><a class="mui-nav-link" href="#sec-c2"><span class="nav-idx mono">C2</span><span data-i18n-zh="三阶段进化推杆与人效画布" data-i18n-en="3-Era Evolution Scrubber">三阶段进化推杆与人效画布</span></a></li>
+          <li><a class="mui-nav-link" href="#sec-c3"><span class="nav-idx mono">C3</span><span data-i18n-zh="全球组织基因象限与阴阳对决" data-i18n-en="Org Genome & Yin-Yang">全球组织基因象限与阴阳对决</span></a></li>
+          <li><a class="mui-nav-link" href="#sec-c4"><span class="nav-idx mono">C4</span><span data-i18n-zh="组织熵增模拟器与六律审计" data-i18n-en="Entropy Sim & 6-Law Audit">组织熵增模拟器与六律审计</span></a></li>
+          <li><a class="mui-nav-link" href="#sec-c5"><span class="nav-idx mono">REF</span><span data-i18n-zh="权威监管与治理信源" data-i18n-en="Verified Governance Sources">权威监管与治理信源</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-card portal-reading-tools">
+        <div class="nav-section-label" style="margin-bottom:2px;" data-i18n-zh="主题与导出工具" data-i18n-en="Theme & Export Tools">主题与导出工具</div>
+        <div class="side-theme-group">
+          <button type="button" id="sideThemeLightBtn" class="active" data-i18n-zh="浅色模式" data-i18n-en="Light">浅色模式</button>
+          <button type="button" id="sideThemeDarkBtn" data-i18n-zh="深色模式" data-i18n-en="Dark">深色模式</button>
+        </div>
+        <div class="side-tool-grid">
+          <button type="button" id="sideExportBtn" data-i18n-zh="下载本页 .html" data-i18n-en="Download HTML">下载本页 .html</button>
+          <button type="button" id="sidePrintBtn" data-i18n-zh="打印 / PDF" data-i18n-en="Print / PDF">打印 / PDF</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="os-workspace main-content">
+      <!-- C0: TOPOLOGY HERO & INTERACTIVE SWITCHER -->
+      <section id="sec-c0" class="os-hero">
+        <div>
+          <div class="os-badges">
+            <span class="mui-chip mui-chip-violet mono">ORGANIZATIONAL OS BLUEPRINT · 04/04</span>
+            <span class="mui-chip mui-chip-primary mono">10.4 : 1 R&amp;D-TO-SG&amp;A HEADCOUNT</span>
+            <span class="mui-chip mui-chip-success mono">Q1 FY27 OP MARGIN: 38.1%</span>
+          </div>
+          <h1 class="os-h1" style="margin-top:12px;">
+            <span data-i18n-zh="厄比奎蒂组织操作系统：" data-i18n-en="Ubiquiti Organizational OS: ">厄比奎蒂组织操作系统：</span>
+            <span class="os-grad" data-i18n-zh="当“苹果工业极客基因”砍掉整支企业级销售大军" data-i18n-en="When Ex-Apple Engineering DNA Deletes the Enterprise Sales Force">当“苹果工业极客基因”砍掉整支企业级销售大军</span>
+          </h1>
+          <p class="os-lead" style="margin-top:10px;">
+            如果说苹果证明了<strong>职能制（Functional Organization）</strong>能在 16.7 万人的超巨型体量下保持软硬一体协同，那么从苹果走出的 <strong>Robert J. Pera</strong> 则在厄比奎蒂验证了一个更激进的组织假说：<strong>如果把企业硬件做得像 iPhone 一样优雅易用、免除一切软件授权寻租，就能彻底砍掉吞噬传统网通厂商 25%–36% 营收的直销官僚层级！</strong>在 1,818 人的精悍躯体中，厄比奎蒂配置了 <strong>1,321 名研发人员</strong>与区区 <strong>127 名 SG&amp;A 人员</strong>（人头比高达 <strong>10.4 : 1</strong>），以 <strong>9.1%</strong> 的超低单季总营业费用率释放出 <strong>38.1%</strong> 的营业利润率 <a class="cite-link" href="https://ir.ui.com/sites/ubiquiti-ir/files/2026-08/ui-06-30-2026-10k-2026.pdf" target="_blank" rel="noopener noreferrer">FY26 10-K ↗</a> <a class="cite-link" href="https://www.stocktitan.net/sec-filings/UI/10-q-ubiquiti-inc-quarterly-earnings-report-252e89d2d26b.html" target="_blank" rel="noopener noreferrer">Q1 FY27 10-Q ↗</a>。
+          </p>
+        </div>
+
+        <div class="topo-shell">
+          <div class="topo-head">
+            <h3 data-i18n-zh="交互式组织拓扑沙盘：切换对比两种截然相反的网通企业内核" data-i18n-en="Interactive Org Topology Switcher: Ubiquiti OS vs Legacy Networking Silos">交互式组织拓扑沙盘：切换对比两种截然相反的网通企业内核</h3>
+            <div class="mui-segmented" id="topoTabs">
+              <button type="button" class="mui-seg-btn active" data-topo="ui" data-i18n-zh="Ubiquiti 极客直管内核 (Founder Mode)" data-i18n-en="Ubiquiti Founder-Architect OS">Ubiquiti 极客直管内核 (Founder Mode)</button>
+              <button type="button" class="mui-seg-btn" data-topo="legacy" data-i18n-zh="传统网通巨头销售/并购孤岛 (Legacy BU)" data-i18n-en="Legacy Sales & M&A Silo Model">传统网通巨头销售/并购孤岛 (Legacy BU)</button>
+            </div>
+          </div>
+
+          <div class="topo-stage">
+            <div class="topo-diagram">
+              <div class="topo-root" id="topoRoot">Robert J. Pera (93% 持股创始人 / 单一 CODM 首席架构师) · 直审原型与合并净利</div>
+              <div class="topo-branches" id="topoBranches">
+                <div class="topo-node"><b>台北硬件射频与制造核 (65% APAC)</b><span>Wi-Fi 7 PRISM™、100G 交换 PCB、铝合金结构与 ODM 直连</span></div>
+                <div class="topo-node"><b>东欧/北欧软件与AI核 (23% EMEA)</b><span>里加/布拉格精锐小队原生构建 UniFi OS、Protect AI 与路由栈</span></div>
+                <div class="topo-node"><b>百万社区 + 44% 直营网店闭环</b><span>UI 论坛零中介反馈直达代码库，仅 127 名 SG&amp;A 支撑全球交付</span></div>
+              </div>
+            </div>
+            <div class="topo-metrics" id="topoMetrics">
+              <div class="topo-mcard"><b class="mono">72.7% vs 7.0%</b><span>研发人员 vs SG&amp;A人员占比</span></div>
+              <div class="topo-mcard"><b class="mono">3.7% (FY26)</b><span>全年销管费用率（同行 25%–36%）</span></div>
+              <div class="topo-mcard"><b class="mono">$1.67M</b><span>净无形资产（零并购拼凑孤岛）</span></div>
+              <div class="topo-mcard"><b class="mono">$2.26M / FTE</b><span>Q1 FY27 年化人均创收</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C1: 2x2 CULTURAL OPERATING CODES & CAPITAL ALLOCATION DIAL -->
+      <section id="sec-c1" class="os-panel mui-paper">
+        <div class="os-panel-head">
+          <div>
+            <span class="os-kicker mono">MODULE C1 · CULTURAL OPERATING CODES &amp; OPEX LEVERAGE DIAL</span>
+            <h2 class="os-h2" data-i18n-zh="C1. 2×2 文化操作系统密码本与研发/销管费率杠杆拨盘" data-i18n-en="C1. 2×2 Cultural Operating Codes Bento & R&D/SG&A Margin Dial">C1. 2×2 文化操作系统密码本与研发/销管费率杠杆拨盘</h2>
+            <p class="os-desc" data-i18n-zh="四条写进公司底层基因的操作代码，以及交互式测算：假如厄比奎蒂退化成传统销售驱动型公司，利润会发生什么？" data-i18n-en="Four foundational operating codes—plus an interactive dial testing what happens if UI bloated SG&A like legacy peers.">四条写进公司底层基因的操作代码，以及交互式测算：假如厄比奎蒂退化成传统销售驱动型公司，利润会发生什么？</p>
+          </div>
+        </div>
+
+        <div class="os-split-75">
+          <div class="bento-2x2">
+            <div class="bento-card">
+              <div>
+                <span class="code mono">CODE 01 · ZERO-VC &amp; ZERO-SBC DISCIPLINE</span>
+                <h4>反硅谷期权分肥：真金白银的股权洁癖</h4>
+                <p>从 $30,000 信用卡创业至今未拿硅谷风投一分钱；Pera 连续 13 年领 $0 工资与 $0 股票奖，独立董事亦领 $0 股票奖 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1511737/000151173725000063/ubnt-20251024.htm" target="_blank" rel="noopener noreferrer">DEF 14A ↗</a>。员工靠高竞争力现金薪酬与扁平授权驱动，而非虚假期权泡沫。</p>
+              </div>
+              <div class="bento-foot mono">验证指标：FY26 全年 SBC 仅 $7.44M (占营收 0.23%)</div>
+            </div>
+
+            <div class="bento-card">
+              <div>
+                <span class="code mono">CODE 02 · GLOBAL TALENT ARBITRAGE PODS</span>
+                <h4>全球极客套利：避开硅谷内卷的精锐驻地</h4>
+                <p>不盲目在旧金山湾区堆砌昂贵冗余人力，而是在台北深耕顶尖射频/硬件供应链人才（65%），在拉脱维亚、捷克、立陶宛与波兰招募硬核算法与系统软件人才（23%），全球中位数年薪 $71,435 却爆发世界级工程产出。</p>
+              </div>
+              <div class="bento-foot mono">验证指标：Q1 FY27 研发费率仅 5.2% 即驱动 +43.2% 企业级高增</div>
+            </div>
+
+            <div class="bento-card">
+              <div>
+                <span class="code mono">CODE 03 · ZERO-INTERMEDIARY FEEDBACK LOOP</span>
+                <h4>砍掉传声筒：社区工单直通核心固件工程师</h4>
+                <p>传统企业的客户痛点要经“销售→售前→产品经理→外包研发”数月传导；在 <a class="cite-link" href="https://community.ui.com/RELEASES" target="_blank" rel="noopener noreferrer">UI Community ↗</a>，数万名实战网络架构师在固件发布数小时内提交抓包日志，研发小队数日内即可推送热修复。</p>
+              </div>
+              <div class="bento-foot mono">验证指标：44% 官网直营结账 + 100+ 分销商零账期拖泥带水</div>
+            </div>
+
+            <div class="bento-card">
+              <div>
+                <span class="code mono">CODE 04 · ANTI-RENT-EXTRACTION CREED</span>
+                <h4>反寻租教条：用免费软件赢下整栋智能建筑</h4>
+                <p>拒绝行业通行的“每台 AP/每个摄像头按年收保护费”潜规则。基础 UniFi Network、Protect、Access 与 InnerSpace 空间规划全部终身免许可费，仅对外部威胁情报（Proofpoint/Cloudflare）收取透明自愿订阅 <a class="cite-link" href="https://help.ui.com/hc/en-us/articles/25930305913751-UniFi-CyberSecure-Enhanced-by-Proofpoint-and-Cloudflare" target="_blank" rel="noopener noreferrer">CyberSecure ↗</a>。</p>
+              </div>
+              <div class="bento-foot mono">验证指标：客户 5年 TCO 降低 60%–75% · 跨栈复购棘轮极强</div>
+            </div>
+          </div>
+
+          <div class="os-subcard mui-paper">
+            <div class="os-subhead">
+              <h3 data-i18n-zh="工程 vs 销售费用率杠杆拨盘" data-i18n-en="R&D vs SG&A Operating Leverage Dial">工程 vs 销售费用率杠杆拨盘</h3>
+              <button type="button" id="dialResetBtn" class="mui-chip mui-chip-primary mono" style="cursor:pointer;">重置 Q1'27 真值</button>
+            </div>
+            <p class="os-caption">以 Q1 FY2027 真实毛利率 <strong>47.3%</strong> 与年化营收 <strong>$4.105B</strong> 为基准，拖动滑块测试不同组织费率下的营业利润与每股收益：</p>
+
+            <div class="dial-row">
+              <div class="dial-lbl"><span>SG&amp;A 销管费用率（UI 真值 4.0% vs 思科 ~25%）</span><b class="mono" id="dialSgaLbl">4.0%</b></div>
+              <input type="range" id="dialSgaSlider" min="3.0" max="32.0" step="0.5" value="4.0" />
+            </div>
+            <div class="dial-row">
+              <div class="dial-lbl"><span>R&amp;D 研发费用率（UI 真值 5.2% vs 行业 ~14%）</span><b class="mono" id="dialRdLbl">5.2%</b></div>
+              <input type="range" id="dialRdSlider" min="4.0" max="18.0" step="0.5" value="5.2" />
+            </div>
+
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:0.71rem;color:var(--text-muted);margin-bottom:4px;">
+                <span>COGS 52.7%</span><span>R&amp;D + SG&amp;A</span><span>营业利润留存</span>
+              </div>
+              <div class="dial-stack-bar">
+                <div class="dial-seg" style="width:52.7%;background:#64748B;"></div>
+                <div class="dial-seg" id="segRd" style="width:5.2%;background:#0073E6;"></div>
+                <div class="dial-seg" id="segSga" style="width:4.0%;background:#D97706;"></div>
+                <div class="dial-seg" id="segOpm" style="width:38.1%;background:#16A34A;"></div>
+              </div>
+            </div>
+
+            <div class="dial-kpis">
+              <div class="dial-kpi"><b class="mono" id="dialOpmOut">38.1%</b><span>测算营业利润率</span></div>
+              <div class="dial-kpi"><b class="mono" id="dialOpIncOut">$1.56B</b><span>年化营业利润额</span></div>
+              <div class="dial-kpi"><b class="mono" id="dialEpsOut">$21.16</b><span>测算年化 GAAP EPS</span></div>
+              <div class="dial-kpi"><b class="mono" id="dialVerdict">极致精益态</b><span>组织费率诊断</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C2: 3-STAGE EVOLUTION SCRUBBER & LEVERAGE CANVAS -->
+      <section id="sec-c2" class="os-panel mui-paper">
+        <div class="os-panel-head">
+          <div>
+            <span class="os-kicker mono">MODULE C2 · THREE-STAGE ORGANIZATIONAL EVOLUTION SCRUBBER</span>
+            <h2 class="os-h2" data-i18n-zh="C2. 三阶段组织操作系统进化推杆（2005–2026+）与人效剪刀差" data-i18n-en="C2. Three-Stage Organizational OS Evolution Scrubber & Productivity Curve">C2. 三阶段组织操作系统进化推杆（2005–2026+）与人效剪刀差</h2>
+          </div>
+          <div class="mui-segmented" id="evoViewTabs">
+            <button type="button" class="mui-seg-btn active" data-eview="revfte" data-i18n-zh="人均创收跃迁 ($M/FTE)" data-i18n-en="Rev/FTE Trajectory">人均创收跃迁 ($M/FTE)</button>
+            <button type="button" class="mui-seg-btn" data-eview="split" data-i18n-zh="职能编制结构 (1,818人)" data-i18n-en="Workforce Function Mix">职能编制结构 (1,818人)</button>
+          </div>
+        </div>
+
+        <div class="os-split-57">
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="stage-tabs" id="stageTabs">
+              <button type="button" class="stage-btn" data-stage="0">Stage I · 2005–2011<br/><span style="font-weight:600;font-size:0.71rem;opacity:0.8;">草根极客突围期</span></button>
+              <button type="button" class="stage-btn" data-stage="1">Stage II · 2012–2023<br/><span style="font-weight:600;font-size:0.71rem;opacity:0.8;">UniFi平台与抗压期</span></button>
+              <button type="button" class="stage-btn active" data-stage="2">Stage III · 2024–2026+<br/><span style="font-weight:600;font-size:0.71rem;opacity:0.8;">全栈园区与边缘AI期</span></button>
+            </div>
+            <div class="stage-dossier">
+              <h4 id="stageTitle">Stage III（2024–2026+）：全栈智能建筑操作系统与十亿美元单季井喷</h4>
+              <p id="stageDesc">组织进入成熟高杠杆收获期：全球研发团队扩展至 1,321 人（总编制 1,818 人），在同一 UniFi OS 控制面下打通网关路由（EFG）、100G 层三交换、Wi-Fi 7 PRISM™、Protect AI Key 视觉推理、Access 门禁与 UNAS 企业存储六大垂直栈，并上线 store.ui.com 直营闭环（占 44%），实现有息银行贷款清零与单季 $10.26亿历史最高营收。</p>
+              <div class="stage-stats" id="stageStats">
+                <div class="stage-stat"><b class="mono">1,818人</b><span>全球精悍总编制</span></div>
+                <div class="stage-stat"><b class="mono">$2.26M</b><span>Q1'27年化人均创收</span></div>
+                <div class="stage-stat"><b class="mono">$845.5M</b><span>净现金及短投储备</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="os-subcard mui-paper">
+            <div class="os-subhead">
+              <h3 data-i18n-zh="组织产出密度与职能配比透视" data-i18n-en="Organizational Output Density & Functional Split">组织产出密度与职能配比透视</h3>
+              <span class="mui-chip mui-chip-success mono">FY17 725人 → FY26 1,818人</span>
+            </div>
+            <div class="os-canvas-box">
+              <canvas id="evoCanvas"></canvas>
+            </div>
+            <p class="os-caption">数据来源：FY2017–FY2026 Form 10-K 员工披露与 Q1 FY2027 Form 10-Q 财务报表；悬停数据点可检视详情。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- C3: GLOBAL ORG GENOME QUADRANT & YIN-YANG CONTRASTS -->
+      <section id="sec-c3" class="os-panel mui-paper">
+        <div class="os-panel-head">
+          <div>
+            <span class="os-kicker mono">MODULE C3 · GLOBAL ORG GENOME MAP &amp; YIN-YANG CONTRASTS</span>
+            <h2 class="os-h2" data-i18n-zh="C3. 全球科技与网通组织基因坐标系（SG&amp;A费率 × 营业利润率）及三组阴阳镜像" data-i18n-en="C3. Global Org Genome Quadrant (SG&A % × Operating Margin) & Yin-Yang Contrasts">C3. 全球科技与网通组织基因坐标系（SG&amp;A费率 × 营业利润率）及三组阴阳镜像</h2>
+          </div>
+        </div>
+
+        <div class="os-split-75">
+          <div class="os-subcard mui-paper">
+            <div class="os-subhead">
+              <h3 data-i18n-zh="组织效率象限图：越靠左上角代表“越低销售税 + 越高营业利润率”" data-i18n-en="Org Efficiency Quadrant: Top-Left = Lowest SG&A Tax & Highest Op Margin">组织效率象限图：越靠左上角代表“越低销售税 + 越高营业利润率”</h3>
+              <span class="mui-chip mui-chip-primary mono">气泡面积 = 人均创收</span>
+            </div>
+            <div class="os-canvas-box">
+              <canvas id="genomeCanvas"></canvas>
+            </div>
+            <p class="os-caption">横轴为 SG&amp;A 占营收比重（左低右高），纵轴为营业利润率；厄比奎蒂（UI）与英伟达（NVDA）、苹果（AAPL）、Arista（ANET）共同占据左上角“极客产品自驱象限”，远离右下角重销售传统网通阵营。</p>
+          </div>
+
+          <div class="yy-list">
+            <div class="yy-card">
+              <b>镜像一：Ubiquiti vs Apple（师出同门 × 百倍体量浓缩版）</b>
+              <p>Pera 将苹果的工业设计审美、软硬闭环与单一损益表职能直管完整移植到商用机房，但砍掉了线下零售店重资产与全球广告投放，以不到苹果 1.1% 的员工人数跑出了更高的营业利润率（Q1'27 38.1% vs ~33.1%）。</p>
+            </div>
+            <div class="yy-card">
+              <b>镜像二：Ubiquiti vs Cisco（零直销免年费 vs 8.24万人销售并购战车）</b>
+              <p>思科拥有 64.5% 高毛利，却被 ~25% SG&amp;A 与庞大并购整合吞噬至 ~24% 营业利润率；厄比奎蒂主动以 47.3% 亲民硬件毛利击穿对手底价，凭 3.7%–4.0% SG&amp;A 反而多赚逾 13 个百分点的营业利润率 <a class="cite-link" href="https://koalagains.com/stocks/NASDAQ/CSCO/business-and-moat" target="_blank" rel="noopener noreferrer">CSCO Moat ↗</a>。</p>
+            </div>
+            <div class="yy-card">
+              <b>镜像三：Ubiquiti vs Arista（百万长尾电商自服务 vs 云巨头白手套定制）</b>
+              <p>同为高人效网通双璧，Arista 靠精锐系统工程师服务 Meta/微软等超大规模 AI 数据中心；厄比奎蒂则靠标准化电商与零门槛 App 服务全球数百万中小企业、学校、酒店与连锁商业园区，两者互不撞车。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="os-table-wrap">
+          <table class="os-table">
+            <thead>
+              <tr>
+                <th>公司</th>
+                <th>核心组织操作系统原型</th>
+                <th>领导层与治理特征</th>
+                <th>研发 / 销管费用比</th>
+                <th>人均创收</th>
+                <th>SBC 稀释度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-ui">
+                <td><strong>Ubiquiti (UI)</strong></td>
+                <td>单一CODM + 跨国极客小队 + 社区零直销</td>
+                <td>Pera 持股 93.0% · 仅2名NEO · $0底薪</td>
+                <td class="mono">6.2% / 3.7% (FY26)</td>
+                <td class="mono">$2.26M (Q1年化)</td>
+                <td class="mono">0.23% (极纯)</td>
+              </tr>
+              <tr>
+                <td><strong>Apple (AAPL)</strong></td>
+                <td>超大型职能制矩阵 + 软硬芯片垂直闭环</td>
+                <td>职业经理人专家团 + DRI直接责任人制</td>
+                <td class="mono">~7.8% / ~6.2%</td>
+                <td class="mono">~$2.87M</td>
+                <td class="mono">~2.8%</td>
+              </tr>
+              <tr>
+                <td><strong>NVIDIA (NVDA)</strong></td>
+                <td>黄仁勋60+直管扁平网络 + 全栈AI计算生态</td>
+                <td>创始人执掌 · 无事业部孤岛 · 74%研发人员</td>
+                <td class="mono">~8.7% / ~1.8%</td>
+                <td class="mono">~$5.14M</td>
+                <td class="mono">~2.4%</td>
+              </tr>
+              <tr>
+                <td><strong>Arista (ANET)</strong></td>
+                <td>EOS单一软件基座 + 无销售佣金配额工程直销</td>
+                <td>Jayshree Ullal + Andy Bechtolsheim 架构师文化</td>
+                <td class="mono">~13.5% / ~7.5%</td>
+                <td class="mono">~$1.91M</td>
+                <td class="mono">~4.5%</td>
+              </tr>
+              <tr>
+                <td><strong>Cisco (CSCO)</strong></td>
+                <td>多BU事业部 + 全球渠道销售铁军 + 并购驱动</td>
+                <td>传统大企业职业董事会 · 82,400名员工</td>
+                <td class="mono">~14.5% / ~25.0%</td>
+                <td class="mono">$0.77M</td>
+                <td class="mono">~4.8%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- C4: ORGANIZATIONAL ENTROPY SIMULATOR & 6-LAW HEALTH AUDIT -->
+      <section id="sec-c4" class="os-panel mui-paper">
+        <div class="os-panel-head">
+          <div>
+            <span class="os-kicker mono">MODULE C4 · ORGANIZATIONAL ENTROPY SIMULATOR &amp; ANTI-ENTROPY CHARTER</span>
+            <h2 class="os-h2" data-i18n-zh="C4. 组织熵增压力模拟器：三大潜在退化因子对利润与股东回报的侵蚀测算" data-i18n-en="C4. Organizational Entropy Simulator & 6-Law Anti-Entropy Charter Audit">C4. 组织熵增压力模拟器：三大潜在退化因子对利润与股东回报的侵蚀测算</h2>
+            <p class="os-desc" data-i18n-zh="模拟当公司攻入财富 500 强园区或未来发生交班时，若引入“驻场销售军团、SKU 冗余失焦、硅谷式高额 SBC 期权”，厄比奎蒂的复利引擎将如何衰减。" data-i18n-en="Simulate how sales-force bloat, SKU complexity drag, and Silicon Valley SBC creep would erode UI's compounding engine.">模拟当公司攻入财富 500 强园区或未来发生交班时，若引入“驻场销售军团、SKU 冗余失焦、硅谷式高额 SBC 期权”，厄比奎蒂的复利引擎将如何衰减。</p>
+          </div>
+          <span class="mui-chip mui-chip-success mono" id="charterBadge">反熵增防线：0 / 6 已核签</span>
+        </div>
+
+        <div class="os-split-57">
+          <div class="os-subcard mui-paper">
+            <div class="os-subhead">
+              <h3 data-i18n-zh="三因子熵增滑块控制台" data-i18n-en="3-Factor Entropy Drift Controls">三因子熵增滑块控制台</h3>
+              <button type="button" id="entResetBtn" class="mui-chip mono" style="cursor:pointer;">恢复零熵增基线</button>
+            </div>
+
+            <div class="dial-row">
+              <div class="dial-lbl"><span>① 大客户驻场销售膨胀 (+SG&amp;A 费率漂移)</span><b class="mono" id="entSalesLbl">+0.0%</b></div>
+              <input type="range" id="entSalesSlider" min="0" max="20" step="0.5" value="0" />
+            </div>
+            <div class="dial-row">
+              <div class="dial-lbl"><span>② SKU 战线过长与品控返修拖累 (-毛利率侵蚀)</span><b class="mono" id="entSkuLbl">-0.0%</b></div>
+              <input type="range" id="entSkuSlider" min="0" max="8" step="0.5" value="0" />
+            </div>
+            <div class="dial-row">
+              <div class="dial-lbl"><span>③ 后创始人时代期权膨胀 (SBC 占营收比)</span><b class="mono" id="entSbcLbl">0.23%</b></div>
+              <input type="range" id="entSbcSlider" min="0.23" max="12.23" step="0.5" value="0.23" />
+            </div>
+
+            <div class="ent-out-grid">
+              <div class="ent-out"><b class="mono" id="entOpmOut">38.1%</b><span>模拟 GAAP 营业利润率</span></div>
+              <div class="ent-out"><b class="mono" id="entRealFcfOut">30.2%</b><span>扣除SBC后真实FCF率</span></div>
+              <div class="ent-out"><b class="mono" id="entHealthScore">96 / 100</b><span>组织反熵增健康度</span></div>
+            </div>
+          </div>
+
+          <div class="os-subcard mui-paper">
+            <div class="os-subhead">
+              <h3 data-i18n-zh="基线创始人模式 vs 模拟熵增漂移对比图" data-i18n-en="Baseline Founder OS vs Simulated Entropy Drift">基线创始人模式 vs 模拟熵增漂移对比图</h3>
+            </div>
+            <div class="os-canvas-box">
+              <canvas id="entropyCanvas"></canvas>
+            </div>
+            <p class="os-caption">左柱为 Q1 FY2027 真实基线（38.1% 营业利润率、30.2% 扣 SBC 真实净现金留存），右柱随上方滑块实时响应熵增损耗。</p>
+          </div>
+        </div>
+
+        <div class="charter-grid" id="charterGrid">
+          <label class="charter-card">
+            <input type="checkbox" data-ochk="c1" />
+            <div><b>宪章一：严禁设立按单提成的传统直销军团</b><span>即便拓展千人园区，也通过联合架构师工具（InnerSpace）、MSP 伙伴与 Enterprise Support 自助订阅赋能，绝不复制思科式层层销售副总裁。</span></div>
+          </label>
+          <label class="charter-card">
+            <input type="checkbox" data-ochk="c2" />
+            <div><b>宪章二：死守单一 UniFi OS 代码库统一性</b><span>任何新硬件品类（NAS、充电桩、传感器）必须原生嵌入同一控制面，禁止收购外部异构软件拼凑报表。</span></div>
+          </label>
+          <label class="charter-card">
+            <input type="checkbox" data-ochk="c3" />
+            <div><b>宪章三：基础控制功能永久免除牌照年费</b><span>守住“买断硬件即享完整本地管理权”的信任契约，仅对持续产生成本的云端存储、第三方威胁库与 24/7 专家坐席收费。</span></div>
+          </label>
+          <label class="charter-card">
+            <input type="checkbox" data-ochk="c4" />
+            <div><b>宪章四：高管与董事会零期权寻租原则</b><span>保持 SBC 占营收低于 1% 的稀有纪律，让自由现金流优先用于资产负债表安全垫、每股分红与低估期缩股回购。</span></div>
+          </label>
+          <label class="charter-card">
+            <input type="checkbox" data-ochk="c5" />
+            <div><b>宪章五：小团队原型直通车与砍冗余会议</b><span>保持研发人员占总编制 70%+，由懂底层射频与内核的技术带头人直接拍板工程取舍。</span></div>
+          </label>
+          <label class="charter-card">
+            <input type="checkbox" data-ochk="c6" />
+            <div><b>宪章六：补强二线架构师与全球渠道合规护栏</b><span>在维持精简编制的同时，强化分销商出口合规筛查与首席财务/运营梯队备份，降低单一创始人关键人脆弱性。</span></div>
+          </label>
+        </div>
+      </section>
+
+      <!-- REF: PRIMARY SOURCES -->
+      <section id="sec-c5" class="os-panel mui-paper">
+        <div class="os-panel-head">
+          <div>
+            <span class="os-kicker mono">PRIMARY GOVERNANCE &amp; ORGANIZATIONAL REFERENCES</span>
+            <h2 class="os-h2" data-i18n-zh="权威一手组织、薪酬与对标信源" data-i18n-en="Verified Primary Governance, Workforce & Peer Sources">权威一手组织、薪酬与对标信源</h2>
+          </div>
+        </div>
+        <div class="os-sources">
+          <a class="os-src" href="https://www.sec.gov/Archives/edgar/data/1511737/000151173725000063/ubnt-20251024.htm" target="_blank" rel="noopener noreferrer">
+            <b>SEC DEF 14A 委托书 · 治理与薪酬结构</b>
+            <span>93.0% 创始人控股权、2名NEO、4人董事会、$0年薪/$0股票奖与 8.83:1 薪酬比原始披露</span>
+          </a>
+          <a class="os-src" href="https://ir.ui.com/sites/ubiquiti-ir/files/2026-08/ui-06-30-2026-10k-2026.pdf" target="_blank" rel="noopener noreferrer">
+            <b>Ubiquiti FY2026 Form 10-K · 人力资本章节</b>
+            <span>1,818 名员工职能拆分（1,321 R&amp;D / 370 Ops / 127 SG&amp;A）及 65%亚太 / 23%EMEA / 12%美洲布局</span>
+          </a>
+          <a class="os-src" href="https://www.stocktitan.net/sec-filings/UI/10-q-ubiquiti-inc-quarterly-earnings-report-252e89d2d26b.html" target="_blank" rel="noopener noreferrer">
+            <b>SEC Q1 FY2027 Form 10-Q · 单一分部附注</b>
+            <span>Note 15 单一可报告经营分部（CODM 按合并净利考核）、38.1% 营业利润率与零银行借款</span>
+          </a>
+          <a class="os-src" href="https://www.sec.gov/Archives/edgar/data/1511737/000151173726000057/exhibit991-063026.htm" target="_blank" rel="noopener noreferrer">
+            <b>SEC FY2026 Form 8-K · 全年费率与SBC明细</b>
+            <span>FY2026 全年 R&amp;D 6.2%、SG&amp;A 3.7%、总股权激励 $7.44M (0.23%) 审计调节表</span>
+          </a>
+          <a class="os-src" href="https://www.trefis.com/data/companies/ANET" target="_blank" rel="noopener noreferrer">
+            <b>Trefis · Arista Networks (ANET) 效率对标</b>
+            <span>云数据中心高速交换龙头毛利率、营业利润率与工程驱动组织模型参照</span>
+          </a>
+          <a class="os-src" href="https://bullfincher.io/companies/cisco-systems/financial-statements" target="_blank" rel="noopener noreferrer">
+            <b>Bullfincher · Cisco Systems (CSCO) FY26 财报对标</b>
+            <span>82,400 名员工、$63.33B 营收 ($0.77M/FTE) 与 ~25% SG&amp;A 传统网通基准线</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  
+<script src="../../_shared/ubiquiti_culture_operating_system.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

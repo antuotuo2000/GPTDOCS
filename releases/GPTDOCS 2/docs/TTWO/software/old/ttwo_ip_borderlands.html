@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《无主之地 Borderlands》（含小缇娜的奇幻之地）IP 深度研究报告 | 2K · Gearbox</title>
+  <meta name="description" content="2K 核心刷宝射击王牌 IP《无主之地 Borderlands》深度研究报告：全系销量突破 1 亿份、$4.6 亿逆周期全资收购 Gearbox Software、无主之地2超 3,100 万份稳居 2K 历史单作销冠、小缇娜 40% 新玩家破圈与无主之地4（MC 82）长尾调优复盘。" />
+  <meta name="keywords" content="Borderlands, 无主之地, Borderlands 2, Borderlands 3, Borderlands 4, Tiny Tina&#x27;s Wonderlands, Gearbox Software, Looter Shooter, 2K Games, 游戏IP分析" />
+  <link rel="stylesheet" href="../../../_shared/2d4ffc526be8470d.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+  <script src="../../_shared/device-mode.js"></script>
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky MUI Frosted Glass AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle navigation sidebar" data-title-zh="展开/收起章节目录" data-title-en="Expand or collapse section navigation">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">BL4</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb navigation">
+          <a class="crumb-link hide-sm" href="../../../index.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="无主之地 Borderlands 系列 IP 深度研报" data-i18n-en="Borderlands Franchise IP Deep Dive">无主之地 Borderlands 系列 IP 深度研报</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="2K · GEARBOX SOFTWARE" data-i18n-en="2K · GEARBOX SOFTWARE">2K · GEARBOX SOFTWARE</span>
+        <span class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="全系破 1.00亿份 · BL2 &gt;3,100万份" data-i18n-en="100M+ Series · BL2 &gt;31M Units">全系破 1.00亿份 · BL2 &gt;3,100万份</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或指标&#8230;" aria-label="快速跳转章节或指标" data-ph-zh="检索章节或指标&#8230;" data-ph-en="Jump to section or KPI&#8230;" data-aria-zh="快速跳转章节或指标" data-aria-en="Quick jump to section or metric" autocomplete="off" />
+          <span class="quick-search-kbd mono">&#8984;K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Centered Shell -->
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Navigation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Section table of contents and portal links">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="IP MONOGRAPH · BORDERLANDS" data-i18n-en="IP MONOGRAPH · BORDERLANDS">IP MONOGRAPH · BORDERLANDS</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="无主之地系列深度专论" data-i18n-en="Borderlands IP Monograph">无主之地系列深度专论</div>
+        <p class="sidebar-subtitle" data-i18n-zh="“刷宝射击（Looter-Shooter）”品类开创者 × 粗黑描边美漫辨识度 × $4.6亿全资收编 Gearbox 产权闭环" data-i18n-en="Looter-Shooter Genre Pioneer × Cel-Shaded Comic Identity × $460M Gearbox Full IP Ownership">“刷宝射击（Looter-Shooter）”品类开创者 × 粗黑描边美漫辨识度 × $4.6亿全资收编 Gearbox 产权闭环</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="系列累计总销量" data-i18n-en="Franchise Units Sold">系列累计总销量</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="1.00 亿+ 份" data-i18n-en="100M+ Units">1.00 亿+ 份</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="2K 历史单作销冠 (BL2)" data-i18n-en="2K #1 Best-Seller (BL2)">2K 历史单作销冠 (BL2)</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="&gt;3,100 万份" data-i18n-en="&gt;31M Units">&gt;3,100 万份</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="Gearbox 全资收购对价" data-i18n-en="2024 Gearbox Buyout">Gearbox 全资收购对价</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="$4.60 亿美元" data-i18n-en="$460M Deal">$4.60 亿美元</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Portal navigation and chapters">
+        <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="TTWO">
+          <div class="co-side-head">
+            <span class="co-side-title mono">TTWO · 05/15</span>
+            <a href="../../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="ttwo_ip_bioshock.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="ttwo_ip_civilization.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (15)" data-i18n-en="All (15)">全部 (15)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="software" data-i18n-zh="软件生态 (14)" data-i18n-en="software (14)">软件生态 (14)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../../Company/take_two_interactive_ttwo_12_gta_vi_rdr_nba_2k_borderlands_civ_zynga_d2c_ai.html" title="Take-Two Interactive (TTWO) 12 大核心业务板块深度研报中枢（GTA VI·RDR·NBA 2K·Borderlands·Civ·Zynga·D2C·AI）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Take-Two Interactive (TTWO) 12 大核心业务板块深度研报中枢（GTA VI·RDR·NBA 2K·Borderlands·Civ·Zynga·D2C·AI）" data-i18n-en="Take-Two Interactive (TTWO) 12 Deep DiveReport (GTA VI·RDR·NBA 2K·Borderlands·Civ·Zynga·D2C·AI)">Take-Two Interactive (TTWO) 12 大核心业务板块深度研报中枢（GTA VI·RDR·NBA 2K·Borderlands·Civ·Zynga·D2C·AI）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="6_grand_theft_auto_vi_gta_6.html" title="侠盗猎车手6 Grand Theft Auto VI (GTA 6) 产品架构与商业价值深度研报"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="侠盗猎车手6 Grand Theft Auto VI (GTA 6) 产品架构与商业价值深度研报" data-i18n-en="6 Grand Theft Auto VI (GTA 6) &amp; Deep DiveReport">侠盗猎车手6 Grand Theft Auto VI (GTA 6) 产品架构与商业价值深度研报</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="take_two_interactive_nasdaq_ttwo.html" title="Take-Two Interactive 公司深度研究报告 (NASDAQ: TTWO)"><span class="co-hub-ticker mono">03</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Take-Two Interactive 公司深度研究报告 (NASDAQ: TTWO)" data-i18n-en="Take-Two Interactive Deep Dive Research Report (NASDAQ: TTWO)">Take-Two Interactive 公司深度研究报告 (NASDAQ: TTWO)</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_bioshock.html" title="《生化奇兵 BioShock》（含沉浸模拟精神续作 Judas）IP 深度研究报告 | 2K"><span class="co-hub-ticker mono">04</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《生化奇兵 BioShock》（含沉浸模拟精神续作 Judas）IP 深度研究报告 | 2K" data-i18n-en="BioShock ( Judas)IP Deep Dive Research Report | 2K">《生化奇兵 BioShock》（含沉浸模拟精神续作 Judas）IP 深度研究报告 | 2K</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="software" href="ttwo_ip_borderlands.html" title="《无主之地 Borderlands》（含小缇娜的奇幻之地）IP 深度研究报告 | 2K · Gearbox"><span class="co-hub-ticker mono">05</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《无主之地 Borderlands》（含小缇娜的奇幻之地）IP 深度研究报告 | 2K · Gearbox" data-i18n-en="Borderlands IP Deep Dive Research Report | 2K · Gearbox">《无主之地 Borderlands》（含小缇娜的奇幻之地）IP 深度研究报告 | 2K · Gearbox</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_civilization.html" title="《席德·梅尔的文明 Sid Meier&#x27;s Civilization》4X 策略 IP 深度研究报告 | 2K · Firaxis"><span class="co-hub-ticker mono">06</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《席德·梅尔的文明 Sid Meier&#x27;s Civilization》4X 策略 IP 深度研究报告 | 2K · Firaxis" data-i18n-en="Sid Meier&#x27;s Civilization4X IP Deep Dive Research Report | 2K · Firaxis">《席德·梅尔的文明 Sid Meier&#x27;s Civilization》4X 策略 IP 深度研究报告 | 2K · Firaxis</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_grand_theft_auto.html" title="《侠盗猎车手 Grand Theft Auto》全系列 IP 深度研究报告 | Rockstar Games"><span class="co-hub-ticker mono">07</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《侠盗猎车手 Grand Theft Auto》全系列 IP 深度研究报告 | Rockstar Games" data-i18n-en="Grand Theft Auto IP Deep Dive Research Report | Rockstar Games">《侠盗猎车手 Grand Theft Auto》全系列 IP 深度研究报告 | Rockstar Games</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_mafia.html" title="《四海兄弟 Mafia》电影化黑帮叙事 IP 深度研究报告 | 2K · Hangar 13"><span class="co-hub-ticker mono">08</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《四海兄弟 Mafia》电影化黑帮叙事 IP 深度研究报告 | 2K · Hangar 13" data-i18n-en="Mafia IP Deep Dive Research Report | 2K · Hangar 13">《四海兄弟 Mafia》电影化黑帮叙事 IP 深度研究报告 | 2K · Hangar 13</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_max_payne_rockstar_classics.html" title="《马克思·佩恩 Max Payne》与 Rockstar 经典动作悬疑 IP 深度研究报告"><span class="co-hub-ticker mono">09</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《马克思·佩恩 Max Payne》与 Rockstar 经典动作悬疑 IP 深度研究报告" data-i18n-en="Max Payne &amp; Rockstar IP Deep Dive Research Report">《马克思·佩恩 Max Payne》与 Rockstar 经典动作悬疑 IP 深度研究报告</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_nba_2k.html" title="《NBA 2K》篮球模拟与虚拟城市生态 IP 深度研究报告 | 2K · Visual Concepts"><span class="co-hub-ticker mono">10</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《NBA 2K》篮球模拟与虚拟城市生态 IP 深度研究报告 | 2K · Visual Concepts" data-i18n-en="NBA 2K &amp; IP Deep Dive Research Report | 2K · Visual Concepts">《NBA 2K》篮球模拟与虚拟城市生态 IP 深度研究报告 | 2K · Visual Concepts</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_red_dead_redemption.html" title="《荒野大镖客 Red Dead Redemption》系列 IP 深度研究报告 | Rockstar Games"><span class="co-hub-ticker mono">11</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《荒野大镖客 Red Dead Redemption》系列 IP 深度研究报告 | Rockstar Games" data-i18n-en="Red Dead Redemption IP Deep Dive Research Report | Rockstar Games">《荒野大镖客 Red Dead Redemption》系列 IP 深度研究报告 | Rockstar Games</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_wwe_pga_2k.html" title="《WWE 2K》与《PGA TOUR 2K》体育竞技矩阵 IP 深度研究报告 | 2K Sports"><span class="co-hub-ticker mono">12</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《WWE 2K》与《PGA TOUR 2K》体育竞技矩阵 IP 深度研究报告 | 2K Sports" data-i18n-en="WWE 2K &amp; PGA TOUR 2K IP Deep Dive Research Report | 2K Sports">《WWE 2K》与《PGA TOUR 2K》体育竞技矩阵 IP 深度研究报告 | 2K Sports</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_xcom.html" title="《幽浮 XCOM》（含漫威暗夜之子）回合制战术策略 IP 深度研究报告 | 2K · Firaxis"><span class="co-hub-ticker mono">13</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="《幽浮 XCOM》（含漫威暗夜之子）回合制战术策略 IP 深度研究报告 | 2K · Firaxis" data-i18n-en="XCOM IP Deep Dive Research Report | 2K · Firaxis">《幽浮 XCOM》（含漫威暗夜之子）回合制战术策略 IP 深度研究报告 | 2K · Firaxis</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_zynga_evergreen_empires_poker.html" title="Zynga 常青中重度与社交棋牌 IP（Empires &amp; Puzzles · Zynga Poker · Words With Friends · CSR）深度研报"><span class="co-hub-ticker mono">14</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Zynga 常青中重度与社交棋牌 IP（Empires &amp; Puzzles · Zynga Poker · Words With Friends · CSR）深度研报" data-i18n-en="Zynga &amp; IP (Empires &amp; Puzzles · Zynga Poker · Words With Friends · CSR)Deep DiveReport">Zynga 常青中重度与社交棋牌 IP（Empires &amp; Puzzles · Zynga Poker · Words With Friends · CSR）深度研报</span><span class="co-hub-meta mono">software/old</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="ttwo_ip_zynga_puzzle_toon_blast.html" title="Zynga 消除与混合休闲王牌 IP（Toon Blast · Match Factory! · Color Block Jam）深度研报"><span class="co-hub-ticker mono">15</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Zynga 消除与混合休闲王牌 IP（Toon Blast · Match Factory! · Color Block Jam）深度研报" data-i18n-en="Zynga &amp; IP (Toon Blast · Match Factory! · Color Block Jam)Deep DiveReport">Zynga 消除与混合休闲王牌 IP（Toon Blast · Match Factory! · Color Block Jam）深度研报</span><span class="co-hub-meta mono">software/old</span></span></a>
+          </div>
+          <script src="../../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+        <div class="nav-divider"></div>
+
+        <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Core Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span data-i18n-zh="IP 核心论点与破亿销量里程碑" data-i18n-en="IP Thesis &amp; 100M-Unit Milestones">IP 核心论点与破亿销量里程碑</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span data-i18n-zh="十亿把程序化枪械与四人合作循环" data-i18n-en="Procedural Loot &amp; 4P Co-Op Loop">十亿把程序化枪械与四人合作循环</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span data-i18n-zh="四大竞争护城河与刷宝射击雷达" data-i18n-en="Four Moats &amp; Looter-Shooter Radar">四大竞争护城河与刷宝射击雷达</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span data-i18n-zh="历代作品与刷宝射击竞品对比表" data-i18n-en="Series Entries &amp; Genre Rivals">历代作品与刷宝射击竞品对比表</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span data-i18n-zh="收购 Gearbox 前后毛利与 DLC 测算" data-i18n-en="Post-Gearbox Royalty &amp; DLC Sim">收购 Gearbox 前后毛利与 DLC 测算</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span data-i18n-zh="画风突变豪赌、抄底并购与 BL4 复盘" data-i18n-en="Art Pivot, $460M Deal &amp; BL4 Cases">画风突变豪赌、抄底并购与 BL4 复盘</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span data-i18n-zh="无主之地4长尾修复与衍生核查清单" data-i18n-en="BL4 Tail &amp; Wonderlands Checklist">无主之地4长尾修复与衍生核查清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span data-i18n-zh="官方数据来源与核验索引" data-i18n-en="Official Sources &amp; Verification">官方数据来源与核验索引</span></a></li>
+        </ul>
+      </nav>
+
+      
+    </aside>
+
+    <!-- Main Analytical Content -->
+    <main class="main-content">
+
+      <!-- 00 执行摘要与核心指标 -->
+      <section id="sec-00" class="mui-paper hero-card section-block">
+        <div class="status-strip">
+          <span class="mui-chip mui-chip-primary" data-i18n-zh="IP 定评：将《暗黑破坏神》词缀刷宝完美嫁接进第一人称射击的亿级原创巨制" data-i18n-en="IP Verdict: 100M-Unit Creator of the Diablo-Meets-FPS &#x27;Looter-Shooter&#x27; Genre">IP 定评：将《暗黑破坏神》词缀刷宝完美嫁接进第一人称射击的亿级原创巨制</span>
+          <span class="mui-chip " data-i18n-zh="里程碑垂直整合：2024 年 $4.60 亿全资收购开发商 Gearbox 收回 100% 产权" data-i18n-en="Vertical Integration: $460M Gearbox Acquisition (2024) Internalized Full IP">里程碑垂直整合：2024 年 $4.60 亿全资收购开发商 Gearbox 收回 100% 产权</span>
+          <span class="mui-chip mui-chip-success mono" data-i18n-zh="最新动态：全系破 1 亿份 · BL4 (2025.09) 获 MC 82 分并持续更新 DLC" data-i18n-en="Latest Status: 100M+ Units · Borderlands 4 (Sep 2025) 82 MC + DLC Cadence">最新动态：全系破 1 亿份 · BL4 (2025.09) 获 MC 82 分并持续更新 DLC</span>
+        </div>
+        <div class="hero-overline mono">
+          <span data-i18n-zh="FRANCHISE MONOGRAPH · 程序化生成十亿把枪械 × 四人联机合作黄金标杆 × 摆脱外部高额研发提点的利润跃迁" data-i18n-en="FRANCHISE MONOGRAPH · Procedural &#x27;Bazillions of Guns&#x27; × Co-Op FPS Gold Standard × Full First-Party Economics">FRANCHISE MONOGRAPH · 程序化生成十亿把枪械 × 四人联机合作黄金标杆 × 摆脱外部高额研发提点的利润跃迁</span>
+        </div>
+        <h1 class="hero-h1" data-i18n-rich="hero_h1">《无主之地 Borderlands》系列 IP 深度分析：<span class="gradient-accent">破亿份刷宝射击鼻祖、4.6亿美元垂直整合并购与长尾调优启示</span></h1>
+        <p class="lead-prose" data-i18n-rich="hero_lead">在 2009 年《无主之地》问世前，射击游戏玩家与 RPG 刷装备玩家分属两个平行世界；德州工作室 Gearbox Software 首创性地将《暗黑破坏神》式的随机词缀枪械掉落、三系天赋树构筑与四人欢乐联机融为一体，缔造了全系列累计销量突破 <strong>1.00 亿份（100M+）</strong>的超级原创 IP <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。其中《无主之地 2》单作狂卖<strong>超 3,100 万份</strong>稳居 2K 厂牌历史最高销量单品，《无主之地 3》售出<strong>超 2,300 万份</strong>创 2K 最快销售纪录，奇幻衍生作《小缇娜的奇幻之地》更成功吸引 <strong>40% 纯新玩家</strong>破圈入坑 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。2024 年 Take-Two 抓住 Embracer 债务重组良机，仅以 <strong>4.60 亿美元</strong>将 Gearbox 及《无主之地》100% 产权全资收入囊中 <a class="cite-link" href="https://finamodel.com/companies/take-two-interactive" target="_blank" rel="noopener noreferrer">Finamodel TTWO &#8599;</a>；2025 年 9 月 12 日《无主之地 4》以 <strong>Metacritic 82 分</strong>（系列第二高分）上市，尽管首发期受 PC 优化与定价竞争影响销量低于管理层激进预期并暂停了 Switch 2 移植版，但依托系列一贯长达 5 年的季票与折扣放量基因，正通过 Bounty Packs 与剧情 DLC 稳步开启长尾修复 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>。</p>
+        <div class="grid-3" style="margin-bottom:18px;">
+          <article class="feature-card">
+            <div class="mui-avatar-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+            <h3 data-i18n-zh="模块化程序生成军火库（八大性格鲜明的武器厂牌）" data-i18n-en="Modular Procedural Arsenal (Distinct Gun Manufacturers)">模块化程序生成军火库（八大性格鲜明的武器厂牌）</h3>
+            <p data-i18n-rich="feat_0">枪管、枪托、瞄具、元素属性与厂商特技（如 Tediore 换弹直接把枪当手雷扔出去引爆、Jakobs 左轮速射、Maliwan 元素切换）排列组合出数以亿计手感迥异的掉落惊喜 <a class="cite-link" href="https://www.tweaktown.com/news/107244/borderlands-4-expected-to-sell-6-million-units-at-launch-gearbox-has-extremely-high-confidence/index.html" target="_blank" rel="noopener noreferrer">TweakTown BL4 &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div class="mui-avatar-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3 data-i18n-zh="无强制每日打卡焦虑的“买断制单机/四人联机”清流" data-i18n-en="No-FOMO Buy-to-Play Co-Op vs. Exhausting Live-Service Rivals">无强制每日打卡焦虑的“买断制单机/四人联机”清流</h3>
+            <p data-i18n-rich="feat_1">当《自杀小队》《圣歌》《星鸣特攻》等强制全程联网服务型射击接连暴死、连《命运 2》都面临老玩家疲劳时，无主之地坚持<strong>可离线单刷、可随时拉好友分屏/联机</strong>的买断+DLC模式，玩家好感度极稳 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div class="mui-avatar-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3 data-i18n-zh="从“外部代理发行”跃升为“100% 第一方全资工作室”" data-i18n-en="Eliminating External Royalty Leakage via $460M Buyout">从“外部代理发行”跃升为“100% 第一方全资工作室”</h3>
+            <p data-i18n-rich="feat_2">过去无主之地虽由 2K 发行，但 Gearbox 作为独立外部研发商拿走极高比例的利润分成；2024 年并购完成后，《无主之地 4》及全套老作目录的每一分增量毛利 100% 留在 Take-Two 体系内 <a class="cite-link" href="https://finamodel.com/companies/take-two-interactive" target="_blank" rel="noopener noreferrer">Finamodel TTWO &#8599;</a>。</p>
+          </article>
+        </div>
+        <div class="grid-4">
+          <div class="mui-paper kpi-card mui-card-interactive">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="无主之地全系列累计销量" data-i18n-en="Franchise Lifetime Units">无主之地全系列累计销量</span>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="破亿俱乐部成员" data-i18n-en="100M+ Unit Club">破亿俱乐部成员</span>
+            </div>
+            <div class="kpi-value mono" data-i18n-zh="1.00亿+ 份" data-i18n-en="100M+ Units">1.00亿+ 份</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_0">2K 厂牌旗下仅次于《NBA 2K》的第二款破亿销量系列，也是全球最畅销的原创合作射击 IP 之一 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </div>
+          <div class="mui-paper kpi-card mui-card-interactive">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="《无主之地 2》单作历史销量" data-i18n-en="Borderlands 2 Lifetime Units">《无主之地 2》单作历史销量</span>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="2K 厂牌历史销冠" data-i18n-en="2K&#x27;s #1 Title Ever">2K 厂牌历史销冠</span>
+            </div>
+            <div class="kpi-value mono" data-i18n-zh="&gt;3,100万份" data-i18n-en="&gt;31M Units">&gt;3,100万份</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_1">凭借传奇反派“帅杰克（Handsome Jack）”与《龙堡之袭》神级 DLC，十余年长卖超 3,100 万份 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </div>
+          <div class="mui-paper kpi-card mui-card-interactive">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="《无主之地 3》与《小缇娜》表现" data-i18n-en="BL3 Units &amp; Wonderlands Newbies">《无主之地 3》与《小缇娜》表现</span>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="2K最快销售 + 40%拉新" data-i18n-en="Fastest Seller + 40% New">2K最快销售 + 40%拉新</span>
+            </div>
+            <div class="kpi-value mono" data-i18n-zh="&gt;23M · 40%新客" data-i18n-en="&gt;23M · 40% New">&gt;23M · 40%新客</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_2">BL3 首五日出货破 500 万份（累计超 2,300 万份）；衍生作《小缇娜的奇幻之地》40% 买家为系列纯新用户 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </div>
+          <div class="mui-paper kpi-card mui-card-interactive">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="《无主之地 4》媒体评分与收购价" data-i18n-en="Borderlands 4 MC &amp; Studio Cost">《无主之地 4》媒体评分与收购价</span>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="系列第2高分 · 抄底并购" data-i18n-en="82 MC · $460M Buyout">系列第2高分 · 抄底并购</span>
+            </div>
+            <div class="kpi-value mono" data-i18n-zh="MC 82 · $460M" data-i18n-en="MC 82 · $460M">MC 82 · $460M</div>
+            <p class="kpi-desc" data-i18n-rich="kpi_3">2025年9月12日发售获 MC 82 分（高于 BL3），正通过性能补丁与剧情资料片释放五周年长尾 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 架构蓝图与核心产品/业务拆解 -->
+      <section id="sec-01" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 01 · LOOTER-SHOOTER GAMEPLAY LOOP &amp; FRANCHISE TREE" data-i18n-en="CHAPTER 01 · LOOTER-SHOOTER GAMEPLAY LOOP &amp; FRANCHISE TREE">CHAPTER 01 · LOOTER-SHOOTER GAMEPLAY LOOP &amp; FRANCHISE TREE</span></div>
+            <h2 class="sec-h2" data-i18n-zh="刷宝射击核心多巴胺闭环与“科幻正传 + 奇幻衍生”双翼架构" data-i18n-en="The Looter-Shooter Dopamine Loop &amp; Sci-Fi / Fantasy Dual-Branch IP">刷宝射击核心多巴胺闭环与“科幻正传 + 奇幻衍生”双翼架构</h2>
+            <p class="sec-sub" data-i18n-zh="拆解为什么无主之地每一代正作都能在发售第 2–6 年再卖出首年两倍以上的拷贝" data-i18n-en="Why Borderlands titles routinely sell 2x–3x their launch-year volume across Years 2 to 6">拆解为什么无主之地每一代正作都能在发售第 2–6 年再卖出首年两倍以上的拷贝</p>
+          </div>
+          <div class="mui-segmented" role="tablist" aria-label="图表视图切换" data-aria-zh="图表视图切换" data-aria-en="Chart view switcher">
+            <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA" data-i18n-zh="视图 A：历代作品累计销量与媒体评分" data-i18n-en="View A: Franchise Entries Units &amp; MC">视图 A：历代作品累计销量与媒体评分</button>
+            <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB" data-i18n-zh="视图 B：系列总销量五年翻倍跨越轨迹" data-i18n-en="View B: Cumulative 100M+ Trajectory">视图 B：系列总销量五年翻倍跨越轨迹</button>
+          </div>
+        </div>
+
+        <div class="arch-blueprint">
+          <div class="arch-hub">
+            <div class="arch-hub-title" data-i18n-zh="Gearbox Software（德州弗里斯科 + 蒙特利尔）· 虚幻引擎 5 定制美漫渲染（Cel-Shaded Hand-Inked Art）" data-i18n-en="Gearbox Software (Frisco TX &amp; Montreal) · Custom Unreal Engine 5 Hand-Inked Comic Shader Pipeline">Gearbox Software（德州弗里斯科 + 蒙特利尔）· 虚幻引擎 5 定制美漫渲染（Cel-Shaded Hand-Inked Art）</div>
+            <div class="arch-hub-sub" data-i18n-zh="支持全平台跨端联机（PS5 · Xbox Series X|S · Steam / Epic）+ 本地双人分屏合作传统" data-i18n-en="Full Cross-Play Across PS5, Xbox Series X|S &amp; PC + Classic Couch Split-Screen Co-Op">支持全平台跨端联机（PS5 · Xbox Series X|S · Steam / Epic）+ 本地双人分屏合作传统</div>
+          </div>
+          <div class="arch-nodes">
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="PILLAR 01 · 构筑深度" data-i18n-en="PILLAR 01 · BUILDCRAFT">PILLAR 01 · 构筑深度</div>
+              <div class="arch-node-name" data-i18n-zh="四大秘藏猎人职业流派" data-i18n-en="4 Vault Hunter Classes">四大秘藏猎人职业流派</div>
+              <div class="arch-node-desc" data-i18n-zh="每代推出 4 名全新主角（魔女 Siren、士兵、刺客/兽王等）及 DLC 额外职业，三分支主动技能搭配传世模组激发多周目重玩。" data-i18n-en="Four distinct classes per entry (including iconic Sirens) with deep 3-branch skill trees encouraging multiple playthroughs.">每代推出 4 名全新主角（魔女 Siren、士兵、刺客/兽王等）及 DLC 额外职业，三分支主动技能搭配传世模组激发多周目重玩。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="PILLAR 02 · 随机惊喜" data-i18n-en="PILLAR 02 · LOOT ENGINE">PILLAR 02 · 随机惊喜</div>
+              <div class="arch-node-name" data-i18n-zh="橙装词缀与授权零件混搭" data-i18n-en="Legendary Loot &amp; Licensed Parts">橙装词缀与授权零件混搭</div>
+              <div class="arch-node-desc" data-i18n-zh="《无主之地 4》进一步引入跨厂商授权枪械零件融合系统与专属固件套装，终局刷 Boss 追求完美词条（God Roll）粘性极高。" data-i18n-en="BL4&#x27;s Licensed Parts system lets single weapons roll traits from multiple manufacturers for deep endgame God-Roll farming.">《无主之地 4》进一步引入跨厂商授权枪械零件融合系统与专属固件套装，终局刷 Boss 追求完美词条（God Roll）粘性极高。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="PILLAR 03 · 衍生子品牌" data-i18n-en="PILLAR 03 · FANTASY SPIN-OFF">PILLAR 03 · 衍生子品牌</div>
+              <div class="arch-node-name" data-i18n-zh="小缇娜的奇幻之地 (Wonderlands)" data-i18n-en="Tiny Tina&#x27;s Wonderlands">小缇娜的奇幻之地 (Wonderlands)</div>
+              <div class="arch-node-desc" data-i18n-zh="起源于 BL2 最受欢迎的桌游跑团 DLC，将枪械替换为法术、十字弩与近战大剑，成功演化为独立百万级奇幻子系列。" data-i18n-en="Born from BL2&#x27;s beloved tabletop RPG DLC, swapping grenades for spells and crossbows to forge a standalone sub-franchise.">起源于 BL2 最受欢迎的桌游跑团 DLC，将枪械替换为法术、十字弩与近战大剑，成功演化为独立百万级奇幻子系列。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="PILLAR 04 · 长尾收割器" data-i18n-en="PILLAR 04 · SEASON PASSES">PILLAR 04 · 长尾收割器</div>
+              <div class="arch-node-name" data-i18n-zh="剧情资料片 + 终极合集包" data-i18n-en="Story DLCs &amp; Pandora&#x27;s Box">剧情资料片 + 终极合集包</div>
+              <div class="arch-node-desc" data-i18n-zh="首年推出 4 部大型战役 DLC 与赏金包维持全价热度，第 2–5 年通过《潘多拉魔盒合集》在 Steam 促销季收割千万级合作玩家。" data-i18n-en="Four major campaign DLCs anchor Year-1 ARPU, while complete bundles like Pandora&#x27;s Box drive multi-year Steam co-op sales.">首年推出 4 部大型战役 DLC 与赏金包维持全价热度，第 2–5 年通过《潘多拉魔盒合集》在 Steam 促销季收割千万级合作玩家。</div>
+            </div>
+          </div>
+          <div class="arch-platform-bar">
+            <div class="arch-platform">
+              <strong data-i18n-zh="《无主之地 4》凯洛斯星球（Kairos）无缝移动革新（2025.09）" data-i18n-en="Borderlands 4 Seamless Kairos World &amp; Movement Overhaul">《无主之地 4》凯洛斯星球（Kairos）无缝移动革新（2025.09）</strong>
+              <span data-i18n-zh="引入抓钩立体机动、二段跳滑翔与随叫随到悬浮载具，叙事调性回归严肃冷峻，克服了三代网红反派过于聒噪的痛点，获 MC 82 好评。" data-i18n-en="Added grappling hooks, glide dashes, seamless zones, and a grounded narrative tone—earning an 82 Metacritic (up from BL3&#x27;s 81).">引入抓钩立体机动、二段跳滑翔与随叫随到悬浮载具，叙事调性回归严肃冷峻，克服了三代网红反派过于聒噪的痛点，获 MC 82 好评。</span>
+            </div>
+            <div class="arch-platform">
+              <strong data-i18n-zh="审慎叫停 Switch 2 勉强移植、集中算力修复 PC/主机体验" data-i18n-en="Pragmatic Pause on Switch 2 Port to Prioritize Core Polish">审慎叫停 Switch 2 勉强移植、集中算力修复 PC/主机体验</strong>
+              <span data-i18n-zh="面对虚幻 5 大地图高负载挑战，管理层果断暂停 Switch 2 版本开发，将 Gearbox 全部工程力量投入核心平台帧率优化与终局 DLC。" data-i18n-en="Paused the Switch 2 port in 2026 to focus engineering entirely on PC/console UE5 performance patches and post-launch Story/Bounty DLCs.">面对虚幻 5 大地图高负载挑战，管理层果断暂停 Switch 2 版本开发，将 Gearbox 全部工程力量投入核心平台帧率优化与终局 DLC。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card" style="margin-bottom:18px;">
+          <div class="chart-toolbar">
+            <div>
+              <div id="ch1ChartTitle" class="chart-title">《无主之地》历代正作及衍生作累计销量（百万份）与 Metacritic 评分</div>
+              <div id="ch1ChartSub" class="chart-caption">《无主之地 2》以超 3,100 万份高居榜首，《无主之地 4》斩获 MC 82 分创十二年来正作最高媒体评价</div>
+            </div>
+            <span class="mui-chip mono" data-i18n-zh="数据源：May 2026 IR Slide 16 &amp; TweakTown" data-i18n-en="Source: May 2026 IR Slide 16 &amp; TweakTown">数据源：May 2026 IR Slide 16 &amp; TweakTown</span>
+          </div>
+          <div id="ch1AxisMeta" class="chart-axis-meta"></div>
+          <div class="canvas-stage">
+            <canvas id="chartCh1"></canvas>
+          </div>
+          <div class="chart-legend">
+            <button type="button" class="legend-pill" data-ch1-series="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1"></span></button>
+            <button type="button" class="legend-pill" data-ch1-series="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2"></span></button>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="matrix-card">
+            <div class="matrix-card-head">
+              <h3 class="matrix-card-title" data-i18n-zh="《无主之地 3》复盘：为什么首发争议不断最终仍狂卖 2,300 万份？" data-i18n-en="The Borderlands 3 Proof Point: How 5M Launch Became &gt;23M Tail">《无主之地 3》复盘：为什么首发争议不断最终仍狂卖 2,300 万份？</h3>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="长尾慢热体质" data-i18n-en="4.6x Long-Tail Multiplier">长尾慢热体质</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mat_body_0">这点对理解《无主之地 4》至关重要：2019 年《BL3》首发时同样遭遇主线剧情被批、PC 半年 Epic 独占及帧率卡顿争议，首周出货 500 万份后一度被空头唱衰；然而依靠四个高质量战役 DLC、跨平台联机补丁及四人开黑刚需，随后五年又足足多卖了 <strong>1,800 万份以上（突破 2,300 万份）</strong> <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>！</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matCollapse0">
+              <span>展开底层机制与数据拆解</span> <span>&#8964;</span>
+            </button>
+            <div class="collapse-panel open" data-i18n-rich="mat_col_0" id="matCollapse0"><strong>合作游戏特殊规律：</strong>一人在打折季买终极版，往往会拉动另外 2–3 名好友跟进凑齐四人车队。</div>
+          </article>
+          <article class="matrix-card">
+            <div class="matrix-card-head">
+              <h3 class="matrix-card-title" data-i18n-zh="《无主之地 4》首发低于预期的客观归因与纠偏路径" data-i18n-en="Borderlands 4 Launch Diagnostics &amp; Gearbox Recovery Plan">《无主之地 4》首发低于预期的客观归因与纠偏路径</h3>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="MC 82 口碑底子扎实" data-i18n-en="82 MC Core Quality">MC 82 口碑底子扎实</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mat_body_1">Zelnick 在财报会坦诚《BL4》首季销量较预期偏软，核心原因有三：一是虚幻 5 初期 PC 着色器编译与硬件门槛偏高；二是 2024 年真人电影口碑不佳产生轻微品牌噪音；三是 2025 秋季大作扎堆。好在游戏核心刷宝与剧情获媒体一致认可（MC 82），随性能补丁与 Bounty Pack 更新落地，长尾基本盘依然稳固 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matCollapse1">
+              <span>展开底层机制与数据拆解</span> <span>&#8964;</span>
+            </button>
+            <div class="collapse-panel" data-i18n-rich="mat_col_1" id="matCollapse1"><strong>并购安全垫：</strong>由于现已全资持有 Gearbox 无需向外分润，BL4 达到相同营业利润所需的盈亏平衡销量比 BL3 时代低约 30%。</div>
+          </article>
+          <article class="matrix-card">
+            <div class="matrix-card-head">
+              <h3 class="matrix-card-title" data-i18n-zh="粗黑轮廓线美漫渲染（Concept Art Shader）：永不过时的美术资产" data-i18n-en="Ageless Hand-Inked Cel-Shading Visual Identity">粗黑轮廓线美漫渲染（Concept Art Shader）：永不过时的美术资产</h3>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="1秒识别视觉锤" data-i18n-en="Instant Brand Recall">1秒识别视觉锤</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mat_body_2">写实风射击游戏往往 4 年后贴图就显粗糙，而《无主之地 2》（2012）的漫画手绘黑边画风时隔十余年依然鲜活讨喜——这不仅大幅降低了老作合集的视觉折旧率，也让周边手办与 Cosplay 具备极高商业辨识度 <a class="cite-link" href="https://www.tweaktown.com/news/107244/borderlands-4-expected-to-sell-6-million-units-at-launch-gearbox-has-extremely-high-confidence/index.html" target="_blank" rel="noopener noreferrer">TweakTown BL4 &#8599;</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matCollapse2">
+              <span>展开底层机制与数据拆解</span> <span>&#8964;</span>
+            </button>
+            <div class="collapse-panel" data-i18n-rich="mat_col_2" id="matCollapse2"><strong>吉祥物符号：</strong>吵闹机器人“小吵闹（Claptrap）”与疯子面具已成为欧美流行文化最具代表性的游戏图腾之一。</div>
+          </article>
+          <article class="matrix-card">
+            <div class="matrix-card-head">
+              <h3 class="matrix-card-title" data-i18n-zh="《小缇娜的奇幻之地》：跑团桌游外衣成功撬动女性与泛 RPG 新受众" data-i18n-en="Tiny Tina&#x27;s Wonderlands: Expanding Demographics by 40%">《小缇娜的奇幻之地》：跑团桌游外衣成功撬动女性与泛 RPG 新受众</h3>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="全资自有第二分支" data-i18n-en="Proven Spin-Off Engine">全资自有第二分支</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="mat_body_3">许多奇幻 RPG 爱好者对废土荒漠枪战无感，却被《龙与地下城》式骰子大地图、捏脸多职业混搭（Multiclass）与独角兽魔法深深吸引——高达 40% 的纯新玩家占比证明 Gearbox 已成功孵化出可与正传交替发售的奇幻副牌 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matCollapse3">
+              <span>展开底层机制与数据拆解</span> <span>&#8964;</span>
+            </button>
+            <div class="collapse-panel" data-i18n-rich="mat_col_3" id="matCollapse3"><strong>双轮节奏潜力：</strong>未来可形成“正传科幻刷宝 → 奇幻之地续作”每 2.5–3 年一作的平滑产能利用。</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 02 四大护城河支柱与五维雷达图 -->
+      <section id="sec-02" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 02 · LOOTER-SHOOTER MOATS &amp; COMPETITIVE RADAR" data-i18n-en="CHAPTER 02 · LOOTER-SHOOTER MOATS &amp; COMPETITIVE RADAR">CHAPTER 02 · LOOTER-SHOOTER MOATS &amp; COMPETITIVE RADAR</span></div>
+            <h2 class="sec-h2" data-i18n-zh="无主之地四大品类护城河与刷宝射击赛道五维雷达" data-i18n-en="Four Borderlands Moats &amp; Looter-Shooter Category Radar">无主之地四大品类护城河与刷宝射击赛道五维雷达</h2>
+            <p class="sec-sub" data-i18n-zh="对比《命运 2（Destiny 2）》与《星际战甲（Warframe）》，看买断制合作刷宝为何长盛不衰" data-i18n-en="Benchmarking Borderlands against Destiny 2 and Warframe across co-op accessibility and catalog tail">对比《命运 2（Destiny 2）》与《星际战甲（Warframe）》，看买断制合作刷宝为何长盛不衰</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击左侧支柱联动右侧五维雷达" data-i18n-en="Click Pillars to Highlight Radar Axes">点击左侧支柱联动右侧五维雷达</span>
+        </div>
+
+        <div class="grid-radar">
+          <div class="pillar-stack">
+            <button type="button" class="pillar-card active" data-pillar="0">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="护城河一：无“退环境删内容（Vaulting）”的永久资产安全感" data-i18n-en="Moat 1: Zero Content Vaulting &amp; Full Offline Ownership">护城河一：无“退环境删内容（Vaulting）”的永久资产安全感</span>
+                <span class="mui-chip mui-chip-primary mono" data-i18n-zh="随时回坑零门槛" data-i18n-en="Zero Server Sunset Risk">随时回坑零门槛</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="《命运 2》因服务型体积膨胀曾删除早期付费战役引发众怒，新手入坑更是云里雾里；而《无主之地》每一代与每一部 DLC 永久完整保留，玩家时隔三年回坑依然无缝畅玩。" data-i18n-en="Unlike live-service rivals that vaulted paid campaigns or shut down servers, every Borderlands campaign and DLC remains permanently playable solo or co-op.">《命运 2》因服务型体积膨胀曾删除早期付费战役引发众怒，新手入坑更是云里雾里；而《无主之地》每一代与每一部 DLC 永久完整保留，玩家时隔三年回坑依然无缝畅玩。</p>
+            </button>
+            <button type="button" class="pillar-card" data-pillar="1">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="护城河二：100% 垂直整合收回 Gearbox 消除版税摩擦" data-i18n-en="Moat 2: 100% Wholly-Owned Studio &amp; IP Economics ($460M)">护城河二：100% 垂直整合收回 Gearbox 消除版税摩擦</span>
+                <span class="mui-chip mui-chip-success mono" data-i18n-zh="毛利率结构性跳升" data-i18n-en="Full Margin Capture">毛利率结构性跳升</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="2024 年并购前，Gearbox 与 2K 需就研发预付款与超额分成反复博弈；如今作为 2K 全资内部工作室，引擎复用、DLC 定价与跨 IP 联动完全一体化。" data-i18n-en="Internalizing Gearbox in 2024 removed external profit-sharing tiers and aligned long-term engine, DLC, and spin-off roadmaps under 2K.">2024 年并购前，Gearbox 与 2K 需就研发预付款与超额分成反复博弈；如今作为 2K 全资内部工作室，引擎复用、DLC 定价与跨 IP 联动完全一体化。</p>
+            </button>
+            <button type="button" class="pillar-card" data-pillar="2">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="护城河三：客厅双人分屏 + 跨平台四人开黑的社交粘性" data-i18n-en="Moat 3: Couch Split-Screen + Full Cross-Play Co-Op">护城河三：客厅双人分屏 + 跨平台四人开黑的社交粘性</span>
+                <span class="mui-chip mui-chip-violet mono" data-i18n-zh="情侣/室友开黑首选" data-i18n-en="Couch + Online Co-Op">情侣/室友开黑首选</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="在当今绝大多数 FPS 砍掉本地分屏的时代，《无主之地》始终坚守主机本地双人同屏合作与 PC/PS5/Xbox 全跨端联机，独占家庭与好友娱乐刚需生态位。" data-i18n-en="Preserving local couch split-screen alongside seamless PS5/Xbox/PC cross-play makes Borderlands the default co-op shooter for couples and friend groups.">在当今绝大多数 FPS 砍掉本地分屏的时代，《无主之地》始终坚守主机本地双人同屏合作与 PC/PS5/Xbox 全跨端联机，独占家庭与好友娱乐刚需生态位。</p>
+            </button>
+            <button type="button" class="pillar-card" data-pillar="3">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="护城河四：疯狂 Build 联动数值爽感（允许玩家合法“破格秒 Boss”）" data-i18n-en="Moat 4: Unbridled PvE Power Fantasy &amp; Broken Build Synergies">护城河四：疯狂 Build 联动数值爽感（允许玩家合法“破格秒 Boss”）</span>
+                <span class="mui-chip mui-chip-warning mono" data-i18n-zh="纯 PvE 无竞技平衡枷锁" data-i18n-en="Pure PvE Power Fantasy">纯 PvE 无竞技平衡枷锁</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="带 PvP 模式的射击游戏为了竞技公平必须不断削弱强力武器；而纯 PvE 的《无主之地》鼓励玩家钻研技能与橙装词条化学反应打出亿万伤害秒杀无敌 Boss，短视频传播力极强。" data-i18n-en="Freed from PvP balancing constraints, Borderlands embraces outrageous skill-tree + legendary weapon synergies that melt raid bosses and go viral on YouTube.">带 PvP 模式的射击游戏为了竞技公平必须不断削弱强力武器；而纯 PvE 的《无主之地》鼓励玩家钻研技能与橙装词条化学反应打出亿万伤害秒杀无敌 Boss，短视频传播力极强。</p>
+            </button>
+          </div>
+
+          <div class="chart-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div class="chart-title" data-i18n-zh="全球主流刷宝射击与动作刷宝 IP 五维能力雷达" data-i18n-en="5-Axis Looter-Shooter &amp; Action-RPG Benchmark Radar">全球主流刷宝射击与动作刷宝 IP 五维能力雷达</div>
+              <div class="chart-caption" data-i18n-zh="对比《无主之地》系列、Bungie《命运 2》与暴雪《暗黑破坏神 4》" data-i18n-en="Comparing Borderlands (2K/Gearbox), Destiny 2 (Sony/Bungie), and Diablo IV (Microsoft/Blizzard)">对比《无主之地》系列、Bungie《命运 2》与暴雪《暗黑破坏神 4》</div>
+            </div>
+            <div class="canvas-stage-tall">
+              <canvas id="chartRadar"></canvas>
+            </div>
+            <div class="chart-legend" style="margin-bottom:10px;">
+              <button type="button" class="legend-pill" data-radar-key="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span data-i18n-zh="无主之地系列 (2K / Gearbox)" data-i18n-en="Borderlands (2K / Gearbox)">无主之地系列 (2K / Gearbox)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span data-i18n-zh="命运 2 Destiny 2 (Sony / Bungie)" data-i18n-en="Destiny 2 (Sony / Bungie)">命运 2 Destiny 2 (Sony / Bungie)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="s3"><span class="legend-dot" style="background:var(--chart-c3);"></span><span data-i18n-zh="暗黑破坏神 4 (暴雪 ARPG标杆)" data-i18n-en="Diablo IV (Blizzard ARPG)">暗黑破坏神 4 (暴雪 ARPG标杆)</span></button>
+            </div>
+            <div id="pillarFocusNote" class="mui-alert"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 标杆同业/竞品矩阵与横向对比 -->
+      <section id="sec-03" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 03 · SERIES PORTFOLIO &amp; LOOTER-SHOOTER PEER MATRIX" data-i18n-en="CHAPTER 03 · SERIES PORTFOLIO &amp; LOOTER-SHOOTER PEER MATRIX">CHAPTER 03 · SERIES PORTFOLIO &amp; LOOTER-SHOOTER PEER MATRIX</span></div>
+            <h2 class="sec-h2" data-i18n-zh="《无主之地》作品矩阵与全球刷宝射击竞品对比表" data-i18n-en="Borderlands Portfolio &amp; Global Looter-Shooter Peer Matrix">《无主之地》作品矩阵与全球刷宝射击竞品对比表</h2>
+            <p class="sec-sub" data-i18n-zh="检索无主之地正传/衍生作与外部服务型刷宝竞品的商业成败对比" data-i18n-en="Compare mainline Borderlands, Tiny Tina&#x27;s Wonderlands, and external looter-shooter peers">检索无主之地正传/衍生作与外部服务型刷宝竞品的商业成败对比</p>
+          </div>
+          <span id="peerCountBadge" class="mui-chip mui-chip-primary mono"></span>
+        </div>
+
+        <div class="datagrid-toolbar">
+          <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索公司、工作室、引擎、商业模式或优劣势关键词&#8230;" aria-label="筛选竞品对比表格" data-ph-zh="搜索公司、工作室、引擎、商业模式或优劣势关键词&#8230;" data-ph-en="Search title, studio, engine, monetization or verdict&#8230;" data-aria-zh="筛选竞品对比表格" data-aria-en="Filter benchmark comparison table" />
+          <div class="mui-segmented" role="group" aria-label="竞品分类筛选" data-aria-zh="竞品分类筛选" data-aria-en="Category filter">
+              <button type="button" class="mui-seg-btn active" data-peer-filter="all" data-i18n-zh="全部作品 (6)" data-i18n-en="All Titles (6)">全部作品 (6)</button>
+              <button type="button" class="mui-seg-btn" data-peer-filter="gearbox" data-i18n-zh="Gearbox 本系矩阵" data-i18n-en="Gearbox Portfolio">Gearbox 本系矩阵</button>
+              <button type="button" class="mui-seg-btn" data-peer-filter="rival" data-i18n-zh="外部刷宝射击竞品" data-i18n-en="External Genre Peers">外部刷宝射击竞品</button>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-bottom:18px;">
+          <table class="mui-table">
+            <thead>
+              <tr>
+                  <th data-i18n-zh="作品名称与年份" data-i18n-en="Title &amp; Year">作品名称与年份</th>
+                  <th data-i18n-zh="核心机制与内容亮点" data-i18n-en="Core Mechanics &amp; Hook">核心机制与内容亮点</th>
+                  <th data-i18n-zh="商业模式与产权归属" data-i18n-en="Model &amp; IP Ownership">商业模式与产权归属</th>
+                  <th data-i18n-zh="累计销量 / 玩家规模" data-i18n-en="Units / Player Scale">累计销量 / 玩家规模</th>
+                  <th data-i18n-zh="Metacritic 与口碑" data-i18n-en="Metacritic &amp; Reception">Metacritic 与口碑</th>
+                  <th data-i18n-zh="商业表现与战略评析" data-i18n-en="Commercial Verdict">商业表现与战略评析</th>
+              </tr>
+            </thead>
+            <tbody id="peerTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="并购对价效率震撼对比：Gearbox ($0.46B) vs 行业同类射击工作室收购案 ($B)" data-i18n-en="M&amp;A Valuation Efficiency: Take-Two&#x27;s $0.46B Gearbox Deal vs. Shooter Studio Comps ($B)">并购对价效率震撼对比：Gearbox ($0.46B) vs 行业同类射击工作室收购案 ($B)</div>
+              <div class="chart-caption" data-i18n-zh="同样拥有破亿销量刷宝射击顶级 IP，Take-Two 支付的收购对价仅为索尼收购 Bungie 的八分之一！" data-i18n-en="Take-Two secured a 100M-unit shooter studio for nearly 1/8th of Sony&#x27;s Bungie price tag">同样拥有破亿销量刷宝射击顶级 IP，Take-Two 支付的收购对价仅为索尼收购 Bungie 的八分之一！</div>
+            </div>
+            <span class="mui-chip mono" data-i18n-zh="资本配置神来之笔" data-i18n-en="M&amp;A Capital Efficiency">资本配置神来之笔</span>
+          </div>
+          <div class="canvas-stage-bars">
+            <canvas id="chartBars"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 商业化变现模型与交互式收益测算器 -->
+      <section id="sec-04" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 04 · INTERNALIZED ROYALTY &amp; LONG-TAIL DLC SIMULATOR" data-i18n-en="CHAPTER 04 · INTERNALIZED ROYALTY &amp; LONG-TAIL DLC SIMULATOR">CHAPTER 04 · INTERNALIZED ROYALTY &amp; LONG-TAIL DLC SIMULATOR</span></div>
+            <h2 class="sec-h2" data-i18n-zh="全资收回 Gearbox 后的利润留存跃迁与《无主之地 4》5 年长尾测算器" data-i18n-en="Post-Gearbox Internalized Margin &amp; Borderlands 4 5-Year Tail Simulator">全资收回 Gearbox 后的利润留存跃迁与《无主之地 4》5 年长尾测算器</h2>
+            <p class="sec-sub" data-i18n-zh="量化对比“旧版外部研发分成制（2K 需分走大笔利润给独立 Gearbox）”与“新版 100% 全资自研 + 季票长尾”的现金差额" data-i18n-en="Compare Take-Two&#x27;s net retained cash on Borderlands 4 + DLCs under 100% Gearbox ownership vs. legacy external royalty splits">量化对比“旧版外部研发分成制（2K 需分走大笔利润给独立 Gearbox）”与“新版 100% 全资自研 + 季票长尾”的现金差额</p>
+          </div>
+          <span class="mui-chip mui-chip-success mono" data-i18n-zh="垂直整合毛利增厚" data-i18n-en="Vertical Integration Lift">垂直整合毛利增厚</span>
+        </div>
+
+        <div class="grid-2" style="margin-bottom:18px;">
+          <div class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="为什么首发慢一点也不怕？省下 25%–35% 外部研发商利润提成" data-i18n-en="Eliminating the 25%–35% External Developer Royalty Split">为什么首发慢一点也不怕？省下 25%–35% 外部研发商利润提成</h3>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="单份净留存大幅提升" data-i18n-en="Higher Per-Unit Margin">单份净留存大幅提升</span>
+            </div>
+            <p data-i18n-rich="econ_0">在《无主之地 2 / 3》时代，由于 Gearbox 是外部独立公司，一旦游戏收回宣发费，Gearbox 便按高比例阶梯提成拿走大头超额版税；2024 年并表后，<strong>无论是《无主之地 4》后续 5 年长尾卖出的每一份拷贝、每一张豪华版季票，还是《BL2/BL3》老合集销量，100% 营业利润全部归属 Take-Two 股东</strong> <a class="cite-link" href="https://finamodel.com/companies/take-two-interactive" target="_blank" rel="noopener noreferrer">Finamodel TTWO &#8599;</a>。</p>
+          </div>
+          <div class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="高客单价豪华版（$99.99 / $129.99）与终局 DLC 粘性" data-i18n-en="Super Deluxe ($129.99) &amp; Multi-Year Season Pass Attach">高客单价豪华版（$99.99 / $129.99）与终局 DLC 粘性</h3>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="核心铁粉高 ARPU" data-i18n-en="High Deluxe Mix">核心铁粉高 ARPU</span>
+            </div>
+            <p data-i18n-rich="econ_1">无主之地核心玩家极度看重后续新秘藏猎人职业与等级上限解锁，首发豪华版/超级豪华版（含 Bounty Pack Bundle 与 Vault Hunter Pack）购买比例远高于普通单机；而第 2–5 年将全部 DLC 打包进“终极版”在 Steam 夏促/冬促五折销售，则是经《BL2》《BL3》两次验证的千万级放量密码 <a class="cite-link" href="https://gamesbeat.com/take-two-reports-bookings-for-fiscal-q2-of-1-6b-down-18-and-below-expectations/" target="_blank" rel="noopener noreferrer">GamesBeat Q2 &#8599;</a>。</p>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="《无主之地 3》历史真实 5 年销量放量曲线（百万份）对《BL4》的长尾指引" data-i18n-en="Borderlands 3 Verified 5-Year Unit Curve (Millions) &amp; Cumulative DLC Attach (%)">《无主之地 3》历史真实 5 年销量放量曲线（百万份）对《BL4》的长尾指引</div>
+              <div class="chart-caption" data-i18n-zh="首周 500 万份仅占全周期 21%！第 2–5 年伴随 Steam 解禁、季票完结与折扣合集再卖 1,850 万份" data-i18n-en="Launch week&#x27;s 5M units were just 21% of lifetime volume—Years 2 to 5 added &gt;18M more copies">首周 500 万份仅占全周期 21%！第 2–5 年伴随 Steam 解禁、季票完结与折扣合集再卖 1,850 万份</div>
+            </div>
+            <span class="mui-chip mono" data-i18n-zh="BL3 历史实证曲线" data-i18n-en="BL3 Historical Curve">BL3 历史实证曲线</span>
+          </div>
+          <div class="chart-axis-meta">
+            <span style="color:var(--chart-c1);" data-i18n-zh="■ 左轴：BL3 累计销量爬坡 (百万份)" data-i18n-en="■ Left Axis: Cumulative BL3 Units (M)">■ 左轴：BL3 累计销量爬坡 (百万份)</span>
+            <span style="color:var(--chart-c2);" data-i18n-zh="● 右轴：含季票/终极版买家占比 (%)" data-i18n-en="● Right Axis: DLC / Ultimate Bundle Attach (%)">● 右轴：含季票/终极版买家占比 (%)</span>
+          </div>
+          <div class="canvas-stage">
+            <canvas id="chartEps"></canvas>
+          </div>
+          <div class="chart-legend">
+            <button type="button" class="legend-pill" data-eps-series="eps"><span class="legend-dot" style="background:var(--chart-c1);"></span><span data-i18n-zh="无主之地3 累计销量爬坡 (左轴 · 百万份)" data-i18n-en="Borderlands 3 Cumulative Units (Left · M)">无主之地3 累计销量爬坡 (左轴 · 百万份)</span></button>
+            <button type="button" class="legend-pill" data-eps-series="oci"><span class="legend-dot" style="background:var(--chart-c2);"></span><span data-i18n-zh="季票与终极合集渗透率 (右轴 · %)" data-i18n-en="DLC / Complete Edition Attach Rate (Right · %)">季票与终极合集渗透率 (右轴 · %)</span></button>
+          </div>
+        </div>
+
+        <!-- Interactive Simulator -->
+        <div class="simulator-grid">
+          <div class="sim-controls">
+            <div>
+              <div class="chart-title" data-i18n-zh="《无主之地 4》5 年长尾销量与全资并购净现金增厚测算器" data-i18n-en="Borderlands 4 5-Year Long-Tail &amp; Gearbox Buyout Net Cash Simulator">《无主之地 4》5 年长尾销量与全资并购净现金增厚测算器</div>
+              <div class="chart-caption" data-i18n-zh="调节 BL4 五年总销量、混合本体均价、季票/DLC 人均附加收入及是否对比旧版外部研发分成基准" data-i18n-en="Adjust 5-year BL4 units, blended base ASP, average DLC/Deluxe spend per buyer, and catalog bundle halo">调节 BL4 五年总销量、混合本体均价、季票/DLC 人均附加收入及是否对比旧版外部研发分成基准</div>
+            </div>
+
+            <div class="preset-stack">
+              <button type="button" class="preset-btn active" data-preset="base">
+                <span data-i18n-zh="温和修复基准情景（5年累计 1,400万份 · 低于BL3但全资高毛利）" data-i18n-en="Base Recovery: 14.0M 5-Yr Units · Patches + Steady Steam Tail">温和修复基准情景（5年累计 1,400万份 · 低于BL3但全资高毛利）</span>
+                <span class="mono" style="font-size:0.74rem;opacity:0.85;" data-i18n-zh="14.0M份 · 轻松收回并购款" data-i18n-en="14.0M · Full Payback">14.0M份 · 轻松收回并购款</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="bull">
+                <span data-i18n-zh="复刻 BL3 长尾乐观情景（5年累计 2,000万份 + 强力新职业DLC）" data-i18n-en="Bull Case: 20.0M 5-Yr Units · Strong Vault Hunter DLC Surge">复刻 BL3 长尾乐观情景（5年累计 2,000万份 + 强力新职业DLC）</span>
+                <span class="mono" style="font-size:0.74rem;opacity:0.85;" data-i18n-zh="20.0M份 · 超高利润" data-i18n-en="20.0M · High Margin">20.0M份 · 超高利润</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="bear">
+                <span data-i18n-zh="首发承压保守情景（5年仅 950万份 · 深度打折走量）" data-i18n-en="Conservative Case: 9.5M 5-Yr Units · Heavy Discounting">首发承压保守情景（5年仅 950万份 · 深度打折走量）</span>
+                <span class="mono" style="font-size:0.74rem;opacity:0.85;" data-i18n-zh="9.5M份 · 仍显著盈利" data-i18n-en="9.5M · Still Profitable">9.5M份 · 仍显著盈利</span>
+              </button>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="BL4 发售 5 年累计总销量 (百万份)" data-i18n-en="BL4 5-Year Cumulative Units (Millions)">BL4 发售 5 年累计总销量 (百万份)</span>
+                <span id="simVal1Label" class="slider-val mono"></span>
+              </div>
+              <input type="range" id="simSlider1" class="mui-slider" min="6.0" max="24.0" step="0.5" value="14.0" aria-label="BL4 发售 5 年累计总销量 (百万份)" data-aria-zh="BL4 发售 5 年累计总销量 (百万份)" data-aria-en="BL4 5-Year Cumulative Units (Millions)" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="5 年全周期本体混合成交均价 ASP ($)" data-i18n-en="5-Year Blended Base Game ASP ($)">5 年全周期本体混合成交均价 ASP ($)</span>
+                <span id="simVal2Label" class="slider-val mono"></span>
+              </div>
+              <input type="range" id="simSlider2" class="mui-slider" min="28" max="56" step="1" value="42" aria-label="5 年全周期本体混合成交均价 ASP ($)" data-aria-zh="5 年全周期本体混合成交均价 ASP ($)" data-aria-en="5-Year Blended Base Game ASP ($)" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="人均豪华版 / Bounty &amp; 剧情 DLC 附加消费 ($)" data-i18n-en="Avg Deluxe / DLC Spend per Buyer ($)">人均豪华版 / Bounty &amp; 剧情 DLC 附加消费 ($)</span>
+                <span id="simVal3Label" class="slider-val mono"></span>
+              </div>
+              <input type="range" id="simSlider3" class="mui-slider" min="6" max="30" step="1" value="16" aria-label="人均豪华版 / Bounty &amp; 剧情 DLC 附加消费 ($)" data-aria-zh="人均豪华版 / Bounty &amp; 剧情 DLC 附加消费 ($)" data-aria-en="Avg Deluxe / DLC Spend per Buyer ($)" />
+            </div>
+
+            <label class="mui-switch-row" for="simToggle">
+              <span style="font-size:0.8rem;font-weight:700;color:var(--mui-success-text);" data-i18n-zh="计入全系老作（BL2/BL3/小缇娜）5年全资无分成净回流 (+$135M)" data-i18n-en="Include 100% Owned Back-Catalog (BL2/BL3/Wonderlands) 5-Yr Cash (+$135M)">计入全系老作（BL2/BL3/小缇娜）5年全资无分成净回流 (+$135M)</span>
+              <input type="checkbox" id="simToggle" checked />
+            </label>
+          </div>
+
+          <div class="sim-output-panel">
+            <div>
+              <div class="chart-title" data-i18n-zh="5 年累计 Take-Two 净留存现金对比：100% 全资 Gearbox vs 旧版外部提成制" data-i18n-en="5-Year Cumulative Net Retained Cash: Wholly-Owned Gearbox vs. Legacy Split">5 年累计 Take-Two 净留存现金对比：100% 全资 Gearbox vs 旧版外部提成制</div>
+              <div class="chart-caption" data-i18n-zh="实线为全资持有 Gearbox 下 Take-Two 净到手现金，虚线为若未收购需向外分走 ~30% 版税的旧制曲线" data-i18n-en="Solid curve shows 100% owned net cash vs. dashed counterfactual paying ~30% external backend royalties">实线为全资持有 Gearbox 下 Take-Two 净到手现金，虚线为若未收购需向外分走 ~30% 版税的旧制曲线</div>
+            </div>
+            <div class="sim-readouts">
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="BL4 5 年累计毛预订额" data-i18n-en="5-Yr BL4 Gross Bookings">BL4 5 年累计毛预订额</div>
+                <div id="simOut1" class="sim-stat-num mono"></div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="全资体制下 Take-Two 净留存现金" data-i18n-en="100% Owned Net Publisher Cash">全资体制下 Take-Two 净留存现金</div>
+                <div id="simOut2" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);"></div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="因收购 Gearbox 省下的外部版税分润" data-i18n-en="Saved External Royalty Leakage">因收购 Gearbox 省下的外部版税分润</div>
+                <div id="simOut3" class="sim-stat-num mono"></div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="对 $460M Gearbox 并购价覆盖率" data-i18n-en="Coverage of $460M Gearbox Price">对 $460M Gearbox 并购价覆盖率</div>
+                <div id="simOut4" class="sim-stat-num mono" style="color:var(--mui-success-text);"></div>
+              </div>
+            </div>
+            <div class="canvas-stage-sim">
+              <canvas id="chartSim"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 历史演进三部曲与里程碑战役复盘 -->
+      <section id="sec-05" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 05 · FRANCHISE HISTORY &amp; STRATEGIC TURNING POINTS" data-i18n-en="CHAPTER 05 · FRANCHISE HISTORY &amp; STRATEGIC TURNING POINTS">CHAPTER 05 · FRANCHISE HISTORY &amp; STRATEGIC TURNING POINTS</span></div>
+            <h2 class="sec-h2" data-i18n-zh="从发售前半年推翻重画到破亿传奇的三次命运豪赌" data-i18n-en="Three Defining Gambles Behind Borderlands&#x27; 100M-Unit Rise">从发售前半年推翻重画到破亿传奇的三次命运豪赌</h2>
+            <p class="sec-sub" data-i18n-zh="回顾美术革命、神级反派塑造与 2024 产权回归之路" data-i18n-en="From a risky eleventh-hour art overhaul in 2009 to full Take-Two ownership">回顾美术革命、神级反派塑造与 2024 产权回归之路</p>
+          </div>
+          <span class="mui-chip mono" data-i18n-zh="2009 – 2026 演进史" data-i18n-en="2009 – 2026 Chronicle">2009 – 2026 演进史</span>
+        </div>
+
+        <div class="mui-timeline">
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;color:var(--text-primary);" data-i18n-zh="距发售仅数月推翻灰暗写实画风，全员改绘粗黑美漫一战成名" data-i18n-en="Scrapping Brown-Gray Realism Months Before Launch to Create an Icon">距发售仅数月推翻灰暗写实画风，全员改绘粗黑美漫一战成名</strong>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="第一幕 · 2007 – 2011" data-i18n-en="ACT I · 2007 – 2011">第一幕 · 2007 – 2011</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="tl_0">初代早期演示原本是平庸灰暗的写实废土风，与当年《辐射 3》《狂怒》严重撞车；艺术团队孤注一掷在最后关头将全作重绘为粗黑描边手绘漫画风，2009 年上市即凭惊艳辨识度与刷枪快感逆袭破千万份 <a class="cite-link" href="https://www.tweaktown.com/news/80936/take-two-reveals-franchise-sales-for-bioshock-mafia-gta-nba-2k/index.html" target="_blank" rel="noopener noreferrer">TweakTown Sales &#8599;</a>。</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;color:var(--text-primary);" data-i18n-zh="《无主之地 2》3,100 万份登顶 2K 销冠，《BL3》与《小缇娜》夯实双翼" data-i18n-en="Borderlands 2 Tops 31M Units While BL3 &amp; Wonderlands Scale the Franchise">《无主之地 2》3,100 万份登顶 2K 销冠，《BL3》与《小缇娜》夯实双翼</strong>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="第二幕 · 2012 – 2022" data-i18n-en="ACT II · 2012 – 2022">第二幕 · 2012 – 2022</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="tl_1">2012 年《BL2》塑造出游戏史最迷人反派之一帅杰克，其第四弹 DLC《小缇娜强袭龙堡》因过于好玩在十年后独立孵化为 2022 年新作《奇幻之地》，携手《BL3》（>2,300万份）将系列推向亿级门槛 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;color:var(--text-primary);" data-i18n-zh="Take-Two 斥资 $4.6 亿完成全资统合，《无主之地 4》开启 UE5 新周期" data-i18n-en="$460M Take-Two Acquisition &amp; Borderlands 4&#x27;s Multi-Year Roadmap">Take-Two 斥资 $4.6 亿完成全资统合，《无主之地 4》开启 UE5 新周期</strong>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="第三幕 · 2024 – 2026+" data-i18n-en="ACT III · 2024 – 2026+">第三幕 · 2024 – 2026+</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="tl_2">结束长达十五年的“2K 出钱发行、外部 Gearbox 研发”分离架构，2024 年正式并入 2K 自研体系；全系列突破 1.00 亿份，并于 2025 年 9 月交付 MC 82 分的《无主之地 4》持续深耕终局内容 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/946581/000162828026072175/ttwo2q27earningsrelease.htm" target="_blank" rel="noopener noreferrer">Q2 FY27 8-K &#8599;</a>。</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="经典案例一：一部 DLC（《龙堡之袭》）如何裂变出一个百万级新 IP" data-i18n-en="Case 1: Spinning Off a Single DLC into Tiny Tina&#x27;s Wonderlands">经典案例一：一部 DLC（《龙堡之袭》）如何裂变出一个百万级新 IP</h3>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="内部微创新孵化范本" data-i18n-en="Organic IP Incubation">内部微创新孵化范本</span>
+            </div>
+            <p data-i18n-rich="case_0">2013 年设计师用业余创意把悲伤的小女孩小缇娜设计为地下城主，用跑团游戏消解罗兰之死的哀伤；玩家反响空前热烈，2K 顺势将其独立成篇，首作即斩获 40% 系列纯新用户 <a class="cite-link" href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer">May 2026 IR Deck &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="经典案例二：2021 不跟风追高、2024 逆周期 $4.6 亿精准拿下 Gearbox" data-i18n-en="Case 2: Passing on 2021&#x27;s $1.3B Bubble to Buy at $460M in 2024">经典案例二：2021 不跟风追高、2024 逆周期 $4.6 亿精准拿下 Gearbox</h3>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="Zelnick 估值铁律" data-i18n-en="Valuation Discipline">Zelnick 估值铁律</span>
+            </div>
+            <p data-i18n-rich="case_1">2021 年 Gearbox 寻求出售时要价高达 $13 亿，Take-Two 拒绝当冤大头只保留发行权；三年后买家 Embracer 资金链断裂，Take-Two 从容以 $4.6 亿（且剥离边缘亏损工作室）捡漏核心资产 <a class="cite-link" href="https://finamodel.com/companies/take-two-interactive" target="_blank" rel="noopener noreferrer">Finamodel TTWO &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="教训复盘三：2024《无主之地》真人电影失利对跨媒介授权的警示" data-i18n-en="Case 3: Lessons from the 2024 Lionsgate Live-Action Film Miss">教训复盘三：2024《无主之地》真人电影失利对跨媒介授权的警示</h3>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="狮门承担制片风险" data-i18n-en="Zero Balance-Sheet Loss">狮门承担制片风险</span>
+            </div>
+            <p data-i18n-rich="case_2">狮门影业出品的 2024 真人电影因选角年龄违和与 PG-13 删减丧失原作狂野灵魂而票房扑街；万幸 Take-Two 仅收取保底授权费未投制片本金，无财务损失，但也印证了 IP 影视化必须严控剧本主导权 <a class="cite-link" href="https://crackthemarket.substack.com/p/take-two-gta-vi-is-a-platform-not" target="_blank" rel="noopener noreferrer">Crack The Market &#8599;</a>。</p>
+          </article>
+          <article class="feature-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+              <h3 data-i18n-zh="技术复盘四：《无主之地 4》叫停 Switch 2 勉强移植的果断止损" data-i18n-en="Case 4: Pausing BL4 Switch 2 Port to Avoid Sub-Par Launch">技术复盘四：《无主之地 4》叫停 Switch 2 勉强移植的果断止损</h3>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="拒绝重演低帧灾难" data-i18n-en="Quality Over Rush">拒绝重演低帧灾难</span>
+            </div>
+            <p data-i18n-rich="case_3">吸取早年《无主之地 2 PSV 版》与部分虚幻 5 掌机强行缩水招致差评的教训，2K 选择暂停 BL4 Switch 2 移植，优先把 PC 着色器卡顿修好并推出新秘藏猎人 DLC 激活 Steam 好评率 <a class="cite-link" href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer">Horizons Capitals &#8599;</a>。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 06 交互式跟踪与风险核查清单 -->
+      <section id="sec-06" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 06 · BORDERLANDS 4 RECOVERY &amp; SUB-BRAND CHECKLIST" data-i18n-en="CHAPTER 06 · BORDERLANDS 4 RECOVERY &amp; SUB-BRAND CHECKLIST">CHAPTER 06 · BORDERLANDS 4 RECOVERY &amp; SUB-BRAND CHECKLIST</span></div>
+            <h2 class="sec-h2" data-i18n-zh="《无主之地》系列长尾修复与产品线核查清单" data-i18n-en="Borderlands 4 Long-Tail &amp; Gearbox Execution Checklist">《无主之地》系列长尾修复与产品线核查清单</h2>
+            <p class="sec-sub" data-i18n-zh="跟踪 BL4 后续 Steam 评价爬坡、季票转化率与 Gearbox 双产品线排期的 6 项指标" data-i18n-en="6 operational checkpoints tracking BL4&#x27;s post-launch curve and Gearbox studio output">跟踪 BL4 后续 Steam 评价爬坡、季票转化率与 Gearbox 双产品线排期的 6 项指标</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono"></span>
+            <button type="button" id="checkAllBtn" class="mui-btn" data-i18n-zh="全部勾选" data-i18n-en="Check All">全部勾选</button>
+            <button type="button" id="resetCheckBtn" class="mui-btn" data-i18n-zh="恢复基准" data-i18n-en="Reset">恢复基准</button>
+          </div>
+        </div>
+
+        <div class="progress-track">
+          <div id="checklistProgressBar" class="progress-fill"></div>
+        </div>
+
+        <div id="checklistContainer" class="checklist-grid"></div>
+      </section>
+
+      <!-- 07 权威数据来源与财报核验索引 -->
+      <section id="sec-07" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono"><span data-i18n-zh="CHAPTER 07 · PRIMARY FILINGS &amp; VERIFIED SOURCES" data-i18n-en="CHAPTER 07 · PRIMARY FILINGS &amp; VERIFIED SOURCES">CHAPTER 07 · PRIMARY FILINGS &amp; VERIFIED SOURCES</span></div>
+            <h2 class="sec-h2" data-i18n-zh="权威数据来源与 SEC 财报核验索引" data-i18n-en="Primary Filings &amp; Verified Sources Index">权威数据来源与 SEC 财报核验索引</h2>
+            <p class="sec-sub" data-i18n-zh="本报告全部销量、预订额、经常性消费（RCS）占比、评分与管线节点均源自 SEC 披露文件及官方投资者材料" data-i18n-en="All unit sales, Net Bookings, Recurrent Consumer Spending (RCS) ratios, review scores, and slate dates are grounded in SEC filings and official disclosures">本报告全部销量、预订额、经常性消费（RCS）占比、评分与管线节点均源自 SEC 披露文件及官方投资者材料</p>
+          </div>
+          <span class="mui-chip mui-chip-success mono">12 Verified URLs</span>
+        </div>
+
+        <div class="mui-alert mui-alert-success">
+          <div>
+            <strong data-i18n-zh="研究方法与范围声明：" data-i18n-en="Methodology &amp; Scope Note: ">研究方法与范围声明：</strong>
+            <span data-i18n-zh="本页面严格聚焦《Borderlands 无主之地》与衍生子品牌《小缇娜的奇幻之地》的产品设计、刷宝循环、Gearbox 垂直整合经济学与长尾销量特征。" data-i18n-en="This monograph strictly analyzes the Borderlands and Tiny Tina&#x27;s Wonderlands franchises—covering procedural loot systems, Gearbox buyout economics, and multi-year DLC curves.">本页面严格聚焦《Borderlands 无主之地》与衍生子品牌《小缇娜的奇幻之地》的产品设计、刷宝循环、Gearbox 垂直整合经济学与长尾销量特征。</span>
+          </div>
+        </div>
+
+        <ul class="sources-list">
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[01]</span>
+            <span><a href="https://ir.take2games.com/static-files/0e369b39-2afc-4a88-b917-7799cd6ac566" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Take-Two 2026年5月官方投资者演示文稿（Slide 16：无主之地与小缇娜专章）" data-i18n-en="Take-Two May 2026 Investor Presentation (Slide 16)">Take-Two 2026年5月官方投资者演示文稿（Slide 16：无主之地与小缇娜专章）</strong> &#8599;</a> — <span data-i18n-zh="官方核验全系 100M+ 销量、BL2 &gt;3,100万份（2K销冠）、BL3 最快销售、BL4 MC 82 及小缇娜 40% 新玩家" data-i18n-en="100M+ series units, BL2 &gt;31M, BL3 fastest seller, BL4 82 MC &amp; Wonderlands 40% new players">官方核验全系 100M+ 销量、BL2 &gt;3,100万份（2K销冠）、BL3 最快销售、BL4 MC 82 及小缇娜 40% 新玩家</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[02]</span>
+            <span><a href="https://finamodel.com/companies/take-two-interactive" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Finamodel：Take-Two 2024 年 $4.60 亿美元收购 Gearbox 财务档案" data-i18n-en="Finamodel: $460M Gearbox Entertainment Acquisition">Finamodel：Take-Two 2024 年 $4.60 亿美元收购 Gearbox 财务档案</strong> &#8599;</a> — <span data-i18n-zh="核验从 Embracer 手中收购 Gearbox Software 的 $4.60 亿交易对价" data-i18n-en="Verified $460M purchase price for Gearbox Entertainment in 2024">核验从 Embracer 手中收购 Gearbox Software 的 $4.60 亿交易对价</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[03]</span>
+            <span><a href="https://www.horizonscapitals.com/research-insights/take-two-interactive-ttwo" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Horizons Capitals：无主之地 4 首发复盘、Switch 2 暂停与 DLC 路线图" data-i18n-en="Horizons Capitals: Borderlands 4 Post-Launch &amp; Switch 2 Update">Horizons Capitals：无主之地 4 首发复盘、Switch 2 暂停与 DLC 路线图</strong> &#8599;</a> — <span data-i18n-zh="核验 BL4 首发销量低于内部预期、暂停 Switch 2 端口及后续 DLC 推进情况" data-i18n-en="BL4 initial sales vs. internal expectations, Switch 2 port pause &amp; DLC cadence">核验 BL4 首发销量低于内部预期、暂停 Switch 2 端口及后续 DLC 推进情况</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[04]</span>
+            <span><a href="https://www.tweaktown.com/news/107244/borderlands-4-expected-to-sell-6-million-units-at-launch-gearbox-has-extremely-high-confidence/index.html" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="TweakTown：无主之地 3 突破 2,300 万份与 BL4 发售前预期背景" data-i18n-en="TweakTown: Borderlands 3 &gt;23M Units &amp; BL4 Context">TweakTown：无主之地 3 突破 2,300 万份与 BL4 发售前预期背景</strong> &#8599;</a> — <span data-i18n-zh="核验 BL3 累计销量突破 2,300 万份（&gt;70% 首发数字占比）" data-i18n-en="Confirms Borderlands 3 surpassed 23M lifetime units sold-in">核验 BL3 累计销量突破 2,300 万份（&gt;70% 首发数字占比）</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[05]</span>
+            <span><a href="https://www.tweaktown.com/news/80936/take-two-reveals-franchise-sales-for-bioshock-mafia-gta-nba-2k/index.html" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="TweakTown：2021 年无主之地 7,100 万份历史阶段销量对照" data-i18n-en="TweakTown: Historical 71M Borderlands Milestone (Aug 2021)">TweakTown：2021 年无主之地 7,100 万份历史阶段销量对照</strong> &#8599;</a> — <span data-i18n-zh="核验 2021–2026 五年间无主之地系列净增近 3,000 万份的长尾韧性" data-i18n-en="Historical 71M milestone proving ~30M unit additions between 2021 and 2026">核验 2021–2026 五年间无主之地系列净增近 3,000 万份的长尾韧性</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[06]</span>
+            <span><a href="https://www.sec.gov/Archives/edgar/data/946581/000162828026072175/ttwo2q27earningsrelease.htm" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="SEC Form 8-K：Take-Two FY2027 Q2 财报（BL4 同比基数与持续内容更新）" data-i18n-en="SEC Form 8-K: Q2 FY27 Borderlands 4 Prior-Year Comp &amp; DLC">SEC Form 8-K：Take-Two FY2027 Q2 财报（BL4 同比基数与持续内容更新）</strong> &#8599;</a> — <span data-i18n-zh="核验 2025年9月 BL4 发售构成的 Q2 高基数及持续内容支持" data-i18n-en="Q2 FY26 Borderlands 4 launch comp and ongoing post-launch content">核验 2025年9月 BL4 发售构成的 Q2 高基数及持续内容支持</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[07]</span>
+            <span><a href="https://www.sec.gov/Archives/edgar/data/946581/000162828026037434/ttwo-20260331.htm" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="SEC Form 10-K：Take-Two FY2026 年报（2K 全资持有 Borderlands 与 Wonderlands）" data-i18n-en="SEC Form 10-K: FY2026 2K Internally Owned Franchises">SEC Form 10-K：Take-Two FY2026 年报（2K 全资持有 Borderlands 与 Wonderlands）</strong> &#8599;</a> — <span data-i18n-zh="官方确认并购后 Borderlands 与 Tiny Tina&#x27;s Wonderlands 均为 2K 内部全资自有 IP" data-i18n-en="Confirms Borderlands and Tiny Tina&#x27;s Wonderlands as internally owned 2K IPs">官方确认并购后 Borderlands 与 Tiny Tina&#x27;s Wonderlands 均为 2K 内部全资自有 IP</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[08]</span>
+            <span><a href="https://gamesbeat.com/take-two-reports-bookings-for-fiscal-q2-of-1-6b-down-18-and-below-expectations/" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="GamesBeat：Take-Two 27Q2 财报与 2K 核心产品线更新追踪" data-i18n-en="GamesBeat: 2K Core Portfolio &amp; Post-Launch Support">GamesBeat：Take-Two 27Q2 财报与 2K 核心产品线更新追踪</strong> &#8599;</a> — <span data-i18n-zh="核验 2K 厂牌核心游戏长线更新节奏" data-i18n-en="2K core franchise live content and expansion updates">核验 2K 厂牌核心游戏长线更新节奏</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[09]</span>
+            <span><a href="https://www.metacritic.com/company/take-two-interactive/" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Metacritic：Borderlands 4 (PS5/PC) 82 分媒体评测档案" data-i18n-en="Metacritic: Borderlands Franchise Score History">Metacritic：Borderlands 4 (PS5/PC) 82 分媒体评测档案</strong> &#8599;</a> — <span data-i18n-zh="核验 2025-09-12 发售日期、M 分级及 MC 82 媒体综评" data-i18n-en="Sep 12, 2025 release date and 82 Metacritic score verification">核验 2025-09-12 发售日期、M 分级及 MC 82 媒体综评</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[10]</span>
+            <span><a href="https://ir.take2games.com/static-files/79bc5b0a-2091-483f-9ac5-aa4cab0a1cac" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Take-Two 2022 投资者文件：无主之地历史阶段出货数据" data-i18n-en="Take-Two Aug 2022 IR Slide: Historical Borderlands Trajectory">Take-Two 2022 投资者文件：无主之地历史阶段出货数据</strong> &#8599;</a> — <span data-i18n-zh="交叉核验 BL2 与 BL3 早期爬坡数据" data-i18n-en="Historical BL2 (26M→31M+) and BL3 (15M→23M+) unit progression">交叉核验 BL2 与 BL3 早期爬坡数据</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[11]</span>
+            <span><a href="https://borderlands.2k.com/" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Borderlands 官方网站：凯洛斯世界、秘藏猎人与路线图详情" data-i18n-en="Official Borderlands 4 Portal (2K / Gearbox)">Borderlands 官方网站：凯洛斯世界、秘藏猎人与路线图详情</strong> &#8599;</a> — <span data-i18n-zh="核验抓钩移动、授权零件武器系统与豪华版 DLC 包含内容" data-i18n-en="Official Kairos mechanics, Licensed Parts, and Bounty/Story Pack details">核验抓钩移动、授权零件武器系统与豪华版 DLC 包含内容</span></span>
+          </li>
+          <li>
+            <span class="mui-chip mono" style="height:20px;padding:0 6px;font-size:0.68rem;">[12]</span>
+            <span><a href="https://en.wikipedia.org/wiki/Take-Two_Interactive" target="_blank" rel="noopener noreferrer"><strong data-i18n-zh="Wikipedia：Take-Two 并购史与 Gearbox 整合条目" data-i18n-en="Wikipedia: Take-Two Interactive &amp; Gearbox Integration">Wikipedia：Take-Two 并购史与 Gearbox 整合条目</strong> &#8599;</a> — <span data-i18n-zh="核验 Gearbox 加入 2K 全资工作室群的组织架构" data-i18n-en="Corporate integration of Gearbox under the 2K publishing label">核验 Gearbox 加入 2K 全资工作室群的组织架构</span></span>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../../../_shared/ace8c671ec1c6660.js"></script>
+</body>
+</html>

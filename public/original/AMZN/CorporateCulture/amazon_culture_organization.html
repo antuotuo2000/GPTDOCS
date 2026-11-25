@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="amzn" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>亚马逊 Amazon AMZN 企业文化与组织架构 | 数据中心</title>
+ <meta name="description" content="亚马逊 (Amazon.com, Inc., NASDAQ: AMZN) 企业文化与组织架构深度研究报告：永远的 Day 1、解耦 API 契约与双披萨自治团队 (Two-Pizza Teams)、16 条领导力准则、六页纸叙事备忘录、逆向工作法 (PR/FAQ)、Bar Raiser 抬杆人、安迪·贾西 +15% 扁平化与反官僚信箱，以及 TTM $7,974.6亿营收与创纪录 13.9% 营业利润率。" />
+ 
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/amazon_culture_organization.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body id="top"><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">AMZN</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <button type="button" class="crumb-link hide-sm" id="crumbTopBtn">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </button>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="亚马逊 (Amazon) 企业文化与组织架构研报" data-i18n-en="Amazon Corporate Culture & Org Monograph">亚马逊 (Amazon) 企业文化与组织架构研报</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: AMZN</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY2025 10-K &amp; Q3'26</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <button type="button" id="exportHtmlBtn" class="mui-dl-btn" title="下载独立 HTML 网页文件">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+ <span data-i18n-zh="下载 HTML" data-i18n-en="Download">下载 HTML</span>
+ </button>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left MUI Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">AMZN · CORPORATE CULTURE</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="亚马逊企业文化研报" data-i18n-en="Amazon Culture Monograph">亚马逊企业文化研报</div>
+ <p class="sidebar-subtitle" data-i18n-zh="永远的 Day 1 × 解耦 API 双披萨团队 × 16条领导力准则 × 六页纸叙事备忘录 × 安迪·贾西反官僚重塑" data-i18n-en="Always Day 1 × Decoupled API Two-Pizza Teams × 16 Leadership Principles × 6-Pager Memos × Jassy Reset">永远的 Day 1 × 解耦 API 双披萨团队 × 16条领导力准则 × 六页纸叙事备忘录 × 安迪·贾西反官僚重塑</p>
+
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="组织形态与机制" data-i18n-en="Org & Mechanism">组织形态与机制</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="API解耦 · 双披萨小队" data-i18n-en="API · Two-Pizza Teams">API解耦 · 双披萨小队</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="Q3'26 编制 / G&A费率" data-i18n-en="Workforce / G&A Ratio">Q3'26 编制 / G&amp;A费率</span>
+ <span class="sidebar-mini-val mono">163.8万人 · 1.34%</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="Q3毛利 / 营业利润率" data-i18n-en="Q3 GM / Op Margin">Q3毛利 / 营业利润率</span>
+ <span class="sidebar-mini-val mono">53.2% · 13.9%</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="站点导航与章节目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="AMZN"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-divider"></div>
+
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary & KPIs">执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span data-i18n-zh="API解耦架构与双披萨自治" data-i18n-en="API Architecture & Two-Pizza">API解耦架构与双披萨自治</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span data-i18n-zh="四大文化支柱与制度机制" data-i18n-en="4 Cultural Pillars & Mechanisms">四大文化支柱与制度机制</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span data-i18n-zh="全球科技巨头文化横向对比" data-i18n-en="Global Big Tech Peer Matrix">全球科技巨头文化横向对比</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span data-i18n-zh="基建飞轮、利润率与复利推演" data-i18n-en="Flywheel Margins & Compounding">基建飞轮、利润率与复利推演</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span data-i18n-zh="三代演进与四大战役复盘" data-i18n-en="3-Act Evolution & Case Studies">三代演进与四大战役复盘</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span data-i18n-zh="Day 1 文化法则核查清单" data-i18n-en="Day 1 Diagnostic Checklist">Day 1 文化法则核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span data-i18n-zh="数据来源与监管核验索引" data-i18n-en="Primary Filings & Sources">数据来源与监管核验索引</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+
+ <!-- 00 执行摘要与核心指标 -->
+ <section id="sec-00" class="mui-paper hero-card section-block">
+ <div class="status-strip">
+ <span class="mui-chip mui-chip-primary" data-i18n-zh="组织史定评：人类商业史上规模最大（163.8万人）却以微服务API自治运转的“Day 1 初创机器”" data-i18n-en="Verdict: History's Largest (1.638M Staff) API-Decoupled 'Day 1 Startup Machine'">组织史定评：人类商业史上规模最大（163.8万人）却以微服务API自治运转的“Day 1 初创机器”</span>
+ <span class="mui-chip" data-i18n-zh="研究横跨：贝索斯车库与API法令 (1994–2005) · 飞轮扩张 (2006–2021) · 贾西反官僚与AI重注 (2021–2026+)" data-i18n-en="Scope: Bezos Garage & API Mandate (1994–2005) · Flywheel Scaling (2006–2021) · Jassy Startup Reset (2021–2026+)">研究横跨：贝索斯车库与API法令 (1994–2005) · 飞轮扩张 (2006–2021) · 贾西反官僚与AI重注 (2021–2026+)</span>
+ <span class="mui-chip mui-chip-success mono">FY2025 10-K &amp; Q3 2026</span>
+ </div>
+
+ <div class="hero-overline mono">
+ <span>CORE THESIS · 永远的 Day 1 × 解耦 API 双披萨小队 (Two-Pizza Teams) × 16条领导力准则 × 六页纸与 PR/FAQ 机制 × +15% 扁平化</span>
+ </div>
+
+ <h1 class="hero-h1" data-i18n-zh="亚马逊 Amazon.com 企业文化与组织架构深度研究报告：<span class='gradient-accent'>不靠善意靠机制（Mechanisms）、分布式双披萨自治与“世界最大初创公司”的反熵增密码</span>" data-i18n-en="Amazon.com Corporate Culture & Organizational Architecture Deep Dive: <span class='gradient-accent'>Mechanisms Over Good Intentions, Two-Pizza API Autonomy & Anti-Entropy at $800B Scale</span>">
+ 亚马逊 Amazon.com 企业文化与组织架构深度研究报告：<span class="gradient-accent">不靠善意靠机制（Mechanisms）、分布式双披萨自治与“世界最大初创公司”的反熵增密码</span>
+ </h1>
+
+ <p class="lead-prose">
+ 如果说苹果公司是<strong>“中心化职能制 + 唯一损益表”</strong>的精密瑞士钟表，那么<strong>亚马逊（Amazon.com, Inc., NASDAQ: AMZN）</strong>则是商业史上位于另一极的终极演化体——<strong>“顶层 16 条领导力准则高度同频 + 底层数千支双披萨团队（Two-Pizza Teams）通过契约化 API 解耦并行试错”</strong>的热带雨林系统。正是 2002 年杰夫·贝索斯（Jeff Bezos）强制推行内部团队严禁私下直连数据库、一切能力必须封装为可对外开放的服务接口（API Mandate），才不仅消除了百万级员工巨舰的跨部门排队拥堵，更直接孕育出 AWS 云计算、FBA 第三方履约与闭环广告三大超级税基
+ <a class="cite-link" href="https://s2.q4cdn.com/299287126/files/doc_financials/2026/ar/2025-Shareholder-Letter-Final.pdf" target="_blank" rel="noopener noreferrer">2025 &amp; 1997 致股东信 ↗</a>。
+ 2024 年 9 月至 2026 年，CEO 安迪·贾西（Andy Jassy）发起公司成立三十年最深刻的文化重塑：要求全部 S-Team 组织将<strong>一线贡献者（IC）与经理比例提升至少 +15%</strong>、实施每周 5 天返岗协作、亲自设立<strong>“反官僚信箱（Bureaucracy Mailbox）”</strong>拔除超百项冗余审批，并倡导追问本质的<strong>“Why 文化”</strong>
+ <a class="cite-link" href="https://www.aboutamazon.com/news/company-news/ceo-andy-jassy-latest-update-on-amazon-return-to-office-manager-team-ratio" target="_blank" rel="noopener noreferrer">Jassy 组织重塑备忘录 ↗</a>。
+ 这一组织手术立竿见影：截至 Q3 2026，亚马逊在 <strong>163.8 万名员工</strong>体量下将一般及行政费用（G&amp;A）压低至惊人的 <strong>$27.01亿（仅占单季营收 $2,019.4亿的 1.34%！）</strong>，推动 TTM 总营收跃升至 <strong>$7,974.6亿（+15% YoY）</strong>、TTM 营业利润首破千亿达 <strong>$1,043.7亿</strong>，Q3 营业利润率创下公司历史最高纪录 <strong>13.9%</strong>
+ <a class="cite-link" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">Q3 2026 官方财报 ↗</a>。
+ </p>
+
+ <!-- 3 Core Thesis Cards -->
+ <div class="grid-3" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div class="mui-avatar-icon">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+ </div>
+ <h3 data-i18n-zh="双披萨小队 × 单线程领导者 (STL)" data-i18n-en="Two-Pizza Teams × Single-Threaded Leaders">双披萨小队 × 单线程领导者 (STL)</h3>
+ <p data-i18n-zh="团队规模控制在 6–10 人（两张披萨吃饱），由 100% 专注单一目标的单线程负责人统领，通过标准化 API 对接而无需跨部门层层会签。" data-i18n-en="6–10 person autonomous pods led by Single-Threaded Leaders (STLs) communicating strictly via hardened service APIs rather than committee meetings.">团队规模控制在 6–10 人（两张披萨吃饱），由 100% 专注单一目标的单线程负责人统领，通过标准化 API 对接而无需跨部门层层会签。</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+ </div>
+ <h3 data-i18n-zh="“善意无效，唯有机制有效” (Mechanisms)" data-i18n-en="Good Intentions Fail; Mechanisms Work">“善意无效，唯有机制有效” (Mechanisms)</h3>
+ <p data-i18n-zh="禁用花哨 PPT，高管会前全员静默精读 15–20 分钟“六页纸叙事备忘录”；新产品未写一行代码前必须先写出 1 页客户新闻稿与 5 页 FAQ。" data-i18n-en="PowerPoint is banned: executives spend 15–20 minutes silently reading 6-page narrative memos, and every product begins with a 1-page Press Release & 5-page FAQ.">禁用花哨 PPT，高管会前全员静默精读 15–20 分钟“六页纸叙事备忘录”；新产品未写一行代码前必须先写出 1 页客户新闻稿与 5 页 FAQ。</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+ </div>
+ <h3 data-i18n-zh="贾西“世界最大初创”扁平化与节俭铁律" data-i18n-en="Jassy's +15% IC Ratio & Extreme Frugality">贾西“世界最大初创”扁平化与节俭铁律</h3>
+ <p data-i18n-zh="提升 IC/经理比 +15%、设立反官僚直通信箱，将 FY25 行政管理费率压至 1.56%（Q3'26 仅 1.34%），省下的每分钱砸向 $1,085亿 技术研发与 AI。" data-i18n-en="Raising IC-to-manager ratio +15% and rooting out red tape compressed G&A to 1.34% of Q3 sales while channeling $108.5B+/yr into Tech & Infrastructure.">提升 IC/经理比 +15%、设立反官僚直通信箱，将 FY25 行政管理费率压至 1.56%（Q3'26 仅 1.34%），省下的每分钱砸向 $1,085亿 技术研发与 AI。</p>
+ </div>
+ </div>
+
+ <!-- 4 KPI Cards -->
+ <div class="grid-4">
+ <div class="mui-paper kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="TTM 全球净营收 (截至 Q3'26)" data-i18n-en="TTM Worldwide Net Sales">TTM 全球净营收 (截至 Q3'26)</span>
+ <span class="mui-chip mui-chip-primary mono">FY25 $716.9B</span>
+ </div>
+ <div class="kpi-value mono">$797.5B</div>
+ <p class="kpi-desc">TTM 营收同比增长 +15%（Q3 单季 $2,019.4亿）；贾西直言未来 5–10 年零售与 AWS 有望双双成长为人类史上首批万亿美元营收业务 <a class="cite-link" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">Q3'26 Release ↗</a>。</p>
+ </div>
+
+ <div class="mui-paper kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="历史最高单季营业利润率" data-i18n-en="All-Time Record Operating Margin">历史最高单季营业利润率</span>
+ <span class="mui-chip mui-chip-success mono">TTM 营业利润 $104.4B</span>
+ </div>
+ <div class="kpi-value mono">13.9%</div>
+ <p class="kpi-desc">Q3 2026 营业利润暴增 +61% 至 $280.8亿，利润率刷新公司史极值；其中 AWS 营业利润率达 38.7%，北美零售营业利润激增 +82%。</p>
+ </div>
+
+ <div class="mui-paper kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="极致节俭：G&A 行政管理费率" data-i18n-en="Frugality: G&A % of Net Sales">极致节俭：G&amp;A 行政管理费率</span>
+ <span class="mui-chip mui-chip-warning mono">技术投入 $108.5B</span>
+ </div>
+ <div class="kpi-value mono">1.34%</div>
+ <p class="kpi-desc">Q3 2026 G&amp;A 费用同比反降 -6.1% 至仅 $27.01亿（FY25 全年 1.56%），而技术与基础设施研发投入在 FY25 高达 $1,085.2亿（占营收 15.1%）。</p>
+ </div>
+
+ <div class="mui-paper kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="全球员工规模与自动化人效跃迁" data-i18n-en="Global Workforce & Robotics Scale">全球员工规模与自动化人效跃迁</span>
+ <span class="mui-chip mui-chip-violet mono">100万+ 机器人</span>
+ </div>
+ <div class="kpi-value mono">1.638M</div>
+ <p class="kpi-desc">员工总数较 2021 年峰值（160.8万）四年仅微增 1.9%，同期年化营收净增逾 $3,276亿，人均创收由 $29.2万 跃升 +67% 至 $48.7万。</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- 01 API解耦架构与双披萨自治 -->
+ <section id="sec-01" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 01 · S-TEAM GOVERNANCE &amp; DECOUPLED TWO-PIZZA ARCHITECTURE</div>
+ <h2 class="sec-h2" data-i18n-zh="一、S-Team 顶层中枢与双披萨自治：163.8 万人的巨舰如何跑出初创速度？" data-i18n-en="1. S-Team Governance & Two-Pizza API Autonomy: Moving at Startup Speed with 1.64M People">一、S-Team 顶层中枢与双披萨自治：163.8 万人的巨舰如何跑出初创速度？</h2>
+ <p class="sec-sub" data-i18n-zh="用“架构契约”替代“人际协调”：顶层资本配置高度集中，底层实验创新高度下放" data-i18n-en="Replacing interpersonal coordination with hardened API contracts: centralized capital, decentralized invention">用“架构契约”替代“人际协调”：顶层资本配置高度集中，底层实验创新高度下放</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">Tech &amp; Infra = 9.7x G&amp;A</span>
+ </div>
+
+ <div class="arch-blueprint">
+ <div class="arch-hub">
+ <div class="arch-hub-title">Amazon S-Team 最高战略中枢（Seattle HQ1 &amp; Arlington HQ2 · 资本配置与 16 条准则守护者）</div>
+ <div class="arch-hub-sub">核心统帅：Jeff Bezos (执行董事长) × Andy Jassy (总裁兼CEO) × Matt Garman (AWS CEO) × Doug Herrington (全球商店CEO) × Brian Olsavsky (CFO)</div>
+ </div>
+ <div class="arch-nodes">
+ <div class="arch-node">
+ <div class="arch-node-tag mono">AWS &amp; SILICON · 云与芯片</div>
+ <div class="arch-node-name">AWS, Bedrock &amp; Annapurna</div>
+ <div class="arch-node-desc">Matt Garman 统领：Q3 营收 $46.0B (+39.3%)，Trainium/Graviton 自研芯片年化 &gt;$20B，AgentCore 企业智能体底座。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono">WORLDWIDE STORES · 零售履约</div>
+ <div class="arch-node-name">1P/3P, 8-Region &amp; Robotics</div>
+ <div class="arch-node-desc">Doug Herrington 统领：北美 $460.3B TTM + 国际 $175.8B TTM，100万+ 机器人、85+ 当日达中心与 $150B+ 生鲜杂货。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono">ADS &amp; PRIME · 高毛利变现</div>
+ <div class="arch-node-name">Retail Media &amp; Prime Video</div>
+ <div class="arch-node-desc">TTM $78.0B 闭环广告 + $49.6B 订阅生态，Amazon Ads Agent 全链路自动投放与 NFL/NBA 顶级体育版权变现。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono">FRONTIER BETS · 新曲线孵化</div>
+ <div class="arch-node-name">Alexa+, Leo, Pharmacy &amp; Zoox</div>
+ <div class="arch-node-desc">6亿终端 Alexa+ 重构、Amazon Leo 低轨卫星星座、3小时送药上门与 Zoox 拉斯维加斯商业化无人驾驶出租车。</div>
+ </div>
+ </div>
+ <div class="arch-platform-bar">
+ <div class="arch-platform">
+ <strong>2002 API 法令与面向服务架构（Service-Oriented Architecture）</strong>
+ <span>任何两支团队只准通过网络服务接口通信，所有 API 从设计第一天起就必须具备对外商业化（Externalizable）能力。</span>
+ </div>
+ <div class="arch-platform">
+ <strong>单向门 vs 双向门决策分级（Type 1 vs Type 2 Decisions）</strong>
+ <span>不可逆的重资本决策（如 $2,200亿 CapEx）由 S-Team 深度思辨；90% 可逆的双向门实验直接授权一线单线程小队快速拍板。</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Interactive Chart: View A vs View B -->
+ <div class="chart-card" style="margin-bottom: 18px;">
+ <div class="chart-toolbar">
+ <div>
+ <div id="ch1ChartTitle" class="chart-title">FY2024 vs FY2025 六大业务板块净营收协同跃升（$B · SEC Form 10-K）</div>
+ <div id="ch1ChartSub" class="chart-caption">解耦服务化催生多极增长：3P卖家服务 ($172.2B) 稳居第二大板块，AWS ($128.7B, +20%) 与广告 ($68.6B, +22.1%) 领跑利润扩张</div>
+ </div>
+ <div class="mui-segmented" role="tablist" aria-label="第一章图表视图切换">
+ <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA">视图A: 六大板块营收结构</button>
+ <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB">视图B: 百万编制克制与人效跃升</button>
+ </div>
+ </div>
+ <div id="ch1AxisMeta" class="chart-axis-meta mono">
+ <span style="color:var(--chart-c1);">■ 蓝色：FY2024 净营收 ($B · 合计 $638.0B)</span>
+ <span style="color:var(--chart-c2);">■ 绿色：FY2025 净营收 ($B · 合计 $716.9B)</span>
+ </div>
+ <div class="canvas-stage">
+ <canvas id="chartCh1"></canvas>
+ </div>
+ <div class="chart-legend" id="ch1Legend">
+ <button type="button" class="legend-pill" data-ch1-series="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1">FY2024 细分业务净营收 ($B)</span></button>
+ <button type="button" class="legend-pill" data-ch1-series="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2">FY2025 细分业务净营收 ($B)</span></button>
+ </div>
+ </div>
+
+ <!-- 4 Expandable Business Matrix Cards -->
+ <div class="grid-2">
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title">“回到起跑线重构”：6 人小队 76 天打造 Bedrock Mantle 引擎</div>
+ <span class="mui-chip mui-chip-primary mono">Token 量 Q3 增 ~17x</span>
+ </div>
+ <p class="matrix-card-body">安迪·贾西在 2025 致股东信披露：当 Bedrock 早期推理架构遭遇超高速扩张瓶颈时，原本需要 40 人耗时一年的底层重写，AWS 直接抽调 6 名顶尖工程师组成独立小队，借助自研编码智能体 Kiro 仅用 76 天便交付全新推理引擎 Mantle <a class="cite-link" href="https://s2.q4cdn.com/299287126/files/doc_financials/2026/ar/2025-Shareholder-Letter-Final.pdf" target="_blank" rel="noopener noreferrer">2025 致股东信 P.5 ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail1"><span>展开微观执行机制 ⌄</span></button>
+ <div id="matrixDetail1" class="collapse-panel">Mantle 上线后迅速成为 Bedrock 核心支柱，推动财富 500 强客户在 Q3 2026 的 Bedrock 支出同比激增近 7 倍、总 Token 吞吐量暴涨近 17 倍。</div>
+ </div>
+
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title">并行路径容错法则（2 &gt; 0）：三路齐发攻克分钟级履约极限</div>
+ <span class="mui-chip mui-chip-success mono">Amazon Now 增 10x</span>
+ </div>
+ <p class="matrix-card-body">不同于单一押注路线，亚马逊允许不同单线程团队并行推进互补方案：85+ 座当日达中心（SSD）、450+ 城镇 20–30 分钟极速闪送（Amazon Now）与 Prime Air 无人机配送同步赛马，最终发现无人机可直接复用 SSD 仓库作为起降补给母港。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail2"><span>展开微观执行机制 ⌄</span></button>
+ <div id="matrixDetail2" class="collapse-panel">在印度市场部署超 360 座微型履约仓后，Amazon Now 订单月环比增速达 25%，开启该服务的 Prime 会员整体购物频次直接翻至 3 倍。</div>
+ </div>
+
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title">+15% IC/经理比扁平化手术与“反官僚信箱”直通车</div>
+ <span class="mui-chip mui-chip-warning mono">Q3 G&amp;A 仅 1.34%</span>
+ </div>
+ <p class="matrix-card-body">针对疫情扩招后滋生的汇报层级与会签流程，贾西强制要求各 S-Team 组织将一线贡献者对经理比例提高至少 15%，并亲阅员工投递的 500+ 封“反官僚信箱”邮件、迅速废除超 150 项冗余审批规则 <a class="cite-link" href="https://fortune.com/2024/11/08/amazon-ceo-andy-jassy-hates-bureaucracy-employee-to-manager-ratio/" target="_blank" rel="noopener noreferrer">Fortune 报道 ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail3"><span>展开微观执行机制 ⌄</span></button>
+ <div id="matrixDetail3" class="collapse-panel">比如 AWS 三名工程师提议开源 Strands 智能体框架时，跳过以往长达数月的层层审批，在“Why 文化”授权下不到 24 小时即获批上线，助力客户降低 32% Agent Token 成本。</div>
+ </div>
+
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title">门板办公桌（Door Desk）节俭传统与一线薪酬安全再平衡</div>
+ <span class="mui-chip mui-chip-violet mono">时薪提至 $20+</span>
+ </div>
+ <p class="matrix-card-body">亚马逊在总部严控行政开销（无免费豪华餐饮、高管出差经济舱传统），却在 2025–2026 连续投入超 $25亿 将美国全职一线运营员工起薪提至 $20/小时（含福利平均超 $30/小时），并部署百万台机器人减少重复搬运工伤。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail4"><span>展开微观执行机制 ⌄</span></button>
+ <div id="matrixDetail4" class="collapse-panel">2021 年新增的两条领导力准则“致力于成为地球最佳雇主”与“成功与规模带来广泛责任”，正是为了修复高速扩张期仓储高流失率与社区能耗摩擦。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 02 四大文化支柱与制度机制 -->
+ <section id="sec-02" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 02 · CULTURAL PILLARS &amp; INSTITUTIONAL MECHANISMS</div>
+ <h2 class="sec-h2" data-i18n-zh="二、四大企业文化支柱：客户痴迷逆向法、六页纸静默阅读、抬杆人与 Day 1 耐受力" data-i18n-en="2. Four Cultural Pillars: Working Backwards, 6-Pager Narratives, Bar Raisers & Day 1 Grit">二、四大企业文化支柱：客户痴迷逆向法、六页纸静默阅读、抬杆人与 Day 1 耐受力</h2>
+ <p class="sec-sub" data-i18n-zh="点击左侧任一文化支柱卡片，联动查看亚马逊如何将抽象价值观固化为不可绕过的日常工作流" data-i18n-en="Click any pillar card on the left to inspect Amazon's codified operating mechanisms and 5-axis radar">点击左侧任一文化支柱卡片，联动查看亚马逊如何将抽象价值观固化为不可绕过的日常工作流</p>
+ </div>
+ <span class="mui-chip mui-chip-success">护城河定性：极宽 (Wide Moat · 制度化机制 + 双飞轮规模经济)</span>
+ </div>
+
+ <div class="grid-radar">
+ <div class="pillar-stack" id="pillarStack">
+ <button type="button" class="pillar-card active" data-pillar="0">
+ <div class="pillar-head">
+ <span class="pillar-title">01 · 客户痴迷与逆向工作法（Working Backwards PR/FAQ）</span>
+ <span class="mui-chip mui-chip-primary mono">先写新闻稿再写代码</span>
+ </div>
+ <p class="pillar-desc">严禁从“我们有什么现成技术或部门利益”正向推导产品；任何新业务立项必须先撰写一页面向真实顾客的假想发布新闻稿（PR）与五页尖锐问答（FAQ），若无法让顾客尖叫则直接毙掉。</p>
+ </button>
+
+ <button type="button" class="pillar-card" data-pillar="1">
+ <div class="pillar-head">
+ <span class="pillar-title">02 · 禁用 PPT 与六页纸叙事备忘录（6-Page Narrative Memo）</span>
+ <span class="mui-chip mui-chip-success mono">会前静默精读20分钟</span>
+ </div>
+ <p class="pillar-desc">PowerPoint 项目符号容易掩盖因果逻辑漏洞；所有高管经营评审（OP1/OP2）开场前全员安静阅读完整句式撰写的 6 页纸文档 + 附录数据，迫使汇报者把底层逻辑彻底想透。</p>
+ </button>
+
+ <button type="button" class="pillar-card" data-pillar="2">
+ <div class="pillar-head">
+ <span class="pillar-title">03 · 16 条领导力准则与独立“抬杆人”（Bar Raiser Veto）</span>
+ <span class="mui-chip mui-chip-warning mono">跨部门一票否决权</span>
+ </div>
+ <p class="pillar-desc">每场招聘面试环必须引入一位来自非用人部门、受过严格认证的 Bar Raiser，确保新员工在至少一项准则上优于现有同级 50% 员工；即便用人经理急缺人手，抬杆人仍握有一票否决权。</p>
+ </button>
+
+ <button type="button" class="pillar-card" data-pillar="3">
+ <div class="pillar-head">
+ <span class="pillar-title">04 · “甘愿长期被误解”与“Why 追问文化”（Long-Term Grit）</span>
+ <span class="mui-chip mui-chip-violet mono">承受短期FCF波动</span>
+ </div>
+ <p class="pillar-desc">从 2005 年顶住华尔街质疑推出 Prime 免邮、2006 年跨界做 AWS，到 2026 年顶着短期负自由现金流豪掷 $2,200亿 建设 AI 与低轨卫星，始终优先最大化长期自由现金流现值。</p>
+ </button>
+
+ <div id="pillarFocusNote" class="mui-alert" style="margin-top: 4px;">
+ <div>
+ <strong>当前选中支柱解读（01 逆向工作法 PR/FAQ）：</strong>Kindle、AWS EC2、Prime、Echo 乃至 Amazon Leo 低轨卫星均诞生于数十易其稿的 1 页 PR + 5 页 FAQ 文档——在投入巨额工程资源前，先在纸面上经历最严苛的客户价值拷问 <a class="cite-link" href="https://andrewclark.co.uk/all-media/working-backwards" target="_blank" rel="noopener noreferrer">Working Backwards ↗</a>。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: 5-Axis Radar Chart -->
+ <div class="chart-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+ <div>
+ <div class="chart-title" data-i18n-zh="亚马逊企业文化五维特征对比雷达图（10分制标杆评估）" data-i18n-en="5-Axis Corporate Culture Benchmark Radar (10-Point Scale)">亚马逊企业文化五维特征对比雷达图（10分制标杆评估）</div>
+ <div class="chart-caption" data-i18n-zh="点击下方图例胶囊可单独开关对比曲线，悬停顶点查看亚马逊与苹果的镜像差异" data-i18n-en="Click legend pills below to toggle peer curves; hover vertices for exact scores">点击下方图例胶囊可单独开关对比曲线，悬停顶点查看亚马逊与苹果的镜像差异</div>
+ </div>
+ <div class="canvas-stage-tall">
+ <canvas id="chartRadar"></canvas>
+ </div>
+ <div class="chart-legend" id="radarLegend">
+ <button type="button" class="legend-pill" data-radar-key="amzn"><span class="legend-dot" style="background:#3399FF;"></span><span>亚马逊 (Amazon · API分权实验)</span></button>
+ <button type="button" class="legend-pill" data-radar-key="aapl"><span class="legend-dot" style="background:#22C55E;"></span><span>苹果 (Apple · 职能集权精品)</span></button>
+ <button type="button" class="legend-pill" data-radar-key="mform"><span class="legend-dot" style="background:#FFB74D;"></span><span>传统零售/多事业部巨头基准</span></button>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 03 全球科技巨头文化横向对比 -->
+ <section id="sec-03" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 03 · GLOBAL BIG TECH &amp; ICONIC CULTURE BENCHMARKING</div>
+ <h2 class="sec-h2" data-i18n-zh="三、全球顶级科技与商业巨头文化对比：五种组织操作系统正面交锋" data-i18n-en="3. Global Big Tech & Iconic Enterprise Peer Matrix: Five Organizational Operating Systems">三、全球顶级科技与商业巨头文化对比：五种组织操作系统正面交锋</h2>
+ <p class="sec-sub" data-i18n-zh="支持按企业、掌舵人（贾西 / 特努斯 / 黄仁勋 / 纳德拉 / 麦克米伦）或机制（双披萨 / 单一P&L / 六页纸）实时检索筛选" data-i18n-en="Filter or search in real time by company, leader, or mechanism (Two-Pizza / Single P&L / 6-Pager)">支持按企业、掌舵人（贾西 / 特努斯 / 黄仁勋 / 纳德拉 / 麦克米伦）或机制（双披萨 / 单一P&amp;L / 六页纸）实时检索筛选</p>
+ </div>
+ <span id="peerCountBadge" class="mui-chip mui-chip-primary mono">显示 5 / 5 家标杆企业</span>
+ </div>
+
+ <div class="datagrid-toolbar">
+ <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索企业、掌舵人、架构特征 (双披萨 / 六页纸 / 单一P&L)…" aria-label="筛选对比企业" />
+ <div class="mui-segmented" role="group" aria-label="标杆企业分类筛选">
+ <button type="button" class="mui-seg-btn active" data-peer-filter="all">全部标杆企业</button>
+ <button type="button" class="mui-seg-btn" data-peer-filter="decentralized">分布式自治与矩阵派</button>
+ <button type="button" class="mui-seg-btn" data-peer-filter="functional">中心化职能全栈派</button>
+ </div>
+ </div>
+
+ <div class="table-wrap" style="margin-bottom: 20px;">
+ <table class="mui-table" aria-label="全球顶级科技与商业巨头企业文化横向对比表">
+ <thead>
+ <tr>
+ <th>企业与文化掌舵人</th>
+ <th>底层组织架构形态</th>
+ <th>核心决策与问责机制</th>
+ <th>员工规模与费用特征</th>
+ <th>核心营收与利润表现</th>
+ <th>与亚马逊文化的异同及场景适配评估</th>
+ </tr>
+ </thead>
+ <tbody id="peerTableBody"></tbody>
+ </table>
+ </div>
+
+ <!-- Horizontal Bar Chart -->
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title">文化向财务结构的映射：亚马逊核心板块占比、利润率与极致节俭费率拆解（%）</div>
+ <div class="chart-caption">数据来源：Amazon Q3 2026 &amp; FY2025 SEC 8-K / Form 10-K 合并利润表与分部披露</div>
+ </div>
+ <span class="mui-chip mui-chip-success mono">服务营收占 62.7% · G&amp;A 仅 1.34%</span>
+ </div>
+ <div class="canvas-stage-bars">
+ <canvas id="chartBars"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- 04 基建飞轮、利润率与复利推演 -->
+ <section id="sec-04" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 04 · INFRASTRUCTURE COMPOUNDING &amp; MARGIN EXPANSION</div>
+ <h2 class="sec-h2" data-i18n-zh="四、基建复利与利润率跃迁：从 FY22 营业利润低谷 ($122亿) 到 TTM 破千亿 ($1,044亿)" data-i18n-en="4. Infrastructure Compounding: From FY22 Trough ($12.2B OpInc) to $104.4B TTM Milestone">四、基建飞利与利润率跃迁：从 FY22 营业利润低谷 ($122亿) 到 TTM 破千亿 ($1,044亿)</h2>
+ <p class="sec-sub" data-i18n-zh="每一次顶住外部质疑的资本开支洪峰（2006 AWS、2020 履约倍增、2026 AI 算力），都在随后数年兑现为阶梯式跃升的营业利润" data-i18n-en="Every misunderstood CapEx wave (2006 AWS, 2020 logistics doubling, 2026 AI silicon) compounds into step-change operating profit">每一次顶住外部质疑的资本开支洪峰（2006 AWS、2020 履约倍增、2026 AI 算力），都在随后数年兑现为阶梯式跃升的营业利润</p>
+ </div>
+ <span class="mui-chip mui-chip-warning mono">TTM OpInc +752% vs FY22</span>
+ </div>
+
+ <div class="grid-4" style="margin-bottom: 18px;">
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">AWS ANNUALIZED RUN RATE</span>
+ <div class="kpi-value mono" style="color: var(--mui-primary-lighter);">$184.0B <span style="font-size:0.84rem;font-weight:600;">(+39.3%)</span></div>
+ <p class="kpi-desc">Q3 2026 AWS 创近五年最快增速，贾西预计 2027 与 2028 年增速有望突破 40% 以上。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">TTM OPERATING CASH FLOW</span>
+ <div class="kpi-value mono" style="color: var(--mui-success-text);">$168.3B <span style="font-size:0.84rem;font-weight:600;">(+29%)</span></div>
+ <p class="kpi-desc">内生造血能力创历史极值，支撑全年约 $2,200亿 AI、自研芯片、机器人与卫星投资。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">CUSTOM SILICON RUN RATE</span>
+ <div class="kpi-value mono" style="color: var(--mui-warning-text);">&gt;$20.0B</div>
+ <p class="kpi-desc">Trainium + Graviton + Nitro 三位数增长，若按独立芯片商外售口径折算年化约 ~$500亿。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">RETAIL ADVERTISING TTM</span>
+ <div class="kpi-value mono" style="color: var(--mui-violet-text);">$78.0B <span style="font-size:0.84rem;font-weight:600;">(FY25 +22%)</span></div>
+ <p class="kpi-desc">仅靠广告单项业务即超越全球绝大多数独立互联网巨头总营收。</p>
+ </div>
+ </div>
+
+ <!-- Combo Chart: FY2022–TTM Q3 2026 Operating Income ($B) & Gross Margin (%) -->
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title">FY2022–TTM Q3 2026 组织效率与高毛利飞轮释放：营业利润 ($B) 与综合毛利率 (%)</div>
+ <div class="chart-caption">柱状图（左轴）为 GAAP 营业利润（四年暴增逾 8.5 倍）；折线（右轴）为综合毛利率（43.8% → Q3'26 53.2%）</div>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">毛利率 +940 bps</span>
+ </div>
+ <div class="chart-axis-meta mono">
+ <span style="color:var(--chart-c1);">■ 左轴：GAAP 营业利润 Operating Income ($B)</span>
+ <span style="color:var(--chart-c2);">● 右轴：综合毛利率 Gross Margin (%)</span>
+ </div>
+ <div class="canvas-stage">
+ <canvas id="chartEps"></canvas>
+ </div>
+ <div class="chart-legend" id="epsLegend">
+ <button type="button" class="legend-pill" data-eps-series="eps"><span class="legend-dot" style="background:var(--chart-c1);"></span><span>GAAP 营业利润 (左轴 · $B)</span></button>
+ <button type="button" class="legend-pill" data-eps-series="oci"><span class="legend-dot" style="background:var(--chart-c2);"></span><span>综合毛利率 (右轴 · %)</span></button>
+ <span class="mui-chip mui-chip-warning mono">--- 服务主导高毛利分水岭 50.0%</span>
+ </div>
+ </div>
+
+ <!-- Interactive Multi-Era Cultural Compounding Simulator -->
+ <div class="simulator-grid">
+ <div class="sim-controls">
+ <div>
+ <div class="sec-eyebrow mono" style="margin-bottom:2px;">INTERACTIVE DAY-1 COMPOUNDING SIMULATOR</div>
+ <h3 style="font-size:1rem;font-weight:800;">亚马逊跨周期“基建再投资”财富复利推演器</h3>
+ </div>
+
+ <label class="mui-switch-row" for="simDripToggle">
+ <div>
+ <div style="font-size:0.84rem;font-weight:700;color:var(--text-primary);">叠加高毛利新税基外溢增益 (+3.0%/年 第二曲线溢价)</div>
+ <div style="font-size:0.74rem;color:var(--text-secondary);">映射内部成本中心外溢（AWS / 广告 / Trainium / Leo）带来的超额估值弹性</div>
+ </div>
+ <input type="checkbox" id="simDripToggle" checked />
+ </label>
+
+ <div class="preset-stack" role="group" aria-label="亚马逊历史与前瞻复利预设周期">
+ <button type="button" class="preset-btn active" data-preset="p1">
+ <span>① 2006–2021 AWS与Prime双飞轮成型期</span>
+ <span class="mono">15年 · 31.5%+外溢</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p2">
+ <span>② 1997–2026 IPO 以来跨三十年长跑</span>
+ <span class="mono">29年 · 28.5%</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p3">
+ <span>③ 2026–2036 双万亿营收新周期基准</span>
+ <span class="mono">10年 · 13.5%+外溢</span>
+ </button>
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span>初始投入本金 (USD)</span>
+ <span id="simPrincipalLabel" class="slider-val mono">$10,000</span>
+ </div>
+ <input type="range" id="simPrincipalSlider" class="mui-slider" min="1000" max="100000" step="1000" value="10000" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span>长期持有年限 (Years)</span>
+ <span id="simYearsLabel" class="slider-val mono">15 年</span>
+ </div>
+ <input type="range" id="simYearsSlider" class="mui-slider" min="5" max="30" step="1" value="15" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span>核心内生年化增值率 (Base CAGR %)</span>
+ <span id="simCagrLabel" class="slider-val mono">13.5%</span>
+ </div>
+ <input type="range" id="simCagrSlider" class="mui-slider" min="4" max="38" step="0.5" value="13.5" />
+ </div>
+ </div>
+
+ <div class="sim-output-panel">
+ <div class="sim-readouts">
+ <div class="sim-stat-box">
+ <div class="sim-stat-label">期末预估总资产 (Ending Value)</div>
+ <div id="simEndingVal" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);">$88,755</div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label">总回报倍数 (MOIC) / 综合年化</div>
+ <div id="simMoicVal" class="sim-stat-num mono" style="color:var(--mui-success-text);">8.88x · 16.50%</div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label">累计净复利收益 (Net Gain)</div>
+ <div id="simNetGainVal" class="sim-stat-num mono">$78,755</div>
+ </div>
+ <div class="sim-stat-box">
+ <div id="simMidLabel" class="sim-stat-label">第 7 年中期资产节点</div>
+ <div id="simMidVal" class="sim-stat-num mono">$29,124</div>
+ </div>
+ </div>
+
+ <div class="canvas-stage-sim">
+ <canvas id="chartSim"></canvas>
+ </div>
+ <div class="chart-legend" style="margin-top:4px;">
+ <span class="mui-chip mui-chip-primary mono">━ 含基建外溢第二曲线总资产轨迹</span>
+ <span class="mui-chip mono">- - 仅传统主业估值增长基准</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Positive vs Critical Lens Dual Cards -->
+ <div class="grid-2" style="margin-top: 18px;">
+ <div class="mui-alert mui-alert-success" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-success mono">ENDURING MOAT</span>
+ <strong>正向组织文化遗产定评</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;">
+ <strong>1. 人类商业史最强的横向孵化器：</strong>苹果擅长把单一生态打磨到极致，而亚马逊凭借 PR/FAQ 与双披萨自治从在线书店连续跨界生长出全球第一公有云、全美第二大杂货商与 $780亿 广告帝国。<br/>
+ <strong>2. 制度免疫“大企业粉饰症”：</strong>六页纸叙事与每周 WBR 几百项输入指标复盘，让高管直面真实运营缺陷。<br/>
+ <strong>3. 勇于自我推倒重来：</strong>无论是 6 人 76 天重写 Bedrock Mantle，还是彻底重接 6 亿终端 Alexa+ 大脑，绝不恋栈旧架构。
+ </p>
+ </div>
+
+ <div class="mui-alert mui-alert-warning" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-warning mono">CRITICAL LENS</span>
+ <strong>客观局限与组织张力反思</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;">
+ <strong>1. 分布式自治带来的产品体验碎片化：</strong>缺乏苹果单一工业设计团队的强集权统合，导致早年 AWS 控制台繁复或部分消费硬件（如 Fire Phone）缺乏系统级设计神韵。<br/>
+ <strong>2. 严格绩效淘汰（URA/Pivot）与 5 天 RTO 的人才摩擦：</strong>高强度绩效考核与全员返岗令部分顶尖 AI 研究员与资深工程师产生倦怠。<br/>
+ <strong>3. 扁平化执行温差：</strong>外部追踪显示部分裁员批次中一线工程师占比偏高，如何防止中层变形执行仍是贾西持续纠偏的重点。
+ </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- 05 三代演进与四大战役复盘 -->
+ <section id="sec-05" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 05 · THREE-ACT EVOLUTION &amp; LANDMARK BATTLES</div>
+ <h2 class="sec-h2" data-i18n-zh="五、三幕文化演进与四大战役复盘：从西雅图车库门板桌到双万亿蓝图" data-i18n-en="5. Three-Act Cultural Evolution & Landmark Battles: From Door Desks to Dual $1T Horizons">五、三幕文化演进与四大战役复盘：从西雅图车库门板桌到双万亿蓝图</h2>
+ <p class="sec-sub" data-i18n-zh="每一次组织架构卡壳，亚马逊都用一项可复制的“硬机制（Mechanism）”将其永久解决" data-i18n-en="Whenever scale created friction, Amazon invented an enduring organizational mechanism rather than adding bureaucracy">每一次组织架构卡壳，亚马逊都用一项可复制的“硬机制（Mechanism）”将其永久解决</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">1994 创立 → 2026 跨越 32 周年</span>
+ </div>
+
+ <div class="mui-timeline">
+ <div class="timeline-step">
+ <span class="timeline-dot"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;">第一幕 · 门板桌创业、1997 股东信宪章与 API 解耦革命 (1994–2005)</strong>
+ <span class="mui-chip mono">确立 Day 1 与 Bar Raiser</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);">贝索斯用家得宝木门拼成办公桌立下节俭基因；1997 年 IPO 致股东信确立“牺牲短期会计利润、最大化长期自由现金流现值”；2002 年颁布传奇 API 法令，将单体巨石系统拆解为双披萨服务小队，并在 2004 年废除 PPT 全面转向六页纸叙事。</p>
+ </div>
+
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#3399FF;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;">第二幕 · Prime、FBA 与 AWS 三大飞轮爆发与疫情极限扩建 (2006–2021)</strong>
+ <span class="mui-chip mui-chip-primary mono">营收破 $4,698亿 · 员工达160万</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);">安迪·贾西率 57 人小队创立 AWS 开创全球云计算时代；零售端 Prime 与 FBA 飞轮咬合，收购 Kiva 奠定仓储机器人底座、收购 Annapurna Labs 开启芯片自研；2020–2021 年短短两年将二十五年建成的履约网络翻倍，并于 2021 年将领导力准则扩充至 16 条。</p>
+ </div>
+
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#22C55E;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;">第三幕 · 贾西区域化提效、“世界最大初创”扁平化与 $2,200亿 AI 豪赌 (2021–2026+)</strong>
+ <span class="mui-chip mui-chip-success mono">Q3'26 营业利润率 13.9% 新高</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);">贾西接任 CEO 后先以全美 8 大区域化履约改革扭转通胀成本，继而在 2024–2026 推行 +15% IC/经理比扁平化与“Why 文化”，驱动 TTM 营业利润首破千亿（$1,043.7亿），同时果断投入 ~$2,200亿 年度 CapEx 全面领跑 Agentic AI、自研芯片与低轨卫星 <a class="cite-link" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">Q3'26 财报 ↗</a>。</p>
+ </div>
+ </div>
+
+ <!-- 4 Landmark Battle Case Studies -->
+ <div class="grid-2" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-primary mono">案例 01 · 2002–2006</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">架构即战略</span>
+ </div>
+ <h3>2002 API 强制令：一句话“不服从就解雇”催生 $1,840亿 AWS</h3>
+ <p>为根治内部跨部门数据耦合瘫痪，贝索斯下令所有团队接口必须按“随时可对外售卖”标准构建。当内部电商团队因此获得弹性存储与算力后，贾西顺势将其封装为 S3 与 EC2 卖给全球开发者，缔造商业史最伟大的内部孵化奇迹。</p>
+ </div>
+
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-error mono">案例 02 · 2014 → 2026</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">失败容忍与重生</span>
+ </div>
+ <h3>Fire Phone 减记 $1.7亿惨败，转身孵化 6亿终端 Echo 与 Alexa+</h3>
+ <p>贝索斯面对 Fire Phone 惨败向团队表示：“如果你觉得这是大失败，我们此刻正研究更大的失败。”原班语音与远场拾音工程骨干零惩罚转入 Echo 研发，并在 2025–2026 推倒重写为生成式 Alexa+（设备端购物转化翻 3 倍）。</p>
+ </div>
+
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-success mono">案例 03 · 2023–2026</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">运营深潜 Dive Deep</span>
+ </div>
+ <h3>全美履约网络从“全国一张大网”重构为“8大自给区域”</h3>
+ <p>Doug Herrington 团队深入库存拓扑算法，将跨州长途调拨改为 8 大区域就近备货并叠加 85+ 座当日达中心，使北美分部单季营业利润从低谷跃升至 Q3 2026 的 $87.2亿（同比大涨 +82%）。</p>
+ </div>
+
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-warning mono">案例 04 · 2025–2026</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">反熵增扁平化</span>
+ </div>
+ <h3>反官僚信箱 + 6人76天重写 Bedrock Mantle 引擎</h3>
+ <p>面对大模型日新月异的迭代速度，贾西与 AWS CEO Matt Garman 砍掉繁琐层级汇报，赋能极精干小团队用 Kiro 智能体从白纸重构核心推理引擎，直接助推 AWS Q3 增速飙至 +39.3%。</p>
+ </div>
+ </div>
+
+ <!-- 3 Cultural Laws -->
+ <div class="grid-3">
+ <div class="mui-alert">
+ <div><strong>法则一：</strong>不要指望员工在 160 万人规模下靠“自觉和善意”维持高标准——必须把价值观转化为 PR/FAQ、六页纸与抬杆人等硬性闭合机制。</div>
+ </div>
+ <div class="mui-alert">
+ <div><strong>法则二：</strong>凡需要覆盖海量场景并快速横向试错的平台型帝国，必须用契约化 API 与单线程双披萨小队消除跨部门协调税。</div>
+ </div>
+ <div class="mui-alert">
+ <div><strong>法则三：</strong>区分不可逆的“单向门”与可逆的“双向门”——对双向门极速放权试错，一旦识别到 AI 级历史拐点则敢于顶住短期 FCF 逆风下重注。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 06 亚马逊文化法则核查清单 -->
+ <section id="sec-06" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 06 · INTERACTIVE DAY-1 ORGANIZATION DIAGNOSTIC CHECKLIST</div>
+ <h2 class="sec-h2" data-i18n-zh="六、“Day 1 反熵增法则”企业组织活力与机制交互式核查清单" data-i18n-en="6. Interactive 'Day 1 Anti-Entropy' Organization & Mechanism Diagnostic Checklist">六、“Day 1 反熵增法则”企业组织活力与机制交互式核查清单</h2>
+ <p class="sec-sub" data-i18n-zh="用于诊断任何大型科技、零售或平台企业是否陷入“Day 2 官僚停滞”（勾选状态自动保存在本地）" data-i18n-en="Diagnose whether an enterprise operates with Day 1 velocity or Day 2 bureaucracy (saved locally)">用于诊断任何大型科技、零售或平台企业是否陷入“Day 2 官僚停滞”（勾选状态自动保存在本地）</p>
+ </div>
+ <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+ <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono">已核查 3 / 6 项 (50%)</span>
+ <button type="button" id="checkAllBtn" class="mui-btn" data-i18n-zh="全部勾选" data-i18n-en="Check All">全部勾选</button>
+ <button type="button" id="resetCheckBtn" class="mui-btn" data-i18n-zh="重置清单" data-i18n-en="Reset">重置清单</button>
+ </div>
+ </div>
+
+ <div class="progress-track" aria-label="核查完成度进度条">
+ <div id="checklistProgressBar" class="progress-fill"></div>
+ </div>
+
+ <div id="checklistContainer" class="checklist-grid"></div>
+ </section>
+
+ <!-- 07 Primary Sources -->
+ <footer id="sec-07" class="mui-paper section-block" style="padding: 22px 26px;">
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;">
+ <strong style="font-size:0.92rem;">数据来源与一手监管/股东信核验索引（SEC EDGAR · Amazon IR · About Amazon）</strong>
+ <span class="mui-chip mono">MUI Branding UI Architecture · Offline Ready</span>
+ </div>
+ <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;">
+ 本研报所有财务、分业务营收、员工编制、资本开支、管理层备忘录与股东信引述均严格核验自美国证监会（SEC EDGAR）、亚马逊投资者关系官网（Amazon IR）及官方新闻中心，仅供企业文化与组织架构研究参考，不构成任何投资建议。
+ </p>
+ <ul class="sources-list">
+ <li><span class="mono">[01]</span><a href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">Amazon IR — Q3 2026 Financial Results ($201.9B Sales · 13.9% Record OpM · 2026-10-29) ↗</a></li>
+ <li><span class="mono">[02]</span><a href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/" target="_blank" rel="noopener noreferrer">Amazon IR — Q4 &amp; Full-Year 2025 Financial Results ($716.92B Sales · 2026-02-05) ↗</a></li>
+ <li><span class="mono">[03]</span><a href="https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm" target="_blank" rel="noopener noreferrer">SEC EDGAR — Amazon.com, Inc. FY2025 Form 10-K Annual Report ↗</a></li>
+ <li><span class="mono">[04]</span><a href="https://s2.q4cdn.com/299287126/files/doc_financials/2026/ar/2025-Shareholder-Letter-Final.pdf" target="_blank" rel="noopener noreferrer">CEO Andy Jassy's 2025 Letter to Shareholders &amp; Reprinted 1997 Letter (2026-04-09) ↗</a></li>
+ <li><span class="mono">[05]</span><a href="https://www.aboutamazon.com/news/company-news/ceo-andy-jassy-latest-update-on-amazon-return-to-office-manager-team-ratio" target="_blank" rel="noopener noreferrer">About Amazon — Andy Jassy Memo: +15% IC-to-Manager Ratio &amp; Bureaucracy Mailbox ↗</a></li>
+ <li><span class="mono">[06]</span><a href="https://fortune.com/2024/11/08/amazon-ceo-andy-jassy-hates-bureaucracy-employee-to-manager-ratio/" target="_blank" rel="noopener noreferrer">Fortune — Inside Andy Jassy's Anti-Bureaucracy Campaign &amp; Flattening Mandate ↗</a></li>
+ <li><span class="mono">[07]</span><a href="https://siliconangle.com/2025/07/13/exclusive-amazon-web-services-ceo-matt-garman-bets-agentic-future/" target="_blank" rel="noopener noreferrer">SiliconANGLE — AWS CEO Matt Garman on 'Why' Culture, Two-Pizza AI &amp; Strands ↗</a></li>
+ <li><span class="mono">[08]</span><a href="https://andrewclark.co.uk/all-media/working-backwards" target="_blank" rel="noopener noreferrer">Working Backwards (Bryar &amp; Carr) — 16 LPs, PR/FAQ, 6-Pagers &amp; Bar Raiser Process ↗</a></li>
+ </ul>
+ </footer>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/amazon_culture_organization.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

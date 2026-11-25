@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="crcl" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Circle Internet Group, Inc. (NYSE: CRCL) 商业模式全景架构拆解：正门合规数字美元铸币入口、$739亿全额储备国债浮存金、18.1%平台直存剪刀差、CPN跨境清算网与Arc企业级公链第二增长曲线（基于 FY2025 10-K 与 Q3 2026 最新财报）。" />
+ <title>Circle CRCL 商业模式架构拆解 | 数据中心</title>
+ 
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/circle_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body id="top"><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted Glass MUI AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">CRCL</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="#top">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2zm0 16a6 6 0 1 1 6-6 6.007 6.007 0 0 1-6 6z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="Circle (CRCL) 商业模式架构拆解" data-i18n-en="Circle (CRCL) Business Model Architecture">Circle (CRCL) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NYSE: CRCL</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">TTM $3.03B · RLDC 52.4%</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与套件导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">CRCL · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="Circle 商业模式架构图谱" data-i18n-en="Circle Business Model Blueprint">Circle 商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="合规美元铸币入口 × $739亿国债储备生息 × 18.1%平台直存提留存 × CPN/Arc 非利差清算飞轮" data-i18n-en="Regulated Mint Funnel × $73.9B Treasury Reserve Float × 18.1% Platform Custody × CPN/Arc Rails">合规美元铸币入口 × $739亿国债储备生息 × 18.1%平台直存提留存 × CPN/Arc 非利差清算飞轮</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="国债浮存金 + 链上清算网" data-i18n-en="Treasury Float + Rails">国债浮存金 + 链上清算网</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="Q3'26 RLDC / EBITDA率" data-i18n-en="Q3'26 RLDC / EBITDA">Q3'26 RLDC / EBITDA率</span>
+ <span class="sidebar-mini-val mono">52.4% · 70.0%</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="链上交易份额 / 有息债" data-i18n-en="Tx Share / Total Debt">链上交易份额 / 有息债</span>
+ <span class="sidebar-mini-val mono">79.0% · $0 Debt</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="套件导航与架构目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="CRCL"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与收入拆解" data-i18n-en="RLDC Waterfall &amp; Stack">利润池瀑布流与收入拆解</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="渠道分润剪刀差与单币经济" data-i18n-en="Channel Custody Economics">渠道分润剪刀差与单币经济</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="隔离储备安全垫与复利推演" data-i18n-en="Reserve Safety &amp; 5Y Lab">隔离储备安全垫与复利推演</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="全球支付矩阵与三大压测" data-i18n-en="Peer Matrix &amp; Stress Audit">全球支付矩阵与三大压测</span></a></li>
+ </ul>
+ </nav>
+
+ </aside>
+
+ <!-- Main Non-Linear Workspace -->
+ <main class="bm-workspace main-content">
+
+ <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：零付息国债浮存金 × 79%链上结算垄断清算网" data-i18n-en="ARCHETYPE: Zero-Interest Treasury Float × 79% Onchain Settlement Network">商业范式：零付息国债浮存金 × 79%链上结算垄断清算网</span>
+ <span class="mui-chip mui-chip-success mono">FY2025 10-K &amp; Q3 2026 口径</span>
+ <span class="mui-chip mui-chip-violet mono">净现金 $2.72B · 零有息负债</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="Circle 商业模式解构：<span class='bm-gradient-txt'>以正门合规铸就 $739亿 数字美元底座，从“国债利差分成”跃迁“全栈互联网金融 OS”</span>" data-i18n-en="Deconstructing Circle's Business Model: <span class='bm-gradient-txt'>$73.9B Regulated Dollar Float Transitioning into the Internet's Full-Stack Economic OS</span>">
+ Circle 商业模式解构：<span class="bm-gradient-txt">以正门合规铸就 $739亿 数字美元底座，从“国债利差分成”跃迁“全栈互联网金融 OS”</span>
+ </h1>
+
+ <p class="bm-lead">
+ 华尔街常将 <strong>Circle Internet Group (NYSE: CRCL)</strong> 简单简化为一只“押注美联储短期利率的货币基金影子股”，但其真实商业架构正经历深刻的<strong>三阶范式跃迁</strong>：第一阶通过美国 GENIUS 法案、OCC 联邦国民信托银行有条件牌照及欧盟 MiCA 构筑正门合规壁垒，吸纳全球 <strong>$739亿 USDC 零息法币浮存金</strong>，其中约 88% 配置于贝莱德管理的 <strong>Circle Reserve Fund</strong> 赚取国债无风险收益（FY2025 总收入 <strong>$27.47亿，+64% YoY</strong>；TTM 达 <strong>$30.31亿</strong>）
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000032/final_circlereportsfourt.htm" target="_blank" rel="noopener noreferrer">SEC FY25 8-K ↗</a>；第二阶加速做大 <strong>Circle Platform 机构直存规模（Q3'26 达 $139亿、日均权重升至 18.1%，+462bps）</strong>，稀释第三方交易所约 60% 分润侵蚀
+ <a class="cite-link" href="https://research.artemis.ai/p/circle-internet-group-crcl" target="_blank" rel="noopener noreferrer">Artemis 分润拆解 ↗</a>；第三阶依托单季 <strong>$13.9万亿 链上结算量（占全球稳定币交易量 79%）</strong>，推出年化 TPV 飙升超 15 倍至 <strong>$413亿 的 Circle Payments Network (CPN)</strong> 与 <strong>Arc 企业级 Layer-1 公链主网</strong>，推动 Q3'26 扣除分润后净留存利润率（RLDC Margin）跳升至 <strong>52.4%</strong>、经调整 EBITDA 达 <strong>$3.17亿（70% 利润率）</strong>
+ <a class="cite-link" href="https://www.businesswire.com/news/home/20261104960710/en/Circle-Reports-Third-Quarter-2026-Results" target="_blank" rel="noopener noreferrer">Q3 2026 官方财报 ↗</a>。
+ </p>
+ </div>
+
+ <!-- Interactive 3-Lens Business Formula Switcher -->
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 零息国债浮存金漏斗" data-i18n-en="① Zero-Cost Treasury Float">① 零息国债浮存金漏斗</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 平台直存分润剪刀差" data-i18n-en="② Custody Margin Scissors">② 平台直存分润剪刀差</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 利率免疫清算收费站" data-i18n-en="③ Rate-Free Settlement Rails">③ 利率免疫清算收费站</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 年度净留存收益 (RLDC) = [日均 USDC 流通量 ($73.3B) × 储备国债收益率 (3.54%) - 渠道分润成本] + 非利差网络与生态收入 ($207.3M/季)
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 根据美国《GENIUS 法案》与欧盟 MiCA 法规，支付型稳定币<strong>法定禁止向持币散户直接派发利息</strong>。这使得 Circle 如同伯克希尔的保险浮存金机器：全球企业与用户在 30+ 条公链上沉淀的 $739 亿数字美元无需支付存款利息，100% 隔离储备所产生的短期美债收益由 Circle 与核心分发伙伴共享。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: Live Financial Telemetry Ledger -->
+ <aside class="bm-telemetry-ledger" aria-label="FY2025 & Q3 2026 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="Q3 2026 &amp; TTM 核心经济遥测账本" data-i18n-en="Q3 2026 &amp; TTM Financial Telemetry">Q3 2026 &amp; TTM 核心经济遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://www.businesswire.com/news/home/20261104960710/en/Circle-Reports-Third-Quarter-2026-Results" target="_blank" rel="noopener noreferrer">Q3'26 10-Q/8-K ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="TTM 总营收与储备收入 (FY25 $2.75B)" data-i18n-en="TTM Total Revenue &amp; Reserve Income">TTM 总营收与储备收入 (FY25 $2.75B)</span>
+ <span class="bm-tel-val mono">$3.03B <small style="font-size:0.74rem;color:var(--mui-success-text);">Q3 +17%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:76%;"></div>
+ <div style="width:24%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q3'26 Reserve $657.6M</span><span>Q3'26 Other $207.3M (+627%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="Q3'26 扣除分润净收入 (RLDC 利润率)" data-i18n-en="Q3'26 RLDC &amp; Net Retention Margin">Q3'26 扣除分润净收入 (RLDC 利润率)</span>
+ <span class="bm-tel-val mono">$453.3M <small style="font-size:0.74rem;color:var(--mui-success-text);">52.4%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:52.4%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ <div style="width:47.6%;background:rgba(148,163,184,0.35);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>RLDC +55% YoY (+1,291bps)</span><span>分润成本 $411.6M (-8% YoY)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="Q3'26 经调整 EBITDA (占 RLDC 70%)" data-i18n-en="Q3'26 Adjusted EBITDA (70% of RLDC)">Q3'26 经调整 EBITDA (占 RLDC 70%)</span>
+ <span class="bm-tel-val mono">$316.7M <small style="font-size:0.74rem;color:var(--mui-success-text);">+85% YoY</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:70%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>GAAP 净利 $226.0M ($0.84 EPS)</span><span>TTM Adj. EBITDA $787.5M</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="USDC 流通盘 × Q3 链上结算交易额" data-i18n-en="USDC Circulation × Q3 Onchain Volume">USDC 流通盘 × Q3 链上结算交易额</span>
+ <span class="bm-tel-val mono">$73.9B / $13.9T</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:79%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>占全球稳定币交易量 79%</span><span>平台直存 $13.9B (18.1%)</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END DIGITAL DOLLAR VALUE CAPTURE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从全球法币合规铸币到互联网经济 OS 复利" data-i18n-en="5-Node Value-Chain Pipeline: From Regulated Fiat Minting to Economic OS Compounding">五阶商业价值传导沙盘：从全球法币合规铸币到互联网经济 OS 复利</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解 Circle 在该环节的牌照护城河、分润博弈结构与核心量化指标。" data-i18n-en="Select any node in the horizontal value chain to inspect licensing moats, revenue-share mechanics, and KPIs.">点击下方任一价值链节点，拆解 Circle 在该环节的牌照护城河、分润博弈结构与核心量化指标。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">MINT GATEWAY</span></div>
+ <div class="bm-node-title" data-i18n-zh="全球牌照矩阵与 Circle Mint" data-i18n-en="Global Licenses &amp; Circle Mint">全球牌照矩阵与 Circle Mint</div>
+ <div class="bm-node-kpi mono">185+国电汇 · Q3铸赎各 $104B</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">RESERVE FLOAT</span></div>
+ <div class="bm-node-title" data-i18n-zh="贝莱德 2a-7 国债储备生息池" data-i18n-en="BlackRock 2a-7 Reserve Engine">贝莱德 2a-7 国债储备生息池</div>
+ <div class="bm-node-kpi mono">$73.6B 隔离储备 · 88% 国债基金</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">CUSTODY SPLIT</span></div>
+ <div class="bm-node-title" data-i18n-zh="渠道分润与平台直存重构" data-i18n-en="Distribution vs Platform Custody">渠道分润与平台直存重构</div>
+ <div class="bm-node-kpi mono">直存 18.1% (+462bps) 提留存</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">PAYMENT RAILS</span></div>
+ <div class="bm-node-title" data-i18n-zh="CPN 跨境清算与 CCTP 全链桥" data-i18n-en="CPN Cross-Border &amp; CCTP">CPN 跨境清算与 CCTP 全链桥</div>
+ <div class="bm-node-kpi mono">CPN $41.3B TPV (+15x YoY)</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">ARC ECONOMIC OS</span></div>
+ <div class="bm-node-title" data-i18n-zh="Arc 公链与高经营杠杆复利" data-i18n-en="Arc Mainnet &amp; Operating Leverage">Arc 公链与高经营杠杆复利</div>
+ <div class="bm-node-kpi mono">Q3 Adj. EBITDA 率高达 70%</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · REGULATED FIAT ON/OFF-RAMP GATEWAY</span>
+ <h3 id="nodeTitle">正门监管护城河（GENIUS 法案 + OCC 信托银行 + MiCA）：全球机构法币上链唯一首选通道</h3>
+ <p id="nodeDesc">
+ 机构客户通过 Circle Mint 账户在 185+ 个国家和地区将美元、欧元实时 1:1 铸造为链上 USDC 与 EURC。依托美国联邦《GENIUS 法案》、OCC 国民信托银行有条件批文、纽约 BitLicense（2015 年首张）及欧盟法国 MiCA 电子货币机构牌照，Circle 自 2018 年以来已累计处理逾 $53.3 万亿美元的传统银行与公链跨轨资金流转。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 商业传导：牌照合规垄断 → 零获客补贴吸引银行/PSP/跨国企业直接开立 Circle Mint → Q3'26 单季铸币 $104B、赎回 $104B
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">185+ 国</b><span>支持法币电汇铸造与赎回</span></div>
+ <div class="bm-ins-card"><b class="mono">$53.3T+</b><span>2018 以来累计法币-链上吞吐</span></div>
+ <div class="bm-ins-card"><b class="mono">30+ 公链</b><span>原生发行无需第三方包装桥</span></div>
+ <div class="bm-ins-card"><b class="mono">7.3M 个</b><span>持有 &gt;$10 USDC 活跃有效钱包</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: DUAL-ENGINE PROFIT POOL (7:5 ASYMMETRIC SPLIT) -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; RLDC SCISSORS</span>
+ <h3 data-i18n-zh="Q3 2026 $8.65亿 损益瀑布流与 5 季度净留存剪刀差" data-i18n-en="Q3 2026 $865M P&amp;L Waterfall &amp; 5-Quarter RLDC Scissors">Q3 2026 $8.65亿 损益瀑布流与 5 季度净留存剪刀差</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="Q3'26 营收→EBITDA 瀑布" data-i18n-en="Q3'26 Rev → EBITDA">Q3'26 营收→EBITDA 瀑布</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="5季度 RLDC 利润率跃升" data-i18n-en="5Q RLDC Margin Expansion">5季度 RLDC 利润率跃升</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 数据来源：<a class="cite-link" href="https://www.businesswire.com/news/home/20261104960710/en/Circle-Reports-Third-Quarter-2026-Results" target="_blank" rel="noopener noreferrer">Circle Q3 2026 财报 ↗</a> 与
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000032/final_circlereportsfourt.htm" target="_blank" rel="noopener noreferrer">FY2025 Form 8-K ↗</a>。
+ 核心看点：一旦跨越渠道分润成本线（RLDC $453.3M），由于全公司仅约千名精兵且全年固定资产净值仅 $2,115万，<strong>RLDC 向经调整 EBITDA（$316.7M）的经营转化率高达 70.0%</strong>！
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · 4-TIER MONETIZATION ARCHITECTURE</span>
+ <h3 data-i18n-zh="四大收入与毛利引擎拆解（从利差走向网络费）" data-i18n-en="4-Tier Monetization Stack (From Yield to Network Fees)">四大收入与毛利引擎拆解（从利差走向网络费）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="float" data-i18n-zh="储备生息" data-i18n-en="Float Yield">储备生息</button>
+ <button type="button" class="mui-seg-btn" data-tcat="net" data-i18n-zh="网络与平台" data-i18n-en="Network/SaaS">网络与平台</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="float">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="① 平台直存 USDC 储备国债收益 (18.1% 权重)" data-i18n-en="① On-Platform USDC Reserve Yield (18.1% Share)">① 平台直存 USDC 储备国债收益 (18.1% 权重)</span>
+ <span class="mui-chip mui-chip-success mono">净留存率 ~100%</span>
+ </div>
+ <div class="bm-tier-desc">存放于 Circle Mint 及企业级托管账户内的 $139亿 USDC 无需向外部交易所让渡高比例分成，每一分国债利息近乎全额沉淀为 Circle 自身 RLDC。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="float">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="② 全球生态伙伴分发池储备分润 (Coinbase / 币安等)" data-i18n-en="② Ecosystem Distribution Float Pool (Coinbase / Binance)">② 全球生态伙伴分发池储备分润 (Coinbase / 币安等)</span>
+ <span class="mui-chip mui-chip-primary mono">Q3 总储备收入 $657.6M</span>
+ </div>
+ <div class="bm-tier-desc">借力 Coinbase、Binance（5年续约+1亿美元入股）、Visa 与拉美/亚太钱包触达 6亿+ 终端钱包，虽让渡约 58%–60% 分润，但零买量筑起全球流动性护城河。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="net">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="③ Circle Payments Network (CPN) 跨境 B2B 结算费" data-i18n-en="③ Circle Payments Network (CPN) Settlement Take-Rate">③ Circle Payments Network (CPN) 跨境 B2B 结算费</span>
+ <span class="mui-chip mui-chip-violet mono">年化 TPV $41.3B (+Tazapay)</span>
+ </div>
+ <div class="bm-tier-desc">已接入 205 家金融机构，叠加拟 $4亿收购的 Tazapay（$25B+ TPV），对企业跨境收付收取基点级（bps）结算与编排服务费，完全免疫美联储降息周期。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="net">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="④ Arc 公链生态、CCTP 跨链收费与 USYC 资产管理费" data-i18n-en="④ Arc L1 Ecosystem, CCTP/xReserve &amp; USYC Fees">④ Arc 公链生态、CCTP 跨链收费与 USYC 资产管理费</span>
+ <span class="mui-chip mui-chip-warning mono">FY26E 其他收入 $3.1–$3.3亿</span>
+ </div>
+ <div class="bm-tier-desc">2026年9月 Arc 主网上线单季确认 $1.818亿 代币预售收入；同时 CCTP（占跨链桥量近半）、xReserve 链间订阅、可编程钱包与 $15亿+ USYC 代币化货基构建纯软件高毛利矩阵。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: REVERSED 5:7 SPLIT — CHANNEL UNIT ECONOMICS & TRANSACTION SHARE -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · CUSTODY &amp; DISTRIBUTION ECONOMICS</span>
+ <h3 data-i18n-zh="单币分层经济模型：为什么“平台直存占比”是利润率胜负手？" data-i18n-en="Channel Unit Economics: Why On-Platform Custody Drives Margin">单币分层经济模型：为什么“平台直存占比”是利润率胜负手？</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="exch" data-i18n-zh="历史核心交易所池" data-i18n-en="Legacy Exchange Pool">历史核心交易所池</button>
+ <button type="button" class="mui-seg-btn" data-cohort="global" data-i18n-zh="新兴银行/PSP渠道" data-i18n-en="Global Bank/PSP Partners">新兴银行/PSP渠道</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="direct" data-i18n-zh="Circle 平台直存 (18.1%)" data-i18n-en="Circle On-Platform (18.1%)">Circle 平台直存 (18.1%)</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat">
+ <div class="lbl">典型持币场景与客群</div>
+ <div class="val" style="font-size:0.94rem;">Circle Mint 机构户 / 跨国企业财资</div>
+ <div class="delta">Q3 期末直存 $13.9B (+36% YoY)</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">渠道分润让渡比例</div>
+ <div class="val mono">~0% 分润</div>
+ <div class="delta">摆脱外部交易所 50%+ 分成盘剥</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">每 $10B 规模年化净留存 (3.54%利率)</div>
+ <div class="val mono">~$354M / 年</div>
+ <div class="delta">约为第三方深度分润渠道的 2.3 倍</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">日均加权流通占比演进</div>
+ <div class="val mono">18.1%</div>
+ <div class="delta">较 FY24 低位大幅跃升 (YoY +462bps)</div>
+ </div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>平台直存棘轮效应：</strong>2023 年 8 月重签协议后，分润按<strong>“谁托管/获客谁优先分成 + 剩余生态池对半平分”</strong>执行
+ <a class="cite-link" href="https://research.artemis.ai/p/circle-internet-group-crcl" target="_blank" rel="noopener noreferrer">Artemis 深度研报 ↗</a>。这意味着每当 Visa Direct、SAP/Tereina 或跨国金融机构直接在 Circle 平台持有 USDC，Circle 不仅省下高昂渠道税，还能顺势交叉销售 CPN 与可编程钱包 API！
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · CHANNEL RETENTION &amp; VELOCITY DOMINANCE</span>
+ <h3 data-i18n-zh="三大渠道净留存对比与“27% 存量撬动 79% 链上交易量”之谜" data-i18n-en="Channel Retention Comparison &amp; 27% Stock vs 79% Volume Share">三大渠道净留存对比与“27% 存量撬动 79% 链上交易量”之谜</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="share" data-i18n-zh="存量份额 vs 链上交易份额" data-i18n-en="Circulation vs Tx Share">存量份额 vs 链上交易份额</button>
+ <button type="button" class="mui-seg-btn" data-cview="yield" data-i18n-zh="每 $10B 渠道净留存 ($M)" data-i18n-en="Net RLDC per $10B ($M)">每 $10B 渠道净留存 ($M)</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 核心发现：尽管 USDC 按流通市值占合规美元稳定币约 <strong>27%</strong>（仅次于离岸 USDT），但由于 USDC 100% 透明合规且深度集成 DeFi 智能合约、CCTP 与企业支付，Q3'26 单季链上交易额暴涨 +49% 至 <strong>$13.9万亿美元，独占全球稳定币链上交易量的 79%</strong>
+ <a class="cite-link" href="https://finance.biggo.com/news/US_CRCL_2026-11-04" target="_blank" rel="noopener noreferrer">Q3 业绩电话会纪要 ↗</a>！
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: 6:6 DUAL WORKBENCH — RESERVE SAFETY + LIVE 5-YEAR SIMULATOR -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · FORTRESS BALANCE SHEET &amp; EBITDA SCALING</span>
+ <h3 data-i18n-zh="$736亿 100%隔离储备安全垫与季度 EBITDA 跃升曲线" data-i18n-en="$73.6B Segregated Reserve Fortress &amp; Quarterly EBITDA Trajectory">$736亿 100%隔离储备安全垫与季度 EBITDA 跃升曲线</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="ebitda" data-i18n-zh="5季度 EBITDA 跃升 ($M)" data-i18n-en="5Q Adj. EBITDA ($M)">5季度 EBITDA 跃升 ($M)</button>
+ <button type="button" class="mui-seg-btn" data-kview="reserve" data-i18n-zh="隔离储备与自有净现金" data-i18n-en="Reserve &amp; Cash Mix">隔离储备与自有净现金</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 资产负债表核验（截至 2026 年 9 月 30 日）：持币人隔离储备资产达 <strong>$735.75亿</strong>（对应持币人存款负债 $734.51亿，超额足额覆盖），约 88% 存放于贝莱德管理的 SEC 注册 2a-7 政府货币市场基金；公司自有现金及企业持币隔离现金达 <strong>$27.16亿</strong>，可转债已全部清零（<strong>$0 有息负债</strong>）
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000062/crcl-20251231.htm" target="_blank" rel="noopener noreferrer">SEC 10-K/10-Q ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 2026–2031E RATE &amp; FLOAT SIMULATOR</span>
+ <h3 data-i18n-zh="2026–2031E 利率周期 × 流通规模 × 非利差收入交互推演器" data-i18n-en="2026–2031E Rate × USDC Float × CPN Revenue Simulator">2026–2031E 利率周期 × 流通规模 × 非利差收入交互推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="大幅降息压测" data-i18n-en="Low-Rate Bear">大幅降息压测</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="40% 指引基准" data-i18n-en="40% CAGR Base">40% 指引基准</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="全球清算超周期" data-i18n-en="Global Rail Bull">全球清算超周期</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="USDC 流通规模年复合增速 (官方多周期指引 40%)" data-i18n-en="USDC Circulation CAGR (Guidance: 40%)">USDC 流通规模年复合增速 (官方多周期指引 40%)</span><b class="mono" id="lblUsdcCagr">40.0%</b></div>
+ <input type="range" id="inpUsdcCagr" min="15" max="55" step="2.5" value="40" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="中长期稳态国债储备收益率 (Reserve Yield %)" data-i18n-en="Steady-State Reserve Return Rate (%)">中长期稳态国债储备收益率 (Reserve Yield %)</span><b class="mono" id="lblResYield">3.2%</b></div>
+ <input type="range" id="inpResYield" min="1.5" max="5.0" step="0.1" value="3.2" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="储备净留存率 (Net Reserve Margin · 直存提升驱动)" data-i18n-en="Net Reserve Retention Margin (%)">储备净留存率 (Net Reserve Margin · 直存提升驱动)</span><b class="mono" id="lblNetMargin">43.0%</b></div>
+ <input type="range" id="inpNetMargin" min="35" max="55" step="1" value="43" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simFloatOut">$398B</b><span data-i18n-zh="2031E USDC 流通盘" data-i18n-en="2031E Avg USDC">2031E USDC 流通盘</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simRldcOut">$6.37B</b><span data-i18n-zh="2031E RLDC 净收入" data-i18n-en="2031E Total RLDC">2031E RLDC 净收入</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simMarginOut">46.8%</b><span data-i18n-zh="2031E 综合 RLDC 率" data-i18n-en="2031E RLDC Margin">2031E 综合 RLDC 率</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEbitdaOut">$4.14B</b><span data-i18n-zh="2031E 经调整 EBITDA" data-i18n-en="2031E Adj. EBITDA">2031E 经调整 EBITDA</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: GLOBAL FINTECH & STABLECOIN MATRIX + STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球稳定币与支付清算巨头商业模型横向对标及三大风险压测" data-i18n-en="Global Stablecoin &amp; Payment Network Matrix &amp; Stress Audit">全球稳定币与支付清算巨头商业模型横向对标及三大风险压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比六大数字美元及传统清算巨头的分润结构、合规深度与利率敏感度，并核查 Circle 商业模式三大核心挑战。" data-i18n-en="Benchmarking Circle against stablecoin and payment peers across margin structure, licensing, and rate sensitivity.">对比六大数字美元及传统清算巨头的分润结构、合规深度与利率敏感度，并核查 Circle 商业模式三大核心挑战。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="stable" data-i18n-zh="稳定币与加密基建" data-i18n-en="Stablecoin / Crypto">稳定币与加密基建</button>
+ <button type="button" class="mui-seg-btn" data-pcat="pay" data-i18n-zh="全球清算与支付网" data-i18n-en="Payment Networks">全球清算与支付网</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th>公司与代码</th>
+ <th>核心商业模式原型</th>
+ <th>净留存 / 毛利率特征</th>
+ <th>监管牌照与储备透明度</th>
+ <th>利率周期敏感度</th>
+ <th>终极护城河与核心脆弱点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-circle" data-row-cat="stable pay">
+ <td><strong>Circle (NYSE: CRCL)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>合规国债浮存金 + CPN 跨境网 + Arc 金融公链</td>
+ <td class="mono">RLDC 52.4% (FY25 39.4%) · EBITDA/RLDC 70%</td>
+ <td class="mono" style="color:var(--mui-success-text);">GENIUS + OCC 信托 + MiCA + 四大月审</td>
+ <td class="mono" style="color:var(--mui-warning-text);">中高 (CPN/Arc 正加速脱敏)</td>
+ <td>79% 链上交易量垄断与华尔街正门合规；短板在约 58% 渠道分润税</td>
+ </tr>
+ <tr data-row-cat="stable">
+ <td><strong>Tether (USDT · 未上市)</strong></td>
+ <td>离岸新兴市场美元替代品 + 零分润全额吃利差</td>
+ <td class="mono">~95%+ (几乎不向交易所分润)</td>
+ <td class="mono" style="color:var(--mui-error-text);">萨尔瓦多离岸注册 · 欧盟 MiCA 下架受限</td>
+ <td class="mono" style="color:var(--mui-warning-text);">极高 (纯储备收益与金比特币配置)</td>
+ <td>新兴市场散户点对点网络效应极深；无法直接合规进入美国银行与 ERP 体系</td>
+ </tr>
+ <tr data-row-cat="pay">
+ <td><strong>Visa (NYSE: V)</strong></td>
+ <td>全球四方卡组织清算网关过路费 (已接入 USDC 结算)</td>
+ <td class="mono">~80% 净营收利润率 · ~67% 营业利润率</td>
+ <td class="mono" style="color:var(--mui-success-text);">全球主权级金融清算牌照网络</td>
+ <td class="mono" style="color:var(--mui-success-text);">免疫 (按名义消费额抽基点，受益通胀)</td>
+ <td>40亿+ 张银行卡双边网络；跨境高费率走廊面临稳定币 B2B 直连替代</td>
+ </tr>
+ <tr data-row-cat="stable pay">
+ <td><strong>Stripe (+ Bridge)</strong></td>
+ <td>全球商户收单网关 + 收购 Bridge 切入稳定币编排 API</td>
+ <td class="mono">净收单留存率约 ~30–40bps (毛利率 ~42%)</td>
+ <td class="mono">欧美支付牌照齐全，非独立巨量稳定币发行方</td>
+ <td class="mono" style="color:var(--mui-success-text);">低 (以商户交易量抽成为主)</td>
+ <td>数百万互联网商户接入深度极强；底层稳定币流动性仍高度互通依赖 USDC</td>
+ </tr>
+ <tr data-row-cat="stable">
+ <td><strong>Coinbase (NASDAQ: COIN)</strong></td>
+ <td>美国合规加密交易经纪 + Base L2 + USDC 分润核心盟友</td>
+ <td class="mono">综合毛利率 ~85% (拿走 USDC 2025 总利差约 51%)</td>
+ <td class="mono" style="color:var(--mui-success-text);">美股上市合规标杆 + 机构现货 ETF 托管霸主</td>
+ <td class="mono">双向对冲 (降息伤利差但刺激散户交易量)</td>
+ <td>既是 Circle 最大分发引擎，也是拿走 FY25 $13.5亿 分润的最大利益博弈方</td>
+ </tr>
+ <tr data-row-cat="stable pay">
+ <td><strong>PayPal (PYUSD · PYPL)</strong></td>
+ <td>4.3亿双边电子钱包 + 高额补贴推广自有稳定币 PYUSD</td>
+ <td class="mono">综合交易毛利率 ~45%–47%</td>
+ <td class="mono">Paxos 合作纽约信托监管发行</td>
+ <td class="mono">低 (稳定币占集团体量尚小)</td>
+ <td>C端商户钱包基数庞大；但封闭生态属性强，跨所与企业 B2B 中立性弱于 USDC</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · FED RATE CUT SENSITIVITY</span>
+ <h4>美联储降息周期：每降息 100bps 冲击几何？</h4>
+ <p>Q3'26 储备回报率由上年同期的 4.15% 降至 <strong>3.54%（-61bps）</strong>，导致日均流通盘虽增 8%，单季储备收入仍微降 8% 至 $6.58亿
+ <a class="cite-link" href="https://www.businesswire.com/news/home/20261104960710/en/Circle-Reports-Third-Quarter-2026-Results" target="_blank" rel="noopener noreferrer">Q3'26 财报 ↗</a>。但关键缓冲机制在于：<strong>约 58%–60% 的利差波动由 Coinbase 等分润伙伴自动同步共担</strong>，静态测算在 $74B 盘子下每降息 100bps 对 Circle 自身 RLDC 净冲击仅约 $2.9亿–$3.1亿，可由 40% 流通量复合增速与 CPN 交易费对冲。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：美联储 SOFR 利率路径与 USDC 增速弹性</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · COINBASE 51% SHARE TAX</span>
+ <h4>渠道分润居高不下：能否打破 ~60% 分成天花板？</h4>
+ <p>2025 全年渠道分润与交易成本高达 $16.64亿（占总收入 60.6%，其中仅 Coinbase 即分走约 $13.5亿）
+ <a class="cite-link" href="https://beancount.io/blog/2026/09/13/circle-q2-2026-earnings-analysis" target="_blank" rel="noopener noreferrer">账本拆解 ↗</a>。Circle 破局三招已见成效：① 拉升自家平台直存权重至 <strong>18.1%</strong>（零分润）；② 续签币安 5 年协议并引入 SAP/Visa/传统银行直连，以更优阶梯条款稀释单一平台议价权；③ 放大 100% 归属自身的 CPN 与 Arc 网络收入。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：平台直存 USDC 占比能否突破 25% 关口</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · BANK COINS &amp; TMMF COMPETITION</span>
+ <h4>华尔街银行币与生息代币化货基（TMMF）分流</h4>
+ <p>《GENIUS 法案》落地后大型银行联盟加速探索自有存款代币，而交易机构对生息型代币化国债（如贝莱德 BUIDL）作为保证金需求上升。Circle 早已提前卡位：收购 Hashnote 将 <strong>$15亿+ USYC 代币化货币市场基金</strong>纳入自家版图，实现“计价结算用零息高频 USDC + 闲置财资一键秒转生息 USYC”的闭环防守
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000032/final_circlereportsfourt.htm" target="_blank" rel="noopener noreferrer">FY25 USYC 披露 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：USYC 资产规模及 USDC 27%+ 市场份额防线</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES FOOTER -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威 SEC 监管文件、季度财报与机构研究信源" data-i18n-en="Verified SEC Filings, Quarterly Releases &amp; Institutional Research">权威 SEC 监管文件、季度财报与机构研究信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.businesswire.com/news/home/20261104960710/en/Circle-Reports-Third-Quarter-2026-Results" target="_blank" rel="noopener noreferrer">
+ <b>Circle Q3 2026 Financial Results (Nov 4, 2026) ↗</b>
+ <span>官方披露 Q3 收入 $865M、RLDC 利润率 52.4%、经调整 EBITDA $317M、Arc 主网上线与拟收购 Tazapay</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000032/final_circlereportsfourt.htm" target="_blank" rel="noopener noreferrer">
+ <b>Circle FY2025 Form 8-K Full-Year Financial Tables ↗</b>
+ <span>审计口径 FY25 总营收与储备收入 $2,746.6M、RLDC $1,083.0M、经调整 EBITDA $582.2M 及资产负债表</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1876042/000187604226000062/crcl-20251231.htm" target="_blank" rel="noopener noreferrer">
+ <b>Circle Internet Group FY2025 SEC Form 10-K ↗</b>
+ <span>完整披露 Circle Reserve Fund 88% 储备配置、Coinbase 合作条款、xReserve、CCTP 与约 1,100 人团队架构</span>
+ </a>
+ <a class="bm-source-item" href="https://www.circle.com/pressroom/circle-launches-cpn-managed-payments-a-full-stack-platform-for-seamless-stablecoin-settlement" target="_blank" rel="noopener noreferrer">
+ <b>Circle Launches CPN Managed Payments (Apr 2026) ↗</b>
+ <span>Circle Payments Network 全栈企业级跨境法币与稳定币编排清算平台官方发布说明</span>
+ </a>
+ <a class="bm-source-item" href="https://research.artemis.ai/p/circle-internet-group-crcl" target="_blank" rel="noopener noreferrer">
+ <b>Artemis Institutional Research: Circle ($CRCL) ↗</b>
+ <span>深度拆解 Coinbase 51% 分润结构、非 Coinbase 渠道扩张推动毛利向 54% 演进及 CPN/CCTP 估值模型</span>
+ </a>
+ <a class="bm-source-item" href="https://s206.q4cdn.com/265218871/files/doc_financials/2025/ar/CRCL_AR_2026_WO13_WKV_PR-1.pdf" target="_blank" rel="noopener noreferrer">
+ <b>Circle 2025 Annual Report &amp; Shareholder Letter ↗</b>
+ <span>Jeremy Allaire 阐述从稳定币发行商向三层全栈互联网金融平台（Arc + 数字资产 + 应用层）跃迁蓝图</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/circle_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

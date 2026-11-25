@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marvell Technology 迈威尔科技 (MRVL) 全产品与服务深度研报中枢（FY26–FY27 全景拆解）| 数据中心</title>
+  <meta name="description" content="Marvell Technology 迈威尔科技 (NASDAQ: MRVL) 全系列 8 大产品线与服务矩阵深度商业研报中枢（FY2026 $8.195B +42%、Q2 FY2027 $2.739B +37%、数据中心占比 79%）：覆盖定制 AI XPU 与云端协同设计、3nm 1.6T PAM4 DSP 与 Retimer、相干光/COLORZ 800/Celestial AI CPO、Teralynx 102.4T 与 XConn 交换、Structera CXL 3.2 与 Bravera PCIe 6.0 存储、OCTEON DPU/5G/LiquidSecurity HSM、Prestera/Alaska 以太网及资本配置重构。" />
+  <script src="../../_shared/0bbd482927ad79b5.js"></script>
+  <link rel="stylesheet" href="../../_shared/3d809ba4d5c8ffd6.css">
+  
+  
+  <link rel="stylesheet" href="../../_shared/449f6527706d5467.css">
+
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+  <script src="../../_shared/device-mode.js"></script>
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky MUI High-Clarity AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span id="appbarMonogram" class="brand-monogram mono">AI</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation"><a class="crumb-link hide-sm" href="../../index.html"><span class="portal-menu-text" data-portal-zh="数据中心" data-portal-en="Research Hub">数据中心</span></a><span class="hide-sm" aria-hidden="true">/</span>
+          <span class="crumb-link hide-sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg><span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span></span>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span id="appbarCrumbCurrent" class="crumb-current" data-i18n-zh="01 · 定制 AI 加速器 (XPU) 与云端优先芯片设计服务" data-i18n-en="01 · Custom AI Accelerators (XPU) &amp; Cloud-First Design Services">01 · 定制 AI 加速器 (XPU) 与云端优先芯片设计服务</span>
+        </nav>
+        <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm" data-i18n-zh="Q2 FY27 数据中心 $2.17B (+46%)" data-i18n-en="Q2 FY27 Data Center $2.17B (+46%)">Q2 FY27 数据中心 $2.17B (+46%)</span>
+        <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="FY26 创历史设计中标纪录" data-i18n-en="FY26 All-Time Record Design Wins">FY26 创历史设计中标纪录</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换迈威尔产品线…" aria-label="快速跳转章节或产品线" data-ph-zh="检索章节或切换迈威尔产品线…" data-ph-en="Jump to section or Marvell product…" data-aria-zh="快速跳转章节或产品线" data-aria-en="Quick jump to chapter or Marvell pillar" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Centered Shell -->
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Navigation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">MRVL CORE · #1 GROWTH ENGINE</span>
+        </div>
+        <div id="sideCardTitle" class="sidebar-title" data-i18n-zh="01 · 定制 AI XPU 与服务" data-i18n-en="01 · Custom AI Silicon">01 · 定制 AI XPU 与服务</div>
+        <p id="sideCardSub" class="sidebar-subtitle" data-i18n-zh="5nm/3nm/2nm 定制计算架构 × 224G SerDes &amp; CoWoS 先进封装 × 超大规模云厂商协同流片" data-i18n-en="5nm/3nm/2nm Custom Compute × 224G SerDes &amp; CoWoS Packaging × Hyperscaler Co-Design">5nm/3nm/2nm 定制计算架构 × 224G SerDes &amp; CoWoS 先进封装 × 超大规模云厂商协同流片</p>
+
+        <div class="sidebar-mini-kpis" id="sideMiniKpis">
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="FY2026 集团净营收" data-i18n-en="FY2026 Net Revenue">FY2026 集团净营收</span><span class="sidebar-mini-val mono" data-i18n-zh="$8.195B (+42%)" data-i18n-en="$8.195B (+42%)">$8.195B (+42%)</span></div>
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="Q2 FY27 数据中心占比" data-i18n-en="Q2 FY27 Data Center Share">Q2 FY27 数据中心占比</span><span class="sidebar-mini-val mono" data-i18n-zh="79% ($2.17B)" data-i18n-en="79% ($2.17B)">79% ($2.17B)</span></div>
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="Non-GAAP 毛利率 / EPS" data-i18n-en="Non-GAAP GM / EPS">Non-GAAP 毛利率 / EPS</span><span class="sidebar-mini-val mono" data-i18n-zh="59.5% / $2.84" data-i18n-en="59.5% / $2.84">59.5% / $2.84</span></div>
+        </div>
+      </div>
+
+      <!-- Unified MUI Navigation Card: Site Portal Nav + Report TOC -->
+      <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Site Links &amp; Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="MRVL">
+          <div class="co-side-head">
+            <span class="co-side-title mono">MRVL · 01/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../SeniorExecutive/marvell_20_fy2026_fy2027.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../SeniorExecutive/marvell_20_fy2026_fy2027.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="marvell_technology_mrvl_fy26_fy27.html" title="Marvell Technology 迈威尔科技 (MRVL) 全产品与服务深度研报中枢（FY26–FY27 全景拆解）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Marvell Technology 迈威尔科技 (MRVL) 全产品与服务深度研报中枢（FY26–FY27 全景拆解）" data-i18n-en="Marvell Technology (MRVL) &amp; Deep DiveReport (FY26–FY27 OverviewBreakdown)">Marvell Technology 迈威尔科技 (MRVL) 全产品与服务深度研报中枢（FY26–FY27 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../SeniorExecutive/marvell_20_fy2026_fy2027.html" title="Marvell 迈威尔科技 20 位核心高管与管理层深度研报中枢（FY2026–FY2027 全景拆解）"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Marvell 迈威尔科技 20 位核心高管与管理层深度研报中枢（FY2026–FY2027 全景拆解）" data-i18n-en="Marvell 20 &amp; Deep DiveReport (FY2026–FY2027 OverviewBreakdown)">Marvell 迈威尔科技 20 位核心高管与管理层深度研报中枢（FY2026–FY2027 全景拆解）</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+        
+
+        <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与超级周期指标" data-i18n-en="Executive Summary &amp; Cycle KPIs">执行摘要与超级周期指标</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="五级产品阶梯与2nm自研芯片栈" data-i18n-en="5-Tier Matrix &amp; 2nm Silicon Stack">五级产品阶梯与2nm自研芯片栈</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大统治支柱与五维雷达" data-i18n-en="4 Dominance Pillars &amp; Moat Radar">四大统治支柱与五维雷达</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="全球高端旗舰手机横向对比" data-i18n-en="Global Flagship Smartphone Matrix">全球高端旗舰手机横向对比</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="单机BOM经济学与生态复利模拟" data-i18n-en="Unit Economics &amp; Ecosystem Sim">单机BOM经济学与生态复利模拟</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="技术演进与2026战略战役" data-i18n-en="Evolution Timeline &amp; 2026 Battles">技术演进与2026战略战役</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="核心护城河与服务核查清单" data-i18n-en="Core Moat & Service Checklist">核心护城河与服务核查清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="SEC财报与官方信源核验索引" data-i18n-en="SEC Filings &amp; Primary Sources">SEC财报与官方信源核验索引</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Compact MUI Page Utility Controls -->
+      
+    </aside>
+
+    <!-- Main Analytical Content -->
+    <main class="main-content">
+      <!-- Marvell Technology 8-Pillar Portfolio Interactive Switcher -->
+      <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="Marvell 迈威尔全系列产品与服务切换台">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">MARVELL TECHNOLOGY (MRVL) · FULL PORTFOLIO HUB</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="迈威尔科技 Marvell 全系列 8 大产品与服务板块深度研报中枢（100% 覆盖 AI 定制 · 光互连 · 交换 · CXL 存储 · DPU 安全与生态服务）" data-i18n-en="Marvell Technology Full 8-Pillar Product &amp; Service Deep-Dive Hub (Custom AI · Optics · Switching · CXL/Storage · DPU/Security · M&amp;A Services)">迈威尔科技 Marvell 全系列 8 大产品与服务板块深度研报中枢（100% 覆盖 AI 定制 · 光互连 · 交换 · CXL 存储 · DPU 安全与生态服务）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" class="mui-btn" title="切换至上一板块 (快捷键 [)" data-title-zh="切换至上一板块 (快捷键 [)" data-title-en="Previous Pillar (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一板块" data-i18n-en="Prev">上一板块</span>
+ </button>
+ <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一板块 (快捷键 ])" data-title-zh="切换至下一板块 (快捷键 ])" data-title-en="Next Pillar (Shortcut ])">
+ <span data-i18n-zh="下一板块" data-i18n-en="Next">下一板块</span> <span>→</span>
+ </button>
+ <button type="button" id="hubFocusModeBtn" class="mui-btn" title="切换单品沉浸阅读或展开全矩阵" data-title-zh="切换单品沉浸阅读或展开全矩阵" data-title-en="Toggle Single-Pillar Focus Mode">
+ 单品沉浸阅读 ▴
+ </button>
+ 
+ </div>
+ </div>
+
+ <div class="hub-summary-strip">
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="FY2026 集团总净营收" data-i18n-en="FY2026 Consolidated Revenue">FY2026 集团总净营收</span>
+ <span class="hub-sum-val mono">$8.195B (+42.1% YoY)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Q2 FY27 单季新高 / 数据中心占比" data-i18n-en="Q2 FY27 Record / DC Mix">Q2 FY27 单季新高 / 数据中心占比</span>
+ <span class="hub-sum-val mono">$2.739B (+37%) · 79% DC</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Non-GAAP 毛利率 / 营业利润率" data-i18n-en="Non-GAAP GM / Op Margin">Non-GAAP 毛利率 / 营业利润率</span>
+ <span class="hub-sum-val mono">58.9% GM · 36.6% OM</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="管理层 FY27 / FY28 营收展望" data-i18n-en="FY27 / FY28 Mgmt Outlook">管理层 FY27 / FY28 营收展望</span>
+ <span class="hub-sum-val mono">~$12.0B → ~$18.0B</span>
+ </div>
+ </div>
+
+ <div class="hub-cat-bar">
+ <div class="hub-cat-pills" role="tablist" aria-label="迈威尔产品线大类筛选">
+ <button type="button" class="hub-cat-btn active" data-cat-filter="all" data-i18n-zh="全部 8 大板块" data-i18n-en="All 8 Pillars">全部 8 大板块</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="ai_compute" data-i18n-zh="定制AI与战略服务 (01, 08)" data-i18n-en="Custom AI &amp; Services (01, 08)">定制AI与战略服务 (01, 08)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="interconnect" data-i18n-zh="光互连与CPO光子 (02, 03)" data-i18n-en="Optics &amp; CPO (02, 03)">光互连与CPO光子 (02, 03)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="switching_net" data-i18n-zh="交换·DPU·安全·PHY (04, 06, 07)" data-i18n-en="Switching, DPU &amp; PHY (04, 06, 07)">交换·DPU·安全·PHY (04, 06, 07)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="memory_storage" data-i18n-zh="CXL内存与存储 (05)" data-i18n-en="CXL Memory &amp; Storage (05)">CXL内存与存储 (05)</button>
+ </div>
+ <span class="mono" style="font-size:0.73rem;color:var(--text-muted);" data-i18n-zh="提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节" data-i18n-en="Tip: Press [ / ] to cycle pillars · Press ⌘K to jump">提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意产品或章节</span>
+ </div>
+
+ <div class="ip-pill-grid" id="ipPillGrid">
+ <button type="button" class="ip-pill-btn active" data-switch-ip="custom_ai" aria-pressed="true"><span class="ip-pill-mono mono">AI</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="custom_ai">01. 定制 AI 芯片与设计服务</span><span class="ip-pill-meta mono" data-pill-meta="custom_ai">DC $2.17B/Q (+46%) · Custom AI XPU & ASIC Services</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="pam4_optical" aria-pressed="false"><span class="ip-pill-mono mono">OP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="pam4_optical">02. PAM4 光互连 DSP 与 Retimer</span><span class="ip-pill-meta mono" data-pill-meta="pam4_optical">3nm 1.6T Ara (#1) · PAM4 Optical DSPs & Retimers</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="coherent_cpo" aria-pressed="false"><span class="ip-pill-mono mono">CO</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="coherent_cpo">03. 相干光传输、DCI 与 CPO 光子架构</span><span class="ip-pill-meta mono" data-pill-meta="coherent_cpo">800G ZR+ · $3.25B CPO · Coherent DSP, COLORZ & CPO</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="dc_switching" aria-pressed="false"><span class="ip-pill-mono mono">SW</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="dc_switching">04. Teralynx 交换芯片与 XConn</span><span class="ip-pill-meta mono" data-pill-meta="dc_switching">3nm 102.4T T100 · Teralynx Switches & XConn</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="cxl_storage" aria-pressed="false"><span class="ip-pill-mono mono">ST</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="cxl_storage">05. CXL 内存与高速存储控制</span><span class="ip-pill-meta mono" data-pill-meta="cxl_storage">CXL 3.2 · PCIe 6 SSD · Structera CXL & Bravera Storage</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="dpu_security" aria-pressed="false"><span class="ip-pill-mono mono">DP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="dpu_security">06. OCTEON DPU、5G 与硬件安全</span><span class="ip-pill-meta mono" data-pill-meta="dpu_security">OCTEON 10 · LiquidSecurity · OCTEON DPUs, 5G & Security HSM</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="enterprise_phy" aria-pressed="false"><span class="ip-pill-mono mono">EN</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="enterprise_phy">07. Prestera 交换与 Alaska PHY</span><span class="ip-pill-meta mono" data-pill-meta="enterprise_phy">10M–400G PHY · 12.8T · Prestera & Alaska Ethernet PHY</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="portfolio_services" aria-pressed="false"><span class="ip-pill-mono mono">SV</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="portfolio_services">08. 组合重构、并购与生态服务</span><span class="ip-pill-meta mono" data-pill-meta="portfolio_services">$2.5B卖/$3.79B买 · M&A Pivot & Support Services</span></span></button>
+ </div>
+ </section>
+
+      <!-- Dynamic Monograph Sections Host (00 - 07) -->
+      <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="战略定评：超大规模云厂商自研 AI 算力浪潮下最核心的独立硅基协同伙伴" data-i18n-en="Verdict: Premier Independent Co-Design Partner for Hyperscaler Custom AI XPUs">战略定评：超大规模云厂商自研 AI 算力浪潮下最核心的独立硅基协同伙伴</span><span class="mui-chip" data-i18n-zh="产品服务矩阵：定制 AI XPU · 定制网络接口 · 定制 HBM/SRAM · 伴随芯片 · 硬件信任根" data-i18n-en="Scope: Custom AI XPUs · Custom NICs · Custom HBM/SRAM · Companion Silicon · Root of Trust">产品服务矩阵：定制 AI XPU · 定制网络接口 · 定制 HBM/SRAM · 伴随芯片 · 硬件信任根</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="财报基准：FY2026 10-K &amp; Q2 FY2027 8-K 官方核验" data-i18n-en="Baseline: FY2026 10-K &amp; Q2 FY2027 8-K Verified">财报基准：FY2026 10-K &amp; Q2 FY2027 8-K 官方核验</span></div><div class="hero-overline mono"><span data-i18n-zh="CORE THESIS · 数据中心占比跃升至 79% × 从 IP 授权到 CoWoS 封装量产的全流程服务" data-i18n-en="CORE THESIS · 79% Data Center Revenue Mix × End-to-End IP, SerDes &amp; CoWoS Production Services">CORE THESIS · 数据中心占比跃升至 79% × 从 IP 授权到 CoWoS 封装量产的全流程服务</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">迈威尔定制 AI 芯片与设计服务深度拆解：<span class="gradient-accent">如何用“IP + 封装 + 云端协同”卡位万亿算力基础设施？</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">在超大规模云厂商（Hyperscalers）竞相打造专有 AI 训练与推理芯片（XPU）的背景下，迈威尔科技凭借 <strong>FY2026 $81.95 亿美元（+42% YoY）</strong> 与 <strong>Q2 FY2027 单季 $27.39 亿美元（+37% YoY）</strong> 的历史性业绩，确立了数据中心核心基础设施的统治地位 <a class="cite-link" href="https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results" target="_blank" rel="noopener noreferrer">FY26 PR ↗</a> <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/q227_8kx812026ex-991.htm" target="_blank" rel="noopener noreferrer">Q2 FY27 8-K ↗</a>。其定制芯片（Custom Silicon）业务并非传统外包代工，而是将云厂商自研计算核心与迈威尔独占的 <strong>224G SerDes、Die-to-Die 互连、定制 HBM/SRAM 子系统及 2.5D/3D 先进封装</strong> 深度耦合，提供从架构协同到规模量产的全栈交付服务 <a class="cite-link" href="https://www.marvell.com/products/portfolio.html" target="_blank" rel="noopener noreferrer">Portfolio ↗</a> <a class="cite-link" href="https://investor.marvell.com/news-events/press-releases/detail/192/marvell-and-aws-collaborate-to-enable-cloud-first-silicon-design" target="_blank" rel="noopener noreferrer">AWS Collab ↗</a>。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="联合架构设计而非单纯后端外包" data-i18n-en="Architecture Co-Design, Not Pure Back-End">联合架构设计而非单纯后端外包</h3><p data-i18n-zh="云厂商保留自研张量计算核，迈威尔注入定制 SRAM、HBM 控制器与片间互连 IP，显著提升每瓦算力与单槽可用内存。" data-i18n-en="Hyperscalers bring compute IP while Marvell integrates custom SRAM, HBM, and die-to-die IP to maximize perf-per-watt.">云厂商保留自研张量计算核，迈威尔注入定制 SRAM、HBM 控制器与片间互连 IP，显著提升每瓦算力与单槽可用内存。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="云端优先 EDA 与 &lt;85 天流片服务" data-i18n-en="Cloud-First Design &amp; &lt;85-Day Tapeout">云端优先 EDA 与 &lt;85 天流片服务</h3><p data-i18n-zh="依托 AWS 云端分布式算力、分级供电完整性建模与结构化测试网络，大幅压缩 3nm/2nm 超大芯片流片周期。" data-i18n-en="Cloud-first distributed EDA, power integrity modeling, and hierarchical test cut netlist-to-tapeout under 85 days.">依托 AWS 云端分布式算力、分级供电完整性建模与结构化测试网络，大幅压缩 3nm/2nm 超大芯片流片周期。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="XPU + 光互连 + 交换机系统级捆绑" data-i18n-en="System-Level Attach: XPU + Optics + Switch">XPU + 光互连 + 交换机系统级捆绑</h3><p data-i18n-zh="每颗定制 XPU 均需配套机架内 224G 铜/光互连、scale-up 交换芯片及机架间 PAM4 DSP，形成单集群多倍芯片价值量。" data-i18n-en="Every custom XPU pulls through scale-up switches, copper/optical links, and PAM4 DSPs across the AI cluster.">每颗定制 XPU 均需配套机架内 224G 铜/光互连、scale-up 交换芯片及机架间 PAM4 DSP，形成单集群多倍芯片价值量。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q2 FY27 数据中心营收" data-i18n-en="Q2 FY27 Data Center Rev">Q2 FY27 数据中心营收</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="同比暴增 +46%" data-i18n-en="+46% YoY">同比暴增 +46%</span></div><div class="kpi-value mono" data-i18n-zh="$2.17B" data-i18n-en="$2.17B">$2.17B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">占集团单季总营收 79%，推动 Q3 FY27 指引上调至 $3.15B（+52% YoY）<a class="cite-link" href="https://sec-api.io/insights/financial-analysis-of-marvell-technology-q2-fy2027-filings-and-scenarios-to-fy2030" target="_blank" rel="noopener noreferrer">Q2 FY27 Analysis ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY2026 Non-GAAP 毛利率" data-i18n-en="FY26 Non-GAAP GM">FY2026 Non-GAAP 毛利率</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="高壁垒硅基溢价" data-i18n-en="High-Margin IP">高壁垒硅基溢价</span></div><div class="kpi-value mono" data-i18n-zh="59.5%" data-i18n-en="59.5%">59.5%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">FY2026 全年 Non-GAAP 毛利达 $48.72 亿美元，Non-GAAP 营业利润率 35.3% <a class="cite-link" href="https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results" target="_blank" rel="noopener noreferrer">FY26 Results ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY27 / FY28 营收展望" data-i18n-en="FY27 / FY28 Outlook">FY27 / FY28 营收展望</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="加速放量曲线" data-i18n-en="Ramp Trajectory">加速放量曲线</span></div><div class="kpi-value mono" data-i18n-zh="~$12B → ~$18B" data-i18n-en="~$12B → ~$18B">~$12B → ~$18B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">管理层在 2026 年 8 月财报会上调 FY27 营收预期至 ~$12B、FY28 至 ~$18B <a class="cite-link" href="https://sec-api.io/insights/financial-analysis-of-marvell-technology-q2-fy2027-filings-and-scenarios-to-fy2030" target="_blank" rel="noopener noreferrer">Mgmt Outlook ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="战略客户认股权证绑定" data-i18n-en="Hyperscaler Warrant Tie-In">战略客户认股权证绑定</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="长期产能锁单" data-i18n-en="Multi-Year Lock">长期产能锁单</span></div><div class="kpi-value mono" data-i18n-zh="1.0M 股 ($87)" data-i18n-en="1.0M Sh ($87)">1.0M 股 ($87)</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">FY2026 期间向核心云客户授予 100 万股认股权证（与合资格产品营收挂钩），深度锁定多年期定制项目 <a class="cite-link" href="https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results" target="_blank" rel="noopener noreferrer">10-K/Warrant ↗</a>。</p></div></div></section>
+    </div>
+    </main>
+  </div>
+
+  <script src="../../_shared/18b0e7cf5fdd60dc.js"></script>
+
+</body>
+</html>

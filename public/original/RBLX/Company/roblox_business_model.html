@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html data-chart-ui data-report-family="roblox" data-imported-report lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>罗布乐思 Roblox RBLX 商业模式与现金流飞轮 | 数据中心</title>
+  <meta name="description" content="罗布乐思 Roblox Corporation (NYSE: RBLX) 商业模式深度解构工作台：非对称双栏指挥舱、五阶价值传导沙盘、FY25 $67.9亿预订额至$13.5亿自由现金流瀑布流、年龄分层单客经济与5年FCF复利推演实验室。" />
+  
+  
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/roblox_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="展开或收起目录侧边栏" title="展开/收起侧边栏">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">RBLX</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="../../index.html" data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="罗布乐思 (Roblox) 商业模式架构拆解" data-i18n-en="Roblox (RBLX) Business Model Architecture">罗布乐思 (Roblox) 商业模式架构拆解</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">NYSE: RBLX</span>
+        <span class="mui-chip mui-chip-success mono hide-sm">FY25 $6.79B Bkgs · $1.35B FCF</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索商业飞轮或指标…" aria-label="快速跳转模块" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与站点导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">RBLX · BUSINESS MODEL</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="罗布乐思商业模式图谱" data-i18n-en="Roblox Business Model">罗布乐思商业模式图谱</div>
+        <p class="sidebar-subtitle" data-i18n-zh="零第一方立项CapEx × Robux 27个月$70.4亿递延现金浮存 × 直充渠道降费 × O18高分润剪刀差" data-i18n-en="Zero 1P Content CapEx × 27-Month $7.04B Deferred Float × Direct-Pay Mix × O18 DevEx Flywheel">零第一方立项CapEx × Robux 27个月$70.4亿递延现金浮存 × 直充渠道降费 × O18高分润剪刀差</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="UGC云OS + 预收浮存池" data-i18n-en="UGC OS + Cash Float">UGC云OS + 预收浮存池</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="Q3'26 渠道抽成率" data-i18n-en="Q3'26 COR % Rev">Q3'26 渠道抽成率</span>
+            <span class="sidebar-mini-val mono">20.2% (-160bps YoY)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="递延营收池 / 摊销期" data-i18n-en="Deferred Rev / Life">递延营收池 / 摊销期</span>
+            <span class="sidebar-mini-val mono">$7.04B · 27个月</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="套件导航与架构目录">
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="RBLX"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+        <ul class="mui-nav-list">
+          <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+          <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+          <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="现金流瀑布与四级变现栈" data-i18n-en="Cash Waterfall &amp; 4-Tier Stack">现金流瀑布与四级变现栈</span></a></li>
+          <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="年龄分层LTV与去爆款化" data-i18n-en="Age Cohort LTV &amp; Dispersion">年龄分层LTV与去爆款化</span></a></li>
+          <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="$70.4亿预收浮存与FCF推演" data-i18n-en="$7.04B Float &amp; FCF Lab">$70.4亿预收浮存与FCF推演</span></a></li>
+          <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="游戏巨头矩阵与三大压测" data-i18n-en="Peer Matrix &amp; Stress Audits">游戏巨头矩阵与三大压测</span></a></li>
+        </ul>
+      </nav>
+
+      </aside>
+
+    <!-- Main Distinct Non-Linear Workspace -->
+    <main class="bm-workspace">
+
+      <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+      <section id="mod-deck" class="bm-command-deck">
+        <div class="bm-thesis-deck">
+          <div>
+            <div class="bm-badge-row">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：零立项CapEx创作网络 × 27个月预收现金浮存机" data-i18n-en="ARCHETYPE: Zero-1P-CapEx UGC Network × 27-Month Cash Float Engine">商业范式：零立项CapEx创作网络 × 27个月预收现金浮存机</span>
+              <span class="mui-chip mui-chip-success mono">FY25 10-K · Q3 2026 股东信</span>
+              <span class="mui-chip mui-chip-violet mono">净现金 +$5.23B · O18 变现 +50%</span>
+            </div>
+
+            <h1 class="bm-display-h1" data-i18n-zh="罗布乐思商业模式解构：<span class='bm-gradient-txt'>表观 GAAP 亏损 $10.7 亿背后，年产 $13.5 亿自由现金流的三阶飞轮</span>" data-i18n-en="Deconstructing Roblox's Business Model: <span class='bm-gradient-txt'>How a $1.07B GAAP Loss Masks a $1.35B Free Cash Flow Compounding Machine</span>">
+              罗布乐思商业模式解构：<span class="bm-gradient-txt">表观 GAAP 亏损 $10.7 亿背后，年产 $13.5 亿自由现金流的三阶飞轮</span>
+            </h1>
+
+            <p class="bm-lead" data-i18n-zh="传统财报筛选器常因 Roblox 账面 GAAP 净亏损（FY2025 为 <strong>$(10.72)亿</strong>、Q3 2026 为 <strong>$(2.30)亿</strong>）将其误判为“烧钱元宇宙概念股”；实则这是一台兼具<strong>软件网络效应与类保险预收浮存金</strong>的现金机器：第一阶以<strong>零第一方游戏立项资本开支</strong>撬动数百万创作者与 ~400 个 AI 模型供给无限长尾内容（Q4'25 排名前十以外体验贡献超 50% 消费增量，同比增长 +53%）<a class='cite-link' href='https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf' target='_blank' rel='noopener noreferrer'>Q4'25 股东信 ↗</a>；第二阶在玩家购买 Robux 当刻<strong>100% 收取真金白银</strong>，而会计准则强制按付费用户平均 <strong>27 个月生命周期</strong>递延确认收入，沉淀出高达 <strong>$70.40 亿递延营收浮存池</strong>，推动 FY2025 自由现金流暴涨 +111% 至 <strong>$13.53 亿</strong>；第三阶通过引导网页/礼品卡直充将 Q3'26 渠道成本率压降至 <strong>20%（同比省 160bps）</strong>，叠加变现能力高出 50%+ 的美国 18 岁以上（O18）成人破圈，持续张开经营杠杆剪刀差 <a class='cite-link' href='https://s27.q4cdn.com/984876518/files/doc_financials/2026/q3/Q3-2026-Earnings-Shareholder-Letter.pdf' target='_blank' rel='noopener noreferrer'>Q3'26 股东信 ↗</a>。" data-i18n-en="Conventional stock screens misread Roblox due to its GAAP net loss ($(1,071.6)M in FY25; $(230)M in Q3'26), overlooking a three-stage cash engine: (1) Zero first-party game studio CapEx, empowering millions of creators & ~400 AI models (non-Top-10 games grew Robux spend +53% in Q4'25, driving >50% of spend growth) <a class='cite-link' href='https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf' target='_blank' rel='noopener noreferrer'>Q4'25 Letter ↗</a>; (2) 100% upfront cash collection upon Robux purchase while GAAP amortizes durable virtual items over a 27-month average user lifetime, building a $7,040M deferred revenue float and $1,352.9M FY25 FCF (+111% YoY); (3) Steering 'Buy Robux' to direct channels cut Q3'26 Cost of Revenue to 20% (-160 bps YoY) alongside US O18 users monetizing 50%+ higher <a class='cite-link' href='https://s27.q4cdn.com/984876518/files/doc_financials/2026/q3/Q3-2026-Earnings-Shareholder-Letter.pdf' target='_blank' rel='noopener noreferrer'>Q3'26 Letter ↗</a>.">
+              传统财报筛选器常因 Roblox 账面 GAAP 净亏损（FY2025 为 <strong>$(10.72)亿</strong>、Q3 2026 为 <strong>$(2.30)亿</strong>）将其误判为“烧钱元宇宙概念股”；实则这是一台兼具<strong>软件网络效应与类保险预收浮存金</strong>的现金机器：第一阶以<strong>零第一方游戏立项资本开支</strong>撬动数百万创作者与 ~400 个 AI 模型供给无限长尾内容（Q4'25 排名前十以外体验贡献超 50% 消费增量，同比增长 +53%）
+              <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q4'25 股东信 ↗</a>；第二阶在玩家购买 Robux 当刻<strong>100% 收取真金白银</strong>，而会计准则强制按付费用户平均 <strong>27 个月生命周期</strong>递延确认收入，沉淀出高达 <strong>$70.40 亿递延营收浮存池</strong>，推动 FY2025 自由现金流暴涨 +111% 至 <strong>$13.53 亿</strong>；第三阶通过引导网页/礼品卡直充将 Q3'26 渠道成本率压降至 <strong>20%（同比省 160bps）</strong>，叠加变现能力高出 50%+ 的美国 18 岁以上（O18）成人破圈，持续张开经营杠杆剪刀差
+              <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2026/q3/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q3'26 股东信 ↗</a>。
+            </p>
+          </div>
+
+          <div class="bm-lens-panel">
+            <div class="bm-lens-head">
+              <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="Switch Economic Lens:">切换商业本质透镜：</span>
+              <div class="mui-segmented" id="lensTabs">
+                <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 零立项CapEx长尾飞轮" data-i18n-en="① Zero-CapEx UGC Funnel">① 零立项CapEx长尾飞轮</button>
+                <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 直充降费×O18高变现剪刀差" data-i18n-en="② Direct-Pay × O18 Scissors">② 直充降费×O18高变现剪刀差</button>
+                <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 27个月$70.4亿现金浮存" data-i18n-en="③ 27-Mo $7.04B Cash Float">③ 27个月$70.4亿现金浮存</button>
+              </div>
+            </div>
+            <div class="bm-equation-bar mono" id="lensFormula">
+              内容风险豁免 = $0 自研3A立项沉没成本 + 玩家成功消费后才按 22%–24% 比例向创作者结算 DevEx
+            </div>
+            <div class="bm-lens-body" id="lensBody">
+              传统 3A 发行商（如 Take-Two、EA）单款旗舰需前置投入 $2亿–$5亿研发费与数年周期，一旦口碑翻车即面临巨额减值；Roblox 把内容试错完全交给全球去中心化创作者与 Build AI 工具，平台仅在玩家真金白银花掉 Robux 后才按既定汇率支付 DevEx 分润，彻底消除了“立项押宝失败”风险。
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Live Financial Telemetry Ledger -->
+        <aside class="bm-telemetry-ledger" aria-label="FY2025 与 Q3 2026 核心经济遥测">
+          <div class="bm-ledger-head">
+            <div class="bm-ledger-title">
+              <span class="bm-pulse-dot"></span>
+              <span data-i18n-zh="RBLX 商业模型核心遥测账本" data-i18n-en="RBLX Live Unit Telemetry">RBLX 商业模型核心遥测账本</span>
+            </div>
+            <a class="cite-link mono" href="https://www.sec.gov/Archives/edgar/data/1315098/000131509826000024/rblx-20251231.htm" target="_blank" rel="noopener noreferrer">10-K &amp; Q3'26 ↗</a>
+          </div>
+
+          <div class="bm-telemetry-rows">
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="FY25 预订额 Bookings vs GAAP 营收" data-i18n-en="FY25 Bookings vs GAAP Revenue">FY25 预订额 Bookings vs GAAP 营收</span>
+                <span class="bm-tel-val mono">$6,788.4M <small style="font-size:0.74rem;color:var(--mui-success-text);">+55%</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:72%;"></div>
+                <div style="width:28%;background:#7C3AED;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>GAAP Rev $4,890.6M (+36%)</span><span>净增递延 +$1,934M</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="FY25 自由现金流 FCF vs 经营现金流" data-i18n-en="FY25 Free Cash Flow vs OCF">FY25 自由现金流 FCF vs 经营现金流</span>
+                <span class="bm-tel-val mono">$1,352.9M <small style="font-size:0.74rem;color:var(--mui-success-text);">+111%</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:80%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>OCF $1,796.4M (+118%)</span><span>Q3'26 单季 FCF $364M</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="Q3'26 渠道成本率 COR vs DevEx 分润率" data-i18n-en="Q3'26 COR % Rev vs DevEx % Bkgs">Q3'26 渠道成本率 COR vs DevEx 分润率</span>
+                <span class="bm-tel-val mono">20.2% / 23.6%</span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:46%;"></div>
+                <div style="width:54%;background:#0099FF;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>直充引导降费 -160bps YoY</span><span>TTM 创作者收入 ~$1.7B</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="Q3'26 递延营收池 × 净流动性现金" data-i18n-en="Q3'26 Deferred Float × Net Cash">Q3'26 递延营收池 × 净流动性现金</span>
+                <span class="bm-tel-val mono">$7,040M / +$5,229M</span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:86%;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>现金及投资 $6.24B vs 债 $1.01B</span><span>Q3 回购 $200M (4.4M股)</span></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+      <section id="mod-pipeline" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 01 · END-TO-END VALUE CAPTURE PIPELINE</span>
+            <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从 AI 零门槛创作到 $70.4亿 递延现金浮存复利" data-i18n-en="5-Node Value Capture Pipeline: From Zero-CapEx AI Creation to $7.04B Cash Float">五阶商业价值传导沙盘：从 AI 零门槛创作到 $70.4亿 递延现金浮存复利</h2>
+            <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解该环节的护城河机制、单位经济结构与量化传导公式。" data-i18n-en="Click any node below to inspect its moat mechanism, unit economics, and cash conversion formula.">点击下方任一价值链节点，拆解该环节的护城河机制、单位经济结构与量化传导公式。</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive Inspector (01 → 05)">点击节点交互拆解 (01 → 05)</span>
+        </div>
+
+        <div class="bm-pipeline-track" id="pipelineTrack">
+          <button type="button" class="bm-node-btn active" data-node="0">
+            <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">AI + STUDIO</span></div>
+            <div class="bm-node-title" data-i18n-zh="零立项CapEx共创与Build引擎" data-i18n-en="Zero-CapEx Studio &amp; Build AI">零立项CapEx共创与Build引擎</div>
+            <div class="bm-node-kpi mono">&gt;80% Top100 用AI · 零库存减值</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="1">
+            <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">SOCIAL GRAPH</span></div>
+            <div class="bm-node-title" data-i18n-zh="年龄分层RFY算法与社交裂变" data-i18n-en="Age-Aware RFY &amp; Social Graph">年龄分层RFY算法与社交裂变</div>
+            <div class="bm-node-kpi mono">138M DAU · 40%百强诞生&lt;3个月</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="2">
+            <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">ROBUX &amp; PAY</span></div>
+            <div class="bm-node-title" data-i18n-zh="Robux预付储值与第一方直充" data-i18n-en="Pre-Paid Robux &amp; Direct Pay">Robux预付储值与第一方直充</div>
+            <div class="bm-node-kpi mono">COR降至20% · S&amp;M仅占营收5%</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="3">
+            <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">TIERED DEVEX</span></div>
+            <div class="bm-node-title" data-i18n-zh="双轨DevEx分润与日结钱包" data-i18n-en="Tiered DevEx &amp; Daily Wallet">双轨DevEx分润与日结钱包</div>
+            <div class="bm-node-kpi mono">$0.0038基础 / $0.0054美区O18</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="4">
+            <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">FLOAT &amp; FCF</span></div>
+            <div class="bm-node-title" data-i18n-zh="27个月浮存生息与回购缩股" data-i18n-en="27-Mo Float &amp; Share Buyback">27个月浮存生息与回购缩股</div>
+            <div class="bm-node-kpi mono">$7.04B递延池 · $2.4B剩余回购</div>
+          </button>
+        </div>
+
+        <div class="bm-node-inspector" id="nodeInspector">
+          <div class="bm-ins-prose">
+            <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · ZERO-1P-CAPEX AI CREATION ENGINE</span>
+            <h3 id="nodeTitle">免费云原生工具链 + Build 一句话造游：把游戏业最重的“研发豪赌”变成零边际成本</h3>
+            <p id="nodeDesc">
+              Roblox 免费向全球开发者提供 Roblox Studio、全球多活服务器托管、物理同步引擎与 ~400 个生产级 AI 模型（含 Cube 4D 与 Studio MCP）。2026 年推出的 Build 自然语言造游工具在 Alpha 阶段即吸引超 50 万用户发布 70,000+ 款可玩游戏，其中逾 75% 从未用过传统 Studio——平台无需承担一分钱游戏立项失败成本，却坐享指数级爆发的内容库。
+            </p>
+            <div class="bm-ins-formula mono" id="nodeFormula">
+              商业传导：免费云托管 + AI 生成降本 → 供给端呈幂律高频试错 → 平台零内容减值锁定全部长尾爆款分成
+            </div>
+          </div>
+          <div class="bm-ins-kpis" id="nodeKpis">
+            <div class="bm-ins-card"><b class="mono">0 自研工作室</b><span>100% 游戏内容由第三方社区共创</span></div>
+            <div class="bm-ins-card"><b class="mono">&gt;80%</b><span>Top 100 头部体验已接入官方 AI 工具</span></div>
+            <div class="bm-ins-card"><b class="mono">70,000+ 款</b><span>Build Alpha 用户用自然语言发布新作</span></div>
+            <div class="bm-ins-card"><b class="mono">+53% YoY</b><span>Q4'25 非前十名长尾体验消费增速</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 2: 7:5 SPLIT — CASH WATERFALL + 4-TIER MONETIZATION ARCHITECTURE -->
+      <section id="mod-profit-pool" class="bm-split-75">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02A · BOOKINGS-TO-FCF VS GAAP RECONCILIATION</span>
+              <h3 data-i18n-zh="FY2025 $67.88亿 预订额现金流桥接 vs GAAP 亏损会计错配" data-i18n-en="FY2025 $6.79B Bookings-to-FCF Waterfall vs GAAP Loss Bridge">FY2025 $67.88亿 预订额现金流桥接 vs GAAP 亏损会计错配</h3>
+            </div>
+            <div class="mui-segmented" id="pChartTabs">
+              <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="预订额→FCF现金桥" data-i18n-en="Bookings→FCF Bridge">预订额→FCF现金桥</button>
+              <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="核心成本率演变 (%)" data-i18n-en="Cost Ratio Trajectory (%)">核心成本率演变 (%)</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="profitCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            数据核验：<a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">FY2025 股东信 ↗</a> 与
+            <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2026/q3/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q3 2026 股东信 ↗</a>。
+            解构关键：FY25 账面净亏损 `$(1,071.6)M` 主要源于两项非当期现金流出——<strong>净增递延收入 `$1,934.0M`（现金已入袋但会计未确认）</strong>与<strong>股权激励 SBC `$1,129.0M`</strong>，还原后自由现金流高达 <strong>`$1,352.9M`（占预订额 19.9%）</strong>。
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02B · FOUR-LAYER MONETIZATION STACK</span>
+              <h3 data-i18n-zh="同一云平台上的四级变现矩阵（内购 × 订阅 × 视频广告 × 电商）" data-i18n-en="4-Tier Monetization Architecture (IAP × Plus × Video Ads × Commerce)">同一云平台上的四级变现矩阵（内购 × 订阅 × 视频广告 × 电商）</h3>
+            </div>
+            <div class="mui-segmented" id="tierFilter">
+              <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+              <button type="button" class="mui-seg-btn" data-tcat="core" data-i18n-zh="Robux与订阅" data-i18n-en="Robux &amp; Sub">Robux与订阅</button>
+              <button type="button" class="mui-seg-btn" data-tcat="elev" data-i18n-zh="高毛利广告电商" data-i18n-en="Ads &amp; Commerce">高毛利广告电商</button>
+            </div>
+          </div>
+
+          <div class="bm-tier-list" id="tierList">
+            <div class="bm-tier-card" data-tier="core">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">① 现金牛底座：Robux 体验内购与 UGC 虚拟形象商城</span>
+                <span class="mui-chip mui-chip-primary mono">30.3M MUPs · ABPDAU $12.29</span>
+              </div>
+              <div class="bm-tier-desc">覆盖游戏通行证（永久耐用品按 27 个月摊销）、复活加速消耗品及跨全平台通用的 3D 虚拟潮牌服饰，单付费用户平均预订额（ABPMP）在 Q3'26 逆势同比增长 +5%。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="core">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">② 经常性锁定层：Roblox Plus 会员订阅（2026年4月上线）</span>
+                <span class="mui-chip mui-chip-success mono">2x 游戏时长 · 7x Robux消费</span>
+              </div>
+              <div class="bm-tier-desc">上线数月即突破数百万订阅会员；Plus 订户游玩时长达非订户 2 倍、Robux 消费高达 7 倍，且大量经由低费率第一方渠道续费 <a class="cite-link" href="https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play" target="_blank" rel="noopener noreferrer">RDC 2026 披露 ↗</a>。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="elev">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">③ 零渠道税增量层：Sponsored 原生买量与激励视频广告</span>
+                <span class="mui-chip mui-chip-violet mono">&gt;70% 百强投放 · &gt;90% 完播率</span>
+              </div>
+              <div class="bm-tier-desc">超 70% Top 100 体验使用内生 Sponsored Ads 获客；激励视频已吸引 1,000+ 品牌投放（95% 可视率），逾 20% 接入游戏已有超 10% 收入来自广告，可跳过前贴片视频即将上线。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="elev">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name">④ 导流与交易闭环层：Moments 短视频即看即买与实景商务</span>
+                <span class="mui-chip mui-chip-warning mono">Tap-to-Buy · 1.6B 日消息</span>
+              </div>
+              <div class="bm-tier-desc">美区已上线类 TikTok 游戏高光信息流 Moments，支持视频内一键购买同款 Avatar 装扮与直接试玩 Build 微游戏，打通“刷视频种草 → 进房社交 → 即时交易”闭环。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 3: 5:7 REVERSED SPLIT — AGE COHORT UNIT ECONOMICS & HIT DISPERSION -->
+      <section id="mod-cohort" class="bm-split-57">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03A · VERIFIED AGE-COHORT UNIT ECONOMICS</span>
+              <h3 data-i18n-zh="年龄分层单客经济模型：为什么美国 O18 成人是利润放大器？" data-i18n-en="Age-Checked Cohort Economics: Why US 18+ Users Drive Margin Expansion">年龄分层单客经济模型：为什么美国 O18 成人是利润放大器？</h3>
+            </div>
+          </div>
+
+          <div class="mui-segmented" id="cohortTabs">
+            <button type="button" class="mui-seg-btn" data-cohort="u13">U13 启蒙基本盘 (34%)</button>
+            <button type="button" class="mui-seg-btn" data-cohort="teen">13–17 社交主力盘 (37%)</button>
+            <button type="button" class="mui-seg-btn active" data-cohort="o18">O18 成人高变现盘 (美区37%)</button>
+          </div>
+
+          <div class="bm-cohort-metrics" id="cohortMetrics">
+            <div class="bm-cohort-stat">
+              <div class="lbl">美区已核验 DAU 占比 / 增速</div>
+              <div class="val mono">37% (全球 29%)</div>
+              <div class="delta">美区 18–34 岁 DAU 两年暴涨 +114%</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">单日活变现溢价 (vs U18)</div>
+              <div class="val mono">+50% 以上</div>
+              <div class="delta">自主信用卡/网页直充比例显著更高</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">专属创作者分润汇率 (2026.06起)</div>
+              <div class="val mono">$0.0054 / Robux</div>
+              <div class="delta">较基础汇率 $0.0038 溢价 +42%</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">高分润激励首批验证成效</div>
+              <div class="val mono">2,000+ 款体验</div>
+              <div class="delta">成人向新游实现 10%+ 收入直接跃升</div>
+            </div>
+          </div>
+
+          <div class="bm-ratchet-note" id="cohortNote">
+            <strong>“随用户长大而升级”的棘轮效应（Cohort Aging Ratchet）：</strong>过去十年玩着 Roblox 长大的千万级少年并未在成年后流失，而是带着已有数百位好友的社交关系链进入大学与职场。2026 年全球 64% 日活（美英 75%、澳洲 80%）完成年龄核验后，平台将美区 O18 合规消费的 DevEx 汇率直接拉升 42% 至 <strong>$0.0054/Robux</strong>，倒逼全球顶尖工作室全力开发高画质射击、RPG 与竞技体育新作 <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2026/q3/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q3'26 核验数据 ↗</a>。
+          </div>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03B · COHORT SPEND CURVE &amp; ANTI-HIT-RISK DISPERSION</span>
+              <h3 data-i18n-zh="三大年龄客群年均贡献对比 vs 平台去单一爆款依赖度演进" data-i18n-en="Age-Cohort Monetization Index vs Long-Tail Spend Dispersion">三大年龄客群年均贡献对比 vs 平台去单一爆款依赖度演进</h3>
+            </div>
+            <div class="mui-segmented" id="cChartTabs">
+              <button type="button" class="mui-seg-btn active" data-cview="ltv" data-i18n-zh="单用户5年累计预订额指数" data-i18n-en="5Y Cumulative Spend Index">单用户5年累计预订额指数</button>
+              <button type="button" class="mui-seg-btn" data-cview="mkt" data-i18n-zh="非Top10长尾生态占比与增速" data-i18n-en="Long-Tail Ecosystem Dispersion">非Top10长尾生态占比与增速</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="cohortCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            反脆弱实证：尽管 Q3 2026 因高基数对比 2025 年现象级爆款《Steal a Brainrot》（峰值 2,587 万同时在线）与《Grow a Garden》导致单季预订额同比微调 -12%，但<strong>两年复合增速仍超 +50%</strong>，且每周“为你推荐（RFY）”前 100 名游戏中约 <strong>40% 诞生于最近 3 个月内</strong>，证明造血机制在于底层分发系统而非押注单一神作。
+          </p>
+        </div>
+      </section>
+
+      <!-- MODULE 4: 6:6 DUAL WORKBENCH — $7.04B DEFERRED FLOAT & 5-YEAR FCF SIMULATOR -->
+      <section id="mod-capital" class="bm-split-66">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04A · $7.04B DEFERRED REVENUE FLOAT &amp; NET CASH</span>
+              <h3 data-i18n-zh="负营运资本奇迹：$70.4亿 递延收入浮存池与现金流爆发曲线" data-i18n-en="Negative Working Capital Float: $7.04B Deferred Revenue &amp; FCF Surge">负营运资本奇迹：$70.4亿 递延收入浮存池与现金流爆发曲线</h3>
+            </div>
+            <div class="mui-segmented" id="kChartTabs">
+              <button type="button" class="mui-seg-btn active" data-kview="float" data-i18n-zh="递延收入池 vs 自由现金流" data-i18n-en="Deferred Float vs FCF">递延收入池 vs 自由现金流</button>
+              <button type="button" class="mui-seg-btn" data-kview="liq" data-i18n-zh="Q3'26 资产负债表净流动性" data-i18n-en="Q3'26 Net Cash &amp; Float">Q3'26 资产负债表净流动性</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="capitalCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            资产负债表透视（截至 2026.09.30）：总递延收入达 <strong>`$7,040M`</strong>（流动 `$4,781M` + 非流动 `$2,259M`），扣除递延收入成本 `$1,304M` 后净递延毛利池高达 **`$5,736M`**；账上现金与长短期投资合计 <strong>`$6,238M`</strong>（对比长期债务仅 `$1,009M`），支撑 Q3 启动 <strong>`$200M`（440万股）</strong>股票回购对冲 SBC 摊薄 <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2026/q3/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q3'26 资产负债表 ↗</a>。
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04B · 5-YEAR BOOKINGS-TO-FCF COMPOUNDER LAB</span>
+              <h3 data-i18n-zh="交互式 5 年自由现金流与每股 FCF 复利推演实验室" data-i18n-en="Interactive 5-Year Bookings-to-FCF &amp; FCF/Share Simulator">交互式 5 年自由现金流与每股 FCF 复利推演实验室</h3>
+            </div>
+            <span class="mui-chip mui-chip-success mono" id="simScenarioChip">基准重估推演</span>
+          </div>
+
+          <div class="bm-sim-sliders">
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl">
+                <span>5年预订额复合增速 (Bookings CAGR · 长期锚 ~20%)</span>
+                <b class="mono" id="lblBkgsCagr">19%</b>
+              </div>
+              <input type="range" id="rngBkgsCagr" min="10" max="28" step="1" value="19" aria-label="预订额5年复合增速" />
+            </div>
+
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl">
+                <span>直充与高毛利视频广告驱动 FCF 利润率 (FY25 基数 19.9%)</span>
+                <b class="mono" id="lblFcfMgn">25%</b>
+              </div>
+              <input type="range" id="rngFcfMgn" min="18" max="32" step="1" value="25" aria-label="远期自由现金流占预订额比例" />
+            </div>
+
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl">
+                <span>回购抵消 SBC 后年均净股本变动率 (Q3'26 摊薄股数 755M)</span>
+                <b class="mono" id="lblDilution">+0.5% / 年</b>
+              </div>
+              <input type="range" id="rngDilution" min="-2.0" max="3.0" step="0.5" value="0.5" aria-label="年均净股本摊薄或缩股率" />
+            </div>
+          </div>
+
+          <div class="bm-sim-outputs">
+            <div class="bm-sim-out"><b class="mono" id="simOutBkgs">$16.2B</b><span>第5年预订额</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simOutFcf">$4.05B</b><span>第5年自由现金流</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simOutShr">774M</b><span>第5年摊薄总股数</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simOutFcfPs" style="color:var(--mui-success-text);">$5.23</b><span>第5年每股 FCF</span></div>
+          </div>
+
+          <div class="bm-canvas-box" style="height:142px;">
+            <canvas id="simMiniCanvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 5: GLOBAL GAMING ARCHETYPE MATRIX & 3 STRESS AUDITS -->
+      <section id="mod-matrix" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 05 · PEER ECONOMICS MATRIX &amp; RISK STRESS AUDITS</span>
+            <h2 class="bm-h2" data-i18n-zh="全球游戏与引擎巨头商业范式横向矩阵及三大核心脆弱性压测" data-i18n-en="Global Gaming Archetype Matrix &amp; Three Structural Risk Stress Audits">全球游戏与引擎巨头商业范式横向矩阵及三大核心脆弱性压测</h2>
+            <p class="bm-head-desc" data-i18n-zh="对比纯平台 UGC 生态、软硬一体自研神作与重资产多工作室并购集团的底层资本效率。" data-i18n-en="Comparing pure UGC cloud OS economics against first-party hardware-IP ecosystems and multi-studio AAA publishers.">对比纯平台 UGC 生态、软硬一体自研神作与重资产多工作室并购集团的底层资本效率。</p>
+          </div>
+          <span class="mui-chip mui-chip-warning mono" id="stressDoneChip">压测复核：0 / 3 已阅</span>
+        </div>
+
+        <div class="bm-table-wrap">
+          <table class="bm-table">
+            <thead>
+              <tr>
+                <th>公司 / 代码</th>
+                <th>商业原型</th>
+                <th>最新年度营收 / 预订额</th>
+                <th>员工规模 / 人均产出</th>
+                <th>内容研发风险承担方</th>
+                <th>核心现金流与护城河特征</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-rblx">
+                <td class="mono"><strong>Roblox (RBLX)</strong></td>
+                <td>零自研 UGC 云游戏 OS</td>
+                <td class="mono">$6.79B Bkgs / $4.89B Rev</td>
+                <td class="mono">3,065人 · <strong>$2.21M/人</strong></td>
+                <td>数百万外部创作者共担</td>
+                <td>$7.04B 递延预收浮存 · FY25 FCF $1.35B (+111%) <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">10-K ↗</a></td>
+              </tr>
+              <tr>
+                <td class="mono"><strong>Nintendo (7974.T)</strong></td>
+                <td>软硬一体第一方神作帝国</td>
+                <td class="mono">¥2,313B (~$14.6B FY26)</td>
+                <td class="mono">8,666人 · ~$1.68M/人</td>
+                <td>总部 EPD 内部立项把关</td>
+                <td>Switch 2 首年近 2,000 万台驱动百年超级 IP 长青变现 <a class="cite-link" href="https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-146bn-following-launch-of-switch-2" target="_blank" rel="noopener noreferrer">FY26 ↗</a></td>
+              </tr>
+              <tr>
+                <td class="mono"><strong>Electronic Arts (EA)</strong></td>
+                <td>年货体育特许经营矩阵</td>
+                <td class="mono">$7.53B 净营收 (FY26)</td>
+                <td class="mono">14,600人 · ~$0.52M/人</td>
+                <td>自营工作室 + 昂贵体育版权</td>
+                <td>约 79% 毛利率，FC / Madden 终极球队贡献稳定现金流 <a class="cite-link" href="https://wnhub.io/news/other/item-50768" target="_blank" rel="noopener noreferrer">FY26 ↗</a></td>
+              </tr>
+              <tr>
+                <td class="mono"><strong>Take-Two (TTWO)</strong></td>
+                <td>超长周期旗舰 3A 发行商</td>
+                <td class="mono">$6.72B 净预订额 (FY26)</td>
+                <td class="mono">12,909人 · ~$0.52M/人</td>
+                <td>Rockstar / 2K 巨额前置研发</td>
+                <td>高度依赖 GTA / NBA 2K 超级产品周期，FY26 净亏 $(298)M <a class="cite-link" href="https://bullfincher.io/companies/take-two-interactive-software/revenue" target="_blank" rel="noopener noreferrer">10-K ↗</a></td>
+              </tr>
+              <tr>
+                <td class="mono"><strong>Epic Games (未上市)</strong></td>
+                <td>自研爆款 + 虚幻引擎 + UEFN</td>
+                <td class="mono">~$4.4B–$5.7B 营收体量</td>
+                <td class="mono">~4,000+人 · 混合架构</td>
+                <td>第一方 Fortnite 与第三方共舞</td>
+                <td>UE 5% 引擎分成 + UEFN 40% 创作者池，自研与第三方同台竞争 <a class="cite-link" href="https://sacra.com/c/epic-games/" target="_blank" rel="noopener noreferrer">Sacra ↗</a></td>
+              </tr>
+              <tr>
+                <td class="mono"><strong>Unity Software (U)</strong></td>
+                <td>跨平台引擎订阅 + 广告网</td>
+                <td class="mono">$1.85B 营收 (FY25)</td>
+                <td class="mono">~4,400人 · ~$0.42M/人</td>
+                <td>纯工具卖水人（无统一社交池）</td>
+                <td>74.2% 毛利率，不掌握终端玩家账号体系与支付闭环 <a class="cite-link" href="https://bullfincher.io/companies/unity-software/overview" target="_blank" rel="noopener noreferrer">FY25 ↗</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bm-stress-grid">
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-error mono">STRESS 01 · 未成年安全诉讼与合规摩擦</span>
+              <h4>多州总检察长诉讼与强制年龄核验的短期转化阵痛</h4>
+              <p>2025 年底得州、佛州、肯塔基州及洛杉矶县相继就青少年安全提起诉讼 <a class="cite-link" href="https://www.texasattorneygeneral.gov/sites/default/files/images/press/Petition_0.pdf" target="_blank" rel="noopener noreferrer">TX AG 起诉书 ↗</a>。Roblox 全面推行面部年龄估算与分层聊天限制（全球 64% 日活已核验），短期虽对未核验用户社交时长形成摩擦，但长期构筑起后来者极难复制的合规护盾。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress="s1" /> 标记已完成未成年合规风险复核</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-warning mono">STRESS 02 · 爆款高基数波动与取消年度指引</span>
+              <h4>2025 现象级神作高基数消化（Q3'26 预订额同比 -12%）</h4>
+              <p>2025 年《Grow a Garden》与《Steal a Brainrot》创下历史级病毒传播（FY25 预订额暴涨 +55%），导致 2026 下半年面临严苛同比基数（两年复合仍超 +50%）。管理层已宣布 2026 为最后一年提供全年指引，2027 起改为单季指引以避免短期噪音绑架长期基建。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress="s2" /> 标记已完成高基数周期波动复核</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-violet mono">STRESS 03 · 每年超 $11亿 SBC 股权摊薄纪律</span>
+              <h4>高额工程师股权激励（FY25 $11.29亿）对每股价值的稀释</h4>
+              <p>为争夺圣马特奥顶尖 AI 与分布式系统人才，Roblox 年度 SBC 约占预订额 16.6%，摊薄股数在 Q3'26 同比微增 +2% 至 7.55 亿股。投资者需紧盯管理层能否借强劲自由现金流持续执行剩余 $24 亿回购授权，实现“净零摊薄”拐点。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress="s3" /> 标记已完成 SBC 摊薄与回购复核</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- VERIFIED PRIMARY SOURCES -->
+      <section class="bm-panel" aria-label="权威信源索引">
+        <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+          <div>
+            <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+            <h2 class="bm-h2" data-i18n-zh="SEC 法定财报、股东信与开发者经济官方信源" data-i18n-en="Verified SEC Filings, Shareholder Letters &amp; Official Documentation">SEC 法定财报、股东信与开发者经济官方信源</h2>
+          </div>
+          <span class="mui-chip mui-chip-success mono">100% 原始文件直连</span>
+        </div>
+
+        <div class="bm-sources-grid">
+          <a class="bm-source-item" href="https://s27.q4cdn.com/984876518/files/doc_financials/2026/q3/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">
+            <b class="mono">[01] Roblox Q3 2026 Shareholder Letter (2026-10-29) ↗</b>
+            <span>核验 Q3'26 营收 $1.57B、预订额 $1.71B、138M DAU、$7.04B 递延收入、20% COR 与 $200M 回购。</span>
+          </a>
+          <a class="bm-source-item" href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">
+            <b class="mono">[02] Roblox Q4 &amp; Full-Year 2025 Shareholder Letter ↗</b>
+            <span>核验 FY25 预订额 $6,788.4M (+55%)、FCF $1,352.9M (+111%)、DevEx $1,503.1M 与 3.4% 全球游戏市占率。</span>
+          </a>
+          <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1315098/000131509826000024/rblx-20251231.htm" target="_blank" rel="noopener noreferrer">
+            <b class="mono">[03] SEC Form 10-K Annual Report (FY2025) ↗</b>
+            <span>核验 3,065 名全职员工、27 个月平均付费用户摊销期、SBC 结构与递延收入会计政策。</span>
+          </a>
+          <a class="bm-source-item" href="https://create.roblox.com/docs/production/monetization/developer-exchange" target="_blank" rel="noopener noreferrer">
+            <b class="mono">[04] Roblox Official Developer Exchange (DevEx) Docs ↗</b>
+            <span>核验 $0.0038/Robux 标准分润汇率、美区 O18 $0.0054/Robux (+42%) 溢价机制与提现规则。</span>
+          </a>
+          <a class="bm-source-item" href="https://about.roblox.com/newsroom/2026/09/rdc-2026-the-world-needs-more-play" target="_blank" rel="noopener noreferrer">
+            <b class="mono">[05] Official RDC 2026 Keynote Newsroom Post ↗</b>
+            <span>核验 Roblox Plus 2x 时长/7x 消费、TTM ~$1.7B 创作者收入、Roblox Wallet 日结与 Build 创作数据。</span>
+          </a>
+          <a class="bm-source-item" href="https://www.texasattorneygeneral.gov/sites/default/files/images/press/Petition_0.pdf" target="_blank" rel="noopener noreferrer">
+            <b class="mono">[06] State AG Youth-Safety Litigation Filing ↗</b>
+            <span>核验州总检察长青少年安全合规诉讼背景及平台年龄核验改革外部监管压力。</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  
+<script src="../../_shared/roblox_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+/* One background palette and texture for the home and every report. */
+:root { --wallpaper-strength: 1; --wallpaper-tile-size: 36px; }
+:root, html[data-theme="light"] {
+  --bg-canvas: #F4F8FC;
+  --hero-glow:
+        radial-gradient(ellipse 92% 460px at 50% -60px, rgba(0, 115, 230, calc(0.18 * var(--wallpaper-strength, 1))) 0%, rgba(109, 40, 217, calc(0.09 * var(--wallpaper-strength, 1))) 48%, transparent 82%),
+        radial-gradient(circle at 88% 26%, rgba(2, 132, 199, calc(0.12 * var(--wallpaper-strength, 1))) 0%, transparent 48%),
+        radial-gradient(circle at 10% 62%, rgba(124, 58, 237, calc(0.07 * var(--wallpaper-strength, 1))) 0%, transparent 45%);
+  --canvas-grid:
+        linear-gradient(rgba(0, 115, 230, calc(0.032 * var(--wallpaper-strength, 1))) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 115, 230, calc(0.032 * var(--wallpaper-strength, 1))) 1px, transparent 1px);
+}
+html[data-theme="dark"] {
+  --bg-canvas: #070B14;
+  --hero-glow:
+        radial-gradient(ellipse 90% 440px at 50% -60px, rgba(0, 115, 230, calc(0.26 * var(--wallpaper-strength, 1))) 0%, rgba(124, 58, 237, calc(0.12 * var(--wallpaper-strength, 1))) 52%, transparent 82%),
+        radial-gradient(circle at 90% 24%, rgba(34, 211, 238, calc(0.12 * var(--wallpaper-strength, 1))) 0%, transparent 45%);
+  --canvas-grid:
+        linear-gradient(rgba(56, 189, 248, calc(0.042 * var(--wallpaper-strength, 1))) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, calc(0.042 * var(--wallpaper-strength, 1))) 1px, transparent 1px);
+}
+html body {
+  background: var(--bg-canvas) !important;
+  background-image: var(--hero-glow), var(--canvas-grid) !important;
+  background-size: 100% 100%, var(--wallpaper-tile-size, 36px) var(--wallpaper-tile-size, 36px) !important;
+  background-attachment: fixed !important;
+}
+
+/* Avoid double-tap zoom while retaining scrolling and pinch zoom. */
+html, body { touch-action: manipulation; }

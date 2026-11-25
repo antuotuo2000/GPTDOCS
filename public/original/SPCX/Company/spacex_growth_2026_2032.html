@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="spcx" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="SpaceX (NASDAQ: SPCX) 2026–2032 未来战略与第二增长曲线全景推演：星舰 Flight 15 筷子捕获二级飞船后的全复用纪元、StarMind 百万颗轨道太阳能 AI 数据中心、2GHz+800MHz 全球手机直连、Cursor+Grok 超级智能与地月火深空物流（基于 S-1 $28.5T TAM 披露）。" />
+ <title>SpaceX SPCX 2026–2032 战略与增长曲线 | 数据中心</title>
+
+
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/spacex_growth_2026_2032.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">SPCX</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="#sec-f0">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="SpaceX 2026–2032 未来战略与第二曲线观测站" data-i18n-en="SpaceX 2026–2032 Future Horizon Observatory">SpaceX 2026–2032 未来战略与第二曲线观测站</span>
+ </nav>
+ <span class="mui-chip mui-chip-violet mono hide-sm">FLIGHT 15 ERA · 2030+</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">STARMIND × STARSHIP V3</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索未来引擎或2030估值…" aria-label="快速跳转模块" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="未来战略模块与套件导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-violet mono">SPCX · 2030 OBSERVATORY</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="SpaceX 未来十年战略观测站" data-i18n-en="SpaceX 2030 Strategic Observatory">SpaceX 未来十年战略观测站</div>
+ <p class="sidebar-subtitle" data-i18n-zh="星舰 Flight 15 全复用奇点 × StarMind 百万颗太空AI卫星 × 2GHz+800MHz 全球直连 × 地月火文明船票" data-i18n-en="Starship Flight 15 Catch × StarMind 1M Orbital AI Satellites × 2GHz/800MHz Direct-to-Cell × Moon & Mars">星舰 Flight 15 全复用奇点 × StarMind 百万颗太空AI卫星 × 2GHz+800MHz 全球直连 × 地月火文明船票</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="S-1 披露总潜在市场" data-i18n-en="S-1 Disclosed TAM">S-1 披露总潜在市场</span>
+ <span class="sidebar-mini-val mono">$28.5 Trillion</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="太空算力时间锚" data-i18n-en="Orbital AI Scale">太空算力时间锚</span>
+ <span class="sidebar-mini-val mono">2027Q4首发 · 2028放量</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="星舰突破节点" data-i18n-en="Starship Milestone">星舰突破节点</span>
+ <span class="sidebar-mini-val mono">Flight 15 筷子捕获飞船</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="套件导航与未来观测目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="SPCX"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="未来战略模块 (F0–F4)" data-i18n-en="Future Horizon (F0–F4)">未来战略模块 (F0–F4)</div>
+ <ul class="mui-nav-list">
+ <li><a href="#sec-f0" class="mui-nav-link active"><span class="nav-idx mono">F0</span><span data-i18n-zh="全复用奇点与三阶时间窗" data-i18n-en="Flight 15 Era &amp; 3 Horizons">全复用奇点与三阶时间窗</span></a></li>
+ <li><a href="#sec-f1" class="mui-nav-link"><span class="nav-idx mono">F1</span><span data-i18n-zh="六大增长引擎纵向深潜舱" data-i18n-en="6 Future Growth Engines">六大增长引擎纵向深潜舱</span></a></li>
+ <li><a href="#sec-f2" class="mui-nav-link"><span class="nav-idx mono">F2</span><span data-i18n-zh="太空算力套利与2032营收桥" data-i18n-en="Space AI CapEx &amp; 2032 Bridge">太空算力套利与2032营收桥</span></a></li>
+ <li><a href="#sec-f3" class="mui-nav-link"><span class="nav-idx mono">F3</span><span data-i18n-zh="天地全栈主权：V3与频谱合围" data-i18n-en="Starship V3 &amp; Spectrum Stack">天地全栈主权：V3与频谱合围</span></a></li>
+ <li><a href="#sec-f4" class="mui-nav-link"><span class="nav-idx mono">F4</span><span data-i18n-zh="2030五万亿市值期权组装器" data-i18n-en="2030 $5T+ Optionality Lab">2030五万亿市值期权组装器</span></a></li>
+ </ul>
+ </nav>
+
+ </aside>
+
+ <main class="ft-workspace main-content">
+ <!-- MODULE F0: MANIFESTO + INTERACTIVE 3-HORIZON RADAR -->
+ <section id="sec-f0" class="ft-hero-grid">
+ <div class="ft-manifesto">
+ <div>
+ <div class="ft-badges">
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="2026.11.14 历史奇点：星舰 Flight 15 成功用机械臂捕获轨道返回飞船" data-i18n-en="NOV 14, 2026 MILESTONE: FLIGHT 15 MECHAZILLA SHIP CATCH">2026.11.14 历史奇点：星舰 Flight 15 成功用机械臂捕获轨道返回飞船</span>
+ <span class="mui-chip mui-chip-success mono">S-1 总潜在市场 $28.5T</span>
+ </div>
+
+ <h1 class="ft-h1" data-i18n-zh="SpaceX 2026–2032战略图谱：<span class='ft-grad'>从垄断地球近地轨道通信，走向太阳同步轨道 AI 算力霸主与多行星文明</span>" data-i18n-en="SpaceX's Next Decade (2026–2032): <span class='ft-grad'>From LEO Broadband Monopoly to Orbital AI Compute &amp; Multiplanetary Logistics</span>">
+ SpaceX 2026–2032战略图谱：<span class="ft-grad">从垄断地球近地轨道通信，走向太阳同步轨道 AI 算力霸主与多行星文明</span>
+ </h1>
+
+ <p class="ft-lead">
+ 站在 Q3 2026 年化营收 <strong>$583亿</strong> 与 <strong>~$1.90万亿市值</strong>的新起点，SpaceX 在 2026 年完成了商业史上最大胆的三连跳：合并 xAI 与收购 <strong>Cursor</strong> 组建 <strong>Super Intelligence（SI）</strong>、完成 <strong>$862.5亿创纪录 IPO</strong>、并在 2026 年 11 月 14 日 <strong>Starship Flight 15</strong> 任务中历史性实现<strong>发射塔筷子机械臂陆地捕获轨道返回的二级飞船 Ship 42（同时部署 23 颗星链 V3 卫星）</strong>
+ <a class="cite-link" href="https://www.cnn.com/2026/11/13/science/live-news/spacex-starship-flight-15-ship-catch" target="_blank" rel="noopener noreferrer">Flight 15 捕获纪实 ↗</a>。
+ 当地面云巨头在 2026–2030 年纷纷撞上<strong>地球电网变压器排队 5 年与淡水冷却枯竭</strong>的物理硬墙时，SpaceX 在 S-1 招股书中亮出了直指 <strong>$28.5万亿 TAM</strong> 的终极底牌
+ <a class="cite-link" href="https://payloadspace.com/spacex-reveals-financial-data-ahead-of-ipo/" target="_blank" rel="noopener noreferrer">S-1 $28.5T 蓝图 ↗</a>：用完全可复用的星舰将单颗功率达 <strong>250kW+ 的太阳能 AI 数据中心卫星（StarMind）</strong>批量送入晨昏太阳同步轨道（2027Q4 启动，2028 规模放量）
+ <a class="cite-link" href="https://www.spacex.com/spacexai/starmind" target="_blank" rel="noopener noreferrer">StarMind 官方页 ↗</a>，同时借 <strong>EchoStar 2GHz + Grain 800MHz 频谱</strong>把星链变成覆盖全球数十亿部存量手机的无死角电信运营商
+ <a class="cite-link" href="https://en.wikipedia.org/wiki/SpaceX" target="_blank" rel="noopener noreferrer">频谱合围 ↗</a>。
+ </p>
+ </div>
+
+ <div class="ft-ternus-strip">
+ <div class="ft-mini-pill">
+ <b data-i18n-zh="第一增长极：Starlink Mobile 直连" data-i18n-en="Pillar 1: Starlink Mobile D2C">第一增长极：Starlink Mobile 直连</b>
+ <span data-i18n-zh="2GHz 卫星频段 + 800MHz 穿墙低频，直接切入全球万亿级移动通信账单" data-i18n-en="2GHz satellite + 800MHz indoor spectrum targeting global mobile carrier TAM">2GHz 卫星频段 + 800MHz 穿墙低频，直接切入全球万亿级移动通信账单</span>
+ </div>
+ <div class="ft-mini-pill">
+ <b data-i18n-zh="第二增长极：StarMind 轨道 AI 算力" data-i18n-en="Pillar 2: StarMind Orbital AI">第二增长极：StarMind 轨道 AI 算力</b>
+ <span data-i18n-zh="24小时太空日照供电 + 深空辐射散热，绕开地面电网审批锁死算力上限" data-i18n-en="24/7 sun-synchronous solar + vacuum radiative cooling bypassing terrestrial grids">24小时太空日照供电 + 深空辐射散热，绕开地面电网审批锁死算力上限</span>
+ </div>
+ <div class="ft-mini-pill">
+ <b data-i18n-zh="第三增长极：星舰航班化与地月火" data-i18n-en="Pillar 3: Starship & Deep Space">第三增长极：星舰航班化与地月火</b>
+ <span data-i18n-zh="一二级双捕获 + 在轨低温推进剂加注，兑现 Artemis 登月与火星货运窗口" data-i18n-en="Dual-stage tower catch + orbital refueling unlocking Artemis HLS & Mars cargo">一二级双捕获 + 在轨低温推进剂加注，兑现 Artemis 登月与火星货运窗口</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: Interactive 3-Horizon Radar -->
+ <aside class="ft-horizon-radar" aria-label="三阶战略时间窗雷达">
+ <div>
+ <span class="ft-kicker mono">THREE-HORIZON S-CURVE RADAR</span>
+ <strong style="font-size:0.95rem;" data-i18n-zh="点击切换三大战略兑现时间窗" data-i18n-en="Select Strategic Horizon Window">点击切换三大战略兑现时间窗</strong>
+ </div>
+
+ <div class="ft-hz-tabs" id="hzTabs">
+ <button type="button" class="ft-hz-btn active" data-hz="0">H1 近程兑现<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2026–2027</span></button>
+ <button type="button" class="ft-hz-btn" data-hz="1">H2 中程放量<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2028–2029</span></button>
+ <button type="button" class="ft-hz-btn" data-hz="2">H3 远期奇点<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2030–2032</span></button>
+ </div>
+
+ <div class="ft-hz-card" id="hzCard">
+ <div>
+ <span class="mui-chip mui-chip-primary mono" id="hzBadge">HORIZON 1 · 高确定性工程兑现期 (2026–2027)</span>
+ <h3 id="hzTitle" style="font-size:0.96rem;font-weight:800;margin:8px 0 6px;">星舰一二级同发双捕获 × 星链 V3 批产 × 全美手机直连商用</h3>
+ <ul class="ft-hz-list" id="hzList">
+ <li><span class="ft-hz-dot"></span><span><strong>星舰全复用闭环：</strong>继 Flight 15 捕获 Ship 42 后，攻克单次任务一二级双筷子捕获与在轨低温推进剂转移（Orbital Refueling）。</span></li>
+ <li><span class="ft-hz-dot"></span><span><strong>Starlink V3 规模换代：</strong>每发星舰投送数十颗 Tbps 级 V3 大卫星，推动星链订户突破 2,200 万并完成 EchoStar/800MHz 频谱过户。</span></li>
+ <li><span class="ft-hz-dot"></span><span><strong>StarMind 轨道算力首发：</strong>搭载 Nvidia 芯片的首批轨道 AI 试验星于 2027Q4 升空，地面 SI 装机迈向 3.5GW+。</span></li>
+ </ul>
+ </div>
+ <div class="ft-hz-foot mono">
+ <span id="hzProb" style="color:var(--mui-success-text);">兑现确定性：极高 (85%+)</span>
+ <span id="hzImpact" style="color:var(--mui-primary-lighter);">年化增量营收池：+$30B–$48B</span>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE F1: 4:8 VERTICAL MASTER-DETAIL 6-ENGINE OBSERVATORY -->
+ <section id="sec-f1" class="ft-panel">
+ <div class="ft-panel-head">
+ <div>
+ <span class="ft-kicker mono">MODULE F1 · SIX NEXT-DECADE GROWTH ENGINES ($28.5T S-1 TAM)</span>
+ <h2 class="ft-h2" data-i18n-zh="六大未来增长引擎纵向深潜舱：物理支点、变现公式与商业化进度" data-i18n-en="6 Next-Decade Growth Engines: Physics Enablers & Monetization Formulas">六大未来增长引擎纵向深潜舱：物理支点、变现公式与商业化进度</h2>
+ <p class="ft-sub" data-i18n-zh="点击左侧任一战略赛道，右侧实时切换其底层推进/频谱/算力支点、潜在利润空间与关键里程碑。" data-i18n-en="Click any engine on the left rail to inspect its technical architecture, margin accretion, and milestones.">点击左侧任一战略赛道，右侧实时切换其底层推进/频谱/算力支点、潜在利润空间与关键里程碑。</p>
+ </div>
+ <span class="mui-chip mui-chip-violet mono">6 S-CURVES · MASTER-DETAIL</span>
+ </div>
+
+ <div class="ft-explorer">
+ <div class="ft-rail" id="engineRail">
+ <button type="button" class="ft-rail-btn active" data-eng="0">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">01</span><span class="ft-rail-name" data-i18n-zh="星舰全复用与百吨级太空物流" data-i18n-en="Starship Full Reuse & Logistics">星舰全复用与百吨级太空物流</span></span>
+ <span class="ft-rail-tam mono">&lt;$200/kg 奇点</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="1">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">02</span><span class="ft-rail-name" data-i18n-zh="StarMind 轨道太阳能 AI 数据中心" data-i18n-en="StarMind Orbital AI Compute">StarMind 轨道太阳能 AI 数据中心</span></span>
+ <span class="ft-rail-tam mono">+$45B–$80B/年</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="2">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">03</span><span class="ft-rail-name" data-i18n-zh="Starlink Mobile 全球手机直连网" data-i18n-en="Starlink Mobile Direct-to-Cell">Starlink Mobile 全球手机直连网</span></span>
+ <span class="ft-rail-tam mono">+$25B–$45B/年</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="3">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">04</span><span class="ft-rail-name" data-i18n-zh="SpaceXSI：Grok × Cursor 智能体生态" data-i18n-en="SpaceXSI: Grok × Cursor Stack">SpaceXSI：Grok × Cursor 智能体生态</span></span>
+ <span class="ft-rail-tam mono">+$35B–$65B/年</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="4">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">05</span><span class="ft-rail-name" data-i18n-zh="Starshield 与天基导弹预警/国防网" data-i18n-en="Starshield & Sovereign Defense">Starshield 与天基导弹预警/国防网</span></span>
+ <span class="ft-rail-tam mono">+$15B–$30B/年</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="5">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">06</span><span class="ft-rail-name" data-i18n-zh="Artemis 登月舱与火星多行星基建" data-i18n-en="Artemis HLS Lunar & Mars Base">Artemis 登月舱与火星多行星基建</span></span>
+ <span class="ft-rail-tam mono">文明级远期期权</span>
+ </button>
+ </div>
+
+ <div class="ft-dossier" id="engineDossier">
+ <div>
+ <span class="mui-chip mui-chip-primary mono" id="engBadge">ENGINE 01 · STARSHIP FULL REUSABILITY &amp; ORBITAL REFUELING</span>
+ <h3 id="engTitle">星舰（Starship V3）全复用闭环：把人类进入太空的边际成本再砍一个数量级</h3>
+ <p id="engDesc">
+ 猎鹰 9 号仅复用了约占箭体成本 70% 的一级助推器与整流罩，每次仍需报废数千万美元的二级火箭；而星舰是人类历史上首款一二级 100% 全复用超重型运载系统。2026 年 11 月 14 日 Flight 15 成功用发射塔机械臂捕获轨道级再入的 Ship 42，验证了免着陆腿减重与发射台原位快速周转路线。一旦星舰 V3（单发近地轨道运力 150–200 吨+）跑通一天多发，SpaceX 每年送入轨道的载荷吨位将从数千吨跃升至十万吨级。
+ </p>
+ <div class="ft-dossier-formula mono" id="engFormula">
+ 物理乘数：单发运力提升 ~10x（对比猎鹰9）× 二级零报废全复用 = 独占星链 V3 巨型卫星与百万颗太空 AI 算力节点的唯一运输船票
+ </div>
+ </div>
+
+ <div class="ft-gauge-grid" id="engGauges">
+ <div class="ft-gauge-card"><b class="mono">Flight 15</b><span>2026.11 首现轨道飞船机械臂捕获</span></div>
+ <div class="ft-gauge-card"><b class="mono">150–200t</b><span>Starship V3 近地轨道复用运力目标</span></div>
+ <div class="ft-gauge-card"><b class="mono">~$3M–$5M</b><span>远期单次发射推进剂与周转边际成本</span></div>
+ <div class="ft-gauge-card"><b class="mono">400 发/4年</b><span>管理层规划星舰四年累计发射节奏</span></div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE F2: 7:5 SPLIT — AI/ORBITAL CAPEX VS PEERS & 2025-2032 REVENUE BRIDGE -->
+ <section id="sec-f2" class="ft-split-75">
+ <div class="ft-subbox">
+ <div class="ft-subhead">
+ <div>
+ <span class="ft-kicker mono">MODULE F2A · HYPERSCALE CAPEX RACE &amp; 2032 BRIDGE</span>
+ <h3 data-i18n-zh="从地面电网争夺战到太空算力：2026 年化 CapEx 对标与 2032 营收阶梯桥" data-i18n-en="From Terrestrial Grid Bottlenecks to Space Compute: CapEx & 2032 Revenue Bridge">从地面电网争夺战到太空算力：2026 年化 CapEx 对标与 2032 营收阶梯桥</h3>
+ </div>
+ <div class="mui-segmented" id="fChartTabs">
+ <button type="button" class="mui-seg-btn active" data-fview="capex" data-i18n-zh="2026年化 CapEx 对比 ($B)" data-i18n-en="2026 CapEx Pace ($B)">2026年化 CapEx 对比 ($B)</button>
+ <button type="button" class="mui-seg-btn" data-fview="bridge" data-i18n-zh="25A→32E 营收阶梯桥" data-i18n-en="2032E Revenue Bridge">25A→32E 营收阶梯桥</button>
+ </div>
+ </div>
+
+ <div class="ft-canvas-box">
+ <canvas id="futureCanvas"></canvas>
+ </div>
+
+ <p class="ft-caption">
+ 资本密度洞察：SpaceX 在 2026 年前 9 个月资本开支已达 <strong>$480.7亿</strong>（Q3 单季 $195.9亿，年化强度直逼微软/谷歌/Meta），短期重投地面 1.7GW+ SI 数据中心抢占商业合同，中长期则通过 2028 年启动的轨道太阳能 AI 星座将算力能源成本结构性打穿
+ <a class="cite-link" href="https://www.crowdfundedwealth.com/articles/spacex-10-q-q3-2026-ai-segment-starlink-revenue" target="_blank" rel="noopener noreferrer">10-Q CapEx 披露 ↗</a>。
+ </p>
+ </div>
+
+ <div class="ft-subbox">
+ <div class="ft-subhead">
+ <div>
+ <span class="ft-kicker mono">MODULE F2B · WHY ORBITAL AI COMPUTE (STARMIND)?</span>
+ <h3 data-i18n-zh="为什么马斯克断言“36个月内太空将是部署 AI 最具经济性的地方”？" data-i18n-en="Why Orbital AI Data Centers Can Beat Terrestrial Grids">为什么马斯克断言“36个月内太空将是部署 AI 最具经济性的地方”？</h3>
+ </div>
+ </div>
+
+ <div class="ft-thesis-stack">
+ <div class="ft-thesis-item">
+ <b>① 突破地球电网变压器与环评审批死结（Zero Grid Queue）</b>
+ <p>北美新建吉瓦级地面 AI 数据中心需排队等待 4–7 年高压并网与燃气轮机交付；而晨昏太阳同步轨道（Dawn-Dusk SSO）无大气遮挡与昼夜交替，250kW 级大面积太阳翼可享受近乎 24/7 连续高通量光照。</p>
+ </div>
+ <div class="ft-thesis-item">
+ <b>② 真空深空 3K 背景辐射散热 + 星间激光直传</b>
+ <p>无需消耗数百万吨市政淡水冷却，直接向接近绝对零度的深空背景辐射排热；推理结果经星链光学激光骨干网以低延迟直达全球任一城市用户终端。</p>
+ </div>
+ <div class="ft-thesis-item">
+ <b>③ 唯有星舰拥有把每瓦特算力送入轨道的经济账本</b>
+ <p>其他云巨头即便造出太空服务器，也买不起高昂商业火箭运力；唯有 SpaceX 将星舰运力成本内化，形成“火箭 + 太阳翼卫星总线 + 激光通信 + Grok/Cursor 模型”四位一体闭环
+ <a class="cite-link" href="https://www.lightreading.com/satellite/with-nvidia-on-board-spacex-orbital-data-centers-to-hit-significant-scale-in-2028" target="_blank" rel="noopener noreferrer">Light Reading 报道 ↗</a>。</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE F3: 5:7 REVERSED SPLIT — FULL HARDWARE/SPECTRUM STACK -->
+ <section id="sec-f3" class="ft-split-57">
+ <div class="ft-subbox">
+ <div class="ft-subhead">
+ <div>
+ <span class="ft-kicker mono">MODULE F3A · TOTAL ORBITAL &amp; SPECTRUM SOVEREIGNTY</span>
+ <h3 data-i18n-zh="四大底层基础设施合拢：重塑太空运输、移动通信与边缘推理" data-i18n-en="Four Foundational Pillars: Launch, V3 Bus, Spectrum & AI">四大底层基础设施合拢：重塑太空运输、移动通信与边缘推理</h3>
+ </div>
+ </div>
+
+ <div class="ft-chip-matrix">
+ <div class="ft-chip-box">
+ <span class="code mono">PROPULSION · RAPTOR 3</span>
+ <h4>全流量分级燃烧引擎</h4>
+ <p>取消外部繁杂隔热罩、管路内嵌化，推重比与海平面推力再创新高，支撑星舰无翻修快速复飞。</p>
+ </div>
+ <div class="ft-chip-box">
+ <span class="code mono">BUS · STARLINK V3 (250kW)</span>
+ <h4>Tbps 级单星吞吐跃升</h4>
+ <p>专为星舰载荷舱定制，Flight 14/15 已连续完成在轨批量部署
+ <a class="cite-link" href="https://www.friendsofnasa.org/2026/11/spacex-starship-back-on-earth-after.html" target="_blank" rel="noopener noreferrer">V3 部署核验 ↗</a>，单星容量较 V2 Mini 跃升数倍。</p>
+ </div>
+ <div class="ft-chip-box">
+ <span class="code mono">SPECTRUM · 2GHz + 800MHz</span>
+ <h4>天地融合全覆盖频谱墙</h4>
+ <p>EchoStar $19.6B 卫星频段配合 Grain 800MHz 室内穿墙低频，补齐直连普通存量手机最后拼图。</p>
+ </div>
+ <div class="ft-chip-box">
+ <span class="code mono">AI STACK · STARMIND + CURSOR</span>
+ <h4>代码数据护城河与轨道云</h4>
+ <p>Cursor 实时开发者工作流反哺 Grok 编码推理，搭载 Nvidia 加速器的轨道算力星 2028 放量。</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="ft-subbox">
+ <div class="ft-subhead">
+ <div>
+ <span class="ft-kicker mono">MODULE F3B · COMPUTE GW &amp; CONSTELLATION BANDWIDTH RAMP</span>
+ <h3 data-i18n-zh="2025–2030 总装机 AI 算力 (GW) 与星链全球活跃订户爬坡推演" data-i18n-en="2025–2030 Total AI Compute (GW) & Starlink Subscriber Ramp">2025–2030 总装机 AI 算力 (GW) 与星链全球活跃订户爬坡推演</h3>
+ </div>
+ <div class="mui-segmented" id="sChartTabs">
+ <button type="button" class="mui-seg-btn active" data-sview="gw" data-i18n-zh="地面+轨道 AI 算力 (GW)" data-i18n-en="Total AI Compute (GW)">地面+轨道 AI 算力 (GW)</button>
+ <button type="button" class="mui-seg-btn" data-sview="subs" data-i18n-zh="星链订户规模 (百万户)" data-i18n-en="Starlink Subs (M)">星链订户规模 (百万户)</button>
+ </div>
+ </div>
+
+ <div class="ft-canvas-box">
+ <canvas id="siliconCanvas"></canvas>
+ </div>
+
+ <p class="ft-caption">
+ 增长斜率核验：据 Q3 2026 10-Q，SpaceX 已装机 GPU 铭牌算力在短短一年内从 <strong>0.6 GW 跃升至 1.7 GW</strong>，星链消费级订户从 <strong>720 万跃升至 1,360 万</strong>；随着 2027–2028 星舰高密度发射 V3 与 StarMind 卫星，两大底座将进入指数级复利共振。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE F4: INTERACTIVE 2030 "$5T+ MARKET CAP" OPTIONALITY BUILDER -->
+ <section id="sec-f4" class="ft-panel">
+ <div class="ft-panel-head">
+ <div>
+ <span class="ft-kicker mono">MODULE F4 · INTERACTIVE 2030 OPTIONALITY &amp; VALUATION BUILDER</span>
+ <h2 class="ft-h2" data-i18n-zh="2030 迈向“$5万亿+市值”期权组装实验室：勾选你认可的新增长极" data-i18n-en="2030 Path to $5T+ Market Cap: Toggle Growth Optionality Switches">2030 迈向“$5万亿+市值”期权组装实验室：勾选你认可的新增长极</h2>
+ <p class="ft-sub" data-i18n-zh="基于 2026 年化基础盘，自由开关五大远期业务期权并选择 EV/EBITDA 估值倍数，实时测算 2030E 营收、EBITDA 与隐含总市值。" data-i18n-en="Toggle five next-decade catalysts and select an EV/EBITDA multiple to model SpaceX's 2030E revenue, EBITDA, and market cap.">基于 2026 年化基础盘，自由开关五大远期业务期权并选择 EV/EBITDA 估值倍数，实时测算 2030E 营收、EBITDA 与隐含总市值。</p>
+ </div>
+ <div class="mui-segmented" id="peTabs">
+ <button type="button" class="mui-seg-btn" data-pe="24">审慎 24x EBITDA</button>
+ <button type="button" class="mui-seg-btn active" data-pe="32">基准 32x EBITDA</button>
+ <button type="button" class="mui-seg-btn" data-pe="40">稀缺溢价 40x EBITDA</button>
+ </div>
+ </div>
+
+ <div class="ft-builder-grid">
+ <div class="ft-switch-list" id="optSwitchList">
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="d2c" checked />
+ <span><b>期权 1：Starlink Mobile (2GHz+800MHz) 全球手机直连包</b><span>渗透 1.5亿+ 移动漫游与无信号覆盖增强用户</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$28B 营收 · 65% EBITDA</span>
+ </label>
+
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="starmind" checked />
+ <span><b>期权 2：StarMind 太阳同步轨道 AI 数据中心集群 (2028+)</b><span>星舰批量投送太空推理节点，摆脱地面电网瓶颈</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$46B 营收 · 58% EBITDA</span>
+ </label>
+
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="cursor" checked />
+ <span><b>期权 3：Cursor 企业级软件自动工程与 Grok API 生态</b><span>AI 替代全球研发人力预算，高粘性 SaaS 与 Token 变现</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$32B 营收 · 55% EBITDA</span>
+ </label>
+
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="shield" checked />
+ <span><b>期权 4：Starshield 美盟天基防御网与重型深空运输</b><span>承接太空军导弹跟踪网（Golden Dome）与商业空间站物流</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$19B 营收 · 50% EBITDA</span>
+ </label>
+
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="mars" />
+ <span><b>期权 5：远期奇点 — 月球基地常态化货运与地球点对点极速客运</b><span>高赔率远期期权（默认未勾选，可手动开启观察弹性）</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$25B 营收 · 44% EBITDA</span>
+ </label>
+ </div>
+
+ <div class="ft-val-board">
+ <div class="ft-val-kpis">
+ <div class="ft-val-kpi"><b class="mono" id="optRevOut">$215B</b><span>2030E 推演总营收</span></div>
+ <div class="ft-val-kpi"><b class="mono" id="optNetOut">$119.8B</b><span>2030E Adjusted EBITDA</span></div>
+ <div class="ft-val-kpi"><b class="mono" id="optEpsOut">55.7%</b><span>2030E 综合 EBITDA 利润率</span></div>
+ <div class="ft-val-kpi"><b class="mono" id="optCapOut" style="color:var(--mui-success-text);">$3.88T</b><span>2030E 隐含目标总市值</span></div>
+ </div>
+
+ <div class="ft-canvas-box" style="height:155px;">
+ <canvas id="optMiniCanvas"></canvas>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- VERIFIED PRIMARY SOURCES -->
+ <section class="ft-panel" aria-label="权威公告与前瞻信源">
+ <div class="ft-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="ft-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="ft-h2" data-i18n-zh="官方试飞公报、FCC 轨道算力申报与 S-1 战略信源" data-i18n-en="Official Flight Releases, FCC Orbital Compute Filings & S-1 Sources">官方试飞公报、FCC 轨道算力申报与 S-1 战略信源</h2>
+ </div>
+ </div>
+ <div class="ft-sources-grid">
+ <a class="ft-source-card" href="https://www.spacex.com/launches/starship-flight-15" target="_blank" rel="noopener noreferrer">
+ <b>SpaceX Official: Starship Flight 15 Mission (Nov 2026) ↗</b>
+ <span>2026 年 11 月 13–14 日星舰第 15 次试飞入轨部署 23 颗星链 V3 并首次由发射塔机械臂成功捕获返回飞船 Ship 42</span>
+ </a>
+ <a class="ft-source-card" href="https://www.spacex.com/spacexai/starmind" target="_blank" rel="noopener noreferrer">
+ <b>SpaceXAI Official: StarMind Space-Based AI Compute ↗</b>
+ <span>官方架构说明：利用太阳同步低延迟轨道部署搭载本地 AI 算力的卫星并经光学链路回传推理结果</span>
+ </a>
+ <a class="ft-source-card" href="https://www.lightreading.com/satellite/with-nvidia-on-board-spacex-orbital-data-centers-to-hit-significant-scale-in-2028" target="_blank" rel="noopener noreferrer">
+ <b>Light Reading: Orbital AI Data Centers Scale in 2028 ↗</b>
+ <span>搭载 Nvidia 芯片的 SpaceX 轨道 AI 数据中心将于 2027Q4 启动发射并在 2028 年进入规模化部署阶段</span>
+ </a>
+ <a class="ft-source-card" href="https://payloadspace.com/spacex-reveals-financial-data-ahead-of-ipo/" target="_blank" rel="noopener noreferrer">
+ <b>Payload Space: S-1 $28.5T TAM &amp; Orbital Roadmap ↗</b>
+ <span>S-1 招股书披露横跨航天、全球连接与人工智能的 $28.5万亿总潜在市场及 2028 轨道算力规划</span>
+ </a>
+ <a class="ft-source-card" href="https://spacenexus.us/blog/spacex-starlink-everything-you-need-to-know-2026" target="_blank" rel="noopener noreferrer">
+ <b>SpaceNexus: Starlink 2026 Constellation &amp; D2C Guide ↗</b>
+ <span>约 11,100 颗活跃在轨卫星、手机直连（Direct-to-Cell）商用进展与下一代 V3 容量拆解</span>
+ </a>
+ <a class="ft-source-card" href="https://www.basenor.com/blogs/news/musk-explains-spacexs-60b-cursor-acquisition-data-is-the-moat" target="_blank" rel="noopener noreferrer">
+ <b>Strategic Analysis: SpaceX's $60B Cursor Acquisition ↗</b>
+ <span>拆解 2026 年 8 月全股票并购 Cursor 背后的实时软件工程数据护城河与 SpaceXSI 协同逻辑</span>
+ </a>
+ </div>
+ </section>
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/spacex_growth_2026_2032.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

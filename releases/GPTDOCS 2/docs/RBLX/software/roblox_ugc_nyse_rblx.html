@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Roblox 游戏与 UGC 生态深度研究报告 (NYSE: RBLX) | 数据中心</title>
+ <meta name="description" content="Roblox (NYSE: RBLX) 游戏与全球 UGC 创作者生态深度研究报告：1.38亿 DAU 与 4,730万峰值同时在线、Brookhaven RP / Steal a Brainrot / Grow a Garden 爆款机制、Robux 与 $15亿 DevEx 创作者飞轮、Cube 3D/4D 与 Build AI 原生创作革命。" />
+ <meta name="keywords" content="Roblox, RBLX, 游戏分析, UGC生态, Brookhaven RP, Steal a Brainrot, Grow a Garden, Blox Fruits, Dress To Impress, Robux, DevEx, Cube 3D, Roblox Build" />
+ <link rel="stylesheet" href="../../_shared/2a386eec789a4f16.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+  <script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI Frosted Glass AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">RBX</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="../../index.html">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span>数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current">Roblox 游戏与 UGC 生态深度研报</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NYSE: RBLX</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY2025 10-K · 2026 Q3</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">RBLX · GAME &amp; UGC ECOSYSTEM</span>
+ </div>
+ <div class="sidebar-title">Roblox 游戏生态研报</div>
+ <p class="sidebar-subtitle">社交图谱即时分发 × Robux 与 $15亿 DevEx 创作者飞轮 × Cube 4D 与 Build AI 原生创作引擎</p>
+
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label">26Q3 DAU / 峰值在线</span>
+ <span class="sidebar-mini-val mono">1.38亿 · 4,730万</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label">FY25 预订额 / FCF</span>
+ <span class="sidebar-mini-val mono">$6.79B / $1.35B</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label">FY25 分成 / 13+占比</span>
+ <span class="sidebar-mini-val mono">$1.50B · 66% 核验</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Unified MUI Navigation Card: Site Portal Nav + Report TOC -->
+ <nav class="sidebar-card" aria-label="站点导航与章节目录">
+ <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="RBLX">
+          <div class="co-side-head">
+            <span class="co-side-title mono">RBLX · 04/04</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="rblx_hit_12_pet_simulator.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../Company/roblox_corporation_nyse_rblx.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (4)" data-i18n-en="All (4)">全部 (4)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="software" data-i18n-zh="软件生态 (2)" data-i18n-en="software (2)">软件生态 (2)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../Company/roblox_corporation_nyse_rblx.html" title="Roblox Corporation (NYSE: RBLX) 公司基本面与投资价值深度研究报告"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Roblox Corporation (NYSE: RBLX) 公司基本面与投资价值深度研究报告" data-i18n-en="Roblox Corporation (NYSE: RBLX) &amp; Deep Dive Research Report">Roblox Corporation (NYSE: RBLX) 公司基本面与投资价值深度研究报告</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../SeniorExecutive/Roblox_18_Senior_Executives.single.html" title="Roblox Corporation (NYSE: RBLX) 全量 18 大核心高管与董事会全景深度研报中枢（Baszucki·Chopra·Loktev·Barrios·Ciancutti·D&#x27;Angelo·Tornow·Singh·Kaufman等）| 王安安数据中心"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Roblox Corporation (NYSE: RBLX) 全量 18 大核心高管与董事会全景深度研报中枢（Baszucki·Chopra·Loktev·Barrios·Ciancutti·D&#x27;Angelo·Tornow·Singh·Kaufman等）| 王安安数据中心" data-i18n-en="Roblox Corporation (NYSE: RBLX) 18 &amp; OverviewDeep DiveReport (Baszucki·Chopra·Loktev·Barrios·Ciancutti·D&#x27;Angelo·Tornow·Singh·Kaufman)| Data Center">Roblox Corporation (NYSE: RBLX) 全量 18 大核心高管与董事会全景深度研报中枢（Baszucki·Chopra·Loktev·Barrios·Ciancutti·D&#x27;Angelo·Tornow·Singh·Kaufman等）| 王安安数据中心</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="software" href="rblx_hit_12_pet_simulator.html" title="Roblox 12 大现象级爆款游戏深度研报中枢（当前：布鲁克海文 Brookhaven）| 王安安数据中心"><span class="co-hub-ticker mono">03</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Roblox 12 大现象级爆款游戏深度研报中枢（当前：布鲁克海文 Brookhaven）| 王安安数据中心" data-i18n-en="Roblox 12 Deep DiveReport (: Brookhaven)| Data Center">Roblox 12 大现象级爆款游戏深度研报中枢（当前：布鲁克海文 Brookhaven）| 王安安数据中心</span><span class="co-hub-meta mono">software</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="software" href="roblox_ugc_nyse_rblx.html" title="Roblox 游戏与 UGC 生态深度研究报告 (NYSE: RBLX)"><span class="co-hub-ticker mono">04</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Roblox 游戏与 UGC 生态深度研究报告 (NYSE: RBLX)" data-i18n-en="Roblox &amp; UGC Deep Dive Research Report (NYSE: RBLX)">Roblox 游戏与 UGC 生态深度研究报告 (NYSE: RBLX)</span><span class="co-hub-meta mono">software</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+ <div class="nav-divider"></div>
+
+ <div class="nav-section-label">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span>执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span>垂直技术栈与爆款游戏矩阵</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span>四大飞轮支柱与 AI 护城河</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span>全球游戏与 UGC 平台对比</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span>虚拟经济漏斗与收益测算器</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span>三代演进与现象级战役复盘</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span>爆款游戏与生态核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span>数据来源与财报核验索引</span></a></li>
+ </ul>
+ </nav>
+
+ <!-- Compact MUI Page Utility Controls (Appearance Switch + Export/Print) -->
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+
+ <!-- ================================================================
+ 00 执行摘要与核心指标
+ ================================================================ -->
+ <section id="sec-00" class="mui-paper hero-card section-block">
+ <div class="status-strip">
+ <span class="mui-chip mui-chip-primary">生态定评：全球游戏的“YouTube + 云端社交操作系统”</span>
+ <span class="mui-chip">研究横跨：物理沙盒奠基 (2004–2019) · 病毒爆款井喷 (2025) · AI 原生与全龄破圈 (2026 Q3+)</span>
+ <span class="mui-chip mui-chip-success mono">数据基准：FY2025 10-K / 2026 Q3</span>
+ </div>
+
+ <div class="hero-overline mono">
+ <span>CORE THESIS · 社交图谱即时分发 × 零边际服务器托管 × Robux/DevEx 飞轮 × Cube 4D 与 Build AI 革命</span>
+ </div>
+
+ <h1 class="hero-h1">
+ Roblox 游戏与全球 UGC 生态深度研究报告：<span class="gradient-accent">社交裂变爆款工厂、15亿美元创作者经济与 AI 原生游戏奇点</span>
+ </h1>
+
+ <p class="lead-prose">
+ 为什么传统 3A 游戏动辄耗资数亿美元、研发周期长达五年，而在 Roblox（NYSE: RBLX）上，几名年轻开发者仅用 4 个月打造的《Steal a Brainrot》就能创下 <strong>2,540 万+ 单游戏峰值同时在线（CCU）</strong>的世界纪录，并与《Grow a Garden》（上线 33 天破 10 亿访问）共同在 2025 年 8 月将 Roblox 全平台同时在线推上 <strong>4,730 万人</strong>，一举超越 Steam 历史峰值（4,120 万）
+ <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q4 2025 Letter ↗</a>
+ <a class="cite-link" href="https://www.pocketgamer.biz/robloxs-steal-a-brainrot-becomes-first-game-to-surpass-25m-concurrent-players/" target="_blank" rel="noopener noreferrer">PocketGamer ↗</a>？
+ 答案在于 Roblox 并非单一游戏开发商，而是将<strong>“跨平台 3D 引擎（Roblox Studio）+ 免运维全球多人云端托管 + 好友社交图谱即时分发 + 统一虚拟货币（Robux）与创作者分成（DevEx）”</strong>垂直整合的双边网络飞轮。
+ 2025 财年，Roblox 实现 GAAP 营收 <strong>$48.91 亿</strong>（+36% YoY）、预订额（Bookings）<strong>$67.88 亿</strong>（+55% YoY）、自由现金流 <strong>$13.53 亿</strong>（+111% YoY），占全球游戏内容市场份额达 <strong>3.4%</strong>（长期目标冲击 <strong>10%</strong>），并向全球创作者发放创纪录的 <strong>$15.03 亿</strong> DevEx 分成
+ <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">FY25 Financials ↗</a>。
+ 截至 2026 Q3，平台日活跃用户（DAU）达 <strong>1.38 亿</strong>（环比 +12%）、单季参与时长近 <strong>340 亿小时</strong>（环比 +17%），Top 100 游戏中超 <strong>80%</strong> 已采用 AI 工具加速研发，自然语言建游工具 <strong>Roblox Build</strong> 内测吸引超 50 万用户体验并发布逾 7 万款新游
+ <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/content_files/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q3 2026 Letter ↗</a>。
+ </p>
+
+ <!-- 3 Core Thesis Cards -->
+ <div class="grid-3" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div class="mui-avatar-icon">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+ </div>
+ <h3>零摩擦试错与病毒式社交裂变</h3>
+ <p>创作者无需承担前置服务器费用与买量成本，依托好友同玩关系链与 Recommended for You (RFY) 个性化推荐，人均每月体验超 24 款不同游戏，新游可在数周内引爆千万级同时在线。</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+ </div>
+ <h3>AI 原生创作奇点 (Cube 4D &amp; Build)</h3>
+ <p>依托 20 年人类交互与每日超 3.5 亿小时空间遥测数据训练近 400 个模型；开源 Cube 3D/4D 交互生成模型与自然语言工具 Build，让超 75% 从未打开过 Studio 的新手也能直接建游。</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+ </div>
+ <h3>全龄破圈 (O18) 与多元变现进化</h3>
+ <p>64% 全球 DAU 已完成强制聊天年龄核验，其中 13 岁以上占 66%、18 岁以上（O18）全球占 29%（美国达 37%，单客变现比未成年高 50%+），叠加 DevEx 提价、Roblox Plus 与激励视频广告共驱飞轮。</p>
+ </div>
+ </div>
+
+ <!-- 4 KPI Cards -->
+ <div class="grid-4">
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label">日活规模与全平台峰值 (26Q3)</span>
+ <span class="mui-chip mui-chip-primary mono">47.3M 峰值 CCU</span>
+ </div>
+ <div class="kpi-value mono">138.0M</div>
+ <p class="kpi-desc">2026 Q3 平均 DAU 达 1.38 亿（两年期 +55%），单季参与时长近 340 亿小时（FY25 全年高达 1,239 亿小时） <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/content_files/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">26Q3 Letter ↗</a>。</p>
+ </div>
+
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label">全年预订额与自由现金流 (FY25)</span>
+ <span class="mui-chip mui-chip-success mono">FCF $1.35B</span>
+ </div>
+ <div class="kpi-value mono">$6.79B</div>
+ <p class="kpi-desc">FY25 Bookings 同比暴涨 55% 至 $67.88 亿，经营现金流达 $17.96 亿，26Q3 账面现金及投资总额增至 $62 亿 <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">FY25 Letter ↗</a>。</p>
+ </div>
+
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label">创作者分成池规模 (DevEx)</span>
+ <span class="mui-chip mui-chip-warning mono">费率上调 +8.5%</span>
+ </div>
+ <div class="kpi-value mono">$1.50B</div>
+ <p class="kpi-desc">FY25 创作者分成同比跃升 62.9% 至 $15.03 亿（Top 1,000 创作者均入 $130 万）；2026 前三季度再发 $11.89 亿 <a class="cite-link" href="https://resourcera.com/statistics/gaming/roblox-creator-earnings/" target="_blank" rel="noopener noreferrer">Resourcera ↗</a>。</p>
+ </div>
+
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label">年龄核验 13+ 占比与成人溢价</span>
+ <span class="mui-chip mui-chip-violet mono">美国 O18 占 37%</span>
+ </div>
+ <div class="kpi-value mono">66.0%</div>
+ <p class="kpi-desc">全球已核验 DAU 中 13–17 岁占 37%、18+ 占 29%（合计 66%），美国 18+ 玩家变现力高出未成年群体 50%+ <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/content_files/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Age-Check ↗</a>。</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 01 垂直技术栈与爆款游戏矩阵
+ ================================================================ -->
+ <section id="sec-01" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 01 · VERTICAL TECH STACK &amp; HIT GAME TAXONOMY</div>
+ <h2 class="sec-h2">一、垂直整合技术栈与爆款游戏矩阵：为什么千万在线神作频频诞生于 Roblox？</h2>
+ <p class="sec-sub">前端四大游戏品类百花齐放（常青社交 / 病毒放置 / 硬核竞技 / 时尚与 AI 原生） × 后端云引擎与推荐网络统一托底</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">Top 10 时长集中度降至 ~20% · 长尾繁荣</span>
+ </div>
+
+ <!-- Architectural Blueprint Diagram -->
+ <div class="arch-blueprint">
+ <div class="arch-hub">
+ <div class="arch-hub-title">Roblox 垂直整合云游戏操作系统中枢（San Mateo, CA · 客户端秒级直连 / 混合云推理 / 全球统一虚拟经济）</div>
+ <div class="arch-hub-sub">三大下一代战略支柱：Roblox App + AI 加速创作 × Roblox Everywhere 跨商店独立发行 × The Universal Player 外部游戏一键上云</div>
+ </div>
+ <div class="arch-nodes">
+ <div class="arch-node">
+ <div class="arch-node-tag mono">EVERGREEN RP · 常青社交基本盘</div>
+ <div class="arch-node-name">Brookhaven RP &amp; Adopt Me!</div>
+ <div class="arch-node-desc">《Brookhaven》累计访问超 879 亿次居历史第一；《Adopt Me!》宠物交易与社交扮演构成高留存底盘。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono">VIRAL LOOPS · 病毒式轻休闲爆款</div>
+ <div class="arch-node-name">Steal a Brainrot &amp; Grow a Garden</div>
+ <div class="arch-node-desc">极致社交博弈与离线成长循环，分别创下 2,540 万+ 与 2,130 万+ 单游戏峰值同时在线行业纪录。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono">NOVEL &amp; CORE · 中重度竞技与恐怖</div>
+ <div class="arch-node-name">Blox Fruits / RIVALS / 99 Nights</div>
+ <div class="arch-node-desc">《Blox Fruits》超 646 亿访问；《99 Nights in the Forest》与射击大作《RIVALS》强力拉动 O18 成人留存。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono">FASHION &amp; AI-NATIVE · 时尚与 AI 新游</div>
+ <div class="arch-node-name">Dress To Impress &amp; AI Top-20</div>
+ <div class="arch-node-desc">《Dress To Impress》携手 Lady Gaga 破圈时尚秀场；纯 AI 构建游戏《Break and Steal an Egg》杀入在线前 20。</div>
+ </div>
+ </div>
+ <div class="arch-platform-bar">
+ <div class="arch-platform">
+ <strong>Roblox Studio + Cube 4D + Build 创作与引擎底座</strong>
+ <span>内置 Luau 脚本、SLIM 轻量模型、Server Authority 反作弊同步、动态纹理流式加载及 MCP 外部 AI 接入协议。</span>
+ </div>
+ <div class="arch-platform">
+ <strong>RFY 个性化推荐 + Moments 短视频直连 + RM3 安全护栏</strong>
+ <span>每周 RFY 曝光前 100 游戏中约 40% 诞生于近 3 个月；Moments 视频一键入局；RM3 实时多模态场景审核护航。</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- 3 Ecosystem Design Principles -->
+ <div class="grid-3" style="margin-bottom: 16px;">
+ <div class="feature-card">
+ <h3>1. “一键跨端发布”消灭多平台适配壁垒</h3>
+ <p>开发者只需在 Studio 编写一套代码，即可利用 SLIM 与动态纹理流式技术在千元安卓机、iOS、PC、PlayStation、Xbox、VR 乃至全新 WebAssembly 网页端（Chrome 免安装直连）同步流畅运行 <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/content_files/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q3 2026 Tech ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <h3>2. 算法去中心化激活“腰部与长尾”内容</h3>
+ <p>2025–2026 年升级 RFY 长期留存与年龄分层推荐权重后，Top 10 游戏占总时长比例已从三年前约 30% 降至约 20%，25Q4 非 Top 10 游戏贡献了过半的新增 Robux 消费增长 <a class="cite-link" href="https://www.quantumrun.com/consulting/metaverse-market-statistics/" target="_blank" rel="noopener noreferrer">Long-Tail Share ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <h3>3. Server Authority 赋能高拟真“Novel 新形态游戏”</h3>
+ <p>针对 18–34 岁成人玩家偏好的竞技射击、体育竞速与硬核 RPG，上线服务端权威校验（Server Authority）与客户端预测回滚，彻底解决早年外挂与延迟痛点 <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Novel Games ↗</a>。</p>
+ </div>
+ </div>
+
+ <div class="mui-alert" style="margin-bottom: 18px;">
+ <span class="mui-chip mui-chip-primary mono">里程碑</span>
+ <div>
+ <strong>2025年夏秋双子星引爆全球游戏史纪录：全平台 4,730 万同时在线</strong> —— 《Grow a Garden》与《Steal a Brainrot》在 2025 年合计斩获超 1,050 亿次访问，推动 Roblox 单季 DAU 在 25Q3 冲上 1.515 亿历史峰值，并在 26Q3 高基数上稳守 1.38 亿 DAU <a class="cite-link" href="https://gamedevreports.substack.com/p/newzoo-and-geeiq-the-roblox-audience" target="_blank" rel="noopener noreferrer">Newzoo &amp; GEEIQ ↗</a>。
+ </div>
+ </div>
+
+ <!-- Interactive Chart: View A vs View B -->
+ <div class="chart-card" style="margin-bottom: 18px;">
+ <div class="chart-toolbar">
+ <div>
+ <div id="ch1ChartTitle" class="chart-title">2024 Q4 – 2026 Q3 平台季度平均 DAU（百万）与用户总参与时长（十亿小时）</div>
+ <div id="ch1ChartSub" class="chart-caption">经历 2025 暑期现象级爆款脉冲后，2026 Q3 DAU 环比强劲回升 12% 至 1.38 亿，两年期复合增长 +55%</div>
+ </div>
+ <div class="mui-segmented" role="tablist" aria-label="第一章图表视图切换">
+ <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA">视图A: 季度 DAU 与参与时长</button>
+ <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB">视图B: 殿堂级游戏访问与峰值</button>
+ </div>
+ </div>
+ <div id="ch1AxisMeta" class="chart-axis-meta mono">
+ <span style="color:var(--chart-c1);">■ 左轴：季度平均 DAU (百万人)</span>
+ <span style="color:var(--chart-c2);">● 右轴：单季总参与时长 (十亿小时)</span>
+ </div>
+ <div class="canvas-stage">
+ <canvas id="chartCh1"></canvas>
+ </div>
+ <div class="chart-legend" id="ch1Legend">
+ <button type="button" class="legend-pill" data-ch1-series="s1"><span id="ch1Dot1" class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1">季度平均 DAU (左轴 · Millions)</span></button>
+ <button type="button" class="legend-pill" data-ch1-series="s2"><span id="ch1Dot2" class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2">单季总参与时长 Hours Engaged (右轴 · Billions)</span></button>
+ </div>
+ </div>
+
+ <!-- 4 Expandable Game Archetype Cards -->
+ <div class="grid-2">
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title">社交沙盒与数字第三空间（Brookhaven RP &amp; Adopt Me!）</div>
+ <span class="mui-chip mui-chip-primary mono">879亿+ 历史访问</span>
+ </div>
+ <p class="matrix-card-body">以《Brookhaven RP》（Voldex 运营，累计访问超 879 亿次稳居全平台历史第一）与《Adopt Me!》为代表的低门槛生活扮演游戏，弱化胜负数值惩罚，聚焦房产载具定制、宠物孵化交易与熟人实时语聊，常年稳居 15 万–40 万+ 实时在线 <a class="cite-link" href="https://www.demandsage.com/how-many-people-play-roblox/" target="_blank" rel="noopener noreferrer">DemandSage 2026 ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail1"><span>展开微观玩法与变现机制</span> <span>⌄</span></button>
+ <div id="matrixDetail1" class="collapse-panel">核心变现并非强制数值付费，而是高复购的通行证（Game Passes，如高级住宅包、专属载具权限、VIP 身份铭牌）与限时节日稀有宠物蛋，单服熟人社交关系极大延长了用户 27 个月以上的付费生命周期。</div>
+ </div>
+
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title">高频多巴胺与社交劫掠裂变（Steal a Brainrot &amp; Grow a Garden）</div>
+ <span class="mui-chip mui-chip-success mono">2,540万+ 峰值 CCU</span>
+ </div>
+ <p class="matrix-card-body">2025 年现象级双王：《Grow a Garden》以“种植稀有作物 + 离线生长 + 气候突变全服事件”创下 33 天破 10 亿访问神迹；《Steal a Brainrot》融合网络迷因收集与玩家基地互相潜入偷取的强情绪对抗，创下超 2,540 万同时在线纪录 <a class="cite-link" href="https://www.pocketgamer.biz/robloxs-steal-a-brainrot-becomes-first-game-to-surpass-25m-concurrent-players/" target="_blank" rel="noopener noreferrer">25.4M CCU ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail2"><span>展开微观玩法与变现机制</span> <span>⌄</span></button>
+ <div id="matrixDetail2" class="collapse-panel">通过“开发者全服在线发放稀有变异事件（Admin Events）”制造定时狂欢峰值，配合低客单价保护护盾、加速孵化道具及私人服务器（Private Servers）订阅，在极短研发周期内撬动数千万级自然裂变流量。</div>
+ </div>
+
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title">长线数值 RPG 与硬核协作生存（Blox Fruits / 99 Nights / RIVALS）</div>
+ <span class="mui-chip mui-chip-warning mono">高 ARPU 核心引擎</span>
+ </div>
+ <p class="matrix-card-body">《Blox Fruits》（累计访问 646 亿+）通过多海域等级探索、恶魔果实觉醒与玩家交易构筑深度 RPG 经济；《99 Nights in the Forest》（峰值 1,410 万 CCU）与竞技射击《RIVALS》则以高难度组队生存与低延迟公平枪战成功打开青少年及 18+ 硬核玩家市场 <a class="cite-link" href="https://lootbar.gg/blog/en/roblox-best-games-to-play-in-2026-top-picks-across-every-genre.html" target="_blank" rel="noopener noreferrer">Genre Leaders ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail3"><span>展开微观玩法与变现机制</span> <span>⌄</span></button>
+ <div id="matrixDetail3" class="collapse-panel">中重度品类拥有全平台最高的单小时预订额（Bookings/Hour）：永久果实切换权、储物格扩容、赛季战斗通行证与高溢价武器皮肤驱动重度玩家高频复购，叠加美国 18+ 认证玩家 0.0054 美元/Robux 的高阶 DevEx 激励，吸引专业工作室涌入。</div>
+ </div>
+
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title">审美竞技、品牌跨界与 AI 原生新物种（Dress To Impress &amp; Build）</div>
+ <span class="mui-chip mui-chip-violet mono">&gt;70,000 款 Build 新游</span>
+ </div>
+ <p class="matrix-card-body">《Dress To Impress》以“6分钟主题穿搭 + T台走秀全员打分”横扫女性与时尚玩家，先后联动 Charli XCX 与 Lady Gaga（Mayhem 主题评审）；与此同时，2026 Q3 纯 AI 驱动开发的《Break and Steal an Egg》与《Huss Valley》双双闯入全平台同时在线前 20 名 <a class="cite-link" href="https://en.wikipedia.org/wiki/List_of_Roblox_games" target="_blank" rel="noopener noreferrer">Roblox Games Wiki ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail4"><span>展开微观玩法与变现机制</span> <span>⌄</span></button>
+ <div id="matrixDetail4" class="collapse-panel">打通“游戏内 VIP 高定衣橱 + 平台通用 Avatar 虚拟形象商城 + Moments 短视频同款直购 + 品牌赞助秀场”四重变现闭环，验证了 Roblox 在非战斗类审美社交与 AI 极速原型创作上的独特生态位。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 02 四大飞轮支柱与 AI 护城河
+ ================================================================ -->
+ <section id="sec-02" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 02 · FLYWHEEL PILLARS &amp; AI MOAT</div>
+ <h2 class="sec-h2">二、四大平台护城河支柱：社交分发、AI 创作引擎、多模态安全与跨端破圈</h2>
+ <p class="sec-sub">点击左侧任一护城河支柱卡片，联动查看底层技术细节与全球三大沙盒/UGC 平台五维竞争力雷达图</p>
+ </div>
+ <span class="mui-chip mui-chip-success">护城河定性：极宽 (Wide Moat · 1.38亿日活社交关系链 + 20年4D空间遥测数据)</span>
+ </div>
+
+ <div class="grid-radar">
+ <div class="pillar-stack" id="pillarStack">
+ <button type="button" class="pillar-card active" data-pillar="0">
+ <div class="pillar-head">
+ <span class="pillar-title">01 · 社交图谱与智能发现飞轮（Social Graph &amp; RFY）</span>
+ <span class="mui-chip mui-chip-primary mono">日均 16亿条聊天</span>
+ </div>
+ <p class="pillar-desc">当 AI 让游戏供给呈指数级爆发时，稀缺资源从“内容制作”转向“注意力分发”。Roblox 依托真实好友同玩关系链、年龄分层 RFY 算法与 Moments 短视频流，让新游无需天价买量即可秒级冷启动。</p>
+ </button>
+
+ <button type="button" class="pillar-card" data-pillar="1">
+ <div class="pillar-head">
+ <span class="pillar-title">02 · 4D 空间数据与 AI 原生创作栈（Cube &amp; Build）</span>
+ <span class="mui-chip mui-chip-success mono">~400 个在役模型</span>
+ </div>
+ <p class="pillar-desc">沉淀超 20 年玩法记录与日均 3.5 亿+ 小时人类交互 4D 帧级数据（DMR 平台），自托管模型承接 77% 推理请求；开源 Cube 3D/4D 交互生成、Studio Assistant 与 MCP 接口使 97% 受访创作者显著提速。</p>
+ </button>
+
+ <button type="button" class="pillar-card" data-pillar="2">
+ <div class="pillar-head">
+ <span class="pillar-title">03 · 强制年龄核验与实时多模态安全（RM3 &amp; Sentinel）</span>
+ <span class="mui-chip mui-chip-warning mono">64% DAU 已核验</span>
+ </div>
+ <p class="pillar-desc">完成全球聊天强制面部年龄估算或证件核验（美英渗透率达 75%、澳洲达 80%），开源语音与儿童保护模型 Sentinel/Guard，并上线 RM3 实时多模态全场景审核与 BAM 违规穿搭拦截系统。</p>
+ </button>
+
+ <button type="button" class="pillar-card" data-pillar="3">
+ <div class="pillar-head">
+ <span class="pillar-title">04 · Universal Player 与全龄跨端扩张（O18 &amp; Web Play）</span>
+ <span class="mui-chip mui-chip-violet mono">美国 18–34岁 +26%</span>
+ </div>
+ <p class="pillar-desc">推进 Roblox Everywhere（赋能创作者向外部应用商店独立发行）与 Universal Player（AI 辅助外部主机/PC 游戏一键迁移上云），叠加 2027H1 拟内测的写实级 Roblox Reality 世界模型，全面抢占成人游戏时长。</p>
+ </button>
+
+ <div id="pillarFocusNote" class="mui-alert" style="margin-top: 4px;">
+ <div>
+ <strong>当前选中支柱解读（01 社交图谱与智能发现）：</strong>2026 Q3 发送聊天或连接语音的活跃用户环比激增 24%（达平台总 DAU 增速两倍），且每周 RFY 首页推荐曝光 Top 100 游戏中约 40% 为近三个月内诞生的新作 <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/content_files/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q3 2026 Discovery ↗</a>。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: 5-Axis Radar Chart -->
+ <div class="chart-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+ <div>
+ <div class="chart-title">全球核心 UGC 游戏平台五维竞争力对比雷达图（10分制标杆评估）</div>
+ <div class="chart-caption">点击下方图例胶囊可单独开关对比曲线，悬停顶点查看各维度评分明细</div>
+ </div>
+ <div class="canvas-stage-tall">
+ <canvas id="chartRadar"></canvas>
+ </div>
+ <div class="chart-legend" id="radarLegend">
+ <button type="button" class="legend-pill" data-radar-key="mo"><span class="legend-dot" style="background:#3399FF;"></span><span>Roblox (全栈社交 UGC 标杆)</span></button>
+ <button type="button" class="legend-pill" data-radar-key="pmi"><span class="legend-dot" style="background:#22C55E;"></span><span>Fortnite / UEFN (高画质高分成)</span></button>
+ <button type="button" class="legend-pill" data-radar-key="ko"><span class="legend-dot" style="background:#FFB74D;"></span><span>Minecraft (买断制体素沙盒常青树)</span></button>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 03 全球游戏与 UGC 平台横向对比
+ ================================================================ -->
+ <section id="sec-03" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 03 · GLOBAL GAMING &amp; UGC PLATFORM BENCHMARKING</div>
+ <h2 class="sec-h2">三、全球顶级游戏与创作平台横向对比：规模网络效应 vs 单笔分成率之争</h2>
+ <p class="sec-sub">支持按平台名称、母公司、代表生态（UEFN / Steam / Minecraft / Unity）或分成模式实时检索筛选</p>
+ </div>
+ <span id="peerCountBadge" class="mui-chip mui-chip-primary mono">显示 5 / 5 家标杆平台</span>
+ </div>
+
+ <div class="datagrid-toolbar">
+ <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索平台、引擎 (UEFN / Studio / Steam) 或分成机制…" aria-label="筛选对比平台" />
+ <div class="mui-segmented" role="group" aria-label="标杆平台分类筛选">
+ <button type="button" class="mui-seg-btn active" data-peer-filter="all">全部标杆平台</button>
+ <button type="button" id="muiSegUgc" class="mui-seg-btn" data-peer-filter="dividend">原生 UGC 与沙盒社区</button>
+ <button type="button" id="muiSegEngine" class="mui-seg-btn" data-peer-filter="global">传统分发商店与第三方引擎</button>
+ </div>
+ </div>
+
+ <div class="table-wrap" style="margin-bottom: 20px;">
+ <table class="mui-table" aria-label="全球顶级游戏与UGC创作平台横向对比表">
+ <thead>
+ <tr>
+ <th>平台与核心主体</th>
+ <th>生态定位与分发机制</th>
+ <th>引擎工具与 AI 创作能力</th>
+ <th>用户体量与峰值并发</th>
+ <th>创作者分成与变现效率</th>
+ <th>与 Roblox 游戏生态的优劣势深度对比</th>
+ </tr>
+ </thead>
+ <tbody id="peerTableBody"></tbody>
+ </table>
+ </div>
+
+ <!-- Horizontal Bar Chart: Cost Components (% of Bookings) & Verified Age Demographics -->
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title">Roblox 平台经济分配（占 Bookings 比例）vs 全球已核验玩家年龄结构拆解（%）</div>
+ <div class="chart-caption">数据来源：Roblox 2026 Q3 股东信（成本与 DevEx 占 Bookings 比重，及截至 2026-09-30 全球已核验年龄 DAU 分布 34% + 37% + 29% = 100%）</div>
+ </div>
+ <span class="mui-chip mui-chip-success mono">DevEx 占 Bookings 24% · 13+ 玩家合计 66%</span>
+ </div>
+ <div class="canvas-stage-bars">
+ <canvas id="chartBars"></canvas>
+ </div>
+ <div class="chart-legend">
+ <span class="mui-chip mui-chip-primary mono">蓝色/绿色：2026 Q3 核心运营投入与创作者分成占 Bookings 比例</span>
+ <span class="mui-chip mui-chip-violet mono">紫色/琥珀色：2026 Q3 全球已核验玩家三大年龄段构成 (合计 100%)</span>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 04 虚拟经济漏斗与收益测算器
+ ================================================================ -->
+ <section id="sec-04" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 04 · ROBUX UNIT ECONOMICS &amp; STUDIO PAYOUT SIMULATOR</div>
+ <h2 class="sec-h2">四、Robux 虚拟经济漏斗与工作室收益测算器：拆解“账面亏损、现金暴赚”与分成真相</h2>
+ <p class="sec-sub">理解 27 个月递延收入准则下的自由现金流爆发力，以及 0.0038 / 0.0054 双轨 DevEx 汇率对工作室商业模型的重塑</p>
+ </div>
+ <span class="mui-chip mui-chip-warning mono">26Q3 净现金储备 ~$5.2B · 剩余回购额度 $2.4B</span>
+ </div>
+
+ <!-- 4 Economic Funnel Metric Cards -->
+ <div class="grid-4" style="margin-bottom: 18px;">
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">GAAP 递延确认周期</span>
+ <div class="kpi-value mono" style="color: var(--mui-primary-lighter);">27 个月 <span style="font-size:0.85rem;font-weight:600;">(递延池 $7.04B)</span></div>
+ <p class="kpi-desc">玩家充值 Robux 当期全额计入现金流与 Bookings，但 GAAP 营收按 27 个月分摊，造就“表观亏损、现金丰沛”剪刀差。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">标准与 O18 提现汇率</span>
+ <div class="kpi-value mono" style="color: var(--mui-success-text);">$0.0038 <span style="font-size:0.85rem;font-weight:600;">/ $0.0054</span></div>
+ <p class="kpi-desc">2025.09 标准汇率上调 8.5% 至 $0.0038/Robux；2026.06 对美国认证 18+ 玩家内购给予 $0.0054 超额激励 <a class="cite-link" href="https://create.roblox.com/docs/production/monetization/developer-exchange" target="_blank" rel="noopener noreferrer">DevEx Docs ↗</a>。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">ROBLOX PLUS 订阅乘数</span>
+ <div class="kpi-value mono" style="color: var(--mui-warning-text);">7.0x 消费 <span style="font-size:0.85rem;font-weight:600;">(2.0x 时长)</span></div>
+ <p class="kpi-desc">2026 年 4 月推出的 Roblox Plus 已突破数百万活跃订户，订户人均游戏时长达非订户 2 倍、Robux 消费高达 7 倍。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">激励视频与原生广告</span>
+ <div class="kpi-value mono" style="color: var(--mui-violet-text);">&gt;90% 完播 <span style="font-size:0.85rem;font-weight:600;">(95% 可视)</span></div>
+ <p class="kpi-desc">超 1,000 家品牌接入激励视频广告；26Q3 超 20% 启用激励视频的游戏已有 10%+ 游戏内收入来自广告变现。</p>
+ </div>
+ </div>
+
+ <!-- Trend Combo Chart: FY2022–FY2026E Bookings & FCF -->
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title">FY2022–FY2026E 规模与现金流跃迁：全年预订额 Bookings ($B) 与自由现金流 FCF ($B)</div>
+ <div class="chart-caption">柱状图（左轴）为全年 Bookings 预订额；折线（右轴）为全年自由现金流 FCF（FY26E 基于前三季度实绩 + Q4 官方指引中值测算）</div>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">2022–2025 Bookings CAGR +33.2%</span>
+ </div>
+ <div class="chart-axis-meta mono">
+ <span style="color:var(--chart-c1);">■ 左轴：全年预订额 Bookings ($B)</span>
+ <span style="color:var(--chart-c2);">● 右轴：全年自由现金流 Free Cash Flow ($B)</span>
+ </div>
+ <div class="canvas-stage">
+ <canvas id="chartEps"></canvas>
+ </div>
+ <div class="chart-legend" id="epsLegend">
+ <button type="button" class="legend-pill" data-eps-series="eps"><span class="legend-dot" style="background:var(--chart-c1);"></span><span>全年预订额 Bookings (左轴 · $B)</span></button>
+ <button type="button" class="legend-pill" data-eps-series="oci"><span class="legend-dot" style="background:var(--chart-c2);"></span><span>全年自由现金流 FCF (右轴 · $B)</span></button>
+ <span class="mui-chip mui-chip-warning mono">--- $1.0B 年度自由现金流里程碑线</span>
+ </div>
+ </div>
+
+ <!-- Interactive Roblox Studio & Creator DevEx Economics Simulator -->
+ <div class="simulator-grid">
+ <div class="sim-controls">
+ <div>
+ <div class="sec-eyebrow mono" style="margin-bottom:2px;">INTERACTIVE DEVEX STUDIO SIMULATOR</div>
+ <h3 style="font-size:1rem;font-weight:800;">Roblox 游戏工作室变现与 DevEx 净分成测算器</h3>
+ </div>
+
+ <label class="mui-switch-row" for="simDripToggle">
+ <div>
+ <div style="font-size:0.84rem;font-weight:700;color:var(--text-primary);">启用激励视频广告 + Roblox Plus 订户红利 (+15%)</div>
+ <div style="font-size:0.74rem;color:var(--text-secondary);">叠加非付费玩家激励视频变现与 Creator Rewards 留存奖金池</div>
+ </div>
+ <input type="checkbox" id="simDripToggle" checked />
+ </label>
+
+ <div class="preset-stack" role="group" aria-label="典型Roblox游戏商业模型预设">
+ <button type="button" class="preset-btn active" data-preset="p1">
+ <span>① 中重度常青 RPG / 竞技工作室模型</span>
+ <span class="mono">1.5万 CCU · $0.09</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p2">
+ <span>② 病毒式社交放置头部爆款模型</span>
+ <span class="mono">8.0万 CCU · $0.06</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p3">
+ <span>③ 美国高占比 18+ 成人向精品新游</span>
+ <span class="mono">5,000 CCU · 65% O18</span>
+ </button>
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span>游戏平均同时在线人数 (Avg. CCU)</span>
+ <span id="simPrincipalLabel" class="slider-val mono">15,000 人</span>
+ </div>
+ <input type="range" id="simPrincipalSlider" class="mui-slider" min="1000" max="100000" step="1000" value="15000" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span>估算日活单客总流水 (Gross ARPDAU $)</span>
+ <span id="simYearsLabel" class="slider-val mono">$0.09</span>
+ </div>
+ <input type="range" id="simYearsSlider" class="mui-slider" min="2" max="25" step="1" value="9" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span>美国已核验 18+ 付费流水占比 (享 $0.0054 汇率)</span>
+ <span id="simCagrLabel" class="slider-val mono">35%</span>
+ </div>
+ <input type="range" id="simCagrSlider" class="mui-slider" min="0" max="90" step="5" value="35" />
+ </div>
+ </div>
+
+ <div class="sim-output-panel">
+ <div class="sim-readouts">
+ <div class="sim-stat-box">
+ <div class="sim-stat-label">工作室全年预计净提现 (Annual DevEx)</div>
+ <div id="simEndingVal" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);">$2,184,965</div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label">加权提现汇率 / 综合实际到手率</div>
+ <div id="simMoicVal" class="sim-stat-num mono" style="color:var(--mui-success-text);">$0.0044 · 30.5%</div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label">月均入账 Earned Robux (扣 30% 税后)</div>
+ <div id="simNetGainVal" class="sim-stat-num mono">41.76M R$</div>
+ </div>
+ <div class="sim-stat-box">
+ <div id="simMidLabel" class="sim-stat-label">较旧版单一费率 ($0.0035) 年增收</div>
+ <div id="simMidVal" class="sim-stat-num mono">+$670,799</div>
+ </div>
+ </div>
+
+ <div class="canvas-stage-sim">
+ <canvas id="chartSim"></canvas>
+ </div>
+ <div class="chart-legend" style="margin-top:4px;">
+ <span class="mui-chip mui-chip-primary mono">━ 当前设定 12 个月累计净到手美元</span>
+ <span class="mui-chip mono">- - 2025.09 提价前旧基准 ($0.0035 无加成)</span>
+ </div>
+ <div class="chart-caption">测算模型说明：按行业日均周转率（DAU ≈ 12 × 平均 CCU）、标准充值 $1 ≈ 100 Robux、交易内创作者留存 70% Earned Robux 及官方双轨汇率（$0.0038 标准 / $0.0054 美国 O18）精确推演。悬停曲线可逐月对比收益差额。</div>
+ </div>
+ </div>
+
+ <!-- Positive vs Critical Lens Dual Cards -->
+ <div class="grid-2" style="margin-top: 18px;">
+ <div class="mui-alert mui-alert-success" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-success mono">FLYWHEEL STRENGTH</span>
+ <strong>正向商业模式与平台护城河定评</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;">
+ <strong>1. 零前置风险的供给侧井喷：</strong>平台全包全球云端服务器、联机同步、反作弊与支付清算，使小型团队能以极低试错成本跑出年入千万美元的超级爆款。<br/>
+ <strong>2. 第一方支付渠道扩利：</strong>通过优化“购买 Robux”引导路径提升网页与礼品卡等低费率直充占比，26Q3 营收成本率同比下降 160 bps 至 20%。<br/>
+ <strong>3. 强劲净现金安全垫：</strong>截至 26Q3 坐拥 $62 亿现金及短期/长期投资（净现金约 $52 亿），并在 2026 前三季度回购注销 1,260 万股（耗资 $5.8 亿）。
+ </p>
+ </div>
+
+ <div class="mui-alert mui-alert-warning" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-warning mono">CRITICAL LENS</span>
+ <strong>客观商业张力与潜在风险反思</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;">
+ <strong>1. 创作者收入极度二八分化：</strong>尽管 Top 1,000 创作者在 FY25 均入 $130 万，但约 2.9 万名提现创作者的中位数年收入仅约 $1,440–$1,575，且约 25%–30% 的名义综合分成率低于 Fortnite UEFN 与 Steam（70%+） <a class="cite-link" href="https://generalistprogrammer.com/comparisons/fortnite-vs-roblox-creator-earnings" target="_blank" rel="noopener noreferrer">Payout Skew ↗</a>。<br/>
+ <strong>2. 高基数回落与外部大作逆风：</strong>受 2025 下半年史诗级爆款高基数及 GTA 新作分流预期影响，管理层指引 26Q4 Bookings 同比回落 10%–15%（$18.9亿–$20.0亿），且数据中心资本开支后置致单季 FCF 短暂承压 <a class="cite-link" href="https://www.stocktitan.net/sec-filings/RBLX/8-k-roblox-corp-reports-material-event-bf64854e48ab.html" target="_blank" rel="noopener noreferrer">Q4 Guide 8-K ↗</a>。<br/>
+ <strong>3. 未成年人合规与司法和解支出：</strong>2026 前三季度已就阿拉巴马、内华达等六州及相关辖区青少年保护调查计提 $1.40 亿和解义务，且股权激励（FY25 SBC $11.29 亿）仍带来每年约 2% 股份稀释 <a class="cite-link" href="https://www.stocktitan.net/sec-filings/RBLX/10-q-roblox-corp-quarterly-earnings-report-9d9b35a9133d.html" target="_blank" rel="noopener noreferrer">26Q3 10-Q ↗</a>。
+ </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 05 三代演进与现象级战役复盘
+ ================================================================ -->
+ <section id="sec-05" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 05 · PLATFORM EVOLUTION &amp; LANDMARK BATTLES</div>
+ <h2 class="sec-h2">五、二十年三代演进与现象级战役复盘：从物理教学引擎到 10% 全球游戏市场野望</h2>
+ <p class="sec-sub">纵览创始人 David Baszucki 长达二十年的基础设施耐心投入与关键生态跃迁节点</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">2006 正式上线 → 2026 二十周年 (1.38亿 DAU)</span>
+ </div>
+
+ <!-- 3-Act MUI Timeline -->
+ <div class="mui-timeline">
+ <div class="timeline-step">
+ <span class="timeline-dot"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;">第一幕 · 物理模拟基因与双边飞轮奠基 (2004–2019) —— 从 Interactive Physics 到 DevEx 诞生</strong>
+ <span class="mui-chip mono">2013 推出 DevEx 现金提现</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);">创始人 David Baszucki 与 Erik Cassel 基于 2D 教育物理软件经验创立 Roblox（原名 DynaBlocks，2006 年正式上线），确立“所有物品遵循统一物理碰撞规则 + 玩家即创作者”底层哲学；2013 年推出 Developer Exchange (DevEx) 打通 Robux 兑现法币闭环，催生《Murder Mystery 2》（2014）与《Adopt Me!》（2017）等首批长青原生工作室 <a class="cite-link" href="https://en.wikipedia.org/wiki/List_of_Roblox_games" target="_blank" rel="noopener noreferrer">Roblox History ↗</a>。</p>
+ </div>
+
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#3399FF;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;">第二幕 · 全球破圈、纽交所上市与基建淬炼 (2020–2024) —— 跨越疫情红利消退期</strong>
+ <span class="mui-chip mui-chip-primary mono">DAU 32.6M → 82.9M</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);">2020 年《Brookhaven RP》上线并迅速登顶，2021 年 3 月 Roblox 在纽交所直接上市（DPO）；面对 2022 年解封后变现增速放缓与 FCF 转负（-$5,840 万），公司果断登陆 PlayStation 与 Meta Quest、推行区域差异化定价并严控固定人员成本，推动 FY2024 自由现金流飙升 417% 至 $6.41 亿 <a class="cite-link" href="https://ir.roblox.com/news/news-details/2025/Roblox-Reports-Fourth-Quarter-and-Full-Year-2024-Financial-Results/default.aspx" target="_blank" rel="noopener noreferrer">FY24 Release ↗</a>。</p>
+ </div>
+
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#22C55E;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;">第三幕 · 病毒爆款奇点、AI 原生建游与全龄跃迁 (2025–2026+) —— 冲刺全球游戏市场 10% 份额</strong>
+ <span class="mui-chip mui-chip-success mono">FY25 Bookings $6.79B (+55%)</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);">2025 年开源 Cube 3D、RFY 算法重构引爆《Grow a Garden》与《Steal a Brainrot》历史级流量海啸；2026 年全面落地聊天年龄强制核验、上调美国 18+ DevEx 费率至 $0.0054，并发布 Roblox Build、Roblox Everywhere 与 Universal Player 三大战略，开启从“青少年沙盒”向“全人类 AI 游戏母体”的质变 <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/content_files/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q3 2026 Vision ↗</a>。</p>
+ </div>
+ </div>
+
+ <!-- 4 Landmark Battle Case Studies -->
+ <div class="grid-2" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-success mono">战役 01 · 2025.09</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">敏捷开发天花板</span>
+ </div>
+ <h3>《Steal a Brainrot》4个月研发引爆 2,540 万同时在线</h3>
+ <p>年轻团队精准捕捉 Z 世代网络迷因审美与“收集+潜入偷取+好友复仇”的高张力社交循环，仅用 4 个月上线即刷新全球单一游戏峰值 CCU 纪录（累计访问破 736 亿），证明玩法密度与社交钩子远比百亿贴图预算更具爆发力 <a class="cite-link" href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Q4 25 Case ↗</a>。</p>
+ </div>
+
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-primary mono">战役 02 · 2025.03–08</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">底层弹性极限大考</span>
+ </div>
+ <h3>《Grow a Garden》助推全平台 4,730 万并发超越 Steam</h3>
+ <p>治愈系种植模拟《Grow a Garden》33 天破 10 亿访问、峰值超 2,130 万同时在线，倒逼 Roblox 自建核心数据中心与边缘节点承受住 4,730 万全网并发洪峰，验证了其分布式云基础设施的护城河深度 <a class="cite-link" href="https://www.pocketgamer.biz/robloxs-grow-a-garden-hits-industry-record-213m-concurrent-users-surpassing-pubg-fortnite-and-more/" target="_blank" rel="noopener noreferrer">21.3M Peak ↗</a>。</p>
+ </div>
+
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-violet mono">战役 03 · 2025.03–2026Q3</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">创作范式革命</span>
+ </div>
+ <h3>Cube 4D 与自然语言工具 Build 打破技术垄断</h3>
+ <p>从 GDC 2025 开源 Cube 3D 到 2026 推出 4D 可交互物体生成与手机端自然语言建游工具 Build（75% 内测用户零 Studio 经验），并在 26Q3 跑出两款纯 AI 构建的 Top 20 热门游戏，彻底改写 UGC 供给曲线 <a class="cite-link" href="https://about.roblox.com/newsroom/2025/03/introducing-roblox-cube" target="_blank" rel="noopener noreferrer">Roblox Cube ↗</a>。</p>
+ </div>
+
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-warning mono">战役 04 · 2025Q4–2026Q3</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);">主动阵痛换长治久安</span>
+ </div>
+ <h3>全球聊天强制年龄核验：以短期摩擦换取信任与广告溢价</h3>
+ <p>主动承受中个位数时长增速摩擦，在全球强制推行聊天年龄核验与分龄匹配（64% DAU 已核验），不仅构筑儿童保护行业金标准，更凭精准认证年龄解锁了品牌广告主与美国 O18 高净值客群精细化运营 <a class="cite-link" href="https://about.roblox.com/newsroom/2026/02/moving-beyond-self-reported-age" target="_blank" rel="noopener noreferrer">Age Verification ↗</a>。</p>
+ </div>
+ </div>
+
+ <!-- 3 UGC Gaming Laws -->
+ <div class="grid-3">
+ <div class="mui-alert">
+ <div><strong>铁律一：</strong>在 AI 令 3D 资产与代码成本趋近于零的时代，“自带 1.38 亿日活熟人社交图谱的即时分发网络”才是真正的游戏霸权。</div>
+ </div>
+ <div class="mui-alert">
+ <div><strong>铁律二：</strong>Roblox 爆款的第一性原理不是照片级画质，而是“30秒秒进同服 + 高频全服事件共鸣 + 可炫耀的社交身份货币”。</div>
+ </div>
+ <div class="mui-alert">
+ <div><strong>铁律三：</strong>安全与年龄分层（RM3 + Age-Check）并非单纯合规成本，而是同时守住青少年基本盘与解锁成人高 ARPU 品类的战略支点。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ================================================================
+ 06 爆款游戏与生态核查清单
+ ================================================================ -->
+ <section id="sec-06" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 06 · INTERACTIVE HIT GAME &amp; ECOSYSTEM CHECKLIST</div>
+ <h2 class="sec-h2">六、“Roblox 爆款方法论与平台健康度”六维交互核查清单</h2>
+ <p class="sec-sub">适用于游戏开发者立项自测与投资者跟踪 Roblox 生态飞轮成色（勾选进度自动保存在浏览器本地）</p>
+ </div>
+ <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+ <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono">已核查 3 / 6 项 (50%)</span>
+ <button type="button" id="checkAllBtn" class="mui-btn">全部勾选</button>
+ <button type="button" id="resetCheckBtn" class="mui-btn">重置清单</button>
+ </div>
+ </div>
+
+ <div class="progress-track" aria-label="核查完成度进度条">
+ <div id="checklistProgressBar" class="progress-fill"></div>
+ </div>
+
+ <div id="checklistContainer" class="checklist-grid"></div>
+ </section>
+
+ <!-- ================================================================
+ Primary Sources & Disclosure Footer
+ ================================================================ -->
+ <footer id="sec-07" class="mui-paper section-block" style="padding: 22px 26px;">
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;">
+ <strong style="font-size:0.92rem;">数据来源与一手财报/开发者文档核验索引（SEC EDGAR &amp; Official Docs）</strong>
+ <span class="mui-chip mono">MUI Branding UI Architecture · Offline Ready</span>
+ </div>
+ <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;">
+ 本研报所有运营数据、财务报表、游戏访问/并发峰值、AI 模型进展与创作者分成规则均严格核验自美国证监会（SEC EDGAR）、Roblox 投资者关系股东信、Roblox Creator Hub 官方文档及权威行业统计报告，仅供游戏产品研发与商业模式研究参考，不构成任何投资建议。
+ </p>
+ <ul class="sources-list">
+ <li><span class="mono">[01]</span><a href="https://s27.q4cdn.com/984876518/files/content_files/Q3-2026-Earnings-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Roblox Q3 2026 Shareholder Letter — 138M DAU, AI Build &amp; O18 Growth (2026-10-29) ↗</a></li>
+ <li><span class="mono">[02]</span><a href="https://s27.q4cdn.com/984876518/files/doc_financials/2025/q4/Q4-2025-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Roblox Q4 &amp; Full-Year 2025 Shareholder Letter — $6.79B Bookings &amp; $1.35B FCF (2026-02-05) ↗</a></li>
+ <li><span class="mono">[03]</span><a href="https://www.stocktitan.net/sec-filings/RBLX/10-q-roblox-corp-quarterly-earnings-report-9d9b35a9133d.html" target="_blank" rel="noopener noreferrer">Roblox Q3 2026 Form 10-Q Filing Summary — Share Repurchases &amp; Legal Accruals ↗</a></li>
+ <li><span class="mono">[04]</span><a href="https://create.roblox.com/docs/production/monetization/developer-exchange" target="_blank" rel="noopener noreferrer">Roblox Creator Hub Official Docs — Developer Exchange ($0.0038 &amp; $0.0054 O18 Rate) ↗</a></li>
+ <li><span class="mono">[05]</span><a href="https://devforum.roblox.com/t/increasing-devex-%E2%80%94-creators-will-now-earn-85-more/3920159" target="_blank" rel="noopener noreferrer">Roblox DevForum — Increasing DevEx Rate by 8.5% Announcement (RDC 2025) ↗</a></li>
+ <li><span class="mono">[06]</span><a href="https://about.roblox.com/newsroom/2025/03/introducing-roblox-cube" target="_blank" rel="noopener noreferrer">Roblox Newsroom — Introducing Roblox Cube Open-Source 3D/4D Generative AI ↗</a></li>
+ <li><span class="mono">[07]</span><a href="https://about.roblox.com/newsroom/2026/02/moving-beyond-self-reported-age" target="_blank" rel="noopener noreferrer">Roblox Newsroom — Moving Beyond Self-Reported Age &amp; Verified Cohort Mix (2026) ↗</a></li>
+ <li><span class="mono">[08]</span><a href="https://resourcera.com/statistics/gaming/roblox-creator-earnings/" target="_blank" rel="noopener noreferrer">Resourcera — Roblox Creator Earnings 2018–2026 ($1.50B in FY25, $786M in H1 26) ↗</a></li>
+ <li><span class="mono">[09]</span><a href="https://www.pocketgamer.biz/robloxs-steal-a-brainrot-becomes-first-game-to-surpass-25m-concurrent-players/" target="_blank" rel="noopener noreferrer">PocketGamer.biz — Steal a Brainrot Surpasses 25.4M Concurrent Players Record ↗</a></li>
+ <li><span class="mono">[10]</span><a href="https://www.pocketgamer.biz/robloxs-grow-a-garden-hits-industry-record-213m-concurrent-users-surpassing-pubg-fortnite-and-more/" target="_blank" rel="noopener noreferrer">PocketGamer.biz — Grow a Garden Hits 21.3M Concurrent Users &amp; 33-Day 1B Visits ↗</a></li>
+ <li><span class="mono">[11]</span><a href="https://gamedevreports.substack.com/p/newzoo-and-geeiq-the-roblox-audience" target="_blank" rel="noopener noreferrer">Newzoo &amp; GEEIQ 2026 Report — 47.3M Platform Peak CCU vs. Steam &amp; H1'26 Visits ↗</a></li>
+ <li><span class="mono">[12]</span><a href="https://generalistprogrammer.com/comparisons/fortnite-vs-roblox-creator-earnings" target="_blank" rel="noopener noreferrer">Fortnite Creative (UEFN) vs. Roblox Creator Economy Complete 2026 Comparison ↗</a></li>
+ </ul>
+ </footer>
+
+ </main>
+ </div>
+
+ <script src="../../_shared/a836220b722ed0f4.js"></script>
+<script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

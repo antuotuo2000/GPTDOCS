@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-report-family="arm" data-imported-report>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="安谋控股 Arm Holdings plc (NASDAQ: ARM) 2026–2032 未来战略与第二增长曲线全景推演：从纯 IP 授权向 136 核 Arm AGI CPU 量产硅片历史性破局、Neoverse 超算云份额突破 50%、Mobile CSS 2 端侧 SME2、AI PC 20% 份额扩张、Zena CSS 物理 AI 机器人与 FY2031 $25B 营收蓝图。" />
+  <title>安谋 Arm ARM 2026–2032 战略与增长曲线 | 数据中心</title>
+  
+  
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/arm_growth_2026_2032.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky Frosted AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">ARM</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="#sec-f0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="Arm 2026–2032 未来战略与第二曲线观测站" data-i18n-en="Arm 2026–2032 Future Horizon Observatory">Arm 2026–2032 未来战略与第二曲线观测站</span>
+        </nav>
+        <span class="mui-chip mui-chip-violet mono hide-sm">AGENTIC SILICON · 2031E</span>
+        <span class="mui-chip mui-chip-success mono hide-sm">AGI CPU × CSS</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索未来引擎或2031目标…" aria-label="快速跳转模块" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <!-- Left Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="未来战略模块与站点导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-violet mono">ARM · 2031 OBSERVATORY</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="Arm 未来十年战略观测站" data-i18n-en="Arm 2031 Strategic Observatory">Arm 未来十年战略观测站</div>
+        <p class="sidebar-subtitle" data-i18n-zh="136核 Arm AGI CPU 整芯破局 × 头部云厂 >60% 份额 × AI PC 20%+ 替代 × Zena CSS 物理 AI 机器人" data-i18n-en="136-Core Arm AGI CPU × >60% Hyperscaler Share × 20%+ AI PC × Zena CSS Physical AI Robotics">136核 Arm AGI CPU 整芯破局 × 头部云厂 &gt;60% 份额 × AI PC 20%+ 替代 × Zena CSS 物理 AI 机器人</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="FY2031 官方总目标" data-i18n-en="FY2031 Revenue Target">FY2031 官方总目标</span>
+            <span class="sidebar-mini-val mono">~$25B (&gt;$9.0 EPS)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="首款量产芯片" data-i18n-en="First In-House Chip">首款量产芯片</span>
+            <span class="sidebar-mini-val mono">Arm AGI CPU (3nm)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="TAM 市场扩容" data-i18n-en="TAM Expansion">TAM 市场扩容</span>
+            <span class="sidebar-mini-val mono">$535B → $1.5T+</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与未来观测目录">
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="ARM"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="未来战略模块 (F0–F4)" data-i18n-en="Future Horizon (F0–F4)">未来战略模块 (F0–F4)</div>
+        <ul class="mui-nav-list">
+          <li><a href="#sec-f0" class="mui-nav-link active"><span class="nav-idx mono">F0</span><span data-i18n-zh="整芯破局宣言与三阶时间窗" data-i18n-en="Silicon Pivot &amp; 3 Horizons">整芯破局宣言与三阶时间窗</span></a></li>
+          <li><a href="#sec-f1" class="mui-nav-link"><span class="nav-idx mono">F1</span><span data-i18n-zh="六大增长引擎纵向深潜舱" data-i18n-en="6 Future Growth Engines">六大增长引擎纵向深潜舱</span></a></li>
+          <li><a href="#sec-f2" class="mui-nav-link"><span class="nav-idx mono">F2</span><span data-i18n-zh="智能体机架经济学与营收桥" data-i18n-en="Rack CapEx vs 2031 Bridge">智能体机架经济学与营收桥</span></a></li>
+          <li><a href="#sec-f3" class="mui-nav-link"><span class="nav-idx mono">F3</span><span data-i18n-zh="三级产品跃升与万亿TAM" data-i18n-en="IP→CSS→Silicon &amp; $1.5T TAM">三级产品跃升与万亿TAM</span></a></li>
+          <li><a href="#sec-f4" class="mui-nav-link"><span class="nav-idx mono">F4</span><span data-i18n-zh="2031 $25B营收期权组装器" data-i18n-en="2031 $25B Optionality Lab">2031 $25B营收期权组装器</span></a></li>
+        </ul>
+      </nav>
+
+      
+    </aside>
+
+    <!-- Main Bespoke 2031 Observatory Workspace -->
+    <main class="ft-workspace main-content">
+
+      <!-- MODULE F0: MANIFESTO + INTERACTIVE 3-HORIZON RADAR -->
+      <section id="sec-f0" class="ft-hero-grid">
+        <div class="ft-manifesto">
+          <div>
+            <div class="ft-badges">
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="2026.03 历史性跨越：36年来首次发布自研量产芯片 Arm AGI CPU" data-i18n-en="MARCH 2026 PIVOT: FIRST IN-HOUSE SILICON — ARM AGI CPU">2026.03 历史性跨越：36年来首次发布自研量产芯片 Arm AGI CPU</span>
+              <span class="mui-chip mui-chip-success mono">FY2031 锚定 ~$25B 总营收 · &gt;$9 EPS</span>
+            </div>
+
+            <h1 class="ft-h1" data-i18n-zh="Arm 2026–2032战略图谱：<span class='ft-grad'>不止于芯片图纸店，全面统治云端智能体 CPU、边缘 AI 与物理机器人底座</span>" data-i18n-en="Arm's Next Decade (2026–2032): <span class='ft-grad'>Beyond Pure IP Blueprints to Dominate Agentic Cloud CPUs, Edge AI &amp; Physical Robotics</span>">
+              Arm 2026–2032战略图谱：<span class="ft-grad">不止于芯片图纸店，全面统治云端智能体 CPU、边缘 AI 与物理机器人底座</span>
+            </h1>
+
+            <p class="ft-lead">
+              过去 35 年里，Arm 只交付代码与图纸，将芯片高昂的单颗售价拱手让给下游客户；而在 2026 年春季 <strong>“Arm Everywhere” 战略发布会与 FY2026 四季报</strong>上，CEO <strong>Rene Haas 正式掀开公司史上最激进的第二增长曲线</strong>：首次推出由台积电 3nm（N3P）代工、集成最高 <strong>136 颗 Neoverse V3 核心的成品服务器芯片 Arm AGI CPU</strong>，由 <strong>Meta 担任首席联合开发伙伴</strong>，并获 OpenAI、Cloudflare、SAP 与 Cerebras 等密集采用
+              <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm" target="_blank" rel="noopener noreferrer">FY26Q4 股东信 ↗</a>。
+              随着 AI 工作负载从单次对话转向 7×24 小时自主编排的 <strong>Agentic AI（每吉瓦数据中心 CPU 需求激增 4 倍以上）</strong>，Arm 正沿着 <strong>Cloud AI（云超算）× Edge AI（手机与 AI PC）× Physical AI（L4 智驾与具身机器人）</strong>三路并进，向管理层公开锚定的 <strong>FY2031 ~$250亿总营收（~$150亿自研芯片 + ~$100亿高毛利授权版税）与 &gt;$9.00 Non-GAAP EPS</strong> 全速冲刺
+              <a class="cite-link" href="https://www.investing.com/news/company-news/arm-q4-fy2026-slides-15b-chip-revenue-target-9-eps-by-2031-93CH-4665934" target="_blank" rel="noopener noreferrer">FY31 官方路线图 ↗</a>。
+            </p>
+          </div>
+
+          <div class="ft-ternus-strip">
+            <div class="ft-mini-pill">
+              <b>第一增长极：Cloud AI 与整芯</b>
+              <span>头部云厂份额迈过 60%，Arm AGI CPU 锁定 FY27–28 超 $20亿需求</span>
+            </div>
+            <div class="ft-mini-pill">
+              <b>第二增长极：Edge AI 与 PC 破局</b>
+              <span>Mobile CSS 2 + SME2 提速 70%，Arm PC 抢下全球 ~20% 出货份额</span>
+            </div>
+            <div class="ft-mini-pill">
+              <b>第三增长极：Physical AI 具身智能</b>
+              <span>Zena CSS + 80家伙伴联盟，车载与机器人版税同比暴增 +50%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive 3-Horizon Radar -->
+        <aside class="ft-horizon-radar" aria-label="三阶战略时间窗雷达">
+          <div>
+            <span class="ft-kicker mono">THREE-HORIZON S-CURVE RADAR</span>
+            <strong style="font-size:0.95rem;" data-i18n-zh="点击切换三大战略兑现时间窗" data-i18n-en="Select Strategic Horizon Window">点击切换三大战略兑现时间窗</strong>
+          </div>
+
+          <div class="ft-hz-tabs" id="hzTabs">
+            <button type="button" class="ft-hz-btn active" data-hz="0">H1 近程兑现<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2026–2027</span></button>
+            <button type="button" class="ft-hz-btn" data-hz="1">H2 中程放量<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2028–2029</span></button>
+            <button type="button" class="ft-hz-btn" data-hz="2">H3 远期奇点<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2030–2032</span></button>
+          </div>
+
+          <div class="ft-hz-card" id="hzCard">
+            <div>
+              <span class="mui-chip mui-chip-primary mono" id="hzBadge">HORIZON 1 · 云份额夺取与整芯首秀期 (2026–2027)</span>
+              <h3 id="hzTitle" style="font-size:0.96rem;font-weight:800;margin:8px 0 6px;">超算云 CPU 份额破 60% × AGI CPU 交付上机架 × PC 突破 20%</h3>
+              <ul class="ft-hz-list" id="hzList">
+                <li><span class="ft-hz-dot"></span><span><strong>Arm AGI CPU 首批交付：</strong>Meta Yosemite YV5 与 Supermicro 液冷机柜（单柜 336 颗 CPU）启动部署，FY27–28 订单破 $2B。</span></li>
+                <li><span class="ft-hz-dot"></span><span><strong>云巨头全面去 x86 化：</strong>Google TPU8 弃用 x86 改配 Axion，NVIDIA Vera 独立机柜与 AWS Graviton 推动云份额年底超 60%。</span></li>
+                <li><span class="ft-hz-dot"></span><span><strong>端侧 CSS 2 全面普及：</strong>OPPO/vivo/小米导入 Mobile CSS 2 与 AI 原生 Mali G2-Ultra GPU；Googlebook 助推 PC 份额达 ~20%。</span></li>
+              </ul>
+            </div>
+            <div class="ft-hz-foot mono">
+              <span id="hzProb" style="color:var(--mui-success-text);">兑现确定性：极高 (90%+)</span>
+              <span id="hzImpact" style="color:var(--mui-primary-lighter);">年化营收区间：$6.0B–$7.6B</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- MODULE F1: 4:8 VERTICAL MASTER-DETAIL 6-ENGINE OBSERVATORY -->
+      <section id="sec-f1" class="ft-panel">
+        <div class="ft-panel-head">
+          <div>
+            <span class="ft-kicker mono">MODULE F1 · SIX NEXT-DECADE GROWTH ENGINES</span>
+            <h2 class="ft-h2" data-i18n-zh="六大未来增长引擎纵向深潜舱：从台积电 3nm 自研芯片到具身机器人" data-i18n-en="6 Next-Decade Growth Engines: From 3nm In-House Silicon to Physical Robotics">六大未来增长引擎纵向深潜舱：从台积电 3nm 自研芯片到具身机器人</h2>
+            <p class="ft-sub" data-i18n-zh="点击左侧任一战略赛道，右侧实时切换其微架构技术抓手、单机价值放大逻辑与关键商业路标。" data-i18n-en="Click any engine on the left rail to inspect its microarchitecture, monetization math, and roadmap.">点击左侧任一战略赛道，右侧实时切换其微架构技术抓手、单机价值放大逻辑与关键商业路标。</p>
+          </div>
+          <span class="mui-chip mui-chip-violet mono">CLOUD · EDGE · PHYSICAL AI</span>
+        </div>
+
+        <div class="ft-explorer">
+          <div class="ft-rail" id="engineRail">
+            <button type="button" class="ft-rail-btn active" data-eng="0">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">01</span><span class="ft-rail-name">Arm AGI CPU 量产整芯引擎</span></span>
+              <span class="ft-rail-tam mono">FY31 目标 ~$15B</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="1">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">02</span><span class="ft-rail-name">Neoverse CSS 云端推理统治</span></span>
+              <span class="ft-rail-tam mono">云CPU TAM $100B+</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="2">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">03</span><span class="ft-rail-name">Mobile CSS 2 与 SME2 端侧智能</span></span>
+              <span class="ft-rail-tam mono">~2x 旗舰版税率</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="3">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">04</span><span class="ft-rail-name">AI PC 攻克 x86 个人计算腹地</span></span>
+              <span class="ft-rail-tam mono">全球出货 ~20%→40%</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="4">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">05</span><span class="ft-rail-name">Zena CSS 与 Physical AI 机器人</span></span>
+              <span class="ft-rail-tam mono">版税增速 +50% YoY</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="5">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">06</span><span class="ft-rail-name">KleidiAI 与 3,000万开发者护城河</span></span>
+              <span class="ft-rail-tam mono">零摩擦跨云边部署</span>
+            </button>
+          </div>
+
+          <div class="ft-dossier" id="engineDossier">
+            <div>
+              <span class="mui-chip mui-chip-primary mono" id="engBadge">ENGINE 01 · ARM AGI CPU IN-HOUSE SERVER SILICON</span>
+              <h3 id="engTitle">Arm AGI CPU（TSMC N3P · 136 核双芯粒）：直击智能体 AI 时代的机柜级算力瓶颈</h3>
+              <p id="engDesc">
+                在 Hot Chips 2026 与 OCP 全球峰会上，Arm 完整揭晓了首款自研数据中心处理器 Arm AGI CPU 的硬核架构：采用两颗各含 70 个 Neoverse V3 核心（单颗约 500 亿晶体管）的 TSMC 3nm N3P 芯粒，通过 2 TB/s UCIe 高速互联封装为最高 136 可用核、300W TDP 的旗舰处理器，支持 12 通道 DDR5-8800 与 96 通道 PCIe Gen6 / CXL 3.0。Meta 不仅作为首席联合开发伙伴将其导入 Yosemite YV5 机架，OpenAI、Cloudflare、SAP 与 Cerebras 亦纷纷跟进。
+              </p>
+              <div class="ft-dossier-formula mono" id="engFormula">
+                商业颠覆公式：单颗服务器芯片从过去仅收 $20–$60 授权版税 → 跃升至整颗数千美元硅片销售额（目标 Non-GAAP 营业利润率 ≥30%）
+              </div>
+            </div>
+
+            <div class="ft-gauge-grid" id="engGauges">
+              <div class="ft-gauge-card"><b class="mono">136 核</b><span>双 70 核 N3P 芯粒 + 2TB/s UCIe</span></div>
+              <div class="ft-gauge-card"><b class="mono">45,696 核</b><span>Supermicro 200kW 液冷单机架密度</span></div>
+              <div class="ft-gauge-card"><b class="mono">&gt;$2.0B</b><span>FY27–FY28 已确认客户订单需求</span></div>
+              <div class="ft-gauge-card"><b class="mono">~$15.0B</b><span>FY2031 官方芯片业务营收锚定值</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE F2: 7:5 SPLIT — AGENTIC RACK ECONOMICS & FY26->FY31 REVENUE BRIDGE -->
+      <section id="sec-f2" class="ft-split-75">
+        <div class="ft-subbox">
+          <div class="ft-subhead">
+            <div>
+              <span class="ft-kicker mono">MODULE F2A · AGENTIC DATA CENTER ECONOMICS &amp; 2031 BRIDGE</span>
+              <h3 data-i18n-zh="每吉瓦省 $100亿 CapEx：智能体机架密度革命与 FY2031 $25B 营收桥" data-i18n-en="$10B/GW CapEx Savings: Agentic Rack Density &amp; FY2031 $25B Revenue Bridge">每吉瓦省 $100亿 CapEx：智能体机架密度革命与 FY2031 $25B 营收桥</h3>
+            </div>
+            <div class="mui-segmented" id="fChartTabs">
+              <button type="button" class="mui-seg-btn active" data-fview="bridge" data-i18n-zh="FY26→FY31E $25B 营收桥" data-i18n-en="FY26→FY31E $25B Bridge">FY26→FY31E $25B 营收桥</button>
+              <button type="button" class="mui-seg-btn" data-fview="rack" data-i18n-zh="单机架性能与节资对比" data-i18n-en="Per-Rack Efficiency">单机架性能与节资对比</button>
+            </div>
+          </div>
+
+          <div class="ft-canvas-box">
+            <canvas id="futureCanvas"></canvas>
+          </div>
+
+          <p class="ft-caption">
+            数据基准：据 Arm FY2026 Q4 投资者演示简报（2026年5月6日），公司规划从 FY26 <strong>$4.92B</strong> 扩张约 5 倍至 FY31 <strong>~$25.0B</strong>（其中 IP 与 CSS 业务保持 ~20% 版税复合增长迈向 ~$10B、Non-GAAP EBIT 利润率达 <strong>65%+</strong>；自研 AGI CPU 在 FY28 规模放量并于 FY31 贡献 <strong>~$15B</strong>）
+            <a class="cite-link" href="https://www.investing.com/news/company-news/arm-q4-fy2026-slides-15b-chip-revenue-target-9-eps-by-2031-93CH-4665934" target="_blank" rel="noopener noreferrer">Q4 FY26 投资者简报 ↗</a>。
+          </p>
+        </div>
+
+        <div class="ft-subbox">
+          <div class="ft-subhead">
+            <div>
+              <span class="ft-kicker mono">MODULE F2B · WHY AGENTIC AI NEEDS 4X MORE CPUS</span>
+              <h3 data-i18n-zh="为什么“Agentic AI”让数据中心主角重新回到 Arm CPU？" data-i18n-en="Why Agentic AI Puts Arm CPUs Back at Center Stage">为什么“Agentic AI”让数据中心主角重新回到 Arm CPU？</h3>
+            </div>
+          </div>
+
+          <div class="ft-thesis-stack">
+            <div class="ft-thesis-item">
+              <b>① 15倍请求量爆发与 4倍 CPU 配比重构</b>
+              <p>大模型训练阶段主角是 GPU；但进入自主代理（Agentic AI）推理时代，每个用户后台常驻多个智能体持续执行沙盒代码、数据库检索、API 编排与安全校验——单用户请求频次激增 <strong>15 倍以上</strong>，每吉瓦（GW）算力集群所需 CPU 容量扩大 <strong>4 倍以上</strong>。</p>
+            </div>
+            <div class="ft-thesis-item">
+              <b>② 数据中心电力墙（Power Wall）下的能效降维打击</b>
+              <p>全球超算中心最大的物理瓶颈已从资金转向变电站供电配额。Google TPU8 改用 Arm 架构 Axion 宿主 CPU 后，推理性价比提升达 <strong>80%</strong>；Arm AGI CPU 单机架吞吐超过 x86 两倍，每建设 1GW AI 数据中心可为云巨头省下最高 <strong>$100亿 基础设施资本开支</strong>。</p>
+            </div>
+            <div class="ft-thesis-item">
+              <b>③ “共存而不互噬”的三层菜单：IP + CSS + 自研硅片</b>
+              <p>AWS（Graviton）、Google（Axion）、Microsoft（Cobalt）与 NVIDIA（Vera）拥有庞大自研团队，继续采购 Arm IP/CSS；而 Meta、OpenAI、SAP、Cloudflare 等急需即用型智能体编排算力的客户则直接采购 Arm AGI CPU，形成互补增量。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE F3: 5:7 REVERSED SPLIT — PLATFORM ESCALATION & $1.5T TAM -->
+      <section id="sec-f3" class="ft-split-57">
+        <div class="ft-subbox">
+          <div class="ft-subhead">
+            <div>
+              <span class="ft-kicker mono">MODULE F3A · FULL-SPECTRUM COMPUTE STACK</span>
+              <h3 data-i18n-zh="四大技术底座合拢：从底层矩阵指令到物理世界具身控制" data-i18n-en="4-Layer Tech Stack: From SME2 Matrix ISA to Physical Robotics">四大技术底座合拢：从底层矩阵指令到物理世界具身控制</h3>
+            </div>
+          </div>
+
+          <div class="ft-chip-matrix">
+            <div class="ft-chip-box">
+              <span class="code mono">CLOUD · AGI CPU &amp; CSS N4</span>
+              <h4>136核整芯 + 128核 Falcon</h4>
+              <p>成品 AGI CPU 与半定制 Neoverse CSS N4（单裸片最高 128 核 N3P）双剑合璧，通吃自研与直采云客户
+              <a class="cite-link" href="https://www.arm.com/products/cloud-datacenter/arm-agi-cpu" target="_blank" rel="noopener noreferrer">AGI 规格 ↗</a>。</p>
+            </div>
+            <div class="ft-chip-box">
+              <span class="code mono">MOBILE · CSS FOR MOBILE 2</span>
+              <h4>C2 集群 + Mali G2-Ultra</h4>
+              <p>集成双 SME2 矩阵单元使端侧代理 AI 提速 70%，AI 原生 GPU 同功耗帧率提升 4 倍
+              <a class="cite-link" href="https://investors.arm.com/static-files/0b5baa2e-fc47-4d05-b724-e49de7bd4356" target="_blank" rel="noopener noreferrer">Q2 FY27 ↗</a>。</p>
+            </div>
+            <div class="ft-chip-box">
+              <span class="code mono">PC · GOOGLEBOOK &amp; SPARK</span>
+              <h4>抢占全球 ~20% PC 出货</h4>
+              <p>继苹果 M 系列与骁龙 X 后，Googlebook（Gemini 原生本）与 NVIDIA RTX Spark 桌面超算全面跑在 Arm 上。</p>
+            </div>
+            <div class="ft-chip-box">
+              <span class="code mono">PHYSICAL AI · ZENA CSS</span>
+              <h4>单车搭载 400+ 颗 Arm 核</h4>
+              <p>Tensor L4 自动驾驶 Robocar 单车集成超 400 颗 Arm 核心；Arm Total Design 集结 80+ 家机器人生态伙伴。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ft-subbox">
+          <div class="ft-subhead">
+            <div>
+              <span class="ft-kicker mono">MODULE F3B · HYPERSCALER SHARE &amp; $1.5T TAM EXPANSION</span>
+              <h3 data-i18n-zh="头部云厂商 Arm 算力份额爬坡与 $535B → $1.5T+ 潜在市场扩容" data-i18n-en="Hyperscaler CPU Share Ramp &amp; $535B → $1.5T+ TAM Expansion">头部云厂商 Arm 算力份额爬坡与 $535B → $1.5T+ 潜在市场扩容</h3>
+            </div>
+            <div class="mui-segmented" id="sChartTabs">
+              <button type="button" class="mui-seg-btn active" data-sview="cloud" data-i18n-zh="头部云厂 CPU 份额 (%)" data-i18n-en="Hyperscaler Share (%)">头部云厂 CPU 份额 (%)</button>
+              <button type="button" class="mui-seg-btn" data-sview="tam" data-i18n-zh="三大 AI 赛道 TAM ($B)" data-i18n-en="AI Segment TAM ($B)">三大 AI 赛道 TAM ($B)</button>
+            </div>
+          </div>
+
+          <div class="ft-canvas-box">
+            <canvas id="siliconCanvas"></canvas>
+          </div>
+
+          <p class="ft-caption">
+            战略纵深：随着 Arm 从仅参与 $24亿 纯 IP/CSS 细分池跨入超 $1,000亿 数据中心服务器整芯市场，公司整体可触达市场规模（TAM）将由 FY26 的 <strong>$5,350亿</strong> 跃升至 FY31 的 <strong>$1.5万亿以上</strong>。
+          </p>
+        </div>
+      </section>
+
+      <!-- MODULE F4: INTERACTIVE FY2031 OPTIONALITY BUILDER -->
+      <section id="sec-f4" class="ft-panel">
+        <div class="ft-panel-head">
+          <div>
+            <span class="ft-kicker mono">MODULE F4 · INTERACTIVE FY2031 OPTIONALITY &amp; VALUATION BUILDER</span>
+            <h2 class="ft-h2" data-i18n-zh="FY2031 冲击“$250亿营收 / $9+ EPS”期权组装实验室：勾选你认可的增长极" data-i18n-en="FY2031 Path to $25B Revenue &amp; $9+ EPS: Toggle Growth Catalysts">FY2031 冲击“$250亿营收 / $9+ EPS”期权组装实验室：勾选你认可的增长极</h2>
+            <p class="ft-sub" data-i18n-zh="自由开关五大未来业务期权并切换估值倍数（考虑到 TSMC 晶圆/HBM 产能瓶颈与客户竞合摩擦，可自行打折压测），实时推演 FY2031E 业绩与目标市值。" data-i18n-en="Toggle five strategic growth options and P/E multiples to stress-test Arm's FY2031E EPS and market cap.">自由开关五大未来业务期权并切换估值倍数（考虑到 TSMC 晶圆/HBM 产能瓶颈与客户竞合摩擦，可自行打折压测），实时推演 FY2031E 业绩与目标市值。</p>
+          </div>
+          <div class="mui-segmented" id="peTabs">
+            <button type="button" class="mui-seg-btn" data-pe="30">审慎 30x P/E</button>
+            <button type="button" class="mui-seg-btn active" data-pe="40">稳态 40x P/E</button>
+            <button type="button" class="mui-seg-btn" data-pe="50">AI溢价 50x P/E</button>
+          </div>
+        </div>
+
+        <div class="ft-builder-grid">
+          <div class="ft-switch-list" id="optSwitchList">
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="css" checked />
+                <span><b>期权 1：移动端与消费电子全面升级 Mobile CSS 2 / Armv9</b><span>高阶 CSS 渗透率超 65%，在存量手机微增下实现双倍单芯版税</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$2.2B 营收 · 70% EBIT</span>
+            </label>
+
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="cloudip" checked />
+                <span><b>期权 2：Neoverse 云端超算版税翻倍（AWS/Google/NVIDIA/Azure）</b><span>头部云厂 Arm 份额稳居 65%+，高核数服务器芯片拉动版税跃升</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$1.9B 营收 · 68% EBIT</span>
+            </label>
+
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="phys" checked />
+                <span><b>期权 3：AI PC 迈向 35% 份额 + Zena CSS 智驾/人形机器人放量</b><span>L3/L4 智驾单车数百颗 Arm 核与轻薄 AI 本规模化变现</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$1.4B 营收 · 65% EBIT</span>
+            </label>
+
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="agi_core" checked />
+                <span><b>期权 4：Arm AGI CPU 核心盘兑现（Meta / OpenAI / 企业云机柜）</b><span>假设兑现官方 $15B 硅片目标的 60%（稳健考虑 HBM/CoWoS 供应链约束）</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$9.0B 营收 · 31% EBIT</span>
+            </label>
+
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="agi_full" />
+                <span><b>期权 5：满血冲刺官方 $25B 终极指引 + 下一代定制 AI ASIC 芯粒</b><span>完全兑现剩余 $6.0B 自研硅片增量（默认未勾选，可开启检视官方上限）</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$6.0B 营收 · 33% EBIT</span>
+            </label>
+          </div>
+
+          <div class="ft-val-board">
+            <div class="ft-val-kpis">
+              <div class="ft-val-kpi"><b class="mono" id="optRevOut">$19.4B</b><span>FY2031E 推演总营收</span></div>
+              <div class="ft-val-kpi"><b class="mono" id="optNetOut">$8.25B</b><span>FY2031E Non-GAAP 净利</span></div>
+              <div class="ft-val-kpi"><b class="mono" id="optEpsOut">$7.50</b><span>FY2031E Non-GAAP EPS</span></div>
+              <div class="ft-val-kpi"><b class="mono" id="optCapOut" style="color:var(--mui-success-text);">$330B</b><span>FY2031E 隐含目标总市值</span></div>
+            </div>
+
+            <div class="ft-canvas-box" style="height:155px;">
+              <canvas id="optMiniCanvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VERIFIED PRIMARY SOURCES -->
+      <section class="ft-panel" aria-label="权威公告与前瞻信源">
+        <div class="ft-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+          <div>
+            <span class="ft-kicker mono">VERIFIED PRIMARY SOURCES</span>
+            <h2 class="ft-h2" data-i18n-zh="官方芯片首发公报、Hot Chips 架构文档与 2031 投资者简报信源" data-i18n-en="Official Silicon Launches, Hot Chips Disclosures &amp; 2031 Investor Deck Sources">官方芯片首发公报、Hot Chips 架构文档与 2031 投资者简报信源</h2>
+          </div>
+        </div>
+        <div class="ft-sources-grid">
+          <a class="ft-source-card" href="https://newsroom.arm.com/news/arm-agi-cpu-launch" target="_blank" rel="noopener noreferrer">
+            <b>Arm Newsroom: Arm AGI CPU Historic Launch (2026.03) ↗</b>
+            <span>官方发布首款自研量产数据中心芯片 Arm AGI CPU，Meta 担任首席联合开发伙伴，单机架性能超 x86 两倍</span>
+          </a>
+          <a class="ft-source-card" href="https://www.arm.com/products/cloud-datacenter/arm-agi-cpu" target="_blank" rel="noopener noreferrer">
+            <b>Arm AGI CPU Official Product &amp; Rack Architecture ↗</b>
+            <span>TSMC 3nm 工艺、最高 136 颗 Neoverse V3 核心、300W TDP、DDR5-8800 与 96 通道 PCIe Gen6 / CXL 3.0 官方规格</span>
+          </a>
+          <a class="ft-source-card" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm" target="_blank" rel="noopener noreferrer">
+            <b>SEC Q4 FYE26 Shareholder Letter: Agentic AI &amp; Cloud Share ↗</b>
+            <span>确认头部超大规模云厂商 CPU 份额达 ~50%、AGI CPU 两年需求破 $20亿 及每 GW 数据中心省最高 $100亿 CapEx</span>
+          </a>
+          <a class="ft-source-card" href="https://www.investing.com/news/company-news/arm-q4-fy2026-slides-15b-chip-revenue-target-9-eps-by-2031-93CH-4665934" target="_blank" rel="noopener noreferrer">
+            <b>Arm Q4 FY2026 Investor Presentation: FY2031 Targets ↗</b>
+            <span>管理层正式锚定 FY2031 ~$25B 总营收（~$15B 芯片收入 + ~$10B IP/CSS）、Non-GAAP EPS &gt;$9 与 $1.5T+ TAM</span>
+          </a>
+          <a class="ft-source-card" href="https://investors.arm.com/static-files/0b5baa2e-fc47-4d05-b724-e49de7bd4356" target="_blank" rel="noopener noreferrer">
+            <b>Arm Q2 FYE27 Shareholder Letter (2026.11.04) ↗</b>
+            <span>披露 Physical AI 版税 +50% YoY、Tensor L4 Robocar 400+ 核、Googlebook/RTX Spark 助推 PC 份额达 ~20%</span>
+          </a>
+          <a class="ft-source-card" href="https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-arm-details-agi-server-cpu-with-two-70-core-n3p-chiplets-touts-2-tb-s-ucie-fabric-link-and-12-channel-memory-controller" target="_blank" rel="noopener noreferrer">
+            <b>Hot Chips 2026 Technical Deep Dive: Dual N3P Chiplets ↗</b>
+            <span>详尽拆解双 70 核 N3P 芯粒（各 500 亿晶体管）、2 TB/s UCIe 高速互联与半定制 Neoverse CSS N4 路线图</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  
+<script src="../../_shared/arm_growth_2026_2032.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+@import url('./report-card-grid.css');
+
+/* All home surfaces use the same clear glass; content and color cues stay distinct. */
+:root {
+  --home-glass-edge: rgba(255, 255, 255, .72);
+  --home-glass-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 6px 22px rgba(30, 55, 90, .07);
+}
+html[data-theme="dark"] {
+  --home-glass-edge: rgba(180, 215, 255, .18);
+  --home-glass-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), 0 6px 22px rgba(0, 0, 0, .18);
+}
+:is(.pc-rail-card, .m-vault-hero, .m-bento-card, .m-radar-pod, .m-hero-spotlight,
+    .m-pillar-btn, .m-chart-card, .m-core-card, .m-doc-card, .pc-table-wrap,
+    .m-acc-card, .m-acc-item, .m-bottom-sheet, .m-featured-report, .m-hot-chip, .m-cov-cell) {
+  background: transparent !important;
+  backdrop-filter: blur(6px) saturate(150%);
+  -webkit-backdrop-filter: blur(6px) saturate(150%);
+  box-shadow: var(--home-glass-shadow);
+}
+:is(.pc-rail-card, .m-vault-hero, .m-bento-card, .m-chart-card, .m-core-card, .m-doc-card, .pc-table-wrap, .m-acc-card) {
+  border-color: var(--home-glass-edge);
+}
+.m-vault-hero { color: var(--text-primary); }
+:is(.m-hero-headline, .m-spot-title, .m-featured-report, .m-featured-report:hover) { color: var(--text-primary); }
+:is(.m-hero-sub, .m-featured-note) { color: var(--text-secondary); }
+:is(.m-hero-eyebrow, .m-hero-badge, .m-spectrum-caption, .m-spot-tag) { color: var(--accent); }
+.m-sci-grad {
+  background-image: linear-gradient(92deg, var(--accent), var(--violet) 55%, var(--emerald));
+}
+.m-vault-hero::before { opacity: .35; }
+.m-featured-report, .m-doc-card.m-doc-featured {
+  background: linear-gradient(130deg, rgba(var(--feature-rgb), .14), transparent 75%) !important;
+  border-color: rgba(var(--feature-rgb), .65);
+}
+.m-doc-card {
+  background-image: var(--report-card-grid) !important;
+  background-size: var(--report-card-grid-size) !important;
+}
+.m-doc-card.m-doc-featured {
+  background-image: var(--report-card-grid),
+    linear-gradient(130deg, rgba(var(--feature-rgb), .14), transparent 75%) !important;
+  background-size: var(--report-card-grid-size), var(--report-card-grid-size), 100% 100% !important;
+  background-repeat: repeat, repeat, no-repeat !important;
+}
+.m-featured-kicker, .m-featured-note b {
+  color: color-mix(in srgb, rgb(var(--feature-rgb)) 60%, var(--text-primary));
+}
+.m-pillar-btn.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent-border), var(--home-glass-shadow);
+}
+.m-pillar-btn.active :is(.m-pil-sub, .m-pil-ico-tile) { color: var(--accent); }
+.m-pillar-btn.active .m-pillar-cnt { background: var(--accent-bg); color: var(--accent); }
+.m-hot-chip.active { color: var(--accent); }
+:is(.pc-table th, .m-acc-head, .m-sheet-head, .m-memo-area, .m-select) {
+  background: transparent;
+}
+.m-bottom-sheet { backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); }
+.m-backdrop { background: rgba(15, 35, 65, .08); }
+html[data-theme="dark"] .m-backdrop { background: rgba(0, 0, 0, .3); }
+.m-doc-btns .m-btn {
+  background: transparent !important;
+  backdrop-filter: blur(6px) saturate(150%);
+  -webkit-backdrop-filter: blur(6px) saturate(150%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25);
+}
+.m-doc-btns .m-btn-primary {
+  color: var(--accent) !important;
+  border-color: var(--accent-border);
+}
+.m-doc-btns .m-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent) !important;
+  box-shadow: 0 0 0 1px var(--accent-border), inset 0 1px 0 rgba(255, 255, 255, .25);
+  filter: none;
+}
+.m-doc-btns .m-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

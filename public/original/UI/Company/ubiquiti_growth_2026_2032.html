@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="厄比奎蒂 Ubiquiti Inc. (NYSE: UI) 2026–2032 未来战略与第二增长曲线全景推演：Enterprise Fortress Gateway 与 100G 园区交换上攻大企业、Wi-Fi 7 E7 PRISM 主动滤波、UniFi Protect AI Key 边缘视觉算力、CyberSecure 自愿安全订阅与 UNAS/智慧建筑全栈闭环。" />
+  <title>厄比奎蒂 2026–2032 未来战略与新增长曲线观测站 | 数据中心</title>
+  
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/ubiquiti_growth_2026_2032.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">UI</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="https://ir.ui.com/" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="厄比奎蒂 2026–2032 未来战略与第二曲线观测站" data-i18n-en="Ubiquiti 2026–2032 Future Horizon Observatory">厄比奎蒂 2026–2032 未来战略与第二曲线观测站</span>
+        </nav>
+        <span class="mui-chip mui-chip-violet mono hide-sm">CAMPUS &amp; EDGE AI · 2030+</span>
+        <span class="mui-chip mui-chip-success mono hide-sm">EFG × E7 × AI KEY</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索未来引擎或2030估值…" aria-label="快速跳转模块" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="未来战略模块与站点导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-violet mono">UI · 2030 OBSERVATORY</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="厄比奎蒂未来十年观测站" data-i18n-en="Ubiquiti 2030 Observatory">厄比奎蒂未来十年观测站</div>
+        <p class="sidebar-subtitle" data-i18n-zh="从中小企业霸主上攻万兆园区核心层 × 边缘视觉 AI Key × CyberSecure 自愿订阅 × 智慧建筑与存储全栈" data-i18n-en="Up-Market Enterprise Campus × Edge Vision AI Key × CyberSecure Optional Attach × Smart Building &amp; NAS">从中小企业霸主上攻万兆园区核心层 × 边缘视觉 AI Key × CyberSecure 自愿订阅 × 智慧建筑与存储全栈</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="年化营收起点 (Q1'27)" data-i18n-en="Annualized Run-Rate">年化营收起点 (Q1'27)</span>
+            <span class="sidebar-mini-val mono">$4.10B (+39.9% YoY)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="园区破冰利器" data-i18n-en="Up-Market Wedge">园区破冰利器</span>
+            <span class="sidebar-mini-val mono">EFG + ECS 100G + E7</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="边缘AI与软件增强" data-i18n-en="Edge AI &amp; Attach">边缘AI与软件增强</span>
+            <span class="sidebar-mini-val mono">AI Key + CyberSecure</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与未来观测目录">
+
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="UI"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="未来战略模块 (F0–F4)" data-i18n-en="Future Horizon (F0–F4)">未来战略模块 (F0–F4)</div>
+        <ul class="mui-nav-list">
+          <li><a href="#sec-f0" class="mui-nav-link active"><span class="nav-idx mono">F0</span><span data-i18n-zh="上攻园区新政与三阶时间窗" data-i18n-en="Up-Market Manifesto &amp; 3 Horizons">上攻园区新政与三阶时间窗</span></a></li>
+          <li><a href="#sec-f1" class="mui-nav-link"><span class="nav-idx mono">F1</span><span data-i18n-zh="六大增长引擎纵向深潜舱" data-i18n-en="6 Future Growth Engines">六大增长引擎纵向深潜舱</span></a></li>
+          <li><a href="#sec-f2" class="mui-nav-link"><span class="nav-idx mono">F2</span><span data-i18n-zh="反寻租GTM效率与2032营收桥" data-i18n-en="Anti-Rent GTM vs 2032 Bridge">反寻租GTM效率与2032营收桥</span></a></li>
+          <li><a href="#sec-f3" class="mui-nav-link"><span class="nav-idx mono">F3</span><span data-i18n-zh="全栈物理AI与可选订阅爬坡" data-i18n-en="Edge Vision AI &amp; Attach Ramp">全栈物理AI与可选订阅爬坡</span></a></li>
+          <li><a href="#sec-f4" class="mui-nav-link"><span class="nav-idx mono">F4</span><span data-i18n-zh="2030千亿市值期权组装器" data-i18n-en="2030 Optionality Valuation Lab">2030千亿市值期权组装器</span></a></li>
+        </ul>
+      </nav>
+
+      
+    </aside>
+
+    <main class="ft-workspace main-content">
+      <!-- MODULE F0: MANIFESTO + 3-HORIZON RADAR -->
+      <section id="sec-f0" class="ft-hero-grid">
+        <div class="ft-manifesto">
+          <div>
+            <div class="ft-badges">
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="2026.11 历史奇点：单季营收首破 $10.26亿 (+39.9% YoY)" data-i18n-en="NOV 2026 MILESTONE: FIRST $1.03B QUARTER (+39.9% YoY)">2026.11 历史奇点：单季营收首破 $10.26亿 (+39.9% YoY)</span>
+              <span class="mui-chip mui-chip-success mono">从 SMB 霸主杀入中大型园区腹地</span>
+            </div>
+
+            <h1 class="ft-h1" data-i18n-zh="厄比奎蒂未来十年（2026–2032）战略图谱：<span class='ft-grad'>不做逼迫续费的云端收租公，做全球物理空间连接、视觉 AI 与智慧楼宇的统一底座</span>" data-i18n-en="Ubiquiti's Next Decade (2026–2032): <span class='ft-grad'>Scaling Zero-License Enterprise Campuses, Edge Vision AI &amp; Unified Building OS</span>">
+              厄比奎蒂未来十年（2026–2032）战略图谱：<span class="ft-grad">不做逼迫续费的云端收租公，做全球物理空间连接、视觉 AI 与智慧楼宇的统一底座</span>
+            </h1>
+
+            <p class="ft-lead">
+              过去十年，市场一直给厄比奎蒂贴上“仅适合发烧友与小微企业（Prosumer/SMB）”的标签，认为其缺乏双电源高可用（HA）、万兆核心堆叠与企业级 SLA 支持，无法撼动思科与 HPE Aruba 的中型企业及大型园区腹地。但在 2025–2026 年，Robert Pera 率领 1,321 人研发团队打出了一套凌厉的<strong>“向上破壁 + 横向吞噬”组合拳</strong>：纵向以 <strong>Enterprise Fortress Gateway（EFG 25G/双冗余防火墙）</strong>
+              <a class="cite-link" href="https://ui.com/cloud-gateways/enterprise-scale" target="_blank" rel="noopener noreferrer">EFG 园区架构 ↗</a>、<strong>Enterprise Campus 100G QSFP28 层三堆叠交换机</strong>
+              <a class="cite-link" href="https://ui.com/switching" target="_blank" rel="noopener noreferrer">ECS 交换矩阵 ↗</a> 与 <strong>E7 Campus（PRISM™ 主动射频滤波 Wi-Fi 7）</strong>
+              <a class="cite-link" href="https://ui.com/wifi/enterprise" target="_blank" rel="noopener noreferrer">E7 射频技术 ↗</a> 补齐大型场馆与万人园区短板；横向将同一套 UniFi OS 延伸至<strong>边缘自然语言视觉检索（AI Key / Protect 7.3）</strong>、<strong>企业级存储（UNAS Pro 8 / Cloud Storage）</strong>与<strong>联合 Proofpoint &amp; Cloudflare 的 CyberSecure 可选订阅</strong>
+              <a class="cite-link" href="https://ui.com/whats-new" target="_blank" rel="noopener noreferrer">2026 新品路线图 ↗</a>，正式向千亿美元级企业网络与智能建筑市场发起总攻。
+            </p>
+          </div>
+
+          <div class="ft-ternus-strip">
+            <div class="ft-mini-pill">
+              <b>第一增长极：中大型园区破冰</b>
+              <span>EFG 双机热备 + 100G ECS 核心交换 + Partner 伙伴认证计划</span>
+            </div>
+            <div class="ft-mini-pill">
+              <b>第二增长极：本地边缘视觉 AI</b>
+              <span>AI Key / AI Port 让安防监控实现零云端月费自然语言搜索</span>
+            </div>
+            <div class="ft-mini-pill">
+              <b>第三增长极：自愿增值与存储建筑</b>
+              <span>CyberSecure 威胁情报 + UNAS 存储 + SuperLink 工业楼宇物联</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="ft-horizon-radar" aria-label="三阶战略时间窗雷达">
+          <div>
+            <span class="ft-kicker mono">THREE-HORIZON S-CURVE RADAR</span>
+            <strong style="font-size:0.95rem;" data-i18n-zh="点击切换三大战略兑现时间窗" data-i18n-en="Select Strategic Horizon Window">点击切换三大战略兑现时间窗</strong>
+          </div>
+
+          <div class="ft-hz-tabs" id="hzTabs">
+            <button type="button" class="ft-hz-btn active" data-hz="0">H1 近程兑现<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2026–2027</span></button>
+            <button type="button" class="ft-hz-btn" data-hz="1">H2 中程放量<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2028–2029</span></button>
+            <button type="button" class="ft-hz-btn" data-hz="2">H3 远期奇点<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2030–2032</span></button>
+          </div>
+
+          <div class="ft-hz-card" id="hzCard">
+            <div>
+              <span class="mui-chip mui-chip-primary mono" id="hzBadge">HORIZON 1 · 高确定性换代与扩圈期 (2026–2027)</span>
+              <h3 id="hzTitle" style="font-size:0.96rem;font-weight:800;margin:8px 0 6px;">Wi-Fi 7 全系换机潮 × 100G 园区核心破局 × Protect AI 爆发</h3>
+              <ul class="ft-hz-list" id="hzList">
+                <li><span class="ft-hz-dot"></span><span><strong>Wi-Fi 7 全面放量：</strong>从室内 U7 Pro/Mesh 到室外 IP67 E7 Campus 形成完整梯队，带动多千兆 PoE++ 交换机同步升级。</span></li>
+                <li><span class="ft-hz-dot"></span><span><strong>Network 11 &amp; Protect 7.3：</strong>AI Key ($799) 与 AI Port ($199) 激活存量安防改造，UNAS Pro 4/8 切入企业本地备份。</span></li>
+                <li><span class="ft-hz-dot"></span><span><strong>5G 融合备份网关：</strong>Dream Router 5G Max 与 UniFi 5G Backup 打通商业门店主备无缝切换。</span></li>
+              </ul>
+            </div>
+            <div class="ft-hz-foot mono">
+              <span id="hzProb" style="color:var(--mui-success-text);">兑现确定性：极高 (90%+)</span>
+              <span id="hzImpact" style="color:var(--mui-primary-lighter);">年化增量营收池：+$1.2B–$1.8B</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- MODULE F1: 6-ENGINE EXPLORER -->
+      <section id="sec-f1" class="ft-panel">
+        <div class="ft-panel-head">
+          <div>
+            <span class="ft-kicker mono">MODULE F1 · SIX NEXT-DECADE GROWTH ENGINES</span>
+            <h2 class="ft-h2" data-i18n-zh="六大未来增长引擎纵向深潜舱：产品武器库、变现逻辑与对标替代空间" data-i18n-en="6 Next-Decade Growth Engines: Product Arsenal &amp; TAM Expansion">六大未来增长引擎纵向深潜舱：产品武器库、变现逻辑与对标替代空间</h2>
+            <p class="ft-sub" data-i18n-zh="点击左侧任一战略赛道，右侧实时切换其底层硬件/软件支点、蚕食的传统巨头地盘与关键财务指标。" data-i18n-en="Click any engine on the left rail to inspect its product architecture, target incumbent share, and margin profile.">点击左侧任一战略赛道，右侧实时切换其底层硬件/软件支点、蚕食的传统巨头地盘与关键财务指标。</p>
+          </div>
+          <span class="mui-chip mui-chip-violet mono">6 S-CURVES · MASTER-DETAIL</span>
+        </div>
+
+        <div class="ft-explorer">
+          <div class="ft-rail" id="engineRail">
+            <button type="button" class="ft-rail-btn active" data-eng="0">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">01</span><span class="ft-rail-name">EFG 防火墙 + 100G 园区核心层</span></span>
+              <span class="ft-rail-tam mono">+$1.2B–$1.8B/年</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="1">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">02</span><span class="ft-rail-name">Wi-Fi 7/8 PRISM™ 与 5G 广域融合</span></span>
+              <span class="ft-rail-tam mono">+$900M–$1.4B/年</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="2">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">03</span><span class="ft-rail-name">Protect 边缘视觉 AI (AI Key/Port)</span></span>
+              <span class="ft-rail-tam mono">+$800M–$1.3B/年</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="3">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">04</span><span class="ft-rail-name">CyberSecure 与高毛利可选云服务</span></span>
+              <span class="ft-rail-tam mono">&gt;75% GM 经常性池</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="4">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">05</span><span class="ft-rail-name">UNAS 存储与智慧建筑全栈 OS</span></span>
+              <span class="ft-rail-tam mono">+$600M–$1.0B/年</span>
+            </button>
+            <button type="button" class="ft-rail-btn" data-eng="5">
+              <span class="ft-rail-left"><span class="ft-rail-idx mono">06</span><span class="ft-rail-name">UISP 60GHz 毫米波与工业互联</span></span>
+              <span class="ft-rail-tam mono">+$250M–$450M/年</span>
+            </button>
+          </div>
+
+          <div class="ft-dossier" id="engineDossier">
+            <div>
+              <span class="mui-chip mui-chip-primary mono" id="engBadge">ENGINE 01 · UP-MARKET ENTERPRISE CAMPUS &amp; FIREWALL CORE</span>
+              <h3 id="engTitle">攻入思科腹地：以 EFG 双冗余网关 + 100G ECS 核心交换撕开中型企业与校园酒店市场</h3>
+              <p id="engDesc">
+                过去中型企业（500–5,000人园区、医院、大型酒店与学区）之所以不敢采用 UniFi，核心障碍在于缺乏双热插拔电源冗余、VRRP 网关自动故障切换、SSL/TLS 加密流量深度检测以及层三万兆/百兆核心汇聚交换机。随着 Enterprise Fortress Gateway（支持双机 Shadow Mode 热备与实时 SSL 解密）、Enterprise Firewall Core、100G QSFP28 堆叠的 Enterprise Campus Switch（ECS）及 UniFi OS Server 独立部署方案落地，叠加全新 Enterprise Partner Program 渠道赋能与 24/7 UI Care 极速备件替换，厄比奎蒂正式具备整园替代 Cisco Catalyst/Meraki 的工程底座。
+              </p>
+              <div class="ft-dossier-formula mono" id="engFormula">
+                变现弹性：单园区客单价从 SMB 的 ~$5K 跃升至 $45K–$150K+，同时仍比传统方案便宜 60% 以上
+              </div>
+            </div>
+
+            <div class="ft-gauge-grid" id="engGauges">
+              <div class="ft-gauge-card"><b class="mono">100G QSFP28</b><span>ECS 园区核心层三堆叠带宽</span></div>
+              <div class="ft-gauge-card"><b class="mono">Shadow Mode</b><span>EFG 硬件双机零中断高可用</span></div>
+              <div class="ft-gauge-card"><b class="mono">PoE+++</b><span>单口高达 90W 驱动重型终端</span></div>
+              <div class="ft-gauge-card"><b class="mono">2026–2029</b><span>中型政企与酒店替换主窗口</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE F2: 7:5 SPLIT — GTM COST EFFICIENCY VS 2032 REVENUE BRIDGE -->
+      <section id="sec-f2" class="ft-split-75">
+        <div class="ft-subbox">
+          <div class="ft-subhead">
+            <div>
+              <span class="ft-kicker mono">MODULE F2A · ANTI-CONSENSUS GTM &amp; 2032 BRIDGE</span>
+              <h3 data-i18n-zh="隐形销售税对比：UI 3.9% (SG&A+SBC) vs 传统巨头 30%–45% 沉重负担" data-i18n-en="The Hidden Tax: UI's 3.9% (SG&amp;A+SBC) vs Peers' 30%–45% Burden">隐形销售税对比：UI 3.9% (SG&amp;A+SBC) vs 传统巨头 30%–45% 沉重负担</h3>
+            </div>
+            <div class="mui-segmented" id="fChartTabs">
+              <button type="button" class="mui-seg-btn active" data-fview="gtm" data-i18n-zh="SG&amp;A+SBC 营收占比 (%)" data-i18n-en="SG&amp;A+SBC Burden (%)">SG&amp;A+SBC 营收占比 (%)</button>
+              <button type="button" class="mui-seg-btn" data-fview="bridge" data-i18n-zh="FY26→FY32E 营收阶梯桥" data-i18n-en="2032E Revenue Bridge">FY26→FY32E 营收阶梯桥</button>
+            </div>
+          </div>
+
+          <div class="ft-canvas-box">
+            <canvas id="futureCanvas"></canvas>
+          </div>
+
+          <p class="ft-caption">
+            结构性真相：传统企业软件与网通公司将高达 30%–45% 的营收消耗在销售佣金与高管员工股票期权（SBC）上；厄比奎蒂 FY2026 SG&amp;A 仅 <strong>3.7%</strong>、SBC 仅 <strong>0.23%</strong>（合计 <strong>3.95%</strong>），使其无需靠涨价或强制收租即可维持近 40% 的营业利润率。
+          </p>
+        </div>
+
+        <div class="ft-subbox">
+          <div class="ft-subhead">
+            <div>
+              <span class="ft-kicker mono">MODULE F2B · EDGE AI &amp; ANTI-RENT THESIS</span>
+              <h3 data-i18n-zh="为什么“本地边缘算力 + 可选订阅”在 AI 时代更致命？" data-i18n-en="Why Local Edge NPU + Optional Attach Wins in the AI Era">为什么“本地边缘算力 + 可选订阅”在 AI 时代更致命？</h3>
+            </div>
+          </div>
+
+          <div class="ft-thesis-stack">
+            <div class="ft-thesis-item">
+              <b>① 打破云端安防摄像头“每镜头 $200/年”的订阅暴利</b>
+              <p>Verkada 与 Meraki MV 将视频上传云端并按摄像头按年收费，100 路监控 5 年光订阅费就超 $10 万；UniFi Protect 通过本地 UNVR + $799 AI Key 边缘算力盒，一次买断实现车牌识别、人脸归档与自然语言搜画面，隐私不出内网且带宽零负担。</p>
+            </div>
+            <div class="ft-thesis-item">
+              <b>② “把第三方免费赋能进来”的特洛伊木马：AI Port ($199)</b>
+              <p>许多商业客户已有数十个海康、大华或安讯士旧款 ONVIF 摄像头不舍得拆换——厄比奎蒂推出 $199 的 AI Port，直接给旧款第三方摄像头外挂 AI 智能识别并接入 UniFi Protect，瞬间瓦解客户迁移阻力。</p>
+            </div>
+            <div class="ft-thesis-item">
+              <b>③ 只对“真正持续产生成本的价值”收订阅费</b>
+              <p>本地控制器研发是沉没成本，因此免费送；而 Proofpoint/Cloudflare 每日更新的 95,000+ 实时威胁情报（CyberSecure）与异地云存储（UniFi Cloud Storage）具有持续云端成本，客户心甘情愿自愿付费，品牌口碑零反噬。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE F3: 5:7 REVERSED SPLIT — ARCHITECTURE MATRIX & ATTACH RAMP -->
+      <section id="sec-f3" class="ft-split-57">
+        <div class="ft-subbox">
+          <div class="ft-subhead">
+            <div>
+              <span class="ft-kicker mono">MODULE F3A · UNIFI FULL-STACK ARCHITECTURE</span>
+              <h3 data-i18n-zh="2026–2030 四大硬核工程支点：从射频滤波到建筑神经网" data-i18n-en="Four Engineering Pillars: From PRISM™ RF to Building Nervous System">2026–2030 四大硬核工程支点：从射频滤波到建筑神经网</h3>
+            </div>
+          </div>
+
+          <div class="ft-chip-matrix">
+            <div class="ft-chip-box">
+              <span class="code mono">RF MASTERY · PRISM™ FILTERING</span>
+              <h4>E7 / E7 Campus 主动滤波</h4>
+              <p>自研 PRISM™ 主动射频干扰隔离技术，相邻信道隔离度提升逾 1,000 倍，攻克万人体育场馆与高密会展 Wi-Fi 7 拥塞痛点
+              <a class="cite-link" href="https://ui.com/wifi/enterprise" target="_blank" rel="noopener noreferrer">E7 规格 ↗</a>。</p>
+            </div>
+            <div class="ft-chip-box">
+              <span class="code mono">VISION NPU · AI KEY &amp; PROTECT 7</span>
+              <h4>1,800 次/小时边缘视觉推理</h4>
+              <p>紧凑桌面边缘算力节点 AI Key 原生集成多模态视觉大模型，支持用自然语言直接检索全园区监控事件流
+              <a class="cite-link" href="https://techspecs.ui.com/unifi/physical-security/ai-key?subcategory=all-physical-security" target="_blank" rel="noopener noreferrer">AI Key 实测 ↗</a>。</p>
+            </div>
+            <div class="ft-chip-box">
+              <span class="code mono">SECURITY · CYBERSECURE + NEXT AI</span>
+              <h4>Proofpoint × Cloudflare 联防</h4>
+              <p>网关原生内置高达 95,000+ IDS/IPS 入侵检测特征库与 NeXT AI 加密流量审查，一键阻断勒索软件与僵尸网络
+              <a class="cite-link" href="https://help.ui.com/hc/en-us/articles/25930305913751-UniFi-CyberSecure-Enhanced-by-Proofpoint-and-Cloudflare" target="_blank" rel="noopener noreferrer">安全白皮书 ↗</a>。</p>
+            </div>
+            <div class="ft-chip-box">
+              <span class="code mono">STORAGE &amp; IOT · UNAS &amp; SUPERLINK</span>
+              <h4>企业 NAS 与远距低功耗物联</h4>
+              <p>UNAS Pro 8 / Enterprise NAS 补齐数据存储拼图；SuperLink 协议赋予烟感/门磁传感器超远穿墙距离与 10 年续航
+              <a class="cite-link" href="https://blog.ui.com/article/all-new-next-gen-of-unifi-storage" target="_blank" rel="noopener noreferrer">UNAS 公报 ↗</a>。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ft-subbox">
+          <div class="ft-subhead">
+            <div>
+              <span class="ft-kicker mono">MODULE F3B · MULTI-PRODUCT ATTACH &amp; RECURRING POOL</span>
+              <h3 data-i18n-zh="2025–2030E 多产品栈交叉渗透率与可选增值服务收入爬坡推演" data-i18n-en="2025–2030E Multi-Stack Attach Rate &amp; High-Margin Recurring Pool">2025–2030E 多产品栈交叉渗透率与可选增值服务收入爬坡推演</h3>
+            </div>
+            <div class="mui-segmented" id="sChartTabs">
+              <button type="button" class="mui-seg-btn active" data-sview="pen" data-i18n-zh="多品类交叉渗透率 (%)" data-i18n-en="Multi-Stack Attach (%)">多品类交叉渗透率 (%)</button>
+              <button type="button" class="mui-seg-btn" data-sview="arr" data-i18n-zh="可选增值服务年化池 ($M)" data-i18n-en="Optional Attach ARR ($M)">可选增值服务年化池 ($M)</button>
+            </div>
+          </div>
+
+          <div class="ft-canvas-box">
+            <canvas id="siliconCanvas"></canvas>
+          </div>
+
+          <p class="ft-caption">
+            财务验证信号：在 Q1 FY2027 季报中，厄比奎蒂资产负债表上的<strong>递延收入总额（短+长期）已攀升至 $1.052亿美元</strong>（单季确认递延收入 $21.2M，同比大增 +63.1%），印证隐含售后支持与 CyberSecure/Cloud 增值服务正随硬件保有量指数级膨胀。
+          </p>
+        </div>
+      </section>
+
+      <!-- MODULE F4: OPTIONALITY VALUATION BUILDER -->
+      <section id="sec-f4" class="ft-panel">
+        <div class="ft-panel-head">
+          <div>
+            <span class="ft-kicker mono">MODULE F4 · INTERACTIVE 2030 OPTIONALITY &amp; VALUATION BUILDER</span>
+            <h2 class="ft-h2" data-i18n-zh="2030 迈向“$750亿–$1,000亿市值”期权组装实验室：勾选你认可的新增长极" data-i18n-en="2030 Valuation Optionality Lab: Toggle Ubiquiti's Next Growth Vectors">2030 迈向“$750亿–$1,000亿市值”期权组装实验室：勾选你认可的新增长极</h2>
+            <p class="ft-sub" data-i18n-zh="以 FY26 $3.27B（Q1 FY27 年化已达 $4.10B）为起点，自由开关五大未来业务期权并选择 P/E 估值倍数，实时测算 FY2030E 目标市值与每股价值。" data-i18n-en="Toggle five future product/service catalysts and select a P/E multiple to model Ubiquiti's FY2030E EPS, share price, and market cap.">以 FY26 $3.27B（Q1 FY27 年化已达 $4.10B）为起点，自由开关五大未来业务期权并选择 P/E 估值倍数，实时测算 FY2030E 目标市值与每股价值。</p>
+          </div>
+          <div class="mui-segmented" id="peTabs">
+            <button type="button" class="mui-seg-btn" data-pe="26">保守 26x P/E</button>
+            <button type="button" class="mui-seg-btn active" data-pe="32">稳态 32x P/E</button>
+            <button type="button" class="mui-seg-btn" data-pe="38">溢价 38x P/E</button>
+          </div>
+        </div>
+
+        <div class="ft-builder-grid">
+          <div class="ft-switch-list" id="optSwitchList">
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="campus" checked />
+                <span><b>期权 1：EFG 防火墙 + 100G ECS 园区核心层放量</b><span>切入 500–5,000 人中型企业、医院、校园与连锁酒店网络替换</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$1.15B 营收 · 38% OPM</span>
+            </label>
+
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="protect" checked />
+                <span><b>期权 2：UniFi Protect 视觉 AI (AI Key / AI Port / G6) 全面渗透</b><span>零月费本地 AI 监控加速抢占传统安防与高价云监控份额</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$920M 营收 · 40% OPM</span>
+            </label>
+
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="cyber" checked />
+                <span><b>期权 3：CyberSecure + Cloud Storage + UI Care 自愿高毛利订阅</b><span>存量数百万企业网关中 18% 选配安全特征库、云托管与延保</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$380M 营收 · 75% OPM</span>
+            </label>
+
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="nas" checked />
+                <span><b>期权 4：UNAS 企业存储 + UniFi Access 门禁与 SuperLink 楼宇</b><span>向群晖/威联通企业 NAS 及传统弱电门禁市场横向收割</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$550M 营收 · 36% OPM</span>
+            </label>
+
+            <label class="ft-opt-row">
+              <span class="ft-opt-left">
+                <input type="checkbox" data-opt="ind" />
+                <span><b>期权 5：远期奇点 — UniFi Industrial 工业互联 + 5G 专网 + Wi-Fi 8</b><span>严苛工厂自动化交换与毫米波回传高赔率期权（默认未勾选）</span></span>
+              </span>
+              <span class="ft-opt-add mono">+$650M 营收 · 39% OPM</span>
+            </label>
+          </div>
+
+          <div class="ft-val-board">
+            <div class="ft-val-kpis">
+              <div class="ft-val-kpi"><b class="mono" id="optRevOut">$7.45B</b><span>FY2030E 推演总营收</span></div>
+              <div class="ft-val-kpi"><b class="mono" id="optNetOut">$2.35B</b><span>FY2030E 推演 GAAP 净利润</span></div>
+              <div class="ft-val-kpi"><b class="mono" id="optEpsOut">$41.28</b><span>FY2030E 摊薄 EPS (含缩股至 57M股)</span></div>
+              <div class="ft-val-kpi"><b class="mono" id="optCapOut" style="color:var(--mui-success-text);">$75.3B</b><span>FY2030E 隐含目标市值 (股价 ~$1,321)</span></div>
+            </div>
+
+            <div class="ft-canvas-box" style="height:155px;">
+              <canvas id="optMiniCanvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIMARY SOURCES -->
+      <section class="ft-panel" aria-label="权威产品路线图与财报信源">
+        <div class="ft-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+          <div>
+            <span class="ft-kicker mono">VERIFIED PRIMARY SOURCES</span>
+            <h2 class="ft-h2" data-i18n-zh="官方新一代产品技术架构文档与财报前瞻信源" data-i18n-en="Official Product Architecture Docs &amp; Financial Roadmap Sources">官方新一代产品技术架构文档与财报前瞻信源</h2>
+          </div>
+        </div>
+        <div class="ft-sources-grid">
+          <a class="ft-source-card" href="https://ui.com/whats-new" target="_blank" rel="noopener noreferrer">
+            <b>Ubiquiti Official What's New Timeline (2026) ↗</b>
+            <span>Network 11.1、UniFi Cloud Storage、Long-Range Switching、UniFi Industrial、Protect 7.3 与 Whole-Home Wi-Fi 7 官方发布记录</span>
+          </a>
+          <a class="ft-source-card" href="https://ui.com/cloud-gateways/enterprise-scale" target="_blank" rel="noopener noreferrer">
+            <b>Enterprise Scale UniFi Cloud Gateways (EFG) ↗</b>
+            <span>支持 95,000+ IDS/IPS 签名、SSL/TLS 实时解密审查与 Shadow Mode 高可用双机热备的企业核心网关规范</span>
+          </a>
+          <a class="ft-source-card" href="https://ui.com/wifi/enterprise" target="_blank" rel="noopener noreferrer">
+            <b>UniFi Enterprise Wi-Fi 7 (E7 &amp; E7 Campus) ↗</b>
+            <span>PRISM™ 主动射频滤波隔离技术、10G 双上联冗余与 IP67 室外全天候高密度场馆无线覆盖架构</span>
+          </a>
+          <a class="ft-source-card" href="https://help.ui.com/hc/en-us/articles/25930305913751-UniFi-CyberSecure-Enhanced-by-Proofpoint-and-Cloudflare" target="_blank" rel="noopener noreferrer">
+            <b>UniFi CyberSecure by Proofpoint &amp; Cloudflare ↗</b>
+            <span>官方详解在不破坏基础免费原则下引入顶级商业威胁情报与内容过滤的可选安全订阅机制</span>
+          </a>
+          <a class="ft-source-card" href="https://techspecs.ui.com/unifi/physical-security/ai-key?subcategory=all-physical-security" target="_blank" rel="noopener noreferrer">
+            <b>UniFi Protect AI Key &amp; AI Port Tech Specs ↗</b>
+            <span>每小时 1,800 次本地边缘智能检测、多模态视觉事件自然语言检索与第三方摄像头无损 AI 化参数</span>
+          </a>
+          <a class="ft-source-card" href="https://blog.ui.com/article/all-new-next-gen-of-unifi-storage" target="_blank" rel="noopener noreferrer">
+            <b>Next-Gen UniFi Storage (UNAS Pro 4 / 8 &amp; Enterprise NAS) ↗</b>
+            <span>机架式万兆企业网络存储与无许可费跨站点快照备份体系官方技术博客</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  
+<script src="../../_shared/ubiquiti_growth_2026_2032.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

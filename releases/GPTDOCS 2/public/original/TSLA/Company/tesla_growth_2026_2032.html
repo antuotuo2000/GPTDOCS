@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-report-family="tsla" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="特斯拉 Tesla, Inc. (NASDAQ: TSLA) 2026–2032 未来战略与物理 AI 增长曲线观测站：秘密宏图第四篇章（构建极度丰饶世界）、Cybercab 无人驾驶出租车网络、Optimus Gen 3 人形机器人百万产线、AI5/AI6 50倍跃升芯片、Cortex 超算集群与 Megapack 3/Megablock 电网霸权。" />
+ <title>特斯拉 Tesla TSLA 2026–2032 战略与增长曲线 | 数据中心</title>
+ 
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/tesla_growth_2026_2032.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+</head>
+<body id="top"><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">TSLA</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="#top">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="特斯拉 2026–2032 未来战略与物理AI观测站" data-i18n-en="Tesla 2026–2032 Physical AI Horizon Observatory">特斯拉 2026–2032 未来战略与物理AI观测站</span>
+ </nav>
+ <span class="mui-chip mui-chip-violet mono hide-sm">MASTER PLAN IV · 2030+</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">ROBOTAXI × OPTIMUS × AI5</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索未来引擎或2030估值…" aria-label="快速跳转模块" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="未来战略模块与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-violet mono">TSLA · 2030 OBSERVATORY</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="特斯拉未来十年战略观测站" data-i18n-en="Tesla 2030 Strategic Observatory">特斯拉未来十年战略观测站</div>
+ <p class="sidebar-subtitle" data-i18n-zh="秘密宏图第四篇章 × Cybercab 无人网约车 × Optimus 百万产线 × AI5/AI6 自研芯片 × Megapack 3 能源网" data-i18n-en="Master Plan Part IV × Cybercab Robotaxi × Optimus Million-Unit Ramp × AI5/AI6 Silicon × Megapack 3">秘密宏图第四篇章 × Cybercab 无人网约车 × Optimus 百万产线 × AI5/AI6 自研芯片 × Megapack 3 能源网</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="2026 新使命" data-i18n-en="2026 Mission">2026 新使命</span>
+ <span class="sidebar-mini-val mono">Amazing Abundance</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="2026E AI/产线 CapEx" data-i18n-en="2026E CapEx">2026E AI/产线 CapEx</span>
+ <span class="sidebar-mini-val mono">&gt;$20.0B (6条新产线)</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="CEO 对赌终局锚" data-i18n-en="CEO Award Cap">CEO 对赌终局锚</span>
+ <span class="sidebar-mini-val mono">$8.5T 市值 · $400B EBITDA</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="站点导航与未来观测目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="TSLA"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="未来战略模块 (F0–F4)" data-i18n-en="Future Horizon (F0–F4)">未来战略模块 (F0–F4)</div>
+ <ul class="mui-nav-list">
+ <li><a href="#sec-f0" class="mui-nav-link active"><span class="nav-idx mono">F0</span><span data-i18n-zh="极度丰饶新政与三阶时间窗" data-i18n-en="Master Plan IV &amp; 3 Horizons">极度丰饶新政与三阶时间窗</span></a></li>
+ <li><a href="#sec-f1" class="mui-nav-link"><span class="nav-idx mono">F1</span><span data-i18n-zh="六大物理AI引擎纵向深潜舱" data-i18n-en="6 Physical AI Engines">六大物理AI引擎纵向深潜舱</span></a></li>
+ <li><a href="#sec-f2" class="mui-nav-link"><span class="nav-idx mono">F2</span><span data-i18n-zh="$20B+重资本跃迁与2032营收桥" data-i18n-en="$20B+ CapEx &amp; 2032 Bridge">$20B+重资本跃迁与2032营收桥</span></a></li>
+ <li><a href="#sec-f3" class="mui-nav-link"><span class="nav-idx mono">F3</span><span data-i18n-zh="全栈主权：AI5芯片与本土锂电" data-i18n-en="AI5 Silicon &amp; Battery Autonomy">全栈主权：AI5芯片与本土锂电</span></a></li>
+ <li><a href="#sec-f4" class="mui-nav-link"><span class="nav-idx mono">F4</span><span data-i18n-zh="2030冲击多万亿期权组装器" data-i18n-en="2030 Multi-Trillion Builder">2030冲击多万亿期权组装器</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <!-- Main Observatory Workspace -->
+ <main class="ft-workspace main-content">
+
+ <!-- MODULE F0: MANIFESTO + INTERACTIVE 3-HORIZON RADAR -->
+ <section id="sec-f0" class="ft-hero-grid">
+ <div class="ft-manifesto">
+ <div>
+ <div class="ft-badges">
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="2026.01 使命重写：构建极度丰饶的世界 (Amazing Abundance)" data-i18n-en="JAN 2026 MISSION REWRITE: BUILD A WORLD OF AMAZING ABUNDANCE">2026.01 使命重写：构建极度丰饶的世界 (Amazing Abundance)</span>
+ <span class="mui-chip mui-chip-success mono">2025 CEO 绩效奖励锚定 $8.5T 终局</span>
+ </div>
+
+ <h1 class="ft-h1" data-i18n-zh="特斯拉2026–2032战略图谱：<span class='ft-grad'>告别单纯造车叙事，用真实世界 AI 垄断无人出行、人形劳动力与算力电网</span>" data-i18n-en="Tesla's Next Decade (2026–2032): <span class='ft-grad'>Beyond EVs — Owning Autonomous Mobility, Humanoid Labor &amp; the AI Power Grid</span>">
+ 特斯拉2026–2032战略图谱：<span class="ft-grad">告别单纯造车叙事，用真实世界 AI 垄断无人出行、人形劳动力与算力电网</span>
+ </h1>
+
+ <p class="ft-lead">
+ 站在 TTM 营收突破 <strong>$1,036亿</strong> 与市值 <strong>~$1.54万亿</strong> 的分水岭上，特斯拉于 2026 年 1 月正式将企业使命从“加速世界向可持续能源转变”改写为<strong>“构建极度丰饶的世界（To build a world of amazing abundance）”</strong>
+ <a class="cite-link" href="https://www.companieshistory.com/tesla-mission-statement/" target="_blank" rel="noopener noreferrer">2026 使命宣言 ↗</a>，并与股东大会高票通过的 <strong>2025 CEO 绩效方案</strong>（12 档硬指标直指 $8.5万亿市值、$4,000亿年化 EBITDA、1,000万 FSD 订阅、100万辆 Robotaxi 与 100万台 Optimus）深度绑定
+ <a class="cite-link" href="https://www.stocktitan.net/sec-filings/TSLA/10-k-a-tesla-inc-amends-annual-report-3615ff64a985.html" target="_blank" rel="noopener noreferrer">SEC 10-K/A 激励契约 ↗</a>。
+ 当硅谷大模型公司困于屏幕内的数字文本竞争时，特斯拉在 2026 年毅然停产元老旗舰 Model S/X，腾出弗里蒙特车间改建 <strong>100 万台/年 Optimus Gen 3 产线</strong>
+ <a class="cite-link" href="https://www.teslarati.com/tesla-ai-boss-reveals-how-big-optimus-is-going-to-get/" target="_blank" rel="noopener noreferrer">Optimus 扩产披露 ↗</a>，斥资逾 <strong>$200亿 年度 CapEx</strong> 同步拉起 Cybercab、Semi、Megapack 3 与得州超 220MW Cortex 超算集群，并战略投资 <strong>$20亿 入股 xAI</strong> 将 Grok 注入无人座舱，全面冲刺“物理世界通用人工智能”终局
+ <a class="cite-link" href="https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf" target="_blank" rel="noopener noreferrer">Q3'26 官方进展 ↗</a>。
+ </p>
+ </div>
+
+ <div class="ft-ternus-strip">
+ <div class="ft-mini-pill">
+ <b>第一增长极：无人出行网络</b>
+ <span>Cybercab 接入奥斯汀车队 + FSD V14/V15 迈向千万级月度订阅</span>
+ </div>
+ <div class="ft-mini-pill">
+ <b>第二增长极：具身人形机器人</b>
+ <span>Ashok Elluswamy 统合视觉大模型与 Optimus，剑指 &lt;$20K 制造成本</span>
+ </div>
+ <div class="ft-mini-pill">
+ <b>第三增长极：AI 算力配储电网</b>
+ <span>休斯顿 50GWh Megapack 3/Megablock 承接全球数据中心电力饥渴</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: Interactive 3-Horizon Radar -->
+ <aside class="ft-horizon-radar" aria-label="三阶战略时间窗雷达">
+ <div>
+ <span class="ft-kicker mono">THREE-HORIZON S-CURVE RADAR</span>
+ <strong style="font-size:0.95rem;" data-i18n-zh="点击切换三大战略兑现时间窗" data-i18n-en="Select Strategic Horizon Window">点击切换三大战略兑现时间窗</strong>
+ </div>
+
+ <div class="ft-hz-tabs" id="hzTabs">
+ <button type="button" class="ft-hz-btn active" data-hz="0">H1 六线投产<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2026–2027</span></button>
+ <button type="button" class="ft-hz-btn" data-hz="1">H2 规模跃升<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2028–2029</span></button>
+ <button type="button" class="ft-hz-btn" data-hz="2">H3 丰饶奇点<br><span class="mono" style="font-weight:600;font-size:0.68rem;">2030–2032</span></button>
+ </div>
+
+ <div class="ft-hz-card" id="hzCard">
+ <div>
+ <span class="mui-chip mui-chip-primary mono" id="hzBadge">HORIZON 1 · 六大新产线爬坡与无监督破冰期 (2026–2027)</span>
+ <h3 id="hzTitle" style="font-size:0.96rem;font-weight:800;margin:8px 0 6px;">Cybercab 德州量产 × Semi 交付 × 休斯顿 Megapack 3 × AI5 流片上车</h3>
+ <ul class="ft-hz-list" id="hzList">
+ <li><span class="ft-hz-dot"></span><span><strong>Robotaxi 扩城：</strong>奥斯汀无安全员里程破 200 万英里，向达拉斯、休斯顿、凤凰城、迈阿密与拉斯维加斯铺开。</span></li>
+ <li><span class="ft-hz-dot"></span><span><strong>Semi 与 Megapack 3：</strong>内华达 5 万台/年重卡产线及休斯顿 50GWh 储能超级工厂放量，兑现高确定性 B2B 营收。</span></li>
+ <li><span class="ft-hz-dot"></span><span><strong>Fremont 换血：</strong>停产 Model S/X 改建首条百万台级 Optimus Gen 3 产线，AI5（50倍性能跃升）于 2027 投产。</span></li>
+ </ul>
+ </div>
+ <div class="ft-hz-foot mono">
+ <span id="hzProb" style="color:var(--mui-success-text);">产线落地确定性：高 (80%–85%)</span>
+ <span id="hzImpact" style="color:var(--mui-primary-lighter);">年化新增营收池：+$35B–$55B</span>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE F1: 4:8 VERTICAL MASTER-DETAIL 6-ENGINE OBSERVATORY -->
+ <section id="sec-f1" class="ft-panel">
+ <div class="ft-panel-head">
+ <div>
+ <span class="ft-kicker mono">MODULE F1 · SIX NEXT-DECADE PHYSICAL AI &amp; ENERGY ENGINES</span>
+ <h2 class="ft-h2" data-i18n-zh="六大未来增长引擎纵向深潜舱：底层物理支点、单机经济与验证路标" data-i18n-en="6 Next-Decade Growth Engines: Physics Enablers &amp; Unit Economics">六大未来增长引擎纵向深潜舱：底层物理支点、单机经济与验证路标</h2>
+ <p class="ft-sub" data-i18n-zh="点击左侧任一战略赛道，右侧实时切换其芯片/制造底座、商业化单价模型与关键跟踪指标。" data-i18n-en="Click any engine on the left rail to inspect its technical stack, unit economics, and milestones.">点击左侧任一战略赛道，右侧实时切换其芯片/制造底座、商业化单价模型与关键跟踪指标。</p>
+ </div>
+ <span class="mui-chip mui-chip-violet mono">6 S-CURVES · MASTER-DETAIL</span>
+ </div>
+
+ <div class="ft-explorer">
+ <div class="ft-rail" id="engineRail">
+ <button type="button" class="ft-rail-btn active" data-eng="0">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">01</span><span class="ft-rail-name">Cybercab 与无监督 Robotaxi 网</span></span>
+ <span class="ft-rail-tam mono">&lt;$0.30/英里目标</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="1">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">02</span><span class="ft-rail-name">Optimus Gen 3 通用人形机器人</span></span>
+ <span class="ft-rail-tam mono">百万台级 ~$20K BOM</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="2">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">03</span><span class="ft-rail-name">FSD V14/V15 全球千万级 SaaS</span></span>
+ <span class="ft-rail-tam mono">$12B+ 高纯利 ARR</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="3">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">04</span><span class="ft-rail-name">Megapack 3 / Megablock 电网基建</span></span>
+ <span class="ft-rail-tam mono">130+ GWh 产能矩阵</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="4">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">05</span><span class="ft-rail-name">AI5/AI6 自研硅片与 Cortex 超算</span></span>
+ <span class="ft-rail-tam mono">50x 端侧推理跃升</span>
+ </button>
+ <button type="button" class="ft-rail-btn" data-eng="5">
+ <span class="ft-rail-left"><span class="ft-rail-idx mono">06</span><span class="ft-rail-name">Tesla Semi 重卡与 Megacharger</span></span>
+ <span class="ft-rail-tam mono">5万台/年干线颠覆</span>
+ </button>
+ </div>
+
+ <div class="ft-dossier" id="engineDossier">
+ <div>
+ <span class="mui-chip mui-chip-primary mono" id="engBadge">ENGINE 01 · CYBERCAB &amp; UNSUPERVISED ROBOTAXI NETWORK</span>
+ <h3 id="engTitle">Cybercab × 车主共享车队：用纯视觉 + 开箱工艺（Unboxed）击穿网约车成本底线</h3>
+ <p id="engDesc">
+ 人类 90% 的日常出行仅搭载 1–2 名乘客。相比竞争对手采用昂贵改装车与多颗激光雷达（单车硬件成本超 $12万–$15万），特斯拉专为无人驾驶原生设计的双座无方向盘 Cybercab 采用 Unboxed 模块化拼装工艺，将目标制造成本锚定在 $30,000 以下。2026Q3 Cybercab 已正式编入奥斯汀 Robotaxi 商业车队（每日 6:00–24:00 运营，累计无监督里程近 200 万英里），并内置 xAI Grok 全语音办公娱乐助手，使车辆资产利用率从私家车的每周 10 小时跃升至 50+ 小时。
+ </p>
+ <div class="ft-dossier-formula mono" id="engFormula">
+ 单车年化模型：年跑 55,000 英里 × $1.00/英里票价 - $0.30/英里全包折旧电费维保 ≈ 单车每年创造 ~$38,500 毛利池
+ </div>
+ </div>
+
+ <div class="ft-gauge-grid" id="engGauges">
+ <div class="ft-gauge-card"><b class="mono">&gt;12.5万台</b><span>得州 Cybercab 首期年产能规划</span></div>
+ <div class="ft-gauge-card"><b class="mono">~200万英里</b><span>奥斯汀累计无安全员真实里程</span></div>
+ <div class="ft-gauge-card"><b class="mono">&lt;$0.30/mi</b><span>规模化单英里边际运营成本目标</span></div>
+ <div class="ft-gauge-card"><b class="mono">100万辆</b><span>CEO 绩效方案商业化车队里程碑</span></div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE F2: 7:5 SPLIT — CAPEX ESCALATION VS HYPERSCALERS & 2032 REVENUE BRIDGE -->
+ <section id="sec-f2" class="ft-split-75">
+ <div class="ft-subbox">
+ <div class="ft-subhead">
+ <div>
+ <span class="ft-kicker mono">MODULE F2A · PHYSICAL AI CAPEX SURGE &amp; 2032 BRIDGE</span>
+ <h3 data-i18n-zh="从 $8.5B 跃升至 &gt;$20B：特斯拉重资本转向与 2032 远期营收阶梯桥" data-i18n-en="From $8.5B to &gt;$20B CapEx: Physical AI Buildout &amp; 2032 Revenue Bridge">从 $8.5B 跃升至 &gt;$20B：特斯拉重资本转向与 2032 远期营收阶梯桥</h3>
+ </div>
+ <div class="mui-segmented" id="fChartTabs">
+ <button type="button" class="mui-seg-btn active" data-fview="capex" data-i18n-zh="特斯拉 CapEx 跃迁与对比" data-i18n-en="CapEx Ramp vs Tech ($B)">特斯拉 CapEx 跃迁与对比</button>
+ <button type="button" class="mui-seg-btn" data-fview="bridge" data-i18n-zh="FY25→FY32E 营收阶梯桥" data-i18n-en="2032E Revenue Bridge">FY25→FY32E 营收阶梯桥</button>
+ </div>
+ </div>
+
+ <div class="ft-canvas-box">
+ <canvas id="futureCanvas"></canvas>
+ </div>
+
+ <p class="ft-caption">
+ 资本密度解析：2026 年特斯拉主动承受短期自由现金流压力，将全年 CapEx 拉升至 <strong>&gt;$200亿（9M'26 已投 $130.1亿）</strong>
+ <a class="cite-link" href="https://www.geminiq.com/blog/tesla-earnings-q3-2026" target="_blank" rel="noopener noreferrer">10-Q 资本开支 ↗</a>；但相比云巨头单年 $750亿–$1,020亿 纯数据中心烧钱，特斯拉用 $200亿 同时建成了超 220MW Cortex AI 集群与六条物理硬件量产线，因推理算力分布式部署在车主买单的千万辆终端上。
+ </p>
+ </div>
+
+ <div class="ft-subbox">
+ <div class="ft-subhead">
+ <div>
+ <span class="ft-kicker mono">MODULE F2B · COUNTER-CONSENSUS PHYSICAL AI MOATS</span>
+ <h3 data-i18n-zh="为什么数字大模型巨头造不出特斯拉的物理世界护城河？" data-i18n-en="Why Pure Software Giants Cannot Replicate Physical AI">为什么数字大模型巨头造不出特斯拉的物理世界护城河？</h3>
+ </div>
+ </div>
+
+ <div class="ft-thesis-stack">
+ <div class="ft-thesis-item">
+ <b>① 每天 500 年真实物理交互数据（互联网文本已枯竭）</b>
+ <p>互联网公开语料已被各家 LLM 爬取殆尽，而物理世界的重力、摩擦、极端雨雪与人类博弈唯有靠上千万辆真实行驶的汽车实时采集
+ <a class="cite-link" href="https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf" target="_blank" rel="noopener noreferrer">500年/日数据 ↗</a>。</p>
+ </div>
+ <div class="ft-thesis-item">
+ <b>② “长了轮子的机器人”与“长了双腿的机器人”同源复用</b>
+ <p>Ashok Elluswamy 统领 Autopilot 与 Optimus 后，汽车端验证成熟的视觉占用网络（Occupancy Network）、AI4/AI5 推理硅片、电池包与无框力矩电机工艺直接迁移至人形机器人。</p>
+ </div>
+ <div class="ft-thesis-item">
+ <b>③ 壮士断腕停产旗舰旧车，联手 xAI 打通数字与物理智能</b>
+ <p>2026 年果断停产 Model S/X 腾笼换鸟给 Optimus，并投资 $20亿 与 xAI 达成战略协同框架，把 Grok 推理大脑与特斯拉物理躯干无缝结合
+ <a class="cite-link" href="https://www.teslarati.com/tesla-announces-massive-investment-xai-2-billion/" target="_blank" rel="noopener noreferrer">xAI $2B 投资 ↗</a>。</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE F3: 5:7 REVERSED SPLIT — AI5/AI6 SILICON + DOMESTIC LITHIUM/4680 SOVEREIGNTY -->
+ <section id="sec-f3" class="ft-split-57">
+ <div class="ft-subbox">
+ <div class="ft-subhead">
+ <div>
+ <span class="ft-kicker mono">MODULE F3A · SILICON &amp; CRITICAL MINERAL SOVEREIGNTY</span>
+ <h3 data-i18n-zh="全栈硬核自主：从 50 倍跃升 AI5 芯片到北美锂精炼闭环" data-i18n-en="Full-Stack Autonomy: 50x AI5 Silicon to Domestic Lithium Refining">全栈硬核自主：从 50 倍跃升 AI5 芯片到北美锂精炼闭环</h3>
+ </div>
+ </div>
+
+ <div class="ft-chip-matrix">
+ <div class="ft-chip-box">
+ <span class="code mono">INFERENCE · AI5 (2027) &amp; AI6 (2028)</span>
+ <h4>推理性能较 AI4 暴增 50 倍</h4>
+ <p>通过 10倍原始算力、9倍显存容量与 5倍硬件级低精度量化/Softmax加速，支撑超大参数无监督世界模型本地运行
+ <a class="cite-link" href="https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf" target="_blank" rel="noopener noreferrer">AI5 架构披露 ↗</a>。</p>
+ </div>
+ <div class="ft-chip-box">
+ <span class="code mono">TRAINING · CORTEX 1 &amp; CORTEX 2</span>
+ <h4>得州 &gt;220MW 超级训练集群</h4>
+ <p>Cortex 1 (&gt;105MW / &gt;10万卡 H100 等效) 与新建 Cortex 2 (&gt;115MW) 坐镇奥斯汀总部，专攻端到端视频与机器人策略训练。</p>
+ </div>
+ <div class="ft-chip-box">
+ <span class="code mono">CELLS · 4680 DRY-ELECTRODE &amp; LFP</span>
+ <h4>攻克干法正负极规模量产</h4>
+ <p>奥斯汀 40 GWh 4680 产线已实现正负极双干法涂布上车 Model Y，内华达 7 GWh 本土磷酸铁锂（LFP）产线同步爬坡。</p>
+ </div>
+ <div class="ft-chip-box">
+ <span class="code mono">MINERALS · 30 GWh LITHIUM REFINERY</span>
+ <h4>北美首座无酸锂辉石精炼厂</h4>
+ <p>得州科珀斯克里斯蒂氢氧化锂精炼厂与 10 GWh 正极材料厂投产，彻底规避地缘关税与关键矿产断供卡脖子风险。</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="ft-subbox">
+ <div class="ft-subhead">
+ <div>
+ <span class="ft-kicker mono">MODULE F3B · STORAGE GWH RAMP &amp; ROBOTAXI COST CURVE</span>
+ <h3 data-i18n-zh="储能装机指数级跃升 (GWh) 与 Robotaxi 单英里成本降维打击" data-i18n-en="Energy Storage GWh Trajectory &amp; Robotaxi Cost Advantage">储能装机指数级跃升 (GWh) 与 Robotaxi 单英里成本降维打击</h3>
+ </div>
+ <div class="mui-segmented" id="sChartTabs">
+ <button type="button" class="mui-seg-btn active" data-sview="gwh" data-i18n-zh="储能部署爬坡 (GWh)" data-i18n-en="Storage Deployed (GWh)">储能部署爬坡 (GWh)</button>
+ <button type="button" class="mui-seg-btn" data-sview="mile" data-i18n-zh="出行每英里成本 ($/mi)" data-i18n-en="Cost per Mile ($/mi)">出行每英里成本 ($/mi)</button>
+ </div>
+ </div>
+
+ <div class="ft-canvas-box">
+ <canvas id="siliconCanvas"></canvas>
+ </div>
+
+ <p class="ft-caption">
+ 规模定律验证：特斯拉全球储能年部署量已从 2021 年 4.0 GWh 暴涨 11.7 倍至 2025 年 <strong>46.7 GWh</strong>；随着上海与休斯顿新超级储能工厂释放产能，能源业务正迈向百 GWh 级公用事业基础设施巨头。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE F4: INTERACTIVE 2030 MULTI-TRILLION OPTIONALITY BUILDER -->
+ <section id="sec-f4" class="ft-panel">
+ <div class="ft-panel-head">
+ <div>
+ <span class="ft-kicker mono">MODULE F4 · INTERACTIVE 2030 OPTIONALITY &amp; CEO AWARD TRACKER</span>
+ <h2 class="ft-h2" data-i18n-zh="2030 迈向“多万亿物理 AI 帝国”期权组装实验室：勾选你认可的颠覆曲线" data-i18n-en="2030 Multi-Trillion Valuation Lab: Toggle Physical AI Optionality Switches">2030 迈向“多万亿物理 AI 帝国”期权组装实验室：勾选你认可的颠覆曲线</h2>
+ <p class="ft-sub" data-i18n-zh="对标 2025 CEO 绩效激励里程碑，自由勾选五大未来业务期权与 EV/EBITDA 倍数，实时测算 2030E 盈利与目标市值。" data-i18n-en="Toggle five Master Plan Part IV growth engines and valuation multiples to model Tesla's 2030E EBITDA and market cap.">对标 2025 CEO 绩效激励里程碑，自由勾选五大未来业务期权与 EV/EBITDA 倍数，实时测算 2030E 盈利与目标市值。</p>
+ </div>
+ <div class="mui-segmented" id="peTabs">
+ <button type="button" class="mui-seg-btn" data-mult="22">审慎 22x EBITDA</button>
+ <button type="button" class="mui-seg-btn active" data-mult="30">科技平台 30x EBITDA</button>
+ <button type="button" class="mui-seg-btn" data-mult="40">AI奇点 40x EBITDA</button>
+ </div>
+ </div>
+
+ <div class="ft-builder-grid">
+ <div class="ft-switch-list" id="optSwitchList">
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="fsd" checked />
+ <span><b>期权 1：全球活跃 FSD 付费订阅迈向 650 万户</b><span>由当前 174 万户扩张，按 ~$99–$129/月纯软件高毛利变现</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$9.2B 营收 · +$7.6B EBITDA</span>
+ </label>
+
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="robo" checked />
+ <span><b>期权 2：Cybercab 与共享 Robotaxi 车队达 60 万辆</b><span>单车年创收 ~$50K，特斯拉自营与平台抽成合计高毛利入账</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$32.0B 营收 · +$18.5B EBITDA</span>
+ </label>
+
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="energy" checked />
+ <span><b>期权 3：Megapack 3 / Megablock 年部署突破 160 GWh</b><span>休斯顿+上海+加州满产，叠加 Autobidder 电力交易分成</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$38.0B 营收 · +$11.8B EBITDA</span>
+ </label>
+
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="semi" checked />
+ <span><b>期权 4：Tesla Semi 干线重卡满产 + NACS 全球充电网</b><span>内华达 5 万台重卡年产达标 + 跨品牌超充桩突破 16 万根</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$21.0B 营收 · +$4.8B EBITDA</span>
+ </label>
+
+ <label class="ft-opt-row">
+ <span class="ft-opt-left">
+ <input type="checkbox" data-opt="bot" />
+ <span><b>期权 5：高赔率奇点 — Optimus 人形机器人年交付 50 万台+</b><span>工业车间搬运装配与商业租赁放量（默认未勾选，可手动开启）</span></span>
+ </span>
+ <span class="ft-opt-add mono">+$25.0B 营收 · +$11.2B EBITDA</span>
+ </label>
+ </div>
+
+ <div class="ft-val-board">
+ <div class="ft-val-kpis">
+ <div class="ft-val-kpi"><b class="mono" id="optRevOut">$242B</b><span>2030E 推演总营收</span></div>
+ <div class="ft-val-kpi"><b class="mono" id="optEbitdaOut">$67.7B</b><span>2030E 推演 Adj. EBITDA</span></div>
+ <div class="ft-val-kpi"><b class="mono" id="optEpsOut">$11.65</b><span>2030E 摊薄 Non-GAAP EPS</span></div>
+ <div class="ft-val-kpi"><b class="mono" id="optCapOut" style="color:var(--mui-success-text);">$2.09T</b><span>2030E 隐含目标总市值</span></div>
+ </div>
+
+ <div class="ft-canvas-box" style="height:155px;">
+ <canvas id="optMiniCanvas"></canvas>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- VERIFIED PRIMARY SOURCES -->
+ <section class="ft-panel" aria-label="权威公告与前瞻信源">
+ <div class="ft-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="ft-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="ft-h2" data-i18n-zh="官方秘密宏图四、芯片/机器人路线图与激励契约信源" data-i18n-en="Master Plan Part IV, Silicon/Robotics Roadmap &amp; Proxy Sources">官方秘密宏图四、芯片/机器人路线图与激励契约信源</h2>
+ </div>
+ </div>
+ <div class="ft-sources-grid">
+ <a class="ft-source-card" href="https://www.companieshistory.com/tesla-mission-statement/" target="_blank" rel="noopener noreferrer">
+ <b>Tesla 2026 Mission Statement: Amazing Abundance ↗</b>
+ <span>2026 年 1 月 21 日使命正式更新为“构建极度丰饶的世界”，全面转向 AI、自动驾驶与人形机器人平台</span>
+ </a>
+ <a class="ft-source-card" href="https://www.stocktitan.net/sec-filings/TSLA/10-k-a-tesla-inc-amends-annual-report-3615ff64a985.html" target="_blank" rel="noopener noreferrer">
+ <b>SEC Form 10-K/A: 2025 CEO Performance Award ↗</b>
+ <span>12 档市值里程碑 ($2.0T–$8.5T) 与运营指标 (2,000万辆车、1,000万 FSD、100万 Robotaxi、100万 Optimus)</span>
+ </a>
+ <a class="ft-source-card" href="https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf" target="_blank" rel="noopener noreferrer">
+ <b>Tesla Q3 2026 Update: Cybercab, Semi &amp; Cortex ↗</b>
+ <span>奥斯汀 Cybercab 商业化投放、Semi 量产启动 (500英里 / 1.7 kWh/mi)、欧洲 9 国 FSD 获批与 Cortex 超算</span>
+ </a>
+ <a class="ft-source-card" href="https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf" target="_blank" rel="noopener noreferrer">
+ <b>Tesla AI5/AI6 Silicon &amp; Dry-Electrode 4680 Roadmap ↗</b>
+ <span>官方披露 AI5 较 AI4 实现 50 倍性能跃升 (2027 量产)、北美锂精炼厂与休斯顿 Megapack 3/Megablock 规划</span>
+ </a>
+ <a class="ft-source-card" href="https://www.teslarati.com/tesla-ai-boss-reveals-how-big-optimus-is-going-to-get/" target="_blank" rel="noopener noreferrer">
+ <b>Optimus Manufacturing: Fremont 1M &amp; Giga Texas 10M ↗</b>
+ <span>Ashok Elluswamy 接掌 Optimus 后推进弗里蒙特原 S/X 车间百万台首线及得州千万台级二期超级基地</span>
+ </a>
+ <a class="ft-source-card" href="https://www.teslarati.com/tesla-announces-massive-investment-xai-2-billion/" target="_blank" rel="noopener noreferrer">
+ <b>Tesla $2B Strategic Investment &amp; Framework with xAI ↗</b>
+ <span>认购 xAI E 轮优先股并签署框架协议，推动数字大模型 Grok 与物理世界机器人/自动驾驶深度协同</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/tesla_growth_2026_2032.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

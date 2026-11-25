@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="onon" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="昂跑 On Holding AG (NYSE: ONON) 商业模式全景架构拆解：苏黎世 On Labs 材料与结构专利漏斗、66.9% 创纪录基础毛利率、零折扣全价配额纪律、LightSpray™ 3分钟一体喷织自动化、全身服饰高增飞轮与首轮 $10亿股票回购（基于 FY2025 20-F、Q3 2026 6-K 与 2026 投资者日）。" />
+ <title>昂跑 On Holding ONON 商业模式架构拆解 | 数据中心</title>
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/on_holding_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted Glass MUI AppBar -->
+ <header class="mui-appbar">
+  <div class="mui-appbar-inner">
+   <div class="appbar-left">
+    <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="展开或收起侧边栏" title="展开/收起目录导航">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+    </button>
+    <span class="brand-monogram mono">ONON</span>
+    <nav class="breadcrumbs" aria-label="面包屑导航">
+     <button type="button" class="crumb-btn hide-sm" data-scroll-top="1">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+      <span data-i18n-zh="数据中心 · ONON" data-i18n-en="Research Hub · ONON">数据中心 · ONON</span>
+     </button>
+     <span class="hide-sm" style="opacity:0.45;">/</span>
+     <span class="crumb-current" data-i18n-zh="昂跑 (On Holding) 商业模式架构拆解" data-i18n-en="On Holding AG Business Model Deconstruction">昂跑 (On Holding) 商业模式架构拆解</span>
+    </nav>
+    <span class="mui-chip mui-chip-primary mono hide-sm">NYSE: ONON</span>
+    <span class="mui-chip mui-chip-success mono hide-sm">Q3'26 GM 66.9% · CHF 3.01B</span>
+   </div>
+
+   <div class="appbar-right">
+    <div class="quick-search-wrap">
+     <span class="quick-search-icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+     </span>
+     <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索模块或财务指标…" aria-label="快速跳转章节" autocomplete="off" />
+     <span class="quick-search-kbd mono">⌘K</span>
+     <div id="quickJumpPopover" class="quick-jump-popover"></div>
+    </div>
+    <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+     <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+     <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+     <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+     </span>
+    </button>
+   </div>
+  </div>
+ </header>
+
+ <div class="layout-shell">
+  <!-- Left Sidebar -->
+  <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与专题导航">
+   <div class="sidebar-card">
+    <div class="sidebar-brand-top">
+     <span class="mui-chip mui-chip-primary mono">ONON · BUSINESS MODEL</span>
+    </div>
+    <div class="sidebar-title" data-i18n-zh="昂跑商业模式架构图谱" data-i18n-en="On Business Model Blueprint">昂跑商业模式架构图谱</div>
+    <p class="sidebar-subtitle" data-i18n-zh="苏黎世专利科技漏斗 × 66.9%奢侈品级全价毛利 × 严控配额反促销纪律 × LightSpray™机器人智造与$10亿回购" data-i18n-en="Zurich Lab Patent Funnel × 66.9% Full-Price Gross Margin × Allocation Scarcity × LightSpray™ Robotics & $1B Buyback">苏黎世专利科技漏斗 × 66.9%奢侈品级全价毛利 × 严控配额反促销纪律 × LightSpray™机器人智造与$10亿回购</p>
+    <div class="sidebar-mini-kpis">
+     <div class="sidebar-mini-row">
+      <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+      <span class="sidebar-mini-val mono" data-i18n-zh="硬核运动科技奢侈品" data-i18n-en="Performance Luxury">硬核运动科技奢侈品</span>
+     </div>
+     <div class="sidebar-mini-row">
+      <span class="sidebar-mini-label" data-i18n-zh="FY25 / Q3'26 基础毛利" data-i18n-en="FY25 / Q3'26 GM">FY25 / Q3'26 基础毛利</span>
+      <span class="sidebar-mini-val mono">62.8% → 66.9%</span>
+     </div>
+     <div class="sidebar-mini-row">
+      <span class="sidebar-mini-label" data-i18n-zh="CapEx强度 / 净现金" data-i18n-en="CapEx / Net Cash">CapEx强度 / 净现金</span>
+      <span class="sidebar-mini-val mono">2.6% · CHF 1.34B</span>
+     </div>
+    </div>
+   </div>
+
+   <nav class="sidebar-card" aria-label="ONON 四大专题网页与本页目录">
+    <div class="co-side-nav" id="companySubfolderHub" data-co-key="ONON"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+    <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+    <ul class="mui-nav-list" id="tocList">
+     <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck & Formula">双栏指挥舱与核心公式</span></a></li>
+     <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+     <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与矩阵拆解" data-i18n-en="Profit Waterfall & Matrix">利润池瀑布流与矩阵拆解</span></a></li>
+     <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="全身穿搭棘轮与单客LTV" data-i18n-en="Toe-to-Head Cohort LTV">全身穿搭棘轮与单客LTV</span></a></li>
+     <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="零负债现金牛与回购推演" data-i18n-en="Net Cash & Buyback Lab">零负债现金牛与回购推演</span></a></li>
+     <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="运动巨头对标与风险压测" data-i18n-en="Peer Matrix & Stress Audit">运动巨头对标与风险压测</span></a></li>
+    </ul>
+   </nav>
+
+   </aside>
+
+  <!-- Main Workspace -->
+  <main class="bm-workspace main-content">
+
+   <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+   <section id="mod-deck" class="bm-command-deck">
+    <div class="bm-thesis-deck">
+     <div>
+      <div class="bm-badge-row">
+       <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：瑞士生物力学专利漏斗 × 奢侈品级全价控货机器" data-i18n-en="ARCHETYPE: Swiss Biomechanical Patent Funnel × Luxury Full-Price Allocation">商业范式：瑞士生物力学专利漏斗 × 奢侈品级全价控货机器</span>
+       <span class="mui-chip mui-chip-success mono">FY2025 20-F &amp; Q3'26 6-K</span>
+       <span class="mui-chip mui-chip-violet mono">CapEx 2.6% · Cash CHF 1.34B</span>
+      </div>
+
+      <h1 class="bm-display-h1" data-i18n-zh="昂跑商业模式解构：<span class='bm-gradient-txt'>以苏黎世材料与机器人专利定锚全价溢价，靠 DTC 与全身服饰扩张高毛利复利</span>" data-i18n-en="Deconstructing On's Business Model: <span class='bm-gradient-txt'>Anchor Full-Price Desirability via Swiss Lab Patents, Compound via 66.9% GM DTC &amp; Apparel</span>">
+       昂跑商业模式解构：<span class="bm-gradient-txt">以苏黎世材料与机器人专利定锚全价溢价，靠 DTC 与全身服饰扩张高毛利复利</span>
+      </h1>
+
+      <p class="bm-lead" id="heroLeadText">
+       华尔街曾将<strong>昂跑（On Holding AG, NYSE: ONON）</strong>简单视作又一个受潮流周期摆布的新锐跑鞋品牌，但其真实经济底座实为一台<strong>“瑞士工程专利 + 奢侈品配额控价”耦合的复利引擎</strong>：第一层在苏黎世 On Labs 构建高辨识度物理专利壁垒（<strong>CloudTec® / Helion™ / Surreal™ 超临界发泡与 LightSpray™ 3分钟机械臂喷织</strong>），在全行业陷入打折清库泥潭时逆势坚守全价纪律，推动 FY2025 净营收首破 <strong>CHF 3,014.0M（+35.6% 固定汇率）</strong>
+       <a class="cite-link" href="https://investors.on-running.com/news/news-details/2026/On-Announces-Fourth-Quarter-and-Full-Year-Results-and-the-Filing-of-its-Annual-Report-on-Form-20-F-for-2025/default.aspx" target="_blank" rel="noopener noreferrer">FY25 20-F 财报 ↗</a>，并于 Q3 2026 创下单季 <strong>CHF 931.4M</strong> 与<strong>66.9% 基础毛利率（报告毛利率 72.6%）</strong>的全球运动鞋服最高纪录
+       <a class="cite-link" href="https://press.on-running.com/on-reports-results-for-the-third-quarter-and-nine-month-period-ended-september-30-2026" target="_blank" rel="noopener noreferrer">Q3'26 财报 ↗</a>；第二层借 <strong>DTC 直营占比升至 42.2%</strong> 与高毛利全身服饰（9M26 <strong>+49.3% CC</strong>）打开单客生命周期价值；第三层凭仅 <strong>2.6% 的轻资产 CapEx 强度</strong>积累 <strong>CHF 1,339.0M 零有息负债净现金</strong>，于 2026 年 9 月投资者日宣布首轮 <strong>$10亿美元股票回购授权</strong>
+       <a class="cite-link" href="https://investors.on-running.com/news/news-details/2026/On-Enters-Next-Chapter-Unveils-Strategy-to-Redefine-What-a-Sportswear-Brand-Can-Be-Alongside-2029-Financial-Targets/default.aspx" target="_blank" rel="noopener noreferrer">2026 投资者日 ↗</a>。
+      </p>
+     </div>
+
+     <!-- Interactive 3-Lens Formula Switcher -->
+     <div class="bm-lens-panel">
+      <div class="bm-lens-head">
+       <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+       <div class="mui-segmented" id="lensTabs">
+        <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 全价稀缺性溢价漏斗" data-i18n-en="① Full-Price Scarcity">① 全价稀缺性溢价漏斗</button>
+        <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② DTC×服饰毛利剪刀差" data-i18n-en="② DTC & Apparel Scissors">② DTC×服饰毛利剪刀差</button>
+        <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 轻资产现金牛与回购" data-i18n-en="③ Asset-Light & Buyback">③ 轻资产现金牛与回购</button>
+       </div>
+      </div>
+      <div class="bm-equation-bar mono" id="lensFormula">
+       核心毛利池 (66.9% 基础GM) = 旗舰定价权 ($160–$310 ASP) × 行业最高全价成交率 - 主动控货拒绝尾货倾销折损
+      </div>
+      <div class="bm-lens-body" id="lensBody">
+       正如 CFO Frank Sluis 在 Q3 2026 财报中所言：<strong>“在昂跑，高端（Premium）不是修饰词，而是财务运转机制本身。”</strong>当 2026Q2 北美运动市场陷入恶性促销战时，昂跑主动克制对批发商压货（Hold Back Sell-in），宁可牺牲短期批发冲量也绝不损伤全价体系，换来 Q3 创历史纪录的 66.9% 基础毛利率。
+      </div>
+     </div>
+    </div>
+
+    <!-- Right: Live Financial Telemetry Ledger -->
+    <aside class="bm-telemetry-ledger" aria-label="ONON 核心财务遥测账本">
+     <div class="bm-ledger-head">
+      <div class="bm-ledger-title">
+       <span class="bm-pulse-dot"></span>
+       <span data-i18n-zh="FY2025 – Q3 2026 核心遥测账本" data-i18n-en="FY2025 – Q3 2026 Financial Telemetry">FY2025 – Q3 2026 核心遥测账本</span>
+      </div>
+      <a class="cite-link mono" href="https://www.sec.gov/Archives/edgar/data/1858985/000185898526000008/onholdingag-20251231.htm" target="_blank" rel="noopener noreferrer">SEC 20-F ↗</a>
+     </div>
+
+     <div class="bm-telemetry-rows">
+      <div class="bm-tel-item">
+       <div class="bm-tel-top">
+        <span class="bm-tel-lbl" data-i18n-zh="净营收规模 (FY25 破30亿 / Q3'26 破9亿)" data-i18n-en="Net Sales (FY25 CHF 3.01B / Q3'26 Record)">净营收规模 (FY25 破30亿 / Q3'26 破9亿)</span>
+        <span class="bm-tel-val mono">CHF 3,014.0M</span>
+       </div>
+       <div class="bm-tel-bar-track">
+        <div class="bm-tel-bar-fill" style="width:57.8%;"></div>
+        <div style="width:42.2%;background:#16A34A;"></div>
+       </div>
+       <div class="bm-tel-sub mono"><span>Q3'26 CHF 931.4M (+17.8% CC)</span><span>DTC 42.2% (+25.0% YoY)</span></div>
+      </div>
+
+      <div class="bm-tel-item">
+       <div class="bm-tel-top">
+        <span class="bm-tel-lbl" data-i18n-zh="Q3'26 基础毛利率 (全球运动鞋服第一)" data-i18n-en="Q3'26 Underlying Gross Margin (#1 in Peer Set)">Q3'26 基础毛利率 (全球运动鞋服第一)</span>
+        <span class="bm-tel-val mono">66.9% <small style="font-size:0.74rem;color:var(--mui-success-text);">报告 72.6%</small></span>
+       </div>
+       <div class="bm-tel-bar-track">
+        <div class="bm-tel-bar-fill" style="width:66.9%;background:linear-gradient(90deg,#0073E6,#16A34A);"></div>
+       </div>
+       <div class="bm-tel-sub mono"><span>FY25 全年 62.8% (+220bps)</span><span>FY26E 指引上调至 ~66.0%</span></div>
+      </div>
+
+      <div class="bm-tel-item">
+       <div class="bm-tel-top">
+        <span class="bm-tel-lbl" data-i18n-zh="盈利杠杆与零有息负债现金储备" data-i18n-en="Adj. EBITDA Margin & Debt-Free Cash">盈利杠杆与零有息负债现金储备</span>
+        <span class="bm-tel-val mono">CHF 1,339.0M</span>
+       </div>
+       <div class="bm-tel-bar-track">
+        <div class="bm-tel-bar-fill" style="width:82%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+       </div>
+       <div class="bm-tel-sub mono"><span>Q3'26 基础 EBITDA率 21.9%</span><span>Q3 单季经营现金流 CHF 413.3M</span></div>
+      </div>
+
+      <div class="bm-tel-item">
+       <div class="bm-tel-top">
+        <span class="bm-tel-lbl" data-i18n-zh="2029 中期战略目标 × 首轮回购授权" data-i18n-en="2029 Investor Day Target × 1st Buyback">2029 中期战略目标 × 首轮回购授权</span>
+        <span class="bm-tel-val mono">≥CHF 5.6B / $1B</span>
+       </div>
+       <div class="bm-tel-bar-track">
+        <div class="bm-tel-bar-fill" style="width:86%;"></div>
+       </div>
+       <div class="bm-tel-sub mono"><span>2029 目标 GM ≥65% · EBITDA ≥22%</span><span>近100家直营店 → 迈向 ~180家</span></div>
+      </div>
+     </div>
+    </aside>
+   </section>
+
+   <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+   <section id="mod-pipeline" class="bm-panel">
+    <div class="bm-panel-head">
+     <div>
+      <span class="bm-kicker mono">MODULE 01 · THE ON PREMIUM PLAYBOOK PIPELINE</span>
+      <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从苏黎世实验室超临界材料到 $10亿股东回购" data-i18n-en="5-Node Value-Chain Pipeline: From Zurich Lab Superfoams to $1B Share Buyback">五阶商业价值传导沙盘：从苏黎世实验室超临界材料到 $10亿股东回购</h2>
+      <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解昂跑“Premium Playbook”五大闭环的定价权来源、成本结构与核验指标。" data-i18n-en="Click any node in the horizontal value chain to inspect pricing power, cost mechanics, and verified metrics.">点击下方任一价值链节点，拆解昂跑“Premium Playbook”五大闭环的定价权来源、成本结构与核验指标。</p>
+     </div>
+     <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+    </div>
+
+    <div class="bm-pipeline-track" id="pipelineTrack">
+     <button type="button" class="bm-node-btn active" data-node="0">
+      <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">ZURICH LAB IP</span></div>
+      <div class="bm-node-title" data-i18n-zh="瑞士生物力学与超临界发泡专利" data-i18n-en="Swiss Biomechanics & Superfoam IP">瑞士生物力学与超临界发泡专利</div>
+      <div class="bm-node-kpi mono">ASP $160–$310 高端锚定</div>
+     </button>
+
+     <button type="button" class="bm-node-btn" data-node="1">
+      <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">LIGHTSPRAY™</span></div>
+      <div class="bm-node-title" data-i18n-zh="3分钟机械臂一体喷织近岸智造" data-i18n-en="3-Min Robotic Upper Nearshoring">3分钟机械臂一体喷织近岸智造</div>
+      <div class="bm-node-kpi mono">釜山32台机械臂 · 产能30x</div>
+     </button>
+
+     <button type="button" class="bm-node-btn" data-node="2">
+      <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">PODIUM PROOF</span></div>
+      <div class="bm-node-title" data-i18n-zh="大满贯领奖台与股权共创背书" data-i18n-en="Podium Proof & Co-Entrepreneur Equity">大满贯领奖台与股权共创背书</div>
+      <div class="bm-node-kpi mono">Federer / Obiri / Mbappé</div>
+     </button>
+
+     <button type="button" class="bm-node-btn" data-node="3">
+      <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">FULL-PRICE GATE</span></div>
+      <div class="bm-node-title" data-i18n-zh="严控批发配额与高坪效直营中心" data-i18n-en="Wholesale Gatekeeping & DTC Hubs">严控批发配额与高坪效直营中心</div>
+      <div class="bm-node-kpi mono">DTC 42.2% · 基础GM 66.9%</div>
+     </button>
+
+     <button type="button" class="bm-node-btn" data-node="4">
+      <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">COMPOUNDER</span></div>
+      <div class="bm-node-title" data-i18n-zh="全身服饰扩圈与千亿瑞郎级现金流" data-i18n-en="Toe-to-Head Expansion & Buybacks">全身服饰扩圈与千亿瑞郎级现金流</div>
+      <div class="bm-node-kpi mono">9M26 服饰 +49.3% · $1B回购</div>
+     </button>
+    </div>
+
+    <div class="bm-node-inspector" id="nodeInspector">
+     <div class="bm-ins-prose">
+      <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · ON LABS ZURICH MATERIAL &amp; STRUCTURAL IP</span>
+      <h3 id="nodeTitle">苏黎世实验室（CloudTec® / CloudTec Phase™ / Surreal™）：一眼可辨的工程护城河</h3>
+      <p id="nodeDesc">
+       昂跑将苏黎世 17 层全球总部逾 30% 的空间划归生物力学、高分子化学与机器人实验室。不同于传统品牌依赖公模外观微调，昂跑通过镂空云模块物理形变专利（CloudTec®）、有限元计算机优化的多米诺缓震（CloudTec Phase™）及全新 Surreal™ 超临界发泡材料（首发于 Cloudsurfer 3），让跑者在上脚第一秒和街头十米外即可识别，直接支撑 $160–$310 的行业最高主力价格带。
+      </p>
+      <div class="bm-ins-formula mono" id="nodeFormula">
+       商业传导：专利结构视觉辨识度 + 实验室实测能量回馈 → 无需降价引流即可收获自然口碑复购（品牌全球认知度逼近 30%）
+      </div>
+     </div>
+     <div class="bm-ins-kpis" id="nodeKpis">
+      <div class="bm-ins-card"><b class="mono">&gt;30%</b><span>苏黎世总部大楼研发实验面积占比</span></div>
+      <div class="bm-ins-card"><b class="mono">$160–$310</b><span>核心跑鞋与 LightSpray 旗舰定价带</span></div>
+      <div class="bm-ins-card"><b class="mono">66.9%</b><span>Q3 2026 剔除退税后基础毛利率</span></div>
+      <div class="bm-ins-card"><b class="mono">90+ 国</b><span>全球高端专业跑店与直营网络覆盖</span></div>
+     </div>
+    </div>
+   </section>
+
+   <!-- MODULE 2: DUAL-ENGINE PROFIT POOL (7:5 SPLIT) -->
+   <section id="mod-profit-pool" class="bm-split-75">
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div>
+       <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN TRAJECTORY</span>
+       <h3 data-i18n-zh="FY2025 价值转化瀑布流与 6 年毛利率/EBITDA 扩张斜率" data-i18n-en="FY2025 P&L Waterfall & 6-Year Margin Expansion Trajectory">FY2025 价值转化瀑布流与 6 年毛利率/EBITDA 扩张斜率</h3>
+      </div>
+      <div class="mui-segmented" id="pChartTabs">
+       <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="FY25 营收→EBITDA 瀑布" data-i18n-en="FY25 P&L Waterfall">FY25 营收→EBITDA 瀑布</button>
+       <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="FY21–Q3'26 利润率跃迁" data-i18n-en="FY21–Q3'26 Margin Ramp">FY21–Q3'26 利润率跃迁</button>
+      </div>
+     </div>
+
+     <div class="bm-canvas-box">
+      <canvas id="profitCanvas"></canvas>
+     </div>
+
+     <p class="bm-chart-caption" data-i18n-zh="数据核验：FY2025 Form 20-F 与 Q3 2026 Form 6-K。FY25 净营收 CHF 3,014.0M（批发 CHF 1,753.4M + DTC CHF 1,260.5M），毛利 CHF 1,893.6M（62.8%），Adjusted EBITDA 达 CHF 567.0M（18.8%）；Q3 2026 基础毛利率进一步跃升至 66.9%，基础 EBITDA 率达 21.9%。" data-i18n-en="Verified per FY2025 Form 20-F & Q3 2026 Form 6-K: FY25 Net Sales CHF 3,014.0M (Wholesale CHF 1,753.4M + DTC CHF 1,260.5M), Gross Profit CHF 1,893.6M (62.8%), Adj. EBITDA CHF 567.0M (18.8%); Q3'26 underlying GM hit 66.9% with 21.9% Adj. EBITDA margin.">
+      数据核验：<a class="cite-link" href="https://investors.on-running.com/news/news-details/2026/On-Announces-Fourth-Quarter-and-Full-Year-Results-and-the-Filing-of-its-Annual-Report-on-Form-20-F-for-2025/default.aspx" target="_blank" rel="noopener noreferrer">FY2025 20-F ↗</a> 与
+      <a class="cite-link" href="https://press.on-running.com/on-reports-results-for-the-third-quarter-and-nine-month-period-ended-september-30-2026" target="_blank" rel="noopener noreferrer">Q3 2026 6-K ↗</a>。FY25 净营收 CHF 3,014.0M，毛利 CHF 1,893.6M（62.8%），Adjusted EBITDA 达 CHF 567.0M（18.8%）；Q3 2026 基础毛利率跃升至 <strong>66.9%</strong>，基础 EBITDA 率达 <strong>21.9%</strong>。
+     </p>
+    </div>
+
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div>
+       <span class="bm-kicker mono">MODULE 02B · FOUR GROWTH FRANCHISE TIERS</span>
+       <h3 data-i18n-zh="四大高毛利产品与定价阶梯架构（$150 – $890）" data-i18n-en="4-Tier Franchise & Price Ladder Architecture ($150–$890)">四大高毛利产品与定价阶梯架构（$150 – $890）</h3>
+      </div>
+      <div class="mui-segmented" id="tierFilter">
+       <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+       <button type="button" class="mui-seg-btn" data-tcat="perf" data-i18n-zh="专业运动" data-i18n-en="Performance">专业运动</button>
+       <button type="button" class="mui-seg-btn" data-tcat="life" data-i18n-zh="街头与服饰" data-i18n-en="Lifestyle & Apparel">街头与服饰</button>
+      </div>
+     </div>
+
+     <div class="bm-tier-list" id="tierList">
+      <div class="bm-tier-card" data-tier="perf">
+       <div class="bm-tier-top">
+        <span class="bm-tier-name" data-i18n-zh="① 核心路跑与马拉松超跑旗舰 (Run Engine)" data-i18n-en="① Core Road Running & Marathon Super-Shoes">① 核心路跑与马拉松超跑旗舰 (Run Engine)</span>
+        <span class="mui-chip mui-chip-primary mono">$160 – $310</span>
+       </div>
+       <div class="bm-tier-desc" data-i18n-zh="Cloudmonster 3 / Hyper ($190–$280 LightSpray)、Cloudsurfer 3 ($160 Surreal™发泡) 与破纽约马拉松纪录的 Cloudboom Strike LS ($310)，奠定严肃跑者专业定价锚。" data-i18n-en="Cloudmonster 3 / LightSpray Hyper ($190–$280), Cloudsurfer 3 ($160 Surreal™ foam), and NYC Marathon record-holder Cloudboom Strike LS ($310) anchor run-specialty credibility.">Cloudmonster 3 / Hyper ($190–$280 LightSpray)、Cloudsurfer 3 ($160 Surreal™发泡) 与破纽约马拉松纪录的 Cloudboom Strike LS ($310)，奠定严肃跑者专业定价锚。</div>
+      </div>
+
+      <div class="bm-tier-card" data-tier="perf">
+       <div class="bm-tier-top">
+        <span class="bm-tier-name" data-i18n-zh="② 网球王牌与足球/高尔夫新赛场 (Court & Pitch)" data-i18n-en="② THE ROGER Tennis, Football & Golf Expansion">② 网球王牌与足球/高尔夫新赛场 (Court & Pitch)</span>
+        <span class="mui-chip mui-chip-success mono">单客 LTV 排名第1</span>
+       </div>
+       <div class="bm-tier-desc" data-i18n-zh="费德勒共创 THE ROGER Pro ($200–$220) 与 Świątek/Shelton 赛场统治力；2026 签约姆巴佩与亨利切入全球最大运动品类足球，并于 2027H1 进军高尔夫。" data-i18n-en="Federer co-created THE ROGER Pro ($200–$220) + Świątek/Shelton tour dominance; 2026 football entry with Kylian Mbappé & Thierry Henry, plus H1 2027 golf launch.">费德勒共创 THE ROGER Pro ($200–$220) 与 Świątek/Shelton 赛场统治力；2026 签约姆巴佩与亨利切入全球最大运动品类足球，并于 2027H1 进军高尔夫。</div>
+      </div>
+
+      <div class="bm-tier-card" data-tier="life">
+       <div class="bm-tier-top">
+        <span class="bm-tier-name" data-i18n-zh="③ 全天候街头运动鞋与高奢联名 (Sneaker & Loewe)" data-i18n-en="③ All-Day Lifestyle Sneakers & LOEWE Collabs">③ 全天候街头运动鞋与高奢联名 (Sneaker & Loewe)</span>
+        <span class="mui-chip mui-chip-violet mono">$160 – $890</span>
+       </div>
+       <div class="bm-tier-desc" data-i18n-zh="Cloud 6 与 Cloudtilt ($170) 领跑欧美与亚太潮流渠道，叠加 On × LOEWE ($590–$890) 连续十季联名登顶 Lyst 全球热门单品，拉升品牌奢侈品势能。" data-i18n-en="Cloud 6 and Cloudtilt ($170) lead global sneaker specialty growth, while On × LOEWE ($590–$890) luxury capsules top Lyst's global index and elevate brand halo.">Cloud 6 与 Cloudtilt ($170) 领跑欧美与亚太潮流渠道，叠加 On × LOEWE ($590–$890) 连续十季联名登顶 Lyst 全球热门单品，拉升品牌奢侈品势能。</div>
+      </div>
+
+      <div class="bm-tier-card" data-tier="life">
+       <div class="bm-tier-top">
+        <span class="bm-tier-name" data-i18n-zh="④ “Win with Her” 全身服饰高增引擎 (Apparel)" data-i18n-en="④ 'Win with Her' Full-Look Apparel Engine">④ “Win with Her” 全身服饰高增引擎 (Apparel)</span>
+        <span class="mui-chip mui-chip-warning mono">9M26 +49.3% CC</span>
+       </div>
+       <div class="bm-tier-desc" data-i18n-zh="FY25 服饰营收增 +75.5% CC 至 CHF 169.9M，9M26 达 CHF 179.0M（超 60% 来自高毛利 DTC 渠道），借 Zendaya 联名吸引年轻女性与 24 岁以下新客翻倍。" data-i18n-en="FY25 apparel surged +75.5% CC to CHF 169.9M and reached CHF 179.0M in 9M26 (>60% DTC mix), powered by Zendaya capsules and doubling U24 online buyers.">FY25 服饰营收增 +75.5% CC 至 CHF 169.9M，9M26 达 CHF 179.0M（超 60% 来自高毛利 DTC 渠道），借 Zendaya 联名吸引年轻女性与 24 岁以下新客翻倍。</div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- MODULE 3: REVERSED 5:7 SPLIT — TOE-TO-HEAD RATCHET & INDUSTRY GROSS MARGIN BENCHMARK -->
+   <section id="mod-cohort" class="bm-split-57">
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div>
+       <span class="bm-kicker mono">MODULE 03A · TOE-TO-HEAD COHORT RATCHET</span>
+       <h3 data-i18n-zh="单客分层经济模型：从“一双跑鞋”到“全身运动阶层衣橱”" data-i18n-en="Customer Cohort Economics: From Single Shoe to Movement-Class Wardrobe">单客分层经济模型：从“一双跑鞋”到“全身运动阶层衣橱”</h3>
+      </div>
+     </div>
+
+     <div class="mui-segmented" id="cohortTabs">
+      <button type="button" class="mui-seg-btn" data-cohort="solo" data-i18n-zh="专业路跑首购客 (1双)" data-i18n-en="Run Entry (1 Pair)">专业路跑首购客 (1双)</button>
+      <button type="button" class="mui-seg-btn active" data-cohort="core" data-i18n-zh="跑训+通勤双栖客 (2.5件/年)" data-i18n-en="Run + Sneaker Dual">跑训+通勤双栖客 (2.5件/年)</button>
+      <button type="button" class="mui-seg-btn" data-cohort="ultra" data-i18n-zh="直营店全身穿搭客 (Toe-to-Head)" data-i18n-en="Flagship Toe-to-Head">直营店全身穿搭客 (Toe-to-Head)</button>
+     </div>
+
+     <div class="bm-cohort-metrics" id="cohortMetrics">
+      <div class="bm-cohort-stat">
+       <div class="lbl" data-i18n-zh="典型购置组合" data-i18n-en="Typical Basket">典型购置组合</div>
+       <div class="val" style="font-size:0.94rem;">Cloudsurfer 3 + Cloudtilt</div>
+       <div class="delta" data-i18n-zh="跑步机能向日常办公室自然溢出" data-i18n-en="Run performance spills into daily wear">跑步机能向日常办公室自然溢出</div>
+      </div>
+      <div class="bm-cohort-stat">
+       <div class="lbl" data-i18n-zh="全价购买比例" data-i18n-en="Full-Price Share">全价购买比例</div>
+       <div class="val mono">&gt; 90%</div>
+       <div class="delta" data-i18n-zh="行业最低促销折让率" data-i18n-en="Lowest promotional share in industry">行业最低促销折让率</div>
+      </div>
+      <div class="bm-cohort-stat">
+       <div class="lbl" data-i18n-zh="年均客单贡献 (CHF)" data-i18n-en="Annual Spend (CHF)">年均客单贡献 (CHF)</div>
+       <div class="val mono">CHF 410 / 年</div>
+       <div class="delta" data-i18n-zh="跑鞋 500–800km 物理磨损自然复购" data-i18n-en="500–800km outsole wear cycle">跑鞋 500–800km 物理磨损自然复购</div>
+      </div>
+      <div class="bm-cohort-stat">
+       <div class="lbl" data-i18n-zh="5年累计单客毛利 LTV" data-i18n-en="5Y Gross Profit LTV">5年累计单客毛利 LTV</div>
+       <div class="val mono">CHF 1,280</div>
+       <div class="delta" data-i18n-zh="约为单双批发买家的 2.5 倍" data-i18n-en="~2.5x wholesale single-pair buyer">约为单双批发买家的 2.5 倍</div>
+      </div>
+     </div>
+
+     <div class="bm-ratchet-note" id="cohortNote">
+      <strong>物理耗材复购 × 社交身份棘轮（Movement Class Identity）：</strong>跑鞋中底泡棉在 500–800 公里后存在刚性物理衰减，天然具备类似“软件订阅”的年度复购属性；而当消费者在巴黎、东京或深圳旗舰店配齐昂跑服饰（深圳等亚洲旗舰店服饰占比已突破 20%）后，单客毛利 LTV 实现翻倍跃升
+      <a class="cite-link" href="https://stockanalysis.com/stocks/onon/transcripts/748336-investor-day-2026/" target="_blank" rel="noopener noreferrer">2026 投资者日实录 ↗</a>。
+     </div>
+    </div>
+
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div>
+       <span class="bm-kicker mono">MODULE 03B · COHORT LTV &amp; PEER GROSS MARGIN LEADERSHIP</span>
+       <h3 data-i18n-zh="三类客群 5 年毛利累积曲线与全球运动巨头毛利率统治力对比" data-i18n-en="5-Year Cohort Gross Profit Curve & Global Sportswear Gross Margin Ranking">三类客群 5 年毛利累积曲线与全球运动巨头毛利率统治力对比</h3>
+      </div>
+      <div class="mui-segmented" id="cChartTabs">
+       <button type="button" class="mui-seg-btn active" data-cview="ltv" data-i18n-zh="5年单客毛利累积" data-i18n-en="5Y Cohort LTV">5年单客毛利累积</button>
+       <button type="button" class="mui-seg-btn" data-cview="share" data-i18n-zh="运动品牌毛利率榜 (%)" data-i18n-en="Peer Gross Margins (%)">运动品牌毛利率榜 (%)</button>
+      </div>
+     </div>
+
+     <div class="bm-canvas-box">
+      <canvas id="cohortCanvas"></canvas>
+     </div>
+
+     <p class="bm-chart-caption" data-i18n-zh="同业财报核验：昂跑 Q3'26 基础毛利率达 66.9%（FY25 为 62.8%），显著领跑 Birkenstock (59.1%)、Lululemon (~58.5%)、Deckers/HOKA (~57.0%) 与 Nike (FY26 42.9%)。" data-i18n-en="Verified 10-K/20-F comparison: On's Q3'26 underlying GM of 66.9% (FY25 62.8%) leads Birkenstock (59.1%), Lululemon (~58.5%), Deckers/HOKA (~57.0%), and Nike (FY26 42.9%).">
+      同业财报核验：昂跑 Q3'26 基础毛利率达 <strong>66.9%</strong>（FY25 为 62.8%），领跑 Birkenstock（59.1%）、Lululemon（~58.5%）、Deckers/HOKA（~57.0%）与 <a class="cite-link" href="https://investors.nike.com/sec-filings/all-sec-filings/content/0000320187-26-000088/0000320187-26-000088.pdf" target="_blank" rel="noopener noreferrer">Nike FY26 42.9% ↗</a>。
+     </p>
+    </div>
+   </section>
+
+   <!-- MODULE 4: 6:6 DUAL WORKBENCH — CASH FORTRESS & 5Y COMPOUNDER SIMULATOR -->
+   <section id="mod-capital" class="bm-split-66">
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div>
+       <span class="bm-kicker mono">MODULE 04A · DEBT-FREE CASH FORTRESS &amp; ASSET-LIGHT CAPEX</span>
+       <h3 data-i18n-zh="CHF 13.39亿零负债净现金跃升与 2.6% 极致轻资产强度" data-i18n-en="CHF 1,339M Debt-Free Cash Ramp & 2.6% Asset-Light CapEx">CHF 13.39亿零负债净现金跃升与 2.6% 极致轻资产强度</h3>
+      </div>
+      <div class="mui-segmented" id="kChartTabs">
+       <button type="button" class="mui-seg-btn active" data-kview="cash" data-i18n-zh="净现金储备跃升 (CHF M)" data-i18n-en="Cash Fortress (CHF M)">净现金储备跃升 (CHF M)</button>
+       <button type="button" class="mui-seg-btn" data-kview="capex" data-i18n-zh="区域增长极拆解 (FY25)" data-i18n-en="Regional Growth (FY25)">区域增长极拆解 (FY25)</button>
+      </div>
+     </div>
+
+     <div class="bm-canvas-box">
+      <canvas id="capitalCanvas"></canvas>
+     </div>
+
+     <p class="bm-chart-caption" data-i18n-zh="资产负债表纪律：昂跑无任何有息银行借款，现金储备由 FY22 的 CHF 371.0M 激增至 Q3 2026 的 CHF 1,339.0M（Q3 单季经营现金流净流入 CHF 413.3M），支撑首轮 $10亿美元（USD 1B）Class A 股票回购。" data-i18n-en="Balance-sheet discipline: Zero drawn debt; cash surged from CHF 371.0M (FY22) to CHF 1,339.0M in Q3 2026 (CHF 413.3M Q3 operating cash inflow), funding On's inaugural $1.0B share buyback.">
+      资产负债表纪律：无任何有息金融负债，现金由 FY22 的 CHF 371.0M 激增至 Q3 2026 的 <strong>CHF 1,339.0M</strong>（Q3 单季经营现金流达 CHF 413.3M），直接支撑首轮 <strong>$10亿美元 Class A 股票回购计划</strong>
+      <a class="cite-link" href="https://press.on-running.com/on-enters-next-chapter-unveils-strategy-to-redefine-what-a-sportswear-brand-can-be-alongside-2029-financial-targets" target="_blank" rel="noopener noreferrer">回购授权公告 ↗</a>。
+     </p>
+    </div>
+
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div>
+       <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 2026–2030 EARNINGS COMPOUNDER</span>
+       <h3 data-i18n-zh="FY2026–FY2030 营收、EBITDA 与每股复利情景推演器" data-i18n-en="FY2026–FY2030 Revenue, Adj. EBITDA & Buyback Simulator">FY2026–FY2030 营收、EBITDA 与每股复利情景推演器</h3>
+      </div>
+      <div class="mui-segmented" id="simPresets">
+       <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="消费逆风" data-i18n-en="Bear">消费逆风</button>
+       <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="投资者日基准" data-i18n-en="2029 Plan">投资者日基准</button>
+       <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="多品类爆发" data-i18n-en="Bull">多品类爆发</button>
+      </div>
+     </div>
+
+     <div class="bm-sim-sliders">
+      <div class="bm-slider-row">
+       <div class="bm-slider-lbl"><span data-i18n-zh="DTC 直营与全身服饰年复合增速 (DTC CAGR)" data-i18n-en="DTC & Apparel Revenue CAGR">DTC 直营与全身服饰年复合增速 (DTC CAGR)</span><b class="mono" id="lblDtcCagr">23.0%</b></div>
+       <input type="range" id="inpDtcCagr" min="10" max="32" step="0.5" value="23.0" />
+      </div>
+      <div class="bm-slider-row">
+       <div class="bm-slider-lbl"><span data-i18n-zh="精选批发渠道年复合增速 (Wholesale CAGR)" data-i18n-en="Wholesale Channel CAGR">精选批发渠道年复合增速 (Wholesale CAGR)</span><b class="mono" id="lblWhsCagr">13.5%</b></div>
+       <input type="range" id="inpWhsCagr" min="4" max="22" step="0.5" value="13.5" />
+      </div>
+      <div class="bm-slider-row">
+       <div class="bm-slider-lbl"><span data-i18n-zh="年均净回购缩股率 ($1B Buyback Retirement)" data-i18n-en="Annual Net Share Retirement">年均净回购缩股率 ($1B Buyback Retirement)</span><b class="mono" id="lblBuyRate">1.8%</b></div>
+       <input type="range" id="inpBuyRate" min="0" max="3.5" step="0.1" value="1.8" />
+      </div>
+     </div>
+
+     <div class="bm-sim-outputs">
+      <div class="bm-sim-out"><b class="mono" id="simRevOut">CHF 6.84B</b><span data-i18n-zh="FY30E 总营收" data-i18n-en="FY30E Net Sales">FY30E 总营收</span></div>
+      <div class="bm-sim-out"><b class="mono" id="simDtcOut">50.9%</b><span data-i18n-zh="FY30E DTC 占比" data-i18n-en="FY30E DTC Share">FY30E DTC 占比</span></div>
+      <div class="bm-sim-out"><b class="mono" id="simEbitdaOut">CHF 1.56B</b><span data-i18n-zh="FY30E Adj. EBITDA" data-i18n-en="FY30E Adj. EBITDA">FY30E Adj. EBITDA</span></div>
+      <div class="bm-sim-out"><b class="mono" id="simCagrOut">+22.4%</b><span data-i18n-zh="5年每股EBITDA增速" data-i18n-en="5Y EBITDA/Sh CAGR">5年每股EBITDA增速</span></div>
+     </div>
+
+     <div class="bm-canvas-box" style="height:175px;">
+      <canvas id="simMiniCanvas"></canvas>
+     </div>
+    </div>
+   </section>
+
+   <!-- MODULE 5: PEER ARCHETYPE MATRIX & STRESS AUDIT -->
+   <section id="mod-matrix" class="bm-panel">
+    <div class="bm-panel-head">
+     <div>
+      <span class="bm-kicker mono">MODULE 05 · GLOBAL SPORTSWEAR BENCHMARKING &amp; STRESS AUDIT</span>
+      <h2 class="bm-h2" data-i18n-zh="全球高端运动与鞋履巨头商业模型对标及三大风险压测" data-i18n-en="Global Sportswear Business Model Matrix & Three-Factor Stress Audit">全球高端运动与鞋履巨头商业模型对标及三大风险压测</h2>
+      <p class="bm-head-desc" data-i18n-zh="横向对比五大标杆公司的毛利率、渠道结构与制造壁垒，并审视昂跑面临的潮流稀释、汇率关税与扩圈挑战。" data-i18n-en="Benchmarking On against athletic & footwear peers across gross margin, channel mix, and key risk vectors.">横向对比五大标杆公司的毛利率、渠道结构与制造壁垒，并审视昂跑面临的潮流稀释、汇率关税与扩圈挑战。</p>
+     </div>
+     <div class="mui-segmented" id="peerFilter">
+      <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (5)" data-i18n-en="All Peers (5)">全部标杆 (5)</button>
+      <button type="button" class="mui-seg-btn" data-pcat="prem" data-i18n-zh="高毛利稀缺派" data-i18n-en="High-GM Premium">高毛利稀缺派</button>
+      <button type="button" class="mui-seg-btn" data-pcat="scale" data-i18n-zh="百亿规模巨头" data-i18n-en="Mega-Scale">百亿规模巨头</button>
+     </div>
+    </div>
+
+    <div class="bm-table-wrap">
+     <table class="bm-table" id="peerTable">
+      <thead>
+       <tr>
+        <th data-i18n-zh="公司与代码" data-i18n-en="Company & Ticker">公司与代码</th>
+        <th data-i18n-zh="核心商业模式原型" data-i18n-en="Business Model Archetype">核心商业模式原型</th>
+        <th data-i18n-zh="毛利率基准" data-i18n-en="Gross Margin">毛利率基准</th>
+        <th data-i18n-zh="渠道与资产特征" data-i18n-en="Channel & Asset Profile">渠道与资产特征</th>
+        <th data-i18n-zh="营收体量与增速" data-i18n-en="Scale & Growth">营收体量与增速</th>
+        <th data-i18n-zh="核心护城河与潜在脆弱点" data-i18n-en="Moat & Key Vulnerability">核心护城河与潜在脆弱点</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="is-onon" data-row-cat="prem">
+        <td><strong>On Holding (ONON)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+        <td>瑞士生物力学专利 + 全价控货 + LightSpray近岸智造</td>
+        <td class="mono" style="color:var(--mui-success-text);">66.9% (Q3'26基础) / 62.8% (FY25)</td>
+        <td class="mono">DTC 42.2% · CapEx 2.6% · 零负债</td>
+        <td class="mono">CHF 3.01B (+35.6% CC)</td>
+        <td>全价纪律行业第一；需防范大众化扩圈稀释稀缺感及瑞郎升值汇损</td>
+       </tr>
+       <tr data-row-cat="prem">
+        <td><strong>Deckers Brands (DECK)</strong></td>
+        <td>HOKA 厚底缓震跑鞋 + UGG 高毛利双品牌矩阵</td>
+        <td class="mono">~57.0% (Q4'26 57.6%)</td>
+        <td class="mono">全渠道控价 + 80% FCF 回购</td>
+        <td class="mono">$5.47B (FY26, +10%)</td>
+        <td>HOKA ($2.59B) 与昂跑正面交锋；美国本土增速趋缓依赖国际接力</td>
+       </tr>
+       <tr data-row-cat="prem scale">
+        <td><strong>Lululemon (LULU)</strong></td>
+        <td>近 100% 自营门店/电商垂直零售 + 瑜伽社群运动衣橱</td>
+        <td class="mono">~58.5% – 59.2%</td>
+        <td class="mono">纯 DTC 主导 · 767+ 自营门店</td>
+        <td class="mono">$11.10B (FY25)</td>
+        <td>女性服饰心智极强；北美成熟市场面临 Alo / Vuori 及昂跑服饰分流</td>
+       </tr>
+       <tr data-row-cat="prem">
+        <td><strong>Birkenstock (BIRK)</strong></td>
+        <td>250年德国软木鞋床解剖学垄断 + 主动制造稀缺配额</td>
+        <td class="mono">59.1% (Adj. EBITDA 31.8%)</td>
+        <td class="mono">100% 德国自产鞋床 · B2B 62%</td>
+        <td class="mono">€2.10B (+18% CC)</td>
+        <td>与昂跑同守 >90% 全价率铁律；重资产自建欧洲工厂但零潮流淘汰风险</td>
+       </tr>
+       <tr data-row-cat="scale">
+        <td><strong>NIKE, Inc. (NKE)</strong></td>
+        <td>全球体育超级巨星代言矩阵 + 超大规模全品类分销网</td>
+        <td class="mono" style="color:var(--mui-warning-text);">42.9% (FY26)</td>
+        <td class="mono">73,000名员工 · 批发修复转型期</td>
+        <td class="mono">$46.3B (FY26)</td>
+        <td>全球体育心智霸主；经典复古鞋款过度铺货引发促销折让压制毛利</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+
+    <div class="bm-stress-grid">
+     <div class="bm-stress-card">
+      <div>
+       <span class="mui-chip mui-chip-error mono">STRESS 01 · SCARCITY VS SCALE</span>
+       <h4 data-i18n-zh="大众化破圈后的“审美疲劳（Fad Risk）”如何化解？" data-i18n-en="Mitigating 'Fad Risk' While Scaling Beyond CHF 5.6B">大众化破圈后的“审美疲劳（Fad Risk）”如何化解？</h4>
+       <p>空头（如部分卖方研报）担忧中产街鞋普及后丧失新鲜感。昂跑的制度防火墙是：<strong>严禁向折扣奥莱倾销冲量</strong>（如 2026Q2 主动压降美国批发发货保库存健康），同时用真实马拉松冠军记录（Obiri / Cloudsurfer 3）与 LOEWE 高奢联名一头锚定专业技术、一头拉高审美天花板
+        <a class="cite-link" href="https://stockanalysis.com/stocks/onon/transcripts/748336-investor-day-2026/" target="_blank" rel="noopener noreferrer">控货策略披露 ↗</a>。</p>
+      </div>
+      <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> <span data-i18n-zh="纳入季度跟踪：北美专业跑店复购率与全价成交占比" data-i18n-en="Track quarterly: US run-specialty sell-through & full-price mix">纳入季度跟踪：北美专业跑店复购率与全价成交占比</span></label>
+     </div>
+
+     <div class="bm-stress-card">
+      <div>
+       <span class="mui-chip mui-chip-warning mono">STRESS 02 · FX &amp; TARIFF EXPOSURE</span>
+       <h4 data-i18n-zh="强势瑞士法郎非现金汇兑损益与跨境关税扰动" data-i18n-en="Strong CHF FX Translation & US Import Tariff Volatility">强势瑞士法郎非现金汇兑损益与跨境关税扰动</h4>
+       <p>昂跑以瑞郎（CHF）编报财报，而美洲与亚太贡献近 75% 收入：FY25 营业利润大增 +78.2% 至 CHF 377.0M，但受 CHF -173.2M 账面汇兑损失拖累导致表观净利波动；同时越南代工面临关税政策变数（Q3'26 获 CHF 52.6M 美国关税退税）。公司正通过高端提价权与韩国/欧美近岸自动化产线分散单一产地风险
+        <a class="cite-link" href="https://www.sgieurope.com/manufacture/on-opens-korea-robot-factory-to-cut-supply-chain-risk/119753.article" target="_blank" rel="noopener noreferrer">近岸防关税布局 ↗</a>。</p>
+      </div>
+      <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> <span data-i18n-zh="纳入季度跟踪：剔除退税后基础毛利率能否稳居 65%+" data-i18n-en="Track quarterly: Underlying GM sustained ≥65.0%">纳入季度跟踪：剔除退税后基础毛利率能否稳居 65%+</span></label>
+     </div>
+
+     <div class="bm-stress-card">
+      <div>
+       <span class="mui-chip mui-chip-violet mono">STRESS 03 · NEW SPORTS &amp; APPAREL ROI</span>
+       <h4 data-i18n-zh="进军足球/高尔夫及加速开店对 SG&amp;A 费率的考验" data-i18n-en="SG&A Discipline Amid Football, Golf & 180-Store Rollout">进军足球/高尔夫及加速开店对 SG&amp;A 费率的考验</h4>
+       <p>FY25 昂跑 SG&amp;A 占营收 50.3%（CHF 1,516.6M），随着直营门店从近 100 家迈向 ~180 家并签约姆巴佩切入足球，前期营销与租赁投入可观。管理层承诺在维持 ≥65% 毛利率基础上严控后台费用增速低于营收增速，兑现 2029 年 Adjusted EBITDA 利润率突破 22%+ 目标。</p>
+      </div>
+      <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> <span data-i18n-zh="纳入季度跟踪：SG&A 费率向 45% 以下收敛进度" data-i18n-en="Track quarterly: SG&A operating leverage trajectory">纳入季度跟踪：SG&amp;A 费率向 45% 以下收敛进度</span></label>
+     </div>
+    </div>
+   </section>
+
+   <!-- PRIMARY SOURCES -->
+   <section class="bm-panel" aria-label="权威财报与SEC监管信源">
+    <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+     <div>
+      <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+      <h2 class="bm-h2" data-i18n-zh="权威财报、SEC 20-F/6-K 监管文件与投资者日信源" data-i18n-en="Verified SEC 20-F/6-K Filings & Investor Day Primary Sources">权威财报、SEC 20-F/6-K 监管文件与投资者日信源</h2>
+     </div>
+    </div>
+    <div class="bm-sources-grid">
+     <a class="bm-source-item" href="https://investors.on-running.com/news/news-details/2026/On-Announces-Fourth-Quarter-and-Full-Year-Results-and-the-Filing-of-its-Annual-Report-on-Form-20-F-for-2025/default.aspx" target="_blank" rel="noopener noreferrer">
+      <b>On FY2025 Full-Year Results &amp; Form 20-F Release ↗</b>
+      <span>官方披露 FY25 净营收 CHF 3,014.0M (+35.6% CC)、毛利率 62.8%、Adj. EBITDA CHF 567.0M (18.8%)</span>
+     </a>
+     <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1858985/000185898526000008/onholdingag-20251231.htm" target="_blank" rel="noopener noreferrer">
+      <b>On Holding AG SEC Form 20-F Annual Report (FY2025) ↗</b>
+      <span>经审计 IFRS 合并利润表、资产负债表、现金流量表、3,963 名员工与 Class A/B 股本披露</span>
+     </a>
+     <a class="bm-source-item" href="https://press.on-running.com/on-reports-results-for-the-third-quarter-and-nine-month-period-ended-september-30-2026" target="_blank" rel="noopener noreferrer">
+      <b>On Q3 &amp; 9M 2026 Official Financial Release (Nov 10, 2026) ↗</b>
+      <span>单季营收首破 CHF 931.4M、基础毛利率创 66.9% 新高（报告 72.6%）、零负债现金 CHF 1,339.0M</span>
+     </a>
+     <a class="bm-source-item" href="https://investors.on-running.com/news/news-details/2026/On-Enters-Next-Chapter-Unveils-Strategy-to-Redefine-What-a-Sportswear-Brand-Can-Be-Alongside-2029-Financial-Targets/default.aspx" target="_blank" rel="noopener noreferrer">
+      <b>On 2026 Investor Day: Premium Playbook &amp; 2029 Targets ↗</b>
+      <span>2029 目标净营收 ≥CHF 5.6B、毛利率 ≥65%、Adj. EBITDA ≥22% 与首轮 $10亿美元回购授权</span>
+     </a>
+     <a class="bm-source-item" href="https://www.sgieurope.com/manufacture/on-opens-korea-robot-factory-to-cut-supply-chain-risk/119753.article" target="_blank" rel="noopener noreferrer">
+      <b>LightSpray™ Busan Automated Robot Facility Analysis ↗</b>
+      <span>韩国釜山 32 台全自动喷织机械臂投产，推动 2026 年全球 LightSpray 产能跃升 30 倍</span>
+     </a>
+     <a class="bm-source-item" href="https://ir.deckers.com/news-events/press-releases/detail/656/deckers-brands-reports-fourth-quarter-and-full-fiscal-year-2026-financial-results" target="_blank" rel="noopener noreferrer">
+      <b>Deckers Brands FY2026 &amp; Nike FY2026 Peer Filings ↗</b>
+      <span>HOKA/UGG 母公司 Deckers ($5.47B) 与 Nike 10-K (42.9% GM) 横向毛利率及营运对标基准</span>
+     </a>
+    </div>
+   </section>
+
+  </main>
+ </div>
+
+ 
+<script src="../../_shared/on_holding_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

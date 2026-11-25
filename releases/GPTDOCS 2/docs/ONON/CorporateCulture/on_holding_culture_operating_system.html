@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-report-family="onon" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="昂跑 On Holding AG (NYSE: ONON) 企业文化与组织操作系统图谱：椋鸟群智(Starling Murmuration)自治拓扑 vs 传统品类诸侯割据、四大文化底层代码、Culture of Yes 领导力罗盘、三代合伙人治理演进与渠道稀缺性熵增模拟器。" />
+ <title>昂跑 On Holding ONON 企业文化与组织操作系统 | 数据中心</title>
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/on_holding_culture_operating_system.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted AppBar -->
+ <header class="mui-appbar">
+  <div class="mui-appbar-inner">
+   <div class="appbar-left">
+    <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+    </button>
+    <span class="brand-monogram mono">ONON</span>
+    <nav class="breadcrumbs" aria-label="面包屑导航">
+     <button type="button" class="crumb-btn hide-sm" data-scroll-top="1">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+      <span data-i18n-zh="数据中心 · ONON" data-i18n-en="Research Hub · ONON">数据中心 · ONON</span>
+     </button>
+     <span class="hide-sm" style="opacity:0.45;">/</span>
+     <span class="crumb-current" data-i18n-zh="昂跑企业文化与组织操作系统图谱" data-i18n-en="On Organizational OS & Culture Blueprint">昂跑企业文化与组织操作系统图谱</span>
+    </nav>
+    <span class="mui-chip mui-chip-primary mono hide-sm">MURMURATION OS</span>
+    <span class="mui-chip mui-chip-violet mono hide-sm">IMD &amp; THINKERS50</span>
+   </div>
+
+   <div class="appbar-right">
+    <div class="quick-search-wrap">
+     <span class="quick-search-icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+     </span>
+     <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索文化法则或高管…" aria-label="快速跳转模块" autocomplete="off" />
+     <span class="quick-search-kbd mono">⌘K</span>
+     <div id="quickJumpPopover" class="quick-jump-popover"></div>
+    </div>
+    <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+     <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+     <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+     <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+     </span>
+    </button>
+   </div>
+  </div>
+ </header>
+
+ <div class="layout-shell">
+  <!-- Left Sidebar -->
+  <aside id="muiSidebar" class="mui-sidebar" aria-label="组织文化模块与站点导航">
+   <div class="sidebar-card">
+    <div class="sidebar-brand-top">
+     <span class="mui-chip mui-chip-violet mono">ONON · ORG OPERATING SYSTEM</span>
+    </div>
+    <div class="sidebar-title" data-i18n-zh="昂跑组织操作系统图谱" data-i18n-en="On Organizational OS">昂跑组织操作系统图谱</div>
+    <p class="sidebar-subtitle" data-i18n-zh="椋鸟群智协同 × 双创始人联席统帅 × 单一COO全链路拉通 × 全价北极星纪律与费德勒共创机制" data-i18n-en="Starling Murmuration × Founder Co-CEOs × End-to-End COO Spine × Full-Price Northstar">椋鸟群智协同 × 双创始人联席统帅 × 单一COO全链路拉通 × 全价北极星纪律与费德勒共创机制</p>
+    <div class="sidebar-mini-kpis">
+     <div class="sidebar-mini-row">
+      <span class="sidebar-mini-label" data-i18n-zh="组织隐喻" data-i18n-en="Org Metaphor">组织隐喻</span>
+      <span class="sidebar-mini-val mono" data-i18n-zh="椋鸟群智 · 单一北极星" data-i18n-en="Starling Murmuration">椋鸟群智 · 单一北极星</span>
+     </div>
+     <div class="sidebar-mini-row">
+      <span class="sidebar-mini-label" data-i18n-zh="FY25 编制 / 裁员记录" data-i18n-en="FY25 FTEs / Layoffs">FY25 编制 / 裁员记录</span>
+      <span class="sidebar-mini-val mono">3,963人 · 0 裁员</span>
+     </div>
+     <div class="sidebar-mini-row">
+      <span class="sidebar-mini-label" data-i18n-zh="投票权护盾" data-i18n-en="Voting Shield">投票权护盾</span>
+      <span class="sidebar-mini-val mono">Class B 10x (~52%)</span>
+     </div>
+    </div>
+   </div>
+
+   <nav class="sidebar-card" aria-label="ONON 四大专题网页与本页目录">
+    <div class="co-side-nav" id="companySubfolderHub" data-co-key="ONON"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+    <div class="nav-section-label" data-i18n-zh="组织架构图谱 (C0–C4)" data-i18n-en="Culture OS Modules (C0–C4)">组织架构图谱 (C0–C4)</div>
+    <ul class="mui-nav-list">
+     <li><a href="#sec-c0" class="mui-nav-link active"><span class="nav-idx mono">C0</span><span data-i18n-zh="椋鸟群智拓扑与控价悖论" data-i18n-en="Murmuration Topology">椋鸟群智拓扑与控价悖论</span></a></li>
+     <li><a href="#sec-c1" class="mui-nav-link"><span class="nav-idx mono">C1</span><span data-i18n-zh="四大文化代码与领导力罗盘" data-i18n-en="4 Cultural Codes & Dial">四大文化代码与领导力罗盘</span></a></li>
+     <li><a href="#sec-c2" class="mui-nav-link"><span class="nav-idx mono">C2</span><span data-i18n-zh="三阶段治理演进时间轴" data-i18n-en="3-Era Governance Timeline">三阶段治理演进时间轴</span></a></li>
+     <li><a href="#sec-c3" class="mui-nav-link"><span class="nav-idx mono">C3</span><span data-i18n-zh="巨头组织基因光谱对比" data-i18n-en="Sportswear Org Genome">巨头组织基因光谱对比</span></a></li>
+     <li><a href="#sec-c4" class="mui-nav-link"><span class="nav-idx mono">C4</span><span data-i18n-zh="品牌稀释模拟器与六律体检" data-i18n-en="Dilution Stress & 6-Law Audit">品牌稀释模拟器与六律体检</span></a></li>
+    </ul>
+   </nav>
+
+   </aside>
+
+  <!-- Main Organizational OS Workspace -->
+  <main class="cc-workspace main-content">
+
+   <!-- MODULE C0: TOPOLOGY HERO + INTERACTIVE MURMURATION VS SILOED ORG SWITCHER -->
+   <section id="sec-c0" class="cc-hero-shell">
+    <div class="cc-hero-top">
+     <div>
+      <div class="cc-badge-row">
+       <span class="mui-chip mui-chip-primary mono" data-i18n-zh="椋鸟群智自治 (Starling Murmuration OS)" data-i18n-en="STARLING MURMURATION OS">椋鸟群智自治 (Starling Murmuration OS)</span>
+       <span class="mui-chip mui-chip-success mono">营收较 IPO 扩张逾 4 倍</span>
+       <span class="mui-chip mui-chip-violet mono">双创始人 Co-CEO + 单一 COO</span>
+      </div>
+
+      <h1 class="cc-h1" data-i18n-zh="昂跑企业文化与组织操作系统：<span class='cc-grad'>为什么一家似“无领头飞鸟群”的高自治瑞士公司，却能守住全球最严苛的全价铁律？</span>" data-i18n-en="On's Cultural Operating System: <span class='cc-grad'>How a 'Starling Murmuration' Organization Enforces Sportswear's Strictest Full-Price Discipline</span>">
+       昂跑企业文化与组织操作系统：<span class="cc-grad">为什么一家似“无领头飞鸟群”的高自治瑞士公司，却能守住全球最严苛的全价铁律？</span>
+      </h1>
+
+      <p class="cc-lead" id="c0Lead">
+       管理学界曾长期好奇：昂跑如何从苏黎世教区活动中心里的 <strong>15 人小团队</strong>，在无任何大规模裁员重组的前提下扩张至近 <strong>4,000 名员工</strong>与 <strong>CHF 30.1亿+</strong> 年营收，同时创下 <strong>66.9% 的行业最高基础毛利率</strong>？前高管团队在 Thinkers50 访谈中给出了核心隐喻——<strong>“椋鸟群（Murmuration of Starlings）”</strong>
+       <a class="cite-link" href="https://thinkers50.com/blog/guided-by-culture-to-navigate-rapid-growth/" target="_blank" rel="noopener noreferrer">Thinkers50 椋鸟隐喻 ↗</a>：
+       不同于传统运动大厂层层审批的金字塔指令，昂跑通过<strong>五大精神（Five Spirits）</strong>让每个跨学科小组紧盯身边最紧密的 7 个协作节点敏捷转向；而在顶层，2026 年 5 月<strong>联合创始人 David Allemann 与 Caspar Coppetti 重任联席 CEO</strong>，并由前戴森 COO <strong>Scott Maguire 出任总裁兼 COO 统管从实验室研发、LightSpray 智造到全球商业运营的唯一主干网</strong>
+       <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1858985/000095010326004606/dp244091_ex9901.htm" target="_blank" rel="noopener noreferrer">SEC 2026 治理公报 ↗</a>，从组织根源上消灭了传统品牌“区域销售总监为冲季度奖金向奥莱倾销尾货”的毒瘤。
+      </p>
+
+      <div class="cc-quote-ribbon" id="c0Quote">
+       <strong>核心文化宣言（Caspar Coppetti · 2026 投资者日）：</strong>“这是一套敢于说‘Yes’的文化（Culture of Yes）——可能性永远压倒约束。在昂跑，失败不是尝试后未达预期，真正的失败是从未起脚射门。当最大胆疯狂的创意出现时，Olivier、David 和我依然站在第一线说 Yes。”
+       <a class="cite-link" href="https://stockanalysis.com/stocks/onon/transcripts/748336-investor-day-2026/" target="_blank" rel="noopener noreferrer">2026 投资者日演讲 ↗</a>
+      </div>
+     </div>
+
+     <!-- Right: Interactive Org Topology Switcher -->
+     <div class="cc-topology-box">
+      <div class="cc-topo-head">
+       <strong style="font-size:0.84rem;" data-i18n-zh="组织权力拓扑对比沙盘" data-i18n-en="Org Power Topology Sandbox">组织权力拓扑对比沙盘</strong>
+       <div class="mui-segmented" id="topoSwitch">
+        <button type="button" class="mui-seg-btn active" data-topo="onon" data-i18n-zh="昂跑：联席创始人 × 全链路一统" data-i18n-en="On: Co-CEOs × Unified Spine">昂跑：联席创始人 × 全链路一统</button>
+        <button type="button" class="mui-seg-btn" data-topo="legacy" data-i18n-zh="传统运动大厂：品类诸侯压货" data-i18n-en="Legacy: Category Silos & Stuffing">传统运动大厂：品类诸侯压货</button>
+       </div>
+      </div>
+
+      <div class="cc-topo-stage" id="topoStage"></div>
+     </div>
+    </div>
+   </section>
+
+   <!-- MODULE C1: 2x2 CULTURAL OPERATING CODE BENTO + LEADERSHIP DIAL -->
+   <section id="sec-c1" class="cc-panel">
+    <div class="cc-panel-head">
+     <div>
+      <span class="cc-kicker mono">MODULE C1 · FOUR CULTURAL OPERATING CODES &amp; LEADERSHIP DIAL</span>
+      <h2 class="cc-h2" data-i18n-zh="四大文化底层代码与“大胆说 Yes × 全价铁律”管理精力罗盘" data-i18n-en="4 Cultural Operating Codes & 'Culture of Yes × Full-Price' Leadership Dial">四大文化底层代码与“大胆说 Yes × 全价铁律”管理精力罗盘</h2>
+      <p class="cc-sub" data-i18n-zh="点击左侧任一文化象限，查看昂跑内部如何同时兼容“实验室疯狂试错”与“商业端极度克制”。" data-i18n-en="Click any quadrant to see how On balances wild R&D experimentation with strict commercial restraint.">点击左侧任一文化象限，查看昂跑内部如何同时兼容“实验室疯狂试错”与“商业端极度克制”。</p>
+     </div>
+     <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击象限切换解析 (Q1–Q4)" data-i18n-en="Interactive 2×2 Matrix">点击象限切换解析 (Q1–Q4)</span>
+    </div>
+
+    <div class="cc-code-layout">
+     <div class="cc-quad-grid" id="quadGrid">
+      <button type="button" class="cc-quad-card active" data-quad="0">
+       <div>
+        <div class="cc-quad-top"><span class="cc-quad-num mono">Q1</span><span class="mui-chip mui-chip-primary mono">CULTURE OF YES</span></div>
+        <h3 data-i18n-zh="怪兽原型狂想 &amp; 实验室对大胆创意说 Yes" data-i18n-en="Monster Prototypes & Saying Yes to Bold R&D">怪兽原型狂想 &amp; 实验室对大胆创意说 Yes</h3>
+        <p data-i18n-zh="对颠覆性材料与制造构想零官僚审批：无论是把花园水管粘上鞋底，还是用机械臂 3 分钟喷织无鞋带跑鞋，三位创始人直接为激进原型亮绿灯。" data-i18n-en="Zero bureaucratic gatekeeping on radical R&D: from garden-hose soles to 3-minute robotic sprayed uppers, founders back bold prototypes directly.">对颠覆性材料与制造构想零官僚审批：无论是把花园水管粘上鞋底，还是用机械臂 3 分钟喷织无鞋带跑鞋，三位创始人直接为激进原型亮绿灯。</p>
+       </div>
+       <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表产物：CloudTec® · Cloudmonster · LightSpray™ →</span>
+      </button>
+
+      <button type="button" class="cc-quad-card" data-quad="1">
+       <div>
+        <div class="cc-quad-top"><span class="cc-quad-num mono">Q2</span><span class="mui-chip mui-chip-success mono">EARNED LEADERSHIP</span></div>
+        <h3 data-i18n-zh="椋鸟群智协同 &amp; 领导权靠贡献赢得" data-i18n-en="Starling Murmuration & Earned Leadership">椋鸟群智协同 &amp; 领导权靠贡献赢得</h3>
+        <p data-i18n-zh="IMD 商学院调研指出：昂跑员工不等待上级精细拆解 KPI，而是在跨职能小队中主动补位，“谁对项目贡献最大，谁就自然成为领队”。" data-i18n-en="Per IMD Business School, Team Members don't wait for top-down micromanagement—those contributing most naturally lead the pod.">IMD 商学院调研指出：昂跑员工不等待上级精细拆解 KPI，而是在跨职能小队中主动补位，“谁对项目贡献最大，谁就自然成为领队”。</p>
+       </div>
+       <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表案例：Rebecca Cai 凭亚太 6x 战绩晋升首任 CGMO →</span>
+      </button>
+
+      <button type="button" class="cc-quad-card" data-quad="2">
+       <div>
+        <div class="cc-quad-top"><span class="cc-quad-num mono">Q3</span><span class="mui-chip mui-chip-warning mono">FULL-PRICE NORTHSTAR</span></div>
+        <h3 data-i18n-zh="对实验室说 Yes，对商业打折冲量坚决说 No" data-i18n-en="Yes in the Lab, Ruthless No to Discount Volume">对实验室说 Yes，对商业打折冲量坚决说 No</h3>
+        <p data-i18n-zh="“绝不以伤害品牌为代价换取销量（No volume at the expense of the brand）。”2026Q2 主动压降美国批发发货，换取行业最高 ASP 与最低促销占比。" data-i18n-en="'No volume at the expense of the brand.' Holding back Q2'26 US wholesale shipments secured the highest ASP and lowest markdown rate.">“绝不以伤害品牌为代价换取销量（No volume at the expense of the brand）。”2026Q2 主动压降美国批发发货，换取行业最高 ASP 与最低促销占比。</p>
+       </div>
+       <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">财务映射：Q3 2026 基础毛利率冲上 66.9% 历史极值 →</span>
+      </button>
+
+      <button type="button" class="cc-quad-card" data-quad="3">
+       <div>
+        <div class="cc-quad-top"><span class="cc-quad-num mono">Q4</span><span class="mui-chip mui-chip-violet mono">CO-ENTREPRENEURS</span></div>
+        <h3 data-i18n-zh="共同创业者股权生态 &amp; 循环材料硬约束" data-i18n-en="Co-Entrepreneur Equity & Circular Constraints">共同创业者股权生态 &amp; 循环材料硬约束</h3>
+        <p data-i18n-zh="把费德勒、姆巴佩变成长期利益一致的共创股东；同时用 Survivor 精神限定环保材料目录，倒逼无胶组装与碳捕获泡棉落地。" data-i18n-en="Aligns Federer and Mbappé via equity partnerships while Survivor Spirit material limits force glue-free and carbon-captured breakthroughs.">把费德勒、姆巴佩变成长期利益一致的共创股东；同时用 Survivor 精神限定环保材料目录，倒逼无胶组装与碳捕获泡棉落地。</p>
+       </div>
+       <span class="mono" style="font-size:0.72rem;color:var(--mui-primary-lighter);">代表成果：THE ROGER 61% CAGR · 釜山无胶喷织厂 →</span>
+      </button>
+     </div>
+
+     <!-- Right: Dynamic Leadership Bandwidth Dial -->
+     <div class="cc-dial-card" id="dialInspector">
+      <div>
+       <span class="mui-chip mui-chip-violet mono" id="dialBadge">ON LABS · DUAL-SPEED LEADERSHIP DIAL</span>
+       <h3 id="dialTitle" style="font-size:1.03rem;font-weight:800;margin:8px 0 6px;">双速管理艺术：前端研发极度开放 × 后端渠道极度克制</h3>
+       <p id="dialDesc" style="font-size:0.81rem;color:var(--text-secondary);line-height:1.65;">
+        昂跑之所以既不像初创潮牌那样昙花一现，也不像老牌巨头那样臃肿失速，秘诀在于双创始人与 COO 对核心带宽的精确切分：把最大权重投向颠覆式原型直通拍板与全价渠道把关。
+       </p>
+      </div>
+
+      <div class="cc-alloc-bars">
+       <div class="cc-alloc-row">
+        <div class="cc-alloc-lbl"><span data-i18n-zh="Bold R&D（颠覆性材料与机械臂原型直通拍板）" data-i18n-en="Bold R&D (Direct Greenlighting of Frontier Prototypes)">Bold R&amp;D（颠覆性材料与机械臂原型直通拍板）</span><span class="mono" id="pctOwn">42%</span></div>
+        <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barOwn" style="width:42%;background:#0073E6;"></div></div>
+       </div>
+       <div class="cc-alloc-row">
+        <div class="cc-alloc-lbl"><span data-i18n-zh="Brand Gatekeeping（批发门禁与全价配额纪律审定）" data-i18n-en="Brand Gatekeeping (Wholesale Allocation & Price Integrity)">Brand Gatekeeping（批发门禁与全价配额纪律审定）</span><span class="mono" id="pctLearn">28%</span></div>
+        <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barLearn" style="width:28%;background:#7C3AED;"></div></div>
+       </div>
+       <div class="cc-alloc-row">
+        <div class="cc-alloc-lbl"><span data-i18n-zh="Talent & Spirits（全球近4,000人五大精神文化对齐）" data-i18n-en="Talent & Spirits (Aligning ~4,000 Team Members)">Talent &amp; Spirits（全球近4,000人五大精神文化对齐）</span><span class="mono" id="pctTeach">18%</span></div>
+        <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barTeach" style="width:18%;background:#16A34A;"></div></div>
+       </div>
+       <div class="cc-alloc-row">
+        <div class="cc-alloc-lbl"><span data-i18n-zh="Local Pod Autonomy（区域跑团活动与门店自主运营）" data-i18n-en="Local Pod Autonomy (Regional Run Clubs & Store Ops)">Local Pod Autonomy（区域跑团活动与门店自主运营）</span><span class="mono" id="pctDel">12%</span></div>
+        <div class="cc-alloc-track"><div class="cc-alloc-fill" id="barDel" style="width:12%;background:#D97706;"></div></div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- MODULE C2: 3-ERA GOVERNANCE TIMELINE SCRUBBER -->
+   <section id="sec-c2" class="cc-panel">
+    <div class="cc-panel-head">
+     <div>
+      <span class="cc-kicker mono">MODULE C2 · THREE-GENERATION PARTNERSHIP EVOLUTION (2010–2026+)</span>
+      <h2 class="cc-h2" data-i18n-zh="三代合伙人治理演进：从“苏黎世厨房餐桌三人组”到“联席CEO + 全链路COO”" data-i18n-en="Three-Era Partnership Evolution: From Kitchen-Table Trio to Unified Co-CEO & COO Spine">三代合伙人治理演进：从“苏黎世厨房餐桌三人组”到“联席CEO + 全链路COO”</h2>
+      <p class="cc-sub" data-i18n-zh="切换三大发展纪元，洞察昂跑如何在不同体量下动态重构高管分工以保持创业敏捷度。" data-i18n-en="Scrub across On's three organizational eras to inspect how leadership evolved without losing startup speed.">切换三大发展纪元，洞察昂跑如何在不同体量下动态重构高管分工以保持创业敏捷度。</p>
+     </div>
+    </div>
+
+    <div class="cc-era-tabs" id="eraTabs">
+     <button type="button" class="cc-era-tab" data-era="0">
+      <span class="cc-era-yr mono">ERA I · 2010 – 2019</span>
+      <span class="cc-era-leader" data-i18n-zh="三位创始人 + 早期五人合伙制" data-i18n-en="Founding Trio & 5-Partner Model">三位创始人 + 早期五人合伙制</span>
+      <span class="cc-era-tag" data-i18n-zh="Bernhard / Allemann / Coppetti + Maurer & Hoffmann" data-i18n-en="Zero hierarchy · Run-specialty breakthrough">Bernhard / Allemann / Coppetti + Maurer &amp; Hoffmann</span>
+     </button>
+     <button type="button" class="cc-era-tab" data-era="1">
+      <span class="cc-era-yr mono">ERA II · 2020 – 2026.04</span>
+      <span class="cc-era-leader" data-i18n-zh="双轨联席执政与纽交所 IPO 狂飙" data-i18n-en="Dual-Track Co-CEOs & IPO Hypergrowth">双轨联席执政与纽交所 IPO 狂飙</span>
+      <span class="cc-era-tag" data-i18n-zh="联席董事长掌创新 × 职业CEO掌全球扩张破 30亿瑞郎" data-i18n-en="Scaled from CHF 0.4B to CHF 3.01B post-IPO">联席董事长掌创新 × 职业CEO掌全球扩张破 30亿瑞郎</span>
+     </button>
+     <button type="button" class="cc-era-tab active" data-era="2">
+      <span class="cc-era-yr mono">ERA III · 2026.05+ 新纪元</span>
+      <span class="cc-era-leader" data-i18n-zh="双创始人重掌 Co-CEO + Maguire 全链路一统" data-i18n-en="Founder Co-CEOs + Maguire President/COO">双创始人重掌 Co-CEO + Maguire 全链路一统</span>
+      <span class="cc-era-tag" data-i18n-zh="战略意图与端到端执行合一 · 冲刺 2029 CHF 56亿+" data-i18n-en="Unified founder intent & Dyson-grade operations">战略意图与端到端执行合一 · 冲刺 2029 CHF 56亿+</span>
+     </button>
+    </div>
+
+    <div class="cc-split-66">
+     <div class="cc-subbox" id="eraCard">
+      <div>
+       <span class="mui-chip mui-chip-primary mono" id="eraBadge">ERA III · UNIFYING FOUNDER INTENT WITH OPERATIONAL CORE</span>
+       <h3 id="eraTitle" style="font-size:1.05rem;font-weight:800;margin:8px 0;">2026年5月组织归一：创始人重回一线联席挂帅，前戴森 COO 拉通全价值链</h3>
+       <p id="eraDesc" style="font-size:0.84rem;color:var(--text-secondary);line-height:1.72;">
+        随着 Marc Maurer（2025.03）与功勋 CEO Martin Hoffmann（2026.05，留任顾问至2027.03）相继完成历史使命，昂跑没有外聘传统快消职业经理人做守成 CEO，而是由联合创始人 David Allemann 与 Caspar Coppetti 直接出任联席 CEO 兼联席董事长，同时将 Scott Maguire 升任总裁兼 COO 统辖研发、制造、营销与商业运营，并引入 CFO Frank Sluis 与首席独董 Laura Miele——实现“创始人锐度 + 世界级工业底盘”的无缝合体。
+       </p>
+      </div>
+      <div class="cc-era-kpis" id="eraKpis">
+       <div class="cc-era-kpi"><b class="mono">CHF 3.47–3.56B</b><span>FY2026E 全年净营收指引区间</span></div>
+       <div class="cc-era-kpi"><b class="mono">66.9%</b><span>Q3 2026 历史最高基础毛利率</span></div>
+       <div class="cc-era-kpi"><b class="mono">≥CHF 5.6B</b><span>2029 投资者日承诺净营收目标</span></div>
+       <div class="cc-era-kpi"><b class="mono">USD 1.0B</b><span>首轮 Class A 股票回购计划</span></div>
+      </div>
+     </div>
+
+     <div class="cc-subbox">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+       <strong style="font-size:0.92rem;" data-i18n-zh="组织扩张零虚胖验证：营收阶梯与营业利润爆发" data-i18n-en="Zero-Bloat Scaling: Net Sales & Operating Profit Surge">组织扩张零虚胖验证：营收阶梯与营业利润爆发</strong>
+       <div class="mui-segmented" id="eChartTabs">
+        <button type="button" class="mui-seg-btn active" data-eview="sales" data-i18n-zh="净营收跃升 (CHF M)" data-i18n-en="Net Sales (CHF M)">净营收跃升 (CHF M)</button>
+        <button type="button" class="mui-seg-btn" data-eview="ebit" data-i18n-zh="Adj.EBITDA跃升 (CHF M)" data-i18n-en="Adj. EBITDA (CHF M)">Adj.EBITDA跃升 (CHF M)</button>
+       </div>
+      </div>
+      <div class="cc-canvas-wrap">
+       <canvas id="eraCanvas"></canvas>
+      </div>
+      <p style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="核验数据：从 FY21 (CHF 724.6M) 到 FY25 (CHF 3,014.0M)，四年间净营收翻了 4.16 倍，而同期 Adjusted EBITDA 由 CHF 96.4M 暴增 5.88 倍至 CHF 567.0M（9M26 已达 CHF 599.1M）。" data-i18n-en="Verified 20-F trajectory: Net sales rose 4.16x from FY21 (CHF 724.6M) to FY25 (CHF 3,014.0M), while Adj. EBITDA grew 5.88x from CHF 96.4M to CHF 567.0M (9M26 already hit CHF 599.1M).">
+       核验数据：FY21 至 FY25 净营收翻 4.16 倍，Adjusted EBITDA 暴增 <strong>5.88 倍</strong>至 CHF 567.0M（9M26 已达 CHF 599.1M）。
+      </p>
+     </div>
+    </div>
+   </section>
+
+   <!-- MODULE C3: GLOBAL SPORTSWEAR GENOME ARENA -->
+   <section id="sec-c3" class="cc-panel">
+    <div class="cc-panel-head">
+     <div>
+      <span class="cc-kicker mono">MODULE C3 · GLOBAL SPORTSWEAR &amp; LUXURY CULTURAL GENOME</span>
+      <h2 class="cc-h2" data-i18n-zh="全球运动与鞋服巨头组织基因光谱：实验室群智 vs 德国自产工坊 vs 规模矩阵" data-i18n-en="Global Sportswear Cultural Genome: Swiss Lab Pods vs German Factories vs Global Matrix">全球运动与鞋服巨头组织基因光谱：实验室群智 vs 德国自产工坊 vs 规模矩阵</h2>
+      <p class="cc-sub" data-i18n-zh="对比五大代表性组织操作系统的人均创收与毛利率上限。" data-i18n-en="Comparing revenue per employee and gross-margin ceilings across five organizational archetypes.">对比五大代表性组织操作系统的人均创收与毛利率上限。</p>
+     </div>
+     <div class="mui-segmented" id="gChartTabs">
+      <button type="button" class="mui-seg-btn active" data-gview="gm" data-i18n-zh="毛利率天花板对比 (%)" data-i18n-en="Gross Margin (%)">毛利率天花板对比 (%)</button>
+      <button type="button" class="mui-seg-btn" data-gview="emp" data-i18n-zh="人均创收对比 ($M)" data-i18n-en="Rev / Employee ($M)">人均创收对比 ($M)</button>
+     </div>
+    </div>
+
+    <div class="cc-split-75">
+     <div class="cc-subbox">
+      <div class="cc-canvas-wrap" style="height:300px;">
+       <canvas id="genomeCanvas"></canvas>
+      </div>
+      <p style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="核心发现：在轻资产研发外包与近岸机械臂结合下，昂跑与 Deckers 兼具 ~$0.88M–$0.91M 的极高人均创收；而昂跑凭借更强的奢侈品联名势能与 DTC 扩张，在毛利率维度（66.9%）一骑绝尘。" data-i18n-en="Insight: Combining Swiss R&D/robotics with asset-light assembly gives On and Deckers ~$0.88M–$0.91M Rev/FTE, while On's luxury positioning lifts underlying GM to 66.9%.">
+       核心发现：昂跑兼具约 <strong>$0.88M/人</strong> 的高人效与 <strong>66.9%</strong> 的全行业最高基础毛利率。
+      </p>
+     </div>
+
+     <div class="cc-duel-list">
+      <div class="cc-duel-card">
+       <h4><span data-i18n-zh="昂跑 vs 耐克：椋鸟敏捷小队 vs 7.3万人超级矩阵" data-i18n-en="On vs. Nike: Agile Lab Murmuration vs. 73k Global Matrix">昂跑 vs 耐克：椋鸟敏捷小队 vs 7.3万人超级矩阵</span><span class="mui-chip mui-chip-primary mono">66.9% vs 42.9% GM</span></h4>
+       <p data-i18n-zh="耐克曾因撤出专业跑店、过度依赖复古街鞋线上铺货导致创新断层与万人裁员；昂跑则死守专业跑店试穿口碑与全系超临界泡棉换代，逆势夺取高端份额。" data-i18n-en="While Nike suffered from retro lifestyle oversupply and 10k+ headcount reductions, On doubled down on run-specialty credibility and Surreal™ innovation.">耐克曾因撤出专业跑店、过度依赖复古街鞋线上铺货导致创新断层与万人裁员；昂跑则死守专业跑店试穿口碑与全系超临界泡棉换代，逆势夺取高端份额。</p>
+      </div>
+      <div class="cc-duel-card">
+       <h4><span data-i18n-zh="昂跑 vs 勃肯：瑞士软件化机械臂 vs 德国垂直工厂" data-i18n-en="On vs. Birkenstock: Programmable Robotics vs. German Craft">昂跑 vs 勃肯：瑞士软件化机械臂 vs 德国垂直工厂</span><span class="mui-chip mui-chip-success mono">同守 >90% 正价率</span></h4>
+       <p data-i18n-zh="两家欧洲高毛利标杆殊途同归：勃肯靠德国自有 6 大工厂物理限产守住稀缺性；昂跑则通过精选批发控货 + 釜山/苏黎世可编程机械臂掌握现代智造主权。" data-i18n-en="Both European champions enforce >90% full-price discipline: Birkenstock via 6 German factories, On via curated allocation and programmable LightSpray™ robots.">两家欧洲高毛利标杆殊途同归：勃肯靠德国自有 6 大工厂物理限产守住稀缺性；昂跑则通过精选批发控货 + 釜山/苏黎世可编程机械臂掌握现代智造主权。</p>
+      </div>
+      <div class="cc-duel-card">
+       <h4><span data-i18n-zh="昂跑 vs Lululemon：从足下性能向上接管全身衣橱" data-i18n-en="On vs. Lululemon: Ascending From Footwear to Full Wardrobe">昂跑 vs Lululemon：从足下性能向上接管全身衣橱</span><span class="mui-chip mui-chip-violet mono">鞋→服高难跃迁</span></h4>
+       <p data-i18n-zh="历史上服饰品牌做鞋往往举步维艰，而拥有生物力学硬核公信力的鞋履专家向上做功能服饰（9M26 +49.3% CC）则具备更强的技术向下兼容势能。" data-i18n-en="Apparel brands historically struggle to win performance footwear, whereas On leverages hard biomechanical shoe credibility to scale technical apparel (+49.3% CC).">历史上服饰品牌做鞋往往举步维艰，而拥有生物力学硬核公信力的鞋履专家向上做功能服饰（9M26 +49.3% CC）则具备更强的技术向下兼容势能。</p>
+      </div>
+     </div>
+    </div>
+
+    <div class="cc-table-wrap">
+     <table class="cc-table">
+      <thead>
+       <tr>
+        <th data-i18n-zh="标杆企业" data-i18n-en="Company">标杆企业</th>
+        <th data-i18n-zh="组织操作系统" data-i18n-en="Org Operating System">组织操作系统</th>
+        <th data-i18n-zh="核心文化信条" data-i18n-en="Cultural Credo">核心文化信条</th>
+        <th data-i18n-zh="员工规模与毛利" data-i18n-en="Headcount & GM">员工规模与毛利</th>
+        <th data-i18n-zh="组织适配边界与潜在暗礁" data-i18n-en="Boundary & Organizational Risk">组织适配边界与潜在暗礁</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="is-onon">
+        <td><strong>On Holding (ONON)</strong></td>
+        <td>双创始人 Co-CEO + 单一 COO + 椋鸟 Pod</td>
+        <td>五大精神 · Culture of Yes · 全价北极星</td>
+        <td class="mono">3,963人 · 66.9% GM</td>
+        <td>极度依赖前沿设计辨识度与配额克制；需确保 ~180 店扩张不稀释社群温度</td>
+       </tr>
+       <tr>
+        <td><strong>Deckers (DECK)</strong></td>
+        <td>精简双核心品牌事业部 (HOKA / UGG)</td>
+        <td>严控库存周转 · 跑圈口碑草根渗透</td>
+        <td class="mono">~6,000人 · ~57.0% GM</td>
+        <td>鞋履单品效率极高；缺乏全身服饰生态与高奢时尚破圈溢价</td>
+       </tr>
+       <tr>
+        <td><strong>Birkenstock (BIRK)</strong></td>
+        <td>欧洲垂直一体化制造 + 三大区域中心</td>
+        <td>250年鞋床功能主义 · 主动制造稀缺</td>
+        <td class="mono">~6,500+人 · 59.1% GM</td>
+        <td>零潮流过时风险；扩产受限于德国新工厂爬坡物理周期</td>
+       </tr>
+       <tr>
+        <td><strong>Lululemon (LULU)</strong></td>
+        <td>纯直营门店网络 + 社区教育家自治</td>
+        <td>Sweatlife 运动生活 · 门店体验至上</td>
+        <td class="mono">~39,000人 · ~58.5% GM</td>
+        <td>直营把控力极强；重门店人力编制拉低人均创收，北美面临新兴瑜伽品牌分流</td>
+       </tr>
+       <tr>
+        <td><strong>NIKE (NKE)</strong></td>
+        <td>全球多品类多区域巨型矩阵</td>
+        <td>Just Do It 冠军叙事 · 顶级赛事垄断</td>
+        <td class="mono">73,000人 · 42.9% GM</td>
+        <td>全球分发能力无敌；层级链条过长易在爆款老化期陷入渠道清库泥潭</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </section>
+
+   <!-- MODULE C4: BRAND DILUTION ENTROPY SIMULATOR & 6-LAW HEALTH AUDIT -->
+   <section id="sec-c4" class="cc-panel">
+    <div class="cc-panel-head">
+     <div>
+      <span class="cc-kicker mono">MODULE C4 · SCARCITY DILUTION SIMULATOR &amp; 6-LAW CULTURAL AUDIT</span>
+      <h2 class="cc-h2" data-i18n-zh="渠道泛滥熵增推演器与“昂跑组织六律”健康度自检表" data-i18n-en="Channel Dilution Entropy Simulator & 6-Law Cultural Health Audit">渠道泛滥熵增推演器与“昂跑组织六律”健康度自检表</h2>
+      <p class="cc-sub" data-i18n-zh="拖动滑块模拟：若昂跑放弃全价纪律、盲目铺开平价批发网点或削减实验室投入，对品牌毛利率的杀伤力。" data-i18n-en="Simulate how indiscriminate wholesale door expansion or promotional discounting would impact On's brand equity and gross margin.">拖动滑块模拟：若昂跑放弃全价纪律、盲目铺开平价批发网点或削减实验室投入，对品牌毛利率的杀伤力。</p>
+     </div>
+     <span class="mui-chip mui-chip-success mono" id="auditScoreChip">文化自检核验：0 / 6 项</span>
+    </div>
+
+    <div class="cc-split-57">
+     <div class="cc-subbox">
+      <div class="cc-sliders">
+       <div class="cc-slider-item">
+        <div class="cc-slider-lbl"><span data-i18n-zh="批发网点扩张激进度 (Wholesale Door Sprawl)" data-i18n-en="Wholesale Door Sprawl Index">批发网点扩张激进度 (Wholesale Door Sprawl)</span><b class="mono" id="valDoors">25% (精选克制区)</b></div>
+        <input type="range" id="rngDoors" min="15" max="90" step="5" value="25" />
+       </div>
+       <div class="cc-slider-item">
+        <div class="cc-slider-lbl"><span data-i18n-zh="苏黎世实验室与机械臂研发强度 (Lab R&D Focus)" data-i18n-en="On Labs & Robotics R&D Intensity">苏黎世实验室与机械臂研发强度 (Lab R&amp;D Focus)</span><b class="mono" id="valLab">90%</b></div>
+        <input type="range" id="rngLab" min="35" max="95" step="5" value="90" />
+       </div>
+       <div class="cc-slider-item">
+        <div class="cc-slider-lbl"><span data-i18n-zh="季末促销打折妥协率 (Markdown Share)" data-i18n-en="Promotional Markdown Compromise">季末促销打折妥协率 (Markdown Share)</span><b class="mono" id="valDisc">8% (极低折让)</b></div>
+        <input type="range" id="rngDisc" min="5" max="45" step="5" value="8" />
+       </div>
+      </div>
+
+      <div class="cc-sim-scores">
+       <div class="cc-sim-score"><b class="mono" id="outDesire">94 / 100</b><span data-i18n-zh="品牌稀缺渴望度" data-i18n-en="Brand Desirability">品牌稀缺渴望度</span></div>
+       <div class="cc-sim-score"><b class="mono" id="outFullPrice">92%</b><span data-i18n-zh="全价成交占比" data-i18n-en="Full-Price Realization">全价成交占比</span></div>
+       <div class="cc-sim-score"><b class="mono" id="outGmSim">66.4%</b><span data-i18n-zh="模拟稳态毛利率" data-i18n-en="Simulated Gross Margin">模拟稳态毛利率</span></div>
+      </div>
+
+      <div class="cc-canvas-wrap" style="height:155px;">
+       <canvas id="entropyCanvas"></canvas>
+      </div>
+     </div>
+
+     <div class="cc-subbox">
+      <strong style="font-size:0.92rem;" data-i18n-zh="昂跑企业文化持续性跟踪核查表（点击勾选自动保存状态）" data-i18n-en="On Cultural Continuity Watchlist (Click to Persist Locally)">昂跑企业文化持续性跟踪核查表（点击勾选自动保存状态）</strong>
+      <div class="cc-audit-list" id="cultureAuditList">
+       <label class="cc-audit-item">
+        <input type="checkbox" data-cchk="c1" />
+        <div><b data-i18n-zh="1. 全价北极星纪律未松动" data-i18n-en="1. Full-Price Northstar Intact">1. 全价北极星纪律未松动</b><span data-i18n-zh="行业促销季是否依然拒绝奥莱倾销，守住 ≥65% 基础毛利率底线？" data-i18n-en="Does On continue holding full price and ≥65% underlying GM during industry markdowns?">行业促销季是否依然拒绝奥莱倾销，守住 ≥65% 基础毛利率底线？</span></div>
+       </label>
+       <label class="cc-audit-item">
+        <input type="checkbox" data-cchk="c2" />
+        <div><b data-i18n-zh="2. 双创始人联席CEO与COO高效咬合" data-i18n-en="2. Co-CEOs & COO Seamless Execution">2. 双创始人联席CEO与COO高效咬合</b><span data-i18n-zh="Allemann、Coppetti 与总裁兼 COO Maguire 的战略与供应链执行是否零内耗？" data-i18n-en="Are Co-CEOs Allemann & Coppetti smoothly aligned with President/COO Maguire?">Allemann、Coppetti 与总裁兼 COO Maguire 的战略与供应链执行是否零内耗？</span></div>
+       </label>
+       <label class="cc-audit-item">
+        <input type="checkbox" data-cchk="c3" />
+        <div><b data-i18n-zh="3. 专业跑店大本营公信力稳固" data-i18n-en="3. Run-Specialty Credibility Anchored">3. 专业跑店大本营公信力稳固</b><span data-i18n-zh="在扩圈时尚与服饰的同时，马拉松领奖台与独立跑店期货订单是否持续高增？" data-i18n-en="Are marathon podiums and run-specialty orders expanding alongside lifestyle growth?">在扩圈时尚与服饰的同时，马拉松领奖台与独立跑店期货订单是否持续高增？</span></div>
+       </label>
+       <label class="cc-audit-item">
+        <input type="checkbox" data-cchk="c4" />
+        <div><b data-i18n-zh="4. LightSpray 近岸产线良率兑现" data-i18n-en="4. LightSpray Nearshore Yield Scaling">4. LightSpray 近岸产线良率兑现</b><span data-i18n-zh="釜山 32 台机械臂是否如期达成 30 倍扩产并顺利复制至欧美近岸基地？" data-i18n-en="Is the 32-robot Busan facility hitting 30x targets ahead of Americas/EU plants?">釜山 32 台机械臂是否如期达成 30 倍扩产并顺利复制至欧美近岸基地？</span></div>
+       </label>
+       <label class="cc-audit-item">
+        <input type="checkbox" data-cchk="c5" />
+        <div><b data-i18n-zh="5. 零大规模裁员与椋鸟人才密度" data-i18n-en="5. Zero-Layoff Talent Trust Maintained">5. 零大规模裁员与椋鸟人才密度</b><span data-i18n-zh="员工规模跨过 4,000 人后，是否依然保持高人均创收与低核心研发流失率？" data-i18n-en="Is high Rev/FTE and low R&D turnover preserved past 4,000+ employees?">员工规模跨过 4,000 人后，是否依然保持高人均创收与低核心研发流失率？</span></div>
+       </label>
+       <label class="cc-audit-item">
+        <input type="checkbox" data-cchk="c6" />
+        <div><b data-i18n-zh="6. 共同创业者股权模式在足球复刻" data-i18n-en="6. Co-Entrepreneur Playbook in Football">6. 共同创业者股权模式在足球复刻</b><span data-i18n-zh="姆巴佩与亨利合作系列能否复制费德勒 THE ROGER 的高毛利长青曲线？" data-i18n-en="Can Mbappé & Henry football products replicate Federer's THE ROGER trajectory?">姆巴佩与亨利合作系列能否复制费德勒 THE ROGER 的高毛利长青曲线？</span></div>
+       </label>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- PRIMARY SOURCES -->
+   <section class="cc-panel" aria-label="权威学术与商业文献信源">
+    <div class="cc-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+     <div>
+      <span class="cc-kicker mono">VERIFIED PRIMARY LITERATURE &amp; FILINGS</span>
+      <h2 class="cc-h2" data-i18n-zh="权威管理学文献、官方财报与深度访谈信源" data-i18n-en="Verified Management Studies, Official Filings & Culture Sources">权威管理学文献、官方财报与深度访谈信源</h2>
+     </div>
+    </div>
+    <div class="cc-sources-grid">
+     <a class="cc-source-card" href="https://thinkers50.com/blog/guided-by-culture-to-navigate-rapid-growth/" target="_blank" rel="noopener noreferrer">
+      <b>Thinkers50: Guided by Culture at On (Starling Murmuration) ↗</b>
+      <span>深度解析昂跑从苏黎世教区中心 15 人成长为跨国上市公司的“椋鸟群智”自治协同与五大精神</span>
+     </a>
+     <a class="cc-source-card" href="https://www.imd.org/research-knowledge/entrepreneurship/articles/in-the-field-with-sportswear-brand-on/" target="_blank" rel="noopener noreferrer">
+      <b>IMD Business School: In the Field with Sportswear Brand On ↗</b>
+      <span>瑞士洛桑国际管理发展学院实地调研：运动科学恢复理念、赢得式领导权与跨职能信任机制</span>
+     </a>
+     <a class="cc-source-card" href="https://culture.on.com/blog/the-origin-story-of-our-spirits/" target="_blank" rel="noopener noreferrer">
+      <b>On Official Culture Blog: Origin Story of Our Five Spirits ↗</b>
+      <span>官方记录 Explorer、Athlete、Team、Positive 与 Survivor 五大精神如何塑造免系带与循环材料创新</span>
+     </a>
+     <a class="cc-source-card" href="https://www.sec.gov/Archives/edgar/data/1858985/000095010326004606/dp244091_ex9901.htm" target="_blank" rel="noopener noreferrer">
+      <b>SEC Exhibit 99.1: Unifying Founders' Intent With Operational Core ↗</b>
+      <span>2026年3月25日官方公告：Allemann 与 Coppetti 出任联席 CEO，Scott Maguire 升任总裁兼 COO</span>
+     </a>
+     <a class="cc-source-card" href="https://stockanalysis.com/stocks/onon/transcripts/748336-investor-day-2026/" target="_blank" rel="noopener noreferrer">
+      <b>On Investor Day 2026: "Culture of Yes" &amp; Premium Playbook ↗</b>
+      <span>Caspar Coppetti 阐述“Culture of Yes”创新文化及 2026Q2 主动控货守护全价完整性的决策过程</span>
+     </a>
+     <a class="cc-source-card" href="https://www.sec.gov/Archives/edgar/data/1858985/000185898526000008/onholdingag-20251231.htm" target="_blank" rel="noopener noreferrer">
+      <b>On Holding AG SEC Form 20-F Human Capital &amp; Governance ↗</b>
+      <span>3,963 名员工构成、Class A/B 双层股权投票结构及董事会治理披露</span>
+     </a>
+    </div>
+   </section>
+
+  </main>
+ </div>
+
+ 
+<script src="../../_shared/on_holding_culture_operating_system.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

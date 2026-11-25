@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告 | 数据中心</title>
+ <meta name="description" content="Apple Vision Pro 空间计算产品线深度研究报告：M5 + R1 双芯 120Hz 硅基 Micro-OLED 换代、2026 年 6 月 $3,699–$4,199 调价、TechInsights 2026.09 实拆（$1,116.88 索尼双屏子系统 BOM）、超 50% 财富百强与 ~75% 企业级买家护城河及搁置平价头显转向 AI 智能眼镜战略转型。" />
+ <meta name="keywords" content="Apple Vision Pro, M5 Vision Pro, Apple R1, Sony Micro-OLED, visionOS 27, Spatial Computing, Enterprise XR, TechInsights Teardown" />
+ <link rel="stylesheet" href="../../../_shared/fdcaa4e44bad2723.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI Frosted Glass AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-i18n-title-zh="展开/收起章节目录" data-i18n-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">AVP</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="../../../index.html">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="Apple Vision Pro 空间计算与B端壁垒研报" data-i18n-en="Apple Vision Pro Spatial &amp; Enterprise Report">Apple Vision Pro 空间计算与B端壁垒研报</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">PRODUCT · Vision Pro</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">M5 + R1 120Hz · $3,699+ B2B Anchor</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或指标…" data-i18n-ph-zh="检索章节或指标…" data-i18n-ph-en="Jump to chapter or KPI…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">VISION PRO · SPATIAL DEEP DIVE</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="Vision Pro 空间计算研报" data-i18n-en="Vision Pro Spatial Monograph">Vision Pro 空间计算研报</div>
+ <p class="sidebar-subtitle" data-i18n-zh="M5+R1 12ms 零眩晕双芯 × $1,117 索尼 120Hz 硅基 OLED × 财富百强 B2B 独占高地与 AI 眼镜跳板" data-i18n-en="M5+R1 12ms Dual Silicon × $1,117 Sony 120Hz Micro-OLED × Fortune 100 Enterprise Monopoly &amp; Glasses Pivot">M5+R1 12ms 零眩晕双芯 × $1,117 索尼 120Hz 硅基 OLED × 财富百强 B2B 独占高地与 AI 眼镜跳板</p>
+
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="在售定价 (2026.06 调价)" data-i18n-en="Active MSRP (Post-Jun 26)">在售定价 (2026.06 调价)</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="$3,699 – $4,199" data-i18n-en="$3,699 – $4,199">$3,699 – $4,199</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="双 120Hz 硅基屏子系统 BOM" data-i18n-en="Dual 120Hz Display BOM">双 120Hz 硅基屏子系统 BOM</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="$1,116.88 (TechInsights)" data-i18n-en="$1,116.88 (TechInsights)">$1,116.88 (TechInsights)</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="B2B 政企买家占比 / 财富百强" data-i18n-en="Enterprise Mix / F100">B2B 政企买家占比 / 财富百强</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="~75% 买家 · &gt;50% F100" data-i18n-en="~75% Buyers · &gt;50% F100">~75% 买家 · &gt;50% F100</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Unified MUI Navigation Card: Site Portal Nav + Report TOC -->
+ <nav class="sidebar-card" aria-label="站点导航与章节目录">
+ <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="AAPL">
+          <div class="co-side-head">
+            <span class="co-side-title mono">AAPL · 10/14</span>
+            <a href="../../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="../Home/apple_home_homeview_ai.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../Watch/apple_watch_iwatch.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (14)" data-i18n-en="All (14)">全部 (14)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (2)" data-i18n-en="Company (2)">公司深度 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="CorporateCulture" data-i18n-zh="企业文化 (2)" data-i18n-en="CorporateCulture (2)">企业文化 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Other" data-i18n-zh="Other (1)" data-i18n-en="Other (1)">Other (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="hardware" data-i18n-zh="硬件产品 (8)" data-i18n-en="hardware (8)">硬件产品 (8)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="../../Company/Apple_Business_Model_Analysis.html" title="苹果公司 Apple Inc. (AAPL) 商业模式架构深度拆解"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 Apple Inc. (AAPL) 商业模式架构深度拆解" data-i18n-en="Apple Inc. Apple Inc. (AAPL) Business Model Deep DiveBreakdown">苹果公司 Apple Inc. (AAPL) 商业模式架构深度拆解</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="Company" href="../../Company/Apple_Future_Horizon_2030_Blueprint.html" title="苹果公司 2026–2032 未来战略与新增长曲线观测站"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 2026–2032 未来战略与新增长曲线观测站" data-i18n-en="Apple Inc. 2026–2032 &amp;">苹果公司 2026–2032 未来战略与新增长曲线观测站</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="CorporateCulture" href="../../CorporateCulture/Apple_Corporate_Culture_Analysis.html" title="苹果公司 Apple Inc. (AAPL) 企业文化与组织架构深度研究报告"><span class="co-hub-ticker mono">03</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 Apple Inc. (AAPL) 企业文化与组织架构深度研究报告" data-i18n-en="Apple Inc. Apple Inc. (AAPL) Corporate Culture &amp; Org Architecture Deep Dive">苹果公司 Apple Inc. (AAPL) 企业文化与组织架构深度研究报告</span><span class="co-hub-meta mono">CorporateCulture</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="CorporateCulture" href="../../CorporateCulture/Apple_Corporate_Culture_Blueprint.html" title="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承"><span class="co-hub-ticker mono">04</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承" data-i18n-en="AppleCorporate Culture &amp;:, &amp;">苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承</span><span class="co-hub-meta mono">CorporateCulture</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="Other" href="../../Others/Apple_Corporate_Culture_Blueprint.html" title="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承"><span class="co-hub-ticker mono">05</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承" data-i18n-en="AppleCorporate Culture &amp;:, &amp;">苹果企业文化与组织操作系统图谱：单一损益表、专家治企与三代传承</span><span class="co-hub-meta mono">Others</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../../SeniorExecutive/Steve Jobs/steve_jobs_1955_2011_15.html" title="史蒂夫·乔布斯 Steve Jobs (1955–2011) 深度商业与产品战略研究报告"><span class="co-hub-ticker mono">06</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="史蒂夫·乔布斯 Steve Jobs (1955–2011) 深度商业与产品战略研究报告" data-i18n-en="Steve Jobs (1955–2011) Business &amp; Product Strategy Deep Dive">史蒂夫·乔布斯 Steve Jobs (1955–2011) 深度商业与产品战略研究报告</span><span class="co-hub-meta mono">SeniorExecutive/Steve Jobs</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../Apple_12_Products.single.html" title="Apple 苹果全产品线 12 大板块深度研报中枢（FY2026 $478.83B 全景拆解）"><span class="co-hub-ticker mono">07</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple 苹果全产品线 12 大板块深度研报中枢（FY2026 $478.83B 全景拆解）" data-i18n-en="Apple 12 Deep DiveReport (FY2026 $478.83B OverviewBreakdown)">Apple 苹果全产品线 12 大板块深度研报中枢（FY2026 $478.83B 全景拆解）</span><span class="co-hub-meta mono">hardware</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../Airpods/apple_airpods_h2.html" title="Apple AirPods 声学穿戴产品力、H2 计算音频与千亿商业模式深度研究报告"><span class="co-hub-ticker mono">08</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple AirPods 声学穿戴产品力、H2 计算音频与千亿商业模式深度研究报告" data-i18n-en="Apple AirPods, H2 &amp; 00MBusiness ModelDeep Dive Research Report">Apple AirPods 声学穿戴产品力、H2 计算音频与千亿商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/Airpods</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../Home/apple_home_homeview_ai.html" title="Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告"><span class="co-hub-ticker mono">09</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告" data-i18n-en="Apple Home, HomeView AI &amp; Business ModelDeep Dive Research Report">Apple Home 智能家居产品力、HomeView 端侧 AI 中枢与隐私商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/Home</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="hardware" href="apple_vision_pro_m5_r1_b2b.html" title="Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告"><span class="co-hub-ticker mono">10</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告" data-i18n-en="Apple Vision Pro, M5+R1 &amp; B2B Business ModelDeep Dive Research Report">Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与 B2B 商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/Vision_pro</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../Watch/apple_watch_iwatch.html" title="Apple Watch (iWatch) 智能手表产品力、医疗健康壁垒与单机经济深度研究报告"><span class="co-hub-ticker mono">11</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple Watch (iWatch) 智能手表产品力、医疗健康壁垒与单机经济深度研究报告" data-i18n-en="Apple Watch (iWatch), &amp; Deep Dive Research Report">Apple Watch (iWatch) 智能手表产品力、医疗健康壁垒与单机经济深度研究报告</span><span class="co-hub-meta mono">hardware/Watch</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../iPhone/Apple_iPhone_Strategy_Blueprint.html" title="苹果 iPhone 产品线工程与双波段定价战略图谱"><span class="co-hub-ticker mono">12</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果 iPhone 产品线工程与双波段定价战略图谱" data-i18n-en="Apple iPhone &amp;">苹果 iPhone 产品线工程与双波段定价战略图谱</span><span class="co-hub-meta mono">hardware/iPhone</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../iPhone/iPhone.html" title="苹果公司 Apple Inc. (NASDAQ: AAPL) &amp; iPhone 生态深度研究报告"><span class="co-hub-ticker mono">13</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="苹果公司 Apple Inc. (NASDAQ: AAPL) &amp; iPhone 生态深度研究报告" data-i18n-en="Apple Inc. Apple Inc. (NASDAQ: AAPL) &amp; iPhone Deep Dive Research Report">苹果公司 Apple Inc. (NASDAQ: AAPL) &amp; iPhone 生态深度研究报告</span><span class="co-hub-meta mono">hardware/iPhone</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../ipad/apple_ipad_oled.html" title="Apple iPad 平板产品力、串联 OLED 与搭售商业模式深度研究报告"><span class="co-hub-ticker mono">14</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Apple iPad 平板产品力、串联 OLED 与搭售商业模式深度研究报告" data-i18n-en="Apple iPad, OLED &amp; Business ModelDeep Dive Research Report">Apple iPad 平板产品力、串联 OLED 与搭售商业模式深度研究报告</span><span class="co-hub-meta mono">hardware/ipad</span></span></a>
+          </div>
+          <script src="../../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+ <div class="nav-divider"></div>
+
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary &amp; KPIs">执行摘要与核心指标</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span data-i18n-zh="M5+R1 空间计算架构与配件矩阵" data-i18n-en="M5+R1 Stack &amp; Spatial Ecosystem">M5+R1 空间计算架构与配件矩阵</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span data-i18n-zh="四大护城河支柱与 XR 雷达" data-i18n-en="4 Core Moat Pillars &amp; XR Radar">四大护城河支柱与 XR 雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span data-i18n-zh="全球 XR 头显竞品与 M5 实拆 BOM" data-i18n-en="Global XR Peers &amp; M5 Teardown">全球 XR 头显竞品与 M5 实拆 BOM</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span data-i18n-zh="超高端单机经济与五年推演" data-i18n-en="Ultra-ASP Economics &amp; 5Y Sim">超高端单机经济与五年推演</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span data-i18n-zh="三阶段战略转向与关键战役" data-i18n-en="3-Stage Strategic Pivot &amp; Battles">三阶段战略转向与关键战役</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span data-i18n-zh="空间计算护城河核查清单" data-i18n-en="Spatial Computing Checklist">空间计算护城河核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span data-i18n-zh="数据来源与拆解报告核验索引" data-i18n-en="Primary Teardowns &amp; Sources">数据来源与拆解报告核验索引</span></a></li>
+ </ul>
+ </nav>
+
+ <!-- Compact MUI Page Utility Controls (Appearance Switch + Export/Print) -->
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+
+ <!-- 00 Executive Summary & KPIs -->
+ <section id="sec-00" class="mui-paper hero-card section-block">
+ <div class="status-strip">
+ <span class="mui-chip mui-chip-primary" data-i18n-zh="战略定位重估：不走低价游戏机老路，以行业 10 倍均价垄断外科医疗/航空工业 B2B 并孵化 visionOS 眼镜底座" data-i18n-en="Strategic Verdict: Commands ~10x Industry ASP, Monopolizes High-Stakes Enterprise XR &amp; Incubates visionOS for Glasses">战略定位重估：不走低价游戏机老路，以行业 10 倍均价垄断外科医疗/航空工业 B2B 并孵化 visionOS 眼镜底座</span>
+ <span class="mui-chip" data-i18n-zh="演进主线：M2 初代探路 (2024.02) · M5 120Hz 算力与配重升级 (2025.10) · B2B 收割与轻量化 AI 眼镜转向 (2026)" data-i18n-en="Arc: M2 Debut (Feb 2024) · M5 120Hz &amp; Tungsten Band Upgrade (Oct 2025) · Enterprise Focus &amp; AI Glasses Pivot (2026)">演进主线：M2 初代探路 (2024.02) · M5 120Hz 算力与配重升级 (2025.10) · B2B 收割与轻量化 AI 眼镜转向 (2026)</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="数据基准：TechInsights 2026.09 M5 实拆" data-i18n-en="Baseline: TechInsights Sept 2026 M5 Teardown">数据基准：TechInsights 2026.09 M5 实拆</span>
+ </div>
+
+ <div class="hero-overline mono">
+ <span data-i18n-zh="CORE THESIS · M5+R1 12ms 光子延迟 × 2,300 万像素 120Hz 硅基 OLED × Meta 退出政企后的 B2B 独角戏 × visionOS 27" data-i18n-en="CORE THESIS · M5+R1 12ms Photon Latency × 23M-Pixel 120Hz Micro-OLED × Post-Meta Enterprise Dominance × visionOS 27">CORE THESIS · M5+R1 12ms 光子延迟 × 2,300 万像素 120Hz 硅基 OLED × Meta 退出政企后的 B2B 独角戏 × visionOS 27</span>
+ </div>
+
+ <h1 class="hero-h1" data-i18n-html-zh="Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与商业模式深度研究报告：&lt;span class=&quot;gradient-accent&quot;&gt;为什么 $3,699 小众头显却是苹果垄断高精密 B2B 与通往 AI 眼镜的必经跳板？&lt;/span&gt;" data-i18n-html-en="Apple Vision Pro Spatial Architecture, M5+R1 Silicon &amp;amp; Business Model Deep Dive: &lt;span class=&quot;gradient-accent&quot;&gt;How a $3,699 Flagship Monopolizes Enterprise XR While Incubating visionOS for Smart Glasses&lt;/span&gt;">Apple Vision Pro 空间计算产品力、M5+R1 硅基双芯与商业模式深度研究报告：<span class="gradient-accent">为什么 $3,699 小众头显却是苹果垄断高精密 B2B 与通往 AI 眼镜的必经跳板？</span></h1>
+ <p class="lead-prose" data-i18n-html-zh="如果只用大众消费电子“千万台销量”标尺去衡量累计出货约 &lt;strong&gt;50万–60万台&lt;/strong&gt;、2026Q2 占全球 MR 出货量 &lt;strong&gt;2.6%&lt;/strong&gt; 的 &lt;strong&gt;Apple Vision Pro&lt;/strong&gt;，很容易误判其真实战略价值 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.idc.com/promo/arvr/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;IDC XR Tracker ↗&lt;/a&gt;。2025 年 10 月苹果将其升级至 &lt;strong&gt;3nm M5 + R1 双芯（刷新率升至 120Hz、标配钨金属平衡双圈编织头带并原生支持 PS VR2 手柄与罗技空间笔）&lt;/strong&gt;，并于 2026 年 6 月因光学与存储成本上调至 &lt;strong&gt;$3,699–$4,199（约为行业均价 $376 的 10 倍）&lt;/strong&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;M5 Vision Pro ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;June 2026 Hike ↗&lt;/a&gt;。随着 Meta 于 2026 年 2 月关停商用 Quest 与 Workrooms 业务，Vision Pro 独占全球约 &lt;strong&gt;75% 高端政企买家&lt;/strong&gt;与&lt;strong&gt;逾半数财富 100 强&lt;/strong&gt;（史赛克骨科手术、荷航发动机维修、CAE 飞行模拟），同时以真实付费商业场景为苹果下一代轻量化 AI 眼镜提前锤炼 &lt;strong&gt;visionOS 27 空间操作系统&lt;/strong&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://treeview.studio/blog/xr-spatial-computing-smart-glasses-market-statistics-report&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Enterprise XR Report ↗&lt;/a&gt;。" data-i18n-html-en="Judged purely as a mass-market consumer gadget (~&lt;strong&gt;500K–600K cumulative units&lt;/strong&gt;, &lt;strong&gt;2.6% Q2 2026 MR unit share&lt;/strong&gt;), &lt;strong&gt;Apple Vision Pro&lt;/strong&gt; looks niche—yet that misses its dual strategic role &lt;a class=&quot;cite-link&quot; href=&quot;https://www.idc.com/promo/arvr/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;IDC XR Tracker ↗&lt;/a&gt;. Upgraded in Oct 2025 with &lt;strong&gt;3nm M5 + R1 dual silicon, 120Hz Micro-OLED, a tungsten-counterweighted Dual Knit Band, and native PS VR2 Sense &amp;amp; Logitech Muse controller support&lt;/strong&gt;—and repriced in June 2026 to &lt;strong&gt;$3,699–$4,199 (~10x the $376 industry ASP)&lt;/strong&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;M5 Vision Pro ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;June 2026 Hike ↗&lt;/a&gt;—Vision Pro now commands ~&lt;strong&gt;75% enterprise buyer mix&lt;/strong&gt; and &lt;strong&gt;&amp;gt;50% of the Fortune 100&lt;/strong&gt; after Meta exited commercial Quest sales in Feb 2026, all while funding &lt;strong&gt;visionOS 27&lt;/strong&gt; R&amp;amp;D for Apple&#x27;s upcoming smart glasses &lt;a class=&quot;cite-link&quot; href=&quot;https://treeview.studio/blog/xr-spatial-computing-smart-glasses-market-statistics-report&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Enterprise XR Report ↗&lt;/a&gt;.">如果只用大众消费电子“千万台销量”标尺去衡量累计出货约 <strong>50万–60万台</strong>、2026Q2 占全球 MR 出货量 <strong>2.6%</strong> 的 <strong>Apple Vision Pro</strong>，很容易误判其真实战略价值 <a class="cite-link" href="https://www.idc.com/promo/arvr/" target="_blank" rel="noopener noreferrer">IDC XR Tracker ↗</a>。2025 年 10 月苹果将其升级至 <strong>3nm M5 + R1 双芯（刷新率升至 120Hz、标配钨金属平衡双圈编织头带并原生支持 PS VR2 手柄与罗技空间笔）</strong>，并于 2026 年 6 月因光学与存储成本上调至 <strong>$3,699–$4,199（约为行业均价 $376 的 10 倍）</strong> <a class="cite-link" href="https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/" target="_blank" rel="noopener noreferrer">M5 Vision Pro ↗</a> <a class="cite-link" href="https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/" target="_blank" rel="noopener noreferrer">June 2026 Hike ↗</a>。随着 Meta 于 2026 年 2 月关停商用 Quest 与 Workrooms 业务，Vision Pro 独占全球约 <strong>75% 高端政企买家</strong>与<strong>逾半数财富 100 强</strong>（史赛克骨科手术、荷航发动机维修、CAE 飞行模拟），同时以真实付费商业场景为苹果下一代轻量化 AI 眼镜提前锤炼 <strong>visionOS 27 空间操作系统</strong> <a class="cite-link" href="https://treeview.studio/blog/xr-spatial-computing-smart-glasses-market-statistics-report" target="_blank" rel="noopener noreferrer">Enterprise XR Report ↗</a>。</p>
+
+ <div class="grid-3" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div class="mui-avatar-icon">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+ </div>
+ <h3 data-i18n-zh="M5 + R1 双芯实现 12ms 零眩晕物理极限" data-i18n-en="M5 + R1 Dual Silicon &amp; 12ms Photon Latency">M5 + R1 双芯实现 12ms 零眩晕物理极限</h3>
+ <p data-i18n-zh="专用 R1 协处理器（256GB/s 带宽）独立实时融合 12 颗摄像头、5 个传感器与 6 麦克风，12 毫秒内投射现实画面，M5 驱动 120Hz 光追渲染。" data-i18n-en="Dedicated R1 silicon (256GB/s) streams 12 cameras and 5 sensors in 12ms—8x faster than an eye blink—while M5 drives 120Hz ray-traced visuals.">专用 R1 协处理器（256GB/s 带宽）独立实时融合 12 颗摄像头、5 个传感器与 6 麦克风，12 毫秒内投射现实画面，M5 驱动 120Hz 光追渲染。</p>
+ </div>
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="18" rx="1.5"/><rect x="14" y="3" width="7" height="18" rx="1.5"/></svg>
+ </div>
+ <h3 data-i18n-zh="Meta 撤退后独占外科手术与航空 B2B 蓝海" data-i18n-en="Uncontested B2B Lead in Surgery, Aviation &amp; CAD">Meta 撤退后独占外科手术与航空 B2B 蓝海</h3>
+ <p data-i18n-zh="Meta 2026 年初砍掉政企线后，Vision Pro 成为医疗影像（Stryker/西门子）、航空机务（KLM/CAE）与英伟达 Omniverse 数字孪生唯一旗舰。" data-i18n-en="Following Meta&#x27;s Feb 2026 enterprise exit, Vision Pro owns surgical planning (Stryker/Siemens), aviation (KLM/CAE), and NVIDIA Omniverse CAD.">Meta 2026 年初砍掉政企线后，Vision Pro 成为医疗影像（Stryker/西门子）、航空机务（KLM/CAE）与英伟达 Omniverse 数字孪生唯一旗舰。</p>
+ </div>
+ <div class="feature-card">
+ <div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+ </div>
+ <h3 data-i18n-zh="果断搁置平价重头显，资源直指 AI 智能眼镜" data-i18n-en="Shelving &#x27;Vision Air&#x27; to Accelerate AI Glasses">果断搁置平价重头显，资源直指 AI 智能眼镜</h3>
+ <p data-i18n-zh="2026 年 5 月果断叫停半价减重头显研发，保留 $3,699+ 高端专业工作站定位，将视觉交互与空间音频成果向全天候轻量化眼镜迁移。" data-i18n-en="Halted mid-tier &#x27;Vision Air&#x27; work in May 2026 to keep Vision Pro as a pro workstation while channeling visionOS breakthroughs into lightweight glasses.">2026 年 5 月果断叫停半价减重头显研发，保留 $3,699+ 高端专业工作站定位，将视觉交互与空间音频成果向全天候轻量化眼镜迁移。</p>
+ </div>
+ </div>
+
+ <div class="grid-4">
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="历史累计创造硬件营收" data-i18n-en="Cumulative Hardware Revenue">历史累计创造硬件营收</span>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="累计出货 ~55万–60万台" data-i18n-en="~550K–600K Units Shipped">累计出货 ~55万–60万台</span>
+ </div>
+ <div class="kpi-value mono">~$1.9B+</div>
+ <p class="kpi-desc" data-i18n-html-zh="2024 首年 ~39 万台创收 ~$13.7 亿（占全球头显营收近四分之一），叠加 2025–2026 M5 换代累计突破 ~$19 亿 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/01/02/vision-pro-still-failing-to-catch-on/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Cumulative Est ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://counterpointresearch.com/en/insights/global-xr-arvr-headsets-market-2024&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Counterpoint XR ↗&lt;/a&gt;。" data-i18n-html-en="Generated ~$1.37B in 2024 (~25% of global XR headset dollars on ~4.5% units), crossing ~$1.9B+ cumulative with M5 upgrades &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/01/02/vision-pro-still-failing-to-catch-on/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Cumulative Est ↗&lt;/a&gt; &lt;a class=&quot;cite-link&quot; href=&quot;https://counterpointresearch.com/en/insights/global-xr-arvr-headsets-market-2024&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Counterpoint XR ↗&lt;/a&gt;.">2024 首年 ~39 万台创收 ~$13.7 亿（占全球头显营收近四分之一），叠加 2025–2026 M5 换代累计突破 ~$19 亿 <a class="cite-link" href="https://www.macrumors.com/2026/01/02/vision-pro-still-failing-to-catch-on/" target="_blank" rel="noopener noreferrer">Cumulative Est ↗</a> <a class="cite-link" href="https://counterpointresearch.com/en/insights/global-xr-arvr-headsets-market-2024" target="_blank" rel="noopener noreferrer">Counterpoint XR ↗</a>。</p>
+ </div>
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="在售官方定价阶梯 (2026.06)" data-i18n-en="Active MSRP Ladder (Post-Jun 26)">在售官方定价阶梯 (2026.06)</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="行业均价 $376 的 10倍" data-i18n-en="~10x Industry $376 ASP">行业均价 $376 的 10倍</span>
+ </div>
+ <div class="kpi-value mono">$3,699+</div>
+ <p class="kpi-desc" data-i18n-html-zh="2026-06-25 全系上调 $200–$300：256GB $3,699 / 512GB $3,899 / 1TB $4,199（不含蔡司镜片与外设） &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;June 2026 Pricing ↗&lt;/a&gt;。" data-i18n-html-en="Repriced June 25, 2026 (+$200–$300): 256GB $3,699 / 512GB $3,899 / 1TB $4,199—roughly 10x Omdia&#x27;s $376 XR industry ASP &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;June 2026 Pricing ↗&lt;/a&gt;.">2026-06-25 全系上调 $200–$300：256GB $3,699 / 512GB $3,899 / 1TB $4,199（不含蔡司镜片与外设） <a class="cite-link" href="https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/" target="_blank" rel="noopener noreferrer">June 2026 Pricing ↗</a>。</p>
+ </div>
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="索尼 120Hz 双硅基屏子系统 BOM" data-i18n-en="Sony 120Hz Dual Micro-OLED BOM">索尼 120Hz 双硅基屏子系统 BOM</span>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="较 M2 初代涨 +29.2%" data-i18n-en="+29.2% vs. Gen-1 M2">较 M2 初代涨 +29.2%</span>
+ </div>
+ <div class="kpi-value mono">$1,116.88</div>
+ <p class="kpi-desc" data-i18n-html-zh="TechInsights 2026-09-11 实拆证实 M5 版双 1.42&quot; 索尼 120Hz Micro-OLED + EyeSight 显示总成高达 $1,116.88 &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;TechInsights M5 ↗&lt;/a&gt;。" data-i18n-html-en="TechInsights&#x27; Sept 11, 2026 M5 teardown pegged dual 120Hz Sony Micro-OLED + EyeSight display subsystems at $1,116.88 (up from $864.40) &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;TechInsights M5 ↗&lt;/a&gt;.">TechInsights 2026-09-11 实拆证实 M5 版双 1.42" 索尼 120Hz Micro-OLED + EyeSight 显示总成高达 $1,116.88 <a class="cite-link" href="https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5" target="_blank" rel="noopener noreferrer">TechInsights M5 ↗</a>。</p>
+ </div>
+ <div class="mui-paper mui-card-interactive kpi-card">
+ <div class="kpi-top">
+ <span class="kpi-label" data-i18n-zh="企业与商业机构采购占比" data-i18n-en="Enterprise &amp; B2B Buyer Share">企业与商业机构采购占比</span>
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="&gt;50% 财富100强部署" data-i18n-en="&gt;50% of Fortune 100">&gt;50% 财富100强部署</span>
+ </div>
+ <div class="kpi-value mono">~75.0%</div>
+ <p class="kpi-desc" data-i18n-html-zh="行业追踪显示至 2026 年约四分之三新机流向医院手术室、航空实训、豪车工业设计与商业建筑可视化客户 &lt;a class=&quot;cite-link&quot; href=&quot;https://treeview.studio/blog/xr-spatial-computing-smart-glasses-market-statistics-report&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Enterprise Share ↗&lt;/a&gt;。" data-i18n-html-en="Roughly 75% of 2026 demand stems from surgical suites, flight simulators, automotive CAD, and Fortune 100 enterprise deployments &lt;a class=&quot;cite-link&quot; href=&quot;https://treeview.studio/blog/xr-spatial-computing-smart-glasses-market-statistics-report&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Enterprise Share ↗&lt;/a&gt;.">行业追踪显示至 2026 年约四分之三新机流向医院手术室、航空实训、豪车工业设计与商业建筑可视化客户 <a class="cite-link" href="https://treeview.studio/blog/xr-spatial-computing-smart-glasses-market-statistics-report" target="_blank" rel="noopener noreferrer">Enterprise Share ↗</a>。</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- 01 Product Architecture & Revenue Engine -->
+ <section id="sec-01" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 01 · M5 + R1 SPATIAL ARCHITECTURE &amp; PRO ECOSYSTEM</div>
+ <h2 class="sec-h2" data-i18n-zh="一、M5 + R1 空间计算硬件栈与外设矩阵：从眼手直觉到 6DoF 毫米级专业操控" data-i18n-en="1. M5 + R1 Spatial Hardware Stack &amp; Accessory Matrix: Eye-Hand + 6DoF Precision">一、M5 + R1 空间计算硬件栈与外设矩阵：从眼手直觉到 6DoF 毫米级专业操控</h2>
+ <p class="sec-sub" data-i18n-zh="2025 年 10 月 M5 换代补齐 120Hz 刷新率、钨配重头带与第三方空间手柄/画笔，2026 年 9 月升级 visionOS 27" data-i18n-en="Oct 2025 M5 upgrade added 120Hz refresh, tungsten Dual Knit Band &amp; 6DoF controllers, paired with Sept 2026&#x27;s visionOS 27">2025 年 10 月 M5 换代补齐 120Hz 刷新率、钨配重头带与第三方空间手柄/画笔，2026 年 9 月升级 visionOS 27</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="2,300 万像素 &gt;4K 双眼 · 32:9 双 5K Mac 巨幕" data-i18n-en="23M Pixels (&gt;4K/Eye) · 32:9 Dual-5K Mac Display">2,300 万像素 &gt;4K 双眼 · 32:9 双 5K Mac 巨幕</span>
+ </div>
+
+ <div class="arch-blueprint">
+ <div class="arch-hub">
+ <div class="arch-hub-title" data-i18n-zh="visionOS 27 空间操作系统 × M5 主算力 + R1 实时传感双芯 × 32:9 超宽虚拟 Mac 工作站" data-i18n-en="visionOS 27 Spatial OS × M5 Compute + R1 12ms Sensor Fusion × 32:9 Dual-5K Mac Virtual Display">visionOS 27 空间操作系统 × M5 主算力 + R1 实时传感双芯 × 32:9 超宽虚拟 Mac 工作站</div>
+ <div class="arch-hub-sub" data-i18n-zh="四只高速红外眼动追踪环 + 向下手势摄像头 + LiDAR 激光雷达，实现“眼睛看哪里就是鼠标、双指轻捏即是点击”" data-i18n-en="4 high-speed IR eye-tracking cameras + downward hand cameras + LiDAR turn natural gaze and pinch into a zero-controller OS">四只高速红外眼动追踪环 + 向下手势摄像头 + LiDAR 激光雷达，实现“眼睛看哪里就是鼠标、双指轻捏即是点击”</div>
+ </div>
+ <div class="arch-nodes">
+ <div class="arch-node">
+ <div class="arch-node-tag mono" data-i18n-zh="CORE HEADSET · 256GB 基准档" data-i18n-en="CORE HEADSET · 256GB BASE">CORE HEADSET · 256GB 基准档</div>
+ <div class="arch-node-name" data-i18n-zh="Apple Vision Pro 256GB ($3,699)" data-i18n-en="Apple Vision Pro 256GB ($3,699)">Apple Vision Pro 256GB ($3,699)</div>
+ <div class="arch-node-desc" data-i18n-zh="3nm M5 (10核CPU/10核光追GPU/16核NPU) + R1 + 16GB 统一内存，双 120Hz 索尼硅基 OLED (+10% 渲染像素)，2.5h 综合 / 3h 视频续航。" data-i18n-en="3nm M5 (10c CPU/10c RT GPU/16c NPU) + R1 + 16GB RAM, dual 120Hz Sony Micro-OLED (+10% rendered pixels), 2.5h general / 3h video.">3nm M5 (10核CPU/10核光追GPU/16核NPU) + R1 + 16GB 统一内存，双 120Hz 索尼硅基 OLED (+10% 渲染像素)，2.5h 综合 / 3h 视频续航。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono" data-i18n-zh="ENTERPRISE TIERS · 大容量档" data-i18n-en="ENTERPRISE TIERS · 512GB / 1TB">ENTERPRISE TIERS · 大容量档</div>
+ <div class="arch-node-name" data-i18n-zh="512GB ($3,899) &amp; 1TB ($4,199)" data-i18n-en="512GB ($3,899) &amp; 1TB ($4,199)">512GB ($3,899) &amp; 1TB ($4,199)</div>
+ <div class="arch-node-desc" data-i18n-zh="面向存储巨型 3D CAD 工程模型、8K 180度 Apple Immersive Video 原片与离线多模态医学影像（DICOM）的专业机构客户。" data-i18n-en="Built for storing massive 3D CAD assemblies, 8K 180° Apple Immersive Video masters, and offline 3D DICOM surgical datasets.">面向存储巨型 3D CAD 工程模型、8K 180度 Apple Immersive Video 原片与离线多模态医学影像（DICOM）的专业机构客户。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono" data-i18n-zh="SPATIAL INPUT · 6DoF 外设破圈" data-i18n-en="SPATIAL INPUT · 6DoF TOOLS">SPATIAL INPUT · 6DoF 外设破圈</div>
+ <div class="arch-node-name" data-i18n-zh="PS VR2 手柄 ($249.95) &amp; 罗技 Muse ($129.95)" data-i18n-en="PS VR2 Sense ($249.95) &amp; Logitech Muse ($129.95)">PS VR2 手柄 ($249.95) &amp; 罗技 Muse ($129.95)</div>
+ <div class="arch-node-desc" data-i18n-zh="打破初代纯手势局限：原生接入索尼 6 自由度震动扳机手柄与罗技 Muse 空间压感笔，解锁工业精修雕塑与硬核空间交互。" data-i18n-en="Expands beyond bare hands with native Sony 6DoF haptics/finger detection and Logitech&#x27;s 3D spatial stylus for precision CAD sculpting.">打破初代纯手势局限：原生接入索尼 6 自由度震动扳机手柄与罗技 Muse 空间压感笔，解锁工业精修雕塑与硬核空间交互。</div>
+ </div>
+ <div class="arch-node">
+ <div class="arch-node-tag mono" data-i18n-zh="OPTICS &amp; PRO GEAR · 高毛利选配" data-i18n-en="OPTICS &amp; PRO GEAR · ATTACH">OPTICS &amp; PRO GEAR · 高毛利选配</div>
+ <div class="arch-node-name" data-i18n-zh="蔡司磁吸镜片 ($99/$149) + 开发者带 ($299)" data-i18n-en="ZEISS Inserts ($99/$149) + Dev Strap ($299)">蔡司磁吸镜片 ($99/$149) + 开发者带 ($299)</div>
+ <div class="arch-node-desc" data-i18n-zh="定制处方蔡司光学插片、$199 旅行保护壳、$199 备用电池及新款 20Gbps USB-C 开发者高速调试连接带（$299）。" data-i18n-en="Custom magnetic ZEISS prescription inserts, $199 Travel Case, $199 extra battery, and $299 20Gbps USB-C Developer Strap.">定制处方蔡司光学插片、$199 旅行保护壳、$199 备用电池及新款 20Gbps USB-C 开发者高速调试连接带（$299）。</div>
+ </div>
+ </div>
+ <div class="arch-platform-bar">
+ <div class="arch-platform">
+ <strong data-i18n-zh="32:9 超宽双 5K 120Hz Mac 虚拟显示器 + Spatially Preview 3D 模型一键拖拽" data-i18n-en="32:9 Dual-5K 120Hz Mac Virtual Display + macOS 27 Spatial 3D Preview">32:9 超宽双 5K 120Hz Mac 虚拟显示器 + Spatially Preview 3D 模型一键拖拽</strong>
+ <span data-i18n-zh="出差高铁或机舱内一键将 MacBook Pro 屏幕扩展为私密环绕式双 5K 显示器阵列，并把 Mac 里的 3D 工程件直接拖入真实房间等比审视。" data-i18n-en="Turns any MacBook into a private wraparound dual-5K studio on flights while dragging 3D CAD models straight out of macOS into room space.">出差高铁或机舱内一键将 MacBook Pro 屏幕扩展为私密环绕式双 5K 显示器阵列，并把 Mac 里的 3D 工程件直接拖入真实房间等比审视。</span>
+ </div>
+ <div class="arch-platform">
+ <strong data-i18n-zh="NVIDIA Omniverse Cloud RTX 空间流式渲染 + 企业级 MDM 隐私设备群管" data-i18n-en="NVIDIA Omniverse Cloud RTX Streaming + Enterprise MDM Fleet Control">NVIDIA Omniverse Cloud RTX 空间流式渲染 + 企业级 MDM 隐私设备群管</strong>
+ <span data-i18n-zh="云端算力渲染数亿多边形汽车/工厂数字孪生并实时推流至 Vision Pro 双 4K 屏，满足车企与航空工业最高保密合规。" data-i18n-en="Streams full-fidelity OpenUSD automotive and factory digital twins from NVIDIA RTX cloud clusters directly into Vision Pro at 120Hz.">云端算力渲染数亿多边形汽车/工厂数字孪生并实时推流至 Vision Pro 双 4K 屏，满足车企与航空工业最高保密合规。</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="grid-3" style="margin-bottom: 16px;">
+ <div class="feature-card">
+ <h3 data-i18n-zh="1. 钨配重双圈编织头带务实化解 750–800g 前倾压脸痛点" data-i18n-en="1. Tungsten-Counterweighted Dual Knit Band Fixing Front-Heavy Ergonomics">1. 钨配重双圈编织头带务实化解 750–800g 前倾压脸痛点</h3>
+ <p data-i18n-html-zh="苹果拒绝把铝镁玻璃前框换成廉价塑料，而是在 M5 版后脑下圈织物中巧妙嵌入高密度钨金属配重条，搭配侧面双功能旋钮显著改善长时间手术/办公佩戴平衡 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Tungsten Band ↗&lt;/a&gt;。" data-i18n-html-en="Rather than switching to cheap plastic, Apple wove dense tungsten counterweights into the lower Dual Knit Band strap with a dual-fit dial for balanced multi-hour wear &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Tungsten Band ↗&lt;/a&gt;.">苹果拒绝把铝镁玻璃前框换成廉价塑料，而是在 M5 版后脑下圈织物中巧妙嵌入高密度钨金属配重条，搭配侧面双功能旋钮显著改善长时间手术/办公佩戴平衡 <a class="cite-link" href="https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/" target="_blank" rel="noopener noreferrer">Tungsten Band ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <h3 data-i18n-zh="2. 电池与音频头带 BOM 精简 56% 对冲 120Hz 硅基屏涨价" data-i18n-en="2. Cutting Battery &amp; Audio-Strap BOM by 56% to Offset 120Hz Display Cost">2. 电池与音频头带 BOM 精简 56% 对冲 120Hz 硅基屏涨价</h3>
+ <p data-i18n-html-zh="TechInsights 2026.09 拆解揭示苹果工程降本功力：M5 版外置电池与音频头带总成本由 M2 初代的 $170.47 大幅压降至 $74.78（省 $95.69），部分吸收了索尼 120Hz 双屏涨价 &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;M5 Value Engineering ↗&lt;/a&gt;。" data-i18n-html-en="TechInsights found Apple slashed external battery + audio-strap costs by 56% (from $170.47 on M2 down to $74.78 on M5) to help offset pricier 120Hz Sony panels &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;M5 Value Engineering ↗&lt;/a&gt;.">TechInsights 2026.09 拆解揭示苹果工程降本功力：M5 版外置电池与音频头带总成本由 M2 初代的 $170.47 大幅压降至 $74.78（省 $95.69），部分吸收了索尼 120Hz 双屏涨价 <a class="cite-link" href="https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5" target="_blank" rel="noopener noreferrer">M5 Value Engineering ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <h3 data-i18n-zh="3. 8K 180度沉浸式体育直播（NBA 湖人场边视角）探索高端门票经济" data-i18n-en="3. Live 180° 8K Sports (NBA Courtside) Pioneering Virtual Ticket Economics">3. 8K 180度沉浸式体育直播（NBA 湖人场边视角）探索高端门票经济</h3>
+ <p data-i18n-html-zh="2026 年初开启 NBA 洛杉矶湖人队场边 180 度 Apple Immersive Video 实时空间直播，验证“足不出户坐第一排贵宾席”的未来高溢价体育娱乐形态 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/os/visionos/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Immersive Live Sports ↗&lt;/a&gt;。" data-i18n-html-en="Launched live 180° 8K NBA Lakers courtside broadcasts in early 2026—proving out virtual courtside ticketing and spatial cinema &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/os/visionos/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Immersive Live Sports ↗&lt;/a&gt;.">2026 年初开启 NBA 洛杉矶湖人队场边 180 度 Apple Immersive Video 实时空间直播，验证“足不出户坐第一排贵宾席”的未来高溢价体育娱乐形态 <a class="cite-link" href="https://www.apple.com/os/visionos/" target="_blank" rel="noopener noreferrer">Immersive Live Sports ↗</a>。</p>
+ </div>
+ </div>
+
+ <div class="mui-alert" style="margin-bottom: 18px;">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="关键节点" data-i18n-en="MILESTONE">关键节点</span>
+ <div data-i18n-html-zh="&lt;strong&gt;2026年5月关键战略取舍——搁置平价“Vision Air”，全力冲刺轻量化 AI 智能眼镜：&lt;/strong&gt;面对 $1,117 双硅基 OLED 光学刚性成本无法在不毁掉体验的前提下做到千元级，苹果果断叫停廉价头显开发，让 Vision Pro 稳坐 B2B 空间工作站王座，同时将 visionOS 眼手与视觉智能（Visual Intelligence）全力导向对标 Meta Ray-Ban 的全天候智能眼镜 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/07/08/cheaper-apple-vision-pro-display-work-ended/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Roadmap Pivot ↗&lt;/a&gt;。" data-i18n-html-en="&lt;strong&gt;May 2026 Strategic Pivot — Shelving Cheaper &quot;Vision Air&quot; for Smart Glasses:&lt;/strong&gt; Recognizing that $1,117 Micro-OLED optics cannot hit mass-market prices without compromising fidelity, Apple halted cheaper headset display work—cementing Vision Pro as an enterprise/pro flagship while accelerating lightweight AI glasses &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/07/08/cheaper-apple-vision-pro-display-work-ended/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Roadmap Pivot ↗&lt;/a&gt;."><strong>2026年5月关键战略取舍——搁置平价“Vision Air”，全力冲刺轻量化 AI 智能眼镜：</strong>面对 $1,117 双硅基 OLED 光学刚性成本无法在不毁掉体验的前提下做到千元级，苹果果断叫停廉价头显开发，让 Vision Pro 稳坐 B2B 空间工作站王座，同时将 visionOS 眼手与视觉智能（Visual Intelligence）全力导向对标 Meta Ray-Ban 的全天候智能眼镜 <a class="cite-link" href="https://www.macrumors.com/2026/07/08/cheaper-apple-vision-pro-display-work-ended/" target="_blank" rel="noopener noreferrer">Roadmap Pivot ↗</a>。</div>
+ </div>
+
+ <div class="chart-card" style="margin-bottom: 18px;">
+ <div class="chart-toolbar">
+ <div>
+ <div id="ch1ChartTitle" class="chart-title">2024–2027E Apple Vision Pro 年度出货量 (千台) 与硬件估算营收 ($M) 演进</div>
+ <div id="ch1ChartSub" class="chart-caption">经历 2024 首销脉冲与 2025 换代前消化后，依托 ~75% B2B 政企复购与 $3,699+ 高单价步入稳态专业工具轨道</div>
+ </div>
+ <div class="mui-segmented" role="tablist" aria-label="第一章图表视图切换">
+ <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA" data-i18n-zh="视图A: 销量与高单价营收轨迹" data-i18n-en="View A: Shipments &amp; Revenue Arc">视图A: 销量与高单价营收轨迹</button>
+ <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB" data-i18n-zh="视图B: M2 初代 vs M5 拆解成本对比" data-i18n-en="View B: M2 vs. M5 Subsystem BOM ($)">视图B: M2 初代 vs M5 拆解成本对比</button>
+ </div>
+ </div>
+ <div id="ch1AxisMeta" class="chart-axis-meta mono"></div>
+ <div class="canvas-stage">
+ <canvas id="chartCh1"></canvas>
+ </div>
+ <div class="chart-legend" id="ch1Legend">
+ <button type="button" class="legend-pill" data-ch1-series="s1"><span id="ch1Dot1" class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1"></span></button>
+ <button type="button" class="legend-pill" data-ch1-series="s2"><span id="ch1Dot2" class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2"></span></button>
+ </div>
+ </div>
+
+ <div class="grid-2">
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="双 120Hz 索尼 Micro-OLED + Pancake：2,300 万像素视网膜级清晰度" data-i18n-en="Dual 120Hz Sony Micro-OLED: 23M Pixels &amp; +10% Rendered Sharpness">双 120Hz 索尼 Micro-OLED + Pancake：2,300 万像素视网膜级清晰度</div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="单眼超越 4K 电视" data-i18n-en="&gt;4K Pixels Per Eye">单眼超越 4K 电视</span>
+ </div>
+ <p class="matrix-card-body" data-i18n-html-zh="在两块仅邮票大小（1.42 英寸）的硅晶圆背板上蚀刻 2,300 万颗有机发光像素（7.5 微米像素间距），M5 版借助硬件光线追踪与网格着色将实际渲染像素再提升 10%，最高刷新率由 100Hz 升至 120Hz &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/apple-vision-pro/specs/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;AVP Specs ↗&lt;/a&gt;。" data-i18n-html-en="Packs 23M pixels across two postage-stamp 1.42&quot; silicon backplanes (7.5-micron pitch); M5 renders +10% more pixels via foveated ray tracing and lifts refresh rate from 100Hz to 120Hz &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/apple-vision-pro/specs/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;AVP Specs ↗&lt;/a&gt;.">在两块仅邮票大小（1.42 英寸）的硅晶圆背板上蚀刻 2,300 万颗有机发光像素（7.5 微米像素间距），M5 版借助硬件光线追踪与网格着色将实际渲染像素再提升 10%，最高刷新率由 100Hz 升至 120Hz <a class="cite-link" href="https://www.apple.com/apple-vision-pro/specs/" target="_blank" rel="noopener noreferrer">AVP Specs ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail1"><span>展开微观技术与商业机制</span> <span>⌄</span></button>
+ <div class="collapse-panel" id="matrixDetail1" data-i18n-html-zh="这也让外科医生在手术室内可直接看清毫米级 3D CT 血管切面与细小文字病历，这是单眼分辨率低得多的 $349–$599 游戏头显根本无法胜任的硬门槛。" data-i18n-html-en="Enables surgeons and aerospace engineers to read fine clinical text and inspect sub-millimeter 3D CT/CAD tolerances impossible on LCD gaming headsets.">这也让外科医生在手术室内可直接看清毫米级 3D CT 血管切面与细小文字病历，这是单眼分辨率低得多的 $349–$599 游戏头显根本无法胜任的硬门槛。</div>
+ </div>
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="外科医疗、航空维修与工业设计：财富 100 强真实付费刚需" data-i18n-en="Healthcare, Aviation &amp; Automotive CAD: Real Fortune 100 ROI">外科医疗、航空维修与工业设计：财富 100 强真实付费刚需</div>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="~75% 商业机构买家" data-i18n-en="~75% Enterprise Mix">~75% 商业机构买家</span>
+ </div>
+ <p class="matrix-card-body" data-i18n-html-zh="史赛克（Stryker myMako）用其进行髋膝关节置换 3D 术前规划，西门子医疗投影交互式人体全息器官，荷兰皇家航空（KLM）用于波音翼上发动机实景排障培训，保时捷与法拉利用于真车等比光影评审 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2024/04/apple-vision-pro-brings-a-new-era-of-spatial-computing-to-business/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Enterprise Cases ↗&lt;/a&gt;。" data-i18n-html-en="Stryker (myMako) plans orthopedic surgeries in 3D, Siemens Healthineers renders interactive holograms, KLM trains jet-engine technicians, and automakers review 1:1 digital twins &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2024/04/apple-vision-pro-brings-a-new-era-of-spatial-computing-to-business/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Enterprise Cases ↗&lt;/a&gt;.">史赛克（Stryker myMako）用其进行髋膝关节置换 3D 术前规划，西门子医疗投影交互式人体全息器官，荷兰皇家航空（KLM）用于波音翼上发动机实景排障培训，保时捷与法拉利用于真车等比光影评审 <a class="cite-link" href="https://www.apple.com/newsroom/2024/04/apple-vision-pro-brings-a-new-era-of-spatial-computing-to-business/" target="_blank" rel="noopener noreferrer">Enterprise Cases ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail2"><span>展开微观技术与商业机制</span> <span>⌄</span></button>
+ <div class="collapse-panel" id="matrixDetail2" data-i18n-html-zh="对医院或航空公司而言，缩短哪怕 15 分钟手术时间或减少一次真机拆装培训失误，省下的成本即远超 $3,699 硬件投入——价格敏感度极低。" data-i18n-html-en="Saving 15 minutes of operating-room time or avoiding one physical jet-engine teardown pays back a $3,699 Vision Pro many times over.">对医院或航空公司而言，缩短哪怕 15 分钟手术时间或减少一次真机拆装培训失误，省下的成本即远超 $3,699 硬件投入——价格敏感度极低。</div>
+ </div>
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="visionOS 27 (2026.09)：空间 Siri AI、共享空间小组件与 PS VR2 手柄" data-i18n-en="visionOS 27 (Sept 2026): Spatial Siri AI, SharedPersonas &amp; 6DoF Input">visionOS 27 (2026.09)：空间 Siri AI、共享空间小组件与 PS VR2 手柄</div>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="&gt;2,500 原生空间应用" data-i18n-en="&gt;2,500 Native Spatial Apps">&gt;2,500 原生空间应用</span>
+ </div>
+ <p class="matrix-card-body" data-i18n-html-zh="visionOS 26/27 引入锚定在真实墙面开机自动复原的空间小组件（Spatial Widgets）、高度逼真的高斯泼溅（Gaussian Splatting）自研虚拟形象 Persona、空间场景（Spatial Scenes）2D 照片一键景深化及空间视觉智能 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/os/visionos/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;visionOS 27 ↗&lt;/a&gt;。" data-i18n-html-en="Adds persistent wall-anchored Spatial Widgets, photorealistic Gaussian-Splatting Personas, generative 2D-to-3D Spatial Scenes, and Visual Intelligence &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/os/visionos/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;visionOS 27 ↗&lt;/a&gt;.">visionOS 26/27 引入锚定在真实墙面开机自动复原的空间小组件（Spatial Widgets）、高度逼真的高斯泼溅（Gaussian Splatting）自研虚拟形象 Persona、空间场景（Spatial Scenes）2D 照片一键景深化及空间视觉智能 <a class="cite-link" href="https://www.apple.com/os/visionos/" target="_blank" rel="noopener noreferrer">visionOS 27 ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail3"><span>展开微观技术与商业机制</span> <span>⌄</span></button>
+ <div class="collapse-panel" id="matrixDetail3" data-i18n-html-zh="支持同一房间多名佩戴者面对面协同批注同一个 3D 建筑/医疗模型（Shared Spatial Experiences），成为远程与现场混合评审利器。" data-i18n-html-en="Co-located multi-user Shared Spatial Experiences let surgical or engineering teams inspect and annotate the exact same 3D hologram in real time.">支持同一房间多名佩戴者面对面协同批注同一个 3D 建筑/医疗模型（Shared Spatial Experiences），成为远程与现场混合评审利器。</div>
+ </div>
+ <div class="matrix-card">
+ <div class="matrix-card-head">
+ <div class="matrix-card-title" data-i18n-zh="2026.06 提价 +$200~$300：放弃跑量幻想、彻底贯彻奢侈级工作站定价" data-i18n-en="June 2026 +$200–$300 Hike: Embracing High-Margin Workstation Economics">2026.06 提价 +$200~$300：放弃跑量幻想、彻底贯彻奢侈级工作站定价</div>
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="$3,699 / $3,899 / $4,199" data-i18n-en="$3,699 / $3,899 / $4,199">$3,699 / $3,899 / $4,199</span>
+ </div>
+ <p class="matrix-card-body" data-i18n-html-zh="面对美光 16GB LPDDR5 与铠侠闪存成本飙涨 64.5%（由 $56.24 升至 $92.50）以及 $1,117 双硅基 OLED 成本，苹果于 2026-06-25 果断将起售价由 $3,499 上调至 $3,699（1TB 版涨 $300 至 $4,199） &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;AVP Price Hike ↗&lt;/a&gt;。" data-i18n-html-en="As 16GB LPDDR5 + 256GB NAND surged +64.5% to $92.50 alongside $1,117 Sony Micro-OLED panels, Apple raised Vision Pro MSRPs to $3,699–$4,199 on June 25, 2026 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;AVP Price Hike ↗&lt;/a&gt;.">面对美光 16GB LPDDR5 与铠侠闪存成本飙涨 64.5%（由 $56.24 升至 $92.50）以及 $1,117 双硅基 OLED 成本，苹果于 2026-06-25 果断将起售价由 $3,499 上调至 $3,699（1TB 版涨 $300 至 $4,199） <a class="cite-link" href="https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/" target="_blank" rel="noopener noreferrer">AVP Price Hike ↗</a>。</p>
+ <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail4"><span>展开微观技术与商业机制</span> <span>⌄</span></button>
+ <div class="collapse-panel" id="matrixDetail4" data-i18n-html-zh="这一定价动作释放出明确信号：在微显示供应链成本未出现数量级下降前，苹果绝不靠补贴亏本硬推消费级头显，而是确保每台 B2B 工作站维持 ~48%–52% 毛利空间。" data-i18n-html-en="Signals unmistakable discipline: Apple refuses to subsidize bulky headsets like Meta Reality Labs, preserving ~48%–52% hardware gross margin per unit.">这一定价动作释放出明确信号：在微显示供应链成本未出现数量级下降前，苹果绝不靠补贴亏本硬推消费级头显，而是确保每台 B2B 工作站维持 ~48%–52% 毛利空间。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 02 Four Core Moat Pillars & Radar -->
+ <section id="sec-02" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 02 · CORE MOAT PILLARS &amp; COMPETITIVE RADAR</div>
+ <h2 class="sec-h2" data-i18n-zh="二、Vision Pro 四大核心护城河：R1 零眩晕双芯、硅基光学锁产、B2B 独角戏与 visionOS 遗产" data-i18n-en="2. Four Structural Moat Pillars: R1 12ms Silicon, Micro-OLED Lock, Enterprise Monopoly &amp; visionOS">二、Vision Pro 四大核心护城河：R1 零眩晕双芯、硅基光学锁产、B2B 独角戏与 visionOS 遗产</h2>
+ <p class="sec-sub" data-i18n-zh="点击左侧任一护城河卡片，深入剖析为什么三星 $1,799 Galaxy XR 上市后仍难撼动 Vision Pro 的政企地位" data-i18n-en="Click any moat card on the left to inspect why $1,799 Android XR rivals haven&#x27;t displaced Vision Pro in B2B">点击左侧任一护城河卡片，深入剖析为什么三星 $1,799 Galaxy XR 上市后仍难撼动 Vision Pro 的政企地位</p>
+ </div>
+ <span class="mui-chip mui-chip-success" data-i18n-zh="护城河定性：超高端专业细分与下一代 OS 卡位型 (Pro Spatial &amp; OS Seed Moat)" data-i18n-en="Moat Rating: Enterprise Spatial Monopoly &amp; Next-Gen OS Seed Moat">护城河定性：超高端专业细分与下一代 OS 卡位型 (Pro Spatial &amp; OS Seed Moat)</span>
+ </div>
+
+ <div class="grid-radar">
+ <div class="pillar-stack" id="pillarStack">
+ <button type="button" class="pillar-card active" data-pillar="0">
+ <div class="pillar-head">
+ <span class="pillar-title" data-i18n-zh="01 · 专用 R1 实时传感芯片：12 毫秒光子延迟消除彩色透视眩晕" data-i18n-en="01 · Dedicated R1 Co-Processor: 12ms Photon-to-Photon Zero-Nausea Pass-Through">01 · 专用 R1 实时传感芯片：12 毫秒光子延迟消除彩色透视眩晕</span>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="12ms R1 Silicon" data-i18n-en="12ms R1 Silicon">12ms R1 Silicon</span>
+ </div>
+ <p class="pillar-desc" data-i18n-zh="单靠通用骁龙 XR2+ 芯片在重度渲染时易出现透视掉帧眩晕；苹果专门流片一颗 $106.95 的 R1 实时处理芯片硬连全部传感器，确保现实世界画面在 12 毫秒内恒定投射。" data-i18n-en="Single-chip XR headsets risk pass-through judder under heavy GPU load; Apple taped out a dedicated $106.95 R1 chip to guarantee 12ms real-world video pass-through.">单靠通用骁龙 XR2+ 芯片在重度渲染时易出现透视掉帧眩晕；苹果专门流片一颗 $106.95 的 R1 实时处理芯片硬连全部传感器，确保现实世界画面在 12 毫秒内恒定投射。</p>
+ </button>
+ <button type="button" class="pillar-card" data-pillar="1">
+ <div class="pillar-head">
+ <span class="pillar-title" data-i18n-zh="02 · 眼动注视点渲染（Foveated Rendering）与无手柄直觉交互专利墙" data-i18n-en="02 · Precision 4-Camera IR Eye Tracking &amp; Controller-Free UX Patents">02 · 眼动注视点渲染（Foveated Rendering）与无手柄直觉交互专利墙</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="Gaze + Pinch" data-i18n-en="Gaze + Pinch">Gaze + Pinch</span>
+ </div>
+ <p class="pillar-desc" data-i18n-zh="每只眼睛周围环绕高速红外相机与不可见 LED 光环，精准捕捉瞳孔微动：既让视线成为毫秒级光标，又仅在眼球注视中心全分辨率渲染、周边降采样省下巨量 GPU 功耗。" data-i18n-en="High-speed IR eye-tracking rings enable effortless gaze-and-pinch UI while focusing M5 GPU ray-tracing power strictly on the user&#x27;s foveal center.">每只眼睛周围环绕高速红外相机与不可见 LED 光环，精准捕捉瞳孔微动：既让视线成为毫秒级光标，又仅在眼球注视中心全分辨率渲染、周边降采样省下巨量 GPU 功耗。</p>
+ </button>
+ <button type="button" class="pillar-card" data-pillar="2">
+ <div class="pillar-head">
+ <span class="pillar-title" data-i18n-zh="03 · Meta 撤出政企赛道后的财富 100 强 HIPAA/MDM 合规独占权" data-i18n-en="03 · Unrivaled Fortune 100 MDM, Privacy &amp; HIPAA Healthcare Compliance">03 · Meta 撤出政企赛道后的财富 100 强 HIPAA/MDM 合规独占权</span>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="Enterprise Trust" data-i18n-en="Enterprise Trust">Enterprise Trust</span>
+ </div>
+ <p class="pillar-desc" data-i18n-zh="医院手术室患者数据与车企未发布原型车图纸严禁上传广告公司云端；苹果 Optic ID 虹膜级加密（眼动数据对 App 绝对隔离）与成熟企业级 MDM 设备管理赢得政企独家信任。" data-i18n-en="Hospitals and automakers refuse ad-subsidized headsets for confidential patient or prototype data; Optic ID isolation and Apple MDM win enterprise CIO sign-off.">医院手术室患者数据与车企未发布原型车图纸严禁上传广告公司云端；苹果 Optic ID 虹膜级加密（眼动数据对 App 绝对隔离）与成熟企业级 MDM 设备管理赢得政企独家信任。</p>
+ </button>
+ <button type="button" class="pillar-card" data-pillar="3">
+ <div class="pillar-head">
+ <span class="pillar-title" data-i18n-zh="04 · Mac / iPhone 空间生态协同（双 5K 虚拟巨幕 + 空间照片视频回放）" data-i18n-en="04 · Deep Mac &amp; iPhone Continuity (32:9 Virtual Display + Spatial Memories)">04 · Mac / iPhone 空间生态协同（双 5K 虚拟巨幕 + 空间照片视频回放）</span>
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="Continuity Loop" data-i18n-en="Continuity Loop">Continuity Loop</span>
+ </div>
+ <p class="pillar-desc" data-i18n-zh="数亿台 iPhone 15 Pro 至 iPhone 18 Pro 拍摄的空间视频与空间照片在 Vision Pro 上获得震撼等比还原，同时与 MacBook Pro 无缝共享键鼠与 32:9 超宽工作台。" data-i18n-en="Hundreds of millions of recent iPhones capture Spatial Videos tailored for Vision Pro playback, while Mac Virtual Display turns any MacBook into a mobile command center.">数亿台 iPhone 15 Pro 至 iPhone 18 Pro 拍摄的空间视频与空间照片在 Vision Pro 上获得震撼等比还原，同时与 MacBook Pro 无缝共享键鼠与 32:9 超宽工作台。</p>
+ </button>
+ <div id="pillarFocusNote" class="mui-alert" style="margin-top: 4px;">
+ <div><strong>当前选中支柱解读（01 双芯物理护城河）：</strong>在外科医生连续佩戴 2 小时审阅病灶或工程师走动巡检时，R1 带来的零画面撕裂与空间锚定稳如泰山是生死攸关的底层体验 <a class="cite-link" href="https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5" target="_blank" rel="noopener noreferrer">R1 Silicon Cost ↗</a>。</div>
+ </div>
+ </div>
+
+ <div class="chart-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+ <div>
+ <div class="chart-title" data-i18n-zh="全球主流空间计算（XR）与智能眼镜阵营五维能力雷达图（10分制评估）" data-i18n-en="5-Axis Global Spatial Computing &amp; XR Headwear Competitiveness Radar (10-Point Scale)">全球主流空间计算（XR）与智能眼镜阵营五维能力雷达图（10分制评估）</div>
+ <div class="chart-caption" data-i18n-zh="点击下方图例胶囊可开关对比曲线，悬停顶点查看细分维度评分" data-i18n-en="Click legend pills below to toggle peer curves; hover vertices for exact scores">点击下方图例胶囊可开关对比曲线，悬停顶点查看细分维度评分</div>
+ </div>
+ <div class="canvas-stage-tall">
+ <canvas id="chartRadar"></canvas>
+ </div>
+ <div class="chart-legend" id="radarLegend">
+ <button type="button" class="legend-pill" data-radar-key="s1"><span class="legend-dot" style="background:#3399FF;"></span><span data-i18n-zh="Apple Vision Pro (M5 + R1)" data-i18n-en="Apple Vision Pro (M5 + R1)">Apple Vision Pro (M5 + R1)</span></button>
+ <button type="button" class="legend-pill" data-radar-key="s2"><span class="legend-dot" style="background:#22C55E;"></span><span data-i18n-zh="Samsung Galaxy XR ($1,799)" data-i18n-en="Samsung Galaxy XR ($1,799)">Samsung Galaxy XR ($1,799)</span></button>
+ <button type="button" class="legend-pill" data-radar-key="s3"><span class="legend-dot" style="background:#FFB74D;"></span><span data-i18n-zh="Meta Quest 3 / 3S (大众娱乐)" data-i18n-en="Meta Quest 3 / 3S (Consumer VR)">Meta Quest 3 / 3S (大众娱乐)</span></button>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 03 Global Peer Matrix & BOM Breakdown -->
+ <section id="sec-03" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 03 · GLOBAL COMPETITIVE MATRIX &amp; BOM TEARDOWN</div>
+ <h2 class="sec-h2" data-i18n-zh="三、全球五大 XR / 空间计算竞品矩阵与 M5 Vision Pro ($1,800+ BOM) 精密拆解" data-i18n-en="3. Global Top-5 XR Competitor Matrix &amp; M5 Vision Pro ($1,800+ BOM) Teardown">三、全球五大 XR / 空间计算竞品矩阵与 M5 Vision Pro ($1,800+ BOM) 精密拆解</h2>
+ <p class="sec-sub" data-i18n-zh="支持按品牌、形态（硅基 OLED 头显 / VR 一体机 / 80g 分体 AR 眼镜）或芯片（M5+R1 / XR2+ Gen 2）实时筛选" data-i18n-en="Filter or search across Micro-OLED MR headsets, consumer VR, and 80g tethered AR glasses">支持按品牌、形态（硅基 OLED 头显 / VR 一体机 / 80g 分体 AR 眼镜）或芯片（M5+R1 / XR2+ Gen 2）实时筛选</p>
+ </div>
+ <span id="peerCountBadge" class="mui-chip mui-chip-primary mono"></span>
+ </div>
+
+ <div class="datagrid-toolbar">
+ <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索头显品牌 (Vision Pro / Galaxy XR / Quest 3 / XREAL / PICO)…" data-i18n-ph-zh="搜索头显品牌 (Vision Pro / Galaxy XR / Quest 3 / XREAL / PICO)…" data-i18n-ph-en="Search XR brand (Vision Pro / Galaxy XR / Quest 3 / XREAL / PICO)…" aria-label="筛选竞争对手" />
+ <div class="mui-segmented" role="group" aria-label="竞争阵营筛选">
+ <button type="button" class="mui-seg-btn active" data-peer-filter="all" data-i18n-zh="全部核心玩家" data-i18n-en="All XR Contenders">全部核心玩家</button>
+ <button type="button" class="mui-seg-btn" data-peer-filter="g1" data-i18n-zh="高端硅基 OLED 旗舰 (Apple / 三星)" data-i18n-en="High-End Micro-OLED MR">高端硅基 OLED 旗舰 (Apple / 三星)</button>
+ <button type="button" class="mui-seg-btn" data-peer-filter="g2" data-i18n-zh="大众 VR 与轻薄 AR 眼镜 (Meta / 索尼 / XREAL / PICO)" data-i18n-en="Consumer VR &amp; AR Glasses">大众 VR 与轻薄 AR 眼镜 (Meta / 索尼 / XREAL / PICO)</button>
+ </div>
+ </div>
+
+ <div class="table-wrap" style="margin-bottom: 20px;">
+ <table class="mui-table" aria-label="全球核心竞品横向对比表">
+ <thead>
+ <tr>
+ <th data-i18n-zh="品牌与 2026 主力型号" data-i18n-en="Vendor &amp; 2026 Hardware">品牌与 2026 主力型号</th>
+ <th data-i18n-zh="核心芯片与光学显示栈" data-i18n-en="Silicon &amp; Optical Stack">核心芯片与光学显示栈</th>
+ <th data-i18n-zh="2025–2026 出货量或份额" data-i18n-en="2025–2026 Volume / Share">2025–2026 出货量或份额</th>
+ <th data-i18n-zh="官方售价与商业定位" data-i18n-en="MSRP &amp; Commercial Model">官方售价与商业定位</th>
+ <th data-i18n-zh="主机重量与交互生态" data-i18n-en="Weight &amp; OS Ecosystem">主机重量与交互生态</th>
+ <th data-i18n-zh="对比 Vision Pro 优劣势及信源" data-i18n-en="Assessment vs. Vision Pro &amp; Source">对比 Vision Pro 优劣势及信源</th>
+ </tr>
+ </thead>
+ <tbody id="peerTableBody"></tbody>
+ </table>
+ </div>
+
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title" data-i18n-zh="Apple Vision Pro (M5 256GB · 含组装 ~$1,820 BOM) 硬件成本拆解占比（%）" data-i18n-en="Apple Vision Pro (M5 256GB · ~$1,820 Est. BOM w/ Assembly) Cost Share (%)">Apple Vision Pro (M5 256GB · 含组装 ~$1,820 BOM) 硬件成本拆解占比（%）</div>
+ <div class="chart-caption" data-i18n-zh="数据严格核验自 TechInsights 2026-09-11 M5 实拆报告（$1,116.88 显示总成 + $266.36 双芯 + $92.50 存储）及立讯精密组装基准" data-i18n-en="Verified from TechInsights&#x27; Sept 11, 2026 M5 teardown ($1,116.88 displays, $266.36 silicon, $92.50 memory) + Luxshare assembly">数据严格核验自 TechInsights 2026-09-11 M5 实拆报告（$1,116.88 显示总成 + $266.36 双芯 + $92.50 存储）及立讯精密组装基准</div>
+ </div>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="双索尼 120Hz 硅基屏独吞 &gt;61% BOM" data-i18n-en="Dual 120Hz Sony Displays Take &gt;61% of BOM">双索尼 120Hz 硅基屏独吞 &gt;61% BOM</span>
+ </div>
+ <div class="canvas-stage-bars">
+ <canvas id="chartBars"></canvas>
+ </div>
+ <div class="chart-legend">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="绿色/蓝色：索尼 120Hz 双硅基 Micro-OLED + EyeSight 显示总成与 M5 + R1 空间计算双芯" data-i18n-en="Green / Blue: Dual 120Hz Sony Micro-OLED + EyeSight Subsystems &amp; M5 + R1 Silicon Duo">绿色/蓝色：索尼 120Hz 双硅基 Micro-OLED + EyeSight 显示总成与 M5 + R1 空间计算双芯</span>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="紫色/琥珀色：12 摄像头+LiDAR+铝合金曲面前框组装、16GB 存储及降本后的外置电池头带" data-i18n-en="Purple / Amber: 12-Cam/LiDAR/Aluminum Frame Assembly, 16GB DRAM+NAND &amp; Optimized Battery/Strap">紫色/琥珀色：12 摄像头+LiDAR+铝合金曲面前框组装、16GB 存储及降本后的外置电池头带</span>
+ </div>
+ </div>
+ </section>
+
+ <!-- 04 Unit Economics & 5-Year Gross Profit Simulator -->
+ <section id="sec-04" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 04 · UNIT ECONOMICS &amp; 5-YEAR GROSS PROFIT SIMULATOR</div>
+ <h2 class="sec-h2" data-i18n-zh="四、超高端 B2B 单机经济模型（Ultra-ASP Workstation Economics）与五年推演" data-i18n-en="4. Ultra-ASP Enterprise Unit Economics &amp; 5-Year Gross Profit Simulator">四、超高端 B2B 单机经济模型（Ultra-ASP Workstation Economics）与五年推演</h2>
+ <p class="sec-sub" data-i18n-zh="量化对比：哪怕年销仅 20 万–35 万台，凭借 ~$4,000+ 含选配客单价亦能实现正向硬件毛利并自我造血孵化 visionOS" data-i18n-en="Even at 165K–350K annual units, ~$4,000+ enterprise bundles generate positive gross profit vs. Meta&#x27;s &gt;$15B/yr burn">量化对比：哪怕年销仅 20 万–35 万台，凭借 ~$4,000+ 含选配客单价亦能实现正向硬件毛利并自我造血孵化 visionOS</p>
+ </div>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="单台硬件毛利 ~$1,850+ · 对比竞品巨额补贴亏损" data-i18n-en="~$1,850+ Gross Profit / Unit vs. Subsidized VR Losses">单台硬件毛利 ~$1,850+ · 对比竞品巨额补贴亏损</span>
+ </div>
+
+ <div class="grid-4" style="margin-bottom: 18px;">
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">INDUSTRY ASP MULTIPLIER</span>
+ <div class="kpi-value mono" style="color: var(--mui-primary-lighter);">~10.2x <span style="font-size:0.85rem;font-weight:600;">vs $376</span></div>
+ <p class="kpi-desc" data-i18n-zh="Omdia 统计全球 XR 行业均价仅 $376，Vision Pro 含大容量与配件实际成交均价超 $3,900。" data-i18n-en="Trades at &gt;$3,900 blended ASP—over 10x Omdia&#x27;s $376 XR industry average—commanding disproportionate value share.">Omdia 统计全球 XR 行业均价仅 $376，Vision Pro 含大容量与配件实际成交均价超 $3,900。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">GROSS PROFIT PER HEADSET</span>
+ <div class="kpi-value mono" style="color: var(--mui-success-text);">~$1,880+</div>
+ <p class="kpi-desc" data-i18n-zh="以 $3,699 起售价对比 ~$1,820 物料组装成本，每售出一台即收回约 $1,880 毛利反哺空间计算研发。" data-i18n-en="At $3,699 base vs. ~$1,820 BOM+assembly, every unit yields ~$1,880+ in gross profit rather than bleeding cash.">以 $3,699 起售价对比 ~$1,820 物料组装成本，每售出一台即收回约 $1,880 毛利反哺空间计算研发。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">PRO BUNDLE TICKET</span>
+ <div class="kpi-value mono" style="color: var(--mui-warning-text);">$4,497+</div>
+ <p class="kpi-desc" data-i18n-zh="企业采购 512GB ($3,899) + AppleCare+ ($499) + 旅行壳/开发者带，单套成交额普遍突破 $4,500。" data-i18n-en="Enterprise 512GB ($3,899) + AppleCare+ ($499) + Travel Case/Dev Strap routinely pushes tickets past $4,500.">企业采购 512GB ($3,899) + AppleCare+ ($499) + 旅行壳/开发者带，单套成交额普遍突破 $4,500。</p>
+ </div>
+ <div class="mui-paper kpi-card">
+ <span class="kpi-label mono">META REALITY LABS CONTRAST</span>
+ <div class="kpi-value mono" style="color: var(--mui-violet-text);">>$70B Burn</div>
+ <p class="kpi-desc" data-i18n-zh="Meta Reality Labs 累计巨亏超 700 亿美元换低价份额，苹果则坚持“小规模也必须正毛利”财务铁律。" data-i18n-en="While Meta burned &gt;$70B cumulative subsidizing VR volume, Apple enforces positive unit gross margin from unit one.">Meta Reality Labs 累计巨亏超 700 亿美元换低价份额，苹果则坚持“小规模也必须正毛利”财务铁律。</p>
+ </div>
+ </div>
+
+ <div class="chart-card">
+ <div class="chart-toolbar">
+ <div>
+ <div class="chart-title" data-i18n-zh="全球四大空间计算设备单机经济学分野：官方起售价 ($) vs 单机物料占售价比 BOM/MSRP (%)" data-i18n-en="Global XR Unit Economics Contrast: Starting MSRP ($) vs. Hardware BOM-to-MSRP Ratio (%)">全球四大空间计算设备单机经济学分野：官方起售价 ($) vs 单机物料占售价比 BOM/MSRP (%)</div>
+ <div class="chart-caption" data-i18n-zh="柱状图（左轴）为各代表头显起售价；折线（右轴）为 BOM 占零售价比例（Quest 3 高达 ~85%+ 贴成本卖，Vision Pro 约 49%）" data-i18n-en="Bars (left axis): Starting MSRP ($); Line (right axis): Est. BOM % of MSRP (~85%+ subsidized VR vs. ~49% on Vision Pro)">柱状图（左轴）为各代表头显起售价；折线（右轴）为 BOM 占零售价比例（Quest 3 高达 ~85%+ 贴成本卖，Vision Pro 约 49%）</div>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="2026.06 提价稳守 ~50% 硬件毛利空间" data-i18n-en="June 2026 Hike Preserves ~50% Gross Margin">2026.06 提价稳守 ~50% 硬件毛利空间</span>
+ </div>
+ <div class="chart-axis-meta mono">
+ <span style="color:var(--chart-c1);" data-i18n-zh="■ 左轴：官方起售零售价 ($)" data-i18n-en="■ Left Axis: Official Starting MSRP ($)">■ 左轴：官方起售零售价 ($)</span>
+ <span style="color:var(--chart-c2);" data-i18n-zh="● 右轴：硬件 BOM 占零售价比重 (%)" data-i18n-en="● Right Axis: Est. BOM as % of MSRP (%)">● 右轴：硬件 BOM 占零售价比重 (%)</span>
+ </div>
+ <div class="canvas-stage">
+ <canvas id="chartEps"></canvas>
+ </div>
+ <div class="chart-legend" id="epsLegend">
+ <button type="button" class="legend-pill" data-eps-series="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span data-i18n-zh="各代表 XR 头显官方起售价 (左轴 · $)" data-i18n-en="Representative XR Headset Starting MSRP (Left · $)">各代表 XR 头显官方起售价 (左轴 · $)</span></button>
+ <button type="button" class="legend-pill" data-eps-series="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span data-i18n-zh="硬件物料与组装占售价比 BOM/MSRP (右轴 · %)" data-i18n-en="Est. BOM + Assembly % of MSRP (Right · %)">硬件物料与组装占售价比 BOM/MSRP (右轴 · %)</span></button>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="--- 55.0% 苹果健康硬件成本上限" data-i18n-en="--- 55.0% Healthy Hardware BOM Ceiling">--- 55.0% 苹果健康硬件成本上限</span>
+ </div>
+ </div>
+
+ <div class="simulator-grid">
+ <div class="sim-controls">
+ <div>
+ <div class="sec-eyebrow mono" style="margin-bottom:2px;">INTERACTIVE UNIT ECONOMICS SIMULATOR</div>
+ <h3 style="font-size:1rem;font-weight:800;" data-i18n-zh="Apple Vision Pro 空间工作站五年营收与毛利推演测算器" data-i18n-en="Apple Vision Pro 5-Year Enterprise Revenue &amp; Gross Profit Simulator">Apple Vision Pro 空间工作站五年营收与毛利推演测算器</h3>
+ </div>
+
+ <label class="mui-switch-row" for="simMixToggle">
+ <div>
+ <div style="font-size:0.84rem;font-weight:700;color:var(--text-primary);" data-i18n-zh="计入 512GB/1TB 大容量、AppleCare+ ($499) 与蔡司/手柄企业选配 (+$340 均价)" data-i18n-en="Include 512GB/1TB Storage, $499 AppleCare+ &amp; Enterprise Accessories (+$340 ASP)">计入 512GB/1TB 大容量、AppleCare+ ($499) 与蔡司/手柄企业选配 (+$340 均价)</div>
+ <div style="font-size:0.74rem;color:var(--text-secondary);" data-i18n-zh="模拟 ~75% 政企与专业机构采购大容量配置、开发者带及高毛利维保服务带来的 ARPU 增厚" data-i18n-en="Simulates ~75% enterprise fleet orders attaching higher storage, AppleCare+, ZEISS inserts &amp; controllers">模拟 ~75% 政企与专业机构采购大容量配置、开发者带及高毛利维保服务带来的 ARPU 增厚</div>
+ </div>
+ <input type="checkbox" id="simMixToggle" checked />
+ </label>
+
+ <div class="preset-stack" role="group" aria-label="单机经济情景预设">
+ <button type="button" class="preset-btn active" data-preset="p1">
+ <span data-i18n-zh="① 2026–2027 M5 政企稳态基准" data-i18n-en="① 2026–2027 M5 Enterprise Baseline">① 2026–2027 M5 政企稳态基准</span>
+ <span class="mono" data-i18n-zh="180K台 · ~$0.74B营收" data-i18n-en="180K · ~$0.74B Rev">180K台 · ~$0.74B营收</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p2">
+ <span data-i18n-zh="② 医疗/航空车企规模部署 + 二代硅基降本" data-i18n-en="② Fortune 100 Fleet Scale + OLED Yield Bull">② 医疗/航空车企规模部署 + 二代硅基降本</span>
+ <span class="mono" data-i18n-zh="350K台 · 毛利扩张" data-i18n-en="350K · Fleet Scale">350K台 · 毛利扩张</span>
+ </button>
+ <button type="button" class="preset-btn" data-preset="p3">
+ <span data-i18n-zh="③ $3,699+ 高价抑制需求小众保守情景" data-i18n-en="③ Niche High-Price Volume Floor">③ $3,699+ 高价抑制需求小众保守情景</span>
+ <span class="mono" data-i18n-zh="100K台 · 仅核心B2B" data-i18n-en="100K · Core Niche">100K台 · 仅核心B2B</span>
+ </button>
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span data-i18n-zh="年均 Vision Pro 出货量 (千台 / Thousand Units)" data-i18n-en="Annual Vision Pro Shipments (Thousand Units / K)">年均 Vision Pro 出货量 (千台 / Thousand Units)</span>
+ <span id="simUnitsLabel" class="slider-val mono"></span>
+ </div>
+ <input type="range" id="simUnitsSlider" class="mui-slider" min="80" max="600" step="10" value="180" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span data-i18n-zh="主机基础成交均价 ASP (USD)" data-i18n-en="Base Host Headset ASP (USD)">主机基础成交均价 ASP (USD)</span>
+ <span id="simAspLabel" class="slider-val mono"></span>
+ </div>
+ <input type="range" id="simAspSlider" class="mui-slider" min="3500" max="4200" step="50" value="3780" />
+ </div>
+
+ <div class="slider-group">
+ <div class="slider-head">
+ <span data-i18n-zh="含 $1,117 硅基屏与组装硬件 BOM 成本率 (%)" data-i18n-en="Micro-OLED, Dual-Silicon &amp; Assembly BOM Ratio (%)">含 $1,117 硅基屏与组装硬件 BOM 成本率 (%)</span>
+ <span id="simBomLabel" class="slider-val mono"></span>
+ </div>
+ <input type="range" id="simBomSlider" class="mui-slider" min="42" max="62" step="0.5" value="50.5" />
+ </div>
+ </div>
+
+ <div class="sim-output-panel">
+ <div class="sim-readouts">
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="年化 Vision Pro 空间计算净营收" data-i18n-en="Annualized Vision Pro Net Revenue">年化 Vision Pro 空间计算净营收</div>
+ <div id="simAnnualRevVal" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);"></div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="年化硬件毛利润 / 隐含毛利率" data-i18n-en="Annual Gross Profit / Implied GM%">年化硬件毛利润 / 隐含毛利率</div>
+ <div id="simAnnualGpVal" class="sim-stat-num mono" style="color:var(--mui-success-text);"></div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="含配件综合单价 / 单台毛利额" data-i18n-en="Blended Ticket / Gross Profit per Unit">含配件综合单价 / 单台毛利额</div>
+ <div id="simPerUnitVal" class="sim-stat-num mono"></div>
+ </div>
+ <div class="sim-stat-box">
+ <div class="sim-stat-label" data-i18n-zh="5 年累计反哺空间研发毛利池" data-i18n-en="5-Year Cumulative R&amp;D Self-Funding GP">5 年累计反哺空间研发毛利池</div>
+ <div id="simFiveYrVal" class="sim-stat-num mono"></div>
+ </div>
+ </div>
+
+ <div class="canvas-stage-sim">
+ <canvas id="chartSim"></canvas>
+ </div>
+ <div class="chart-legend" style="margin-top:4px;">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="━ 累计产品线净营收轨迹 (5年)" data-i18n-en="━ Cumulative Segment Net Revenue (5Y)">━ 累计产品线净营收轨迹 (5年)</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="- - 累计创造硬件毛利润池 (5年)" data-i18n-en="- - Cumulative Hardware Gross Profit (5Y)">- - 累计创造硬件毛利润池 (5年)</span>
+ </div>
+ <div class="chart-caption" data-i18n-zh="悬停曲线可逐年对比不同销量、高溢价配置搭售与 BOM 成本假设下的 5 年累计营收与毛利润。" data-i18n-en="Hover along the curves to inspect year-by-year cumulative segment revenue vs. hardware gross profit.">悬停曲线可逐年对比不同销量、高溢价配置搭售与 BOM 成本假设下的 5 年累计营收与毛利润。</div>
+ </div>
+ </div>
+
+ <div class="grid-2" style="margin-top: 18px;">
+ <div class="mui-alert mui-alert-success" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-success mono">STRUCTURAL MOAT</span>
+ <strong data-i18n-zh="Vision Pro 对苹果长期未来的三大战略意义" data-i18n-en="Vision Pro&#x27;s Three Enduring Strategic Contributions">Vision Pro 对苹果长期未来的三大战略意义</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-html-zh="&lt;strong&gt;1. 提前锁定未来 AI 眼镜操作系统：&lt;/strong&gt;visionOS 的空间窗口、眼动微交互与空间音频已完成三年商业级实战打磨。&lt;br/&gt;&lt;strong&gt;2. 零补贴占领高价值 B2B 制高点：&lt;/strong&gt;在外科手术、航空仿真与汽车设计领域建立极高专业认证壁垒。&lt;br/&gt;&lt;strong&gt;3. 牵引硅基 Micro-OLED 顶级光学供应链：&lt;/strong&gt;保持对超微型高亮度近眼显示工艺的一线掌控力。" data-i18n-html-en="&lt;strong&gt;1. Battle-Testing visionOS for Smart Glasses:&lt;/strong&gt; Spatial UI, gaze tracking, and Visual Intelligence are production-hardened ahead of Apple eyewear.&lt;br/&gt;&lt;strong&gt;2. Profitable Enterprise Monopoly:&lt;/strong&gt; Owns high-ROI medical, aviation, and CAD verticals vacated by Meta.&lt;br/&gt;&lt;strong&gt;3. Micro-Display Supply Chain Mastery:&lt;/strong&gt; Anchors cutting-edge Micro-OLED optics."><strong>1. 提前锁定未来 AI 眼镜操作系统：</strong>visionOS 的空间窗口、眼动微交互与空间音频已完成三年商业级实战打磨。<br/><strong>2. 零补贴占领高价值 B2B 制高点：</strong>在外科手术、航空仿真与汽车设计领域建立极高专业认证壁垒。<br/><strong>3. 牵引硅基 Micro-OLED 顶级光学供应链：</strong>保持对超微型高亮度近眼显示工艺的一线掌控力。</p>
+ </div>
+
+ <div class="mui-alert mui-alert-warning" style="flex-direction:column; gap:8px;">
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span class="mui-chip mui-chip-warning mono">RISK &amp; HEADWINDS</span>
+ <strong data-i18n-zh="不可回避的物理与商业局限性" data-i18n-en="Unavoidable Physical &amp; Mass-Market Constraints">不可回避的物理与商业局限性</strong>
+ </div>
+ <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-html-zh="&lt;strong&gt;1. 750–800g 重量与封闭感决定非大众日常设备：&lt;/strong&gt;即便钨配重头带改善平衡，滑雪镜形态仍无法像手机或 50g 眼镜那样全天出街佩戴。&lt;br/&gt;&lt;strong&gt;2. $1,117 硅基屏锁死降价空间：&lt;/strong&gt;索尼双 120Hz Micro-OLED 单项成本破千美元，直接导致平价“Vision Air”于 2026.05 被搁置 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/07/08/cheaper-apple-vision-pro-display-work-ended/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Vision Air Shelved ↗&lt;/a&gt;。&lt;br/&gt;&lt;strong&gt;3. C 端大众杀手级高频应用匮乏：&lt;/strong&gt;除私人巨幕观影与 Mac 虚拟副屏外，普通家庭用户周活留存率偏低。" data-i18n-html-en="&lt;strong&gt;1. 750–800g Ski-Goggle Ergonomics:&lt;/strong&gt; Even with tungsten counterweights, enclosed headsets cannot replace all-day 50g eyewear.&lt;br/&gt;&lt;strong&gt;2. $1,117 Display BOM Floor:&lt;/strong&gt; Prohibitive Micro-OLED costs forced Apple to shelve a cheaper consumer headset in May 2026 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/07/08/cheaper-apple-vision-pro-display-work-ended/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Vision Air Shelved ↗&lt;/a&gt;.&lt;br/&gt;&lt;strong&gt;3. Limited Consumer Daily Habit:&lt;/strong&gt; Outside Mac Virtual Display and flights, mainstream consumer retention remains niche."><strong>1. 750–800g 重量与封闭感决定非大众日常设备：</strong>即便钨配重头带改善平衡，滑雪镜形态仍无法像手机或 50g 眼镜那样全天出街佩戴。<br/><strong>2. $1,117 硅基屏锁死降价空间：</strong>索尼双 120Hz Micro-OLED 单项成本破千美元，直接导致平价“Vision Air”于 2026.05 被搁置 <a class="cite-link" href="https://www.macrumors.com/2026/07/08/cheaper-apple-vision-pro-display-work-ended/" target="_blank" rel="noopener noreferrer">Vision Air Shelved ↗</a>。<br/><strong>3. C 端大众杀手级高频应用匮乏：</strong>除私人巨幕观影与 Mac 虚拟副屏外，普通家庭用户周活留存率偏低。</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- 05 Historical Evolution & Landmark Battles -->
+ <section id="sec-05" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 05 · PARADIGM EVOLUTION &amp; LANDMARK BATTLES</div>
+ <h2 class="sec-h2" data-i18n-zh="五、空间计算三阶段战略演进与四大关键抉择：从消费级狂热回归 B2B 务实与 AI 眼镜终局" data-i18n-en="5. Three-Stage Spatial Evolution &amp; Key Decisions: From Launch Hype to B2B &amp; Smart Glasses">五、空间计算三阶段战略演进与四大关键抉择：从消费级狂热回归 B2B 务实与 AI 眼镜终局</h2>
+ <p class="sec-sub" data-i18n-zh="复盘 2023–2026 苹果如何迅速修正航向，避免重蹈竞争对手数百亿美元沉没亏损覆辙" data-i18n-en="How Apple Course-Corrected Rapidly Between 2024 and 2026 Without Burning Billions">复盘 2023–2026 苹果如何迅速修正航向，避免重蹈竞争对手数百亿美元沉没亏损覆辙</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="Lisa I → Pro Mac 级商业站位 → AI 眼镜终局" data-i18n-en="2024 Debut → Enterprise Anchor → AI Eyewear Arc">Lisa I → Pro Mac 级商业站位 → AI 眼镜终局</span>
+ </div>
+
+ <div class="mui-timeline">
+ <div class="timeline-step">
+ <span class="timeline-dot"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;" data-i18n-zh="第一阶段 · 惊艳世界的“空间计算机”首秀 (2023.06–2024) —— M2+R1 确立行业技术天花板" data-i18n-en="Stage I · Defining Spatial Computing (2023–2024) — M2+R1 Sets the Technical Ceiling">第一阶段 · 惊艳世界的“空间计算机”首秀 (2023.06–2024) —— M2+R1 确立行业技术天花板</strong>
+ <span class="mui-chip mono" data-i18n-zh="首年创收 ~$13.7 亿美元" data-i18n-en="~$1.37B Year-One Revenue">首年创收 ~$13.7 亿美元</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-html-zh="2023 WWDC 发布、2024 年 2 月在美开售初代 Vision Pro ($3,499)，首年出货约 39 万台即拿走全球 AR/VR 头显市场约四分之一销售额，以眼手无手柄交互震惊业界，但也暴露出前倾压脸与 C 端复购乏力问题 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2024/01/apple-vision-pro-available-in-the-us-on-february-2/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;2024 Launch ↗&lt;/a&gt;。" data-i18n-html-en="Launched Feb 2024 at $3,499; ~390K year-one units captured ~25% of global XR headset revenue and set the benchmark for eye-hand UI, while exposing weight and consumer price friction &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2024/01/apple-vision-pro-available-in-the-us-on-february-2/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;2024 Launch ↗&lt;/a&gt;.">2023 WWDC 发布、2024 年 2 月在美开售初代 Vision Pro ($3,499)，首年出货约 39 万台即拿走全球 AR/VR 头显市场约四分之一销售额，以眼手无手柄交互震惊业界，但也暴露出前倾压脸与 C 端复购乏力问题 <a class="cite-link" href="https://www.apple.com/newsroom/2024/01/apple-vision-pro-available-in-the-us-on-february-2/" target="_blank" rel="noopener noreferrer">2024 Launch ↗</a>。</p>
+ </div>
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#3399FF;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;" data-i18n-zh="第二阶段 · M5 算力换代、人体工学补课与 6DoF 手柄开放 (2025.10)" data-i18n-en="Stage II · M5 120Hz Refresh, Tungsten Ergonomics &amp; Open 6DoF Input (Oct 2025)">第二阶段 · M5 算力换代、人体工学补课与 6DoF 手柄开放 (2025.10)</strong>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="务实倾听专业用户反馈" data-i18n-en="Pragmatic Pro Refinement">务实倾听专业用户反馈</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-html-zh="2025 年 10 月快速推出 M5 升级版：将屏幕刷新率推至 120Hz、研发钨金属平衡双圈编织头带解决佩戴痛点，并放下身段原生兼容索尼 PS VR2 手柄与罗技 Muse 空间笔，大幅拓宽工业设计与专业仿真边界 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Oct 2025 M5 Upgrade ↗&lt;/a&gt;。" data-i18n-html-en="Upgraded rapidly to 3nm M5 with 120Hz Micro-OLED, the tungsten-balanced Dual Knit Band, and native PS VR2 Sense + Logitech Muse support for pro workflows &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Oct 2025 M5 Upgrade ↗&lt;/a&gt;.">2025 年 10 月快速推出 M5 升级版：将屏幕刷新率推至 120Hz、研发钨金属平衡双圈编织头带解决佩戴痛点，并放下身段原生兼容索尼 PS VR2 手柄与罗技 Muse 空间笔，大幅拓宽工业设计与专业仿真边界 <a class="cite-link" href="https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/" target="_blank" rel="noopener noreferrer">Oct 2025 M5 Upgrade ↗</a>。</p>
+ </div>
+ <div class="timeline-step">
+ <span class="timeline-dot" style="background:#22C55E;"></span>
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+ <strong style="font-size:0.95rem;" data-i18n-zh="第三阶段 · 承接政企独占红利、提价保毛利并全力转向轻量化 AI 眼镜 (2026+)" data-i18n-en="Stage III · Enterprise Consolidation, Margin Defense &amp; Smart Glasses Pivot (2026+)">第三阶段 · 承接政企独占红利、提价保毛利并全力转向轻量化 AI 眼镜 (2026+)</strong>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="B2B 占 ~75% + 眼镜主航道" data-i18n-en="~75% B2B + Glasses Priority">B2B 占 ~75% + 眼镜主航道</span>
+ </div>
+ <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-html-zh="2026 年初全面接管 Meta 退出后的财富百强政企市场，5 月果断暂停平价头显转向轻量化智能眼镜，6 月提价至 $3,699–$4,199 对冲存储与 120Hz 面板涨价，9 月发布 visionOS 27 深化空间视觉 AI &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/07/08/cheaper-apple-vision-pro-display-work-ended/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;2026 Pivot ↗&lt;/a&gt;。" data-i18n-html-en="Captured enterprise demand post-Meta&#x27;s exit, shelved mid-tier headset plans in May 2026 to prioritize smart glasses, and repriced to $3,699–$4,199 in June to safeguard margins &lt;a class=&quot;cite-link&quot; href=&quot;https://www.macrumors.com/2026/07/08/cheaper-apple-vision-pro-display-work-ended/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;2026 Pivot ↗&lt;/a&gt;.">2026 年初全面接管 Meta 退出后的财富百强政企市场，5 月果断暂停平价头显转向轻量化智能眼镜，6 月提价至 $3,699–$4,199 对冲存储与 120Hz 面板涨价，9 月发布 visionOS 27 深化空间视觉 AI <a class="cite-link" href="https://www.macrumors.com/2026/07/08/cheaper-apple-vision-pro-display-work-ended/" target="_blank" rel="noopener noreferrer">2026 Pivot ↗</a>。</p>
+ </div>
+ </div>
+
+ <div class="grid-2" style="margin-bottom: 18px;">
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="抉择 01 · 2026.02–11" data-i18n-en="Decision 01 · 2026">抉择 01 · 2026.02–11</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="B2B 战场清场" data-i18n-en="Enterprise Takeover">B2B 战场清场</span>
+ </div>
+ <h3 data-i18n-zh="Meta 关停商用 Quest 与 Workrooms，苹果顺势一统财富百强医疗航空" data-i18n-en="Capitalizing on Meta&#x27;s Feb 2026 Enterprise Exit Across Fortune 100 Accounts">Meta 关停商用 Quest 与 Workrooms，苹果顺势一统财富百强医疗航空</h3>
+ <p data-i18n-html-zh="当 Meta 承认低价游戏头显在政企市场无利可图并关停商用线后，苹果凭借 HIPAA 级隐私隔离与 M5 双 4K 精度顺理成章垄断外科手术与飞行模拟高客单市场 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2024/03/apple-vision-pro-unlocks-new-opportunities-for-health-app-developers/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Surgical Spatial ↗&lt;/a&gt;。" data-i18n-html-en="When Meta shuttered commercial Quest SKUs and Workrooms in Feb 2026, Vision Pro became the undisputed standard for surgical planning and aviation training &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2024/03/apple-vision-pro-unlocks-new-opportunities-for-health-app-developers/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Surgical Spatial ↗&lt;/a&gt;.">当 Meta 承认低价游戏头显在政企市场无利可图并关停商用线后，苹果凭借 HIPAA 级隐私隔离与 M5 双 4K 精度顺理成章垄断外科手术与飞行模拟高客单市场 <a class="cite-link" href="https://www.apple.com/newsroom/2024/03/apple-vision-pro-unlocks-new-opportunities-for-health-app-developers/" target="_blank" rel="noopener noreferrer">Surgical Spatial ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="抉择 02 · 2026.05" data-i18n-en="Decision 02 · May 2026">抉择 02 · 2026.05</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="及时止损转向" data-i18n-en=" disciplined Capital Alloc">及时止损转向</span>
+ </div>
+ <h3 data-i18n-zh="砍掉尴尬的“$1,999 减配头显”，把精锐团队调往全天候 AI 眼镜" data-i18n-en="Killing Half-Measure &#x27;Vision Air&#x27; to Go All-In on Lightweight AI Glasses">砍掉尴尬的“$1,999 减配头显”，把精锐团队调往全天候 AI 眼镜</h3>
+ <p data-i18n-html-zh="Omdia 数据显示 2026 年不带重屏的 AI 智能眼镜增速是传统头显数倍；苹果拒绝推出既不够轻便又牺牲画质的半吊子廉价头显，避免研发资源错配 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.businesswire.com/news/home/20260616011033/en/Omdia-XR-Headwear-Market-Set-for-Growth-From-2027-as-Industry-Attention-Shifts-From-Headsets-to-Glasses&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Omdia Glasses Shift ↗&lt;/a&gt;。" data-i18n-html-en="With Omdia tracking rapid industry migration from headsets to smart glasses, Apple wisely skipped a compromised mid-tier headset to focus on eyewear &lt;a class=&quot;cite-link&quot; href=&quot;https://www.businesswire.com/news/home/20260616011033/en/Omdia-XR-Headwear-Market-Set-for-Growth-From-2027-as-Industry-Attention-Shifts-From-Headsets-to-Glasses&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Omdia Glasses Shift ↗&lt;/a&gt;.">Omdia 数据显示 2026 年不带重屏的 AI 智能眼镜增速是传统头显数倍；苹果拒绝推出既不够轻便又牺牲画质的半吊子廉价头显，避免研发资源错配 <a class="cite-link" href="https://www.businesswire.com/news/home/20260616011033/en/Omdia-XR-Headwear-Market-Set-for-Growth-From-2027-as-Industry-Attention-Shifts-From-Headsets-to-Glasses" target="_blank" rel="noopener noreferrer">Omdia Glasses Shift ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="抉择 03 · 2025.10" data-i18n-en="Decision 03 · Oct 2025">抉择 03 · 2025.10</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="打破教条主义" data-i18n-en="Ecosystem Openness">打破教条主义</span>
+ </div>
+ <h3 data-i18n-zh="拥抱索尼 PS VR2 手柄与罗技空间笔，补齐毫米级工业创作短板" data-i18n-en="Embracing Third-Party PS VR2 Controllers &amp; Logitech Muse Spatial Stylus">拥抱索尼 PS VR2 手柄与罗技空间笔，补齐毫米级工业创作短板</h3>
+ <p data-i18n-html-zh="初代坚持“纯手势零手柄”虽优雅，但难以提供触觉反馈与工业毫米级空间点选；M5 版果断开放索尼与罗技外设接入，赢得 3D 设计师喝彩 &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;6DoF Controllers ↗&lt;/a&gt;。" data-i18n-html-en="Pure hand tracking excelled at browsing, but opening visionOS to Sony 6DoF haptics and Logitech&#x27;s spatial pen unlocked precision CAD and gaming &lt;a class=&quot;cite-link&quot; href=&quot;https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;6DoF Controllers ↗&lt;/a&gt;.">初代坚持“纯手势零手柄”虽优雅，但难以提供触觉反馈与工业毫米级空间点选；M5 版果断开放索尼与罗技外设接入，赢得 3D 设计师喝彩 <a class="cite-link" href="https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/" target="_blank" rel="noopener noreferrer">6DoF Controllers ↗</a>。</p>
+ </div>
+ <div class="feature-card">
+ <div style="display:flex;justify-content:space-between;align-items:center;">
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="抉择 04 · 2025–2026" data-i18n-en="Decision 04 · 2025–2026">抉择 04 · 2025–2026</span>
+ <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="制造工程内功" data-i18n-en="BOM Engineering">制造工程内功</span>
+ </div>
+ <h3 data-i18n-zh="电源与头带降本 56% + 售价上调 $200，顶住 $1,117 硅基屏涨价" data-i18n-en="Combining 56% Battery/Strap BOM Cuts with June 2026 Pricing Discipline">电源与头带降本 56% + 售价上调 $200，顶住 $1,117 硅基屏涨价</h3>
+ <p data-i18n-html-zh="一边在内部将非光学外围组件成本砍半，一边在终端向低价格弹性政企客户顺畅传导 +$200–$300 涨价，展示了教科书级小批量超高端硬件盈利管理 &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;TechInsights BOM ↗&lt;/a&gt;。" data-i18n-html-en="Halving battery/strap BOM while passing through +$200–$300 MSRPs to price-inelastic enterprise buyers kept Vision Pro gross-margin positive &lt;a class=&quot;cite-link&quot; href=&quot;https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;TechInsights BOM ↗&lt;/a&gt;.">一边在内部将非光学外围组件成本砍半，一边在终端向低价格弹性政企客户顺畅传导 +$200–$300 涨价，展示了教科书级小批量超高端硬件盈利管理 <a class="cite-link" href="https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5" target="_blank" rel="noopener noreferrer">TechInsights BOM ↗</a>。</p>
+ </div>
+ </div>
+
+ <div class="grid-3">
+ <div class="mui-alert">
+ <div data-i18n-html-zh="&lt;strong&gt;空间法则一：&lt;/strong&gt;正如 1983 年 Apple Lisa 为 Macintosh 探路，Vision Pro 的首要历史使命是在真实商业场景中提前催熟 visionOS。" data-i18n-html-en="&lt;strong&gt;Spatial Law 01:&lt;/strong&gt; Like the 1983 Lisa before Macintosh, Vision Pro&#x27;s highest calling is maturing visionOS before mass-market eyewear arrives."><strong>空间法则一：</strong>正如 1983 年 Apple Lisa 为 Macintosh 探路，Vision Pro 的首要历史使命是在真实商业场景中提前催熟 visionOS。</div>
+ </div>
+ <div class="mui-alert">
+ <div data-i18n-html-zh="&lt;strong&gt;空间法则二：&lt;/strong&gt;当双硅基 OLED 物理成本高达 $1,117 时，定位于 $3,699 外科/航空专业工作站远比亏百亿补贴游戏机明智。" data-i18n-html-en="&lt;strong&gt;Spatial Law 02:&lt;/strong&gt; When Micro-OLED optics cost $1,117 alone, pricing at $3,699+ for high-ROI B2B beats subsidizing VR games at a loss."><strong>空间法则二：</strong>当双硅基 OLED 物理成本高达 $1,117 时，定位于 $3,699 外科/航空专业工作站远比亏百亿补贴游戏机明智。</div>
+ </div>
+ <div class="mui-alert">
+ <div data-i18n-html-zh="&lt;strong&gt;空间法则三：&lt;/strong&gt;封闭厚重头显终归属于室内与专业岗位，全天候大众消费级空间计算的终局必然是 &lt;60 克 AI 眼镜。" data-i18n-html-en="&lt;strong&gt;Spatial Law 03:&lt;/strong&gt; Ski-goggle headsets own stationary pro studios; all-day consumer spatial computing belongs to sub-60g smart glasses."><strong>空间法则三：</strong>封闭厚重头显终归属于室内与专业岗位，全天候大众消费级空间计算的终局必然是 <60 克 AI 眼镜。</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 06 Interactive Hardware Moat Checklist -->
+ <section id="sec-06" class="mui-paper section-block">
+ <div class="sec-header">
+ <div>
+ <div class="sec-eyebrow mono">CHAPTER 06 · INTERACTIVE HARDWARE MOAT CHECKLIST</div>
+ <h2 class="sec-h2" data-i18n-zh="六、Apple Vision Pro 空间计算与 B2B 生态护城河交互式核查清单" data-i18n-en="6. Interactive Apple Vision Pro Spatial &amp; Enterprise Moat Checklist">六、Apple Vision Pro 空间计算与 B2B 生态护城河交互式核查清单</h2>
+ <p class="sec-sub" data-i18n-zh="用于持续评估 Vision Pro 的政企渗透率、第二供货商硅基屏降本进展及向苹果 AI 眼镜的技术转化" data-i18n-en="Assess Vision Pro&#x27;s Fortune 100 stickiness, Micro-OLED cost curve, and technology transfer to AI glasses">用于持续评估 Vision Pro 的政企渗透率、第二供货商硅基屏降本进展及向苹果 AI 眼镜的技术转化</p>
+ </div>
+ <div style="display:flex;align-items:center;gap:8px;">
+ <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono"></span>
+ <button type="button" id="checkAllBtn" class="mui-btn" data-i18n-zh="全部勾选" data-i18n-en="Check All">全部勾选</button>
+ <button type="button" id="resetCheckBtn" class="mui-btn" data-i18n-zh="重置清单" data-i18n-en="Reset">重置清单</button>
+ </div>
+ </div>
+
+ <div class="progress-track" aria-label="核查完成度进度条">
+ <div id="checklistProgressBar" class="progress-fill"></div>
+ </div>
+
+ <div id="checklistContainer" class="checklist-grid"></div>
+ </section>
+
+ <!-- 07 Primary Sources & Disclosure Footer -->
+ <footer id="sec-07" class="mui-paper section-block" style="padding: 22px 26px;">
+ <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;">
+ <strong style="font-size:0.92rem;" data-i18n-zh="数据来源与一手财报 / 发布会 / 行业拆解核验索引（SEC EDGAR &amp; Official Releases）" data-i18n-en="Primary Filings, Newsroom Releases &amp; Teardown Sources Index (SEC EDGAR &amp; Research)">数据来源与一手财报 / 发布会 / 行业拆解核验索引（SEC EDGAR &amp; Official Releases）</strong>
+ <span class="mui-chip mono">MUI Branding UI Architecture · Offline Ready</span>
+ </div>
+ <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;" data-i18n-zh="本研报严格聚焦 Apple Vision Pro 空间计算产品线，M5+R1 硬件规格、2026 年 6 月价格上调、TechInsights 2026 年 9 月实拆子系统 BOM、IDC/Omdia 出货份额、财富百强医疗航空案例及智能眼镜路线调整均核验自 Apple Newsroom、TechInsights、IDC、Omdia 及权威科技媒体公开报告。" data-i18n-en="Strictly scoped to Apple Vision Pro. All M5+R1 specifications, June 2026 MSRP adjustments, TechInsights Sept 2026 subsystem BOM figures, IDC/Omdia market shares, Fortune 100 deployments, and roadmap shifts are verified via Apple Newsroom, TechInsights, IDC, and Omdia.">本研报严格聚焦 Apple Vision Pro 空间计算产品线，M5+R1 硬件规格、2026 年 6 月价格上调、TechInsights 2026 年 9 月实拆子系统 BOM、IDC/Omdia 出货份额、财富百强医疗航空案例及智能眼镜路线调整均核验自 Apple Newsroom、TechInsights、IDC、Omdia 及权威科技媒体公开报告。</p>
+ <ul class="sources-list">
+ <li><span class="mono">[01]</span><a href="https://www.apple.com/newsroom/2025/10/apple-vision-pro-upgraded-with-the-m5-chip-and-dual-knit-band/" target="_blank" rel="noopener noreferrer">Apple Newsroom: Apple Vision Pro Upgraded with M5 Chip, 120Hz &amp; Dual Knit Band (2025-10-15) ↗</a></li>
+ <li><span class="mono">[02]</span><a href="https://electronics360.globalspec.com/article/24122/techinsights-teardown-apple-vision-pro-m5" target="_blank" rel="noopener noreferrer">TechInsights Teardown via Electronics360: Apple Vision Pro (M5) $1,116.88 Display &amp; Silicon Cost Analysis (2026-09-11) ↗</a></li>
+ <li><span class="mono">[03]</span><a href="https://www.macrumors.com/2026/06/25/apple-vision-pro-just-got-even-more-expensive/" target="_blank" rel="noopener noreferrer">MacRumors Pricing Tracker: Apple Vision Pro Repriced to $3,699–$4,199 Amid Memory Inflation (2026-06-25) ↗</a></li>
+ <li><span class="mono">[04]</span><a href="https://www.apple.com/os/visionos/" target="_blank" rel="noopener noreferrer">Apple Official Platform Overview: visionOS 27 Spatial Widgets, Personas &amp; 32:9 Mac Virtual Display ↗</a></li>
+ <li><span class="mono">[05]</span><a href="https://www.apple.com/newsroom/2024/04/apple-vision-pro-brings-a-new-era-of-spatial-computing-to-business/" target="_blank" rel="noopener noreferrer">Apple Newsroom: Apple Vision Pro Brings a New Era of Spatial Computing to Enterprise &amp; Fortune 100 ↗</a></li>
+ <li><span class="mono">[06]</span><a href="https://www.apple.com/newsroom/2024/03/apple-vision-pro-unlocks-new-opportunities-for-health-app-developers/" target="_blank" rel="noopener noreferrer">Apple Newsroom: Healthcare &amp; Surgical Planning Apps on Apple Vision Pro (Stryker myMako / Siemens) ↗</a></li>
+ <li><span class="mono">[07]</span><a href="https://treeview.studio/blog/xr-spatial-computing-smart-glasses-market-statistics-report" target="_blank" rel="noopener noreferrer">Treeview Enterprise XR Report: ~75% Vision Pro B2B Buyer Share &amp; Meta&#x27;s Feb 2026 Commercial Exit ↗</a></li>
+ <li><span class="mono">[08]</span><a href="https://www.businesswire.com/news/home/20260616011033/en/Omdia-XR-Headwear-Market-Set-for-Growth-From-2027-as-Industry-Attention-Shifts-From-Headsets-to-Glasses" target="_blank" rel="noopener noreferrer">Omdia XR Headwear Forecast: Industry Shifts Attention from Headsets to AI Smart Glasses (2026-06-16) ↗</a></li>
+ <li><span class="mono">[09]</span><a href="https://www.idc.com/promo/arvr/" target="_blank" rel="noopener noreferrer">IDC Worldwide Quarterly AR/VR Headset Tracker: Market Share &amp; ASP Benchmarks (2026) ↗</a></li>
+ <li><span class="mono">[10]</span><a href="https://www.zdnet.com/article/how-much-does-it-cost-apple-to-make-a-vision-pro-headset/" target="_blank" rel="noopener noreferrer">ZDNET / Omdia Baseline Teardown: Gen-1 Apple Vision Pro $1,542 Component BOM Analysis ↗</a></li>
+ <li><span class="mono">[11]</span><a href="https://news.samsung.com/us/introducing-galaxy-xr-opening-new-worlds/" target="_blank" rel="noopener noreferrer">Samsung Newsroom: Introducing Galaxy XR ($1,799) with Android XR &amp; Snapdragon XR2+ Gen 2 ↗</a></li>
+ <li><span class="mono">[12]</span><a href="https://www.forbes.com/sites/andrewwilliams/2026/04/17/meta-quest-3-hit-with-100-price-increase/" target="_blank" rel="noopener noreferrer">Forbes Hardware Report: Meta Quest 3 Hit with $100 Price Increase to $599.99 (2026-04-17) ↗</a></li>
+ </ul>
+ </footer>
+
+ </main>
+ </div>
+
+ <script src="../../../_shared/cc1f212fa44ee562.js"></script>
+</body>
+</html>

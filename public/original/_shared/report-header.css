@@ -1,0 +1,49 @@
+/* A fixed report header, with the same article search on desktop and mobile. */
+:root { --report-header-height: 60px; }
+html { scroll-padding-top: calc(var(--report-header-height) + 16px); }
+html body { padding-top: var(--report-header-height) !important; }
+.mui-appbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  height: var(--report-header-height) !important;
+  overflow: visible !important;
+  z-index: 1100;
+}
+.mui-appbar .brand-monogram { display: none !important; }
+.mui-appbar .quick-search-wrap { width: clamp(220px, 25vw, 360px); }
+.article-search-results {
+  width: min(480px, calc(100vw - 24px));
+  max-height: min(480px, calc(100dvh - var(--report-header-height) - 24px));
+  background: rgba(255, 255, 255, .97) !important;
+  backdrop-filter: blur(24px) saturate(120%);
+  -webkit-backdrop-filter: blur(24px) saturate(120%);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  overscroll-behavior: contain;
+}
+.article-search-status { padding: 9px 10px; font-size: .74rem; color: var(--text-muted); }
+html[data-theme="dark"] .article-search-results { background: rgba(13, 23, 38, .97) !important; }
+.article-search-result {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
+}
+.article-search-result:hover, .article-search-result[aria-selected="true"] { background: var(--mui-primary-bg); }
+.article-search-result strong { font-size: .82rem; line-height: 1.55; font-weight: 650; }
+.article-search-meta { color: var(--mui-primary-lighter); font-size: .7rem; }
+.article-search-all { display: block; padding: 10px; border-top: 1px solid var(--border-subtle); font-size: .78rem; }
+.article-search-result:focus-visible, .article-search-all:focus-visible { outline: 2px solid var(--mui-primary-main); outline-offset: -2px; }
+@media (max-width: 1023px) {
+  .mui-appbar .mui-appbar-inner { height: 100%; align-items: center; }
+  .mui-appbar .appbar-left { height: 34px; min-width: 0; }
+  .mui-appbar .appbar-right { position: static; height: 34px; flex-shrink: 0; }
+  .mui-appbar .quick-search-wrap {
+    display: none !important;
+  }
+}

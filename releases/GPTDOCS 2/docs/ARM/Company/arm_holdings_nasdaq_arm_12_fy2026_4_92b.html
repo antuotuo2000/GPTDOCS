@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Arm Holdings (NASDAQ: ARM) 全产品与服务 12 大支柱深度研报中枢（FY2026 $4.92B 全景拆解）| 数据中心</title>
+ <meta name="description" content="Arm Holdings plc (NASDAQ: ARM) 全线 12 大产品与服务矩阵深度商业研报中枢（FY2026 $4,920M 营收、97.5% 毛利率、Q2 FY27 $1,443M）：覆盖 Armv9/SME2、Lumex CSS、Neoverse、AGI CPU、Immortalis/Mali、Cortex-M/Ethos、Zena、CoreLink/Artisan/CCA、ATA/AFA、Total Design、KleidiAI 与 Keil/DS/AVH。" />
+ <script src="../../_shared/2018254e0146c2fd.js"></script>
+ <link rel="stylesheet" href="../../_shared/8ebd8f3978d81b3e.css">
+
+ <script src="../../_shared/642af584f46b0755.js"></script>
+ <link rel="stylesheet" href="../../_shared/94b8c70bcc5cde76.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+  <script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky MUI High-Clarity AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录" data-aria-zh="切换目录侧边栏" data-aria-en="Toggle Chapter Sidebar" data-title-zh="展开/收起章节目录" data-title-en="Toggle Chapter Sidebar">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span id="appbarMonogram" class="brand-monogram mono">V9</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航" data-aria-zh="面包屑导航" data-aria-en="Breadcrumb Navigation"><a class="crumb-link hide-sm" href="../../index.html"><span class="portal-menu-text" data-portal-zh="数据中心" data-portal-en="Research Hub">数据中心</span></a><span class="hide-sm" aria-hidden="true">/</span>
+ <button type="button" id="crumbHomeBtn" class="crumb-link hide-sm">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="ARM 全景中枢" data-i18n-en="ARM Research Hub">ARM 全景中枢</span>
+ </button>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span id="appbarCrumbCurrent" class="crumb-current">01 · Armv9-A &amp; SME2 架构</span>
+ </nav>
+ <span id="appbarBadgePlatform" class="mui-chip mui-chip-primary mono hide-sm">FY26 营收 $4.92B (+22.8%)</span>
+ <span id="appbarBadgeStatus" class="mui-chip mui-chip-success mono hide-sm">Q2 FY27 $1.44B · 97.5% GM</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或切换 Arm 支柱…" aria-label="快速跳转章节或产品线" data-ph-zh="检索章节或切换 Arm 支柱…" data-ph-en="Jump to section or Arm pillar…" data-aria-zh="快速跳转章节或产品线" data-aria-en="Quick jump to chapter or Arm pillar" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ 
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题" data-aria-zh="切换深浅色主题" data-aria-en="Toggle color theme" data-title-zh="切换浅色 / 深色主题" data-title-en="Toggle Light / Dark theme">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Centered Shell -->
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Navigation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航" data-aria-zh="研究章节目录与站点导航" data-aria-en="Report Chapters &amp; Site Navigation">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span id="sideBrandTag" class="mui-chip mui-chip-primary mono">ARM CORE · #1 ROYALTY ENGINE</span>
+ </div>
+ <div id="sideCardTitle" class="sidebar-title">01 · Armv9-A &amp; SME2 指令集</div>
+ <p id="sideCardSub" class="sidebar-subtitle"></p>
+ <div class="sidebar-mini-kpis" id="sideMiniKpis"></div>
+ </div>
+
+ <!-- Unified MUI Navigation Card: 12-Pillar Hub + Report TOC -->
+ <nav class="sidebar-card" aria-label="站点导航与章节目录" data-aria-zh="站点导航与章节目录" data-aria-en="Site Links &amp; Table of Contents">
+<!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="portalRelatedReports" data-co-key="ARM">
+          <div class="co-side-head">
+            <span class="co-side-title mono">ARM · 01/02</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="portalRelatedPrevBtn" href="../SeniorExecutive/arm_holdings_plc_nasdaq_arm_20_rene_haas_jason_child_will_abbey_mohamed_awad_masayoshi_son.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="portalRelatedNextBtn" href="../SeniorExecutive/arm_holdings_plc_nasdaq_arm_20_rene_haas_jason_child_will_abbey_mohamed_awad_masayoshi_son.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (2)" data-i18n-en="All (2)">全部 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (1)" data-i18n-en="Company (1)">公司深度 (1)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="SeniorExecutive" data-i18n-zh="高管人物 (1)" data-i18n-en="SeniorExecutive (1)">高管人物 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item active" data-co-item-cat="Company" href="arm_holdings_nasdaq_arm_12_fy2026_4_92b.html" title="Arm Holdings (NASDAQ: ARM) 全产品与服务 12 大支柱深度研报中枢（FY2026 $4.92B 全景拆解）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Arm Holdings (NASDAQ: ARM) 全产品与服务 12 大支柱深度研报中枢（FY2026 $4.92B 全景拆解）" data-i18n-en="Arm Holdings (NASDAQ: ARM) &amp; 12 Deep DiveReport (FY2026 $4.92B OverviewBreakdown)">Arm Holdings (NASDAQ: ARM) 全产品与服务 12 大支柱深度研报中枢（FY2026 $4.92B 全景拆解）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="SeniorExecutive" href="../SeniorExecutive/arm_holdings_plc_nasdaq_arm_20_rene_haas_jason_child_will_abbey_mohamed_awad_masayoshi_son.html" title="Arm Holdings plc (NASDAQ: ARM) 20 大核心高管与董事会全景深度研报中枢（Rene Haas·Jason Child·Will Abbey·Mohamed Awad·Masayoshi Son 等）"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="Arm Holdings plc (NASDAQ: ARM) 20 大核心高管与董事会全景深度研报中枢（Rene Haas·Jason Child·Will Abbey·Mohamed Awad·Masayoshi Son 等）" data-i18n-en="Arm Holdings plc (NASDAQ: ARM) 20 &amp; OverviewDeep DiveReport (Rene Haas·Jason Child·Will Abbey·Mohamed Awad·Masayoshi Son)">Arm Holdings plc (NASDAQ: ARM) 20 大核心高管与董事会全景深度研报中枢（Rene Haas·Jason Child·Will Abbey·Mohamed Awad·Masayoshi Son 等）</span><span class="co-hub-meta mono">SeniorExecutive</span></span></a>
+          </div>
+          <script src="../../_shared/9a77e5144f5d3a03.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+ 
+
+ <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+ <ul class="mui-nav-list" id="tocNavList">
+ <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与架构超级周期" data-i18n-en="Executive Summary &amp; ISA KPIs">执行摘要与架构超级周期</span></a></li>
+ <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="Armv9 指令集与安全机密栈" data-i18n-en="Armv9 ISA &amp; Security Stack">Armv9 指令集与安全机密栈</span></a></li>
+ <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大统治支柱与五维雷达" data-i18n-en="4 Dominance Pillars &amp; Moat Radar">四大统治支柱与五维雷达</span></a></li>
+ <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="全球指令集架构横向对比" data-i18n-en="Global ISA Competitor Matrix">全球指令集架构横向对比</span></a></li>
+ <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="版税阶梯经济学与复利模拟" data-i18n-en="Royalty Economics &amp; LTV Sim">版税阶梯经济学与复利模拟</span></a></li>
+ <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="Arm 架构代际演进与四大战役" data-i18n-en="ISA Evolution &amp; Key Milestones">Arm 架构代际演进与四大战役</span></a></li>
+ <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="架构护城河跟踪核查清单" data-i18n-en="ISA Moat Verification Checklist">架构护城河跟踪核查清单</span></a></li>
+ <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="SEC 财报与官方信源索引" data-i18n-en="SEC Filings &amp; Primary Sources">SEC 财报与官方信源索引</span></a></li>
+ </ul>
+ </nav>
+
+ <!-- Compact MUI Page Utility Controls -->
+ 
+ </aside>
+
+ <!-- Main Analytical Content -->
+ <main class="main-content">
+ <!-- Arm 12 All-Products Portfolio Interactive Switcher -->
+ <section id="ipHubSwitcher" class="ip-hub-banner" aria-label="Arm 12大全系列产品与服务切换台">
+ <div class="ip-hub-top">
+ <div class="ip-hub-title-group">
+ <span class="mui-chip mui-chip-primary mono">ARM 12 ALL-PRODUCTS PORTFOLIO</span>
+ <span id="hubHeadingText" class="ip-hub-heading" data-i18n-zh="Arm Holdings (NASDAQ: ARM) 全系列 12 大产品与服务板块深度研报中枢（100% 覆盖 ISA · CSS · 汽车安全 · 授权软件工具）" data-i18n-en="Arm Holdings (NASDAQ: ARM) 12 All-Products &amp; Services Monograph Hub (ISA · CSS · Auto/Security · Licensing &amp; Tools)">Arm Holdings (NASDAQ: ARM) 全系列 12 大产品与服务板块深度研报中枢（100% 覆盖 ISA · CSS · 汽车安全 · 授权软件工具）</span>
+ </div>
+ <div class="ip-hub-controls">
+ <button type="button" id="prevIpBtn" class="mui-btn" title="切换至上一支柱 (快捷键 [)" data-title-zh="切换至上一支柱 (快捷键 [)" data-title-en="Previous Pillar (Shortcut [)">
+ <span>←</span> <span data-i18n-zh="上一产品" data-i18n-en="Prev">上一产品</span>
+ </button>
+ <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一支柱 (快捷键 ])" data-title-zh="切换至下一支柱 (快捷键 ])" data-title-en="Next Pillar (Shortcut ])">
+ <span data-i18n-zh="下一产品" data-i18n-en="Next">下一产品</span> <span>→</span>
+ </button>
+ <button type="button" id="hubFocusModeBtn" class="mui-btn" title="收起/展开上方12大产品矩阵，进入单品沉浸阅读模式" data-title-zh="收起/展开上方12大产品矩阵，进入单品沉浸阅读模式" data-title-en="Toggle Single-Pillar Focus Mode">
+ <span>单品沉浸阅读 ▴</span>
+ </button>
+ 
+ </div>
+ </div>
+
+ <div class="hub-summary-strip">
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="FY2026 总营收 / 毛利率" data-i18n-en="FY2026 Revenue / GM">FY2026 总营收 / 毛利率</span>
+ <span class="hub-sum-val mono">$4,920M (+22.8% YoY · 97.5%)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="Q2 FY2027 单季营收" data-i18n-en="Q2 FY2027 Revenue">Q2 FY2027 单季营收</span>
+ <span class="hub-sum-val mono">$1,443M (+27% · 许可 +50%)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="版税 vs 授权 (FY26)" data-i18n-en="Royalty vs License (FY26)">版税 vs 授权 (FY26)</span>
+ <span class="hub-sum-val mono">$2,613M (+21%) · $2,307M (+25%)</span>
+ </div>
+ <div class="hub-sum-item">
+ <span class="hub-sum-lbl mono" data-i18n-zh="单季出货 &amp; 开发者生态" data-i18n-en="Q2 Shipments &amp; Devs">单季出货 &amp; 开发者生态</span>
+ <span class="hub-sum-val mono">&gt;10B 颗/季 · &gt;30M 开发者</span>
+ </div>
+ </div>
+
+ <div class="hub-cat-bar">
+ <div class="hub-cat-pills" role="tablist" aria-label="Arm 产品线大类筛选">
+ <button type="button" class="hub-cat-btn active" data-cat-filter="all" data-i18n-zh="全部 12 大支柱" data-i18n-en="All 12 Pillars">全部 12 大支柱</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="compute_silicon" data-i18n-zh="核心计算与芯片 (01–04)" data-i18n-en="Core Compute &amp; Silicon (01–04)">核心计算与芯片 (01–04)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="wearables_auto" data-i18n-zh="边缘·汽车·互联安全 (05–08)" data-i18n-en="Edge, Auto &amp; Security (05–08)">边缘·汽车·互联安全 (05–08)</button>
+ <button type="button" class="hub-cat-btn" data-cat-filter="licensing_software" data-i18n-zh="授权模式·服务·软件工具 (09–12)" data-i18n-en="Licensing, Services &amp; Tools (09–12)">授权模式·服务·软件工具 (09–12)</button>
+ </div>
+ <span class="mono" style="font-size:0.73rem;color:var(--text-muted);" data-i18n-zh="提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意支柱或章节" data-i18n-en="Tip: Press [ / ] to cycle pillars · Press ⌘K to jump">提示：按 [ / ] 键快速翻页 · 按 ⌘K 搜索任意支柱或章节</span>
+ </div>
+
+ <div class="ip-pill-grid" id="ipPillGrid">
+ <button type="button" class="ip-pill-btn active" data-switch-ip="armv9_isa" aria-pressed="true"><span class="ip-pill-mono mono">V9</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="armv9_isa">01. Armv9 架构授权与指令集</span><span class="ip-pill-meta mono" data-pill-meta="armv9_isa">97.5% 毛利基石 · &gt;300B 累计出货 · Armv9 ISA &amp; Architecture</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="lumex_client" aria-pressed="false"><span class="ip-pill-mono mono">LX</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="lumex_client">02. Lumex CSS 与终端 CPU</span><span class="ip-pill-meta mono" data-pill-meta="lumex_client">5x 端侧AI · 99% 手机份额 · Lumex CSS &amp; Client CPUs</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="neoverse_cloud" aria-pressed="false"><span class="ip-pill-mono mono">NV</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="neoverse_cloud">03. Neoverse IP 与云 CSS</span><span class="ip-pill-meta mono" data-pill-meta="neoverse_cloud">数据中心版税翻倍 · CSS N4 · Neoverse IP &amp; Cloud CSS</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="agi_cpu" aria-pressed="false"><span class="ip-pill-mono mono">AG</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="agi_cpu">04. Arm AGI CPU 自研芯片</span><span class="ip-pill-meta mono" data-pill-meta="agi_cpu">136核 N3P · $2B 订单潜力 · Arm AGI CPU Silicon</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="immortalis_mali_gpu" aria-pressed="false"><span class="ip-pill-mono mono">GP</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="immortalis_mali_gpu">05. Immortalis 与 Mali GPU</span><span class="ip-pill-meta mono" data-pill-meta="immortalis_mali_gpu">2x 光追 · 全球移动GPU前二 · Immortalis &amp; Mali GPUs</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="cortex_m_ethos" aria-pressed="false"><span class="ip-pill-mono mono">EM</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="cortex_m_ethos">06. Cortex-M 与 Ethos NPU</span><span class="ip-pill-meta mono" data-pill-meta="cortex_m_ethos">百亿出货底座 · Ethos-U85 4 TOPS · Cortex-M &amp; Ethos-U NPUs</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="zena_automotive" aria-pressed="false"><span class="ip-pill-mono mono">ZN</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="zena_automotive">07. Zena CSS 汽车平台</span><span class="ip-pill-meta mono" data-pill-meta="zena_automotive">ASIL D · AI定义汽车 · Zena CSS Automotive</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="corelink_physical_security" aria-pressed="false"><span class="ip-pill-mono mono">SY</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="corelink_physical_security">08. CoreLink 与物理/安全 IP</span><span class="ip-pill-meta mono" data-pill-meta="corelink_physical_security">CMN S3 · Artisan · TrustZone · CoreLink, Physical &amp; Security IP</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="ata_afa_licensing" aria-pressed="false"><span class="ip-pill-mono mono">LC</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="ata_afa_licensing">09. Total &amp; Flexible Access 授权</span><span class="ip-pill-meta mono" data-pill-meta="ata_afa_licensing">许可费+50% · 70+ IP先用后付 · Total &amp; Flexible Access Licensing</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="total_design_services" aria-pressed="false"><span class="ip-pill-mono mono">TD</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="total_design_services">10. Total Design 与定制服务</span><span class="ip-pill-meta mono" data-pill-meta="total_design_services">20+ 生态伙伴 · 加速定制ASIC · Total Design &amp; Custom Services</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="kleidi_software_ecosystem" aria-pressed="false"><span class="ip-pill-mono mono">SW</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="kleidi_software_ecosystem">11. Kleidi AI 软件与开发者生态</span><span class="ip-pill-meta mono" data-pill-meta="kleidi_software_ecosystem">3,000万+ 开发者 · PyTorch/ONNX · Kleidi AI &amp; Developer Ecosystem</span></span></button>
+ <button type="button" class="ip-pill-btn" data-switch-ip="keil_ds_avh_tools" aria-pressed="false"><span class="ip-pill-mono mono">DT</span><span class="ip-pill-text"><span class="ip-pill-name" data-pill-name="keil_ds_avh_tools">12. Keil / DS / AVH 开发工具</span><span class="ip-pill-meta mono" data-pill-meta="keil_ds_avh_tools">Keil MDK v6 · 云端虚拟硬件 · Keil, DS &amp; Virtual Hardware</span></span></button>
+ </div>
+ </section>
+
+ <!-- Dynamic Monograph Sections Host (00 - 07) -->
+ <div id="ipSectionsHost">
+      <section id="sec-00" class="mui-paper hero-card section-block"><div class="status-strip"><span class="mui-chip mui-chip-primary" data-i18n-zh="战略定评：数字世界不可替代的底层计算“英语”与 97.5% 毛利率印钞底座" data-i18n-en="Verdict: The Universal Compute Language of Modern Silicon &amp; 97.5%-Margin Royalty Engine">战略定评：数字世界不可替代的底层计算“英语”与 97.5% 毛利率印钞底座</span><span class="mui-chip" data-i18n-zh="核心技术栈：Armv9.2-A · SVE2 · SME2 矩阵扩展 · CCA 机密计算 · MTE 内存标记" data-i18n-en="Tech Stack: Armv9.2-A · SVE2 · SME2 Matrix Extension · CCA Realms · MTE Security">核心技术栈：Armv9.2-A · SVE2 · SME2 矩阵扩展 · CCA 机密计算 · MTE 内存标记</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="财报基准：FY2026 ($4.92B) &amp; Q2 FY2027 ($1.44B) 官方核验" data-i18n-en="Filing Baseline: FY2026 ($4.92B) &amp; Q2 FY2027 ($1.44B) Verified">财报基准：FY2026 ($4.92B) &amp; Q2 FY2027 ($1.44B) 官方核验</span></div><div class="hero-overline mono"><span data-i18n-zh="CORE THESIS · $4.92B 年营收 (+22.8%) × 单季首破 100 亿颗芯片出货 × Armv9 版税率结构性翻倍" data-i18n-en="CORE THESIS · $4.92B FY26 Sales (+22.8%) × First &gt;10B-Chip Quarter × Structural Armv9 Royalty Step-Up">CORE THESIS · $4.92B 年营收 (+22.8%) × 单季首破 100 亿颗芯片出货 × Armv9 版税率结构性翻倍</span></div><h1 class="hero-h1" data-i18n-rich="hero_h1">Armv9 指令集架构与授权底座研报：<span class="gradient-accent">如何以“一次授权+终生版税”统领全球 100 亿颗/季芯片？</span></h1><p class="lead-prose" data-i18n-rich="lead_prose">作为全球半导体产业链最上游的“卖水人”，Arm Holdings (NASDAQ: ARM) 在 FY2026 实现总营收 <strong>$49.20 亿美元（+22.8% YoY）</strong>，并在 Q2 FY2027（截至 2026 年 9 月 30 日）创下单季 <strong>$14.43 亿美元（+27% YoY）</strong>的历史最高二季度纪录，其中合作伙伴单季芯片出货量首次突破 <strong>100 亿颗</strong> <a class="cite-link" href="https://newsroom.arm.com/news/arm-q2-fye27-results" target="_blank" rel="noopener noreferrer">Q2 FY27 Results ↗</a> <a class="cite-link" href="https://stockanalysis.com/stocks/arm/financials/" target="_blank" rel="noopener noreferrer">FY26 Financials ↗</a>。Armv9 架构通过引入 <strong>SME2（可伸缩矩阵扩展 2）</strong>、<strong>SVE2</strong> 与 <strong>CCA（机密计算架构）</strong>，将每颗高端 SoC 的版税费率从 Armv8 时代的约 1.5%–2% 推升至 4%–5%+（若采用 CSS 子系统则达 10%+），在无需自建晶圆厂的前提下实现了 <strong>97.5%</strong> 的惊人软件级毛利率。</p><div class="grid-3" style="margin-bottom: 18px;"><div class="feature-card"><div class="mui-avatar-icon" ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 data-i18n-zh="“先收门票、后抽版税”双引擎飞轮" data-i18n-en="Dual-Engine License + Perpetual Royalty Flywheel">“先收门票、后抽版税”双引擎飞轮</h3><p data-i18n-zh="Q2 FY27 授权收入同比暴增 50% 至 $7.73 亿，作为未来 2–3 年版税爆发的先行指标锁定长期收益。" data-i18n-en="Q2 FY27 licensing surged +50% YoY to $773M, acting as a 2–3 year leading indicator for future high-margin royalty streams.">Q2 FY27 授权收入同比暴增 50% 至 $7.73 亿，作为未来 2–3 年版税爆发的先行指标锁定长期收益。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-i18n-zh="SME2 把 AI 算力直接写进 CPU 指令集" data-i18n-en="SME2 Embeds Matrix AI Directly into the CPU ISA">SME2 把 AI 算力直接写进 CPU 指令集</h3><p data-i18n-zh="无需依赖独立 NPU 即可在通用 CPU 核上实现至高 5 倍端侧 AI 加速，成为 Armv9 强制升级锚点。" data-i18n-en="Delivers up to 5x AI acceleration natively on CPU cores without bespoke NPU silos, forcing ecosystem migration to Armv9.">无需依赖独立 NPU 即可在通用 CPU 核上实现至高 5 倍端侧 AI 加速，成为 Armv9 强制升级锚点。</p></div><div class="feature-card"><div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n-zh="超 3,000 万开发者构筑零迁移生态壁垒" data-i18n-en="&gt;30M Developers Form an Unbreakable Software Moat">超 3,000 万开发者构筑零迁移生态壁垒</h3><p data-i18n-zh="从 Android、iOS、Windows-on-Arm 到 Linux 云原生，庞大的软件工具链让 RISC-V 短中期难以撼动高端市场。" data-i18n-en="Spanning iOS, Android, Windows-on-Arm, and cloud-native Linux, &gt;30M developers insulate Arm from RISC-V in high-value tiers.">从 Android、iOS、Windows-on-Arm 到 Linux 云原生，庞大的软件工具链让 RISC-V 短中期难以撼动高端市场。</p></div></div><div class="grid-4"><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="FY2026 总净营收" data-i18n-en="FY2026 Total Revenue">FY2026 总净营收</span><span class="mui-chip mui-chip-primary mono" data-i18n-zh="同比 +22.8%" data-i18n-en="+22.8% YoY">同比 +22.8%</span></div><div class="kpi-value mono" data-i18n-zh="$4.92B" data-i18n-en="$4.92B">$4.92B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_0">版税 $2.61B (+21%) + 授权 $2.31B (+25%)，TTM 截至 2026-09 已达 $5.46B <a class="cite-link" href="https://stockanalysis.com/stocks/arm/financials/" target="_blank" rel="noopener noreferrer">Financials ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="集团综合毛利率" data-i18n-en="Consolidated Gross Margin">集团综合毛利率</span><span class="mui-chip mui-chip-success mono" data-i18n-zh="全球硬件生态最高" data-i18n-en="Software-Grade GM">全球硬件生态最高</span></div><div class="kpi-value mono" data-i18n-zh="97.5%" data-i18n-en="97.5%">97.5%</div><p class="kpi-desc" data-i18n-rich="kpi_desc_1">FY26 毛利达 $47.99 亿美元，零晶圆制造资产负担带来极致经营杠杆 <a class="cite-link" href="https://stockanalysis.com/stocks/arm/financials/" target="_blank" rel="noopener noreferrer">10-K/20-F ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="Q2 FY27 单季营收" data-i18n-en="Q2 FY27 Quarterly Revenue">Q2 FY27 单季营收</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="同比 +27% 新高" data-i18n-en="+27% YoY Record">同比 +27% 新高</span></div><div class="kpi-value mono" data-i18n-zh="$1.44B" data-i18n-en="$1.44B">$1.44B</div><p class="kpi-desc" data-i18n-rich="kpi_desc_2">授权收入 $773M (+50%) 领跑，数据中心版税同比翻倍，单季指引 Q3 达 $1.54B <a class="cite-link" href="https://newsroom.arm.com/news/arm-q2-fye27-results" target="_blank" rel="noopener noreferrer">Q2 FY27 ↗</a>。</p></div><div class="mui-paper mui-card-interactive kpi-card"><div class="kpi-top"><span class="kpi-label" data-i18n-zh="单季芯片出货与开发者" data-i18n-en="Quarterly Chips &amp; Devs">单季芯片出货与开发者</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="历史首次破百亿/季" data-i18n-en="First &gt;10B Quarter">历史首次破百亿/季</span></div><div class="kpi-value mono" data-i18n-zh="&gt;10B · 30M+" data-i18n-en="&gt;10B · 30M+">&gt;10B · 30M+</div><p class="kpi-desc" data-i18n-rich="kpi_desc_3">2026 年 7–9 月单季出货超 100 亿颗 Arm 芯片（同比增 15 亿颗），全球开发者超 3,000 万 <a class="cite-link" href="https://newsroom.arm.com/news/arm-q2-fye27-results" target="_blank" rel="noopener noreferrer">Shipments ↗</a>。</p></div></div></section>
+    </div>
+ </main>
+ </div>
+
+ <script src="../../_shared/532d6f96be84a45e.js"></script>
+<script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

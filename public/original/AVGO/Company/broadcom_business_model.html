@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="博通公司 Broadcom Inc. (NASDAQ: AVGO) 商业模式全景架构拆解：定制 AI XPU 与 102.4T 以太网交换双引擎、VMware Cloud Foundation (VCF) 高毛利软件收费站、24个独立损益表事业部纪律与 46.2% 自由现金流率复利机器（基于 FY2025 10-K 及 Q3 FY2026 SEC 8-K）。" />
+ <title>博通公司 Broadcom Inc. (AVGO) 商业模式架构深度拆解 | 数据中心</title>
+ 
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/broadcom_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">AVGO</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <span class="crumb-current" data-i18n-zh="博通公司 (Broadcom) 商业模式架构拆解" data-i18n-en="Broadcom Inc. Business Model Architecture">博通公司 (Broadcom) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: AVGO</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY26E ~$105.9B · Q3 $29.6B</span>
+ </div>
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar">
+ <div class="sidebar-card">
+ <span class="mui-chip mui-chip-primary mono">AVGO · BUSINESS MODEL</span>
+ <div class="sidebar-title" data-i18n-zh="博通商业模式架构图谱" data-i18n-en="Broadcom Business Model Blueprint">博通商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="定制 AI XPU 与 102.4T 交换硅片垄断 × VMware VCF 企业私云收费站 × 46.2% FCF 与并购去杠杆复利" data-i18n-en="Custom AI XPU & 102.4T Ethernet × VMware VCF Software Tollbooth × 46.2% FCF Margin & Deleveraging">定制 AI XPU 与 102.4T 交换硅片垄断 × VMware VCF 企业私云收费站 × 46.2% FCF 与并购去杠杆复利</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label">商业原型</span><span class="sidebar-mini-val mono">特许芯片 + 基础设施软件</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label">Q3 FY26 Non-GAAP GM/OM</span><span class="sidebar-mini-val mono">75.0% / 67.9%</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label">Q3 CapEx / FCF 利润率</span><span class="sidebar-mini-val mono">1.8% · 46.2%</span></div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card"><div class="co-side-nav" id="companySubfolderHub" data-co-key="AVGO"><a class="co-side-home" href="../../index.html">首页</a></div>
+ <div class="nav-section-label">四件套关联图谱</div>
+ <ul class="mui-nav-list" style="margin-bottom:10px;">
+ <li><a href="Broadcom_Business_Model_Analysis.html" class="mui-nav-link active"><span class="nav-idx mono">01</span><span>商业模式架构拆解</span></a></li>
+ <li><a href="Broadcom_Future_Horizon_2030_Blueprint.html" class="mui-nav-link"><span class="nav-idx mono">02</span><span>2026–2032 战略观测站</span></a></li>
+ <li><a href="Broadcom_Corporate_Culture_Analysis.html" class="mui-nav-link"><span class="nav-idx mono">03</span><span>企业文化与组织研报</span></a></li>
+ <li><a href="Broadcom_Corporate_Culture_Blueprint.html" class="mui-nav-link"><span class="nav-idx mono">04</span><span>组织操作系统图谱</span></a></li>
+ </ul>
+ <div class="nav-section-label">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span>双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span>五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span>利润池瀑布流与特许拆解</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span>客户生命周期与盈利垄断</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span>去杠杆与 5 年 EPS 推演器</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span>巨头范式矩阵与风险压测</span></a></li>
+ </ul>
+ </nav>
+
+ <div class="sidebar-card portal-reading-tools">
+ <div class="nav-section-label">阅读与导出工具</div>
+ <div class="side-theme-group">
+ <button type="button" id="sideLightBtn">浅色外观</button>
+ <button type="button" id="sideDarkBtn">深色外观</button>
+ </div>
+ <div class="side-tool-grid">
+ <button type="button" id="sideExportBtn">导出 HTML</button>
+ <button type="button" id="sidePrintBtn">打印 / PDF</button>
+ </div>
+ </div>
+ </aside>
+
+ <main class="bm-workspace main-content">
+ <!-- MODULE 0 -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：特许专有硅片垄断 × 基础设施软件年金收费站" data-i18n-en="ARCHETYPE: Franchise Silicon Monopoly × Enterprise Software Tollbooth">商业范式：特许专有硅片垄断 × 基础设施软件年金收费站</span>
+ <span class="mui-chip mui-chip-success mono">Q3 FY26 SEC 8-K 口径</span>
+ <span class="mui-chip mui-chip-violet mono">Non-GAAP OM 67.9% · FCF 46.2%</span>
+ </div>
+ <h1 class="bm-display-h1" data-i18n-zh="博通商业模式解构：<span class='bm-gradient-txt'>用102.4T以太网与定制XPU做AI算力卖水人，靠VMware私云年金与并购去杠杆复利</span>" data-i18n-en="Deconstructing Broadcom: <span class='bm-gradient-txt'>Custom AI XPU &amp; 102.4T Ethernet Tollbooth + VMware Cash Engine</span>">
+ 博通商业模式解构：<span class="bm-gradient-txt">用102.4T以太网与定制XPU做AI算力卖水人，靠VMware私云年金与并购去杠杆复利</span>
+ </h1>
+ <p class="bm-lead">
+ 市场常误将博通（Broadcom Inc., NASDAQ: AVGO）视为周期性半导体器件商，但其底层经济模型实为一台<strong>“半导体特许垄断 + 基础设施软件收租 + 杠杆并购去债”三阶印钞机</strong>：第一阶通过台积电轻资产代工（Fabless）与行业第一的 SerDes/DSP/交换芯片壁垒，在 AI 定制加速器（XPU）与 <strong>Tomahawk 6（102.4 Tbps）</strong>网络市场实现暴发，推动 FY26 Q3 AI 半导体营收飙升 <strong>+221% YoY 至 $167亿</strong>、单季总营收达 <strong>$295.9亿（+86% YoY）</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-08022026x8kxex99.htm" target="_blank" rel="noopener noreferrer">Q3 FY26 SEC 8-K ↗</a>；
+ 第二阶依托 2023 年底并购的 <strong>VMware</strong> 全面转向订阅制（VCF），在 Q3 录得 <strong>$87.5亿</strong>基础设施软件收入（+29% YoY），将集团 Non-GAAP 毛利率稳定在 <strong>75.0%</strong>、营业利润率推高至 <strong>67.9%</strong>；第三阶凭借仅 <strong>1.8% 的 CapEx 强度</strong>，单季收割 <strong>$136.7亿 自由现金流（占营收 46.2%）</strong>，持续偿债、分红（$0.65/季）并回购股票。
+ </p>
+ </div>
+
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0">① #1/#2 特许垄断律</button>
+ <button type="button" class="mui-seg-btn" data-lens="1">② 芯片+软件毛利双擎</button>
+ <button type="button" class="mui-seg-btn" data-lens="2">③ 并购去杠杆飞轮</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 事业部准入铁律 = 细分市场份额 #1 或 #2 + 极高客户迁移成本 + 45%+ 营业利润率门槛（不达标即剥离）
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ CEO 陈福阳（Hock Tan）只保留具备绝对定价权的“特许经营权（Franchise）”业务：从 Google TPU/Meta MTIA 定制 XPU、超大规模数据中心以太网交换芯片，到 5G 射频 FBAR 滤波器与 VMware 企业虚拟化底座，一旦锁定系统架构便形成长达 5–10 年的替换壁垒。
+ </div>
+ </div>
+ </div>
+
+ <aside class="bm-telemetry-ledger">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title"><span class="bm-pulse-dot"></span><span>Q3 FY26 &amp; FY26E 商业遥测账本</span></div>
+ <a class="cite-link mono" href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial" target="_blank" rel="noopener noreferrer">AVGO IR ↗</a>
+ </div>
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl">Q3 FY26 总营收 (半导体 70% / 软件 30%)</span><span class="bm-tel-val mono">$29.59B <small style="color:var(--mui-success-text);font-size:0.74rem;">+86%</small></span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:70.4%;"></div><div style="width:29.6%;background:#16A34A;"></div></div>
+ <div class="bm-tel-sub mono"><span>Semi $20.84B (+127%)</span><span>Software $8.75B (+29%)</span></div>
+ </div>
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl">AI 半导体爆发 (Q3 $16.7B → Q4指引 $21.7B)</span><span class="bm-tel-val mono">$16.70B <small style="color:var(--mui-success-text);font-size:0.74rem;">+221%</small></span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:73%;background:linear-gradient(90deg,#7C3AED,#3399FF);"></div><div style="width:27%;background:#22C55E;"></div></div>
+ <div class="bm-tel-sub mono"><span>定制 XPU 占比 73% (+3.5x)</span><span>AI 网络占比 27% (+2.5x)</span></div>
+ </div>
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl">Non-GAAP 毛利率 / 营业利润率</span><span class="bm-tel-val mono">75.0% / 67.9%</span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:75%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div></div>
+ <div class="bm-tel-sub mono"><span>GAAP 毛利率 69.1%</span><span>Non-GAAP 净利 $16.37B (+95%)</span></div>
+ </div>
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl">Q3 自由现金流 &amp; FY26E 全年营收指引</span><span class="bm-tel-val mono">$13.67B / ~$105.9B</span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:46.2%;background:#D97706;"></div></div>
+ <div class="bm-tel-sub mono"><span>FCF 率 46.2% (CapEx 1.8%)</span><span>Q4 指引 $34.8B (+93% YoY)</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1 -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END VALUE CAPTURE PIPELINE</span>
+ <h2 class="bm-h2">五阶商业价值传导沙盘：从底层 SerDes IP 到并购复利飞轮</h2>
+ <p class="bm-head-desc">点击下方任一价值链节点，拆解博通如何在无晶圆厂（Fabless）轻资产模式下实现近 68% 的恐怖营业利润率。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">CORE IP MOAT</span></div>
+ <div class="bm-node-title">200G/400G SerDes 与 3.5D 封装 IP</div>
+ <div class="bm-node-kpi mono">云巨头定制 XPU 首选底座</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">CO-DESIGN LOCK</span></div>
+ <div class="bm-node-title">定制 XPU + Tomahawk 6 网络绑定</div>
+ <div class="bm-node-kpi mono">Q3 AI 营收 $16.7B (+221%)</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">24 BU P&amp;L</span></div>
+ <div class="bm-node-title">24个独立损益表事业部精益管控</div>
+ <div class="bm-node-kpi mono">Non-GAAP SG&amp;A 仅占营收 1.8%</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">VCF TOLLBOOTH</span></div>
+ <div class="bm-node-title">VMware VCF 订阅制软件收租</div>
+ <div class="bm-node-kpi mono">软件 Q3 $8.75B · 营业利润率 ~70%+</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">M&amp;A COMPOUNDER</span></div>
+ <div class="bm-node-title">46% FCF 偿债 + 股息与回购复利</div>
+ <div class="bm-node-kpi mono">Q3 FCF $13.67B · 季息 $0.65</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · SERDES, OPTICS &amp; 3.5D PACKAGING MOAT</span>
+ <h3 id="nodeTitle">底层互连技术霸权：掌控 AI 集群“算力血管”与前沿混合键合封装</h3>
+ <p id="nodeDesc">当超大规模云厂商（Hyperscalers）试图自研 AI 芯片以摆脱通用 GPU 税时，真正的工程瓶颈并非逻辑算子，而是高速 SerDes 接口、HBM 内存控制器、UCIe 芯粒互连与台积电 3.5D 先进封装协同。博通凭借 200G/400G-per-lane SerDes 与光学 DSP 绝对领先优势，成为 Google、Meta 等巨头唯一可信赖的协同设计（Co-Design）伙伴。</p>
+ <div class="bm-ins-formula mono" id="nodeFormula">商业传导：全栈基础 IP 复用 + 仅面向前 5 大云巨头大客户接单 → 研发 ROI 极高，避免消费电子碎片化低效投入</div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">73%</b><span>Q3 AI 营收中 XPU 占比</span></div>
+ <div class="bm-ins-card"><b class="mono">102.4 Tbps</b><span>Tomahawk 6 全球首款量产带宽</span></div>
+ <div class="bm-ins-card"><b class="mono">1.8%</b><span>Q3 FY26 CapEx / 总营收比</span></div>
+ <div class="bm-ins-card"><b class="mono">57%</b><span>3.3万员工中研发工程占比</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2 -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN EVOLUTION</span>
+ <h3>Q3 FY26 $295.9亿 利润转化瀑布流与 6 年毛利剪刀差</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall">Q3 营收→FCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors">FY21–FY26 Q3 利润率跃迁</button>
+ </div>
+ </div>
+ <div class="bm-canvas-box"><canvas id="profitCanvas"></canvas></div>
+ <p class="bm-chart-caption">
+ 数据来源：<a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-08022026x8kxex99.htm" target="_blank" rel="noopener noreferrer">SEC Q3 FY2026 8-K ↗</a>。注意惊人的费用纪律：Q3 Non-GAAP 营收 $29.59B，Non-GAAP SG&amp;A 仅 <strong>$5.45亿（占营收 1.84%）</strong>，Non-GAAP 营业利润高达 <strong>$20.10B（67.9%）</strong>，自由现金流率达 46.2%。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · FOUR FRANCHISE PILLARS</span>
+ <h3>四大特许利润池拆解（#1/#2 绝对垄断矩阵）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="semi">AI 与芯片</button>
+ <button type="button" class="mui-seg-btn" data-tcat="soft">基础设施软件</button>
+ </div>
+ </div>
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="semi">
+ <div class="bm-tier-top"><span class="bm-tier-name">① 定制 AI 加速器 (Custom XPU / ASIC)</span><span class="mui-chip mui-chip-violet mono">AI-ASIC 份额 60%–80%</span></div>
+ <div class="bm-tier-desc">为 Google (TPU)、Meta (MTIA)、ByteDance 等超大规模云厂商联合设计 3nm/2nm 定制 AI 芯片，Q3 出货量同比暴增 3.5 倍以上，较通用 GPU 帮助客户降低高达 50% 推理/训练 TCO。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="semi">
+ <div class="bm-tier-top"><span class="bm-tier-name">② AI 以太网交换与光互连 (Tomahawk / Jericho)</span><span class="mui-chip mui-chip-primary mono">102.4T 全球首发量产</span></div>
+ <div class="bm-tier-desc">Tomahawk 6 与 Jericho4 成为百万卡级开放以太网 AI 集群标准底座，搭配 200G/400G 光 DSP 与共封装光学 (CPO)，直接对标封闭的 InfiniBand 生态。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="soft">
+ <div class="bm-tier-top"><span class="bm-tier-name">③ VMware Cloud Foundation (VCF) 私有云底座</span><span class="mui-chip mui-chip-success mono">营业利润率 ~70%+</span></div>
+ <div class="bm-tier-desc">收购 VMware 后 18 个月内将营业利润率从 &lt;30% 提升至 ~70%：砍掉永久授权、打包为全栈订阅制 VCF，深度锁定全球财富 500 强混合云核心工作负载。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="soft">
+ <div class="bm-tier-top"><span class="bm-tier-name">④ CA / Symantec 主机安全与传统特许芯片</span><span class="mui-chip mui-chip-warning mono">现金奶牛零增量 CapEx</span></div>
+ <div class="bm-tier-desc">大型机运维软件 (CA)、企业端点安全 (Symantec) 及苹果/三星旗舰 FBAR 射频滤波器、存储 RAID/HBA 控制器，提供极高可预测性的永续现金流以偿还并购债务。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3 -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · CUSTOMER LOCK-IN &amp; UNIT ECONOMICS</span>
+ <h3>三类核心客户经济模型：为什么大客户一旦上车极难更换？</h3>
+ </div>
+ </div>
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="oem">无线/存储 OEM</button>
+ <button type="button" class="mui-seg-btn" data-cohort="ent">500强 VCF 企业</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="hyper">超大规模 AI 巨头</button>
+ </div>
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat"><div class="lbl">典型采购组合</div><div class="val" style="font-size:0.93rem;">3.5D XPU + Tomahawk 6 + DSP</div><div class="delta">计算与网络全栈耦合</div></div>
+ <div class="bm-cohort-stat"><div class="lbl">单代产品绑定周期</div><div class="val mono">5–8 年</div><div class="delta">跨 3–4 代硅片演进路线图</div></div>
+ <div class="bm-cohort-stat"><div class="lbl">单客户年化营收贡献</div><div class="val mono">$5B–$20B+</div><div class="delta">极度聚焦前 5–7 家头部买家</div></div>
+ <div class="bm-cohort-stat"><div class="lbl">半导体板块营业利润率</div><div class="val mono">61.0%</div><div class="delta">Q3 FY26 同比提升 +440bps</div></div>
+ </div>
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>架构共研锁死效应：</strong>当超大规模云厂商将自家 AI 模型编译器（如 XLA/PyTorch）与博通定制 XPU 微架构及 Tomahawk 拥塞控制算法深度对齐后，切换至第二家 ASIC 设计商意味着重做底层软硬栈并损失 12–18 个月算力代差，因此客户宁愿签多年不可取消锁量协议。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · AI RAMP &amp; ASIC VS GPU ECONOMICS</span>
+ <h3>AI 半导体爆发轨迹 ($B) 与核心盈利指标行业对标</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="airamp">AI 半导体季/年跃迁</button>
+ <button type="button" class="mui-seg-btn" data-cview="mix">芯片 vs 软件毛利对比</button>
+ </div>
+ </div>
+ <div class="bm-canvas-box"><canvas id="cohortCanvas"></canvas></div>
+ <p class="bm-chart-caption">
+ 来源：Broadcom SEC 8-K 与 DEF 14A。AI 半导体营收从 FY23 $3.8B → FY24 $12.2B → FY25 $20.2B → FY26E ~$57.6B+（Q1 $8.4B / Q2 $10.8B / Q3 $16.7B / Q4 指引 $21.7B），增速冠绝万亿级芯片巨头。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4 -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · DELEVERAGING &amp; DIVIDEND COMPOUNDING</span>
+ <h3>“借债买垄断 → 46% FCF 极速还债 → 股息翻倍”资本闭环</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="div">年度股息连续 15 年跃升</button>
+ <button type="button" class="mui-seg-btn" data-kview="debt">VMware 并购后快速去杠杆</button>
+ </div>
+ </div>
+ <div class="bm-canvas-box"><canvas id="capitalCanvas"></canvas></div>
+ <p class="bm-chart-caption">
+ 资本配置铁律：博通在 2023 年底举债并购 VMware 后总债务一度逾 $73B，至 2026 年 8 月已降至 $59.4B（账面现金 $24.0B，净债务仅 $35.4B）；同时坚持将上年度 FCF 的约 50% 以季度现金分红（FY26 年化 $2.60/股）返还股东，其余用于还债与回购。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · FY2027–FY2031 EPS COMPOUNDER</span>
+ <h3>FY2027–FY2031 AI+软件双引擎复利与 EPS 推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear">云CapEx放缓</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base">基准复利</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull">$120B AI 满额</button>
+ </div>
+ </div>
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span>AI 半导体年化增速 (AI Semi CAGR)</span><b class="mono" id="lblAiCagr">26.0%</b></div>
+ <input type="range" id="inpAiCagr" min="8" max="42" step="1" value="26" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span>基础设施软件年化增速 (Software CAGR)</span><b class="mono" id="lblSoftCagr">10.0%</b></div>
+ <input type="range" id="inpSoftCagr" min="2" max="18" step="0.5" value="10" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span>年均净回购缩股率 (Net Share Reduction)</span><b class="mono" id="lblBuyRate">1.6%</b></div>
+ <input type="range" id="inpBuyRate" min="0" max="3.5" step="0.2" value="1.6" />
+ </div>
+ </div>
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$244B</b><span>FY31E 总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simAiOut">$183B</b><span>FY31E AI 营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEpsOut">$25.95</b><span>FY31E Non-GAAP EPS</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simCagrOut">+18.6%</b><span>5年 EPS CAGR</span></div>
+ </div>
+ <div class="bm-canvas-box" style="height:175px;"><canvas id="simMiniCanvas"></canvas></div>
+ </div>
+ </section>
+
+ <!-- MODULE 5 -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; RISK STRESS AUDIT</span>
+ <h2 class="bm-h2">全球半导体与软件巨头模型对标 &amp; 三大核心风险压测</h2>
+ <p class="bm-head-desc">横向对比六大科技巨头商业模式，并评估客户自研替代、台积电封装产能与 VMware 客户流失的真实影响。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all">全部标杆 (6)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="semi">芯片/AI算力</button>
+ <button type="button" class="mui-seg-btn" data-pcat="soft">软件/生态</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead><tr><th>公司与代码</th><th>核心商业模式原型</th><th>Non-GAAP 毛利率</th><th>CapEx / 营收</th><th>FCF 利润率</th><th>模式护城河与核心脆弱点</th></tr></thead>
+ <tbody>
+ <tr class="is-avgo" data-row-cat="semi soft">
+ <td><strong>Broadcom (AVGO)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>定制 AI XPU + 以太网交换芯片 + VMware 订阅</td>
+ <td class="mono">75.0% (Semi ~76%)</td>
+ <td class="mono" style="color:var(--mui-success-text);">1.8% (Fabless)</td>
+ <td class="mono" style="color:var(--mui-success-text);">46.2% (Q3 FY26)</td>
+ <td>SerDes/VCF 双垄断；脆弱点在少数云巨头集中度</td>
+ </tr>
+ <tr data-row-cat="semi">
+ <td><strong>NVIDIA (NVDA)</strong></td>
+ <td>通用 GPU + CUDA 全栈软件 + NVLink/IB 闭环</td>
+ <td class="mono">~73%–75%</td>
+ <td class="mono">~2%–3%</td>
+ <td class="mono">~45%–50%</td>
+ <td>CUDA 开发者霸权；面临客户用定制 XPU 分流推理</td>
+ </tr>
+ <tr data-row-cat="semi soft">
+ <td><strong>Apple (AAPL)</strong></td>
+ <td>自研芯片硬件漏斗 + 25亿终端服务收费站</td>
+ <td class="mono">48.8% (服务 76.2%)</td>
+ <td class="mono">1.9%</td>
+ <td class="mono">28.4% (-58天CCC)</td>
+ <td>消费终端锁死；脆弱点在反垄断与射频基带自研替代外部</td>
+ </tr>
+ <tr data-row-cat="semi">
+ <td><strong>Marvell (MRVL)</strong></td>
+ <td>光互连 DSP + 定制云端 ASIC 挑战者</td>
+ <td class="mono">~60%–62%</td>
+ <td class="mono">~3%–4%</td>
+ <td class="mono">~22%–26%</td>
+ <td>1.6T 光模块弹性大；缺乏大型软件年金对冲芯片周期</td>
+ </tr>
+ <tr data-row-cat="soft">
+ <td><strong>Oracle (ORCL)</strong></td>
+ <td>企业数据库垄断 + OCI GPU 云基建重资本扩张</td>
+ <td class="mono">~71%</td>
+ <td class="mono" style="color:var(--mui-error-text);">~25%+ (重云基建)</td>
+ <td class="mono">承压波动</td>
+ <td>企业数据库高粘性；重资产数据中心折旧压制短期 FCF</td>
+ </tr>
+ <tr data-row-cat="soft">
+ <td><strong>Microsoft (MSFT)</strong></td>
+ <td>企业级 OS/M365 席位税 + Azure AI 云基建</td>
+ <td class="mono">~69%</td>
+ <td class="mono" style="color:var(--mui-warning-text);">~22%–28%</td>
+ <td class="mono">~28%–32%</td>
+ <td>企业工作流统治；同样背负千亿级云端折旧压力</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · CUSTOMER CONCENTRATION</span>
+ <h4>前五大客户占营收约 40%+ 与苹果自研 N1/C1X 冲击</h4>
+ <p>博通高度依赖 Google、Meta、Apple 等头部大客户，且苹果已推出自研 N1 无线芯片逐步替代部分外部 Wi-Fi/蓝牙连接芯片。但博通凭借 200G/400G SerDes 与 3.5D AI XPU 增量订单，迅速将单一手机射频依赖转化为多元化 AI 算力爆发。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：AI XPU 客户数量从 3 家向 5–7 家扩容进度</label>
+ </div>
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · TSMC 90%+ &amp; GEOPOLITICS</span>
+ <h4>台积电 CoWoS/3.5D 先进封装产能瓶颈与地缘风险</h4>
+ <p>博通超 90% 晶圆与先进封装依赖台积电（TSMC）台湾产线。若 CoWoS 或 3.5D 混合键合产能受限、或美中出口管制升级，将直接卡住高单价 XPU 与 Tomahawk 6 交付节奏。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：TSMC 先进封装配额与美国亚利桑那产能导入</label>
+ </div>
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · VMWARE CHURN &amp; SUCCESSION</span>
+ <h4>VMware 涨价引发的非核心客户流失与 2030 接班问题</h4>
+ <p>VCF 订阅制转型在提振利润率至 ~70% 的同时引发部分中小客户向 Nutanix/Proxmox 迁移；此外 73 岁的 Hock Tan 虽已获 2030 留任 PSU 激励，长期接班人（如 Charlie Kawwas）梯队交接仍受华尔街紧盯。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：Infrastructure Software 季度增速能否维持 +15% 以上</label>
+ </div>
+ </div>
+ </section>
+
+ <section class="bm-panel">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div><span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span><h2 class="bm-h2">权威财报、SEC 监管文件与官方产品信源</h2></div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-08022026x8kxex99.htm" target="_blank" rel="noopener noreferrer"><b>Broadcom Q3 FY2026 SEC Form 8-K (EX-99.1) ↗</b><span>$29.59B 营收、$16.7B AI 营收、$13.67B FCF 及 Q4 $34.8B 指引一手文件</span></a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm" target="_blank" rel="noopener noreferrer"><b>Broadcom FY2025 Form 10-K Annual Report ↗</b><span>$63.89B 全年营收、$20.2B AI 半导体、$27.0B 基础设施软件与 ~33,000 员工披露</span></a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1730168/000119312526085691/d49254ddef14a.htm" target="_blank" rel="noopener noreferrer"><b>Broadcom 2026 Proxy Statement (DEF 14A) ↗</b><span>Hock Tan 延任至 FY2030 的 $90B/$120B AI Revenue PSU 激励与事业部问责机制</span></a>
+ <a class="bm-source-item" href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-now-shipping-worlds-first-1024-tbps-switch-production" target="_blank" rel="noopener noreferrer"><b>Broadcom Tomahawk 6 (102.4 Tbps) Production Release ↗</b><span>全球首款 102.4 Tbps 以太网交换芯片规模量产与 Co-Packaged Optics 技术发布</span></a>
+ </div>
+ </section>
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/broadcom_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="arm" data-imported-report>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="安谋控股 Arm Holdings plc (NASDAQ: ARM) 商业模式全景架构拆解：97.5% 毛利率指令集授权底座、3,500亿+累计芯片长尾版税印钞机、Armv9 与 CSS 计算子系统费率翻倍阶梯、3,000万开发者生态锁死与 Arm AGI CPU 整芯突破（基于 FY2026 20-F 与 H1 FY2027 股东信）。" />
+  <title>安谋 Arm ARM 商业模式架构拆解 | 数据中心</title>
+  
+  
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/arm_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky Frosted Glass MUI AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">ARM</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="#mod-deck">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="安谋控股 (Arm Holdings) 商业模式架构拆解" data-i18n-en="Arm Holdings plc Business Model Architecture">安谋控股 (Arm Holdings) 商业模式架构拆解</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: ARM</span>
+        <span class="mui-chip mui-chip-success mono hide-sm">FY2026 20-F · $4.92B</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与站点导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">ARM · BUSINESS MODEL</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="Arm 商业模式架构图谱" data-i18n-en="Arm Business Model Blueprint">Arm 商业模式架构图谱</div>
+        <p class="sidebar-subtitle" data-i18n-zh="97.5%毛利指令集契约 × 3,500亿芯片长尾版税 × Armv9/CSS翻倍费率 × AGI CPU整芯三级跃迁" data-i18n-en="97.5% GM ISA Licensing × 350B+ Chip Royalty Annuity × Armv9/CSS Rate Escalation × AGI Silicon">97.5%毛利指令集契约 × 3,500亿芯片长尾版税 × Armv9/CSS翻倍费率 × AGI CPU整芯三级跃迁</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="前置授权 + 永续版税税基" data-i18n-en="Upfront License + Royalty Tax">前置授权 + 永续版税税基</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="GAAP / Non-GAAP 毛利率" data-i18n-en="GAAP / Non-GAAP GM">GAAP / Non-GAAP 毛利率</span>
+            <span class="sidebar-mini-val mono">97.5% · 98.2%</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="研发强度 / 工程师占比" data-i18n-en="R&amp;D / Eng Share">研发强度 / 工程师占比</span>
+            <span class="sidebar-mini-val mono">56.4% · 84.1%</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="站点导航与架构目录">
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="ARM"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+        <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+        <ul class="mui-nav-list" id="tocList">
+          <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+          <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+          <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与授权金字塔" data-i18n-en="Profit Waterfall &amp; Tiers">利润池瀑布流与授权金字塔</span></a></li>
+          <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="指令集锁死与单芯价值阶梯" data-i18n-en="ISA Ratchet &amp; Value Ladder">指令集锁死与单芯价值阶梯</span></a></li>
+          <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="合同蓄水池与5年复利推演" data-i18n-en="ACV/RPO &amp; 5Y Compounder">合同蓄水池与5年复利推演</span></a></li>
+          <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="半导体范式矩阵与压测审计" data-i18n-en="Semi Matrix &amp; Stress Audit">半导体范式矩阵与压测审计</span></a></li>
+        </ul>
+      </nav>
+
+      
+    </aside>
+
+    <!-- Main Distinct Non-Linear Workspace -->
+    <main class="bm-workspace main-content">
+
+      <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+      <section id="mod-deck" class="bm-command-deck">
+        <div class="bm-thesis-deck">
+          <div>
+            <div class="bm-badge-row">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：零晶圆研发共摊 × 全球硅片永续过路费" data-i18n-en="ARCHETYPE: R&amp;D Amortization Syndicate × Global Silicon Royalty Tax">商业范式：零晶圆研发共摊 × 全球硅片永续过路费</span>
+              <span class="mui-chip mui-chip-success mono">FY2026 20-F &amp; Q2 FY27</span>
+              <span class="mui-chip mui-chip-violet mono">GAAP GM 97.5% · 350B+ Chips</span>
+            </div>
+
+            <h1 class="bm-display-h1" data-i18n-zh="安谋控股 (Arm) 商业模式解构：<span class='bm-gradient-txt'>用97.5%毛利的指令集授权分摊研发，靠3,500亿芯片版税复利与CSS/整芯三级跳</span>" data-i18n-en="Deconstructing Arm's Business Model: <span class='bm-gradient-txt'>Fund R&amp;D via 97.5% GM IP Licensing, Compound via 350B+ Chip Royalties &amp; CSS/Silicon Escalation</span>">
+              安谋控股 (Arm) 商业模式解构：<span class="bm-gradient-txt">用97.5%毛利的指令集授权分摊研发，靠3,500亿芯片版税复利与CSS/整芯三级跳</span>
+            </h1>
+
+            <p class="bm-lead" id="heroLeadText">
+              华尔街常将 Arm 简单归类为“手机芯片专利收租人”，但其底层经济模型实为全球半导体产业唯一的<strong>三阶递进式算力税基机器</strong>：第一阶通过 <strong>Arm Total Access（56家头部订阅）</strong>与 <strong>Arm Flexible Access（329家创业/中型孵化）</strong>向苹果、英伟达、亚马逊、高通与联发科收取 <strong>$23.07亿 前置授权费（+25% YoY）</strong>，让全行业共同分摊高达 <strong>$27.76亿（占营收 56.4%）</strong>的底层架构研发投入
+              <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm" target="_blank" rel="noopener noreferrer">FY26 Q4 股东信 ↗</a>；
+              第二阶在合作伙伴每流片出货一颗芯片时，以近乎零边际成本（GAAP 毛利率高达 <strong>97.5%</strong>）按芯片售价比例征收 <strong>$26.13亿 后置版税（+21% YoY，Q2 FY27 单季出货首破 100亿颗）</strong>
+              <a class="cite-link" href="https://investors.arm.com/static-files/0b5baa2e-fc47-4d05-b724-e49de7bd4356" target="_blank" rel="noopener noreferrer">Q2 FY27 股东信 ↗</a>；
+              第三阶借 <strong>Armv9 → CSS 计算子系统（版税率翻倍）→ 首款自研 136 核 Arm AGI CPU 整芯</strong>的垂直上探，在芯片出货量温和增长的周期里，硬生生撬动单颗硅片价值捕获数倍跃升
+              <a class="cite-link" href="https://newsroom.arm.com/news/arm-agi-cpu-launch" target="_blank" rel="noopener noreferrer">AGI CPU 公报 ↗</a>。
+            </p>
+          </div>
+
+          <!-- Interactive 3-Lens Business Formula Switcher -->
+          <div class="bm-lens-panel">
+            <div class="bm-lens-head">
+              <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+              <div class="mui-segmented" id="lensTabs">
+                <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 研发共摊与版税年金" data-i18n-en="① R&amp;D Syndicate &amp; Annuity">① 研发共摊与版税年金</button>
+                <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 三级费率跃升阶梯" data-i18n-en="② 3-Rung Take-Rate Ladder">② 三级费率跃升阶梯</button>
+                <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 3,000万开发者锁死" data-i18n-en="③ 30M Developer Lock-In">③ 3,000万开发者锁死</button>
+              </div>
+            </div>
+            <div class="bm-equation-bar mono" id="lensFormula">
+              单代架构全周期价值 = ∑(N家伙伴前置授权费 ≥ 研发总成本 $2.78B) + ∑[未来10–20年 × 年出货400亿颗 × ASP × 版税率(98%毛利)]
+            </div>
+            <div class="bm-lens-body" id="lensBody">
+              单家芯片厂商自研一套先进 CPU 微架构需耗资数亿美元且仅能自用；Arm 将同一套研发成果同时授权给数十家芯片厂，<strong>仅靠前置授权费（FY26 $23.1亿）即覆盖绝大部分 Non-GAAP 研发支出（$19.1亿）</strong>，随后长达十余年流淌的版税收入（约 50% 当前版税来自 10 年前发布的产品）几乎纯属高毛利复利年金。
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Live Financial Telemetry Ledger -->
+        <aside class="bm-telemetry-ledger" aria-label="FY2026 & H1 FY27 核心经济遥测">
+          <div class="bm-ledger-head">
+            <div class="bm-ledger-title">
+              <span class="bm-pulse-dot"></span>
+              <span data-i18n-zh="FY2026 &amp; Q2 FY27 核心遥测账本" data-i18n-en="FY2026 &amp; Q2 FY27 Telemetry Ledger">FY2026 &amp; Q2 FY27 核心遥测账本</span>
+            </div>
+            <a class="cite-link mono" href="https://businesstats.com/arm/" target="_blank" rel="noopener noreferrer">20-F 审计口径 ↗</a>
+          </div>
+
+          <div class="bm-telemetry-rows">
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="FY26 总营收 (版税 53.1% / 授权 46.9%)" data-i18n-en="FY26 Revenue (53.1% Royalty / 46.9% License)">FY26 总营收 (版税 53.1% / 授权 46.9%)</span>
+                <span class="bm-tel-val mono">$4.92B <small style="font-size:0.74rem;color:var(--mui-success-text);">+23%</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:53.1%;"></div>
+                <div style="width:46.9%;background:#16A34A;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>Royalty $2,613M (+21%)</span><span>License $2,307M (+25%)</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="最新季度动能 (Q2 FY27 · 截至2026.09)" data-i18n-en="Latest Quarter (Q2 FY27 · Ended Sep 2026)">最新季度动能 (Q2 FY27 · 截至2026.09)</span>
+                <span class="bm-tel-val mono">$1.44B <small style="font-size:0.74rem;color:var(--mui-success-text);">+27%</small></span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:53.6%;background:#16A34A;"></div>
+                <div style="width:46.4%;background:#0073E6;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>License $773M (+50%)</span><span>Royalty $670M · TTM $5.47B</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="软件级毛利率 &amp; Non-GAAP 营业利润率" data-i18n-en="Software-Like GM &amp; Non-GAAP EBIT Margin">软件级毛利率 &amp; Non-GAAP 营业利润率</span>
+                <span class="bm-tel-val mono">97.5% / 43.0%</span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:97.5%;background:linear-gradient(90deg,#0073E6,#22C55E);"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>GAAP 毛利 $4,799M</span><span>Non-GAAP 营业利润 $2,115M</span></div>
+            </div>
+
+            <div class="bm-tel-item">
+              <div class="bm-tel-top">
+                <span class="bm-tel-lbl" data-i18n-zh="生态统治底座 × 订阅合同池 (ACV)" data-i18n-en="Ecosystem Footprint × Licensing ACV">生态统治底座 × 订阅合同池 (ACV)</span>
+                <span class="bm-tel-val mono">350B+ / $1.73B</span>
+              </div>
+              <div class="bm-tel-bar-track">
+                <div class="bm-tel-bar-fill" style="width:91%;"></div>
+              </div>
+              <div class="bm-tel-sub mono"><span>3,000万+ 软件开发者</span><span>56家 ATA · 329家 AFA 客户</span></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+      <section id="mod-pipeline" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 01 · END-TO-END SILICON IP-TO-CHIP VALUE PIPELINE</span>
+            <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从剑桥一行指令集到全球算力税基" data-i18n-en="5-Node Value-Chain Pipeline: From Cambridge ISA Specs to Global Silicon Tax">五阶商业价值传导沙盘：从剑桥一行指令集到全球算力税基</h2>
+            <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解该环节的商业合约设计、费率放大倍率与核心量化指标。" data-i18n-en="Click any node in the horizontal pipeline to inspect contract mechanics, royalty multipliers, and KPIs.">点击下方任一价值链节点，拆解该环节的商业合约设计、费率放大倍率与核心量化指标。</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+        </div>
+
+        <div class="bm-pipeline-track" id="pipelineTrack">
+          <button type="button" class="bm-node-btn active" data-node="0">
+            <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">ISA STANDARD</span></div>
+            <div class="bm-node-title" data-i18n-zh="Armv9 指令集与 20年兼容契约" data-i18n-en="Armv9 ISA &amp; Compatibility Moat">Armv9 指令集与 20年兼容契约</div>
+            <div class="bm-node-kpi mono">研发投入 $2.78B (56.4%营收)</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="1">
+            <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">ATA / AFA FUNNEL</span></div>
+            <div class="bm-node-title" data-i18n-zh="双层订阅漏斗前置锁定设计" data-i18n-en="ATA &amp; AFA Subscription Funnel">双层订阅漏斗前置锁定设计</div>
+            <div class="bm-node-kpi mono">ACV $1.73B · RPO $2.07B</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="2">
+            <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">CSS MULTIPLIER</span></div>
+            <div class="bm-node-title" data-i18n-zh="CSS 计算子系统缩短流片周期" data-i18n-en="Compute Subsystems (CSS) Escalator">CSS 计算子系统缩短流片周期</div>
+            <div class="bm-node-kpi mono">23项签约 · 单芯版税 ~2x Armv9</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="3">
+            <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">ROYALTY ANNUITY</span></div>
+            <div class="bm-node-title" data-i18n-zh="3,500亿颗芯片长尾版税印钞" data-i18n-en="350B+ Chip Long-Tail Royalty">3,500亿颗芯片长尾版税印钞</div>
+            <div class="bm-node-kpi mono">Q2单季破 100亿颗 · 50%逾10年</div>
+          </button>
+
+          <button type="button" class="bm-node-btn" data-node="4">
+            <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">FULL SILICON</span></div>
+            <div class="bm-node-title" data-i18n-zh="Arm AGI CPU 整芯全价值捕获" data-i18n-en="Arm AGI CPU Production Silicon">Arm AGI CPU 整芯全价值捕获</div>
+            <div class="bm-node-kpi mono">FY27–28 需求 &gt;$2B · 剑指$15B</div>
+          </button>
+        </div>
+
+        <div class="bm-node-inspector" id="nodeInspector">
+          <div class="bm-ins-prose">
+            <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · ARMV9 ARCHITECTURE &amp; R&amp;D ENGINE</span>
+            <h3 id="nodeTitle">Armv9 指令集（ISA）：用占营收 56.4% 的超高强度研发构筑全行业计算母语</h3>
+            <p id="nodeDesc">
+              首席架构师 Richard Grisenthwaite 团队统筹 Armv9 演进，原生植入机密计算领域（Confidential Compute Architecture）与可扩展矩阵扩展（SME2）。由于全球逾 3,000 万软件开发者的操作系统内核、编译器与 AI 推理库（KleidiAI）均直接针对 Arm 指令集深度优化，任何芯片厂商一旦脱离该标准即面临软件生态归零风险。
+            </p>
+            <div class="bm-ins-formula mono" id="nodeFormula">
+              商业传导：8,058 名工程师（占全员 84.1%）持续迭代 ISA → Armv9 单芯片版税率较前代 Armv8 跃升约 2 倍
+            </div>
+          </div>
+          <div class="bm-ins-kpis" id="nodeKpis">
+            <div class="bm-ins-card"><b class="mono">$2,776M</b><span>FY2026 GAAP 研发总投入 (+34%)</span></div>
+            <div class="bm-ins-card"><b class="mono">84.1%</b><span>工程师占总员工 (9,584人) 比例</span></div>
+            <div class="bm-ins-card"><b class="mono">~2.0x</b><span>Armv9 相对 Armv8 版税率倍数</span></div>
+            <div class="bm-ins-card"><b class="mono">30M+</b><span>全球原生 Arm 软件开发者规模</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 2: DUAL-ENGINE PROFIT POOL (7:5 SPLIT) -->
+      <section id="mod-profit-pool" class="bm-split-75">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; REVENUE TRAJECTORY</span>
+              <h3 data-i18n-zh="FY2026 $49.2亿 价值转化瀑布流与六年双擎跃升" data-i18n-en="FY2026 $4.92B P&amp;L Waterfall &amp; 6-Year Dual-Engine Growth">FY2026 $49.2亿 价值转化瀑布流与六年双擎跃升</h3>
+            </div>
+            <div class="mui-segmented" id="pChartTabs">
+              <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→利润瀑布流" data-i18n-en="Rev → Profit Waterfall">营收→利润瀑布流</button>
+              <button type="button" class="mui-seg-btn" data-pview="history" data-i18n-zh="FY21–FY26 双轮增长" data-i18n-en="FY21–FY26 Dual Stream">FY21–FY26 双轮增长</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="profitCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            数据来源：<a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm" target="_blank" rel="noopener noreferrer">SEC Q4 FYE26 Exhibit 99.2 ↗</a> 与
+            <a class="cite-link" href="https://businesstats.com/arm/" target="_blank" rel="noopener noreferrer">FY21–FY26 20-F 审计序列 ↗</a>。
+            注意 Arm 财报核心特征：销售成本仅 <strong>$1.21亿（GAAP 毛利率 97.5%）</strong>；GAAP 与 Non-GAAP 营业利润（$9.00亿 vs $21.15亿）的差额主要来自吸引顶级芯片架构师的 $10.52亿 股权激励（SBC）。
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 02B · FOUR-TIER MONETIZATION ARCHITECTURE</span>
+              <h3 data-i18n-zh="商业变现四级阶梯：从零门槛试用到量产整芯" data-i18n-en="4-Tier Monetization Escalator: From AFA to Production Silicon">商业变现四级阶梯：从零门槛试用到量产整芯</h3>
+            </div>
+            <div class="mui-segmented" id="tierFilter">
+              <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+              <button type="button" class="mui-seg-btn" data-tcat="lic" data-i18n-zh="授权订阅" data-i18n-en="Licensing">授权订阅</button>
+              <button type="button" class="mui-seg-btn" data-tcat="roy" data-i18n-zh="版税与整芯" data-i18n-en="Royalty/Chip">版税与整芯</button>
+            </div>
+          </div>
+
+          <div class="bm-tier-list" id="tierList">
+            <div class="bm-tier-card" data-tier="lic">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name" data-i18n-zh="① Arm Flexible Access (AFA) 零门槛先试后付漏斗" data-i18n-en="① Arm Flexible Access (AFA) Design-First Funnel">① Arm Flexible Access (AFA) 零门槛先试后付漏斗</span>
+                <span class="mui-chip mui-chip-success mono">329 家活跃客户</span>
+              </div>
+              <div class="bm-tier-desc">允许初创公司与中小芯片团队以极低年费无限调用约 75%+ IP 库进行流片前验证，仅在决定量产流片（Tape-out）时才结算正式授权费，从源头封堵 RISC-V 对长尾创业者的渗透。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="lic">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name" data-i18n-zh="② Arm Total Access (ATA) 旗舰全家桶年费订阅" data-i18n-en="② Arm Total Access (ATA) Enterprise Subscription">② Arm Total Access (ATA) 旗舰全家桶年费订阅</span>
+                <span class="mui-chip mui-chip-primary mono">56 家 · 含超半数Top30客户</span>
+              </div>
+              <div class="bm-tier-desc">面向头部芯片厂与云巨头提供全套最新 Cortex/Neoverse/Mali IP 包年订阅制，将过去脉冲式单次谈判升级为高可预期的年化合同价值（ACV 达 $17.32亿）。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="roy">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name" data-i18n-zh="③ Compute Subsystems (CSS) 预集成子系统双倍版税" data-i18n-en="③ Compute Subsystems (CSS) ~2x Royalty Rate">③ Compute Subsystems (CSS) 预集成子系统双倍版税</span>
+                <span class="mui-chip mui-chip-violet mono">~8%–10% ASP 版税潜力</span>
+              </div>
+              <div class="bm-tier-desc">不再只卖零散 CPU 核，而是交付验证完毕的 Neoverse / Lumex / Zena 完整计算子系统（甚至 GDSII 物理版图），帮客户缩短最高 12 个月上市时间，换取较标准 Armv9 翻倍的单芯版税率。</div>
+            </div>
+
+            <div class="bm-tier-card" data-tier="roy">
+              <div class="bm-tier-top">
+                <span class="bm-tier-name" data-i18n-zh="④ Arm AGI CPU 自研量产数据中心芯片（2026历史性破局）" data-i18n-en="④ Arm AGI CPU Production Server Silicon">④ Arm AGI CPU 自研量产数据中心芯片（2026历史性破局）</span>
+                <span class="mui-chip mui-chip-warning mono">整颗售价数千美元级</span>
+              </div>
+              <div class="bm-tier-desc">与 Meta 联合定义、台积电 3nm N3P 代工的 136 核服务器处理器，直接从收取单芯片几美元版税跃迁至捕获整颗高端服务器 CPU 的完整芯片收入（FY27–28 订单需求超 $20亿）。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 3: REVERSED 5:7 SPLIT — CUSTOMER RATCHET & MARKET SHARE -->
+      <section id="mod-cohort" class="bm-split-57">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03A · THREE-RUNG CUSTOMER INTEGRATION RATCHET</span>
+              <h3 data-i18n-zh="客户深度绑定模型：从买单核 IP 到采购整芯的价值放大" data-i18n-en="Customer Integration Ratchet: From Core IP to Full Silicon">客户深度绑定模型：从买单核 IP 到采购整芯的价值放大</h3>
+            </div>
+          </div>
+
+          <div class="mui-segmented" id="cohortTabs">
+            <button type="button" class="mui-seg-btn" data-cohort="rtl" data-i18n-zh="传统 RTL 核客户" data-i18n-en="Standard RTL Licensee">传统 RTL 核客户</button>
+            <button type="button" class="mui-seg-btn active" data-cohort="css" data-i18n-zh="CSS 子系统客户" data-i18n-en="CSS Platform Partner">CSS 子系统客户</button>
+            <button type="button" class="mui-seg-btn" data-cohort="hyp" data-i18n-zh="云巨头/整芯伙伴" data-i18n-en="Hyperscaler &amp; Silicon">云巨头/整芯伙伴</button>
+          </div>
+
+          <div class="bm-cohort-metrics" id="cohortMetrics">
+            <div class="bm-cohort-stat">
+              <div class="lbl">代表客群与平台</div>
+              <div class="val" style="font-size:0.94rem;">前四大安卓旗舰厂 / AWS / 车企</div>
+              <div class="delta">Neoverse / Lumex / Zena CSS</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">帮客户节省流片周期</div>
+              <div class="val mono">缩短 9–12 个月</div>
+              <div class="delta">大幅省去客户稀缺后端工程人力</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">隐含单芯片版税率区间</div>
+              <div class="val mono">~8% – 10% ASP</div>
+              <div class="delta">约为 Armv8 (~2.5%) 的 3–4 倍</div>
+            </div>
+            <div class="bm-cohort-stat">
+              <div class="lbl">跨代架构留存率</div>
+              <div class="val mono">&gt; 98%</div>
+              <div class="delta">总线/安全岛与编译工具链深度焊死</div>
+            </div>
+          </div>
+
+          <div class="bm-ratchet-note" id="cohortNote">
+            <strong>双向锁定棘轮（Two-Sided Lock-In）：</strong>随着 3nm/2nm 芯片单次流片研发成本飙升至 $5亿 以上，手机大厂、车企与云厂商越来越不愿把工程师耗费在通用 CPU 集群互联与验证上，主动采购 Arm 预验证的 <strong>CSS 计算子系统</strong>——客户省下了 1 年研发时间，而 Arm 则永久锁住了翻倍的芯片全周期版税率
+            <a class="cite-link" href="https://newsroom.arm.com/blog/arm-compute-subsystems-css-explainer" target="_blank" rel="noopener noreferrer">Arm CSS 官方解析 ↗</a>。
+          </div>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 03B · VALUE CAPTURE &amp; END-MARKET DOMINANCE</span>
+              <h3 data-i18n-zh="单芯片价值捕获阶梯与四大终端市场份额演变" data-i18n-en="Per-Chip Royalty Escalation &amp; End-Market Share Gains">单芯片价值捕获阶梯与四大终端市场份额演变</h3>
+            </div>
+            <div class="mui-segmented" id="cChartTabs">
+              <button type="button" class="mui-seg-btn active" data-cview="ladder" data-i18n-zh="单芯片版税率跃升" data-i18n-en="Royalty Rate Ladder">单芯片版税率跃升</button>
+              <button type="button" class="mui-seg-btn" data-cview="share" data-i18n-zh="四大市场渗透率 (%)" data-i18n-en="End-Market Share (%)">四大市场渗透率 (%)</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="cohortCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            关键验证：FY2025 全球智能手机出货量增幅不足 2%，但同期 Arm 智能手机版税收入逆势大涨约 <strong>+30%</strong>，印证“无需硬件放量，单靠架构向 Armv9 与 CSS 升级即可驱动版税高增长”
+            <a class="cite-link" href="https://businesstats.com/arm/" target="_blank" rel="noopener noreferrer">20-F 份额与费率披露 ↗</a>。
+          </p>
+        </div>
+      </section>
+
+      <!-- MODULE 4: 6:6 DUAL WORKBENCH — ACV/LONG-TAIL ANNUITY + 5Y COMPOUNDER -->
+      <section id="mod-capital" class="bm-split-66">
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04A · ACV BACKLOG &amp; DECADE-LONG ROYALTY TAIL</span>
+              <h3 data-i18n-zh="ACV 年化合同池连创新高与“半数版税源自十年前老架构”奇迹" data-i18n-en="ACV Trajectory &amp; 10-Year+ Vintage Royalty Tail">ACV 年化合同池连创新高与“半数版税源自十年前老架构”奇迹</h3>
+            </div>
+            <div class="mui-segmented" id="kChartTabs">
+              <button type="button" class="mui-seg-btn active" data-kview="acv" data-i18n-zh="ACV 年化合同额 ($M)" data-i18n-en="ACV Trajectory ($M)">ACV 年化合同额 ($M)</button>
+              <button type="button" class="mui-seg-btn" data-kview="tail" data-i18n-zh="版税代际长尾构成" data-i18n-en="Vintage Royalty Tail">版税代际长尾构成</button>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <canvas id="capitalCanvas"></canvas>
+          </div>
+
+          <p class="bm-chart-caption">
+            商业复利底座：工业控制、车载 MCU、智能电表与物联网传感器一旦采用某代 Arm Cortex-M/R 核心，生命周期往往长达 15–25 年——因此 Arm 披露<strong>当前约 50% 的版税收入来自发布已满 10 年以上的经典产品</strong>，构筑起抗周期的永续现金垫
+            <a class="cite-link" href="https://investors.arm.com/static-files/adf3bac7-1e91-442e-92e0-5f2d8f1b6a14" target="_blank" rel="noopener noreferrer">FY26 运营指标 ↗</a>。
+          </p>
+        </div>
+
+        <div class="bm-subpanel">
+          <div class="bm-subhead">
+            <div>
+              <span class="bm-kicker mono">MODULE 04B · INTERACTIVE FY2027–FY2031 EPS COMPOUNDER</span>
+              <h3 data-i18n-zh="FY2027–FY2031 “IP版税 + 自研整芯”双轨盈利推演器" data-i18n-en="FY2027–FY2031 IP + Silicon Dual-Engine EPS Simulator">FY2027–FY2031 “IP版税 + 自研整芯”双轨盈利推演器</h3>
+            </div>
+            <div class="mui-segmented" id="simPresets">
+              <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="仅纯IP保守" data-i18n-en="IP-Only Bear">仅纯IP保守</button>
+              <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="稳健双轨基准" data-i18n-en="Balanced Base">稳健双轨基准</button>
+              <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="官方$25B蓝图" data-i18n-en="Mgmt $25B Target">官方$25B蓝图</button>
+            </div>
+          </div>
+
+          <div class="bm-sim-sliders">
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span data-i18n-zh="版税业务年复合增速 (Royalty CAGR)" data-i18n-en="Royalty Revenue CAGR">版税业务年复合增速 (Royalty CAGR)</span><b class="mono" id="lblRoyCagr">18.0%</b></div>
+              <input type="range" id="inpRoyCagr" min="8" max="25" step="0.5" value="18.0" />
+            </div>
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span data-i18n-zh="授权业务年复合增速 (License CAGR)" data-i18n-en="License Revenue CAGR">授权业务年复合增速 (License CAGR)</span><b class="mono" id="lblLicCagr">10.0%</b></div>
+              <input type="range" id="inpLicCagr" min="3" max="18" step="0.5" value="10.0" />
+            </div>
+            <div class="bm-slider-row">
+              <div class="bm-slider-lbl"><span data-i18n-zh="FY31E AGI CPU 自研整芯年营收 ($B)" data-i18n-en="FY31E AGI Silicon Revenue ($B)">FY31E AGI CPU 自研整芯年营收 ($B)</span><b class="mono" id="lblChipRev">$8.5B</b></div>
+              <input type="range" id="inpChipRev" min="0" max="16" step="0.5" value="8.5" />
+            </div>
+          </div>
+
+          <div class="bm-sim-outputs">
+            <div class="bm-sim-out"><b class="mono" id="simRevOut">$18.2B</b><span data-i18n-zh="FY31E 总营收" data-i18n-en="FY31E Revenue">FY31E 总营收</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simEbitOut">46.8%</b><span data-i18n-zh="Non-GAAP 营业利润率" data-i18n-en="Non-GAAP EBIT %">Non-GAAP 营业利润率</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simEpsOut">$6.58</b><span data-i18n-zh="FY31E Non-GAAP EPS" data-i18n-en="FY31E Non-GAAP EPS">FY31E Non-GAAP EPS</span></div>
+            <div class="bm-sim-out"><b class="mono" id="simCagrOut">+30.0%</b><span data-i18n-zh="5年 EPS 复合增速" data-i18n-en="5Y EPS CAGR">5年 EPS 复合增速</span></div>
+          </div>
+
+          <div class="bm-canvas-box" style="height:175px;">
+            <canvas id="simMiniCanvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 5: SEMICONDUCTOR VALUE-CHAIN ARCHETYPE MATRIX & STRESS AUDIT -->
+      <section id="mod-matrix" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE 05 · SEMICONDUCTOR VALUE-CHAIN BENCHMARKING &amp; STRESS AUDIT</span>
+            <h2 class="bm-h2" data-i18n-zh="全球半导体产业链六大商业范式横向对标与三大结构性暗礁压测" data-i18n-en="Global Semiconductor Business Model Matrix &amp; 3 Structural Stress Audits">全球半导体产业链六大商业范式横向对标与三大结构性暗礁压测</h2>
+            <p class="bm-head-desc" data-i18n-zh="对比芯片产业链各咽喉环节的毛利率、研发强度与资本开支负担，并客观审视 Arm 面临的竞合诉讼与地缘集中度挑战。" data-i18n-en="Benchmarking Arm against semiconductor choke-point peers and stress-testing litigation, RISC-V, and China exposure.">对比芯片产业链各咽喉环节的毛利率、研发强度与资本开支负担，并客观审视 Arm 面临的竞合诉讼与地缘集中度挑战。</p>
+          </div>
+          <div class="mui-segmented" id="peerFilter">
+            <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部咽喉龙头 (6)" data-i18n-en="All Choke Points (6)">全部咽喉龙头 (6)</button>
+            <button type="button" class="mui-seg-btn" data-pcat="ip" data-i18n-zh="IP/EDA 软件层" data-i18n-en="IP &amp; EDA Layer">IP/EDA 软件层</button>
+            <button type="button" class="mui-seg-btn" data-pcat="chip" data-i18n-zh="芯片设计/制造设备" data-i18n-en="Silicon &amp; Fab/Equip">芯片设计/制造设备</button>
+          </div>
+        </div>
+
+        <div class="bm-table-wrap">
+          <table class="bm-table" id="peerTable">
+            <thead>
+              <tr>
+                <th>公司与代码</th>
+                <th>半导体价值链卡位</th>
+                <th>GAAP 毛利率</th>
+                <th>研发 / 营收强度</th>
+                <th>CapEx / 营收强度</th>
+                <th>终极护城河与核心脆弱点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-arm" data-row-cat="ip chip">
+                <td><strong>Arm Holdings (ARM)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+                <td>全球通用 ISA 指令集税基 + CSS + AGI 整芯</td>
+                <td class="mono" style="color:var(--mui-success-text);">97.5% (冠绝全行业)</td>
+                <td class="mono" style="color:var(--mui-warning-text);">56.4% (极高工程投入)</td>
+                <td class="mono">11.1% (算力集群扩建)</td>
+                <td>3,000万开发者与3,500亿存量芯片锁死；暗礁在自研芯与客户竞合及安谋中国集中度</td>
+              </tr>
+              <tr data-row-cat="ip">
+                <td><strong>Synopsys (SNPS)</strong></td>
+                <td>芯片设计自动化 (EDA) 工业软件与接口 IP 双寡头</td>
+                <td class="mono">~79%–81%</td>
+                <td class="mono">~33%–35%</td>
+                <td class="mono" style="color:var(--mui-success-text);">~2%–3%</td>
+                <td>按工程师席位收 3 年期订阅费（无出货版税弹性），流片复杂度越高越刚需</td>
+              </tr>
+              <tr data-row-cat="chip">
+                <td><strong>NVIDIA (NVDA)</strong></td>
+                <td>CUDA 软件生态锁死 + AI 训练/推理全栈系统霸主</td>
+                <td class="mono">~71%–75%</td>
+                <td class="mono">~9%–12% (营收分母巨大)</td>
+                <td class="mono" style="color:var(--mui-success-text);">~2%–3% (Fabless)</td>
+                <td>捕获整张 AI 加速卡与机柜级超额毛利（Grace/Vera 亦基于 Arm 架构）；受云厂 CapEx 周期影响</td>
+              </tr>
+              <tr data-row-cat="chip">
+                <td><strong>TSMC 台积电 (TSM)</strong></td>
+                <td>全球先进制程 (3nm/2nm) 与 CoWoS 封装唯一中立代工</td>
+                <td class="mono">~56%–59%</td>
+                <td class="mono">~7%–8%</td>
+                <td class="mono" style="color:var(--mui-error-text);">~32%–38% (极重晶圆厂)</td>
+                <td>与 Arm 并称“中立双子星”，制造良率不可替代；承担巨额光刻机资本开支与地缘风险</td>
+              </tr>
+              <tr data-row-cat="chip">
+                <td><strong>Qualcomm (QCOM)</strong></td>
+                <td>移动 SoC/基带专利池 (QTL) + Oryon PC/智驾芯片</td>
+                <td class="mono">~55%–56%</td>
+                <td class="mono">~22%–24%</td>
+                <td class="mono">~3%–4%</td>
+                <td>无线通信专利收费站稳健；既是 Arm 最大 ALA 架构客户之一，又在 PC/数据中心与 Arm 正面竞合</td>
+              </tr>
+              <tr data-row-cat="chip">
+                <td><strong>ASML 阿斯麦 (ASML)</strong></td>
+                <td>EUV / High-NA 极紫外光刻机全球 100% 独家垄断</td>
+                <td class="mono">~51%–53%</td>
+                <td class="mono">~14%–15%</td>
+                <td class="mono">~6%–8%</td>
+                <td>物理极限供应链壁垒无敌，售后装机保养贡献持续收入；受晶圆厂扩产节奏与出口管制影响</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bm-stress-grid">
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-error mono">STRESS 01 · QUALCOMM &amp; CHANNEL CONFLICT</span>
+              <h4>下场做 Arm AGI CPU 整芯与高通 ALA 诉讼的竞合边界</h4>
+              <p>2024 年 12 月与 2026 年 10 月特拉华州陪审团先后裁定高通收购 Nuvia 开发的 Oryon 核未违反架构授权协议（ALA），并就 Arm 断供工具争议判予高通 $2 名义赔偿（Arm 赢得另外 5 项 TLA 定价抗辩，法官仍待裁定五年版税豁免条款可执行性）
+              <a class="cite-link" href="https://www.thestar.com.my/tech/tech-news/2026/10/14/qualcomm-says-jury-found-arm-breached-license-agreement" target="_blank" rel="noopener noreferrer">特拉华庭审裁决 ↗</a>。
+              同时，当 Arm 向 Meta/OpenAI 直销 AGI CPU 时，如何避免引发博通、Marvell、AMD 等伙伴戒心，是对管理层平衡术的最大考验。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：Noreika 法官后续裁决与大客户续约条款</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-warning mono">STRESS 02 · OPEN-SOURCE RISC-V</span>
+              <h4>免版税开源指令集 RISC-V 在微控制器与协处理器的侵蚀</h4>
+              <p>RISC-V 凭借开源免授权费及地缘自主可控诉求，已在存储控制器、蓝牙/Wi-Fi 嵌入式 MCU 及部分定制 AI 协处理器实现百亿颗级出货。但在智能手机主芯片、PC 与云端服务器等重度依赖操作系统、编译器与 3,000 万开发者应用兼容性的高性能计算层，RISC-V 软件碎片化使其短期极难撼动 Armv9 护城河。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：AFA 创业孵化签约数与高阶车规/云端防线</label>
+          </div>
+
+          <div class="bm-stress-card">
+            <div>
+              <span class="mui-chip mui-chip-violet mono">STRESS 03 · ARM CHINA &amp; RELATED PARTIES</span>
+              <h4>前五大客户占 57% 营收、关联方软银与安谋中国治理结构</h4>
+              <p>据 FY2026 Form 20-F 披露，前五大客户合计贡献约 <strong>57% 营收</strong>；其中关联方（软银集团及独立运营的安谋科技 Arm China）贡献 <strong>$14.99亿（占总营收 30.5%）</strong>，安谋中国单一渠道约占 <strong>16%</strong>（已从 FY23 峰值 24% 稳步回落）
+              <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm" target="_blank" rel="noopener noreferrer">FY26 20-F 风险披露 ↗</a>。出口管制升级或软银持股（~87%）质押波动均会放大估值弹性。</p>
+            </div>
+            <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：关联方应收/合同资产周转与非华云收入占比</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIMARY SOURCES FOOTER -->
+      <section class="bm-panel" aria-label="权威财报与行业信源">
+        <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+          <div>
+            <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+            <h2 class="bm-h2" data-i18n-zh="权威 SEC 监管文件、股东信与产品技术公报" data-i18n-en="Verified SEC Filings, Shareholder Letters &amp; Technical Releases">权威 SEC 监管文件、股东信与产品技术公报</h2>
+          </div>
+        </div>
+        <div class="bm-sources-grid">
+          <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm" target="_blank" rel="noopener noreferrer">
+            <b>SEC Exhibit 99.2: Q4 &amp; Full-Year FYE26 Shareholder Letter ↗</b>
+            <span>官方披露 FY2026 创纪录营收 $4,920M、版税 $2,613M、授权 $2,307M、97.5% 毛利率与 9,584 名员工（8,058 名工程师）</span>
+          </a>
+          <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm" target="_blank" rel="noopener noreferrer">
+            <b>Arm Holdings plc FY2026 Form 20-F Annual Report ↗</b>
+            <span>1,064,055,252 股普通股、软银 ~87% 控股结构、前五大客户（57%）与安谋科技（~16%）会计及风险披露</span>
+          </a>
+          <a class="bm-source-item" href="https://investors.arm.com/static-files/0b5baa2e-fc47-4d05-b724-e49de7bd4356" target="_blank" rel="noopener noreferrer">
+            <b>Arm Q2 FYE27 Shareholder Letter (Ended Sep 30, 2026) ↗</b>
+            <span>单季营收 +27% 至 $1,443M、单季伙伴芯片出货首破 100 亿颗、3,000万+ 开发者与 Arm PC 约 20% 全球份额</span>
+          </a>
+          <a class="bm-source-item" href="https://newsroom.arm.com/news/arm-q1-fye27-results" target="_blank" rel="noopener noreferrer">
+            <b>Arm Q1 FYE27 Official Results Release ↗</b>
+            <span>Q1 营收 $1,289M (+22%)、数据中心版税同比翻倍、Neoverse 服务器核心累计出货突破 15 亿颗</span>
+          </a>
+          <a class="bm-source-item" href="https://newsroom.arm.com/news/arm-agi-cpu-launch" target="_blank" rel="noopener noreferrer">
+            <b>Arm Expands Compute Platform to Silicon: Arm AGI CPU ↗</b>
+            <span>2026年3月24日首发台积电 3nm 最高 136 核 Neoverse V3 数据中心处理器，Meta 任首席联合开发伙伴</span>
+          </a>
+          <a class="bm-source-item" href="https://newsroom.arm.com/blog/arm-compute-subsystems-css-explainer" target="_blank" rel="noopener noreferrer">
+            <b>Arm Compute Subsystems (CSS): Neoverse, Lumex &amp; Zena ↗</b>
+            <span>官方详解 CSS 预集成子系统如何缩短最高 12 个月芯片设计周期并驱动单芯片版税率成倍跃升</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  
+<script src="../../_shared/arm_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

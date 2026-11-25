@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>任天堂株式会社 Nintendo (7974.T / NTDOY) 深度投资与商业模式研究报告 | 数据中心</title>
+  <meta name="description" content="任天堂 Nintendo (TYO: 7974 / NTDOY) 深度研究报告：软硬一体生态、Switch 2 累计2,635万台跃迁、4亿 Nintendo Account 跨世代飞轮、超级马力欧银河大电影破10亿美元与 ¥1.93万亿零负债现金堡垒。" />
+  <meta name="keywords" content="Nintendo, 任天堂, 7974.T, NTDOY, Switch 2, 古川俊太郎, 宫本茂, 枯萎技术的水平思考, Mario Kart World, Nintendo EPD, 数据中心" />
+  <link rel="stylesheet" href="../../_shared/e10053eb7ee16009.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+  <script src="../../_shared/device-mode.js"></script>
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <!-- Sticky MUI Frosted Glass AppBar -->
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <span class="brand-monogram mono">7974</span>
+        <nav class="breadcrumbs" aria-label="面包屑导航">
+          <a class="crumb-link hide-sm" href="../../index.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+          </a>
+          <span class="hide-sm" style="opacity:0.45;">/</span>
+          <span class="crumb-current" data-i18n-zh="任天堂 (Nintendo) 深度投资与商业模式研报" data-i18n-en="Nintendo (7974.T) Equity &amp; Ecosystem Monograph">任天堂 (Nintendo) 深度投资与商业模式研报</span>
+        </nav>
+        <span class="mui-chip mui-chip-primary mono hide-sm">TYO: 7974 · NTDOY</span>
+        <span class="mui-chip mui-chip-success mono hide-sm" data-i18n-zh="FY2026 年报 · 27H1 最新" data-i18n-en="FY2026 AR · H1 FY27">FY2026 年报 · 27H1 最新</span>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索章节或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div id="quickJumpPopover" class="quick-jump-popover"></div>
+        </div>
+        <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+          <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+          <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Centered Shell -->
+  <div class="layout-shell">
+    <!-- Left MUI Documentation Navigation Sidebar -->
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="研究章节目录与站点导航">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">NINTENDO · EQUITY &amp; MOAT</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="任天堂深度商业研报" data-i18n-en="Nintendo Research Monograph">任天堂深度商业研报</div>
+        <p class="sidebar-subtitle" data-i18n-zh="软硬一体独创生态 × Switch 2 跨代跃迁 × 4亿账户网络 × ¥1.93万亿零负债净现金堡垒" data-i18n-en="Hardware-Software Symbiosis × Switch 2 Scaling × 400M Accounts × ¥1.93T Debt-Free Cash Fortress">软硬一体独创生态 × Switch 2 跨代跃迁 × 4亿账户网络 × ¥1.93万亿零负债净现金堡垒</p>
+
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="研发中枢与规模" data-i18n-en="R&amp;D Hub &amp; Staff">研发中枢与规模</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="8,666人 · 京都EPD" data-i18n-en="8,666 FTE · Kyoto EPD">8,666人 · 京都EPD</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="FY26 净营收 / 增幅" data-i18n-en="FY26 Sales / YoY">FY26 净营收 / 增幅</span>
+            <span class="sidebar-mini-val mono">¥2.31T (+98.6%)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="Switch 2 / 净现金" data-i18n-en="Switch 2 / Net Cash">Switch 2 / 净现金</span>
+            <span class="sidebar-mini-val mono" data-i18n-zh="2,635万台 · ¥1.93T" data-i18n-en="26.35M · ¥1.93T">2,635万台 · ¥1.93T</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unified MUI Navigation Card: Site Portal Nav + Report TOC -->
+      <nav class="sidebar-card" aria-label="站点导航与章节目录">
+        <!-- SITE_RELATED_NAV_START -->
+        <div class="co-side-nav" id="companySubfolderHub" data-co-key="NTDOY">
+          <div class="co-side-head">
+            <span class="co-side-title mono">NTDOY · 02/03</span>
+            <a href="../../index.html" class="co-side-home" data-i18n-zh="← 首页" data-i18n-en="← Home">← 首页</a>
+          </div>
+          <div class="co-side-actions">
+            <a class="co-hub-btn" id="coHubPrevBtn" href="NintendoGame.html" data-i18n-zh="← 上一篇" data-i18n-en="← Prev">← 上一篇</a>
+            <a class="co-hub-btn" id="coHubNextBtn" href="../hardware/Nintendo_15_Consoles.html" data-i18n-zh="下一篇 →" data-i18n-en="Next →">下一篇 →</a>
+          </div>
+          <div class="co-hub-pills">
+            <button type="button" class="co-hub-pill active" data-co-cat="ALL" data-i18n-zh="全部 (3)" data-i18n-en="All (3)">全部 (3)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="Company" data-i18n-zh="公司深度 (2)" data-i18n-en="Company (2)">公司深度 (2)</button>
+            <button type="button" class="co-hub-pill" data-co-cat="hardware" data-i18n-zh="硬件产品 (1)" data-i18n-en="hardware (1)">硬件产品 (1)</button>
+          </div>
+          <div class="co-side-list">
+            <a class="co-hub-item" data-co-item-cat="Company" href="NintendoGame.html" title="任天堂 11 大核心游戏 IP 深度研报中枢（马力欧·宝可梦·塞尔达·动森·大乱斗·斯普拉遁等）"><span class="co-hub-ticker mono">01</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="任天堂 11 大核心游戏 IP 深度研报中枢（马力欧·宝可梦·塞尔达·动森·大乱斗·斯普拉遁等）" data-i18n-en="11 IP Deep DiveReport ( · · · · ·)">任天堂 11 大核心游戏 IP 深度研报中枢（马力欧·宝可梦·塞尔达·动森·大乱斗·斯普拉遁等）</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item active" data-co-item-cat="Company" href="nintendo_7974_t_ntdoy.html" title="任天堂株式会社 Nintendo (7974.T / NTDOY) 深度投资与商业模式研究报告"><span class="co-hub-ticker mono">02</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="任天堂株式会社 Nintendo (7974.T / NTDOY) 深度投资与商业模式研究报告" data-i18n-en="Nintendo (7974.T / NTDOY) Deep Dive &amp; Business ModelResearch Report">任天堂株式会社 Nintendo (7974.T / NTDOY) 深度投资与商业模式研究报告</span><span class="co-hub-meta mono">Company</span></span></a>
+            <a class="co-hub-item" data-co-item-cat="hardware" href="../hardware/Nintendo_15_Consoles.html" title="任天堂 Nintendo (7974.T) 全谱系 15 代游戏机深度商业与工程研报中枢（1977 Color TV-Game 至 2026 Switch 2）| 王安安数据中心"><span class="co-hub-ticker mono">03</span><span class="co-hub-info"><span class="co-hub-title" data-i18n-zh="任天堂 Nintendo (7974.T) 全谱系 15 代游戏机深度商业与工程研报中枢（1977 Color TV-Game 至 2026 Switch 2）| 王安安数据中心" data-i18n-en="Nintendo (7974.T) 15 Deep Dive &amp; Report (1977 Color TV-Game 2026 Switch 2)| Data Center">任天堂 Nintendo (7974.T) 全谱系 15 代游戏机深度商业与工程研报中枢（1977 Color TV-Game 至 2026 Switch 2）| 王安安数据中心</span><span class="co-hub-meta mono">hardware</span></span></a>
+          </div>
+          <script src="../../_shared/a93112618a3112fe.js"></script>
+        </div>
+        <!-- SITE_RELATED_NAV_END -->
+
+        <div class="nav-divider"></div>
+
+        <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary &amp; KPIs">执行摘要与核心指标</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span data-i18n-zh="软硬一体与 Switch 2 跃迁" data-i18n-en="Integrated Model &amp; Switch 2">软硬一体与 Switch 2 跃迁</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span data-i18n-zh="四大研发支柱与护城河雷达" data-i18n-en="4 Creative Pillars &amp; Moat">四大研发支柱与护城河雷达</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span data-i18n-zh="全球游戏与IP巨头横向对比" data-i18n-en="Global Gaming &amp; IP Peers">全球游戏与IP巨头横向对比</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span data-i18n-zh="跨周期财务与装机利润测算" data-i18n-en="Financials &amp; Profit Simulator">跨周期财务与装机利润测算</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span data-i18n-zh="三代演进与四大战役复盘" data-i18n-en="3-Era Evolution &amp; Case Studies">三代演进与四大战役复盘</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span data-i18n-zh="任天堂护城河核查清单" data-i18n-en="Nintendo Moat Checklist">任天堂护城河核查清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span data-i18n-zh="数据来源与财报核验索引" data-i18n-en="Primary Filings &amp; Sources">数据来源与财报核验索引</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Compact MUI Page Utility Controls (Appearance Switch + Export/Print) -->
+      
+    </aside>
+
+    <!-- Main Analytical Content -->
+    <main class="main-content">
+
+      <!-- ================================================================
+           00 执行摘要与核心指标
+           ================================================================ -->
+      <section id="sec-00" class="mui-paper hero-card section-block">
+        <div class="status-strip">
+          <span class="mui-chip mui-chip-primary" data-i18n-zh="商业史定评：全球最具护城河的“软硬一体常青IP造梦机器”" data-i18n-en="Verdict: Global Entertainment's Deepest Hardware-Software Evergreen IP Moat">商业史定评：全球最具护城河的“软硬一体常青IP造梦机器”</span>
+          <span class="mui-chip" data-i18n-zh="研究横跨：蓝海破局 (DS/Wii) · Switch 混合形态一统 (2017–2025) · Switch 2 与影游生态共振 (2025–2026+)" data-i18n-en="Scope: Blue Ocean (DS/Wii) · Hybrid Switch Unification (2017–25) · Switch 2 &amp; Transmedia Era (2025–26+)">研究横跨：蓝海破局 (DS/Wii) · Switch 混合形态一统 (2017–2025) · Switch 2 与影游生态共振 (2025–2026+)</span>
+          <span class="mui-chip mui-chip-success mono" data-i18n-zh="数据基准：FY2026 年报 / FY2027 H1 (截至 2026.09.30)" data-i18n-en="Baseline: FY2026 Annual Report / H1 FY27 (Ended Sep 30, 2026)">数据基准：FY2026 年报 / FY2027 H1 (截至 2026.09.30)</span>
+        </div>
+
+        <div class="hero-overline mono">
+          <span data-i18n-zh="CORE THESIS · 枯萎技术的水平思考 × 京都EPD软硬共创 × 4亿账户跨代留存 × ¥1.93万亿零负债现金堡垒" data-i18n-en="CORE THESIS · Lateral Thinking × Kyoto EPD Co-Design × 400M Account Graph × ¥1.93T Zero-Debt Cash Fortress">CORE THESIS · 枯萎技术的水平思考 × 京都EPD软硬共创 × 4亿账户跨代留存 × ¥1.93万亿零负债现金堡垒</span>
+        </div>
+
+        <h1 class="hero-h1" data-i18n-rich="nt_r00">
+          任天堂株式会社 Nintendo Co., Ltd. 深度投资与商业模式研究报告：<span class="gradient-accent">软硬一体飞轮、跨世代超级 IP 矩阵与零负债现金堡垒</span>
+        </h1>
+
+        <p class="lead-prose" data-i18n-rich="nt_r01">
+          为什么在索尼与微软竞逐百亿晶体管算力、欧美 3A 游戏大厂深陷动辄数亿美元研发成本与大规模裁员潮的时代，创立逾百年的京都巨头<strong>任天堂（Nintendo, TYO: 7974 / NTDOY）</strong>却能以极低的人员流失率持续改写娱乐史？答案在于其独步全球的<strong>“专用硬件入口 + 100% 独占第一方常青软件 + 4 亿 Nintendo Account 跨世代账户 + 电影与主题乐园全龄放大器”</strong>闭环生态。2025 年 6 月全球首发的 <strong>Nintendo Switch 2</strong> 创下任天堂主机最快开局纪录，推动 FY2026（截至 2026 年 3 月）合并净营收同比暴涨 <strong>98.6%</strong> 至 <strong>¥23,130.5 亿（约 $146 亿美元）</strong>、归母净利润增长 <strong>51.3%</strong> 至 <strong>¥4,240.6 亿</strong>
+          <a class="cite-link" href="https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-146bn-following-launch-of-switch-2" target="_blank" rel="noopener noreferrer">GamesIndustry FY26 ↗</a>。
+          截至 2026 年 9 月 30 日（FY2027 H1 半年报），Switch 2 累计硬件销量已达 <strong>2,635 万台</strong>、软件累计出货 <strong>7,321 万份</strong>，初代 Switch 累计销量更攀升至 <strong>1.5720 亿台</strong>；随着数字版软件占比跃升至 <strong>60.7%</strong>，FY2027 上半年营业利润逆势大增 <strong>49.1%</strong> 至 <strong>¥2,165 亿</strong>
+          <a class="cite-link" href="https://simulationdaily.com/news/nintendo-financial-results-q2-fy2027/" target="_blank" rel="noopener noreferrer">Q2 FY27 Results ↗</a>。
+          与此同时，2026 年 4 月上映的《超级马力欧银河大电影》全球票房再度突破 <strong>$10.1 亿美元</strong>（系列动画电影累计超 <strong>$23.7 亿</strong>）
+          <a class="cite-link" href="https://corporate.comcast.com/press/releases/illumination-and-universal-pictures-super-mario-galaxy-movie-becomes-first-1-billion-film-of-2026" target="_blank" rel="noopener noreferrer">Universal Box Office ↗</a>，
+          配合账面 <strong>¥1.93 万亿零有息负债净现金</strong>与京都本部仅 <strong>2.3% 离职率</strong>的工匠团队
+          <a class="cite-link" href="https://sqmagazine.co.uk/how-many-people-work-at-nintendo/" target="_blank" rel="noopener noreferrer">Nintendo Workforce ↗</a>，
+          构筑起攻守兼备的全球家庭娱乐帝国。
+        </p>
+
+        <!-- 3 Core Thesis Cards -->
+        <div class="grid-3" style="margin-bottom: 18px;">
+          <div class="feature-card">
+            <div class="mui-avatar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="3"/><circle cx="7" cy="12" r="1.5"/><circle cx="17" cy="10" r="1"/><circle cx="17" cy="14" r="1"/></svg>
+            </div>
+            <h3 data-i18n-zh="软硬一体与向下兼容平滑换代" data-i18n-en="Hardware-Software Co-Design &amp; Smooth Transition">软硬一体与向下兼容平滑换代</h3>
+            <p data-i18n-zh="打破过往主机世代“推倒重来”的业绩断崖：Switch 2 原生向下兼容初代超 15 亿份游戏库，并以 4 亿注册 Nintendo Account 与 1.28 亿年活跃玩家实现无缝迁徙。" data-i18n-en="Ends historical console-reset cliffs: Switch 2 natively runs original Switch software and ports >400M Nintendo Accounts and 128M annual playing users seamlessly across generations.">打破过往主机世代“推倒重来”的业绩断崖：Switch 2 原生向下兼容初代超 15 亿份游戏库，并以 4 亿注册 Nintendo Account 与 1.28 亿年活跃玩家实现无缝迁徙。</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="mui-avatar-icon" style="color: var(--mui-success-text); background: var(--mui-success-bg); border-color: var(--mui-success-border);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 data-i18n-zh="第一方常青 IP 印钞机与正价铁律" data-i18n-en="Evergreen First-Party IP &amp; Full-Price Discipline">第一方常青 IP 印钞机与正价铁律</h3>
+            <p data-i18n-zh="马力欧、塞尔达、宝可梦、森友会与斯普拉遁长期坚持不打折正价长卖，《马力欧卡丁车8 豪华版》热销 7,108 万份，《马力欧卡丁车 世界》在 Switch 2 已售 1,648 万份。" data-i18n-en="Mario, Zelda, Pokémon, Animal Crossing, and Splatoon command full MSRP for years—Mario Kart 8 Deluxe hit 71.08M units while Switch 2 flagship Mario Kart World reached 16.48M.">马力欧、塞尔达、宝可梦、森友会与斯普拉遁长期坚持不打折正价长卖，《马力欧卡丁车8 豪华版》热销 7,108 万份，《马力欧卡丁车 世界》在 Switch 2 已售 1,648 万份。</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="mui-avatar-icon" style="color: var(--mui-warning-text); background: var(--mui-warning-bg); border-color: var(--mui-warning-border);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 data-i18n-zh="影游乐园共振与 ¥1.93万亿现金护盾" data-i18n-en="Transmedia Flywheel &amp; ¥1.93T Cash Fortress">影游乐园共振与 ¥1.93万亿现金护盾</h3>
+            <p data-i18n-zh="两部马力欧动画电影全球狂揽超 $23.7 亿票房，联动大阪/好莱坞/奥兰多环球影城超级任天堂世界反哺游戏装机；¥1.93 万亿零负债现金从容穿越任何硬件周期。" data-i18n-en="Two Mario animated films grossed >$2.37B globally alongside Super Nintendo World parks in Osaka, Hollywood, and Orlando, backed by ¥1.93T cash and zero debt.">两部马力欧动画电影全球狂揽超 $23.7 亿票房，联动大阪/好莱坞/奥兰多环球影城超级任天堂世界反哺游戏装机；¥1.93 万亿零负债现金从容穿越任何硬件周期。</p>
+          </div>
+        </div>
+
+        <!-- 4 KPI Cards -->
+        <div class="grid-4">
+          <div class="mui-paper mui-card-interactive kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="FY26 合并净营收与爆发力" data-i18n-en="FY26 Net Sales &amp; Surge">FY26 合并净营收与爆发力</span>
+              <span class="mui-chip mui-chip-primary mono">+98.6% YoY</span>
+            </div>
+            <div class="kpi-value mono">¥2.31T</div>
+            <p class="kpi-desc" data-i18n-rich="nt_r02">FY2026 净营收达 ¥23,130.5 亿（$146亿），营业利润 ¥3,601 亿；27H1 营业利润再增 +49.1% 至 ¥2,165 亿 <a class="cite-link" href="https://sqmagazine.co.uk/nintendo-statistics/" target="_blank" rel="noopener noreferrer">SQ Stats ↗</a>。</p>
+          </div>
+
+          <div class="mui-paper mui-card-interactive kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="Switch 2 / 初代累计硬件" data-i18n-en="Switch 2 / Switch 1 Base">Switch 2 / 初代累计硬件</span>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="截至 2026.09" data-i18n-en="As of Sep 2026">截至 2026.09</span>
+            </div>
+            <div class="kpi-value mono">26.35M</div>
+            <p class="kpi-desc" data-i18n-rich="nt_r03">Switch 2 上市 16 个月售出 2,635 万台（软件 7,321 万份）；初代 Switch 达 1.5720 亿台稳居影史主机榜眼 <a class="cite-link" href="https://simulationdaily.com/news/nintendo-financial-results-q2-fy2027/" target="_blank" rel="noopener noreferrer">Q2 FY27 ↗</a>。</p>
+          </div>
+
+          <div class="mui-paper mui-card-interactive kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="数字版占比与活跃账户" data-i18n-en="Digital Mix &amp; Active Users">数字版占比与活跃账户</span>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="4亿注册账户" data-i18n-en="400M Accounts">4亿注册账户</span>
+            </div>
+            <div class="kpi-value mono">60.7%</div>
+            <p class="kpi-desc" data-i18n-rich="nt_r04">27H1 数字版软件收入占比升至 60.7%（FY26 为 54.6%），年活跃游玩用户 1.28 亿、NSO 付费会员超 3,400 万 <a class="cite-link" href="https://www.shanethegamer.com/research/nintendo-eshop-facts/" target="_blank" rel="noopener noreferrer">eShop Facts ↗</a>。</p>
+          </div>
+
+          <div class="mui-paper mui-card-interactive kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label" data-i18n-zh="零负债净现金与工匠留存" data-i18n-en="Net Cash &amp; Staff Retention">零负债净现金与工匠留存</span>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="离职率 2.3%" data-i18n-en="2.3% Turnover">离职率 2.3%</span>
+            </div>
+            <div class="kpi-value mono">¥1.93T</div>
+            <p class="kpi-desc" data-i18n-rich="nt_r05">账面现金及存款 ¥1.93 万亿、有息负债为 0（每股净现金 ¥1,672.8）；全球 8,666 名员工人均创收 ¥2.669 亿 <a class="cite-link" href="https://stockanalysis.com/quote/tyo/7974/statistics/" target="_blank" rel="noopener noreferrer">7974 Stats ↗</a>。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           01 软硬一体商业架构与 Switch 2 跨代跃迁
+           ================================================================ -->
+      <section id="sec-01" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 01 · HARDWARE-SOFTWARE SYMBIOSIS &amp; SWITCH 2 FLYWHEEL</div>
+            <h2 class="sec-h2" data-i18n-zh="一、软硬一体生态矩阵：8,666 人如何驱动百亿美元级跨代飞轮？" data-i18n-en="1. Integrated Ecosystem Matrix: How 8,666 Staff Power a Multi-Billion Cross-Gen Flywheel">一、软硬一体生态矩阵：8,666 人如何驱动百亿美元级跨代飞轮？</h2>
+            <p class="sec-sub" data-i18n-zh="京都研发本部（EPD 11大制作组 × 硬件工程同楼共创） × 全球 4 亿账户与跨媒介触点闭环" data-i18n-en="Kyoto R&amp;D Complex (EPD 11 Production Groups × Co-Located Hardware Engineering) × 400M Global Account Funnel">京都研发本部（EPD 11大制作组 × 硬件工程同楼共创） × 全球 4 亿账户与跨媒介触点闭环</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="FY27 指引：Switch 2 冲击累计 3,636万台" data-i18n-en="FY27 Target: 36.36M Cumulative Switch 2">FY27 指引：Switch 2 冲击累计 3,636万台</span>
+        </div>
+
+        <!-- Architectural Blueprint Diagram -->
+        <div class="arch-blueprint">
+          <div class="arch-hub">
+            <div class="arch-hub-title" data-i18n-zh="Nintendo Co., Ltd. 京都核心决策与创意中枢（京都市南区 · 零有息负债 · 50%合并派息/33%营业利润分红锚）" data-i18n-en="Nintendo Co., Ltd. Kyoto Strategic &amp; Creative Hub (Minami-ku, Kyoto · Zero Debt · 50% Payout / 33% OP Dividend Rule)">Nintendo Co., Ltd. 京都核心决策与创意中枢（京都市南区 · 零有息负债 · 50%合并派息/33%营业利润分红锚）</div>
+            <div class="arch-hub-sub" data-i18n-zh="核心领导铁三角：古川俊太郎（社长，经营与IP全球化） × 宫本茂（代表取缔役Fellow，创意灵魂） × 高桥伸也 / 盐田兴（EPD软件与PTD硬件统括）" data-i18n-en="Core Triad: Shuntaro Furukawa (President, Global Strategy) × Shigeru Miyamoto (Representative Director &amp; Fellow) × Shinya Takahashi / Ko Shiota (EPD Software &amp; PTD Hardware)">核心领导铁三角：古川俊太郎（社长，经营与IP全球化） × 宫本茂（代表取缔役Fellow，创意灵魂） × 高桥伸也 / 盐田兴（EPD软件与PTD硬件统括）</div>
+          </div>
+          <div class="arch-nodes">
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="HARDWARE · 专用交互入口" data-i18n-en="HARDWARE · HYBRID PORTAL">HARDWARE · 专用交互入口</div>
+              <div class="arch-node-name">Switch 2 &amp; Switch Family</div>
+              <div class="arch-node-desc" data-i18n-zh="掌机/主机混合形态垄断：Switch 累计 1.572 亿台 + Switch 2 累计 2,635 万台，掌控硬件标准与外设生态。" data-i18n-en="Hybrid form-factor dominance: 157.20M original Switch + 26.35M Switch 2 units shipped, owning custom silicon &amp; controls.">掌机/主机混合形态垄断：Switch 累计 1.572 亿台 + Switch 2 累计 2,635 万台，掌控硬件标准与外设生态。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="FIRST-PARTY · 独占内容皇冠" data-i18n-en="FIRST-PARTY · EXCLUSIVE IP">FIRST-PARTY · 独占内容皇冠</div>
+              <div class="arch-node-name">Nintendo EPD &amp; Studios</div>
+              <div class="arch-node-desc" data-i18n-zh="京都 EPD 11 大制作部协同 Monolith Soft、Retro、Next Level 及宝可梦公司，缔造数千万级正价常青神作。" data-i18n-en="11 Kyoto EPD production groups plus Monolith Soft, Retro, Next Level &amp; The Pokémon Company craft full-price evergreen hits.">京都 EPD 11 大制作部协同 Monolith Soft、Retro、Next Level 及宝可梦公司，缔造数千万级正价常青神作。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="DIGITAL · 订阅与高毛利分发" data-i18n-en="DIGITAL · ESHOP &amp; NSO">DIGITAL · 订阅与高毛利分发</div>
+              <div class="arch-node-name">eShop &amp; Switch Online</div>
+              <div class="arch-node-desc" data-i18n-zh="27H1 数字版销售占比达 60.7%，超 3,400 万 NSO 付费会员与经典怀旧游戏库构建高粘性经常性现金流。" data-i18n-en="Digital mix reached 60.7% in H1 FY27; >34M paid NSO members + classic library Expansion Pack drive recurring high-margin cash.">27H1 数字版销售占比达 60.7%，超 3,400 万 NSO 付费会员与经典怀旧游戏库构建高粘性经常性现金流。</div>
+            </div>
+            <div class="arch-node">
+              <div class="arch-node-tag mono" data-i18n-zh="TRANSMEDIA · 破圈触点引擎" data-i18n-en="TRANSMEDIA · IP EXPANSION">TRANSMEDIA · 破圈触点引擎</div>
+              <div class="arch-node-name">Movies, Parks &amp; Stores</div>
+              <div class="arch-node-desc" data-i18n-zh="马力欧电影系列票房破 $23.7 亿、三大环球影城超级任天堂世界、直营旗舰店与塞尔达真人电影管线。" data-i18n-en=">$2.37B Mario film franchise, 3 Super Nintendo World theme parks, flagship retail stores &amp; live-action Zelda film pipeline.">马力欧电影系列票房破 $23.7 亿、三大环球影城超级任天堂世界、直营旗舰店与塞尔达真人电影管线。</div>
+            </div>
+          </div>
+          <div class="arch-platform-bar">
+            <div class="arch-platform">
+              <strong data-i18n-zh="Nintendo Account 跨世代统一账户图谱（注册超 4.0 亿 · 年活玩家 1.28 亿）" data-i18n-en="Nintendo Account Cross-Generational Graph (>400M Registered · 128M Annual Playing Users)">Nintendo Account 跨世代统一账户图谱（注册超 4.0 亿 · 年活玩家 1.28 亿）</strong>
+              <span data-i18n-zh="彻底终结以往 Wii→Wii U 时代用户归零痛点，数字资产、好友关系与购买记录平滑继承至 Switch 2。" data-i18n-en="Eliminates historical Wii-to-Wii U user resets by carrying digital libraries, friends, and entitlements directly onto Switch 2.">彻底终结以往 Wii→Wii U 时代用户归零痛点，数字资产、好友关系与购买记录平滑继承至 Switch 2。</span>
+            </div>
+            <div class="arch-platform">
+              <strong data-i18n-zh="全球区域发行与本地化直营网络（海外营收占比高达 76.9%–77.9%）" data-i18n-en="Global Regional Publishing &amp; Localization Network (76.9%–77.9% Overseas Sales)">全球区域发行与本地化直营网络（海外营收占比高达 76.9%–77.9%）</strong>
+              <span data-i18n-zh="美洲（40.3%）、欧洲（24.7%）、日本（23.1%）三足鼎立，NOA（1,603人，平均司龄 9.4 年）深耕欧美家庭心智。" data-i18n-en="Balanced across Americas (40.3%), Europe (24.7%), and Japan (23.1%), anchored by NOA's 1,603 staff (9.4-yr avg tenure).">美洲（40.3%）、欧洲（24.7%）、日本（23.1%）三足鼎立，NOA（1,603人，平均司龄 9.4 年）深耕欧美家庭心智。</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Operating Matrix Design Principles -->
+        <div class="grid-3" style="margin-bottom: 16px;">
+          <div class="feature-card">
+            <h3 data-i18n-zh="1. 拒绝纯软件第三方化的“独占溢价”" data-i18n-en="1. Exclusive Hardware-Software Lock-In">1. 拒绝纯软件第三方化的“独占溢价”</h3>
+            <p data-i18n-rich="nt_r06">与把第一方大作同步或移植 PC/多平台的微软、索尼不同，任天堂核心主机大作 100% 锁定自家硬件，既省去 30% 外部渠道抽成，又反向拉动两亿级硬件装机 <a class="cite-link" href="https://sqmagazine.co.uk/nintendo-statistics/" target="_blank" rel="noopener noreferrer">SQ Platform ↗</a>。</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n-zh="2. 硬件首年冲规模、次年软件收割利润" data-i18n-en="2. Hardware Seeding → Software Margin Harvest">2. 硬件首年冲规模、次年软件收割利润</h3>
+            <p data-i18n-rich="nt_r07">FY2026 因低毛利新硬件集中出货（1,986万台）致毛利率阶段性降至 39.3%；进入 FY2027 H1 软件与数字版放量后，即便硬件回落，营业利润仍劲增 49.1% <a class="cite-link" href="https://shattered.io/nintendo-earnings-2026/" target="_blank" rel="noopener noreferrer">FY27 H1 Profit ↗</a>。</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n-zh="3. 跨世代双机并行长尾变现" data-i18n-en="3. Dual-Generation Coexistence &amp; Tail Sales">3. 跨世代双机并行长尾变现</h3>
+            <p data-i18n-rich="nt_r08">步入第 10 年的初代 Switch 在 FY26 仍售出 380 万台硬件与 1.369 亿份软件；新作《朋友收集 梦想生活》热销 881 万份，其中 40% 玩家直接在 Switch 2 上游玩 <a class="cite-link" href="https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-146bn-following-launch-of-switch-2" target="_blank" rel="noopener noreferrer">Cross-Gen Hit ↗</a>。</p>
+          </div>
+        </div>
+
+        <div class="mui-alert" style="margin-bottom: 18px;">
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="最新动态" data-i18n-en="KEY UPDATE">最新动态</span>
+          <div data-i18n-rich="nt_r09">
+            <strong>应对存储芯片涨价的果断定价权（2026年9月）：</strong>面对全球 DRAM/NAND 存储组件持续紧缺与成本上行，任天堂于 2026 年 9 月 1 日将美版 Switch 2 建议零售价由 $449.99 上调至 $499.99，并同步调整部分区域硬件与 NSO 价格，坚守“绝不长期亏本卖硬件”的财务铁律 <a class="cite-link" href="https://sqmagazine.co.uk/how-many-people-work-at-nintendo/" target="_blank" rel="noopener noreferrer">2026 Price Revision ↗</a>。
+          </div>
+        </div>
+
+        <!-- Interactive Chart: View A vs View B -->
+        <div class="chart-card" style="margin-bottom: 18px;">
+          <div class="chart-toolbar">
+            <div>
+              <div id="ch1ChartTitle" class="chart-title">历代任天堂旗舰主机累计硬件销量与 Switch 2 跃迁坐标（百万台）</div>
+              <div id="ch1ChartSub" class="chart-caption">初代 Switch 达 1.5720 亿台超越 NDS 登顶队史第一；Switch 2 仅用 16 个月即达成 2,635 万台</div>
+            </div>
+            <div class="mui-segmented" role="tablist" aria-label="第一章图表视图切换">
+              <button type="button" id="ch1TabA" class="mui-seg-btn active" data-ch1-view="viewA" data-i18n-zh="视图A: 历代主机销量坐标" data-i18n-en="View A: All-Time Console Rank">视图A: 历代主机销量坐标</button>
+              <button type="button" id="ch1TabB" class="mui-seg-btn" data-ch1-view="viewB" data-i18n-zh="视图B: Switch 2 软硬爬坡曲线" data-i18n-en="View B: Switch 2 Ramp Curve">视图B: Switch 2 软硬爬坡曲线</button>
+            </div>
+          </div>
+          <div id="ch1AxisMeta" class="chart-axis-meta mono">
+            <span style="color:var(--chart-c1);">■ 左轴：全球累计硬件出货量 (百万台)</span>
+            <span style="color:var(--text-muted);">悬停柱体查看生命周期软件销量与里程碑</span>
+          </div>
+          <div class="canvas-stage">
+            <canvas id="chartCh1"></canvas>
+          </div>
+          <div class="chart-legend" id="ch1Legend">
+            <button type="button" class="legend-pill" data-ch1-series="s1"><span class="legend-dot" style="background:var(--chart-c1);"></span><span id="ch1Leg1">经典与现役硬件累计销量 (百万台)</span></button>
+            <button type="button" class="legend-pill" data-ch1-series="s2"><span class="legend-dot" style="background:var(--chart-c2);"></span><span id="ch1Leg2">Switch 2 进展与 FY27E 目标 (百万台)</span></button>
+          </div>
+        </div>
+
+        <!-- 4 Expandable Business Matrix Cards -->
+        <div class="grid-2">
+          <div class="matrix-card">
+            <div class="matrix-card-head">
+              <div class="matrix-card-title" data-i18n-zh="护卫舰级首发护航：第一方千万级爆款制造机" data-i18n-en="First-Party System-Seller Factory">护卫舰级首发护航：第一方千万级爆款制造机</div>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="附着率 62.5%" data-i18n-en="62.5% Attach">附着率 62.5%</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="nt_r10">Switch 2 护航旗舰《马力欧卡丁车 世界》（定价 $79.99 含同捆）截至 2026 年 9 月累计销量已飙升至 1,648 万份，意味着每 10 位 Switch 2 机主中就有超过 6 人拥有该作；同期《咚奇刚 蕉力全开》亦突破 505 万份 <a class="cite-link" href="https://www.nintendolife.com/news/2026/11/here-are-the-best-selling-switch-1-and-2-games-as-of-september-2026" target="_blank" rel="noopener noreferrer">Switch 2 Best-Sellers ↗</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail1"><span>展开微观执行机制</span> <span>⌄</span></button>
+            <div id="matrixDetail1" class="collapse-panel" data-i18n-zh="在初代 Switch 平台上，前十名畅销游戏全部由任天堂第一方包揽：其中《马力欧卡丁车8 豪华版》累计售出 7,108 万份、《集合啦！动物森友会》4,991 万份、《任天堂明星大乱斗 特别版》3,776 万份、《塞尔达传说：旷野之息》3,384 万份、《王国之泪》2,256 万份，极高的单作研发投产比令同行难以望其项背。" data-i18n-en="On original Switch, Nintendo published all Top 10 best-sellers: Mario Kart 8 Deluxe (71.08M), Animal Crossing: New Horizons (49.91M), Super Smash Bros. Ultimate (37.76M), Breath of the Wild (33.84M), and Tears of the Kingdom (22.56M)—delivering unmatched R&amp;D ROI.">在初代 Switch 平台上，前十名畅销游戏全部由任天堂第一方包揽：其中《马力欧卡丁车8 豪华版》累计售出 7,108 万份、《集合啦！动物森友会》4,991 万份、《任天堂明星大乱斗 特别版》3,776 万份、《塞尔达传说：旷野之息》3,384 万份、《王国之泪》2,256 万份，极高的单作研发投产比令同行难以望其项背。</div>
+          </div>
+
+          <div class="matrix-card">
+            <div class="matrix-card-head">
+              <div class="matrix-card-title" data-i18n-zh="宝可梦飞轮与双版本跨世代协同（The Pokémon Company）" data-i18n-en="Pokémon Flywheel &amp; Switch 2 Edition Synergy">宝可梦飞轮与双版本跨世代协同（The Pokémon Company）</div>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="首4天 220万份" data-i18n-en="2.2M in 4 Days">首4天 220万份</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="nt_r11">2025 年 10 月发售的《宝可梦传说 Z-A（Switch 2 版）》售出 394 万+ 份；2026 年 3 月独占新作《Pokémon Pokopia》上市仅 4 天全球热销 220 万份（累计破 400 万份），经典复刻《火红/叶绿》6 周亦贡献超 400 万数字销量 <a class="cite-link" href="https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-146bn-following-launch-of-switch-2" target="_blank" rel="noopener noreferrer">Pokémon Momentum ↗</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail2"><span>展开微观执行机制</span> <span>⌄</span></button>
+            <div id="matrixDetail2" class="collapse-panel" data-i18n-zh="通过持有 The Pokémon Company 32% 权益并主导主机发行，任天堂构建了“Switch 2 升级通行证（Upgrade Pack）+ 全新独占世代 + 经典高毛利数字下载”三级火箭，既照顾存量 1.28 亿活跃老用户，又持续催化硬件换机需求。" data-i18n-en="Holding an equity stake in The Pokémon Company and leading console publishing, Nintendo pairs Switch 2 Edition Upgrade Packs, exclusive new entries, and high-margin retro digital releases to monetize 128M active players while catalyzing hardware upgrades.">通过持有 The Pokémon Company 32% 权益并主导主机发行，任天堂构建了“Switch 2 升级通行证（Upgrade Pack）+ 全新独占世代 + 经典高毛利数字下载”三级火箭，既照顾存量 1.28 亿活跃老用户，又持续催化硬件换机需求。</div>
+          </div>
+
+          <div class="matrix-card">
+            <div class="matrix-card-head">
+              <div class="matrix-card-title" data-i18n-zh="eShop 数字分销与 NSO 会员生态（Digital &amp; Recurring）" data-i18n-en="eShop Digital Mix &amp; NSO Recurring Ecosystem">eShop 数字分销与 NSO 会员生态（Digital &amp; Recurring）</div>
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="27H1 数字占 60.7%" data-i18n-en="60.7% Digital Mix">27H1 数字占 60.7%</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="nt_r12">eShop 数字版下载、DLC 扩充票与 Nintendo Switch Online（超 3,400 万付费订户）省去了实体卡带封装与零售返点，直接推动 FY2027 Q1 数字销售额同比激增 90.0% 至 ¥1,327 亿，成为利润率修复头号功臣 <a class="cite-link" href="https://sqmagazine.co.uk/how-many-people-work-at-nintendo/" target="_blank" rel="noopener noreferrer">Digital Surge ↗</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail3"><span>展开微观执行机制</span> <span>⌄</span></button>
+            <div id="matrixDetail3" class="collapse-panel" data-i18n-zh="相较 4.0 亿注册账户与 1.28 亿年活跃游玩用户，当前约 3,400 万 NSO 付费会员渗透率仅约 27%（且个人基础年费低至 $19.99、扩充包 $49.99），伴随高单价 Expansion Pack 占比稳步提升及 2026 年订阅调价，ARPU 提升空间依然可观。" data-i18n-en="With ~34M paid NSO members out of 128M annual playing users (~27% penetration), rising adoption of the higher-tier Expansion Pack ($49.99 individual / $79.99 family) and 2026 subscription price updates provide substantial ARPU runway.">相较 4.0 亿注册账户与 1.28 亿年活跃游玩用户，当前约 3,400 万 NSO 付费会员渗透率仅约 27%（且个人基础年费低至 $19.99、扩充包 $49.99），伴随高单价 Expansion Pack 占比稳步提升及 2026 年订阅调价，ARPU 提升空间依然可观。</div>
+          </div>
+
+          <div class="matrix-card">
+            <div class="matrix-card-head">
+              <div class="matrix-card-title" data-i18n-zh="影视与主题乐园超级漏斗（Visual Content &amp; Parks）" data-i18n-en="Theatrical &amp; Theme Park Awareness Funnel">影视与主题乐园超级漏斗（Visual Content &amp; Parks）</div>
+              <span class="mui-chip mui-chip-violet mono" data-i18n-zh="两部电影 &gt;$2.37B" data-i18n-en="2 Films &gt;$2.37B">两部电影 &gt;$2.37B</span>
+            </div>
+            <p class="matrix-card-body" data-i18n-rich="nt_r13">继首部《超级马力欧兄弟大电影》斩获 $13.62 亿票房后，2026 年 4 月上映的《超级马力欧银河大电影》上映 10 周即成为 2026 年全球首部破 $10 亿美元大片（累计约 $10.1 亿+），实现“高票房分成 + 亲子新用户破圈”双重收益 <a class="cite-link" href="https://fortune.com/2026/11/14/gta-vi-biggest-entertainment-launch-preorders-hollywood/" target="_blank" rel="noopener noreferrer">Fortune Box Office ↗</a>。</p>
+            <button type="button" class="collapse-toggle" data-collapse-target="matrixDetail4"><span>展开微观执行机制</span> <span>⌄</span></button>
+            <div id="matrixDetail4" class="collapse-panel" data-i18n-zh="任天堂将影视与环球影城园区（大阪、好莱坞及奥兰多 Epic Universe）定位为“扩大任天堂 IP 接触人口的战略放大器”：FY26 移动与 IP 授权业务贡献 ¥735 亿高毛利营收，后续更有与索尼影业联合筹备的《塞尔达传说》真人电影接棒。" data-i18n-en="Nintendo treats cinema and Universal's Super Nintendo World parks (Osaka, Hollywood, Orlando) as strategic top-of-funnel multipliers—generating ¥73.5B in FY26 IP/mobile revenue with a live-action Legend of Zelda film with Sony Pictures next in the pipeline.">任天堂将影视与环球影城园区（大阪、好莱坞及奥兰多 Epic Universe）定位为“扩大任天堂 IP 接触人口的战略放大器”：FY26 移动与 IP 授权业务贡献 ¥735 亿高毛利营收，后续更有与索尼影业联合筹备的《塞尔达传说》真人电影接棒。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           02 四大研发文化支柱与护城河雷达
+           ================================================================ -->
+      <section id="sec-02" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 02 · KYOTO CREATIVE DNA &amp; COMPETITIVE MOAT</div>
+            <h2 class="sec-h2" data-i18n-zh="二、四大京都研发文化支柱：枯萎技术、软硬共创、零裁员匠心与正价长青" data-i18n-en="2. Four Kyoto Creative Pillars: Withered Tech, Co-Design, Craft Retention &amp; Evergreen Pricing">二、四大京都研发文化支柱：枯萎技术、软硬共创、零裁员匠心与正价长青</h2>
+            <p class="sec-sub" data-i18n-zh="点击左侧任一文化支柱卡片，联动查看任天堂底层组织哲学与五维护城河竞争力雷达" data-i18n-en="Click any pillar card on the left to inspect Nintendo's creative operating principles and 5-axis moat radar">点击左侧任一文化支柱卡片，联动查看任天堂底层组织哲学与五维护城河竞争力雷达</p>
+          </div>
+          <span class="mui-chip mui-chip-success" data-i18n-zh="护城河定性：极宽 (Wide Moat · 百年跨代IP + 独家硬件生态 + 零负债壁垒)" data-i18n-en="Moat Rating: Wide Moat (Multi-Gen IP + Exclusive Hybrid Platform + Cash Fortress)">护城河定性：极宽 (Wide Moat · 百年跨代IP + 独家硬件生态 + 零负债壁垒)</span>
+        </div>
+
+        <div class="grid-radar">
+          <div class="pillar-stack" id="pillarStack">
+            <button type="button" class="pillar-card active" data-pillar="0">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="01 · 枯萎技术的水平思考（Lateral Thinking with Withered Tech）" data-i18n-en="01 · Lateral Thinking with Withered Technology">01 · 枯萎技术的水平思考（Lateral Thinking with Withered Tech）</span>
+                <span class="mui-chip mui-chip-primary mono" data-i18n-zh="橫井軍平哲学" data-i18n-en="Gunpei Yokoi Ethos">橫井軍平哲学</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="自横井军平缔造 Game Boy 以来，任天堂始终拒绝盲目堆砌昂贵前沿芯片，而是用成熟可靠、功耗与成本可控的硬件技术结合颠覆性交互玩法，兼顾亲民家庭售价与正向硬件毛利。" data-i18n-en="Rooted in Gunpei Yokoi's Game Boy philosophy: eschew costly bleeding-edge silicon arms races in favor of mature, reliable components paired with novel gameplay mechanics and profitable hardware pricing.">自横井军平缔造 Game Boy 以来，任天堂始终拒绝盲目堆砌昂贵前沿芯片，而是用成熟可靠、功耗与成本可控的硬件技术结合颠覆性交互玩法，兼顾亲民家庭售价与正向硬件毛利。</p>
+            </button>
+
+            <button type="button" class="pillar-card" data-pillar="1">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="02 · 京都 EPD 软硬同楼共创（Hardware-Software Symbiosis）" data-i18n-en="02 · Kyoto EPD Hardware-Software Symbiosis">02 · 京都 EPD 软硬同楼共创（Hardware-Software Symbiosis）</span>
+                <span class="mui-chip mui-chip-success mono" data-i18n-zh="11 大软件制作组" data-i18n-en="11 EPD Units">11 大软件制作组</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="2014–2015 年将全部软硬件研发集中至京都本社开发栋并整编为 EPD（企划制作本部）：从手柄震动阻尼到磁性连接结构，游戏制作人与芯片结构工程师从立项第一天起双向定义产品。" data-i18n-en="Since consolidating EAD &amp; SPD into Nintendo EPD inside the Kyoto Development Center (2014–2015), game directors and hardware engineers co-design controllers, haptics, and silicon around gameplay.">2014–2015 年将全部软硬件研发集中至京都本社开发栋并整编为 EPD（企划制作本部）：从手柄震动阻尼到磁性连接结构，游戏制作人与芯片结构工程师从立项第一天起双向定义产品。</p>
+            </button>
+
+            <button type="button" class="pillar-card" data-pillar="2">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="03 · 零裁员长期主义与超低流失（2.3% Turnover Craftsmanship）" data-i18n-en="03 · Zero-Layoff Long-Termism &amp; 2.3% Turnover">03 · 零裁员长期主义与超低流失（2.3% Turnover Craftsmanship）</span>
+                <span class="mui-chip mui-chip-warning mono" data-i18n-zh="连续9年净增员" data-i18n-en="9-Yr Net Hiring">连续9年净增员</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="当欧美游戏巨头大举关停工作室时，任天堂自 2018–2026 年连续每年稳健净增员至 8,666 人，2023 与 2026 年两度普调日本底薪，京都母公司年离职率仅 2.3%，完整锁死数十年手感调校秘籍。" data-i18n-en="While Western publishers laid off thousands, Nintendo expanded headcount every year from 2018 to 2026 (8,666 FTE), raised base pay in 2023 and Apr 2026, and kept parent turnover at an extraordinary 2.3%.">当欧美游戏巨头大举关停工作室时，任天堂自 2018–2026 年连续每年稳健净增员至 8,666 人，2023 与 2026 年两度普调日本底薪，京都母公司年离职率仅 2.3%，完整锁死数十年手感调校秘籍。</p>
+            </button>
+
+            <button type="button" class="pillar-card" data-pillar="3">
+              <div class="pillar-head">
+                <span class="pillar-title" data-i18n-zh="04 · 全龄女性友好与“正价长青”价值锚定（Evergreen Brand Equity）" data-i18n-en="04 · Demographic Balance &amp; Full-Price Evergreen Discipline">04 · 全龄女性友好与“正价长青”价值锚定（Evergreen Brand Equity）</span>
+                <span class="mui-chip mui-chip-violet mono" data-i18n-zh="美国52%女性机主" data-i18n-en="52% US Female Share">美国52%女性机主</span>
+              </div>
+              <p class="pillar-desc" data-i18n-zh="Circana 数据显示美国 Switch 机主中女性占比高达 52%（高居全主机第一，领先 PS5 达 11 个百分点）；同时严守第一方大作“不跳水打折”原则，教育用户首发正价购入并使老游戏持续热卖十年。" data-i18n-en="Circana PlayerPulse shows 52% female Switch ownership in the U.S. (11pp ahead of PS5), while strict refusal to deeply discount first-party titles preserves multi-year catalog pricing power.">Circana 数据显示美国 Switch 机主中女性占比高达 52%（高居全主机第一，领先 PS5 达 11 个百分点）；同时严守第一方大作“不跳水打折”原则，教育用户首发正价购入并使老游戏持续热卖十年。</p>
+            </button>
+
+            <div id="pillarFocusNote" class="mui-alert" style="margin-top: 4px;">
+              <div>
+                <strong>当前选中支柱解读（01 枯萎技术的水平思考）：</strong>不参与无止境的显卡算力烧钱竞赛，使任天堂单款旗舰游戏的研发预算远低于动辄 $3 亿–$10 亿美元的好莱坞式写实 3A 巨制，从而维持高达 57%–61% 的软件主导期毛利率 <a class="cite-link" href="https://en.wikipedia.org/wiki/Nintendo_Entertainment_Planning_%26_Development" target="_blank" rel="noopener noreferrer">Nintendo EPD ↗</a>。
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: 5-Axis Radar Chart -->
+          <div class="chart-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div class="chart-title" data-i18n-zh="任天堂商业模式与文化五维护城河雷达图（10分制标杆评估）" data-i18n-en="5-Axis Business Model &amp; Cultural Moat Radar (10-Point Institutional Scale)">任天堂商业模式与文化五维护城河雷达图（10分制标杆评估）</div>
+              <div class="chart-caption" data-i18n-zh="点击下方图例胶囊可单独开关对比曲线，悬停顶点查看细分维度评分" data-i18n-en="Click legend pills below to toggle peer curves; hover vertices for exact scores">点击下方图例胶囊可单独开关对比曲线，悬停顶点查看细分维度评分</div>
+            </div>
+            <div class="canvas-stage-tall">
+              <canvas id="chartRadar"></canvas>
+            </div>
+            <div class="chart-legend" id="radarLegend">
+              <button type="button" class="legend-pill" data-radar-key="ntd"><span class="legend-dot" style="background:#3399FF;"></span><span data-i18n-zh="任天堂 (Nintendo · 软硬一体IP霸主)" data-i18n-en="Nintendo (7974 · Integrated IP Leader)">任天堂 (Nintendo · 软硬一体IP霸主)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="sie"><span class="legend-dot" style="background:#22C55E;"></span><span data-i18n-zh="索尼互娱 (PlayStation · 高性能平台)" data-i18n-en="Sony PlayStation (High-Spec Platform)">索尼互娱 (PlayStation · 高性能平台)</span></button>
+              <button type="button" class="legend-pill" data-radar-key="pub"><span class="legend-dot" style="background:#FFB74D;"></span><span data-i18n-zh="传统第三方3A游戏发行商基准" data-i18n-en="Traditional 3rd-Party AAA Publisher">传统第三方3A游戏发行商基准</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           03 全球游戏与IP巨头横向对比
+           ================================================================ -->
+      <section id="sec-03" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 03 · GLOBAL GAMING &amp; IP PEER BENCHMARKING</div>
+            <h2 class="sec-h2" data-i18n-zh="三、全球游戏与超级 IP 巨头横向对比：四种商业范式的利润率分野" data-i18n-en="3. Global Gaming &amp; Super-IP Peer Matrix: Four Monetization Playbooks">三、全球游戏与超级 IP 巨头横向对比：四种商业范式的利润率分野</h2>
+            <p class="sec-sub" data-i18n-zh="支持按企业、核心掌舵人、代表生态（Switch 2 / PS5 / Gundam / Disney）或财务特征实时检索过滤" data-i18n-en="Search or filter live by company, leadership, flagship IP (Switch 2 / PS5 / Gundam / Disney), or margin profile">支持按企业、核心掌舵人、代表生态（Switch 2 / PS5 / Gundam / Disney）或财务特征实时检索过滤</p>
+          </div>
+          <span id="peerCountBadge" class="mui-chip mui-chip-primary mono">显示 4 / 4 家标杆企业</span>
+        </div>
+
+        <div class="datagrid-toolbar">
+          <input type="search" id="peerSearchInput" class="mui-input-outlined" placeholder="搜索企业、掌舵人、核心IP (Switch 2 / PS5 / 高达 / 迪士尼)…" aria-label="筛选对比企业" />
+          <div class="mui-segmented" role="group" aria-label="标杆企业分类筛选">
+            <button type="button" class="mui-seg-btn active" data-peer-filter="all" data-i18n-zh="全部标杆企业" data-i18n-en="All Peers">全部标杆企业</button>
+            <button type="button" class="mui-seg-btn" data-peer-filter="console" data-i18n-zh="软硬主机平台巨头" data-i18n-en="Console Platforms">软硬主机平台巨头</button>
+            <button type="button" class="mui-seg-btn" data-peer-filter="ip" data-i18n-zh="跨媒介超级IP巨头" data-i18n-en="Transmedia IP Giants">跨媒介超级IP巨头</button>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-bottom: 20px;">
+          <table class="mui-table" aria-label="全球顶级游戏与超级IP娱乐巨头横向对比表">
+            <thead>
+              <tr>
+                <th data-i18n-zh="企业与核心掌舵人" data-i18n-en="Company &amp; Leadership">企业与核心掌舵人</th>
+                <th data-i18n-zh="商业模式与生态重心" data-i18n-en="Ecosystem &amp; Strategic Focus">商业模式与生态重心</th>
+                <th data-i18n-zh="研发与组织文化基因" data-i18n-en="Creative &amp; Org Culture">研发与组织文化基因</th>
+                <th data-i18n-zh="团队规模与用户触达" data-i18n-en="Scale &amp; User Reach">团队规模与用户触达</th>
+                <th data-i18n-zh="最新营收与营业利润率" data-i18n-en="Revenue &amp; Operating Margin">最新营收与营业利润率</th>
+                <th data-i18n-zh="相对任天堂的战略异同与优劣势评估" data-i18n-en="Comparative Assessment vs. Nintendo">相对任天堂的战略异同与优劣势评估</th>
+              </tr>
+            </thead>
+            <tbody id="peerTableBody"></tbody>
+          </table>
+        </div>
+
+        <!-- Horizontal Bar Chart: Regional Mix, Digital Share & Demographics -->
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="任天堂全球区域营收结构、数字版渗透率与全龄性别优势拆解（%）" data-i18n-en="Nintendo Global Regional Revenue Mix, Digital Penetration &amp; Demographic Edge (%)">任天堂全球区域营收结构、数字版渗透率与全龄性别优势拆解（%）</div>
+              <div class="chart-caption" data-i18n-zh="数据来源：Nintendo FY2026 年报、FY2027 H1 财报及 Circana PlayerPulse 美国主机人群调查" data-i18n-en="Sources: Nintendo FY2026 Annual Report, H1 FY27 Results &amp; Circana PlayerPulse U.S. Console Survey">数据来源：Nintendo FY2026 年报、FY2027 H1 财报及 Circana PlayerPulse 美国主机人群调查</div>
+            </div>
+            <span class="mui-chip mui-chip-success mono" data-i18n-zh="海外营收占比 76.9% · 27H1 数字占比 60.7%" data-i18n-en="76.9% Overseas · 60.7% H1 FY27 Digital">海外营收占比 76.9% · 27H1 数字占比 60.7%</span>
+          </div>
+          <div class="canvas-stage-bars">
+            <canvas id="chartBars"></canvas>
+          </div>
+          <div class="chart-legend">
+            <span class="mui-chip mui-chip-success mono" data-i18n-zh="绿色/紫色：数字版高毛利占比与女性玩家渗透率 (虚线为 50% 分水岭)" data-i18n-en="Green / Purple: Digital Software Share &amp; US Female Ownership (dashed = 50% line)">绿色/紫色：数字版高毛利占比与女性玩家渗透率 (虚线为 50% 分水岭)</span>
+            <span class="mui-chip mui-chip-primary mono" data-i18n-zh="蓝色/琥珀色：FY2026 全球区域营收分布 (美洲 40.3% + 欧洲 24.7% + 日本 23.1% + 其他 12.2%)" data-i18n-en="Blue / Amber: FY26 Regional Sales Mix (Americas 40.3% + Europe 24.7% + Japan 23.1% + Other 12.2%)">蓝色/琥珀色：FY2026 全球区域营收分布 (美洲 40.3% + 欧洲 24.7% + 日本 23.1% + 其他 12.2%)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           04 跨周期财务韧性、零负债现金堡垒与装机利润测算器
+           ================================================================ -->
+      <section id="sec-04" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 04 · CROSS-CYCLE FINANCIALS &amp; INSTALLED-BASE PROFIT SIMULATOR</div>
+            <h2 class="sec-h2" data-i18n-zh="四、跨周期财务解码与利润推演：从“硬件放量摊薄”到“软件收割跃升”" data-i18n-en="4. Cross-Cycle Financial Decoding &amp; Simulator: From Hardware Seeding to Software Harvest">四、跨周期财务解码与利润推演：从“硬件放量摊薄”到“软件收割跃升”</h2>
+            <p class="sec-sub" data-i18n-zh="读懂任天堂财报的核心密码：硬件首发年营收翻倍但毛利率阶段性受压，随后数年伴随装机扩大迎来高毛利软件与数字订阅释放" data-i18n-en="Key to reading Nintendo earnings: hardware launch years double revenue at lower gross margins, setting up multi-year high-margin software &amp; digital harvesting">读懂任天堂财报的核心密码：硬件首发年营收翻倍但毛利率阶段性受压，随后数年伴随装机扩大迎来高毛利软件与数字订阅释放</p>
+          </div>
+          <span class="mui-chip mui-chip-warning mono" data-i18n-zh="每股净现金 ¥1,672.8 · 有息负债 ¥0" data-i18n-en="Net Cash ¥1,672.8/sh · ¥0 Debt">每股净现金 ¥1,672.8 · 有息负债 ¥0</span>
+        </div>
+
+        <!-- 4 Capital Discipline Metric Cards -->
+        <div class="grid-4" style="margin-bottom: 18px;">
+          <div class="mui-paper kpi-card">
+            <span class="kpi-label mono">ZERO-DEBT CASH FORTRESS</span>
+            <div class="kpi-value mono" style="color: var(--mui-primary-lighter);">¥1.93T <span style="font-size:0.85rem;font-weight:600;">(¥0 Debt)</span></div>
+            <p class="kpi-desc" data-i18n-zh="账面现金与存款高达 ¥1.93 万亿（净资产 ¥2.96 万亿），即便遭遇单一硬件逆风亦有充足安全垫持续研发。" data-i18n-en="¥1.93T in cash &amp; deposits (¥2.96T net assets) with zero debt—insulating R&amp;D continuity across any hardware cycle.">账面现金与存款高达 ¥1.93 万亿（净资产 ¥2.96 万亿），即便遭遇单一硬件逆风亦有充足安全垫持续研发。</p>
+          </div>
+          <div class="mui-paper kpi-card">
+            <span class="kpi-label mono">H1 FY27 MARGIN REBOUND</span>
+            <div class="kpi-value mono" style="color: var(--mui-success-text);">22.4% <span style="font-size:0.85rem;font-weight:600;">(+49.1% OP)</span></div>
+            <p class="kpi-desc" data-i18n-zh="随着数字版升至 60.7% 及软件占比提高，营业利润率从 FY26 硬件首发期的 15.6% 快速回升至 27H1 的 22.4%。" data-i18n-en="Operating margin rebounded sharply from 15.6% in the FY26 hardware launch year to 22.4% in H1 FY27 as digital share hit 60.7%.">随着数字版升至 60.7% 及软件占比提高，营业利润率从 FY26 硬件首发期的 15.6% 快速回升至 27H1 的 22.4%。</p>
+          </div>
+          <div class="mui-paper kpi-card">
+            <span class="kpi-label mono">DIVIDEND PAYOUT ANCHOR</span>
+            <div class="kpi-value mono" style="color: var(--mui-warning-text);">50% / 33%</div>
+            <p class="kpi-desc" data-i18n-zh="官方分红基准取“合并营业利润的 33%”与“合并派息率 50%”孰高者，将盈利直接转化为股东半年度现金分红。" data-i18n-en="Official dividend policy pays the higher of 33% of consolidated operating profit or a 50% consolidated dividend payout ratio.">官方分红基准取“合并营业利润的 33%”与“合并派息率 50%”孰高者，将盈利直接转化为股东半年度现金分红。</p>
+          </div>
+          <div class="mui-paper kpi-card">
+            <span class="kpi-label mono">REVENUE PER EMPLOYEE</span>
+            <div class="kpi-value mono" style="color: var(--mui-violet-text);">¥266.9M</div>
+            <p class="kpi-desc" data-i18n-zh="FY2026 人均创收达 ¥2.669 亿（折合 $168 万美元，较 FY25 的 ¥1.42 亿跃升 88%），凸显软硬杠杆弹性。" data-i18n-en="FY26 net sales per employee surged +88% YoY to ¥266.9M ($1.68M), demonstrating immense operating leverage per developer.">FY2026 人均创收达 ¥2.669 亿（折合 $168 万美元，较 FY25 的 ¥1.42 亿跃升 88%），凸显软硬杠杆弹性。</p>
+          </div>
+        </div>
+
+        <!-- Trend Combo Chart: FY2022–FY2027E Net Sales & Operating Margin -->
+        <div class="chart-card">
+          <div class="chart-toolbar">
+            <div>
+              <div class="chart-title" data-i18n-zh="FY2022–FY2027E 跨世代财务周期：合并净营收 (¥十亿) 与营业利润率 (%) 剪刀差" data-i18n-en="FY2022–FY2027E Cross-Generation Cycle: Net Sales (¥B) vs. Operating Profit Margin (%)">FY2022–FY2027E 跨世代财务周期：合并净营收 (¥十亿) 与营业利润率 (%) 剪刀差</div>
+              <div class="chart-caption" data-i18n-zh="柱状图（左轴）为财年合并净营收；折线（右轴）清晰展现“Switch成熟高利期 → 换代蓄力期 → Switch 2 首发摊薄 → 27H1 软件收获反弹”" data-i18n-en="Bars (left axis): Net Sales (¥B); Line (right axis): Operating Margin trajectory across Switch maturity, launch dilution &amp; software rebound">柱状图（左轴）为财年合并净营收；折线（右轴）清晰展现“Switch成熟高利期 → 换代蓄力期 → Switch 2 首发摊薄 → 27H1 软件收获反弹”</div>
+            </div>
+            <span class="mui-chip mui-chip-primary mono" data-i18n-zh="TTM 营业利润 ¥4,314亿" data-i18n-en="TTM Operating Profit ¥431.4B">TTM 营业利润 ¥4,314亿</span>
+          </div>
+          <div class="chart-axis-meta mono">
+            <span style="color:var(--chart-c1);" data-i18n-zh="■ 左轴：合并净营收 (¥十亿 / ¥B)" data-i18n-en="■ Left Axis: Consolidated Net Sales (¥B)">■ 左轴：合并净营收 (¥十亿 / ¥B)</span>
+            <span style="color:var(--chart-c2);" data-i18n-zh="● 右轴：营业利润率 Operating Margin (%)" data-i18n-en="● Right Axis: Operating Profit Margin (%)">● 右轴：营业利润率 Operating Margin (%)</span>
+          </div>
+          <div class="canvas-stage">
+            <canvas id="chartEps"></canvas>
+          </div>
+          <div class="chart-legend" id="epsLegend">
+            <button type="button" class="legend-pill" data-eps-series="eps"><span class="legend-dot" style="background:var(--chart-c1);"></span><span data-i18n-zh="合并净营收 Net Sales (左轴 · ¥B)" data-i18n-en="Consolidated Net Sales (Left · ¥B)">合并净营收 Net Sales (左轴 · ¥B)</span></button>
+            <button type="button" class="legend-pill" data-eps-series="oci"><span class="legend-dot" style="background:var(--chart-c2);"></span><span data-i18n-zh="营业利润率 Operating Margin (右轴 · %)" data-i18n-en="Operating Profit Margin (Right · %)">营业利润率 Operating Margin (右轴 · %)</span></button>
+            <span class="mui-chip mui-chip-warning mono" data-i18n-zh="--- 软件成熟期 30% 利润率参考线" data-i18n-en="--- 30% Mature Software-Cycle Line">--- 软件成熟期 30% 利润率参考线</span>
+          </div>
+        </div>
+
+        <!-- Interactive Switch 2 Installed-Base & Software Tie-Ratio Earnings Simulator -->
+        <div class="simulator-grid">
+          <div class="sim-controls">
+            <div>
+              <div class="sec-eyebrow mono" style="margin-bottom:2px;">INTERACTIVE ECOSYSTEM PROFIT SIMULATOR</div>
+              <h3 style="font-size:1rem;font-weight:800;" data-i18n-zh="Switch 2 装机规模 × 软件附着率盈利弹性测算器" data-i18n-en="Switch 2 Installed-Base × Software Attach Profit Simulator">Switch 2 装机规模 × 软件附着率盈利弹性测算器</h3>
+            </div>
+
+            <label class="mui-switch-row" for="simIpToggle">
+              <div>
+                <div style="font-size:0.84rem;font-weight:700;color:var(--text-primary);" data-i18n-zh="叠加影视/主题乐园/周边高毛利 IP 授权池 (+¥85B/年)" data-i18n-en="Include Movies / Theme Parks / Merch IP Royalty Pool (+¥85B/yr)">叠加影视/主题乐园/周边高毛利 IP 授权池 (+¥85B/年)</div>
+                <div style="font-size:0.74rem;color:var(--text-secondary);" data-i18n-zh="计入马力欧/塞尔达电影票房分成、环球影城授权与 NSO 扩充包高毛利增量" data-i18n-en="Adds theatrical box-office royalties, Super Nintendo World licensing &amp; NSO Expansion Pack lift">计入马力欧/塞尔达电影票房分成、环球影城授权与 NSO 扩充包高毛利增量</div>
+              </div>
+              <input type="checkbox" id="simIpToggle" checked />
+            </label>
+
+            <div class="preset-stack" role="group" aria-label="盈利推演情景预设">
+              <button type="button" class="preset-btn active" data-preset="p1">
+                <span data-i18n-zh="① FY2027E 装机爬坡稳健基准 (官方指引锚定)" data-i18n-en="① FY2027E Ramp Base Case (Guidance Aligned)">① FY2027E 装机爬坡稳健基准 (官方指引锚定)</span>
+                <span class="mono">36M · 2.1x</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="p2">
+                <span data-i18n-zh="② Switch 2 中期成熟收获期 (2028–2029E)" data-i18n-en="② Mid-Cycle Software Harvest (2028–2029E)">② Switch 2 中期成熟收获期 (2028–2029E)</span>
+                <span class="mono">75M · 2.6x</span>
+              </button>
+              <button type="button" class="preset-btn" data-preset="p3">
+                <span data-i18n-zh="③ 破亿装机 + 数字高渗透巅峰共振情景" data-i18n-en="③ 105M+ Peak Ecosystem &amp; Digital Bull Case">③ 破亿装机 + 数字高渗透巅峰共振情景</span>
+                <span class="mono">105M · 3.0x</span>
+              </button>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="Switch 2 活跃累计装机规模 (百万台)" data-i18n-en="Active Switch 2 Installed Base (Millions)">Switch 2 活跃累计装机规模 (百万台)</span>
+                <span id="simBaseLabel" class="slider-val mono">36 M</span>
+              </div>
+              <input type="range" id="simBaseSlider" class="mui-slider" min="25" max="120" step="1" value="36" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="单机年均软件购买附着率 (份/活跃主机)" data-i18n-en="Annual Software Tie Ratio (Units / Active Console)">单机年均软件购买附着率 (份/活跃主机)</span>
+                <span id="simAttachLabel" class="slider-val mono">2.1 份/年</span>
+              </div>
+              <input type="range" id="simAttachSlider" class="mui-slider" min="1.4" max="3.6" step="0.1" value="2.1" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-head">
+                <span data-i18n-zh="eShop 数字版与高毛利订阅收入占比 (%)" data-i18n-en="Digital Software &amp; Subscription Mix (%)">eShop 数字版与高毛利订阅收入占比 (%)</span>
+                <span id="simDigLabel" class="slider-val mono">61%</span>
+              </div>
+              <input type="range" id="simDigSlider" class="mui-slider" min="45" max="80" step="1" value="61" />
+            </div>
+          </div>
+
+          <div class="sim-output-panel">
+            <div class="sim-readouts">
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="测算稳态年化营业利润 (Operating Profit)" data-i18n-en="Projected Annual Operating Profit">测算稳态年化营业利润 (Operating Profit)</div>
+                <div id="simOpVal" class="sim-stat-num mono" style="color:var(--mui-primary-lighter);">¥392B</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="测算综合营业利润率 / 年化分红池 (33%规则)" data-i18n-en="Implied OP Margin / Dividend Pool (33% Rule)">测算综合营业利润率 / 年化分红池 (33%规则)</div>
+                <div id="simMarginVal" class="sim-stat-num mono" style="color:var(--mui-success-text);">20.8% · ¥129B</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="测算年化软件总销量 (Software Units)" data-i18n-en="Implied Annual Software Volume">测算年化软件总销量 (Software Units)</div>
+                <div id="simSwVal" class="sim-stat-num mono">75.6M 份</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-label" data-i18n-zh="含 ¥1.93T 净现金之隐含股权价值 (18x OP)" data-i18n-en="Implied Equity Value incl. ¥1.93T Cash (18x OP)">含 ¥1.93T 净现金之隐含股权价值 (18x OP)</div>
+                <div id="simEvVal" class="sim-stat-num mono">¥8.99T</div>
+              </div>
+            </div>
+
+            <div class="canvas-stage-sim">
+              <canvas id="chartSim"></canvas>
+            </div>
+            <div class="chart-legend" style="margin-top:4px;">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="━ 全生态年化营业利润爬坡曲线 (含数字版与IP加成)" data-i18n-en="━ Full-Ecosystem Operating Profit Curve (incl. Digital &amp; IP)">━ 全生态年化营业利润爬坡曲线 (含数字版与IP加成)</span>
+              <span class="mui-chip mono" data-i18n-zh="- - 传统实体卡带且无跨媒介IP基准" data-i18n-en="- - Legacy Physical-Heavy Baseline (Ex-IP Pool)">- - 传统实体卡带且无跨媒介IP基准</span>
+            </div>
+            <div class="chart-caption" data-i18n-zh="悬停曲线可对比不同装机梯度下“高数字占比+IP授权飞轮”相对传统纯硬件卡带模式的利润剪刀差。" data-i18n-en="Hover along the curve to inspect operating profit expansion across installed-base milestones vs. legacy physical-only economics.">悬停曲线可对比不同装机梯度下“高数字占比+IP授权飞轮”相对传统纯硬件卡带模式的利润剪刀差。</div>
+          </div>
+        </div>
+
+        <!-- Positive vs Critical Lens Dual Cards -->
+        <div class="grid-2" style="margin-top: 18px;">
+          <div class="mui-alert mui-alert-success" style="flex-direction:column; gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="mui-chip mui-chip-success mono">ENDURING MOAT</span>
+              <strong data-i18n-zh="核心多头护城河逻辑定评" data-i18n-en="Core Bullish Moat Verdict">核心多头护城河逻辑定评</strong>
+            </div>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-rich="nt_r14">
+              <strong>1. 跨代平滑过渡已获验证：</strong>Switch 2 上市 16 个月斩获 2,635 万台装机，彻底打破任天堂历史上“一代神机、一代滑铁卢”的宿命。<br/>
+              <strong>2. 利润率步入上行收获通道：</strong>27H1 数字版占比突破 60.7%，第一方千万级软件放量正快速拉升整体毛利与营业利润率。<br/>
+              <strong>3. 稀缺全龄跨代资产与现金底牌：</strong>迪士尼级别的亲子 IP 矩阵叠加 ¥1.93 万亿零负债现金，具备极强抗通胀与抗衰退韧性。
+            </p>
+          </div>
+
+          <div class="mui-alert mui-alert-warning" style="flex-direction:column; gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="mui-chip mui-chip-warning mono">KEY RISKS &amp; TENSIONS</span>
+              <strong data-i18n-zh="客观风险与周期张力审视" data-i18n-en="Key Structural Risks &amp; Tensions">客观风险与周期张力审视</strong>
+            </div>
+            <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.65;" data-i18n-rich="nt_r15">
+              <strong>1. 存储芯片成本与硬件涨价弹性：</strong>2026 年 9 月美版 Switch 2 提价至 $499.99 后，FY27 Q2 硬件单季出货回落至 267 万台（H2 需在圣诞旺季冲刺约 1,001 万台方能兑现全年 1,650 万台硬件指引）<a class="cite-link" href="https://shattered.io/switch-2-2-67-million-q2-fy27-16-5-million-target-h2-math-2026/" target="_blank" rel="noopener noreferrer">H2 Hardware Math ↗</a>。<br/>
+              <strong>2. 汇率波动敏感性：</strong>海外销售占比近 78%，日元若大幅升值将对折算营收与汇兑收益（Ordinary Profit）造成账面扰动。<br/>
+              <strong>3. 外部超级大作注意力竞争：</strong>移动端碎片化娱乐与 2026–2027 行业现象级第三方大作对轻度玩家时长的阶段性争夺。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           05 三代演进与四大战役复盘
+           ================================================================ -->
+      <section id="sec-05" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 05 · STRATEGIC EVOLUTION &amp; LANDMARK BATTLES</div>
+            <h2 class="sec-h2" data-i18n-zh="五、三代掌舵演进与经典战役：从花札工坊、蓝海突围到全球 IP 娱乐生态" data-i18n-en="5. Three-Era Evolution &amp; Landmark Case Studies: From Kyoto Cards to Global IP Ecosystem">五、三代掌舵演进与经典战役：从花札工坊、蓝海突围到全球 IP 娱乐生态</h2>
+            <p class="sec-sub" data-i18n-zh="复盘山内溥、岩田聪至古川俊太郎时代的战略转折点与自我进化机制" data-i18n-en="Tracing strategic inflection points across Hiroshi Yamauchi, Satoru Iwata, and Shuntaro Furukawa">复盘山内溥、岩田聪至古川俊太郎时代的战略转折点与自我进化机制</p>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" data-i18n-zh="1889 京都创立 → 2026 全球4亿账户" data-i18n-en="Est. 1889 Kyoto → 400M Accounts in 2026">1889 京都创立 → 2026 全球4亿账户</span>
+        </div>
+
+        <!-- 3-Act MUI Timeline -->
+        <div class="mui-timeline">
+          <div class="timeline-step">
+            <span class="timeline-dot"></span>
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;" data-i18n-zh="第一幕 · 主机规则缔造与“扩大游戏人口”蓝海革命 (1983–2014)" data-i18n-en="Act I · Console Rulemaker &amp; Iwata's Blue-Ocean Revolution (1983–2014)">第一幕 · 主机规则缔造与“扩大游戏人口”蓝海革命 (1983–2014)</strong>
+              <span class="mui-chip mono" data-i18n-zh="DS 1.54亿 · Wii 1.02亿" data-i18n-en="DS 154M · Wii 102M">DS 1.54亿 · Wii 1.02亿</span>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-rich="nt_r16">山内溥与宫本茂、横井军平凭借红白机（FC）与 Game Boy（1.1869 亿台）重建全球主机秩序与权利金制度；2002 年岩田聪出任社长后提出“扩大游戏人口”，以双屏触控 NDS（1.5402 亿台）与体感 Wii（1.0163 亿台）开辟家庭蓝海，但也经历了 Wii U 定位模糊（仅约 1,356 万台）的深刻阵痛 <a class="cite-link" href="https://sqmagazine.co.uk/nintendo-statistics/" target="_blank" rel="noopener noreferrer">Console History ↗</a>。</p>
+          </div>
+
+          <div class="timeline-step">
+            <span class="timeline-dot" style="background:#3399FF;"></span>
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;" data-i18n-zh="第二幕 · 掌机主机研发合流与 Switch 混合形态大一统 (2015–2024)" data-i18n-en="Act II · EPD Unification &amp; Nintendo Switch Hybrid Triumph (2015–2024)">第二幕 · 掌机主机研发合流与 Switch 混合形态大一统 (2015–2024)</strong>
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="Switch 达 1.572亿台" data-i18n-en="Switch Hits 157.2M">Switch 达 1.572亿台</span>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-rich="nt_r17">吸取 Wii U 软件阵容断档教训，任天堂于 2015 年将家用机与掌机研发团队合并为统一的 Nintendo EPD，把全部第一方火力集中投向单一混合平台 Switch（2017.03 首发），创造累计超 1.57 亿台硬件、超 15 亿份软件的队史最高商业纪录 <a class="cite-link" href="https://en.wikipedia.org/wiki/Nintendo_Software_Planning_%26_Development" target="_blank" rel="noopener noreferrer">EPD Merger ↗</a>。</p>
+          </div>
+
+          <div class="timeline-step">
+            <span class="timeline-dot" style="background:#22C55E;"></span>
+            <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:6px;">
+              <strong style="font-size:0.95rem;" data-i18n-zh="第三幕 · 古川俊太郎时代：Switch 2 无缝世代更替与全球 IP 帝国 (2025–2026+)" data-i18n-en="Act III · Furukawa Era: Switch 2 Continuity &amp; Global IP Flywheel (2025–2026+)">第三幕 · 古川俊太郎时代：Switch 2 无缝世代更替与全球 IP 帝国 (2025–2026+)</strong>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="FY26 营收 ¥2.31T 翻倍" data-i18n-en="FY26 Sales ¥2.31T (+98.6%)">FY26 营收 ¥2.31T 翻倍</span>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text-secondary);" data-i18n-rich="nt_r18">古川俊太郎以 4 亿 Nintendo Account 为纽带推动 Switch 2 于 2025 年 6 月平滑接棒（首四天破 350 万台、截至 2026 年 9 月达 2,635 万台），同时携手照明娱乐/环球影业打造两部破十亿美元马力欧动画电影与三大主题乐园，完成从“游戏硬件商”向“永续全球 IP 生态平台”的升维 <a class="cite-link" href="https://corporate.comcast.com/press/releases/illumination-and-universal-pictures-super-mario-galaxy-movie-becomes-first-1-billion-film-of-2026" target="_blank" rel="noopener noreferrer">Galaxy Movie $1B ↗</a>。</p>
+          </div>
+        </div>
+
+        <!-- 4 Landmark Battle Case Studies -->
+        <div class="grid-2" style="margin-bottom: 18px;">
+          <div class="feature-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="mui-chip mui-chip-error mono" data-i18n-zh="战役 01 · 2012–2016" data-i18n-en="Case 01 · 2012–2016">战役 01 · 2012–2016</span>
+              <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="组织重构转折" data-i18n-en="Org Restructuring">组织重构转折</span>
+            </div>
+            <h3 data-i18n-zh="Wii U 挫败后的“双线合一”刮骨疗毒" data-i18n-en="From Wii U Setback to Unified Hybrid Architecture">Wii U 挫败后的“双线合一”刮骨疗毒</h3>
+            <p data-i18n-zh="面对 Wii U 与 3DS 双线作战导致的HD研发产能分散，任天堂果断合并掌机与主机软硬件部门组建 EPD，让每一款马力欧、塞尔达与宝可梦正统续作汇聚于同一台混合主机，彻底根治第一方大作空窗期。" data-i18n-en="When splitting teams across Wii U and 3DS strained HD game cadences, Nintendo unified portable and console R&amp;D into EPD—channeling 100% of Mario, Zelda, and Pokémon output onto one hybrid architecture.">面对 Wii U 与 3DS 双线作战导致的HD研发产能分散，任天堂果断合并掌机与主机软硬件部门组建 EPD，让每一款马力欧、塞尔达与宝可梦正统续作汇聚于同一台混合主机，彻底根治第一方大作空窗期。</p>
+          </div>
+
+          <div class="feature-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="战役 02 · 2025.06–2026.09" data-i18n-en="Case 02 · Jun 2025–Sep 2026">战役 02 · 2025.06–2026.09</span>
+              <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="供应链与换代教科书" data-i18n-en="Launch Execution">供应链与换代教科书</span>
+            </div>
+            <h3 data-i18n-zh="Switch 2 备货反黄牛与首年 1,986 万台闪电战" data-i18n-en="Switch 2 Anti-Scalper Supply Blitz (19.86M in FY26)">Switch 2 备货反黄牛与首年 1,986 万台闪电战</h3>
+            <p data-i18n-rich="nt_r19">动用充沛账面现金提前大规模锁定产能以遏制黄牛溢价，Switch 2 仅用约 10 个月便突破 1,986 万台（同期 PS5 达成同等规模耗时约 22 个月），并凭向下兼容稳住 1.28 亿活跃玩家基本盘 <a class="cite-link" href="https://sqmagazine.co.uk/nintendo-statistics/" target="_blank" rel="noopener noreferrer">Switch 2 vs PS5 Pace ↗</a>。</p>
+          </div>
+
+          <div class="feature-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="战役 03 · 2023–2026" data-i18n-en="Case 03 · 2023–2026">战役 03 · 2023–2026</span>
+              <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="跨媒介破圈典范" data-i18n-en="Cinema &amp; Parks">跨媒介破圈典范</span>
+            </div>
+            <h3 data-i18n-zh="宫本茂亲自监制：两部马力欧电影连破十亿美元" data-i18n-en="Miyamoto Co-Produced Cinema: Back-to-Back $1B Mario Films">宫本茂亲自监制：两部马力欧电影连破十亿美元</h3>
+            <p data-i18n-rich="nt_r20">摒弃 1993 年单纯甩手卖版权的失败模式，宫本茂深度介入剧本与角色把控，与照明娱乐合拍的首作 ($13.62亿) 与 2026 续作《超级马力欧银河大电影》($10.1亿+) 双双破十亿，直接带动游戏长尾回流 <a class="cite-link" href="https://www.nbcuniversal.com/article/super-mario-galaxy-movie-smashes-box-office-records-worldwide" target="_blank" rel="noopener noreferrer">NBCUniversal ↗</a>。</p>
+          </div>
+
+          <div class="feature-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="mui-chip mui-chip-warning mono" data-i18n-zh="战役 04 · 2012–2026" data-i18n-en="Case 04 · 2012–2026">战役 04 · 2012–2026</span>
+              <span class="mono" style="font-size:0.75rem;color:var(--text-muted);" data-i18n-zh="资产负债表哲学" data-i18n-en="Balance Sheet Shield">资产负债表哲学</span>
+            </div>
+            <h3 data-i18n-zh="¥1.93万亿净现金与“宁可延期打磨、绝不半成品上市”" data-i18n-en="¥1.93T Net Cash Enabling Zero-Crunch Quality Polish">¥1.93万亿净现金与“宁可延期打磨、绝不半成品上市”</h3>
+            <p data-i18n-rich="nt_r21">零有息负债与巨额现金储备赋予研发团队不被短期季度华尔街预期绑架的底气——践行宫本茂名言“延期的游戏终会变好”，保护百年 IP 商誉永不因仓促赶工而受损 <a class="cite-link" href="https://stockanalysis.com/quote/tyo/7974/statistics/" target="_blank" rel="noopener noreferrer">Balance Sheet ↗</a>。</p>
+          </div>
+        </div>
+
+        <!-- 3 Nintendo Laws -->
+        <div class="grid-3">
+          <div class="mui-alert">
+            <div data-i18n-zh="法则一：真正的护城河不是芯片制程（可被同行次年追平），而是唯独在自家硬件才能体验的跨世代角色情感记忆。" data-i18n-en="Law 01: True moats aren't built on silicon specs (easily matched next year), but on multi-generational character memories exclusive to your hardware."><strong>法则一：</strong>真正的护城河不是芯片制程（可被同行次年追平），而是唯独在自家硬件才能体验的跨世代角色情感记忆。</div>
+          </div>
+          <div class="mui-alert">
+            <div data-i18n-zh="法则二：绝不用打折促销透支 IP 身价——守住首发 $69.99/$79.99 正价锚点，老游戏才能成为连续热卖十年的高毛利年金。" data-i18n-en="Law 02: Never erode IP equity with steep discounts—protecting full MSRP turns back-catalog games into decade-long high-margin annuities."><strong>法则二：</strong>绝不用打折促销透支 IP 身价——守住首发 $69.99/$79.99 正价锚点，老游戏才能成为连续热卖十年的高毛利年金。</div>
+          </div>
+          <div class="mui-alert">
+            <div data-i18n-zh="法则三：创意密集型企业的头号资产是“人”的默契沉淀（2.3% 超低离职率 + 零负债现金盾），而非激进杠杆并购。" data-i18n-en="Law 03: In hit-driven creative industries, tacit team cohesion (2.3% turnover + zero-debt cash buffer) beats leveraged M&amp;A rollups."><strong>法则三：</strong>创意密集型企业的头号资产是“人”的默契沉淀（2.3% 超低离职率 + 零负债现金盾），而非激进杠杆并购。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           06 任天堂护城河法则核查清单
+           ================================================================ -->
+      <section id="sec-06" class="mui-paper section-block">
+        <div class="sec-header">
+          <div>
+            <div class="sec-eyebrow mono">CHAPTER 06 · INTERACTIVE MOAT DIAGNOSTIC CHECKLIST</div>
+            <h2 class="sec-h2" data-i18n-zh="六、“任天堂护城河法则”创意与生态型企业交互式核查清单" data-i18n-en="6. Interactive 'Nintendo Moat Laws' Creative &amp; Platform Diagnostic Checklist">六、“任天堂护城河法则”创意与生态型企业交互式核查清单</h2>
+            <p class="sec-sub" data-i18n-zh="用于跟踪任天堂 Switch 2 周期兑现度或评估任何消费内容平台公司的长期投资成色（勾选自动保存在本地）" data-i18n-en="Track Switch 2 cycle execution or evaluate long-term moat quality across consumer IP platforms (saved locally)">用于跟踪任天堂 Switch 2 周期兑现度或评估任何消费内容平台公司的长期投资成色（勾选自动保存在本地）</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span id="checklistScoreChip" class="mui-chip mui-chip-primary mono">已核查 4 / 6 项 (67%)</span>
+            <button type="button" id="checkAllBtn" class="mui-btn" data-i18n-zh="全部勾选" data-i18n-en="Check All">全部勾选</button>
+            <button type="button" id="resetCheckBtn" class="mui-btn" data-i18n-zh="重置清单" data-i18n-en="Reset">重置清单</button>
+          </div>
+        </div>
+
+        <div class="progress-track" aria-label="核查完成度进度条">
+          <div id="checklistProgressBar" class="progress-fill"></div>
+        </div>
+
+        <div id="checklistContainer" class="checklist-grid"></div>
+      </section>
+
+      <!-- ================================================================
+           07 数据来源与财报核验索引
+           ================================================================ -->
+      <footer id="sec-07" class="mui-paper section-block" style="padding: 22px 26px;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;">
+          <strong style="font-size:0.92rem;" data-i18n-zh="数据来源与一手财报 / 行业披露核验索引（IR Disclosures &amp; Verified Sources）" data-i18n-en="Primary IR Filings &amp; Verified Industry Disclosures Index">数据来源与一手财报 / 行业披露核验索引（IR Disclosures &amp; Verified Sources）</strong>
+          <span class="mui-chip mono">MUI Branding UI Architecture · Offline Ready</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.6;" data-i18n-zh="本研报所有财务指标、软硬件出货量、账户规模、人员留存与同业对比数据均核验自任天堂年度有价证券报告书（FY2026 Annual Report）、FY2027 第二季度决算短信（截至 2026-09-30）及权威财经与行业研究披露，仅供商业模式与企业研究参考，不构成任何投资建议。" data-i18n-en="All financial metrics, hardware/software unit shipments, account totals, workforce figures, and peer benchmarks are verified against Nintendo's FY2026 Annual Securities Report, Q2 FY2027 Financial Results (ended Sep 30, 2026), and official peer disclosures. For research purposes only; not investment advice.">
+          本研报所有财务指标、软硬件出货量、账户规模、人员留存与同业对比数据均核验自任天堂年度有价证券报告书（FY2026 Annual Report）、FY2027 第二季度决算短信（截至 2026-09-30）及权威财经与行业研究披露，仅供商业模式与企业研究参考，不构成任何投资建议。
+        </p>
+        <ul class="sources-list">
+          <li><span class="mono">[01]</span><a href="https://www.gamesindustry.biz/nintendo-fy-sales-soar-986-to-146bn-following-launch-of-switch-2" target="_blank" rel="noopener noreferrer">Nintendo FY2026 Full-Year Results: Net Sales ¥2.31T (+98.6%) &amp; FY27 Guidance (2026-05-08) ↗</a></li>
+          <li><span class="mono">[02]</span><a href="https://simulationdaily.com/news/nintendo-financial-results-q2-fy2027/" target="_blank" rel="noopener noreferrer">Nintendo H1 FY2027 Results: Switch 2 Hits 26.35M Units &amp; OP Up 49.1% to ¥216.5B (2026-11-05) ↗</a></li>
+          <li><span class="mono">[03]</span><a href="https://sqmagazine.co.uk/nintendo-statistics/" target="_blank" rel="noopener noreferrer">Nintendo Statistics 2026: Switch 155.92M–157.20M, Regional Mix &amp; Circana Demographics ↗</a></li>
+          <li><span class="mono">[04]</span><a href="https://sqmagazine.co.uk/how-many-people-work-at-nintendo/" target="_blank" rel="noopener noreferrer">Nintendo FY2026 Annual Report Workforce Analysis: 8,666 FTE, 2.3% Turnover &amp; ¥266.9M Rev/FTE ↗</a></li>
+          <li><span class="mono">[05]</span><a href="https://www.nintendolife.com/news/2026/11/here-are-the-best-selling-switch-1-and-2-games-as-of-september-2026" target="_blank" rel="noopener noreferrer">Best-Selling Switch 1 &amp; Switch 2 First-Party Million-Seller Titles as of September 2026 ↗</a></li>
+          <li><span class="mono">[06]</span><a href="https://stockanalysis.com/quote/tyo/7974/statistics/" target="_blank" rel="noopener noreferrer">Nintendo (TYO: 7974) Balance Sheet &amp; Valuation: ¥1.93T Cash, Zero Debt &amp; Net Cash/Share ↗</a></li>
+          <li><span class="mono">[07]</span><a href="https://stockanalysis.com/quote/otc/NTDOY/financials/" target="_blank" rel="noopener noreferrer">Nintendo Historical Income Statement Series FY2022–FY2026 &amp; TTM Sep 2026 ↗</a></li>
+          <li><span class="mono">[08]</span><a href="https://corporate.comcast.com/press/releases/illumination-and-universal-pictures-super-mario-galaxy-movie-becomes-first-1-billion-film-of-2026" target="_blank" rel="noopener noreferrer">Comcast / Universal Release: The Super Mario Galaxy Movie Surpasses $1B Worldwide (2026-06-08) ↗</a></li>
+          <li><span class="mono">[09]</span><a href="https://www.shanethegamer.com/research/nintendo-eshop-facts/" target="_blank" rel="noopener noreferrer">Nintendo eShop &amp; Ecosystem Graph: 400M Accounts, 128M Playing Users &amp; 34M+ NSO Members ↗</a></li>
+          <li><span class="mono">[10]</span><a href="https://www.sony.com/en/SonyInfo/IR/library/presen/er/pdf/25q4_sonypre.pdf" target="_blank" rel="noopener noreferrer">Sony Group FY2025 Consolidated Results: Game &amp; Network Services ¥4,685.7B Sales / ¥463.3B OP ↗</a></li>
+          <li><span class="mono">[11]</span><a href="https://www.bandainamco.co.jp/en/ir/financial/index.html" target="_blank" rel="noopener noreferrer">Bandai Namco Holdings FY2026.3 Financial Highlights: ¥1,348.2B Net Sales &amp; 14.1% OP Margin ↗</a></li>
+          <li><span class="mono">[12]</span><a href="https://www.macrotrends.net/stocks/charts/DIS/disney/revenue" target="_blank" rel="noopener noreferrer">The Walt Disney Company FY2026 Annual Revenue ($102.34B, +8.39% YoY) Benchmark ↗</a></li>
+        </ul>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="../../_shared/3a6105879bda01f3.js"></script>
+</body>
+</html>

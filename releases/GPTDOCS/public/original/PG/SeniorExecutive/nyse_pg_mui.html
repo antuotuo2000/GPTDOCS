@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>宝洁 (NYSE: PG) 集团总览与全矩阵 — MUI 官方设计系统深度专页</title>
+  
+  <link rel="stylesheet" href="../../_shared/b670248efbf33d64.css">
+<!-- PORTAL_MUI_OPT_CSS_START -->
+  <script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+  
+  
+  <script id="portalDetailMenu" src="../../_shared/navigation.js"></script>
+
+  <script id="portalReportProse" src="../../_shared/454bfe2c0202e74e.js"></script>
+<!-- PORTAL_MUI_OPT_CSS_END -->
+  <link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+</head>
+<body>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar" aria-hidden="true"></div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <header class="mui-appbar">
+    <div class="mui-appbar-inner">
+      <div class="appbar-left">
+        <button type="button" class="mui-icon-btn" id="sidebarToggleBtn" title="切换侧边导航 / Toggle Sidebar" aria-label="Toggle Sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </button>
+        <div class="brand-monogram mono">PG</div>
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a class="crumb-link hide-sm" href="../../index.html"><span class="portal-menu-text" data-portal-zh="数据中心" data-portal-en="Research Hub">数据中心</span></a><span class="hide-sm" aria-hidden="true">/</span>
+          <span class="crumb-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);flex-shrink:0;"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+            <span data-i18n-zh="宝洁全品牌矩阵" data-i18n-en="P&amp;G Brand Portfolio">宝洁全品牌矩阵</span>
+          </span>
+          <span style="color:var(--text-muted);">/</span>
+          <span class="crumb-current" id="crumbCurrentTitle" data-i18n-zh="00 · 集团总览与全矩阵" data-i18n-en="00 · Group Master Hub">00 · 集团总览与全矩阵</span>
+        </nav>
+      </div>
+
+      <div class="appbar-right">
+        <div class="quick-search-wrap">
+          <span class="quick-search-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+          <input type="text" class="quick-search-input" id="quickJumpInput"
+            placeholder="快速跳转品牌或章节..." data-ph-zh="快速跳转品牌或章节..." data-ph-en="Quick jump brand or section..." autocomplete="off" />
+          <span class="quick-search-kbd mono">⌘K</span>
+          <div class="quick-jump-popover" id="quickJumpPopover"></div>
+        </div>
+
+        
+
+        <div class="mui-lang-switch" role="group" aria-label="Language Switch">
+          <button type="button" class="mui-lang-btn active" id="langZhBtn" aria-pressed="true">中文</button>
+          <button type="button" class="mui-lang-btn" id="langEnBtn" aria-pressed="false">EN</button>
+        </div>
+
+        <button type="button" class="mui-theme-icon-btn" id="appbarThemeBtn" title="切换深浅色 / Toggle Theme" aria-label="Toggle Theme">
+          <span id="appbarThemeIcon" style="display:inline-flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-shell">
+    <aside class="mui-sidebar" id="muiSidebar" aria-label="Sidebar Navigation">
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">NYSE: PG</span>
+          <span class="mui-chip mui-chip-success mono">MUI v6 UI</span>
+        </div>
+        <div class="sidebar-title" id="sidebarActiveTitle" data-i18n-zh="00 · 集团总览与全矩阵" data-i18n-en="00 · Group Master Hub">00 · 集团总览与全矩阵</div>
+        <div class="sidebar-subtitle" id="sidebarActiveSub" data-i18n-zh="$87.03B · 5大分部10品类" data-i18n-en="$87.03B · 5大分部10品类">$87.03B · 5大分部10品类</div>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="FY26 净销售" data-i18n-en="FY26 Net Sales">FY26 净销售</span><span class="sidebar-mini-val mono">$87.03B</span></div><div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="核心毛利率" data-i18n-en="Core Gross Margin">核心毛利率</span><span class="sidebar-mini-val mono">50.7%</span></div><div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="连续增息纪录" data-i18n-en="Dividend Streak">连续增息纪录</span><span class="sidebar-mini-val mono">70 Yrs</span></div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+
+        <div class="nav-section-label" data-i18n-zh="本页章节目录" data-i18n-en="ON THIS PAGE">本页章节目录</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a class="mui-nav-link active" href="#sec-00" data-sec="sec-00"><span class="nav-idx mono">00</span><span data-i18n-zh="核心论点与关键指标" data-i18n-en="Executive Summary &amp; KPIs">核心论点与关键指标</span></a></li><li><a class="mui-nav-link" href="#sec-01" data-sec="sec-01"><span class="nav-idx mono">01</span><span data-i18n-zh="商业架构与分部全景图" data-i18n-en="Architecture &amp; Segment Charts">商业架构与分部全景图</span></a></li><li><a class="mui-nav-link" href="#sec-02" data-sec="sec-02"><span class="nav-idx mono">02</span><span data-i18n-zh="五维护城河雷达与区域结构" data-i18n-en="5-Axis Superiority &amp; Geography">五维护城河雷达与区域结构</span></a></li><li><a class="mui-nav-link" href="#sec-03" data-sec="sec-03"><span class="nav-idx mono">03</span><span data-i18n-zh="88 品牌与爆款单品工作台" data-i18n-en="88-Brand &amp; SKU DataGrid">88 品牌与爆款单品工作台</span></a></li><li><a class="mui-nav-link" href="#sec-04" data-sec="sec-04"><span class="nav-idx mono">04</span><span data-i18n-zh="跨国日化同行财务对标矩阵" data-i18n-en="Global CPG Peer Matrix">跨国日化同行财务对标矩阵</span></a></li><li><a class="mui-nav-link" href="#sec-05" data-sec="sec-05"><span class="nav-idx mono">05</span><span data-i18n-zh="利润与现金流敏感度推演器" data-i18n-en="Margin &amp; FCF Simulator">利润与现金流敏感度推演器</span></a></li><li><a class="mui-nav-link" href="#sec-06" data-sec="sec-06"><span class="nav-idx mono">06</span><span data-i18n-zh="关键战略战役纵向时间轴" data-i18n-en="Strategic Battles Timeline">关键战略战役纵向时间轴</span></a></li><li><a class="mui-nav-link" href="#sec-07" data-sec="sec-07"><span class="nav-idx mono">07</span><span data-i18n-zh="投资者尽调核对清单与信源" data-i18n-en="Due-Diligence Checklist &amp; Sources">投资者尽调核对清单与信源</span></a></li>
+        </ul>
+      </div>
+
+      
+    </aside>
+
+    <main class="main-content" id="mainContent">
+      <section class="ip-hub-banner" id="ipHubSwitcher" aria-label="Category Switcher">
+        <div class="ip-hub-top">
+          <div class="ip-hub-title-group">
+            <span class="mui-chip mui-chip-primary mono">11 MODULES · 88 BRANDS</span>
+            <h2 class="ip-hub-heading" data-i18n-zh="宝洁集团总览 + 五大报告分部 / 十大官方日常品类交互切换台" data-i18n-en="P&amp;G Group Overview + 5 Segments / 10 Daily Categories Switcher">宝洁集团总览 + 五大报告分部 / 十大官方日常品类交互切换台</h2>
+          </div>
+          <div class="ip-hub-controls">
+            <button type="button" class="mui-btn" id="prevModBtn">← <span data-i18n-zh="上一模块" data-i18n-en="Prev">上一模块</span></button>
+            <button type="button" class="mui-btn" id="nextModBtn"><span data-i18n-zh="下一模块" data-i18n-en="Next">下一模块</span> →</button>
+            <button type="button" class="mui-btn" data-focus-toggle="1" data-i18n-zh="收起切换面板" data-i18n-en="Compact Header">收起切换面板</button>
+            <button type="button" class="mui-btn mui-btn-primary" data-hub-export="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> <span data-i18n-zh="导出当前专页" data-i18n-en="Export Active View">导出当前专页</span></button>
+          </div>
+        </div>
+        <div class="hub-summary-strip">
+          <div class="hub-sum-item"><span class="hub-sum-lbl" data-i18n-zh="FY2026 合并净销售额" data-i18n-en="FY26 Net Sales">FY2026 合并净销售额</span><span class="hub-sum-val mono">$87.03B (+3% · Q1 FY27 +4% Org)</span></div>
+          <div class="hub-sum-item"><span class="hub-sum-lbl" data-i18n-zh="核心营业利润率 / FCF 转化" data-i18n-en="Core Op Margin / FCF">核心营业利润率 / FCF 转化</span><span class="hub-sum-val mono">23.6% / 100% ($15.84B)</span></div>
+          <div class="hub-sum-item"><span class="hub-sum-lbl" data-i18n-zh="覆盖品牌颗粒度" data-i18n-en="Unpacked Brand Granularity">覆盖品牌颗粒度</span><span class="hub-sum-val mono">88 个品牌 (含 2026 Thorne / Wonderbelly)</span></div>
+          <div class="hub-sum-item"><span class="hub-sum-lbl" data-i18n-zh="股东回报纪律" data-i18n-en="Shareholder Return">股东回报纪律</span><span class="hub-sum-val mono">$15.26B/年 · 连续 70 年增息</span></div>
+        </div>
+        <div class="hub-cat-bar">
+          <div class="hub-cat-pills" id="hubSegFilterPills">
+            <button type="button" class="hub-cat-btn active" data-seg-filter="all" data-i18n-zh="全部模块 (11)" data-i18n-en="All Modules (11)">全部模块 (11)</button>
+            <button type="button" class="hub-cat-btn" data-seg-filter="overview" data-i18n-zh="集团总览 (1)" data-i18n-en="Group Hub (1)">集团总览 (1)</button>
+            <button type="button" class="hub-cat-btn" data-seg-filter="fabric_home" data-i18n-zh="织物与家居 35% (2)" data-i18n-en="Fabric &amp; Home 35% (2)">织物与家居 35% (2)</button>
+            <button type="button" class="hub-cat-btn" data-seg-filter="baby_fem_fam" data-i18n-zh="婴幼妇家 24% (3)" data-i18n-en="Baby/Fem/Fam 24% (3)">婴幼妇家 24% (3)</button>
+            <button type="button" class="hub-cat-btn" data-seg-filter="beauty" data-i18n-zh="美尚 19% (2)" data-i18n-en="Beauty 19% (2)">美尚 19% (2)</button>
+            <button type="button" class="hub-cat-btn" data-seg-filter="health" data-i18n-zh="健康护理 14% (2)" data-i18n-en="Health Care 14% (2)">健康护理 14% (2)</button>
+            <button type="button" class="hub-cat-btn" data-seg-filter="grooming" data-i18n-zh="理容 8% (1)" data-i18n-en="Grooming 8% (1)">理容 8% (1)</button>
+          </div>
+        </div>
+        <div class="ip-pill-grid" id="modulePillGrid"></div>
+      </section>
+      <div id="ipSectionsHost"></div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="brandDetailModal" role="dialog" aria-modal="true" aria-labelledby="modalBrandTitle">
+    <div class="modal-panel">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--divider);">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="brand-monogram mono" id="modalBrandMono" style="width:42px;height:42px;font-size:0.95rem;">PG</div>
+          <div>
+            <h3 id="modalBrandTitle" style="font-size:1.18rem;font-weight:800;color:var(--text-primary);">Brand</h3>
+            <div id="modalBrandBadges" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;"></div>
+          </div>
+        </div>
+        <button type="button" class="mui-btn" id="closeBrandModalBtn">✕ 关闭</button>
+      </div>
+      <div id="modalBrandBody" style="display:flex;flex-direction:column;gap:14px;font-size:0.86rem;color:var(--text-secondary);line-height:1.68;"></div>
+    </div>
+  </div>
+  <div id="chartTooltip" role="tooltip"></div>
+  <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+  <script src="../../_shared/a990a731197b58dc.js"></script>
+</body>
+</html>

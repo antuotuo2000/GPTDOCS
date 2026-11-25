@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="ant" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Anthropic, PBC (NASDAQ: ANT) 商业模式架构深度拆解：安全可信前沿模型漏斗、Claude Code 研发工作流与 MCP 开放协议锁死、85.5% 推导推理毛利、~900% 净收入留存率（NRR）与 $895.4B 多云异构算力复利引擎（基于 2026.11 S-1/A 与 Form 424B4 招股书）。" />
+ <title>Anthropic ANT 商业模式架构拆解 | 数据中心</title>
+
+
+
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/anthropic_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted Glass MUI AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">ANT</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <button type="button" class="crumb-link hide-sm" data-suite-jump="hub">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </button>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="Anthropic (ANT) 商业模式架构拆解" data-i18n-en="Anthropic, PBC Business Model Architecture">Anthropic (ANT) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: ANT</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">S-1/424B4 · Q3'26 $17.0B</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与专题导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">ANT · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="Anthropic 商业模式架构图谱" data-i18n-en="Anthropic Business Model Blueprint">Anthropic 商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="宪法安全护城河 × Claude Code 编码引擎 × MCP 协议锁死 × 85.5% 推理毛利 × ~900% NRR 复利" data-i18n-en="Constitutional Safety Moat × Claude Code Engine × MCP Lock-In × 85.5% Inference GM × ~900% NRR">宪法安全护城河 × Claude Code 编码引擎 × MCP 协议锁死 × 85.5% 推理毛利 × ~900% NRR 复利</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="企业级智能计量水电厂" data-i18n-en="Enterprise Token Utility">企业级智能计量水电厂</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="推导毛利 / 调整营利" data-i18n-en="Gross / Adj. Op Margin">推导毛利 / 调整营利</span>
+ <span class="sidebar-mini-val mono">85.5% · 15.0% (Q3)</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="固定CapEx / NRR留存" data-i18n-en="CapEx / Enterprise NRR">固定CapEx / NRR留存</span>
+ <span class="sidebar-mini-val mono">2.8% · ~900%</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="四网页专题导航与架构目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="ANT"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="损益瀑布流与四层收费站" data-i18n-en="P&amp;L Waterfall &amp; Tollbooth">损益瀑布流与四层收费站</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="900% NRR 棘轮与大客经济" data-i18n-en="900% NRR Cohort Economics">900% NRR 棘轮与大客经济</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="$895B 算力杠杆与复利推演" data-i18n-en="$895B Compute &amp; Simulator">$895B 算力杠杆与复利推演</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="巨头范式矩阵与三大压测" data-i18n-en="Peer Matrix &amp; Stress Audit">巨头范式矩阵与三大压测</span></a></li>
+ </ul>
+ </nav>
+
+ </aside>
+
+ <!-- Main Distinct Non-Linear Workspace -->
+ <main class="bm-workspace main-content">
+
+ <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：安全可信前沿模型 × 企业编程与Agent按量水电厂" data-i18n-en="ARCHETYPE: Trusted Frontier Lab × Enterprise Agentic Token Utility">商业范式：安全可信前沿模型 × 企业编程与Agent按量水电厂</span>
+ <span class="mui-chip mui-chip-success mono">2026.11 IPO · $83/股 · $1.5T完全稀释估值</span>
+ <span class="mui-chip mui-chip-violet mono">NRR ~900% · 推理毛利 85.5%</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="Anthropic 商业模式解构：<span class='bm-gradient-txt'>以宪法安全与编码王座切入 B2B 核心工作流，靠 85.5% 推理毛利与 900% 净留存率复利</span>" data-i18n-en="Deconstructing Anthropic's Business Model: <span class='bm-gradient-txt'>Capture Enterprise Coding via Trusted AI, Compound via 85.5% Inference GM &amp; 900% NRR</span>">
+ Anthropic 商业模式解构：<span class="bm-gradient-txt">以宪法安全与编码王座切入 B2B 核心工作流，靠 85.5% 推理毛利与 900% 净留存率复利</span>
+ </h1>
+
+ <p class="bm-lead" id="heroLeadText">
+ 2026 年 11 月 19 日，<strong>Anthropic, PBC（NASDAQ: ANT）</strong>以每股 $83 定价完成总规模达 <strong>$1,073.4亿</strong>（含 $813.4亿 公开募资与英伟达、谷歌、微软等七巨头 $260亿 同步私募）的科技史最大规模上市，首日收盘完全稀释估值冲上 <strong>$1.76万亿</strong>
+ <a class="cite-link" href="https://guptadeepak.com/earnings/ipos/company/anthropic/" target="_blank" rel="noopener noreferrer">Form 424B4 终版招股书 ↗</a>
+ <a class="cite-link" href="https://dealroom.co/news/info-i4toci-how-anthropic-upstaged-openai-on-road-to-blockbuster-ipo/" target="_blank" rel="noopener noreferrer">Dealroom IPO 拆解 ↗</a>。
+ 与依赖免费 C 端聊天流量与广告变现的对手不同，Anthropic 构建了一台纯粹的<strong>企业级智能计量引擎</strong>：第一阶以 <strong>Constitutional AI 与 ASL-3 安全认证</strong>赢得严监管企业信任，借 <strong>Claude Code 与 Claude 5.5 / Fable 5.2</strong> 垄断软件研发入口，使 6 个月内6季营收暴涨 45 倍至 <strong>Q3 2026 单季 $169.6亿（年化 $678亿）</strong>
+ <a class="cite-link" href="https://sec-api.io/insights/anthropic-ant-s-1-and-s-1-a-ipo-filings-analysis-q3-2026-revenue-17-0bn-and-895bn-compute-commitments" target="_blank" rel="noopener noreferrer">S-1/A 财务透视 ↗</a>；第二阶通过 <strong>79% 按量 Token 计费 + 44% AWS/GCP 云市场原账单分发</strong>，创造出惊人的 <strong>~900% 净收入留存率（NRR）</strong>与 <strong>85.5% 推导推理毛利率</strong>；第三阶不自建晶圆厂与重资产园区（固定 CapEx 仅占营收 <strong>2.8%</strong>），让谷歌 TPU、亚马逊 Trainium 与博通定制算力相互竞价，率先在 9M 2026 实现 <strong>+$65.7亿 正向经营现金流</strong>。
+ </p>
+ </div>
+
+ <!-- Interactive 3-Lens Business Formula Switcher -->
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① ~900% NRR Token 飞轮" data-i18n-en="① ~900% NRR Token Flywheel">① ~900% NRR Token 飞轮</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 85.5% 推理毛利剪刀差" data-i18n-en="② 85.5% Inference Margin">② 85.5% 推理毛利剪刀差</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 多云零重资产算力套利" data-i18n-en="③ Multi-Cloud ASIC Arbitrage">③ 多云零重资产算力套利</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 单企业年化净留存 (~900% NRR) = 初始试点席位 × [工程师全员渗透 × Agent 自主多步循环 Token 乘数 (15x–40x)]
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 传统 SaaS 按人头收费，员工不扩编收入就见顶（NRR 通常 110%–125%）；而 Anthropic 79% 营收来自按量 Token 消耗——当企业从“人类手动提问”升级为 <strong>Claude Code / Fable 5.2 数小时自主长程 Agent 编程与测试循环</strong>，同一名工程师背后的 API 调用量呈指数级裂变，造就软件史上罕见的 ~900% 净留存率。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: Live S-1/A Financial Telemetry Ledger -->
+ <aside class="bm-telemetry-ledger" aria-label="S-1/A 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="2026 S-1/A &amp; 424B4 核心遥测账本" data-i18n-en="2026 S-1/A &amp; 424B4 Telemetry">2026 S-1/A &amp; 424B4 核心遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm" target="_blank" rel="noopener noreferrer">SEC 424B4 ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="9M 2026 实收营收 (79% 按量 / 21% 订阅)" data-i18n-en="9M 2026 Revenue (79% Usage / 21% Sub)">9M 2026 实收营收 (79% 按量 / 21% 订阅)</span>
+ <span class="bm-tel-val mono">$33.24B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:79%;"></div>
+ <div style="width:21%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q3 单季 $16.96B (+1,127%)</span><span>年化运行率 $67.8B</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="职能附注推导毛利率 (推理成本仅占 14.5%)" data-i18n-en="Derived Gross Margin (COR = 14.5% of Rev)">职能附注推导毛利率 (推理成本仅占 14.5%)</span>
+ <span class="bm-tel-val mono">85.5% <small style="font-size:0.74rem;color:var(--mui-success-text);">+56.1pp YoY</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:85.5%;background:linear-gradient(90deg,#0073E6,#16A34A);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q3 推导毛利率 85.7%</span><span>Q3 调整后营业利润 $2.46B (15%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="9M 2026 经营现金流 &amp; 轻固定资产转化" data-i18n-en="9M 2026 Operating Cash Flow &amp; FCF">9M 2026 经营现金流 &amp; 轻固定资产转化</span>
+ <span class="bm-tel-val mono">+$6.57B <small style="font-size:0.74rem;color:var(--mui-success-text);">转正跃升</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:86%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>自由现金流 FCF +$5.64B</span><span>设备 CapEx $0.93B (仅占收 2.8%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="超 $100K 企业大客 × 净收入留存率" data-i18n-en=">$100K Enterprise Accounts × NRR">超 $100K 企业大客 × 净收入留存率</span>
+ <span class="bm-tel-val mono">11,900+ / ~900%</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:74%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>大客贡献 74% TTM 营收 ($26.1B)</span><span>IPO 前账面现金 $131.8B</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END VALUE CAPTURE PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从多云异构芯片池到 900% NRR 现金流复利" data-i18n-en="5-Node Value-Chain Pipeline: From Multi-Silicon Compute to 900% NRR Cash Flow">五阶商业价值传导沙盘：从多云异构芯片池到 900% NRR 现金流复利</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解 Anthropic 如何把算力商品转化为高粘性企业智能操作系统。" data-i18n-en="Select any node in the horizontal value chain to inspect Anthropic's pricing power, protocol lock-in, and unit metrics.">点击下方任一价值链节点，拆解 Anthropic 如何把算力商品转化为高粘性企业智能操作系统。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">MULTI-SILICON</span></div>
+ <div class="bm-node-title" data-i18n-zh="三芯异构算力路由底座" data-i18n-en="Tri-Silicon Compute Routing">三芯异构算力路由底座</div>
+ <div class="bm-node-kpi mono">TPU + Trainium + GPU 竞价</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">MODEL LADDER</span></div>
+ <div class="bm-node-title" data-i18n-zh="四档模型与双轨安全分级" data-i18n-en="4-Tier Model &amp; Dual Safety">四档模型与双轨安全分级</div>
+ <div class="bm-node-kpi mono">半年新模贡献 &gt;80% 营收</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">MCP &amp; WORKFLOW</span></div>
+ <div class="bm-node-title" data-i18n-zh="MCP 协议与研发工作流锁死" data-i18n-en="MCP Standard &amp; Code Lock-In">MCP 协议与研发工作流锁死</div>
+ <div class="bm-node-kpi mono">Claude Code + Computer Use</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">CLOUD &amp; API</span></div>
+ <div class="bm-node-title" data-i18n-zh="云市场免摩擦分发与双轨收费" data-i18n-en="Cloud Marketplace &amp; Dual Billing">云市场免摩擦分发与双轨收费</div>
+ <div class="bm-node-kpi mono">44% 云市场 · 85.5% 推理毛利</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">NRR COMPOUNDER</span></div>
+ <div class="bm-node-title" data-i18n-zh="900% 净留存与正向现金流闭环" data-i18n-en="900% NRR &amp; FCF Inflection">900% 净留存与正向现金流闭环</div>
+ <div class="bm-node-kpi mono">9M OCF +$6.57B · 净现金充沛</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · HETEROGENEOUS MULTI-SILICON ARCHITECTURE</span>
+ <h3 id="nodeTitle">三芯异构编译器栈：全球唯一同时大规模跑通 TPU、Trainium 与英伟达 GPU 的前沿实验室</h3>
+ <p id="nodeDesc">
+ 大多数 AI 实验室被单一云厂商或单一 GPU 架构深度绑定，而联合创始人 Tom Brown 与 Sam McCandlish 构建了硬件无关的底层训练与推理抽象层，将总额 $895.4B 的远期算力契约分散布局于 Google Cloud TPU（最低消费 $121.3B）、Broadcom 定制算力租赁（$161.2B）、Amazon AWS Trainium（$110.0B）及 SpaceXAI / Nscale / Lambda 的英伟达集群，大幅压低百万 Token 推理成本。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 商业传导：异构算力调度消除单点溢价 → 每美元算力产出营收由 Q1'25 的 0.40x 飙升至 Q2'26 的 2.08x（Q3 含短期峰值扩容仍达 1.72x）
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">85.5%</b><span>9M 2026 推导推理毛利率</span></div>
+ <div class="bm-ins-card"><b class="mono">$895.4B</b><span>多年期多云算力锁价储备</span></div>
+ <div class="bm-ins-card"><b class="mono">2.08x</b><span>Q2'26 每美元总算力创收比</span></div>
+ <div class="bm-ins-card"><b class="mono">2.8%</b><span>自持物业设备 CapEx / 营收比</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: 7:5 ASYMMETRIC SPLIT — P&L WATERFALL / 7Q RAMP + 4-TIER MONETIZATION -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · S-1/A P&amp;L WATERFALL &amp; 45X RAMP</span>
+ <h3 data-i18n-zh="看懂 S-1 账面巨亏真相：正向经营利润 vs 可转债公允价值非现金重估" data-i18n-en="Decoding the S-1 Loss Illusion: Operating Cash vs Non-Cash Note Revaluation">看懂 S-1 账面巨亏真相：正向经营利润 vs 可转债公允价值非现金重估</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="Q3'26 $17.0B 损益拆解" data-i18n-en="Q3'26 $17.0B P&amp;L Bridge">Q3'26 $17.0B 损益拆解</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="7季度营收与算力占比曲线" data-i18n-en="7Q Revenue &amp; Compute %">7季度营收与算力占比曲线</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 数据来源：<a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm" target="_blank" rel="noopener noreferrer">Anthropic SEC S-1/A-1 ↗</a> 与
+ <a class="cite-link" href="https://sec-api.io/insights/anthropic-ant-s-1-and-s-1-a-ipo-filings-analysis-q3-2026-revenue-17-0bn-and-895bn-compute-commitments" target="_blank" rel="noopener noreferrer">SEC-API 报表审计 ↗</a>。
+ 核心洞察：Anthropic 9M 2026 账面 GAAP 净亏损 -$1,040.4亿中，<strong>高达 -$943.2亿来自公司估值暴涨引发的可转债与 SAFE 非现金公允价值重估</strong>（不消耗一分钱现金）；剔除股权激励与公益配捐后，Q3 调整后营业利润达 <strong>+$24.6亿（15% 利润率）</strong>，调整后净利润达 <strong>+$31.7亿</strong>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · $33.24B (9M'26) REVENUE ENGINE</span>
+ <h3 data-i18n-zh="四层商业变现矩阵（按量水电表 + 高端席位）" data-i18n-en="4-Tier Monetization Architecture (Token Meter + Seats)">四层商业变现矩阵（按量水电表 + 高端席位）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="api" data-i18n-zh="按量API" data-i18n-en="Usage API">按量API</button>
+ <button type="button" class="mui-seg-btn" data-tcat="sub" data-i18n-zh="席位与应用" data-i18n-en="Apps &amp; Seats">席位与应用</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="api">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="① Claude Platform 直连 API 与缓存分层计费" data-i18n-en="① Direct Claude API &amp; Prompt Caching">① Claude Platform 直连 API 与缓存分层计费</span>
+ <span class="mui-chip mui-chip-success mono">79% 营收为按量计费 ($26.3B)</span>
+ </div>
+ <div class="bm-tier-desc">覆盖 Haiku 5.5 ($0.10/$0.50)、Sonnet 5.5 ($2/$10)、Opus 5.5 ($4/$20) 至 Fable 5.2 ($8/$40)，叠加 $0.10–$0.20 提示词缓存读取，将企业长上下文高频调用死死留在主平台 <a class="cite-link" href="https://felloai.com/ultimate-claude-model-comparison/" target="_blank" rel="noopener noreferrer">API 价目表 ↗</a>。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="api">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="② AWS Bedrock &amp; Google Vertex 云市场原单抵扣" data-i18n-en="② AWS Bedrock &amp; GCP Vertex Distribution">② AWS Bedrock &amp; Google Vertex 云市场原单抵扣</span>
+ <span class="mui-chip mui-chip-primary mono">贡献 9M'26 总营收 44%</span>
+ </div>
+ <div class="bm-tier-desc">财富 500 强无需经历漫长的独立安全合规采购审批，直接动用既有 AWS / Google Cloud 年度云预算调用 Claude，Anthropic 作为责任主体按总额法（Gross GAAP）确认全额收入。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="sub">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="③ Claude Code 自主软件工程与 Claude Security" data-i18n-en="③ Claude Code &amp; Claude Security Agents">③ Claude Code 自主软件工程与 Claude Security</span>
+ <span class="mui-chip mui-chip-violet mono">追踪 ARR 突破 ~$15B+</span>
+ </div>
+ <div class="bm-tier-desc">直接驻留开发者终端与企业代码库完成跨文件重构、单测编写与漏洞修复，2025 年 9 月仅 $5亿 ARR，至 2026 年夏季飙升近 30 倍，成为引爆业绩的第一杀手级原生应用 <a class="cite-link" href="https://futuresearch.ai/anthropic-financial-forecast/" target="_blank" rel="noopener noreferrer">Claude Code 追踪 ↗</a>。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="sub">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="④ Pro ($20) / Max ($100) / Ultra ($200) 与企业席位" data-i18n-en="④ Pro / Max / Ultra &amp; Enterprise Subscriptions">④ Pro ($20) / Max ($100) / Ultra ($200) 与企业席位</span>
+ <span class="mui-chip mui-chip-warning mono">21% 订阅收入 ($6.9B)</span>
+ </div>
+ <div class="bm-tier-desc">面向高价值知识工作者推出 $100 Max 与 $200 Ultra 超高客单价套餐（附赠 API 额度与 Fable 5.2 配额），配合 Cowork 协作工作台锁定金融、律所与生命科学团队。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: REVERSED 5:7 SPLIT — ENTERPRISE COHORT ECONOMICS & MARKET SHARE -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · ENTERPRISE LAND-AND-EXPAND RATCHET</span>
+ <h3 data-i18n-zh="客户分层经济模型：1.19万家大客户如何撑起 74% 营收？" data-i18n-en="Customer Tier Economics: How 11,900+ Accounts Drive 74% of Revenue">客户分层经济模型：1.19万家大客户如何撑起 74% 营收？</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="smb" data-i18n-zh="长尾自助客 (&lt;$100K)" data-i18n-en="Self-Serve (&lt;$100K)">长尾自助客 (&lt;$100K)</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="ent" data-i18n-zh="核心企业客 ($100K+)" data-i18n-en="Enterprise ($100K+)">核心企业客 ($100K+)</button>
+ <button type="button" class="mui-seg-btn" data-cohort="whale" data-i18n-zh="战略巨鲸客 ($1M+)" data-i18n-en="Strategic Whales ($1M+)">战略巨鲸客 ($1M+)</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat">
+ <div class="lbl">活跃客户规模 (截至 2026.09)</div>
+ <div class="val mono">11,900+ 家</div>
+ <div class="delta">占 TTM 总营收高达 74% ($26.1B)</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">净收入留存率 (S-1 口径 NRR)</div>
+ <div class="val mono">~900%</div>
+ <div class="delta">单客次年支出平均扩张约 9 倍</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">户均年化贡献 (TTM ARPU)</div>
+ <div class="val mono">~$2.19M / 家</div>
+ <div class="delta">Claude Code + 生产环境 API 并发</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">销售与渠道费率趋势</div>
+ <div class="val mono">22% → 14%</div>
+ <div class="delta">Q1'26 至 Q3'26 获客费率快速摊薄</div>
+ </div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>MCP 开放标准 + 系统提示词棘轮（Protocol Lock-In）：</strong>Anthropic 开源的 <strong>Model Context Protocol (MCP)</strong> 已成为企业连接内部数据库、GitHub、Slack 与 ERP 的事实通用总线
+ <a class="cite-link" href="https://guptadeepak.com/the-complete-guide-to-model-context-protocol-mcp-enterprise-adoption-market-trends-and-implementation-strategies/" target="_blank" rel="noopener noreferrer">MCP 企业指南 ↗</a>；一旦企业围绕 Claude 100万上下文窗口、Effort 推理档位与工具调用格式完成内部生产流水线校准，切换底层模型的重构与回测成本极高。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · ~900% NRR EXPANSION &amp; ENTERPRISE SHARE</span>
+ <h3 data-i18n-zh="企业客户 ~900% 净留存裂变曲线与编程/B2B 市场格局" data-i18n-en="Enterprise ~900% NRR Expansion Curve &amp; B2B LLM Share">企业客户 ~900% 净留存裂变曲线与编程/B2B 市场格局</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="ltv" data-i18n-zh="单企业支出裂变 vs SaaS" data-i18n-en="Cohort Expansion vs SaaS">单企业支出裂变 vs SaaS</button>
+ <button type="button" class="mui-seg-btn" data-cview="share" data-i18n-zh="营收结构与客群集中度" data-i18n-en="Revenue &amp; Customer Mix">营收结构与客群集中度</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 招股书披露核验：截至 2026 年 9 月 30 日，超过 11,900 家 TTM 贡献超 $10万的企业客户合计产生 $261亿收入（占 TTM $353亿的 74%），另有约 4,000万名中小开发者与个人用户贡献剩余 26%（$92亿），前五大客户占 9M 2026 营收约 25%
+ <a class="cite-link" href="https://sec-api.io/insights/anthropic-ant-s-1-and-s-1-a-ipo-filings-analysis-q3-2026-revenue-17-0bn-and-895bn-compute-commitments" target="_blank" rel="noopener noreferrer">S-1/A 客户集中度 ↗</a>。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: 6:6 DUAL WORKBENCH — $895.4B COMPUTE COMMITMENTS + 5Y FCF SIMULATOR -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · $895.4B MULTI-CLOUD COMPUTE FORTRESS</span>
+ <h3 data-i18n-zh="$895.4B 远期算力契约对手方图谱与算力投资回报率跃升" data-i18n-en="$895.4B Compute Commitments Breakdown &amp; Compute ROI">$895.4B 远期算力契约对手方图谱与算力投资回报率跃升</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="commit" data-i18n-zh="核心算力供应商承诺 ($B)" data-i18n-en="Compute Suppliers ($B)">核心算力供应商承诺 ($B)</button>
+ <button type="button" class="mui-seg-btn" data-kview="roi" data-i18n-zh="每$1算力产出营收倍数" data-i18n-en="Rev per $1 Compute">每$1算力产出营收倍数</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 资本结构巧思：S-1/A 披露长期算力与数据中心总承诺约 <strong>$8,954亿</strong>（其中 <strong>$2,138亿 / 23.9% 附带可终止权或先决条件</strong>，未来 12 个月到期 $698亿，与当前 Q3 年化营收 $678亿基本匹配），既锁死稀缺吉瓦级电力与芯片配额，又把重资产折旧留在云巨头资产负债表上
+ <a class="cite-link" href="https://dealroom.co/news/info-i4toci-how-anthropic-upstaged-openai-on-road-to-blockbuster-ipo/" target="_blank" rel="noopener noreferrer">Dealroom S-1 契约表 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 3-YEAR REVENUE &amp; FCF SIMULATOR</span>
+ <h3 data-i18n-zh="2026–2029E 商业模式规模化与估值敏感度推演器" data-i18n-en="2026–2029E Scale, Compute Margin &amp; Valuation Simulator">2026–2029E 商业模式规模化与估值敏感度推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="价格战逆风" data-i18n-en="Bear">价格战逆风</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="S-1基准演进" data-i18n-en="Base">S-1基准演进</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="Agent超周期" data-i18n-en="Bull">Agent超周期</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="以 Q3'26 年化 ($67.8B) 为基数的 3 年营收 CAGR" data-i18n-en="3-Year Revenue CAGR (from $67.8B Q3 Run-Rate)">以 Q3'26 年化 ($67.8B) 为基数的 3 年营收 CAGR</span><b class="mono" id="lblRevCagr">45.0%</b></div>
+ <input type="range" id="inpRevCagr" min="15" max="85" step="2.5" value="45.0" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="2029E 总算力与基建占营收比重 (当前 Q3 为 58%)" data-i18n-en="2029E Compute Spend % of Revenue (Q3'26 = 58%)">2029E 总算力与基建占营收比重 (当前 Q3 为 58%)</span><b class="mono" id="lblCompPct">42.0%</b></div>
+ <input type="range" id="inpCompPct" min="30" max="62" step="1" value="42" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="2029E 目标退出估值倍数 (EV / Forward Sales)" data-i18n-en="2029E Exit Valuation Multiple (EV / Sales)">2029E 目标退出估值倍数 (EV / Forward Sales)</span><b class="mono" id="lblEvMult">11.0x</b></div>
+ <input type="range" id="inpEvMult" min="5" max="18" step="0.5" value="11.0" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$206.5B</b><span data-i18n-zh="2029E 年化营收" data-i18n-en="2029E Annual Rev">2029E 年化营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simOpOut">28.0%</b><span data-i18n-zh="2029E 调整后营利率" data-i18n-en="2029E Adj. Op Margin">2029E 调整后营利率</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simFcfOut">$51.6B</b><span data-i18n-zh="2029E 预估自由现金流" data-i18n-en="2029E Est. FCF">2029E 预估自由现金流</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simMcapOut">$2.45T</b><span data-i18n-zh="2029E 隐含完全稀释估值" data-i18n-en="2029E Implied Equity">2029E 隐含完全稀释估值</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: GLOBAL MEGA-CAP ARCHETYPE MATRIX & STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; S-1 RISK STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球 AI 与软件巨头商业模型横向对标与三大 S-1 脆弱点压测" data-i18n-en="Global AI &amp; Software Business Model Matrix &amp; S-1 Stress Audit">全球 AI 与软件巨头商业模型横向对标与三大 S-1 脆弱点压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="基于 S-1/A 同口径 TTM 财务数据横向对比六大标杆，并核查 Anthropic 招股书披露的三大核心商业风险。" data-i18n-en="Benchmarking Anthropic's TTM economics against AI/cloud peers and stress-testing S-1 risk disclosures.">基于 S-1/A 同口径 TTM 财务数据横向对比六大标杆，并核查 Anthropic 招股书披露的三大核心商业风险。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="ai" data-i18n-zh="纯正AI/数据平台" data-i18n-en="Pure-Play AI/Data">纯正AI/数据平台</button>
+ <button type="button" class="mui-seg-btn" data-pcat="cloud" data-i18n-zh="算力军火与云巨头" data-i18n-en="Silicon &amp; Hyperscalers">算力军火与云巨头</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th>公司与代码</th>
+ <th>核心商业模式原型</th>
+ <th>TTM 营收与同比增速</th>
+ <th>推导/GAAP 毛利率</th>
+ <th>固定 CapEx 强度</th>
+ <th>模式终极壁垒与核心脆弱点 (S-1 同口径)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-ant" data-row-cat="ai">
+ <td><strong>Anthropic (ANT)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>企业级安全大模型 API + Claude Code 代理计量</td>
+ <td class="mono">$35.3B (Q3 +1,127%)</td>
+ <td class="mono" style="color:var(--mui-success-text);">83.6% (Q3 85.7%)</td>
+ <td class="mono" style="color:var(--mui-success-text);">2.7% (轻自建资产)</td>
+ <td>~900% NRR 与企业编程统治力；脆弱点在 $895.4B 远期算力承诺</td>
+ </tr>
+ <tr data-row-cat="ai">
+ <td><strong>OpenAI (未上市)</strong></td>
+ <td>ChatGPT 超级消费入口订阅 + 企业 API 双轮</td>
+ <td class="mono">~$50B 年化 (2026.09)</td>
+ <td class="mono">~55%–65% (免费层摊薄)</td>
+ <td class="mono" style="color:var(--mui-warning-text);">高额算力预付消耗</td>
+ <td>全球 C 端品牌心智第一；面临海量免费用户推理补贴与组织改制摩擦</td>
+ </tr>
+ <tr data-row-cat="cloud">
+ <td><strong>NVIDIA (NVDA)</strong></td>
+ <td>CUDA 全栈生态锁死 + AI 训练/推理硬件军火商</td>
+ <td class="mono">$303.0B (+105.9%)</td>
+ <td class="mono">74.7% (营利率 65.2%)</td>
+ <td class="mono" style="color:var(--mui-success-text);">~2%–3% (Fabless)</td>
+ <td>算力基建绝对霸主；面临云巨头与实验室向 TPU / Trainium 分流</td>
+ </tr>
+ <tr data-row-cat="ai">
+ <td><strong>Palantir (PLTR)</strong></td>
+ <td>政企本体论数据底座 (Ontology) + AIP 驻场交付</td>
+ <td class="mono">$6.2B (+92.8%)</td>
+ <td class="mono">84.8% (营利率 42.8%)</td>
+ <td class="mono">~1.5%</td>
+ <td>国防与核心工业流极高转换成本；单客定制周期较纯 API 模式更重</td>
+ </tr>
+ <tr data-row-cat="cloud">
+ <td><strong>Microsoft (MSFT)</strong></td>
+ <td>企业 Office/GitHub 席位税 + Azure AI 云租赁</td>
+ <td class="mono">$331.8B (+17.8%)</td>
+ <td class="mono">67.9% (营利率 46.8%)</td>
+ <td class="mono" style="color:var(--mui-error-text);">~24%+ (重数据中心)</td>
+ <td>全球最强企业分发渠道；同时采购 OpenAI 与 Anthropic ($44.9B 协议)</td>
+ </tr>
+ <tr data-row-cat="cloud">
+ <td><strong>Alphabet (GOOGL)</strong></td>
+ <td>全栈自研 TPU + Gemini 模型 + 搜索/GCP 生态</td>
+ <td class="mono">$445.9B (+24.2%)</td>
+ <td class="mono">60.9% (营利率 33.1%)</td>
+ <td class="mono" style="color:var(--mui-warning-text);">~17%+ (自建 TPU 云)</td>
+ <td>唯一拥有端到端自有 TPU 成本优势巨头；亦持有 Anthropic ~15% 股权</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · $895.4B COMPUTE COMMITMENT</span>
+ <h4>近九千亿美元远期算力刚性租约：需求放缓会否反噬？</h4>
+ <p>S-1/A 披露总额 $895.4B 的算力与数据中心租约中，$69.8B 将在未来 12 个月内支付；且 Q3 因需求井喷被迫高价采购 $5.0B 短期算力，导致算力占营收比从 Q2 的 48% 跳升至 58% 并录得 -$5.67亿 GAAP 营业亏损。缓冲垫在于其中 <strong>$213.8B 附带终止或先决条件</strong>，且多年期长协陆续交付后将替代高价短期算力
+ <a class="cite-link" href="https://sec-api.io/insights/anthropic-ant-s-1-and-s-1-a-ipo-filings-analysis-q3-2026-revenue-17-0bn-and-895bn-compute-commitments" target="_blank" rel="noopener noreferrer">S-1/A 第34页披露 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：短期突发算力占比是否回落至 10% 以内</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · TOKEN DEFLATION (-$600M QoQ)</span>
+ <h4>模型持续主动降价与开源追赶对单价的侵蚀</h4>
+ <p>从 Opus 4 ($15/$75) 到 Opus 5.5 ($4/$20)，新模型单价下降逾 70%；S-1/A 明确指出 Q2 至 Q3 因新版本降价与大客阶梯折扣直接减少了约 <strong>$6.0亿</strong>当季收入。商业模式成立的核心前提是<strong>“杰文斯悖论”弹性 &gt; 1</strong>——即降价激发的 Agent 长程调用量倍增持续大幅跑赢单价跌幅。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：半年内新发布模型营收占比是否维持 &gt;80%</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · FRENEMY CLOUD CONCENTRATION</span>
+ <h4>云巨头“股东+供应商+分销商+竞品”四重身份博弈</h4>
+ <p>9M 2026 高达 44% 营收经由云市场实现、52% 应收账款集中于云厂商，且前五大客户贡献约 25% 收入；与此同时 Google（Gemini）与 Amazon（Nova）既是前两大外部股东与算力债主，又在争夺企业 AI 预算。Anthropic 通过同时签约微软 ($44.9B)、SpaceXAI 与直连 API（占比已从 52% 升至 56%）持续去单一渠道化
+ <a class="cite-link" href="https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/" target="_blank" rel="noopener noreferrer">TechCrunch 股权拆解 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：直连 Claude Platform 营收占比能否突破 65%</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES FOOTER -->
+ <section class="bm-panel" aria-label="权威招股书与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="SEC 法定招股文件与第三方权威研究信源" data-i18n-en="Verified SEC Filings &amp; Institutional Research Sources">SEC 法定招股文件与第三方权威研究信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm" target="_blank" rel="noopener noreferrer">
+ <b>Anthropic, PBC SEC Form 424(b)(4) Final Prospectus ↗</b>
+ <span>2026年11月18日最终招股书：$83.00 发行价、9.80亿股发行规模、$260亿七巨头同步私募与五层股权结构</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm" target="_blank" rel="noopener noreferrer">
+ <b>Anthropic, PBC SEC Form S-1/A (Amendment No. 1) ↗</b>
+ <span>2026年11月2日修订版招股书：披露 Q3 2026 营收 $16.96B、9M 经营现金流 +$6.57B 与 $895.4B 算力契约明细</span>
+ </a>
+ <a class="bm-source-item" href="https://sec-api.io/insights/anthropic-ant-s-1-and-s-1-a-ipo-filings-analysis-q3-2026-revenue-17-0bn-and-895bn-compute-commitments" target="_blank" rel="noopener noreferrer">
+ <b>SEC-API: S-1 &amp; S-1/A Quantitative Audit ↗</b>
+ <span>完整提取附注 8 职能费用拆分（85.5% 推导毛利率）、11,900+ 大客户占比 74% 及 ~900% NRR 指标</span>
+ </a>
+ <a class="bm-source-item" href="https://dealroom.co/news/info-i4toci-how-anthropic-upstaged-openai-on-road-to-blockbuster-ipo/" target="_blank" rel="noopener noreferrer">
+ <b>Dealroom: Road to $1.5T–$1.76T Blockbuster IPO ↗</b>
+ <span>七季度营收增长 45 倍路径、Q2 首次实现 +$974M GAAP 营业利润与股东回报倍数全景复盘</span>
+ </a>
+ <a class="bm-source-item" href="https://guptadeepak.com/earnings/ipos/company/anthropic/" target="_blank" rel="noopener noreferrer">
+ <b>Tech Earnings: Form 424B4 Verbatim Filing Check ↗</b>
+ <span>逐句核验招股书原文：132.2亿基础总股本、8.468亿股（5%）公益基金捐赠机制与锁定期安排</span>
+ </a>
+ <a class="bm-source-item" href="https://felloai.com/ultimate-claude-model-comparison/" target="_blank" rel="noopener noreferrer">
+ <b>Claude 4 to Fable 5.2 Complete Pricing &amp; Benchmark Matrix ↗</b>
+ <span>18个月连发 22 款模型时间轴、Fable 5.2 / Opus 5.5 / Sonnet 5.5 / Haiku 5.5 定价与评测得分对照</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/anthropic_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

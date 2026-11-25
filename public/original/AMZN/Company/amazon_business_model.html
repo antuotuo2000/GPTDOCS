@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-report-family="amzn" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="亚马逊 Amazon.com, Inc. (NASDAQ: AMZN) 商业模式全景架构拆解：低毛利自营与Prime会员漏斗、61%第三方卖家与FBA履约基础设施税、$780亿高毛利零售广告收费站、$1,840亿年化运行率AWS云与自研芯片利润引擎及负营运资本飞轮（基于 FY2025 10-K 与 Q3 2026 最新财报）。" />
+ <title>亚马逊 Amazon AMZN 商业模式架构拆解 | 数据中心</title>
+ 
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/amazon_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body id="top"><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted Glass MUI AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">AMZN</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <button type="button" class="crumb-link hide-sm" id="crumbTopBtn">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </button>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="亚马逊 (Amazon) 商业模式架构拆解" data-i18n-en="Amazon.com Business Model Architecture">亚马逊 (Amazon) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: AMZN</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">TTM Q3'26 · $797.5B</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <button type="button" id="exportHtmlBtn" class="mui-dl-btn" title="下载独立 HTML 网页文件">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+ <span data-i18n-zh="下载 HTML" data-i18n-en="Download">下载 HTML</span>
+ </button>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">AMZN · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="亚马逊商业模式架构图谱" data-i18n-en="Amazon Business Model Blueprint">亚马逊商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="自营低价引流 × Prime高频锁死 × 61%第三方卖家与$780亿广告抽成 × $1,840亿年化AWS算力基础设施" data-i18n-en="1P Low-Price Funnel × Prime Lock-In × 61% 3P Seller & $78B Ads Tollbooth × $184B Run-Rate AWS Cloud">自营低价引流 × Prime高频锁死 × 61%第三方卖家与$780亿广告抽成 × $1,840亿年化AWS算力基础设施</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="内部能力基建外溢收税" data-i18n-en="Infra-as-a-Service Flywheel">内部能力基建外溢收税</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="服务占比 / Q3毛利率" data-i18n-en="Service Mix / Q3 GM">服务占比 / Q3毛利率</span>
+ <span class="sidebar-mini-val mono">62.7% · 53.2%</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="Q3营业利润率 / AWS利润率" data-i18n-en="Q3 OpM / AWS OpM">Q3营业利润率 / AWS利润率</span>
+ <span class="sidebar-mini-val mono">13.9% · 38.7%</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="站点导航与架构目录">
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="AMZN"><a class="co-side-home" href="../../index.html">首页</a></div>
+
+ <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck & Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与服务拆解" data-i18n-en="Profit Waterfall & Tollbooth">利润池瀑布流与服务拆解</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="Prime履约棘轮与单客LTV" data-i18n-en="Prime Ratchet & Cohort LTV">Prime履约棘轮与单客LTV</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="负营运资本与重基建推演器" data-i18n-en="Negative CCC & CapEx Lab">负营运资本与重基建推演器</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="巨头范式矩阵与监管压测" data-i18n-en="Peer Matrix & Stress Audit">巨头范式矩阵与监管压测</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <!-- Main Distinct Non-Linear Workspace -->
+ <main class="bm-workspace main-content">
+
+ <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：低毛利自营引流 × 高毛利基建外溢收税 (B2C + B2B)" data-i18n-en="ARCHETYPE: Low-Margin 1P Funnel × High-Margin Infra-as-a-Service">商业范式：低毛利自营引流 × 高毛利基建外溢收税 (B2C + B2B)</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="FY2025 10-K & Q3 2026 审计口径" data-i18n-en="FY2025 10-K & Q3 2026 Verified">FY2025 10-K &amp; Q3 2026 审计口径</span>
+ <span class="mui-chip mui-chip-violet mono">Q3'26 OpM 13.9% · AP/Inv 3.7x</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="亚马逊商业模式解构：<span class='bm-gradient-txt'>把每一项沉重成本中心锻造成对外收税的千亿级高毛利基础设施</span>" data-i18n-en="Deconstructing Amazon's Business Model: <span class='bm-gradient-txt'>Turning Every Cost Center into a $100B+ High-Margin Infrastructure Tollbooth</span>">
+ 亚马逊商业模式解构：<span class="bm-gradient-txt">把每一项沉重成本中心锻造成对外收税的千亿级高毛利基础设施</span>
+ </h1>
+
+ <p class="bm-lead" id="heroLeadText">
+ 外界常误把亚马逊看作一家利润微薄的“在线超市”，但在会计与经济实质上，<strong>亚马逊早已蜕变为一家由服务业务主导的超级基础设施税基帝国</strong>——在 FY2025 全年 <strong>$7,169.2亿总营收</strong>中，净服务销售额（<strong>$4,206.6亿，占 58.7%</strong>）已大幅超越自营商品销售额（$2,962.7亿），并在 Q3 2026 进一步升至 <strong>62.7%</strong>
+ <a class="cite-link" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/" target="_blank" rel="noopener noreferrer">FY25 全年财报 ↗</a>
+ <a class="cite-link" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>。
+ 其底层商业魔法是<strong>“三层基础设施外溢（Cost-Center Externalization）”</strong>：第一层用连续九年全美最低价（平均低 14%）的自营零售与当日达网络锁死 Prime 家庭高频习惯；第二层将重资产仓储与流量向占总件数 <strong>61% 的独立第三方卖家</strong>开放，征收 <strong>$1,721.6亿 卖家服务费（FY25）</strong>与高达 <strong>$780.1亿（TTM Q3'26）的闭环搜索/视频广告税</strong>；第三层将内部 IT 架构外溢为全球第一大云与 AI 算力底座 <strong>AWS（Q3 2026 暴涨 +39.3% 至 $459.8亿，年化运行率达 $1,840亿，单季营业利润率 38.7%）</strong>，推动全集团营业利润率在 Q3 2026 创下公司成立三十年最高纪录 <strong>13.9%（TTM 营业利润首破千亿达 $1,043.7亿）</strong>。
+ </p>
+ </div>
+
+ <!-- Interactive 3-Lens Business Formula Switcher -->
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 成本中心变现公式" data-i18n-en="① Cost-Center Spinout">① 成本中心变现公式</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 双重卖家与广告税" data-i18n-en="② Dual Merchant & Ad Tax">② 双重卖家与广告税</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 负账期浮存×基建重投" data-i18n-en="③ Negative CCC × CapEx">③ 负账期浮存×基建重投</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 集团历史最高营业利润率 (13.9%) = 自营低价获客 (~0–3% 利润率) + 3P履约/Prime订阅 + 零售广告 (~70%+ 增量利润率) + AWS算力税 (38.7% OpM)
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 苹果靠“39%毛利的旗舰硬件”逆向获客，亚马逊则靠<strong>“让利到底的自营零售 + 当日达物流”</strong>消灭竞争对手毛利空间；再把自身不得不建的仓库（FBA）、服务器（AWS）和货架注意力（Sponsored Ads）全部模块化拆解租给外部商户与全球企业，把固定成本黑洞逆转为高边际利润现金牛。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: Live Financial Telemetry Ledger -->
+ <aside class="bm-telemetry-ledger" aria-label="FY2025 与 Q3 2026 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="TTM Q3 2026 商业模型核心遥测账本" data-i18n-en="TTM Q3 2026 Business Model Telemetry">TTM Q3 2026 商业模型核心遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">Q3'26 季报 ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="TTM 全球净营收 (Q3 服务营收占 62.7%)" data-i18n-en="TTM Worldwide Net Sales (Q3 Services = 62.7%)">TTM 全球净营收 (Q3 服务营收占 62.7%)</span>
+ <span class="bm-tel-val mono">$797.46B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:37.3%;"></div>
+ <div style="width:62.7%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>FY25 全年 $716.92B (+12.4%)</span><span>Q3'26 单季 $201.94B (+12%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="Q3 综合毛利率 &amp; 创纪录营业利润率" data-i18n-en="Q3 Gross Margin &amp; Record Operating Margin">Q3 综合毛利率 &amp; 创纪录营业利润率</span>
+ <span class="bm-tel-val mono">53.2% / 13.9%</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:58.5%;background:#0073E6;"></div>
+ <div style="width:41.5%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>TTM 营业利润 $104.37B (+37%)</span><span>AWS 贡献 58.5% 营业利润</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="AWS 云与 AI 算力加速引擎 (Q3 +39.3%)" data-i18n-en="AWS Cloud &amp; AI Acceleration (Q3 +39.3% YoY)">AWS 云与 AI 算力加速引擎 (Q3 +39.3%)</span>
+ <span class="bm-tel-val mono">$184.0B <small style="font-size:0.72rem;color:var(--mui-success-text);">Run-Rate</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:88%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q3 AWS 营收 $45.98B</span><span>Q3 AWS 营业利润 $17.77B (38.7%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="TTM 经营现金流 × 应付账款浮存覆盖" data-i18n-en="TTM Operating Cash Flow × Payables Float">TTM 经营现金流 × 应付账款浮存覆盖</span>
+ <span class="bm-tel-val mono">$168.3B <small style="font-size:0.72rem;color:var(--mui-success-text);">+29%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:84%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>应付账款 $158.7B (存货 3.7倍)</span><span>2026E AI/基建 CapEx ~$220B</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE & INTERACTIVE INSPECTOR -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END FLYWHEEL PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业飞轮传导沙盘：从全美最低价引流到千亿级双利润柱变现" data-i18n-en="5-Node Value-Chain Pipeline: From Everyday Low Prices to Dual $100B Profit Pillars">五阶商业飞轮传导沙盘：从全美最低价引流到千亿级双利润柱变现</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一飞轮节点，拆解亚马逊如何将物理履约密度转化为广告竞价权、云算力规模经济与长期现金流。" data-i18n-en="Click any node in the horizontal pipeline to inspect its pricing power, cost leverage, and verified KPIs.">点击下方任一飞轮节点，拆解亚马逊如何将物理履约密度转化为广告竞价权、云算力规模经济与长期现金流。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">1P ANCHOR</span></div>
+ <div class="bm-node-title" data-i18n-zh="自营极致低价与生鲜高频入口" data-i18n-en="1P Low-Price & Grocery Funnel">自营极致低价与生鲜高频入口</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="均价低 14% · 生鲜杂货 $150B+" data-i18n-en="14% Cheaper · $150B+ Grocery">均价低 14% · 生鲜杂货 $150B+</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">PRIME &amp; ROBOTICS</span></div>
+ <div class="bm-node-title" data-i18n-zh="百万机器人与区域化当日达锁死" data-i18n-en="1M+ Robots & Same-Day Lock-In">百万机器人与区域化当日达锁死</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="订阅 $49.6B · Q3当日达15亿件" data-i18n-en="Subs $49.6B · 1.5B Same-Day">订阅 $49.6B · Q3当日达15亿件</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">3P &amp; FBA TAX</span></div>
+ <div class="bm-node-title" data-i18n-zh="第三方市场与FBA履约基础设施税" data-i18n-en="3P Marketplace & FBA Tollbooth">第三方市场与FBA履约基础设施税</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="FY25 $172.2B · 占总件数 61%" data-i18n-en="FY25 $172.2B · 61% Unit Share">FY25 $172.2B · 占总件数 61%</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">RETAIL MEDIA</span></div>
+ <div class="bm-node-title" data-i18n-zh="闭环交易意图广告与Prime Video变现" data-i18n-en="Closed-Loop Retail Ads & Video">闭环交易意图广告与Prime Video变现</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="TTM $78.0B · 全链路AI投流" data-i18n-en="TTM $78.0B · Full-Funnel AI">TTM $78.0B · 全链路AI投流</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">AWS &amp; SILICON</span></div>
+ <div class="bm-node-title" data-i18n-zh="AWS云算力与自研芯片重资本复利" data-i18n-en="AWS Cloud & Custom Silicon">AWS云算力与自研芯片重资本复利</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="Q3 +39.3% · 自研芯片 >$20B" data-i18n-en="Q3 +39.3% · Silicon >$20B">Q3 +39.3% · 自研芯片 &gt;$20B</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · EVERYDAY LOW PRICE &amp; HIGH-FREQUENCY GROCERY</span>
+ <h3 id="nodeTitle">自营零售（Online &amp; Physical Stores $2,918亿）：战略性压低商品毛利，换取无敌选品与流量黑洞</h3>
+ <p id="nodeDesc">
+ 亚马逊连续第 9 年被 Profitero 评为全美最低价零售商（线上均价较主流竞品低 14%）。自营业务（FY25 线上自营 $2,692.9亿 + 线下全食超市等 $225.6亿）并不追求单品暴利，而是通过把生鲜易腐品全面接入 2,300+ 城镇当日达网络，推动生鲜杂货总交易额突破 $1,500亿（稳居全美第二大杂货商），以生鲜每周复购带动全品类连带下单。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 商业传导：极致低价 (-14%) + 6亿+ SKU 无限货架 + Rufus AI 导购（增量年销 ~$120亿） → 零外部买量锁定北美约 40% 电商份额
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">$269.3B</b><span>FY2025 自营线上商店净营收</span></div>
+ <div class="bm-ins-card"><b class="mono">&gt;$150B</b><span>2025 生鲜杂货总销售额 (全美第2)</span></div>
+ <div class="bm-ins-card"><b class="mono">-14%</b><span>连续9年较全美大型零售商低价幅度</span></div>
+ <div class="bm-ins-card"><b class="mono">~$12B</b><span>Rufus 购物Agent拉动年化增量销售</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: DUAL-ENGINE PROFIT POOL (7:5 SPLIT) -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN INFLECTION</span>
+ <h3 data-i18n-zh="FY2025 $7,169亿 价值瀑布流与六年利润率跃升曲线" data-i18n-en="FY2025 $716.9B P&L Waterfall & 6-Year Margin Inflection">FY2025 $7,169亿 价值瀑布流与六年利润率跃升曲线</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="FY25 营收→OCF 瀑布流" data-i18n-en="FY25 Rev → OCF Waterfall">FY25 营收→OCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="FY21–Q3'26 利润率跃迁" data-i18n-en="6Y Margin Expansion">FY21–Q3'26 利润率跃迁</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption" id="profitCaption">
+ 数据来源：<a class="cite-link" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/" target="_blank" rel="noopener noreferrer">Amazon FY2025 全年财报 ↗</a> 与
+ <a class="cite-link" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>。
+ 随着高毛利服务营收占比从五年前不足 48% 升至 Q3 2026 的 <strong>62.7%</strong>，亚马逊综合毛利率已从 FY21 的 42.0% 跃升至 <strong>53.2%</strong>，甚至超越苹果（48.8%）。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · $420.7B+ SERVICE TOLLBOOTH STACK</span>
+ <h3 data-i18n-zh="四大高粘性服务收费站（占 Q3 总营收 62.7%）" data-i18n-en="4-Tier Service & Cloud Tollbooth (62.7% of Q3 Sales)">四大高粘性服务收费站（占 Q3 总营收 62.7%）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="retail" data-i18n-zh="零售生态税" data-i18n-en="Retail Tax">零售生态税</button>
+ <button type="button" class="mui-seg-btn" data-tcat="cloud" data-i18n-zh="云与订阅" data-i18n-en="Cloud & Subs">云与订阅</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="cloud">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="① AWS 云计算与 Agentic AI 算力底座" data-i18n-en="① AWS Cloud & Agentic AI Infrastructure">① AWS 云计算与 Agentic AI 算力底座</span>
+ <span class="mui-chip mui-chip-success mono">Q3 $46.0B · 38.7% OpM</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="全球最大企业云与 Bedrock 推理平台（财富500强支出增近7倍），以 22.8% 的单季营收占比贡献全集团 63.3% 的营业利润（$177.7亿）。" data-i18n-en="World's #1 cloud and Bedrock AI platform (Fortune 500 spend ~7x YoY), generating 63.3% of Q3 operating income ($17.77B) from 22.8% of revenue.">全球最大企业云与 Bedrock 推理平台（财富500强支出增近7倍），以 22.8% 的单季营收占比贡献全集团 63.3% 的营业利润（$177.7亿）。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="retail">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="② 闭环搜索竞价与 Prime Video 广告收费站" data-i18n-en="② Closed-Loop Sponsored Ads & Prime Video">② 闭环搜索竞价与 Prime Video 广告收费站</span>
+ <span class="mui-chip mui-chip-primary mono">TTM $78.0B · 超高毛利</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="直接卡位消费者付款前最后一秒搜索意图，零存货风险、极低增量成本；叠加 NFL/NBA 体育直播与 Amazon Ads Agent 全链路自动投放，是北美零售利润率翻倍的最大幕后功臣。" data-i18n-en="Captures bottom-of-funnel purchase intent plus Prime Video NFL/NBA live sports via Amazon Ads Agent, acting as the primary margin booster inside North America retail.">直接卡位消费者付款前最后一秒搜索意图，零存货风险、极低增量成本；叠加 NFL/NBA 体育直播与 Amazon Ads Agent 全链路自动投放，是北美零售利润率翻倍的最大幕后功臣。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="retail">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="③ 第三方卖家佣金与 FBA 仓储配送服务" data-i18n-en="③ 3P Seller Commissions & FBA Logistics">③ 第三方卖家佣金与 FBA 仓储配送服务</span>
+ <span class="mui-chip mui-chip-violet mono">FY25 $172.2B · 第二大板块</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="第三方卖家承担存货跌价风险但共享 Prime 免邮标识，向亚马逊缴纳销售佣金、FBA 仓储分拣费与跨渠道履约费，规模已超越 AWS 本身。" data-i18n-en="Independent sellers bear inventory risk while paying referral commissions and FBA fulfillment fees to earn the Prime badge—making 3P Services larger than AWS by revenue.">第三方卖家承担存货跌价风险但共享 Prime 免邮标识，向亚马逊缴纳销售佣金、FBA 仓储分拣费与跨渠道履约费，规模已超越 AWS 本身。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="cloud">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="④ Prime 会员年费、Alexa+ 与数字内容订阅" data-i18n-en="④ Prime Memberships, Alexa+ & Subscriptions">④ Prime 会员年费、Alexa+ 与数字内容订阅</span>
+ <span class="mui-chip mui-chip-warning mono">FY25 $49.6B · +12% ex-FX</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="通过免邮当日达、Prime Video、RxPass 处方药立减与免费内置 Alexa+ 智能助手构建“取消即巨亏”的家庭刚需包，每年为全美超1亿会员平均省下逾 $1,000。" data-i18n-en="Bundles same-day shipping, Prime Video, Rx savings, and free Alexa+ ($19.99/mo standalone value), saving 100M+ US customers over $1,000/yr on average.">通过免邮当日达、Prime Video、RxPass 处方药立减与免费内置 Alexa+ 智能助手构建“取消即巨亏”的家庭刚需包，每年为全美超1亿会员平均省下逾 $1,000。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: REVERSED 5:7 SPLIT — PRIME COHORT RATCHET & SEGMENT PROFIT SHARE -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · PRIME MULTI-SCENARIO RATCHET</span>
+ <h3 data-i18n-zh="家庭消费分层模型：当日达、生鲜与医药如何把频次翻三倍？" data-i18n-en="Household Cohort Economics: Speed, Grocery & Pharmacy Ratchet">家庭消费分层模型：当日达、生鲜与医药如何把频次翻三倍？</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="casual" data-i18n-zh="非会员低频客" data-i18n-en="Non-Prime Shopper">非会员低频客</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="prime" data-i18n-zh="标准 Prime 家庭" data-i18n-en="Core Prime Household">标准 Prime 家庭</button>
+ <button type="button" class="mui-seg-btn" data-cohort="omni" data-i18n-zh="生鲜+闪送+医药重度户" data-i18n-en="Omni Same-Day + Rx">生鲜+闪送+医药重度户</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat">
+ <div class="lbl">核心绑定触点</div>
+ <div class="val" style="font-size:0.95rem;">Prime 免邮 + Video + Alexa+</div>
+ <div class="delta">年均替每位北美会员省 &gt;$1,000</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">次年续费留存率</div>
+ <div class="val mono">~93%–98%</div>
+ <div class="delta">满两年会员留存逼近公用事业极值</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">年均平台消费 GMV</div>
+ <div class="val mono">~$1,400+ / 年</div>
+ <div class="delta">约为非 Prime 消费者的 2.5–3 倍</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">5年单户综合经济贡献</div>
+ <div class="val mono">~$2,150</div>
+ <div class="delta">年费 + 3P佣金分摊 + 高毛利广告变现</div>
+ </div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>履约速度棘轮效应（Speed &amp; Frequency Ratchet）：</strong>安迪·贾西在 2025 致股东信披露，当配送承诺从隔日达压缩至<strong>当日达（85+ 座 SSD 中心）乃至 20 分钟闪送（Amazon Now）</strong>时，会员下单频率直接<strong>激增至原来的 3 倍</strong>；同时当日达生鲜易腐品自 2025 年初上线以来销量暴增 <strong>40 倍以上</strong>，包揽当日达热销榜前十中的九席
+ <a class="cite-link" href="https://s2.q4cdn.com/299287126/files/doc_financials/2026/ar/2025-Shareholder-Letter-Final.pdf" target="_blank" rel="noopener noreferrer">2025 致股东信 ↗</a>。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · SEGMENT REVENUE VS OPERATING PROFIT SHARE</span>
+ <h3 data-i18n-zh="三大报告分部“营收占比 vs 营业利润占比”极致剪刀差 (Q3 2026)" data-i18n-en="Segment Revenue Share vs Operating Income Share (Q3 2026)">三大报告分部“营收占比 vs 营业利润占比”极致剪刀差 (Q3 2026)</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="share" data-i18n-zh="Q3'26 营收 vs 利润占比" data-i18n-en="Rev vs Profit Share">Q3'26 营收 vs 利润占比</button>
+ <button type="button" class="mui-seg-btn" data-cview="ltv" data-i18n-zh="三类家庭5年累计贡献" data-i18n-en="5Y Household LTV">三类家庭5年累计贡献</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 官方分部核验（Q3 2026）：<strong>AWS</strong> 仅占总营收 22.8%（$45.98B），却贡献高达 <strong>63.3% 的营业利润（$17.77B）</strong>；同时受益于全美 8 大区域化履约改造与广告爆发，<strong>北美分部营业利润同比猛增 +82% 至 $8.72B（占 31.1%）</strong>，国际分部连续稳定盈利（$1.58B，+32% YoY）
+ <a class="cite-link" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">Q3 2026 分部表 ↗</a>。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: 6:6 DUAL WORKBENCH — NEGATIVE CCC & OCF/CAPEX CYCLE + 5Y OPERATING PROFIT SIMULATOR -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · NEGATIVE CCC FLOAT &amp; $220B AI CAPEX CYCLE</span>
+ <h3 data-i18n-zh="3.7倍应付/存货浮存金底座 vs 史无前例的 $2,200亿 AI 基建洪峰" data-i18n-en="3.7x Payables-to-Inventory Float vs $220B AI CapEx Surge">3.7倍应付/存货浮存金底座 vs 史无前例的 $2,200亿 AI 基建洪峰</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="ocf" data-i18n-zh="TTM OCF vs CapEx 周期" data-i18n-en="OCF vs CapEx Cycle">TTM OCF vs CapEx 周期</button>
+ <button type="button" class="mui-seg-btn" data-kview="ccc" data-i18n-zh="现金转换周期 (CCC)" data-i18n-en="CCC Float Days">现金转换周期 (CCC)</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 与苹果“极致轻资产（CapEx 仅 1.9%）+ 全额回购注销”截然相反，亚马逊奉行<strong>“负账期吸纳浮存金（Q3'26 应付账款 $1,587亿 vs 存货 $426亿，CCC 约 -43天）+ 将 $1,683亿 经营现金流全数砸向 30年数据中心与自研芯片重基建”</strong>——短期自由现金流主动转负（-$424亿），以换取 2027–2030 年已锁定合同（如 OpenAI &gt;$1,000亿承诺）的爆发式回流
+ <a class="cite-link" href="https://s2.q4cdn.com/299287126/files/doc_financials/2026/ar/2025-Shareholder-Letter-Final.pdf" target="_blank" rel="noopener noreferrer">Jassy CapEx 周期论 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR PROFIT &amp; FCF HARVEST SIMULATOR</span>
+ <h3 data-i18n-zh="2026–2030 亚马逊双万亿飞轮与 FCF 收获期推演器" data-i18n-en="2026–2030 Dual-Engine Operating Income & FCF Simulator">2026–2030 亚马逊双万亿飞轮与 FCF 收获期推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="折旧承压" data-i18n-en="Bear">折旧承压</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="基准收获" data-i18n-en="Base">基准收获</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="AI超预期" data-i18n-en="Bull">AI超预期</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="AWS 云与AI年复合增速 (AWS 5Y CAGR)" data-i18n-en="AWS Revenue 5Y CAGR">AWS 云与AI年复合增速 (AWS 5Y CAGR)</span><b class="mono" id="lblAwsCagr">28.0%</b></div>
+ <input type="range" id="inpAwsCagr" min="14" max="38" step="1" value="28" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="零售与广告年复合增速 (Stores & Ads CAGR)" data-i18n-en="Retail & Ads 5Y CAGR">零售与广告年复合增速 (Stores &amp; Ads CAGR)</span><b class="mono" id="lblRetCagr">9.5%</b></div>
+ <input type="range" id="inpRetCagr" min="4" max="15" step="0.5" value="9.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="2030E 稳态 CapEx / 营收强度 (常态化回落)" data-i18n-en="2030E Normalized CapEx / Sales">2030E 稳态 CapEx / 营收强度 (常态化回落)</span><b class="mono" id="lblCapRatio">14.0%</b></div>
+ <input type="range" id="inpCapRatio" min="9" max="22" step="0.5" value="14" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$1,368B</b><span data-i18n-zh="2030E 总营收" data-i18n-en="2030E Revenue">2030E 总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simOpOut">$254B</b><span data-i18n-zh="2030E 营业利润" data-i18n-en="2030E Op Income">2030E 营业利润</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simOpmOut">18.6%</b><span data-i18n-zh="2030E 营业利润率" data-i18n-en="2030E Op Margin">2030E 营业利润率</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simFcfOut">$139B</b><span data-i18n-zh="2030E 自由现金流" data-i18n-en="2030E Free Cash Flow">2030E 自由现金流</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: GLOBAL MEGA-CAP ARCHETYPE MATRIX & STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球商业巨头模型横向对标与三大核心脆弱点压测" data-i18n-en="Global Mega-Cap Business Model Matrix & Stress Audit">全球商业巨头模型横向对标与三大核心脆弱点压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比亚马逊与苹果、微软、谷歌、沃尔玛、好市多的毛利、资本强度与账期差异，并核查重资产折旧与反垄断风险。" data-i18n-en="Benchmarking Amazon's infrastructure-first model against mega-cap peers and stress-testing CapEx & antitrust risks.">对比亚马逊与苹果、微软、谷歌、沃尔玛、好市多的毛利、资本强度与账期差异，并核查重资产折旧与反垄断风险。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="cloud" data-i18n-zh="云与数字生态" data-i18n-en="Cloud & Ecosystem">云与数字生态</button>
+ <button type="button" class="mui-seg-btn" data-pcat="retail" data-i18n-zh="零售与供应链" data-i18n-en="Retail & Logistics">零售与供应链</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th data-i18n-zh="公司与代码" data-i18n-en="Company & Ticker">公司与代码</th>
+ <th data-i18n-zh="核心商业模式原型" data-i18n-en="Business Model Archetype">核心商业模式原型</th>
+ <th data-i18n-zh="综合毛利率" data-i18n-en="Gross Margin">综合毛利率</th>
+ <th data-i18n-zh="CapEx / 营收强度" data-i18n-en="CapEx / Sales">CapEx / 营收强度</th>
+ <th data-i18n-zh="现金转换周期 (CCC)" data-i18n-en="Cash Conversion Cycle">现金转换周期 (CCC)</th>
+ <th data-i18n-zh="模式终极壁垒与核心脆弱点" data-i18n-en="Core Moat & Key Vulnerability">模式终极壁垒与核心脆弱点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-amzn" data-row-cat="cloud retail">
+ <td><strong>Amazon (AMZN)</strong> <span class="mui-chip mui-chip-primary mono" data-i18n-zh="本研究标的" data-i18n-en="Subject">本研究标的</span></td>
+ <td>自营低价漏斗 + 3P/广告收费站 + AWS算力基建</td>
+ <td class="mono">50.3% (Q3'26 53.2%)</td>
+ <td class="mono" style="color:var(--mui-warning-text);">26.4% TTM (~$220B重投)</td>
+ <td class="mono" style="color:var(--mui-success-text);">~ -43 天 (应付覆盖存货3.7x)</td>
+ <td>物理履约网+全球第一云双垄断；短期承受巨额AI资本开支与折旧爬坡</td>
+ </tr>
+ <tr data-row-cat="cloud retail">
+ <td><strong>Apple (AAPL)</strong></td>
+ <td>自研硅片旗舰硬件获客 + 76%毛利零CAC生态税 + 缩股</td>
+ <td class="mono">48.8% (服务 76.2%)</td>
+ <td class="mono" style="color:var(--mui-success-text);">1.9% (极致轻资产代工)</td>
+ <td class="mono" style="color:var(--mui-success-text);">-58 天 (上游果链浮存)</td>
+ <td>25亿终端锁死与千亿回购复利；无自有公有云，受欧美围墙花园反垄断挤压</td>
+ </tr>
+ <tr data-row-cat="cloud">
+ <td><strong>Microsoft (MSFT)</strong></td>
+ <td>企业级 Office/OS 席位税 + Azure AI 云基建</td>
+ <td class="mono">~69%</td>
+ <td class="mono" style="color:var(--mui-warning-text);">~24%–28% (GPU集群扩张)</td>
+ <td class="mono">~ -25 天 (企业预收递延)</td>
+ <td>B2B软件护城河极深；缺乏第一方消费者零售履约与闭环购物数据</td>
+ </tr>
+ <tr data-row-cat="cloud">
+ <td><strong>Alphabet (GOOGL)</strong></td>
+ <td>全球搜索意图竞价 + YouTube + TPU全栈云</td>
+ <td class="mono">~58%</td>
+ <td class="mono" style="color:var(--mui-warning-text);">~$180B–$190B (2026E指引)</td>
+ <td class="mono">~ +12 天</td>
+ <td>搜索现金牛与TPU自研领先；面临AI代理绕过传统网页链接及搜索反垄断压力</td>
+ </tr>
+ <tr data-row-cat="retail">
+ <td><strong>Walmart (WMT)</strong></td>
+ <td>全美4,600+门店前置仓同城杂货 + 零售广告转型</td>
+ <td class="mono">~24.8%</td>
+ <td class="mono">~3.2%–3.5%</td>
+ <td class="mono">~ +3 天</td>
+ <td>线下生鲜触达极强；第三方市场与高毛利云技术利润池体量远小于亚马逊</td>
+ </tr>
+ <tr data-row-cat="retail">
+ <td><strong>Costco (COST)</strong></td>
+ <td>精选4,000 SKU商品平价引流 (11%毛利) + 会员费纯利</td>
+ <td class="mono">~12.8%</td>
+ <td class="mono">~1.8%</td>
+ <td class="mono" style="color:var(--mui-success-text);">~ -4 天</td>
+ <td>Prime 会员哲学的线下精神鼻祖（续费率 &gt;92%），但聚焦线下仓储选品</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 01 · $220B CAPEX &amp; DEPRECIATION</span>
+ <h4>$2,200亿资本开支洪峰与未来5年服务器折旧压力</h4>
+ <p>2026 年亚马逊现金 CapEx 预计高达 ~$2,200亿，导致 TTM 自由现金流阶段性转为 -$423.6亿，长期债务升至 $1,731.3亿（Q3'26 D&amp;A 折旧已升至单季 $209.5亿）。核心对冲在于：<strong>超九成新增算力绑定了多年期企业承诺合同（含 OpenAI 超千亿美元大单）</strong>，且自研 Trainium2/3 芯片较外购 GPU 提升 30%–40% 性价比
+ <a class="cite-link" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">Q3'26 现金流表 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：AWS 增速(&gt;39%)能否持续跑赢折旧增速</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 02 · FTC ANTITRUST &amp; 3P TAKE-RATE</span>
+ <h4>FTC 反垄断诉讼与第三方卖家综合抽成率天花板</h4>
+ <p>第三方卖家服务（$1,722亿）叠加零售广告（TTM $780亿）合计向商家收取约 $2,500亿，引发美国 FTC 针对 Buy Box 算法及卖家费率的反垄断审视。亚马逊正通过开放 Buy with Prime、上线 AI Seller Assistant 自动运营插件以及用百万机器人降低单件履约成本来缓释商家毛利压力
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm" target="_blank" rel="noopener noreferrer">10-K 监管披露 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：FTC 市场垄断案审理与全球 3P 件数占比(61%)</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · ULTRA-LOW-COST &amp; AGENT DISINTERMEDIATION</span>
+ <h4>超低价跨境平台冲击与外部 AI 购物代理分流</h4>
+ <p>面对超低价白牌直邮竞争以及外部大模型绕过搜索广告直接比价的潜在威胁，亚马逊双管齐下：一方面推出 <strong>Amazon Haul</strong>（超百万件 $10 以下商品覆盖 25+ 国家）；另一方面将自研 <strong>Rufus 与 Alexa for Shopping（4亿+用户，交互暴增 +570%）</strong>打造为原生购物 Agent 守住第一方交易入口。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：北美分部营业利润率能否稳守 7.5%–9.0% 区间</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES FOOTER -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威财报、SEC 监管文件与致股东信一手信源" data-i18n-en="Verified SEC Filings, Earnings Releases & Shareholder Letters">权威财报、SEC 监管文件与致股东信一手信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/" target="_blank" rel="noopener noreferrer">
+ <b>Amazon Q3 2026 Official Financial Results (2026-10-29) ↗</b>
+ <span>官方披露 Q3 营收 $201.94B、创纪录 13.9% 营业利润率、AWS +39.3% ($45.98B) 及 TTM $168.3B 经营现金流</span>
+ </a>
+ <a class="bm-source-item" href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/" target="_blank" rel="noopener noreferrer">
+ <b>Amazon Q4 &amp; Full-Year 2025 Results (2026-02-05) ↗</b>
+ <span>官方披露 FY2025 全年净营收 $716.92B、营业利润 $79.98B、GAAP 净利润 $77.67B 及六大细分业务构成</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm" target="_blank" rel="noopener noreferrer">
+ <b>Amazon.com, Inc. FY2025 SEC Form 10-K Filing ↗</b>
+ <span>北美/国际/AWS 分部会计准则、应付账款与存货周转结构、员工编制（157.6万人）与法律诉讼披露</span>
+ </a>
+ <a class="bm-source-item" href="https://s2.q4cdn.com/299287126/files/doc_financials/2026/ar/2025-Shareholder-Letter-Final.pdf" target="_blank" rel="noopener noreferrer">
+ <b>CEO Andy Jassy's 2025 Letter to Shareholders (2026-04-09) ↗</b>
+ <span>深度阐述 AWS 现金流与 CapEx 超前投入规律、自研芯片 &gt;$20B 运行率、百万机器人与 $150B+ 生鲜杂货版图</span>
+ </a>
+ <a class="bm-source-item" href="https://s2.q4cdn.com/299287126/files/doc_financials/2026/ar/Amazon-2025-Annual-Report.pdf" target="_blank" rel="noopener noreferrer">
+ <b>Amazon 2025 Annual Report &amp; 1997 Original Letter ↗</b>
+ <span>完整收录五年财务对照表及每年重印的贝索斯 1997 年“Day 1 与自由现金流现值最大化”纲领信</span>
+ </a>
+ <a class="bm-source-item" href="https://mitsloan.mit.edu/sites/default/files/2026-07/24-229.AmazonvsWalmart_0.pdf" target="_blank" rel="noopener noreferrer">
+ <b>MIT Sloan Case Study: Amazon.com vs. Walmart Inc. ↗</b>
+ <span>对比自营(1P)与第三方卖家(3P)会计确认差异、履约成本分摊及负现金转换周期机制</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/amazon_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>
