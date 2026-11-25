@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="雅培公司 Abbott Laboratories (NYSE: ABT) 商业模式全景架构拆解：四位一体医疗健康生态、FreeStyle Libre 耗材剃须刀飞轮、Exact Sciences 肿瘤诊断并购、2027 营养品分拆聚焦与连续 54 年股息王复利引擎（基于 FY2025 10-K 与 Q3 2026 8-K 最新财报）。" />
+ <title>雅培公司 Abbott Laboratories (ABT) 商业模式架构深度拆解 | 数据中心</title>
+
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/abbott_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">ABT</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <span class="crumb-link hide-sm" data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="雅培公司 (Abbott) 商业模式架构拆解" data-i18n-en="Abbott Laboratories Business Model Architecture">雅培公司 (Abbott) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NYSE: ABT</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY25 $44.3B · Q3'26 $13.0B</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">ABT · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="雅培商业模式架构图谱" data-i18n-en="Abbott Business Model Blueprint">雅培商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="器械剃须刀耗材飞轮 × 肿瘤精准诊断并购 × 2027营养品分拆聚焦 × 54年股息王复利" data-i18n-en="MedTech Razor-Blade Flywheel × Exact Sciences Oncology × 2027 Nutrition Spin-Off × 54-Yr Dividend King">器械剃须刀耗材飞轮 × 肿瘤精准诊断并购 × 2027营养品分拆聚焦 × 54年股息王复利</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="耗材飞轮 + 全栈医疗" data-i18n-en="Razor-Blade + MedTech">耗材飞轮 + 全栈医疗</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="Adj. 毛利率 / GAAP 营业利润率" data-i18n-en="Adj. GM / GAAP OPM">Adj. 毛利率 / GAAP 营业利润率</span>
+ <span class="sidebar-mini-val mono">56.7% / 18.2%</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="连续分红增长 / 市值" data-i18n-en="Dividend Streak / Cap">连续分红增长 / 市值</span>
+ <span class="sidebar-mini-val mono">54 年 · ~$180B</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="架构目录"><div class="co-side-nav" id="companySubfolderHub" data-co-key="ABT"><a class="co-side-home" href="../../index.html">首页</a></div>
+ <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck & Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="营收利润池与四大支柱" data-i18n-en="P&L Waterfall & 4 Pillars">营收利润池与四大支柱</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="生物穿戴耗材棘轮与 LTV" data-i18n-en="Biowearable Cohort LTV">生物穿戴耗材棘轮与 LTV</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="股息王现金流与5年推演" data-i18n-en="Dividend King & 5Y Sim">股息王现金流与5年推演</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="医疗巨头矩阵与风险压测" data-i18n-en="MedTech Matrix & Stress">医疗巨头矩阵与风险压测</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <main class="bm-workspace main-content">
+ <!-- MODULE 0 -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：高频生物耗材飞轮 × 全生命周期健康平台" data-i18n-en="ARCHETYPE: High-Frequency Biowearable Razor-Blade × MedTech Platform">商业范式：高频生物耗材飞轮 × 全生命周期健康平台</span>
+ <span class="mui-chip mui-chip-success mono">FY25 $44.33B · Q3'26 $13.01B (+14.5%)</span>
+ <span class="mui-chip mui-chip-violet mono">2026 Exact Sciences 并购 + 2027 营养品分拆</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="雅培商业模式解构：<span class='bm-gradient-txt'>用“剃须刀+耗材”绑定亿级慢病刚需，借并购与分拆重塑高毛利医疗帝国</span>" data-i18n-en="Deconstructing Abbott's Business Model: <span class='bm-gradient-txt'>Recurring Biowearables &amp; Diagnostics Compounding Through Portfolio Reinvention</span>">
+ 雅培商业模式解构：<span class="bm-gradient-txt">用“剃须刀+耗材”绑定亿级慢病刚需，借并购与分拆重塑高毛利医疗帝国</span>
+ </h1>
+
+ <p class="bm-lead">
+ 创立于 1888 年的<strong>雅培公司（Abbott Laboratories, NYSE: ABT）</strong>并非传统药企，而是一台历经 138 年演进、不断通过分拆与并购自我升级的<strong>多元医疗科技现金流机器</strong>。2025 财年雅培实现营收 <strong>$443.28 亿（+5.7% YoY）</strong>、经调整毛利率 <strong>56.7%</strong> 与经营现金流 <strong>$95.7 亿</strong>
+ <a class="cite-link" href="https://www.prnewswire.com/news-releases/abbott-reports-fourth-quarter-and-full-year-2025-results-issues-2026-financial-outlook-302668032.html" target="_blank" rel="noopener noreferrer">FY25 业绩公报 ↗</a>。
+ 其核心商业密码在于三阶共振：第一阶以 <strong>$213.87 亿医疗器械板块（占比 48.2%）</strong>——尤以年销 <strong>$76 亿的 FreeStyle Libre 连续血糖监测（CGM）</strong>、Volt PFA 电生理导管与结构性心脏病瓣膜——构建极高复购的耗材生态；第二阶在 2026 年 3 月斥资 <strong>$230 亿完成收购 Exact Sciences</strong>
+ <a class="cite-link" href="https://abbott.mediaroom.com/2026-03-23-Abbott-completes-acquisition-of-Exact-Sciences" target="_blank" rel="noopener noreferrer">Exact Sciences 交割 ↗</a>，一举将业务延伸至肿瘤早筛（Cologuard）与精准肿瘤诊断（Q3 单季诊断同比暴增 +46.7% 至 $33.05 亿）；第三阶于 2026 年 10 月宣布拟在 2027 年底前<strong>免税分拆 $85 亿营养品业务</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1800/000162828026066601/abt-2026q3xexhibitx991.htm" target="_blank" rel="noopener noreferrer">Q3'26 SEC 8-K ↗</a>，剥离低增速消费属性，轻装蜕变为专注高毛利器械、诊断与新兴市场品牌仿制药的 ~$420 亿纯粹医疗科技巨头。
+ </p>
+ </div>
+
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 耗材复购年金飞轮" data-i18n-en="① Consumable Annuity">① 耗材复购年金飞轮</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 组合进化剪刀差" data-i18n-en="② Portfolio Mix Shift">② 组合进化剪刀差</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 54年股息王复利" data-i18n-en="③ 54-Yr Dividend King">③ 54年股息王复利</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 单患生命周期毛利 LTV = 院内装机/首配入口 (EnSite X / Alinity) + ∑ [年化 26 枚传感器或试剂消耗 × 60%+ 耗材毛利]
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 与卖一台少一台的传统大型影像设备不同，雅培核心增量来自<strong>“每 14 天更换一枚的 Libre 传感器”</strong>、<strong>“每例房颤消融消耗的 Volt PFA 导管”</strong>以及<strong>“Alinity 流水线上的封闭试剂盒”</strong>。设备与医保准入一旦打通，患者与医院便转化为高频、可预测的年金式现金流。
+ </div>
+ </div>
+ </div>
+
+ <aside class="bm-telemetry-ledger" aria-label="雅培核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="FY2025 &amp; Q3 2026 核心遥测账本" data-i18n-en="FY2025 &amp; Q3 2026 Telemetry">FY2025 &amp; Q3 2026 核心遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://www.sec.gov/Archives/edgar/data/1800/000162828026066601/abt-2026q3xexhibitx991.htm" target="_blank" rel="noopener noreferrer">Q3'26 8-K ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY25 营收结构 (医疗器械 48.2% / 诊断 20.2%)" data-i18n-en="FY25 Revenue Mix (MedTech 48.2% / Diag 20.2%)">FY25 营收结构 (医疗器械 48.2% / 诊断 20.2%)</span>
+ <span class="bm-tel-val mono">$44.33B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:48.2%;"></div>
+ <div style="width:20.2%;background:#7C3AED;"></div>
+ <div style="width:19.1%;background:#D97706;"></div>
+ <div style="width:12.5%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>器械 $21.39B (+12.6%)</span><span>诊断 $8.94B · 营养 $8.45B · EPD $5.54B</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="Q3 2026 加速放量 (含肿瘤诊断并表)" data-i18n-en="Q3 2026 Acceleration (incl. Oncology)">Q3 2026 加速放量 (含肿瘤诊断并表)</span>
+ <span class="bm-tel-val mono">$13.01B <small style="font-size:0.74rem;color:var(--mui-success-text);">+14.5%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:76%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>诊断 Q3 $3.31B (+46.7%)</span><span>肿瘤诊断单季 $968M</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="经调整毛利率 / GAAP 营业利润率 (FY25)" data-i18n-en="Adj. Gross Margin / GAAP Op Margin">经调整毛利率 / GAAP 营业利润率 (FY25)</span>
+ <span class="bm-tel-val mono">56.7% / 18.2%</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:56.7%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>FY25 Adj. 净利 $9.04B (+10.2%)</span><span>经营现金流 $9.57B</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="分拆后“新雅培”聚焦轮廓 (2027E+)" data-i18n-en="Post-Spin 'New Abbott' Profile (2027E+)">分拆后“新雅培”聚焦轮廓 (2027E+)</span>
+ <span class="bm-tel-val mono">~$42.0B / 10.6万人</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:84%;background:#7C3AED;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>免税分拆 $8.5B 营养品</span><span>连续 54 年上调股息 ($0.63/季)</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: 5-NODE VALUE CHAIN -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END HEALTHCARE VALUE PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从底层生物传感研发到股息王复利" data-i18n-en="5-Node Value-Chain Pipeline: From Biosensor R&amp;D to Dividend King Compounding">五阶商业价值传导沙盘：从底层生物传感研发到股息王复利</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解雅培如何在院内手术室、检验科与居家场景完成商业变现。" data-i18n-en="Click any node to inspect pricing power, regulatory moat, and recurring unit economics.">点击下方任一价值链节点，拆解雅培如何在院内手术室、检验科与居家场景完成商业变现。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">R&amp;D ENGINE</span></div>
+ <div class="bm-node-title" data-i18n-zh="临床痛点研发与 FDA 准入壁垒" data-i18n-en="Clinical R&amp;D &amp; FDA Moat">临床痛点研发与 FDA 准入壁垒</div>
+ <div class="bm-node-kpi mono">FY25 R&amp;D $2.94B (Q3'26 +20%)</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">RAZOR-BLADE</span></div>
+ <div class="bm-node-title" data-i18n-zh="装机定锚与高频耗材闭环" data-i18n-en="Installed Base &amp; Consumables">装机定锚与高频耗材闭环</div>
+ <div class="bm-node-kpi mono">CGM $7.6B · Alinity 封闭试剂</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">GLOBAL SCALE</span></div>
+ <div class="bm-node-title" data-i18n-zh="160国医保准入与商业化网络" data-i18n-en="160-Country Commercial Network">160国医保准入与商业化网络</div>
+ <div class="bm-node-kpi mono">国际营收占 61.4% ($27.2B)</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">M&amp;A + SPIN</span></div>
+ <div class="bm-node-title" data-i18n-zh="逆周期并购与精准分拆进化" data-i18n-en="Disciplined M&amp;A &amp; Spin-Offs">逆周期并购与精准分拆进化</div>
+ <div class="bm-node-kpi mono">并购 Exact · 分拆 AbbVie/营养</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">DIVIDEND KING</span></div>
+ <div class="bm-node-title" data-i18n-zh="稳健现金流与 54 年股息王复利" data-i18n-en="OCF &amp; 54-Year Dividend King">稳健现金流与 54 年股息王复利</div>
+ <div class="bm-node-kpi mono">OCF $9.57B · 连续 411 季派息</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · CLINICAL INNOVATION &amp; REGULATORY MOAT</span>
+ <h3 id="nodeTitle">底层微创传感器与临床循证：把高风险医疗器械转化为可规模复制的工业标准</h3>
+ <p id="nodeDesc">
+ 雅培每年将近 $30亿–$35亿研发预算（Q3 2026 单季研发费用同比大增 20.1% 至 $9.20亿）精准投向具备代差优势的微创与生物穿戴技术：如 14 天免校准的 FreeStyle Libre 传感器、结合射频与脉冲电场（PFA）的 TactiFlex Duo 双能消融导管，以及全血 15 分钟出结果的 i-STAT TBI 脑震荡检测盒。漫长的多中心临床试验与 FDA/CE 审批天然构筑了极难逾越的合规护城河。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 商业传导：FDA PMA/510(k) 审批壁垒 + 多中心临床数据背书 → 锁定临床医生处方习惯与医保报销目录
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">$2.94B</b><span>FY2025 全年研发投入 (6.6%)</span></div>
+ <div class="bm-ins-card"><b class="mono">+20.1%</b><span>Q3 2026 研发加速 ($920M)</span></div>
+ <div class="bm-ins-card"><b class="mono">56.7%</b><span>FY2025 经调整综合毛利率</span></div>
+ <div class="bm-ins-card"><b class="mono">6+ 获批</b><span>2026 年多项核心器械获 FDA/CE</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: PROFIT POOL WATERFALL & 4 PILLARS -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN TRAJECTORY</span>
+ <h3 data-i18n-zh="FY2025 $443.3亿 价值转化瀑布流与多年利润率跃迁" data-i18n-en="FY2025 $44.3B P&amp;L Waterfall &amp; Multi-Year Margin Expansion">FY2025 $443.3亿 价值转化瀑布流与多年利润率跃迁</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→净利/OCF瀑布" data-i18n-en="Rev → OCF Waterfall">营收→净利/OCF瀑布</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="营业利润率爬坡" data-i18n-en="Margin Trajectory">营业利润率爬坡</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 数据来源：<a class="cite-link" href="https://www.prnewswire.com/news-releases/abbott-reports-fourth-quarter-and-full-year-2025-results-issues-2026-financial-outlook-302668032.html" target="_blank" rel="noopener noreferrer">Abbott FY25 业绩公报 ↗</a> 与
+ <a class="cite-link" href="https://www.stocktitan.net/financials/ABT/" target="_blank" rel="noopener noreferrer">FY25 现金流摘要 ↗</a>。随着高疫情检测基数出清与高毛利医疗器械占比升至近半壁江山，雅培 GAAP 营业利润率从 2023 年的 16.2% 稳步扩张至 2025 年的 <strong>18.2%</strong>，经调整净利润达 <strong>$90.4 亿</strong>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · FOUR BUSINESS ENGINES &amp; PORTFOLIO RESET</span>
+ <h3 data-i18n-zh="四大板块结构拆解（拟分拆营养品后的新三驾马车）" data-i18n-en="4-Division Architecture (Post-2027 Spin Portfolio)">四大板块结构拆解（拟分拆营养品后的新三驾马车）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部 (4)" data-i18n-en="All (4)">全部 (4)</button>
+ <button type="button" class="mui-seg-btn" data-tcat="core" data-i18n-zh="留存核心" data-i18n-en="Core NewCo">留存核心</button>
+ <button type="button" class="mui-seg-btn" data-tcat="spin" data-i18n-zh="拟分拆" data-i18n-en="Spin-Off">拟分拆</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="core">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="① 医疗器械 Medical Devices (留存核心引擎)" data-i18n-en="① Medical Devices (Core Growth Engine)">① 医疗器械 Medical Devices (留存核心引擎)</span>
+ <span class="mui-chip mui-chip-primary mono">FY25 $21.39B · +12.6%</span>
+ </div>
+ <div class="bm-tier-desc">涵盖糖尿病护理（FreeStyle Libre $7.6B）、电生理（Volt PFA）、结构性心脏病（TriClip/Navitor）、心律管理（Aveir）与心衰，连续 12 个季度实现双位数有机增长。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="core">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="② 诊断业务 Diagnostics + Exact Sciences (留存第二极)" data-i18n-en="② Diagnostics + Exact Sciences Oncology">② 诊断业务 Diagnostics + Exact Sciences (留存第二极)</span>
+ <span class="mui-chip mui-chip-violet mono">Q3'26 $3.31B · +46.7%</span>
+ </div>
+ <div class="bm-tier-desc">Alinity 核心实验室流水线与床旁检测叠加 2026 年 3 月并表的 Exact Sciences（Cologuard 与 Oncotype DX），肿瘤诊断单季贡献近 $10 亿营收。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="core">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="③ 成熟药品 EPD 新兴市场品牌仿制药 (留存现金牛)" data-i18n-en="③ Established Pharmaceuticals (Emerging Markets)">③ 成熟药品 EPD 新兴市场品牌仿制药 (留存现金牛)</span>
+ <span class="mui-chip mui-chip-success mono">FY25 $5.54B · +7.4% 有机</span>
+ </div>
+ <div class="bm-tier-desc">100% 避开欧美集采红海，专注印度、拉美与东南亚等新兴市场品牌仿制药及生物类似药，连续五年保持 >7% 有机增速。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="spin">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="④ 营养品 Nutrition (拟于 2027 年底前免税分拆)" data-i18n-en="④ Nutrition (Planned Tax-Free Spin-Off by End-2027)">④ 营养品 Nutrition (拟于 2027 年底前免税分拆)</span>
+ <span class="mui-chip mui-chip-warning mono">FY25 $8.45B · 独立上市</span>
+ </div>
+ <div class="bm-tier-desc">包含 Similac 婴幼儿配方奶粉与 Ensure/Glucerna 医学营养品（~1.6 万员工、14 座工厂），拟于 2027 年底前免税分拆独立上市，释放“新雅培”估值重估。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: CONSUMABLE RATCHET & SEGMENT GROWTH -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · RAZOR-BLADE RECURRING ECONOMICS</span>
+ <h3 data-i18n-zh="三类医疗场景单客/单院经济模型：耗材飞轮如何运转？" data-i18n-en="Unit Economics Across 3 Care Settings: The Consumable Flywheel">三类医疗场景单客/单院经济模型：耗材飞轮如何运转？</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="otc" data-i18n-zh="健康消费 (Lingo)" data-i18n-en="Consumer (Lingo)">健康消费 (Lingo)</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="cgm" data-i18n-zh="慢病患者 (Libre CGM)" data-i18n-en="Diabetes (Libre CGM)">慢病患者 (Libre CGM)</button>
+ <button type="button" class="mui-seg-btn" data-cohort="hosp" data-i18n-zh="医院中心 (Alinity/EP)" data-i18n-en="Hospital (Alinity/EP)">医院中心 (Alinity/EP)</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat">
+ <div class="lbl">核心耗材与更换频率</div>
+ <div class="val" style="font-size:0.95rem;">Libre 3 / Duo · 14天/枚</div>
+ <div class="delta">全年约需 26 枚生物传感器</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">全球在用患者与渗透趋势</div>
+ <div class="val mono">600万+ 患者</div>
+ <div class="delta">覆盖基础胰岛素及 2 型糖友</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">年度单患营收贡献</div>
+ <div class="val mono">~$1,100–$1,400</div>
+ <div class="delta">医保报销覆盖大幅降低自付摩擦</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">5年单患累计毛利 LTV</div>
+ <div class="val mono">~$3,800+</div>
+ <div class="delta">传感器规模化制造毛利率持续抬升</div>
+ </div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>数据与处方双向锁死效应：</strong>FreeStyle Libre 传感器通过蓝牙实时将血糖与酮体（Libre Duo）曲线同步至 LibreView 云端医生看板。患者无需扎手指且已习惯历史趋势图，主治医师则直接在系统内调阅报告——一旦进入报销与随访闭环，患者切换竞品传感器的迁移成本极高
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1800/000162828026066601/abt-2026q3xexhibitx991.htm" target="_blank" rel="noopener noreferrer">Libre Duo 获批 ↗</a>。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · MEDTECH SUB-SEGMENT VELOCITY &amp; GEOGRAPHY</span>
+ <h3 data-i18n-zh="医疗器械七大子赛道增速与雅培全球营收地域结构" data-i18n-en="MedTech Sub-Segment Growth &amp; Global Revenue Geography">医疗器械七大子赛道增速与雅培全球营收地域结构</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="sub" data-i18n-zh="器械子赛道增速" data-i18n-en="MedTech Sub-Segments">器械子赛道增速</button>
+ <button type="button" class="mui-seg-btn" data-cview="geo" data-i18n-zh="美国 vs 国际占比" data-i18n-en="U.S. vs International">美国 vs 国际占比</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 数据基准：FY2025 医疗器械分部 ($21.39B) 与 Q3 2026 财报。糖尿病护理（$8.00B）是绝对压舱石，而电生理（$2.76B，9M26 +15.2%）与结构性心脏病（$2.52B）正凭借 Volt PFA 与 TriClip 成为第二波高速引擎。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: DIVIDEND KING & 5-YEAR SIMULATOR -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · 54-YEAR DIVIDEND KING &amp; PORTFOLIO RESET</span>
+ <h3 data-i18n-zh="连续 54 年股息增长史与“新雅培”轻装聚焦路径" data-i18n-en="54-Year Dividend King Track Record &amp; 2027 Spin-Off Profile">连续 54 年股息增长史与“新雅培”轻装聚焦路径</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="div" data-i18n-zh="季度股息增长史" data-i18n-en="Dividend Growth">季度股息增长史</button>
+ <button type="button" class="mui-seg-btn" data-kview="spin" data-i18n-zh="2027分拆前后轮廓" data-i18n-en="2027 Spin Profile">2027分拆前后轮廓</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 股息王纪律：雅培自 1924 年起连续派发 <strong>411 个季度股息</strong>，连续 <strong>54 年</strong>上调年度派息（2026 年季度股息达 $0.63/股，年化 $2.52），即便在 2013 年分拆艾伯维（AbbVie）后依然保持约 9%–10% 的十年股息复合增速
+ <a class="cite-link" href="https://www.abbottinvestor.com/stock-info/dividend-split-history/" target="_blank" rel="noopener noreferrer">雅培股息史 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EPS &amp; REVENUE SIMULATOR</span>
+ <h3 data-i18n-zh="FY2027–FY2031“新雅培”商业模式复利与 EPS 推演器" data-i18n-en="FY2027–FY2031 'New Abbott' Compounding Simulator">FY2027–FY2031“新雅培”商业模式复利与 EPS 推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="医保降价逆风" data-i18n-en="Bear">医保降价逆风</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="基准复利" data-i18n-en="Base">基准复利</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="器械+肿瘤爆发" data-i18n-en="Bull">器械+肿瘤爆发</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="医疗器械+肿瘤诊断年化增速 (Core MedTech/Dx CAGR)" data-i18n-en="MedTech &amp; Cancer Dx CAGR">医疗器械+肿瘤诊断年化增速 (Core MedTech/Dx CAGR)</span><b class="mono" id="lblSvcCagr">10.5%</b></div>
+ <input type="range" id="inpSvcCagr" min="4" max="16" step="0.5" value="10.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="核心诊断与 EPD 年化增速 (Core Lab &amp; EPD CAGR)" data-i18n-en="Core Lab &amp; EPD CAGR">核心诊断与 EPD 年化增速 (Core Lab &amp; EPD CAGR)</span><b class="mono" id="lblProdCagr">6.0%</b></div>
+ <input type="range" id="inpProdCagr" min="1" max="11" step="0.5" value="6.0" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="年度营业利润率改善幅度 (Annual OPM Expansion bps)" data-i18n-en="Annual OPM Expansion (bps)">年度营业利润率改善幅度 (Annual OPM Expansion bps)</span><b class="mono" id="lblBuyRate">60 bps</b></div>
+ <input type="range" id="inpBuyRate" min="0" max="120" step="10" value="60" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$63.8B</b><span data-i18n-zh="FY31E 新雅培营收" data-i18n-en="FY31E NewCo Rev">FY31E 新雅培营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simGmOut">59.8%</b><span data-i18n-zh="FY31E Adj. 毛利率" data-i18n-en="FY31E Adj. GM">FY31E Adj. 毛利率</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEpsOut">$8.54</b><span data-i18n-zh="FY31E Adj. EPS" data-i18n-en="FY31E Adj. EPS">FY31E Adj. EPS</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simCagrOut">+9.2%</b><span data-i18n-zh="5年 Adj. EPS CAGR" data-i18n-en="5Y Adj. EPS CAGR">5年 Adj. EPS CAGR</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: MEDTECH PEER MATRIX & STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · GLOBAL MEDTECH BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球医疗科技巨头商业范式对标与三大核心风险压测" data-i18n-en="Global MedTech Peer Matrix &amp; Three-Pillar Stress Audit">全球医疗科技巨头商业范式对标与三大核心风险压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比六大标杆医疗科技公司的业务聚焦度、毛利率与增长结构，并追踪雅培转型期的关键风险。" data-i18n-en="Benchmarking Abbott against MedTech and life-sciences peers and auditing key transition risks.">对比六大标杆医疗科技公司的业务聚焦度、毛利率与增长结构，并追踪雅培转型期的关键风险。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="cardio" data-i18n-zh="心血管/综合器械" data-i18n-en="Cardio / MedTech">心血管/综合器械</button>
+ <button type="button" class="mui-seg-btn" data-pcat="cgm" data-i18n-zh="糖尿病/诊断工具" data-i18n-en="CGM / Diagnostics">糖尿病/诊断工具</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th>公司与代码</th>
+ <th>核心商业模式定位</th>
+ <th>营收体量 (年化)</th>
+ <th>毛利率区间</th>
+ <th>核心护城河与最新战略动态</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-apple" data-row-cat="cardio cgm">
+ <td><strong>Abbott (ABT)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>器械耗材飞轮 + 肿瘤诊断 + 新兴市场品牌药</td>
+ <td class="mono">$44.3B (FY25)</td>
+ <td class="mono" style="color:var(--mui-success-text);">56.7% (Adj.)</td>
+ <td>并购 Exact Sciences + 拟分拆 $8.5B 营养品聚焦高毛利主业</td>
+ </tr>
+ <tr data-row-cat="cardio">
+ <td><strong>Medtronic (MDT)</strong></td>
+ <td>心血管/外科/神经科学 + 2026 分拆 MiniMed 糖尿病</td>
+ <td class="mono">~$34B+</td>
+ <td class="mono">~65.0%</td>
+ <td>同样践行“聚焦减法”，于 2026 年 2 月推动糖尿病业务 MiniMed 独立上市</td>
+ </tr>
+ <tr data-row-cat="cardio">
+ <td><strong>Boston Scientific (BSX)</strong></td>
+ <td>高增速心血管介入与电生理 (FARAPULSE PFA)</td>
+ <td class="mono">~$19B–$21B</td>
+ <td class="mono">~70%+</td>
+ <td>PFA 电生理先发领跑者；雅培正以 Volt PFA + TactiFlex Duo 正面迎战</td>
+ </tr>
+ <tr data-row-cat="cardio">
+ <td><strong>Stryker (SYK)</strong></td>
+ <td>骨科手术机器人 (MAKO) + 医疗外科设备</td>
+ <td class="mono">~$24B+</td>
+ <td class="mono">~64%</td>
+ <td>以 MAKO 骨科机器人装机带动植入物耗材，强力渗透门诊手术中心</td>
+ </tr>
+ <tr data-row-cat="cgm">
+ <td><strong>Dexcom (DXCM)</strong></td>
+ <td>纯血连续血糖监测 (G7 / Stelo OTC)</td>
+ <td class="mono">~$4.5B+</td>
+ <td class="mono">~63%</td>
+ <td>雅培 FreeStyle Libre 在全球 CGM 赛道最直接的双寡头竞争对手</td>
+ </tr>
+ <tr data-row-cat="cgm">
+ <td><strong>Danaher (DHR)</strong></td>
+ <td>DBS 精益运营体系 + 生命科学与诊断仪器耗材</td>
+ <td class="mono">~$24B+</td>
+ <td class="mono">~59%</td>
+ <td>被视为生命科学耗材并购整合标杆；雅培正以 Exact Sciences 对标该高估值路径</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · CGM PRICING &amp; GLP-1</span>
+ <h4>CGM 医保价格压力与 GLP-1 减肥药的长期影响</h4>
+ <p>2026 年下半年市场对 CGM 医保报销定价与 GLP-1 药物是否减少部分患者需求存在担忧（CGM 短期增速预期趋向温和）。雅培的对冲牌是<strong>非胰岛素 2 型糖友医保扩面</strong>及推出 <strong>Lingo / Libre Duo</strong> 切入大众代谢健康与酮体监测增量池。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：Diabetes Care 单季同比增速</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · EXACT SCIENCES INTEGRATION</span>
+ <h4>$230亿 Exact Sciences 并购后的摊销与整合兑现</h4>
+ <p>收购 Exact Sciences 虽为 Q3 2026 带来 $9.68 亿肿瘤诊断营收，但也使无形资产摊销翻倍至 $8.41 亿/季、长期债务升至 ~$295 亿，且预计稀释 2026 年调整后 EPS 约 $0.20。关键看点在于能否借雅培 160 国渠道实现 Cologuard 出海与 Alinity 平台协同。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：Cancer Diagnostics 国际占比与去杠杆进度</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · NUTRITION LITIGATION &amp; SPIN</span>
+ <h4>早产儿配方奶粉 NEC 诉讼和解与 2027 分拆执行</h4>
+ <p>Q3 2026 雅培计提约 <strong>$6.70 亿</strong>用于就 Gill 案及约 2,000 例早产儿坏死性小肠结肠炎（NEC）索赔达成和解协议，扫清了 2027 年底前独立分拆 $85 亿营养品业务的最大法律障碍，同时需确保分拆后双方合并股息不低于原水平。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：Form 10 递交与营养品分拆时间表</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- SOURCES -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威财报、SEC 监管文件与官方并购/分拆信源" data-i18n-en="Verified Financial Filings &amp; Corporate Action Sources">权威财报、SEC 监管文件与官方并购/分拆信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1800/000162828026066601/abt-2026q3xexhibitx991.htm" target="_blank" rel="noopener noreferrer">
+ <b>Abbott Q3 2026 SEC Exhibit 99.1 (2026-10-21) ↗</b>
+ <span>官方披露 Q3 2026 $13.013B 营收、肿瘤诊断 $968M、Libre Duo/TactiFlex Duo 获批及全年 EPS 指引</span>
+ </a>
+ <a class="bm-source-item" href="https://www.prnewswire.com/news-releases/abbott-reports-fourth-quarter-and-full-year-2025-results-issues-2026-financial-outlook-302668032.html" target="_blank" rel="noopener noreferrer">
+ <b>Abbott Full-Year 2025 Financial Release (2026-01-22) ↗</b>
+ <span>FY2025 全年 $44.328B 营收、四大板块拆分、$9.04B 经调整净利与 $5.15 Adj. EPS 完整数据</span>
+ </a>
+ <a class="bm-source-item" href="https://abbott.mediaroom.com/2026-03-23-Abbott-completes-acquisition-of-Exact-Sciences" target="_blank" rel="noopener noreferrer">
+ <b>Abbott Completes Exact Sciences Acquisition (2026-03-23) ↗</b>
+ <span>$230亿企业价值（$210亿股权）正式交割，雅培切入 $600亿美国癌症早筛与精准肿瘤市场</span>
+ </a>
+ <a class="bm-source-item" href="https://delmorganco.com/abbott-to-spin-off-its-8-5bn-nutrition-business/" target="_blank" rel="noopener noreferrer">
+ <b>Abbott $8.5B Nutrition Spin-Off Analysis (2026-10) ↗</b>
+ <span>免税分拆 $8.5B 营养品业务（1.6万员工/14座工厂），留存 ~$42B 纯粹医疗科技与诊断主体</span>
+ </a>
+ <a class="bm-source-item" href="https://www.abbottinvestor.com/stock-info/dividend-split-history/" target="_blank" rel="noopener noreferrer">
+ <b>Abbott Dividend King History (54 Consecutive Years) ↗</b>
+ <span>自 1924 年起连续 411 季度派息，连续 54 年上调股息的标普 500 股息贵族官方记录</span>
+ </a>
+ <a class="bm-source-item" href="https://www.stocktitan.net/financials/ABT/" target="_blank" rel="noopener noreferrer">
+ <b>Abbott FY2025–2026 Cash Flow &amp; Balance Sheet Summary ↗</b>
+ <span>FY2025 $9.57B 经营现金流、Q3 2026 研发与资本开支及资产负债表结构汇总</span>
+ </a>
+ </div>
+ </section>
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/abbott_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

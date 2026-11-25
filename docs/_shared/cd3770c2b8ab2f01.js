@@ -1566,6 +1566,8 @@
         applyLanguage(state.lang, true);
       }
 
+      document.getElementById('langZhBtn').disabled = false;
+      document.getElementById('langEnBtn').disabled = false;
       document.getElementById('langZhBtn').addEventListener('click', function () { applyLanguage('zh', false); });
       document.getElementById('langEnBtn').addEventListener('click', function () { applyLanguage('en', false); });
       document.getElementById('appbarThemeBtn').addEventListener('click', function () {

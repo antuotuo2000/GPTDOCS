@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="应用材料公司 Applied Materials, Inc. (NASDAQ: AMAT) 商业模式全景架构拆解：最全材料工程设备工具箱、GAA/HBM/先进封装拐点卡位、$69亿高续约率 AGS 服务年金与 FY2026 $344.5亿创纪录营收及 $62亿自由现金流。" />
+ <title>应用材料 Applied Materials (AMAT) 商业模式架构深度拆解 | 数据中心</title>
+
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/applied_materials_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+  <div class="mui-appbar-inner">
+   <div class="appbar-left">
+    <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+    </button>
+    <span class="brand-monogram mono">AMAT</span>
+    <nav class="breadcrumbs" aria-label="面包屑导航">
+     <span class="hide-sm" style="color:var(--text-muted);font-weight:600;" data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+     <span class="hide-sm" style="opacity:0.45;">/</span>
+     <span class="crumb-current" data-i18n-zh="应用材料 (AMAT) 商业模式架构拆解" data-i18n-en="Applied Materials (AMAT) Business Model Architecture">应用材料 (AMAT) 商业模式架构拆解</span>
+    </nav>
+    <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: AMAT</span>
+    <span class="mui-chip mui-chip-success mono hide-sm">FY2026 · $34.45B</span>
+   </div>
+   <div class="appbar-right">
+    <div class="quick-search-wrap">
+     <span class="quick-search-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+     <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索模块或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+     <span class="quick-search-kbd mono">⌘K</span>
+     <div id="quickJumpPopover" class="quick-jump-popover"></div>
+    </div>
+    <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+     <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+     <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+     <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span>
+    </button>
+   </div>
+  </div>
+ </header>
+
+ <div class="layout-shell">
+  <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块导航">
+   <div class="sidebar-card">
+    <div class="sidebar-brand-top"><span class="mui-chip mui-chip-primary mono">AMAT · BUSINESS MODEL</span></div>
+    <div class="sidebar-title" data-i18n-zh="应用材料商业模式图谱" data-i18n-en="AMAT Business Model Blueprint">应用材料商业模式图谱</div>
+    <p class="sidebar-subtitle" data-i18n-zh="最全材料工程工具箱 × 80% WFE 拐点卡位 × $69亿高续约 AGS 服务年金 × 50.0% 综合毛利" data-i18n-en="Broadest Materials Toolbox × 80% WFE Inflection Capture × $6.9B AGS Annuity × 50.0% Gross Margin">最全材料工程工具箱 × 80% WFE 拐点卡位 × $69亿高续约 AGS 服务年金 × 50.0% 综合毛利</p>
+    <div class="sidebar-mini-kpis">
+     <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span><span class="sidebar-mini-val mono" data-i18n-zh="全栈工艺底座 + 装机年金" data-i18n-en="Toolbox + Installed Annuity">全栈工艺底座 + 装机年金</span></div>
+     <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="设备 / 服务毛利率" data-i18n-en="Systems / AGS GM">设备 / 服务毛利率</span><span class="sidebar-mini-val mono">54.9% vs 35.0%</span></div>
+     <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="FY26 营收 / FCF" data-i18n-en="FY26 Rev / FCF">FY26 营收 / FCF</span><span class="sidebar-mini-val mono">$34.45B · $6.20B</span></div>
+    </div>
+   </div>
+
+   <nav class="sidebar-card" aria-label="商业架构工作台目录"><div class="co-side-nav" id="companySubfolderHub" data-co-key="AMAT"><a class="co-side-home" href="../../index.html">首页</a></div>
+    <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+    <ul class="mui-nav-list" id="tocList">
+     <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+     <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+     <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与业务拆解" data-i18n-en="Profit Waterfall &amp; Segments">利润池瀑布流与业务拆解</span></a></li>
+     <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="晶圆厂分层 LTV 与赛道占比" data-i18n-en="Fab Cohort LTV &amp; WFE Mix">晶圆厂分层 LTV 与赛道占比</span></a></li>
+     <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="资本配置与五年 EPS 推演" data-i18n-en="Capital Return &amp; 5Y EPS Sim">资本配置与五年 EPS 推演</span></a></li>
+     <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="设备巨头矩阵与风险压测" data-i18n-en="Peer Matrix &amp; Stress Audit">设备巨头矩阵与风险压测</span></a></li>
+    </ul>
+   </nav>
+
+   
+  </aside>
+
+  <main class="bm-workspace main-content">
+   <!-- M0: COMMAND DECK -->
+   <section id="mod-deck" class="bm-command-deck">
+    <div class="bm-thesis-deck">
+     <div>
+      <div class="bm-badge-row">
+       <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：最广材料工程工具箱 × 装机服务年金" data-i18n-en="ARCHETYPE: Broadest Materials Toolbox × Installed-Base Annuity">商业范式：最广材料工程工具箱 × 装机服务年金</span>
+       <span class="mui-chip mui-chip-success mono">FY2026 8-K 审计口径</span>
+       <span class="mui-chip mui-chip-violet mono">ROE 43.4% · Non-GAAP GM 50.1%</span>
+      </div>
+      <h1 class="bm-display-h1" data-i18n-zh="应用材料商业模式解构：<span class='bm-gradient-txt'>以 55% 毛利原子级设备卡位 AI 算力拐点，靠 $69亿高续约 AGS 服务平滑周期</span>" data-i18n-en="Deconstructing Applied Materials: <span class='bm-gradient-txt'>Capture AI Inflections via 55% GM Tools, Smooth Cycles with $6.9B AGS Annuity</span>">
+       应用材料商业模式解构：<span class="bm-gradient-txt">以 55% 毛利原子级设备卡位 AI 算力拐点，靠 $69亿高续约 AGS 服务平滑周期</span>
+      </h1>
+      <p class="bm-lead">
+       不同于 ASML 专攻光刻单点、Lam Research 偏重刻蚀，<strong>应用材料（Applied Materials, NASDAQ: AMAT）</strong>是全球半导体晶圆制造设备（WFE）领域<strong>产品线最宽广的材料工程平台</strong>——在沉积（CVD/PVD/ALD）、外延（Epitaxy）、离子注入（Implant）、化学机械平坦化（CMP）与热处理环节稳居全球第一
+       <a class="cite-link" href="https://crackthemarket.substack.com/p/applied-materials-the-broadest-toolbox" target="_blank" rel="noopener noreferrer">WFE 工具箱分析 ↗</a>。
+       FY2026（截至 2026 年 10 月 25 日），公司创下全年 <strong>$344.46亿 营收（+21.4% YoY）</strong>与 <strong>50.0% GAAP 毛利率</strong>历史新高，其中 <strong>Semiconductor Systems 贡献 $261.42亿（54.9% 毛利率）</strong>，而绑定庞大存量机台的 <strong>Applied Global Services (AGS)</strong> 贡献 <strong>$69.01亿（约三分之二为续约率超 90% 的多年期合约）</strong>，叠加全年 <strong>$61.96亿 自由现金流</strong>与持续回购，构筑了穿越半导体周期的复合增长机器
+       <a class="cite-link" href="https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-fourth-quarter-and-fiscal-year-2026/" target="_blank" rel="noopener noreferrer">FY26 Q4 财报 ↗</a>。
+      </p>
+     </div>
+
+     <div class="bm-lens-panel">
+      <div class="bm-lens-head">
+       <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+       <div class="mui-segmented" id="lensTabs">
+        <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 拐点材料工程" data-i18n-en="① Inflection Toolbox">① 拐点材料工程</button>
+        <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 装机年金飞轮" data-i18n-en="② AGS Annuity">② 装机年金飞轮</button>
+        <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 轻晶圆制造与回购" data-i18n-en="③ Capital Allocation">③ 轻晶圆制造与回购</button>
+       </div>
+      </div>
+      <div class="bm-equation-bar mono" id="lensFormula">
+       单座晶圆厂全周期 LTV = 前道工艺设备组合 ($100M–$1B+, 55% GM) + ∑ [10–20年 AGS 备件与订阅合约 (35% GM, &gt;90% 续约)]
+      </div>
+      <div class="bm-lens-body" id="lensBody">
+       每当芯片架构发生代际跃迁（FinFET → GAA 全环绕栅极、正面供电 → 背面供电 BSPDN、平面 DRAM → HBM 3D 堆叠），底层本质都是<strong>材料工程难题</strong>。2026–2027 年全球 WFE 增量开支的 80% 集中在先进逻辑、DRAM 与先进封装，恰好全部落在应用材料最核心的强项组合中。
+      </div>
+     </div>
+    </div>
+
+    <aside class="bm-telemetry-ledger" aria-label="FY2026 核心经济遥测">
+     <div class="bm-ledger-head">
+      <div class="bm-ledger-title"><span class="bm-pulse-dot"></span><span data-i18n-zh="FY2026 商业模型核心遥测账本" data-i18n-en="FY2026 Business Model Telemetry">FY2026 商业模型核心遥测账本</span></div>
+      <a class="cite-link mono" href="https://sec-api.io/insights/applied-materials-amat-q4-fy2026-earnings-sec-filing-analysis-10-41bn-revenue-dram-at-33-of-systems-sales-and-an-11-10bn-q1-fy2027-outlook" target="_blank" rel="noopener noreferrer">SEC 分析 ↗</a>
+     </div>
+     <div class="bm-telemetry-rows">
+      <div class="bm-tel-item">
+       <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="总营收规模 (设备 75.9% / 服务 20.0% / 显示 4.1%)" data-i18n-en="Total Revenue (75.9% Sys / 20.0% AGS / 4.1% Other)">总营收规模 (设备 75.9% / 服务 20.0% / 显示 4.1%)</span><span class="bm-tel-val mono">$34.45B</span></div>
+       <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:75.9%;"></div><div style="width:20.0%;background:#16A34A;"></div><div style="width:4.1%;background:#D97706;"></div></div>
+       <div class="bm-tel-sub mono"><span>Systems $26.14B (+21.9%)</span><span>AGS $6.90B (+20.2%)</span></div>
+      </div>
+      <div class="bm-tel-item">
+       <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="综合毛利与营业利润率 (GAAP)" data-i18n-en="Consolidated Gross &amp; Op Margin">综合毛利与营业利润率 (GAAP)</span><span class="bm-tel-val mono">50.0% <small style="font-size:0.74rem;color:var(--mui-success-text);">+130bps</small></span></div>
+       <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:83.3%;"></div><div style="width:16.7%;background:#16A34A;"></div></div>
+       <div class="bm-tel-sub mono"><span>Systems GM 54.9%</span><span>Op Margin 32.2% (Q4 35.1%)</span></div>
+      </div>
+      <div class="bm-tel-item">
+       <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="经营现金流 &amp; 自由现金流 (含 EPIC 扩建)" data-i18n-en="Operating Cash Flow &amp; Free Cash Flow">经营现金流 &amp; 自由现金流 (含 EPIC 扩建)</span><span class="bm-tel-val mono">$6.20B <small style="font-size:0.74rem;color:var(--mui-success-text);">+8.7%</small></span></div>
+       <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:70%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div></div>
+       <div class="bm-tel-sub mono"><span>OCF $8.87B (Q4 $3.30B)</span><span>CapEx $2.67B (7.8% 营收)</span></div>
+      </div>
+      <div class="bm-tel-item">
+       <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="FY26 股东回报 &amp; 非GAAP 稀释 EPS" data-i18n-en="Capital Return &amp; Non-GAAP EPS">FY26 股东回报 &amp; 非GAAP 稀释 EPS</span><span class="bm-tel-val mono">$4.75B / $12.89</span></div>
+       <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:82%;"></div></div>
+       <div class="bm-tel-sub mono"><span>回购 $3.18B + 分红 $1.57B</span><span>Q1 FY27E 指引 $11.10B</span></div>
+      </div>
+     </div>
+    </aside>
+   </section>
+
+   <!-- M1: 5-NODE VALUE PIPELINE -->
+   <section id="mod-pipeline" class="bm-panel">
+    <div class="bm-panel-head">
+     <div>
+      <span class="bm-kicker mono">MODULE 01 · END-TO-END VALUE CAPTURE PIPELINE</span>
+      <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从原子级材料研发到每股收益复利" data-i18n-en="5-Node Value-Chain Pipeline: From Atomic R&amp;D to EPS Compounding">五阶商业价值传导沙盘：从原子级材料研发到每股收益复利</h2>
+      <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解应用材料的护城河来源、客户绑定机制与核心量化指标。" data-i18n-en="Select any node in the horizontal value chain to inspect AMAT's pricing power, lock-in, and unit metrics.">点击下方任一价值链节点，拆解应用材料的护城河来源、客户绑定机制与核心量化指标。</p>
+     </div>
+     <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+    </div>
+
+    <div class="bm-pipeline-track" id="pipelineTrack">
+     <button type="button" class="bm-node-btn active" data-node="0"><div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">EPIC CO-R&amp;D</span></div><div class="bm-node-title" data-i18n-zh="材料科学与 EPIC 联合定义" data-i18n-en="Materials Science &amp; EPIC">材料科学与 EPIC 联合定义</div><div class="bm-node-kpi mono">$4.18B 研发 · 15 家生态伙伴</div></button>
+     <button type="button" class="bm-node-btn" data-node="1"><div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">BROADEST TOOLBOX</span></div><div class="bm-node-title" data-i18n-zh="最全 WFE 集成设备矩阵" data-i18n-en="Broadest Integrated Toolbox">最全 WFE 集成设备矩阵</div><div class="bm-node-kpi mono">5大工艺 #1 · 54.9% 毛利率</div></button>
+     <button type="button" class="bm-node-btn" data-node="2"><div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">AI INFLECTIONS</span></div><div class="bm-node-title" data-i18n-zh="GAA / HBM / 先进封装卡位" data-i18n-en="GAA, HBM &amp; Packaging">GAA / HBM / 先进封装卡位</div><div class="bm-node-kpi mono">DRAM 占设备 33% · 封装 +70%</div></button>
+     <button type="button" class="bm-node-btn" data-node="3"><div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">AGS ANNUITY</span></div><div class="bm-node-title" data-i18n-zh="AGS 装机底座与订阅年金" data-i18n-en="AGS Installed-Base Annuity">AGS 装机底座与订阅年金</div><div class="bm-node-kpi mono">$6.90B 营收 · &gt;90% 合约续约</div></button>
+     <button type="button" class="bm-node-btn" data-node="4"><div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">CAPITAL RETURN</span></div><div class="bm-node-title" data-i18n-zh="现金转化与 80–100% FCF 回馈" data-i18n-en="FCF &amp; 80–100% Buyback Return">现金转化与 80–100% FCF 回馈</div><div class="bm-node-kpi mono">FY26 EPS +45.7% 至 $12.62</div></button>
+    </div>
+
+    <div class="bm-node-inspector" id="nodeInspector">
+     <div class="bm-ins-prose">
+      <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · INFLECTION-FOCUSED R&amp;D &amp; EPIC CENTER</span>
+      <h3 id="nodeTitle">材料工程先发定义权：在晶圆厂量产前 3–5 年锁定工艺配方（Recipe Lock-In）</h3>
+      <p id="nodeDesc">半导体制造已从单纯的微缩转向“原子级材料重塑”。应用材料每年投入 $41.84亿（占营收 12.1%）研发费用，并于 2026 年 10 月正式揭幕投资规模达 $50亿的硅谷 EPIC 中心，将台积电、英特尔、三星、SK 海力士、美光等 15 家顶尖芯片商与高校科学家引入同一座洁净室大楼并行开发，把材料创新到量产的周期缩短一半。</p>
+      <div class="bm-ins-formula mono" id="nodeFormula">商业传导：早期联合研发锁定工艺基准配方 (POR) → 量产阶段形成极高良率切换成本 → 支撑 50%+ 长期毛利中枢</div>
+     </div>
+     <div class="bm-ins-kpis" id="nodeKpis">
+      <div class="bm-ins-card"><b class="mono">$4.18B</b><span>FY2026 研发与工程投入 (+17.2%)</span></div>
+      <div class="bm-ins-card"><b class="mono">$5.0B</b><span>硅谷 EPIC 协同研发中心规划投资</span></div>
+      <div class="bm-ins-card"><b class="mono">15 家</b><span>EPIC 首批签约芯片/伙伴/高校</span></div>
+      <div class="bm-ins-card"><b class="mono">2x 提速</b><span>并行开发缩短工艺商业化周期</span></div>
+     </div>
+    </div>
+   </section>
+
+   <!-- M2: PROFIT POOL WATERFALL & SEGMENTS -->
+   <section id="mod-profit-pool" class="bm-split-75">
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div>
+       <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN EXPANSION</span>
+       <h3 data-i18n-zh="FY2026 $344.5亿 价值转化瀑布流与五年毛利跃升" data-i18n-en="FY2026 $34.45B P&amp;L Waterfall &amp; 5Y Margin Expansion">FY2026 $344.5亿 价值转化瀑布流与五年毛利跃升</h3>
+      </div>
+      <div class="mui-segmented" id="pChartTabs">
+       <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→FCF 瀑布流" data-i18n-en="Rev → FCF Waterfall">营收→FCF 瀑布流</button>
+       <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="5年利润率扩张" data-i18n-en="5Y Margin Trend">5年利润率扩张</button>
+      </div>
+     </div>
+     <div class="bm-canvas-box"><canvas id="profitCanvas"></canvas></div>
+     <p class="bm-chart-caption">数据来源：<a class="cite-link" href="https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-fourth-quarter-and-fiscal-year-2026/" target="_blank" rel="noopener noreferrer">AMAT FY2026 Q4/全年 8-K ↗</a>。FY2026 GAAP 毛利率站上 50.0%（Q4 达 50.4%），营业利润率达 32.2%（Q4 达 35.1%），在 CapEx 投向 EPIC 中心与新加坡工厂的同时仍产生 $6.20B 自由现金流。</p>
+    </div>
+
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div>
+       <span class="bm-kicker mono">MODULE 02B · REVENUE &amp; PROFIT POOL DISAGGREGATION</span>
+       <h3 data-i18n-zh="四大核心收入引擎拆解（设备 + 服务闭环）" data-i18n-en="4-Tier Revenue &amp; Profit Engine Disaggregation">四大核心收入引擎拆解（设备 + 服务闭环）</h3>
+      </div>
+      <div class="mui-segmented" id="tierFilter">
+       <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+       <button type="button" class="mui-seg-btn" data-tcat="sys" data-i18n-zh="半导体设备" data-i18n-en="Systems">半导体设备</button>
+       <button type="button" class="mui-seg-btn" data-tcat="svc" data-i18n-zh="服务与显示" data-i18n-en="AGS/Other">服务与显示</button>
+      </div>
+     </div>
+     <div class="bm-tier-list" id="tierList">
+      <div class="bm-tier-card" data-tier="sys"><div class="bm-tier-top"><span class="bm-tier-name">① 先进逻辑与代工设备 (Foundry &amp; Logic)</span><span class="mui-chip mui-chip-primary mono">FY26 ~$16.47B (63%设备)</span></div><div class="bm-tier-desc">围绕 2nm GAA 全环绕栅极与背面供电（BSPDN）提供外延、选择性刻蚀、CMP 与离子注入，Q4 同比大增 +44% 至 ~$4.64B。</div></div>
+      <div class="bm-tier-card" data-tier="sys"><div class="bm-tier-top"><span class="bm-tier-name">② DRAM / HBM 与先进封装设备</span><span class="mui-chip mui-chip-success mono">FY26 ~$7.84B (Q4 占33%)</span></div><div class="bm-tier-desc">AI 高带宽内存（HBM）驱动 Q4 DRAM 营收同比暴涨 +93% 至 ~$2.64B；先进封装 CY26 增速超 70%，联手 Besi 卡位混合键合。</div></div>
+      <div class="bm-tier-card" data-tier="svc"><div class="bm-tier-top"><span class="bm-tier-name">③ Applied Global Services (AGS 装机年金)</span><span class="mui-chip mui-chip-violet mono">$6.90B · 30.5% Q4 营业利润率</span></div><div class="bm-tier-desc">为全球庞大存量机台提供备件、驻场维保与工厂自动化软件；约 2/3 为长期合约，续约率超 90%、平均期限近 3 年，构筑现金流底仓。</div></div>
+      <div class="bm-tier-card" data-tier="svc"><div class="bm-tier-top"><span class="bm-tier-name">④ 闪存 NAND 与新型显示设备 (Flash &amp; Display)</span><span class="mui-chip mui-chip-warning mono">Flash 7%设备 · Display $1.40B</span></div><div class="bm-tier-desc">Q4 闪存设备占比回升至 9%；Display（纳入 Other 口径）全年营收 $1.40B，聚焦高世代 OLED 面板工艺升级。</div></div>
+     </div>
+    </div>
+   </section>
+
+   <!-- M3: FAB COHORT LTV & WFE MIX -->
+   <section id="mod-cohort" class="bm-split-57">
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div><span class="bm-kicker mono">MODULE 03A · FAB CUSTOMER UNIT ECONOMICS</span><h3 data-i18n-zh="晶圆厂分层价值模型：为什么跨工艺协同会产生复利？" data-i18n-en="Fab Cohort Economics: Why Integrated Toolsets Compound LTV">晶圆厂分层价值模型：为什么跨工艺协同会产生复利？</h3></div>
+     </div>
+     <div class="mui-segmented" id="cohortTabs">
+      <button type="button" class="mui-seg-btn" data-cohort="icaps">ICAPS 成熟制程厂</button>
+      <button type="button" class="mui-seg-btn active" data-cohort="gaa">先进逻辑 GAA 晶圆厂</button>
+      <button type="button" class="mui-seg-btn" data-cohort="hbm">HBM / 3D DRAM 厂</button>
+     </div>
+     <div class="bm-cohort-metrics" id="cohortMetrics">
+      <div class="bm-cohort-stat"><div class="lbl">核心采购设备组合</div><div class="val" style="font-size:0.94rem;">外延 + ALD + CMP + 离子注入 + eBeam</div><div class="delta">多步骤真空腔体协同集成 (IMS)</div></div>
+      <div class="bm-cohort-stat"><div class="lbl">工艺节点切换难度</div><div class="val mono">极高 (POR 锁定)</div><div class="delta">GAA 步骤数较 FinFET 大幅跃升</div></div>
+      <div class="bm-cohort-stat"><div class="lbl">AGS 年度维保绑定率</div><div class="val mono">&gt;90% 续约</div><div class="delta">3年期订阅合约保障良率爬坡</div></div>
+      <div class="bm-cohort-stat"><div class="lbl">设备板块毛利率支撑</div><div class="val mono">~55% – 58%</div><div class="delta">高难度配方带来强溢价能力</div></div>
+     </div>
+     <div class="bm-ratchet-note" id="cohortNote"><strong>集成材料解决方案（IMS）锁定效应：</strong>在 2nm GAA 与背面供电（BSPDN）制程中，薄膜沉积、表面处理与量测必须整合在同一真空系统内防止氧化——应用材料凭借全球最完整的设备组合把单机升级为“集成平台”，令单一设备竞争对手极难切入。</div>
+    </div>
+
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div><span class="bm-kicker mono">MODULE 03B · SEMICONDUCTOR SYSTEMS MIX &amp; WFE SHARE</span><h3 data-i18n-zh="半导体设备下游结构演进与核心工艺市占领先度" data-i18n-en="Semiconductor Systems Mix &amp; Key Process Leadership">半导体设备下游结构演进与核心工艺市占领先度</h3></div>
+      <div class="mui-segmented" id="cChartTabs">
+       <button type="button" class="mui-seg-btn active" data-cview="mix" data-i18n-zh="下游营收结构" data-i18n-en="End-Market Mix">下游营收结构</button>
+       <button type="button" class="mui-seg-btn" data-cview="geo" data-i18n-zh="FY26 区域营收分布" data-i18n-en="FY26 Geography">FY26 区域营收分布</button>
+      </div>
+     </div>
+     <div class="bm-canvas-box"><canvas id="cohortCanvas"></canvas></div>
+     <p class="bm-chart-caption">结构趋势：DRAM 占设备营收比重由 FY25 的 26% 跃升至 FY26 全年的 30%（Q4 达 33%）；区域方面中国大陆营收占比由 FY24 的 37.2%、FY25 的 30.1% 健康回落至 FY26 的 27.1%（Q4 仅 25.4%），台湾地区 Q4 以 28.0% 跃居第一大市场。</p>
+    </div>
+   </section>
+
+   <!-- M4: CAPITAL ALLOCATION & 5Y EPS SIMULATOR -->
+   <section id="mod-capital" class="bm-split-66">
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div><span class="bm-kicker mono">MODULE 04A · CAPITAL RETURN &amp; SHARE RETIREMENT</span><h3 data-i18n-zh="资产负债表韧性与 80–100% FCF 股东回馈引擎" data-i18n-en="Balance Sheet Strength &amp; 80–100% FCF Shareholder Return">资产负债表韧性与 80–100% FCF 股东回馈引擎</h3></div>
+      <div class="mui-segmented" id="kChartTabs">
+       <button type="button" class="mui-seg-btn active" data-kview="return" data-i18n-zh="回购与股本缩减" data-i18n-en="Buybacks &amp; Shares">回购与股本缩减</button>
+       <button type="button" class="mui-seg-btn" data-kview="bs" data-i18n-zh="现金与债务结构" data-i18n-en="Cash vs Debt">现金与债务结构</button>
+      </div>
+     </div>
+     <div class="bm-canvas-box"><canvas id="capitalCanvas"></canvas></div>
+     <p class="bm-chart-caption">财务纪律：管理层承诺将 80%–100% 自由现金流回馈股东（FY26 回购 $3.18B + 分红 $1.57B，其中 Q4 单季加速回购 $2.00B），加权稀释股本从 FY23 约 845M 股持续缩减至 FY26 的 <strong>799M 股</strong>，同时保持 $9.34B 现金及短期投资（净现金 +$2.81B）与 $3.59B 客户预收合同负债。</p>
+    </div>
+
+    <div class="bm-subpanel">
+     <div class="bm-subhead">
+      <div><span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EPS COMPOUNDER</span><h3 data-i18n-zh="FY2027–FY2031 商业模式复利与 EPS 推演器" data-i18n-en="FY2027–FY2031 Compounding &amp; EPS Simulator">FY2027–FY2031 商业模式复利与 EPS 推演器</h3></div>
+      <div class="mui-segmented" id="simPresets">
+       <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="消化周期" data-i18n-en="Digestion">消化周期</button>
+       <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="AI 基准" data-i18n-en="AI Base">AI 基准</button>
+       <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="WFE 超周期" data-i18n-en="Supercycle">WFE 超周期</button>
+      </div>
+     </div>
+     <div class="bm-sim-sliders">
+      <div class="bm-slider-row"><div class="bm-slider-lbl"><span data-i18n-zh="半导体设备年化增速 (Systems CAGR)" data-i18n-en="Semiconductor Systems CAGR">半导体设备年化增速 (Systems CAGR)</span><b class="mono" id="lblSysCagr">11.0%</b></div><input type="range" id="inpSysCagr" min="-2" max="20" step="0.5" value="11.0" /></div>
+      <div class="bm-slider-row"><div class="bm-slider-lbl"><span data-i18n-zh="AGS 服务年化增速 (AGS CAGR)" data-i18n-en="AGS Services CAGR">AGS 服务年化增速 (AGS CAGR)</span><b class="mono" id="lblAgsCagr">12.5%</b></div><input type="range" id="inpAgsCagr" min="5" max="18" step="0.5" value="12.5" /></div>
+      <div class="bm-slider-row"><div class="bm-slider-lbl"><span data-i18n-zh="年均净回购缩股率 (Annual Share Retirement)" data-i18n-en="Annual Share Retirement">年均净回购缩股率 (Annual Share Retirement)</span><b class="mono" id="lblBuyRate">2.0%</b></div><input type="range" id="inpBuyRate" min="0" max="4.5" step="0.2" value="2.0" /></div>
+     </div>
+     <div class="bm-sim-outputs">
+      <div class="bm-sim-out"><b class="mono" id="simRevOut">$58.1B</b><span data-i18n-zh="FY31E 总营收" data-i18n-en="FY31E Revenue">FY31E 总营收</span></div>
+      <div class="bm-sim-out"><b class="mono" id="simGmOut">51.4%</b><span data-i18n-zh="FY31E 毛利率" data-i18n-en="FY31E Gross Margin">FY31E 毛利率</span></div>
+      <div class="bm-sim-out"><b class="mono" id="simEpsOut">$25.18</b><span data-i18n-zh="FY31E 摊薄 EPS" data-i18n-en="FY31E Diluted EPS">FY31E 摊薄 EPS</span></div>
+      <div class="bm-sim-out"><b class="mono" id="simCagrOut">+14.3%</b><span data-i18n-zh="5年 EPS 复合增速" data-i18n-en="5Y EPS CAGR">5年 EPS 复合增速</span></div>
+     </div>
+     <div class="bm-canvas-box" style="height:175px;"><canvas id="simMiniCanvas"></canvas></div>
+    </div>
+   </section>
+
+   <!-- M5: PEER MATRIX & STRESS AUDIT -->
+   <section id="mod-matrix" class="bm-panel">
+    <div class="bm-panel-head">
+     <div>
+      <span class="bm-kicker mono">MODULE 05 · WFE PEER BENCHMARKING &amp; RISK STRESS AUDIT</span>
+      <h2 class="bm-h2" data-i18n-zh="全球半导体设备巨头商业模式对标与三大风险压测" data-i18n-en="Global Semi-Cap Peer Matrix &amp; Three Key Stress Audits">全球半导体设备巨头商业模式对标与三大风险压测</h2>
+      <p class="bm-head-desc" data-i18n-zh="横向对比 AMAT 与 ASML、Lam Research、KLA 及产业链伙伴的毛利、服务底座与核心风险。" data-i18n-en="Benchmarking AMAT against ASML, Lam Research, KLA, and NVIDIA on margins, recurring base, and risk exposure.">横向对比 AMAT 与 ASML、Lam Research、KLA 及产业链伙伴的毛利、服务底座与核心风险。</p>
+     </div>
+     <div class="mui-segmented" id="peerFilter">
+      <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (5)" data-i18n-en="All Peers (5)">全部标杆 (5)</button>
+      <button type="button" class="mui-seg-btn" data-pcat="wfe" data-i18n-zh="前道晶圆设备" data-i18n-en="WFE Leaders">前道晶圆设备</button>
+      <button type="button" class="mui-seg-btn" data-pcat="eco" data-i18n-zh="算力/封装延伸" data-i18n-en="Compute/Packaging">算力/封装延伸</button>
+     </div>
+    </div>
+
+    <div class="bm-table-wrap">
+     <table class="bm-table" id="peerTable">
+      <thead><tr><th>公司与代码</th><th>核心工艺卡位</th><th>毛利率水平</th><th>服务年金底座</th><th>总市值规模 (2026.11)</th><th>护城河与核心脆弱点</th></tr></thead>
+      <tbody>
+       <tr class="is-amat" data-row-cat="wfe eco"><td><strong>Applied Materials (AMAT)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td><td>沉积/外延/CMP/注入全栈 + 封装</td><td class="mono">50.0% (设备 54.9%)</td><td class="mono">$6.90B (20%营收, &gt;90%续约)</td><td class="mono">~$294B–$308B</td><td>最全工具箱与 EPIC 协同；受出口管制及存储周期影响</td></tr>
+       <tr data-row-cat="wfe"><td><strong>ASML (ASML)</strong></td><td>EUV / High-NA EUV 光刻垄断</td><td class="mono">~51%–53%</td><td class="mono">Installed Base ~€12B+</td><td class="mono">~$577B–$589B</td><td>EUV 100% 独占；对单台巨型机台交付节奏与高资本敏感</td></tr>
+       <tr data-row-cat="wfe"><td><strong>Lam Research (LRCX)</strong></td><td>NAND 介质刻蚀与原子层沉积</td><td class="mono">~50.6%</td><td class="mono">CSBG ~1/3 营收</td><td class="mono">~$277B–$292B</td><td>存储刻蚀绝对龙头；内存资本开支弹性与周期波动更大</td></tr>
+       <tr data-row-cat="wfe"><td><strong>KLA Corp (KLAC)</strong></td><td>晶圆缺陷检测与过程控制</td><td class="mono">~61%–62%</td><td class="mono">Services ~$3.4B+</td><td class="mono">~$188B</td><td>检测细分最高毛利软件属性；整体 TAM 规模小于沉积刻蚀</td></tr>
+       <tr data-row-cat="eco"><td><strong>NVIDIA (NVDA)</strong></td><td>AI GPU 与 CUDA 算力生态</td><td class="mono">~71%–75%</td><td class="mono">AI Enterprise 软件</td><td class="mono">~$3T+</td><td>AMAT 下游算力需求总引擎；依赖上游台积电/内存扩产</td></tr>
+      </tbody>
+     </table>
+    </div>
+
+    <div class="bm-stress-grid">
+     <div class="bm-stress-card">
+      <div><span class="mui-chip mui-chip-error mono">STRESS 01 · EXPORT CONTROLS &amp; BIS</span><h4>地缘出口管制与合规成本：中国占比降至 25.4%</h4><p>FY2026 公司计提 $253M 与美国商务部 BIS 就过往出口合规事项达成和解；同时中国大陆营收占比已从 FY24 的 37.2% 稳步降至 Q4 FY26 的 25.4%，被台湾 (+59% YoY) 与美国 (+101% YoY) 增量完全对冲 <a class="cite-link" href="https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-fourth-quarter-and-fiscal-year-2026/" target="_blank" rel="noopener noreferrer">8-K 披露 ↗</a>。</p></div>
+      <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：非美区域增量能否持续覆盖成熟节点出口限制</label>
+     </div>
+     <div class="bm-stress-card">
+      <div><span class="mui-chip mui-chip-warning mono">STRESS 02 · WFE DIGESTION CYCLE</span><h4>客户洁净室瓶颈与 2028 年资本开支消化风险</h4><p>半导体重资产扩产历来存在“建设—消化”周期。目前晶圆厂正加速解决洁净室空间约束以提前接货（Q1 FY27 指引高达 $11.10B），AGS 逾 $6.9B 订阅年金与 30.5% 利润率构成底部安全垫。</p></div>
+      <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：合同负债 ($3.59B) 与 Q1 FY27 交付兑现度</label>
+     </div>
+     <div class="bm-stress-card">
+      <div><span class="mui-chip mui-chip-violet mono">STRESS 03 · TAX &amp; EPIC CAPEX</span><h4>全球最低税率 13% 抬升与 $5B EPIC 折旧压力</h4><p>CFO Brice Hill 提示 FY27 有效税率将因全球最低税升至约 13%，且因 EPIC 中心与新加坡扩产，FY26 CapEx 达 $2.67B（同比增长 18%）并新聘 5,000 名员工，需关注规模效应对 50%+ 毛利率的持续支撑。</p></div>
+      <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：Non-GAAP 毛利率能否稳守 50.5%+ 区间</label>
+     </div>
+    </div>
+   </section>
+
+   <!-- SOURCES -->
+   <section class="bm-panel" aria-label="权威财报与行业信源">
+    <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+     <div><span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span><h2 class="bm-h2" data-i18n-zh="权威财报、SEC 监管文件与第三方研究信源" data-i18n-en="Verified Financial Filings &amp; Industry Research Sources">权威财报、SEC 监管文件与第三方研究信源</h2></div>
+    </div>
+    <div class="bm-sources-grid">
+     <a class="bm-source-item" href="https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-fourth-quarter-and-fiscal-year-2026/" target="_blank" rel="noopener noreferrer"><b>AMAT FY2026 Q4 &amp; Full-Year Release ↗</b><span>官方披露 FY26 $34.45B 创纪录营收、50.0% GAAP 毛利率与 Q1 FY27 $11.10B 指引</span></a>
+     <a class="bm-source-item" href="https://sec-api.io/insights/applied-materials-amat-q4-fy2026-earnings-sec-filing-analysis-10-41bn-revenue-dram-at-33-of-systems-sales-and-an-11-10bn-q1-fy2027-outlook" target="_blank" rel="noopener noreferrer"><b>SEC-API: AMAT Q4 FY2026 Filing Analysis ↗</b><span>深度拆解 DRAM 占设备 33%、各区域增长与 FY22–FY26 财务趋势</span></a>
+     <a class="bm-source-item" href="https://www.appliedmaterials.com/us/en/newsroom/press-releases/101226-applied-unveils-5b-epic-center-silicon-valley-accelerate-innovation-ai-era.html" target="_blank" rel="noopener noreferrer"><b>AMAT $5B EPIC Center Official Release ↗</b><span>全球最大半导体协同研发中心揭幕及 15 家创始/创新/高校合作伙伴披露</span></a>
+     <a class="bm-source-item" href="https://ir.appliedmaterials.com/static-files/af687923-06c7-4b43-a7a5-45750717f3ca" target="_blank" rel="noopener noreferrer"><b>Applied Materials FY2025 Form 10-K ↗</b><span>商业模式分部界定、供应链分布、客户集中度与 Applied Global University 披露</span></a>
+     <a class="bm-source-item" href="https://crackthemarket.substack.com/p/applied-materials-the-broadest-toolbox" target="_blank" rel="noopener noreferrer"><b>Deep Dive: The Broadest Toolbox in the AI Fab ↗</b><span>沉积/外延/CMP/封装市占率、AGS 90% 续约年金与 80% WFE 增长驱动分析</span></a>
+     <a class="bm-source-item" href="https://www.fool.com/earnings/call-transcripts/2026/08/20/applied-materials-amat-q3-2026-earnings-call-transcript/" target="_blank" rel="noopener noreferrer"><b>AMAT Q3 FY2026 Earnings Call Transcript ↗</b><span>Gary Dickerson 与 Brice Hill 关于先进封装 +70%、13% 税率及 80–100% FCF 回购说明</span></a>
+    </div>
+   </section>
+  </main>
+ </div>
+
+ 
+<script src="../../_shared/applied_materials_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

@@ -268,7 +268,7 @@
           tooltip.innerHTML = hit.html;
           tooltip.style.display = 'block';
           tooltip.style.left = Math.min(window.innerWidth - 260, e.clientX + 14) + 'px';
-          tooltip.style.top = Math.max(12, e.clientY - 36) + 'px';
+          tooltip.style.top = Math.max(8, Math.min(window.innerHeight - tip.offsetHeight - 8, e.clientY - 36)) + 'px';
         } else {
           tooltip.style.display = 'none';
         }

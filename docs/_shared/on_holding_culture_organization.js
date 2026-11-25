@@ -575,8 +575,8 @@
     if (hit) {
      tip.innerHTML = hit.html;
      tip.style.display = 'block';
-     tip.style.left = Math.min(window.innerWidth - 300, e.clientX + 14) + 'px';
-     tip.style.top = Math.max(12, e.clientY - 30) + 'px';
+     tip.style.left = Math.max(8, Math.min(window.innerWidth - tip.offsetWidth - 8, e.clientX + 14)) + 'px';
+     tip.style.top = Math.max(8, Math.min(window.innerHeight - tip.offsetHeight - 8, e.clientY - 30)) + 'px';
     } else tip.style.display = 'none';
    });
    c.addEventListener('mouseleave', function () { tip.style.display = 'none'; });

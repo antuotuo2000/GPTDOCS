@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="阿斯麦 ASML Holding N.V. (NASDAQ: ASML) 商业模式全景架构拆解：100% EUV 光刻垄断、系统级生态编排、€82亿高毛利装机服务收费站、客户预付款负营运资本与 €120亿回购复利机器（基于 FY2025 20-F 与 Q3 2026 最新财报）。" />
+ <title>阿斯麦 ASML (NASDAQ: ASML) 商业模式架构深度拆解 | 数据中心</title>
+ 
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/asml_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">ASML</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <span class="crumb-link hide-sm" data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="阿斯麦 (ASML) 商业模式架构拆解" data-i18n-en="ASML Holding N.V. Business Model Architecture">阿斯麦 (ASML) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: ASML</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">FY25 €32.7B · Q3'26 €11.7B</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">ASML · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="阿斯麦商业模式架构图谱" data-i18n-en="ASML Business Model Blueprint">阿斯麦商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="100% EUV 物理垄断 × 系统编排轻资产 × €82亿装机服务收费站 × 客户预付款浮存与回购注销" data-i18n-en="100% EUV Monopoly × System Orchestration × €8.2B Installed Base Tollbooth × Customer Prepayments">100% EUV 物理垄断 × 系统编排轻资产 × €82亿装机服务收费站 × 客户预付款浮存与回购注销</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="光刻垄断 + 装机收费站" data-i18n-en="EUV Monopoly + IBM">光刻垄断 + 装机收费站</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="FY25 / Q3'26 毛利率" data-i18n-en="FY25 / Q3'26 GM">FY25 / Q3'26 毛利率</span>
+ <span class="sidebar-mini-val mono">52.8% → 57.5%</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="2025年末在手积压订单" data-i18n-en="Year-End Backlog">2025年末在手积压订单</span>
+ <span class="sidebar-mini-val mono">€38.80B</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="架构目录"><div class="co-side-nav" id="companySubfolderHub" data-co-key="ASML"><a class="co-side-home" href="../../index.html">首页</a></div>
+ <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck & Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与IBM拆解" data-i18n-en="Profit Waterfall & IBM Stack">利润池瀑布流与IBM拆解</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="光刻强度棘轮与单机LTV" data-i18n-en="Litho Intensity & Tool LTV">光刻强度棘轮与单机LTV</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="股东回报与5年EPS推演器" data-i18n-en="Capital Return & 5Y EPS Lab">股东回报与5年EPS推演器</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="巨头范式矩阵与风险压测" data-i18n-en="Peer Matrix & Stress Audit">巨头范式矩阵与风险压测</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <main class="bm-workspace main-content">
+ <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：100% EUV 物理垄断 × 装机全生命周期收费站" data-i18n-en="ARCHETYPE: 100% EUV Monopoly × Installed-Base Tollbooth">商业范式：100% EUV 物理垄断 × 装机全生命周期收费站</span>
+ <span class="mui-chip mui-chip-success mono">FY2025 20-F · Q3 2026 审计口径</span>
+ <span class="mui-chip mui-chip-violet mono">ROIC 35.5% · ROE 49.0%</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="阿斯麦 ASML 商业模式解构：<span class='bm-gradient-txt'>用全栈系统编排锁定算力物理咽喉，靠光刻设备与20年装机服务双重复利</span>" data-i18n-en="Deconstructing ASML's Business Model: <span class='bm-gradient-txt'>Orchestrating the Physical Chokepoint of AI Compute via EUV &amp; 20-Year IBM Compounding</span>">
+ 阿斯麦 ASML 商业模式解构：<span class="bm-gradient-txt">用全栈系统编排锁定算力物理咽喉，靠光刻设备与20年装机服务双重复利</span>
+ </h1>
+
+ <p class="bm-lead" id="heroLeadText">
+ 市场常将阿斯麦简单视为“重资产周期性半导体设备商”，但其底层经济模型实为一台<strong>“系统级架构编排（System Orchestration）+ 永续装机年金”</strong>双引擎印钞机：第一阶以全球唯一可量产 13.5nm 极紫外光刻（EUV）与即将商用的 0.55 High-NA EUV 系统卡住 2nm 及以下 AI 芯片的物理瓶颈，在 5,000 余家顶级精密供应链伙伴（如持股 24.9% 的蔡司光学 Carl Zeiss SMT）协同下
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/937966/000134100416001726/ex99-1.htm" target="_blank" rel="noopener noreferrer">Zeiss 24.9% 股权协议 ↗</a>，
+ 将 FY2025 营收推升至 <strong>€326.67 亿（+15.6% YoY，综合毛利率 52.8%）</strong>
+ <a class="cite-link" href="https://investor.asml.com/news-releases/news-release-details/q4-2025-financial-results" target="_blank" rel="noopener noreferrer">FY25 官方财报 ↗</a>，并于 2026 年 Q3 创下单季 <strong>€117 亿营收、57.5% 毛利率</strong>新高（全年指引上调至 €440亿–€450亿）
+ <a class="cite-link" href="https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>；
+ 第二阶依托全球逾 <strong>314 台已装机 EUV 及数千台 DUV</strong>（每台服役 20–30 年），征收高达 <strong>€81.93 亿（FY25）</strong>且在 Q3 2026 跳升至单季 <strong>€33 亿</strong>的高粘性装机管理（IBM）软件升级与维保服务费；第三阶借助客户大额预付款与轻资产总装模式，把 <strong>€106亿–€111亿</strong> 年度自由现金流通过 <strong>€120 亿新回购计划</strong>与连续增长股息返还股东
+ <a class="cite-link" href="https://mlq.ai/research/asml-the-sole-architect-of-advanced-chip-manufacturing/" target="_blank" rel="noopener noreferrer">MLQ 深度拆解 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 系统编排轻资产杠杆" data-i18n-en="① Orchestration Leverage">① 系统编排轻资产杠杆</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 装机年金剪刀差" data-i18n-en="② IBM Annuity Scissors">② 装机年金剪刀差</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 客户共投浮存金" data-i18n-en="③ Customer Co-Funding">③ 客户共投浮存金</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 单台 EUV 20年全周期价值 = 初始卖机收入 (€2亿–€3.8亿) + 20年 × 产能/套刻升级软件与维保 (IBM 约占设备原值 80%–100%)
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 与自建全产业链的重资产制造不同，ASML 将 <strong>85%+ 的零部件生产外包给超过 5,000 家精密供应商</strong>（如蔡司光学、TRUMPF 激光），自己专注系统集成架构、控制软件与计算光刻算法，从而以 35.5% 的超高 ROIC 撬动全球算力基建。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right Telemetry Ledger -->
+ <aside class="bm-telemetry-ledger" aria-label="FY2025–2026 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="FY2025 &amp; 2026E 商业模型遥测账本" data-i18n-en="FY2025 &amp; 2026E Model Telemetry">FY2025 &amp; 2026E 商业模型遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://investor.asml.com/annual-reports" target="_blank" rel="noopener noreferrer">2025 年报 ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY2025 总营收 (系统 74.9% / 装机服务 25.1%)" data-i18n-en="FY25 Sales (74.9% Systems / 25.1% IBM)">FY2025 总营收 (系统 74.9% / 装机服务 25.1%)</span>
+ <span class="bm-tel-val mono">€32.67B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:74.9%;"></div>
+ <div style="width:25.1%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Systems €24.47B (EUV €11.6B)</span><span>IBM €8.19B (+26.2%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="2026 年加速跃升：Q3 单季与全年指引" data-i18n-en="2026 Acceleration: Q3 &amp; FY26 Guide">2026 年加速跃升：Q3 单季与全年指引</span>
+ <span class="bm-tel-val mono">€44–45B <small style="font-size:0.74rem;color:var(--mui-success-text);">~56% GM</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:88%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q3'26 €11.7B (GM 57.5%)</span><span>Q4'26E €14.2B–€15.2B</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY2025 净利润与自由现金流 (FCF)" data-i18n-en="FY25 Net Income &amp; Free Cash Flow">FY2025 净利润与自由现金流 (FCF)</span>
+ <span class="bm-tel-val mono">€9.61B / €10.6B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:92%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>净利率 29.4% · EPS €24.73</span><span>ROIC 35.5% · ROE 49.0%</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="在手积压订单与研发护城河" data-i18n-en="Order Backlog &amp; R&amp;D Moat">在手积压订单与研发护城河</span>
+ <span class="bm-tel-val mono">€38.80B / €4.7B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:85%;background:#7C3AED;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q4'25 订单 €13.2B</span><span>新回购 €12B (至2028)</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END VALUE CAPTURE PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从精密供应链编排到股东现金复利" data-i18n-en="5-Node Value-Chain Pipeline: From Precision Orchestration to Cash Compounding">五阶商业价值传导沙盘：从精密供应链编排到股东现金复利</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解 ASML 如何在不自建重资产零件厂的前提下掌握 100% 定价权。" data-i18n-en="Select any node in the horizontal value chain to inspect ASML's orchestration moat and pricing power.">点击下方任一价值链节点，拆解 ASML 如何在不自建重资产零件厂的前提下掌握 100% 定价权。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">ORCHESTRATION</span></div>
+ <div class="bm-node-title" data-i18n-zh="系统编排与关键子系统锁死" data-i18n-en="System Orchestration &amp; Locks">系统编排与关键子系统锁死</div>
+ <div class="bm-node-kpi mono">5,000+ 供应商 · 蔡司 24.9% 股权</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">PRICING POWER</span></div>
+ <div class="bm-node-title" data-i18n-zh="EUV 物理垄断与代际提价梯" data-i18n-en="EUV Monopoly &amp; ASP Ladder">EUV 物理垄断与代际提价梯</div>
+ <div class="bm-node-kpi mono">NXE €2.2亿 → EXE €3.8亿+</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">HOLISTIC LITHO</span></div>
+ <div class="bm-node-title" data-i18n-zh="全息光刻计算软件与量测闭环" data-i18n-en="Holistic Lithography Lock-In">全息光刻计算软件与量测闭环</div>
+ <div class="bm-node-kpi mono">YieldStar + HMI + Brion 软件</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">IBM TOLLBOOTH</span></div>
+ <div class="bm-node-title" data-i18n-zh="20年装机服务与晶圆产能升级" data-i18n-en="20-Year IBM &amp; Field Upgrades">20年装机服务与晶圆产能升级</div>
+ <div class="bm-node-kpi mono">FY25 €8.19B · Q3'26 €3.3B</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">CAPITAL RETURN</span></div>
+ <div class="bm-node-title" data-i18n-zh="客户预付浮存与回购分红机器" data-i18n-en="Prepayments &amp; Capital Return">客户预付浮存与回购分红机器</div>
+ <div class="bm-node-kpi mono">€12B 回购 · 股息 €7.50 (+17%)</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · SYSTEM ARCHITECT &amp; CHOKEPOINT LOCK</span>
+ <h3 id="nodeTitle">系统集成编排者：85% 零部件外包，却握有最稀缺光学与光源的排他控制权</h3>
+ <p id="nodeDesc">
+ 一台 High-NA EUV 光刻机重逾 150 吨、由超 10 万个零件组成，仅光学系统就包含约 40,000 个零件（12 吨）。ASML 并不自己打磨镜片或生产普通机架，而是通过“轻资产总装 + 战略股权/收购锁定咽喉”模式：2013 年斥资 €19.5亿收购美国光源商 Cymer，2016 年斥资 €10亿入股德国 Carl Zeiss SMT 24.9% 股权，确保全球唯一能造原子级平滑 EUV 反射镜的产能排他绑定 ASML。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 商业传导：轻资产系统编排（CapEx 占营收低）+ 关键核心自控 → 资本效率 ROIC 高达 35.5%，免受重资产晶圆厂式折旧拖累
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">24.9%</b><span>持股德国 Carl Zeiss SMT 股权</span></div>
+ <div class="bm-ins-card"><b class="mono">5,000+</b><span>全球深度协同精密供应商网络</span></div>
+ <div class="bm-ins-card"><b class="mono">40,000个</b><span>High-NA EUV 光学模组精密零件</span></div>
+ <div class="bm-ins-card"><b class="mono">35.5%</b><span>FY2025 投入资本回报率 (ROIC)</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: PROFIT POOL WATERFALL + IBM 4-TIER TOLLBOOTH -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN EXPANSION</span>
+ <h3 data-i18n-zh="FY2025 €326.7亿 价值转化瀑布流与5年毛利率阶梯" data-i18n-en="FY2025 €32.67B P&amp;L Waterfall &amp; 5Y Margin Trajectory">FY2025 €326.7亿 价值转化瀑布流与5年毛利率阶梯</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→FCF 瀑布流" data-i18n-en="Rev → FCF Waterfall">营收→FCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="5年毛利与净利跃升" data-i18n-en="5Y Margin Expansion">5年毛利与净利跃升</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 数据来源：<a class="cite-link" href="https://investor.asml.com/news-releases/news-release-details/q4-2025-financial-results" target="_blank" rel="noopener noreferrer">ASML FY2025 官方业绩公报 ↗</a> 与
+ <a class="cite-link" href="https://mlq.ai/research/asml-the-sole-architect-of-advanced-chip-manufacturing/" target="_blank" rel="noopener noreferrer">ASML 财务结构拆解 ↗</a>。
+ 2025 年净利率高达 <strong>29.4%（€9.61B）</strong>，自由现金流更达 <strong>€10.6B–€11.1B（FCF 转化率 &gt;110%）</strong>；2026 Q3 单季毛利率已进一步冲上 <strong>57.5%</strong>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · €8.19B INSTALLED BASE MANAGEMENT (IBM)</span>
+ <h3 data-i18n-zh="装机服务收费站四层收入结构（2026 Q3 跃升至 €3.3B/季）" data-i18n-en="4-Tier Installed Base Tollbooth (Surged to €3.3B in Q3'26)">装机服务收费站四层收入结构（2026 Q3 跃升至 €3.3B/季）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="upg" data-i18n-zh="软件/升级" data-i18n-en="Upgrades">软件/升级</button>
+ <button type="button" class="mui-seg-btn" data-tcat="svc" data-i18n-zh="维保/翻新" data-i18n-en="Service/Refurb">维保/翻新</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="upg">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="① 现场产能与吞吐量升级包 (Field Upgrades)" data-i18n-en="① Field Throughput &amp; Productivity Upgrades">① 现场产能与吞吐量升级包 (Field Upgrades)</span>
+ <span class="mui-chip mui-chip-success mono">极高边际毛利</span>
+ </div>
+ <div class="bm-tier-desc">当晶圆厂受限于交期或新厂房未建好时，向 ASML 购买软件/激光功率升级包，直接在现有厂房内将 NXE 吞吐量从 160 wph 提升至 220 wph（+37%），成为 Q3 2026 超预期核心引擎。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="upg">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="② 计算光刻软件与全息量测联动 (Brion + YieldStar)" data-i18n-en="② Computational Lithography &amp; Holistic Control">② 计算光刻软件与全息量测联动 (Brion + YieldStar)</span>
+ <span class="mui-chip mui-chip-primary mono">软件级订阅壁垒</span>
+ </div>
+ <div class="bm-tier-desc">通过收购 Brion 与 HMI 打造的“设计-光刻-量测”闭环软件授权，实时修正掩膜畸变与套刻误差（Overlay），使客户良率深度绑定 ASML 算法栈。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="svc">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="③ 24/7 驻厂维保、备件与耗材年金 (Service Contracts)" data-i18n-en="③ 24/7 On-Site Maintenance &amp; Spare Parts">③ 24/7 驻厂维保、备件与耗材年金 (Service Contracts)</span>
+ <span class="mui-chip mui-chip-violet mono">314+ EUV 装机底座</span>
+ </div>
+ <div class="bm-tier-desc">每台 EUV 出保固期后即进入高粘性年度维保合同期（锡滴靶材、薄膜 Pellicle 与激光模块高频更换），晶圆厂只要开机生产就必须按月付费，抗周期属性极强。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="svc">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="④ 二手成熟制程翻新与 3D 先进封装 (Refurb &amp; XT:260)" data-i18n-en="④ Mature Node Refurbishment &amp; 3D Packaging">④ 二手成熟制程翻新与 3D 先进封装 (Refurb &amp; XT:260)</span>
+ <span class="mui-chip mui-chip-warning mono">20–30 年残值变现</span>
+ </div>
+ <div class="bm-tier-desc">2025 年共翻新销售 27 台二手光刻机服务成熟制程；同时推出首款 3D 集成系统 XT:260，将光刻护城河横向延伸至 HBM 与 Chiplet 先进封装市场。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: FAB NODE COHORT ECONOMICS & MARKET SHARE -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · LITHOGRAPHY INTENSITY RATCHET</span>
+ <h3 data-i18n-zh="客户制程微缩分层经济：为什么节点越先进，ASML 单厂抽成越高？" data-i18n-en="Fab Node Economics: Why Advanced Nodes Multiply ASML's Wallet Share">客户制程微缩分层经济：为什么节点越先进，ASML 单厂抽成越高？</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="duv" data-i18n-zh="成熟/主流 DUV 厂" data-i18n-en="Mature DUV Fab">成熟/主流 DUV 厂</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="euv" data-i18n-zh="先进逻辑/DRAM (EUV)" data-i18n-en="Leading EUV Fab">先进逻辑/DRAM (EUV)</button>
+ <button type="button" class="mui-seg-btn" data-cohort="highna" data-i18n-zh="AI 2nm/A14 (High-NA)" data-i18n-en="AI A14 High-NA Fab">AI 2nm/A14 (High-NA)</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat">
+ <div class="lbl">主力光刻机组合</div>
+ <div class="val" style="font-size:0.95rem;">NXE:3800E (0.33 NA) + ArFi</div>
+ <div class="delta">替代繁琐的多重曝光工艺</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">单台系统售价区间</div>
+ <div class="val mono">~€2.0亿–€2.2亿</div>
+ <div class="delta">220 wph 吞吐量溢价显著</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">晶圆厂客户替换率</div>
+ <div class="val mono">0% (绝对唯一)</div>
+ <div class="delta">全行业无第二家 EUV 供应商</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">20年单台总生命周期产出</div>
+ <div class="val mono">~€3.8亿–€4.2亿</div>
+ <div class="delta">含装机升级与维保服务年金</div>
+ </div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>光刻强度单向棘轮效应（Litho Intensity）：</strong>随着逻辑芯片迈向 3nm/2nm 及 HBM4 高带宽内存向更精密 DRAM 演进，EUV 曝光层数不断增加。据市场追踪，过去十年 ASML EUV 平均售价年复合提价约 13%，甚至在单年大幅提价后仍实现<strong>零订单取消</strong>
+ <a class="cite-link" href="https://valyu.ai/newsletter/issues/12-asml-center" target="_blank" rel="noopener noreferrer">Valyu 行业深度 ↗</a>。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · TOOL LTV CURVE &amp; LITHOGRAPHY MONOPOLY</span>
+ <h3 data-i18n-zh="三类制程单台设备 20 年生命周期营收累积与全球光刻格局" data-i18n-en="20-Year Tool Lifecycle Revenue &amp; Global Lithography Market Share">三类制程单台设备 20 年生命周期营收累积与全球光刻格局</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="ltv" data-i18n-zh="20年单机营收累积" data-i18n-en="20Y Tool LTV">20年单机营收累积</button>
+ <button type="button" class="mui-seg-btn" data-cview="share" data-i18n-zh="细分光刻市占率 (%)" data-i18n-en="Market Share (%)">细分光刻市占率 (%)</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 行业格局：ASML 在 <strong>EUV（0.33 NA 与 0.55 High-NA）占据 100% 绝对垄断</strong>，在高端浸没式 ArFi DUV 领域占据超 90% 份额；尼康与佳能仅存于干式 DUV 及成熟封装利基市场。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: CAPITAL ALLOCATION + 5Y EPS COMPOUNDER -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · BACKLOG VISIBILITY &amp; CAPITAL RETURN</span>
+ <h3 data-i18n-zh="€388亿积压订单护航与 €120亿回购缩股引擎" data-i18n-en="€38.8B Backlog Visibility &amp; €12B Buyback Engine">€388亿积压订单护航与 €120亿回购缩股引擎</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="backlog" data-i18n-zh="在手订单与净现金 (€B)" data-i18n-en="Backlog &amp; Cash (€B)">在手订单与净现金 (€B)</button>
+ <button type="button" class="mui-seg-btn" data-kview="div" data-i18n-zh="每股年度分红增长 (€)" data-i18n-en="Dividend Growth (€)">每股年度分红增长 (€)</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 股东回报：ASML 2022–2025 年累计完成 €76亿回购后，于 2026 年 1 月宣布<strong>全新 €120亿股票回购计划</strong>（至 2028 年底，除员工激励外其余全部注销），同时将 FY2025 年度股息上调 +17% 至 <strong>€7.50/股</strong>
+ <a class="cite-link" href="https://investor.asml.com/news-releases/news-release-details/q4-2025-financial-results" target="_blank" rel="noopener noreferrer">FY25 分红回购公报 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EPS COMPOUNDER (2026–2030E)</span>
+ <h3 data-i18n-zh="2026–2030E 营收、High-NA 毛利爬坡与 EPS 复利推演器" data-i18n-en="2026–2030E Revenue, Margin &amp; EPS Compounding Simulator">2026–2030E 营收、High-NA 毛利爬坡与 EPS 复利推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="出口受限保守" data-i18n-en="Bear">出口受限保守</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="2030 基准" data-i18n-en="Base">2030 基准</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="AI超周期上限" data-i18n-en="Bull">AI超周期上限</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="光刻系统年化增速 (Systems CAGR, 2025–2030)" data-i18n-en="Systems Revenue CAGR">光刻系统年化增速 (Systems CAGR, 2025–2030)</span><b class="mono" id="lblSysCagr">10.5%</b></div>
+ <input type="range" id="inpSysCagr" min="4" max="16" step="0.5" value="10.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="装机服务年化增速 (IBM CAGR, 2025–2030)" data-i18n-en="IBM Services CAGR">装机服务年化增速 (IBM CAGR, 2025–2030)</span><b class="mono" id="lblIbmCagr">13.0%</b></div>
+ <input type="range" id="inpIbmCagr" min="6" max="20" step="0.5" value="13.0" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="2030E 目标综合毛利率 (CMD 指引 56%–60%)" data-i18n-en="2030E Target Gross Margin">2030E 目标综合毛利率 (CMD 指引 56%–60%)</span><b class="mono" id="lblGmTarget">58.0%</b></div>
+ <input type="range" id="inpGmTarget" min="52" max="62" step="0.5" value="58.0" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">€55.4B</b><span data-i18n-zh="2030E 总营收" data-i18n-en="2030E Revenue">2030E 总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simGmOut">58.0%</b><span data-i18n-zh="2030E 毛利率" data-i18n-en="2030E Gross Margin">2030E 毛利率</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEpsOut">€50.85</b><span data-i18n-zh="2030E 推演 EPS" data-i18n-en="2030E Diluted EPS">2030E 推演 EPS</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simCagrOut">+15.5%</b><span data-i18n-zh="5年 EPS 复合增速" data-i18n-en="5Y EPS CAGR">5年 EPS 复合增速</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: GLOBAL MEGA-CAP BENCHMARKING & STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · SEMICONDUCTOR &amp; TECH ARCHETYPE BENCHMARKING</span>
+ <h2 class="bm-h2" data-i18n-zh="全球半导体与硬科技巨头模式对标及三大阿喀琉斯之踵压测" data-i18n-en="Global Semiconductor Peer Matrix &amp; Three Structural Stress Audits">全球半导体与硬科技巨头模式对标及三大阿喀琉斯之踵压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比五大产业咽喉巨头的毛利、资本密度与研发壁垒，并审视地缘出口管制与蔡司单点依赖压力。" data-i18n-en="Benchmarking ASML against semiconductor chokepoints and auditing export controls &amp; Zeiss Klumpenrisiko.">对比五大产业咽喉巨头的毛利、资本密度与研发壁垒，并审视地缘出口管制与蔡司单点依赖压力。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (5)" data-i18n-en="All Peers (5)">全部标杆 (5)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="equip" data-i18n-zh="核心设备/芯片" data-i18n-en="Equipment/Fabless">核心设备/芯片</button>
+ <button type="button" class="mui-seg-btn" data-pcat="foundry" data-i18n-zh="晶圆代工/生态" data-i18n-en="Foundry/Ecosystem">晶圆代工/生态</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th>公司与代码</th>
+ <th>核心商业模式原型</th>
+ <th>综合毛利率</th>
+ <th>研发投入强度</th>
+ <th>行业份额与议价权</th>
+ <th>模式终极壁垒与核心脆弱点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-asml" data-row-cat="equip">
+ <td><strong>ASML (ASML)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>系统编排总装 + EUV垄断 + 20年IBM年金</td>
+ <td class="mono">52.8% (Q3'26 57.5%)</td>
+ <td class="mono" style="color:var(--mui-primary-lighter);">~14.4% (€4.7B)</td>
+ <td class="mono" style="color:var(--mui-success-text);">100% EUV 垄断</td>
+ <td>物理与光学双壁垒；脆弱点在地缘出口管制与蔡司光学产能瓶颈</td>
+ </tr>
+ <tr data-row-cat="foundry">
+ <td><strong>TSMC (TSM)</strong></td>
+ <td>重资产先进晶圆代工 + 良率规模效应</td>
+ <td class="mono">~56%–59%</td>
+ <td class="mono">~7%–8%</td>
+ <td class="mono">&gt;65% 全球代工 (&gt;90% 先进制程)</td>
+ <td>生态与良率之王；高度依赖 ASML EUV 与每年数百亿美元 CapEx 投入</td>
+ </tr>
+ <tr data-row-cat="equip">
+ <td><strong>NVIDIA (NVDA)</strong></td>
+ <td>Fabless AI 算力芯片 + CUDA 软件栈锁死</td>
+ <td class="mono">~71%–75%</td>
+ <td class="mono">~10%–12%</td>
+ <td class="mono">&gt;80% AI 训练加速</td>
+ <td>CUDA 生态垄断；受下游云厂商自研 ASIC 与先进封装/EUV 产能制约</td>
+ </tr>
+ <tr data-row-cat="equip">
+ <td><strong>Applied Materials (AMAT)</strong></td>
+ <td>沉积/刻蚀多品类平台设备 + 装机服务</td>
+ <td class="mono">~47%–48%</td>
+ <td class="mono">~12%</td>
+ <td class="mono">多赛道并列龙头</td>
+ <td>产品线覆盖广，但在每个细分领域均面临泛林 (LRCX) 与东电 (TEL) 竞争</td>
+ </tr>
+ <tr data-row-cat="foundry">
+ <td><strong>Apple (AAPL)</strong></td>
+ <td>自研芯片硬件漏斗 + 零CAC软件收费站</td>
+ <td class="mono">48.8% (服务 76.2%)</td>
+ <td class="mono">~9.6% ($45.8B)</td>
+ <td class="mono">25亿+ 活跃终端</td>
+ <td>消费端生态税之王；3nm/2nm 芯片最终仍依赖台积电与 ASML EUV 光刻机</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · EXPORT CONTROLS</span>
+ <h4>欧美荷对华出口管制加码与 DUV 占比回归常态</h4>
+ <p>EUV 从未获准销往中国大陆，2024 年起荷兰对 NXT:1970i/1980i 浸没式 DUV 实施出口许可，2026 年 6 月美国国会亦提出进一步限制 DUV 提案。中国大陆营收占比已从 2024 年峰值回落至趋近 ~20% 常态区间，但全球 AI 算力需求爆棚填补了空缺
+ <a class="cite-link" href="https://lightsource.ai/blog/asml-vs-china-chip-equipment-supply-chains" target="_blank" rel="noopener noreferrer">出口管制追踪 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：荷兰/美国 DUV 许可证与维保限制</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · ZEISS KLUMPENRISIKO</span>
+ <h4>单点集群风险：全球 AI 算力竟系于德国奥伯科亨一家光学工厂</h4>
+ <p>Carl Zeiss SMT 是全球唯一 EUV 反射镜制造者（由德国基金会控股、未上市），High-NA 镜头包含 40,000 个零件且打磨周期长达数月。尽管 ASML 持股 24.9% 锁定利益，但蔡司扩产速度直接决定了 ASML 2028 年能否突破 110 台 EUV 年产能上限
+ <a class="cite-link" href="https://www.ces-intelligence.com/analysis/euv-lithography-supply-chain-risk" target="_blank" rel="noopener noreferrer">CES 供应链风险 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：Zeiss SMT 扩产节奏与 EUV 交付周期</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · HIGH-NA ADOPTION PACE</span>
+ <h4>High-NA (€3.8亿+) 初期稀释毛利与晶圆厂性价比博弈</h4>
+ <p>台积电在 2nm/A16 节点延后采用 High-NA 直到 2030 年，选择用 Low-NA 多重曝光过渡；而 Intel 已于 2026 年 1 月验收 EXE:5200B、三星确认 2028 年量产。ASML 必须平衡高单价 High-NA 初期研发摊销与整体毛利率爬坡节奏
+ <a class="cite-link" href="https://finance.biggo.com/news/US_ASML_2026-10-14" target="_blank" rel="noopener noreferrer">Q3'26 电话会纪要 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：EXE:5200B 验收台数与毛利率指引</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES FOOTER -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威财报、SEC 20-F 文件与第三方研究信源" data-i18n-en="Verified Financial Filings &amp; Industry Research Sources">权威财报、SEC 20-F 文件与第三方研究信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://investor.asml.com/news-releases/news-release-details/q4-2025-financial-results" target="_blank" rel="noopener noreferrer">
+ <b>ASML FY2025 Full-Year &amp; Q4 Official Results ↗</b>
+ <span>官方披露 FY25 €32.67B 营收、52.8% 毛利率、€9.61B 净利、€38.80B 积压订单及 €12B 新回购</span>
+ </a>
+ <a class="bm-source-item" href="https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026" target="_blank" rel="noopener noreferrer">
+ <b>ASML Q3 2026 Record Earnings Release ↗</b>
+ <span>官方披露 2026 Q3 创纪录 €11.7B 营收、57.5% 毛利率与 €5.0B 净利润</span>
+ </a>
+ <a class="bm-source-item" href="https://finance.biggo.com/news/US_ASML_2026-10-14" target="_blank" rel="noopener noreferrer">
+ <b>ASML Q3 2026 Earnings Call Transcript Summary ↗</b>
+ <span>2026 全年指引上调至 €44B–€45B、IBM €3.3B、Samsung 2028 与 TSMC 2030 High-NA 路线图</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm" target="_blank" rel="noopener noreferrer">
+ <b>ASML Holding N.V. FY2025 SEC Form 20-F ↗</b>
+ <span>US GAAP 合并报表、EUV/DUV 销售台数、研发投入及风险因素法定披露</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/937966/000134100416001726/ex99-1.htm" target="_blank" rel="noopener noreferrer">
+ <b>ASML &amp; Carl Zeiss SMT 24.9% Equity Agreement ↗</b>
+ <span>€10亿现金入股蔡司半导体光学子公司以联合开发 0.55 NA High-NA 系统的官方协议</span>
+ </a>
+ <a class="bm-source-item" href="https://mlq.ai/research/asml-the-sole-architect-of-advanced-chip-manufacturing/" target="_blank" rel="noopener noreferrer">
+ <b>MLQ Research: ASML Sole Architect Deep Dive ↗</b>
+ <span>FY25 €10.6B 自由现金流、35.5% ROIC 与 €10.2B 净现金资产负债表拆解</span>
+ </a>
+ </div>
+ </section>
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/asml_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

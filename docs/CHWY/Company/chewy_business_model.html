@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html data-chart-ui lang="zh-CN" data-theme="dark" data-imported-report>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Chewy, Inc. (NYSE: CHWY) 商业模式全景架构拆解：84.6% Autoship 自动续订复利底座、2,171万活跃宠主与$602创纪录NSPAC、#1全美宠物药房+兽医诊所+Chewy Ads高毛利三级火箭、-8.3天负营运资本浮存金与逾$16亿回购缩股机器（基于 FY2025 10-K 与 Q2 FY2026 财报）。" />
+ <title>Chewy 公司 Chewy, Inc. (CHWY) 商业模式架构深度拆解 | 数据中心</title>
+ 
+ 
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/chewy_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body id="top"><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted Glass MUI AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" title="展开/收起章节目录">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">CHWY</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="#top">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="Chewy (CHWY) 商业模式架构拆解" data-i18n-en="Chewy, Inc. Business Model Architecture">Chewy (CHWY) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NYSE: CHWY</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">Autoship 84.6% · NSPAC $602</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap hide-sm">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <button type="button" id="exportHtmlBtn" class="mui-dl-btn" title="下载当前独立 HTML 网页">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+ <span data-i18n-zh="下载 HTML" data-i18n-en="Download">下载 HTML</span>
+ </button>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与套件导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">CHWY · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="Chewy 商业模式架构图谱" data-i18n-en="Chewy Business Model Blueprint">Chewy 商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="84.6% Autoship自动续订底座 × 全美第1宠物药房与47家兽医诊所 × Chewy Ads高毛利零售媒体 × -8.3天负营运资本浮存" data-i18n-en="84.6% Autoship Annuity × #1 US Pet Pharmacy & 47 Vet Clinics × Chewy Ads Retail Media × -8.3d Negative CCC">84.6% Autoship自动续订底座 × 全美第1宠物药房与47家兽医诊所 × Chewy Ads高毛利零售媒体 × -8.3天负营运资本浮存</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="口粮年金 + 医疗/广告税" data-i18n-en="Autoship + Rx/Ad Tax">口粮年金 + 医疗/广告税</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="Q226毛利 / EBITDA率" data-i18n-en="Q226 GM / EBITDA">Q226毛利 / EBITDA率</span>
+ <span class="sidebar-mini-val mono">30.4% · 6.8%</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="CapEx强度 / FCF转化" data-i18n-en="CapEx / FCF Conv.">CapEx强度 / FCF转化</span>
+ <span class="sidebar-mini-val mono">1.0% · 78.2%</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="四页研究套件与架构目录">
+ <!-- SITE_RELATED_NAV_START -->
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="CHWY"><a class="co-side-home" href="../../index.html">首页</a></div>
+ <!-- SITE_RELATED_NAV_END -->
+
+ <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与高毛利引擎" data-i18n-en="Profit Waterfall &amp; Engines">利润池瀑布流与高毛利引擎</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="宠物生命周期棘轮与NSPAC" data-i18n-en="Pet Lifecycle Cohort LTV">宠物生命周期棘轮与NSPAC</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="负营运资本与缩股推演器" data-i18n-en="Negative CCC &amp; Buyback Lab">负营运资本与缩股推演器</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="零售标杆矩阵与脆弱点压测" data-i18n-en="Peer Matrix &amp; Stress Audit">零售标杆矩阵与脆弱点压测</span></a></li>
+ </ul>
+ </nav>
+
+ 
+ </aside>
+
+ <!-- Main Non-Linear Workspace -->
+ <main class="bm-workspace main-content">
+
+ <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：84.6% 自动续订口粮年金 × 兽医处方药与零售媒体高毛利税" data-i18n-en="ARCHETYPE: 84.6% Autoship Staple Annuity × Vet Rx &amp; Retail Media Margin Stack">商业范式：84.6% 自动续订口粮年金 × 兽医处方药与零售媒体高毛利税</span>
+ <span class="mui-chip mui-chip-success mono">FY2025 10-K &amp; Q2 FY26 口径</span>
+ <span class="mui-chip mui-chip-violet mono">CapEx 1.03% · CCC -8.3 Days</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="Chewy 公司商业模式解构：<span class='bm-gradient-txt'>用重货口粮 Autoship 锁死 2,171 万宠主，靠宠物药房、兽医诊所与零售媒体释放利润弹性</span>" data-i18n-en="Deconstructing Chewy's Business Model: <span class='bm-gradient-txt'>Lock In 21.7M Pet Parents via Autoship Staples, Compound via Rx, Vet Clinics &amp; Retail Media</span>">
+ Chewy 公司商业模式解构：<span class="bm-gradient-txt">用重货口粮 Autoship 锁死 2,171 万宠主，靠宠物药房、兽医诊所与零售媒体释放利润弹性</span>
+ </h1>
+
+ <p class="bm-lead" id="heroLeadText">
+ 华尔街常把 Chewy 简单归类为“低毛利在线狗粮零售商”，但其真实经济内核是一座<strong>“类 SaaS 刚需订阅底座 + 医疗与广告高毛利变现层”</strong>的三阶现金流飞轮：第一阶依托 30–50 磅重袋主粮/猫砂定时配送（<strong>Autoship</strong>）与 24/7 真人情感客服（手写贺卡、宠物手绘油画与哀悼鲜花），将全美 <strong>2,170.5 万活跃客户</strong>锁定在高达 <strong>84.6% 的自动续订收入占比</strong>中，推升单活跃客户年净销售额（NSPAC）创下 <strong>$602 历史新高</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1766502/000162828026061011/chwyq22026exhibit991.htm" target="_blank" rel="noopener noreferrer">Q2 FY26 财报 ↗</a>；第二阶在零额外获客成本的存量宠主池上叠加<strong>全美第一大宠物药房（年收 $19.8亿）</strong>、<strong>47 家自营兽医诊所（含 $4亿并购 Modern Animal）</strong>
+ <a class="cite-link" href="https://investor.chewy.com/news-and-events/news/news-details/2026/Chewy-to-Acquire-Modern-Animal-Accelerating-Evolution-to-a-Fully-Integrated-Healthcare-Ecosystem/default.aspx" target="_blank" rel="noopener noreferrer">Modern Animal 公告 ↗</a> 与自研 <strong>Chewy Ads / Chewy Max 零售媒体广告网</strong>
+ <a class="cite-link" href="https://www.modernretail.co/marketing/inside-chewys-push-to-build-a-pet-focused-retail-media-network/" target="_blank" rel="noopener noreferrer">Modern Retail ↗</a>，驱动毛利率由 IPO 前的 ~18% 跃升至 <strong>30.4%</strong>；第三阶凭借自动化履约中心（AFC）与约 <strong>-8.3 天负贸易现金转换周期</strong>，在 FY2025 仅用 <strong>1.03% CapEx</strong> 转化出创纪录 <strong>$5.62亿自由现金流</strong>，自 FY24 以来累计回购超 <strong>$16亿股票</strong>加速每股复利
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1766502/000176650226000033/chwyq42025exhibit991.htm" target="_blank" rel="noopener noreferrer">FY25 10-K 摘要 ↗</a>。
+ </p>
+ </div>
+
+ <!-- Interactive 3-Lens Business Formula Switcher -->
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① Autoship 口粮年金" data-i18n-en="① Autoship Annuity">① Autoship 口粮年金</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 药房+广告毛利跃迁" data-i18n-en="② Rx &amp; Ads Margin">② 药房+广告毛利跃迁</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 负营运资本与缩股" data-i18n-en="③ Negative CCC &amp; Buybacks">③ 负营运资本与缩股</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula">
+ 单宠主 10–15 年 LTV = 首年口粮获客回本 + ∑ [存续年限 × ($602→$950+ NSPAC) × 30.4% 毛利率] - 极低次年留存营销费
+ </div>
+ <div class="bm-lens-body" id="lensBody">
+ 普通综合电商面对一次性冲动消费，必须为每一单重复支付流量买量税；而宠物的进食与驱虫具备天然刚性生理周期，Chewy 一旦通过首单 5% 折扣将宠主导入 <strong>Autoship（占净营收 84.6%）</strong>，便获得了全美零售业罕见的<strong>高可预测性经常性现金流</strong>，大幅压缩安全库存损耗与派送路线空驶率。
+ </div>
+ </div>
+ </div>
+
+ <!-- Right: Live Financial Telemetry Ledger -->
+ <aside class="bm-telemetry-ledger" aria-label="FY2025 与 2026 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="FY25 审计实绩 &amp; FY26E 核心遥测账本" data-i18n-en="FY25 Audited &amp; FY26E Telemetry Ledger">FY25 审计实绩 &amp; FY26E 核心遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://www.sec.gov/Archives/edgar/data/1766502/000176650226000033/chwyq42025exhibit991.htm" target="_blank" rel="noopener noreferrer">SEC EX-99.1 ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="净营收规模 (FY25 实绩 → FY26E 上调指引)" data-i18n-en="Net Sales (FY25 Actual → FY26E Guidance)">净营收规模 (FY25 实绩 → FY26E 上调指引)</span>
+ <span class="bm-tel-val mono">$12.60B → $13.52B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:84.6%;"></div>
+ <div style="width:15.4%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q226 Autoship 84.6% ($2.82B)</span><span>FY25 同口径增速 +8.3%</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="毛利率持续破顶 (Q2 FY26 站稳 30%+ 门槛)" data-i18n-en="Gross Margin Expansion (Q2 FY26 at 30.4%)">毛利率持续破顶 (Q2 FY26 站稳 30%+ 门槛)</span>
+ <span class="bm-tel-val mono">30.4% <small style="font-size:0.74rem;color:var(--mui-success-text);">IPO前 ~18%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:69.7%;"></div>
+ <div style="width:15.7%;background:#16A34A;"></div>
+ <div style="width:14.6%;background:#7C3AED;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>口粮 69.7% · 医疗 15.7%</span><span>用品 11.4% · 广告/服务 3.2%</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="Adjusted EBITDA 跃迁 (迈向 10% 长期目标)" data-i18n-en="Adjusted EBITDA Ramp (10% Long-Term Target)">Adjusted EBITDA 跃迁 (迈向 10% 长期目标)</span>
+ <span class="bm-tel-val mono">$719.2M → ~$912M</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:68%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>FY25 5.7% (+90bps)</span><span>FY26E 指引 6.7%–6.8%</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="活跃宠主底座 × 创纪录单客年消费 (NSPAC)" data-i18n-en="Active Pet Parents × Record NSPAC">活跃宠主底座 × 创纪录单客年消费 (NSPAC)</span>
+ <span class="bm-tel-val mono">21.71M · $602</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:86%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>FY25 FCF $562.4M (+24.3%)</span><span>FY24–1H26 回购 &gt;$1.60B</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END PET ECOSYSTEM PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从 WOW 情感获客到高毛利医疗广告闭环" data-i18n-en="5-Node Value-Chain Pipeline: From WOW Empathy to Rx &amp; Ad Monetization">五阶商业价值传导沙盘：从 WOW 情感获客到高毛利医疗广告闭环</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解该环节的护城河壁垒、履约杠杆与核心财务验证指标。" data-i18n-en="Select any stage in Chewy's horizontal value chain to inspect its moat, fulfillment leverage, and financial metrics.">点击下方任一价值链节点，拆解该环节的护城河壁垒、履约杠杆与核心财务验证指标。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">EMPATHY FUNNEL</span></div>
+ <div class="bm-node-title" data-i18n-zh="24/7 情感客服与幼宠入口" data-i18n-en="24/7 WOW Care &amp; Pet Onboarding">24/7 情感客服与幼宠入口</div>
+ <div class="bm-node-kpi mono">&lt;10秒接听 · 2,171万活跃客</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">AUTOSHIP ENGINE</span></div>
+ <div class="bm-node-title" data-i18n-zh="Autoship 刚需订阅与 Chewy+" data-i18n-en="Autoship &amp; Chewy+ Loyalty">Autoship 刚需订阅与 Chewy+</div>
+ <div class="bm-node-kpi mono">84.6% 营收占比 · $59/年会籍</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">ROBOTIC AFCs</span></div>
+ <div class="bm-node-title" data-i18n-zh="17座履约仓与机器人网络" data-i18n-en="17 Fulfillment Centers &amp; AFCs">17座履约仓与机器人网络</div>
+ <div class="bm-node-kpi mono">减员15.5% · 人效升68%</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">RX &amp; AD STACK</span></div>
+ <div class="bm-node-title" data-i18n-zh="处方药房、诊所与零售媒体" data-i18n-en="Pet Rx, Vet Care &amp; Chewy Ads">处方药房、诊所与零售媒体</div>
+ <div class="bm-node-kpi mono">医疗 $1.98B · 47家兽医诊所</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">FLOAT &amp; RETIRE</span></div>
+ <div class="bm-node-title" data-i18n-zh="负营运资本与持续回购缩股" data-i18n-en="Negative CCC &amp; Share Buybacks">负营运资本与持续回购缩股</div>
+ <div class="bm-node-kpi mono">CCC -8.3天 · FCF $562.4M</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge">NODE 01 · 24/7 EMPATHY ONBOARDING &amp; PET PROFILES</span>
+ <h3 id="nodeTitle">把“宠物拟人化情感”沉淀为第一方宠物健康档案：综合电商无法复制的温度壁垒</h3>
+ <p id="nodeDesc">
+ 亚马逊擅长标准化极速派送，但面对宠主咨询处方粮过敏、老年犬关节护理或爱宠离世退款时缺乏专业共情。Chewy 全年 365 天 24/7 真人客服几乎全部在 10 秒内接听，每年寄出数百万张手写节日卡与定制手绘宠物肖像油画（WOW Moments），同步引导用户建立包含品种、体重、生日与病史的精准 Pet Profile 第一方档案。
+ </p>
+ <div class="bm-ins-formula mono" id="nodeFormula">
+ 商业传导：极致情感信任 + 约 4,000 个合作品牌 / 19万+ SKU 一站式供给 → 口碑裂变降低获客成本，锁定 2,170.5 万高粘性活跃宠主
+ </div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis">
+ <div class="bm-ins-card"><b class="mono">21.71M</b><span>Q2 FY26 活跃客户数 (+3.8%)</span></div>
+ <div class="bm-ins-card"><b class="mono">~190,000</b><span>在线商品与医疗服务 SKU</span></div>
+ <div class="bm-ins-card"><b class="mono">&lt;10 秒</b><span>3座客服中心真人响应标准</span></div>
+ <div class="bm-ins-card"><b class="mono">~30%</b><span>AI 助手 Cai 自助分流对话占比</span></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: DUAL-ENGINE PROFIT POOL (7:5 SPLIT) -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN EXPANSION</span>
+ <h3 data-i18n-zh="FY2025 $126.0亿 价值转化瀑布流与六年利润率跃迁" data-i18n-en="FY2025 $12.60B P&amp;L Waterfall &amp; 6-Year Margin Expansion">FY2025 $126.0亿 价值转化瀑布流与六年利润率跃迁</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→FCF 瀑布流" data-i18n-en="Sales → FCF Waterfall">营收→FCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="毛利与EBITDA剪刀差" data-i18n-en="GM &amp; EBITDA Trajectory">毛利与EBITDA剪刀差</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 数据来源：<a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1766502/000176650226000033/chwyq42025exhibit991.htm" target="_blank" rel="noopener noreferrer">SEC FY2025 Q4/Full-Year EX-99.1 ↗</a> 与
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1766502/000162828026061011/chwyq22026exhibit991.htm" target="_blank" rel="noopener noreferrer">Q2 FY2026 EX-99.1 ↗</a>。
+ 核心财务特征：FY25 自由现金流（<strong>$562.4M</strong>）高达 GAAP 净利润（$222.8M）的 <strong>2.52 倍</strong>、占 Adjusted EBITDA（$719.2M）的 <strong>78.2%</strong>，源于非现金股权激励回加、负营运资本贡献及仅 $129.2M 的极低资本开支。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · FOUR HIGH-MARGIN ACCRETION PILLARS</span>
+ <h3 data-i18n-zh="驱动毛利率跨越 30.4% 的四层高毛利利润池" data-i18n-en="4 High-Margin Profit Engines Driving 30.4% Gross Margin">驱动毛利率跨越 30.4% 的四层高毛利利润池</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="health" data-i18n-zh="医疗健康" data-i18n-en="Healthcare">医疗健康</button>
+ <button type="button" class="mui-seg-btn" data-tcat="platform" data-i18n-zh="广告与自有牌" data-i18n-en="Ads &amp; Brands">广告与自有牌</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="platform">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="① Chewy Ads / Chewy Max 零售媒体广告网" data-i18n-en="① Chewy Ads &amp; Chewy Max Retail Media">① Chewy Ads / Chewy Max 零售媒体广告网</span>
+ <span class="mui-chip mui-chip-success mono">预估毛利 ~70%+</span>
+ </div>
+ <div class="bm-tier-desc">向约 4,000 家宠物品牌商开放站内搜索竞价、视频与站外重定向，2026 年广告主数量翻倍、每 3 次点击促成 1 笔成交，平均每投入 $1 广告费撬动 &gt;$7 终身 LTV 销售额，是 FY25–FY26 毛利率扩张头号功臣。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="health">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="② 全美第一宠物药房与定制配制制剂 (Compounding)" data-i18n-en="② #1 US Pet Pharmacy &amp; Custom Compounding">② 全美第一宠物药房与定制配制制剂 (Compounding)</span>
+ <span class="mui-chip mui-chip-primary mono">FY25 $19.81亿营收</span>
+ </div>
+ <div class="bm-tier-desc">覆盖处方药（Rx）、定制口味配制药与兽医诊所 SaaS 分润平台 PracticeHub，加上 2026 年 2 月 $1.75亿并购马匹定制营养龙头 SmartEquine，毛利率较普通干粮高出 500–1,000 bps 且极难被综合电商替代。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="health">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="③ Chewy Vet Care + Modern Animal 实体与远程兽医" data-i18n-en="③ Chewy Vet Care &amp; Modern Animal Clinics">③ Chewy Vet Care + Modern Animal 实体与远程兽医</span>
+ <span class="mui-chip mui-chip-violet mono">47家诊所 · 单店&gt;20% EBITDA</span>
+ </div>
+ <div class="bm-tier-desc">2026 年 5 月以 $4亿现金收购 Modern Animal，诊所版图瞬间由 18 家扩至 47 家（年底迈向 ~60 家），打通“线下问诊开方 → 线上药房自动续订 → 处方粮跨品类复购”，带动诊所客群 NSPAC 额外提升 15%–20%。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="platform">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="④ 自有品牌矩阵与 $59/年 Chewy+ 付费会员" data-i18n-en="④ Private Brands (Frisco/Vibeful) &amp; $59/yr Chewy+">④ 自有品牌矩阵与 $59/年 Chewy+ 付费会员</span>
+ <span class="mui-chip mui-chip-warning mono">5%返现 · 钱包份额倍增</span>
+ </div>
+ <div class="bm-tier-desc">Frisco、American Journey、Vibeful 营养品等自有品牌剔除品牌溢价增厚毛利；全新 $59/年 Chewy+ 提供免门槛包邮、5% 返现与免费线上问诊，加速中高频宠主跨品类集中采购。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: REVERSED 5:7 SPLIT — PET LIFECYCLE COHORT LTV & MARKET SHARE -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · PET LIFECYCLE RATCHET EFFECT</span>
+ <h3 data-i18n-zh="单客分层经济模型：为什么“口粮+药房+诊所”是终身棘轮？" data-i18n-en="Cohort Unit Economics: The Food + Rx + Vet Ratchet">单客分层经济模型：为什么“口粮+药房+诊所”是终身棘轮？</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="new" data-i18n-zh="首年新晋宠主 (Y1)" data-i18n-en="Year-1 Cohort (Y1)">首年新晋宠主 (Y1)</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="autoship" data-i18n-zh="成熟 Autoship 户 (Y3–5)" data-i18n-en="Core Autoship (Y3–5)">成熟 Autoship 户 (Y3–5)</button>
+ <button type="button" class="mui-seg-btn" data-cohort="health" data-i18n-zh="全生态医疗会员 (Rx+Vet)" data-i18n-en="Health + Chewy+ Ecosystem">全生态医疗会员 (Rx+Vet)</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics">
+ <div class="bm-cohort-stat">
+ <div class="lbl">典型消费组合</div>
+ <div class="val" style="font-size:0.95rem;">主粮 Autoship + 驱虫处方药 + 零食用品</div>
+ <div class="delta">跨 3+ 品类高频自动履约</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">年度单客净消费 (NSPAC)</div>
+ <div class="val mono">~$680–$750</div>
+ <div class="delta">显著高于全平台均值 $602</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">综合贡献毛利率</div>
+ <div class="val mono">~31.5%</div>
+ <div class="delta">药房与自有品牌拉升毛利</div>
+ </div>
+ <div class="bm-cohort-stat">
+ <div class="lbl">5年累计单客毛利 LTV</div>
+ <div class="val mono">~$960</div>
+ <div class="delta">首年获客投入在 10–14 个月内回本</div>
+ </div>
+ </div>
+
+ <div class="bm-ratchet-note" id="cohortNote">
+ <strong>老龄化生物棘轮效应（Biological Aging Ratchet）：</strong>不同于电子产品换机周期可能延后，犬猫从幼年期迈入 7 岁+ 老年期的过程中，慢性肾病处方粮、关节保健品与长期处方药开销呈<strong>不可逆刚性递增</strong>——宠主留存越久，Chewy 单客 NSPAC 与药房高毛利附着率自然越高
+ <a class="cite-link" href="https://investor.chewy.com/news-and-events/news/news-details/2026/Chewy-to-Acquire-Modern-Animal-Accelerating-Evolution-to-a-Fully-Integrated-Healthcare-Ecosystem/default.aspx" target="_blank" rel="noopener noreferrer">Chewy Health 协同测算 ↗</a>。
+ </div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · NSPAC ESCALATOR &amp; SPECIALTY CLICK SHARE</span>
+ <h3 data-i18n-zh="NSPAC 历史阶梯爬坡与全美宠物零售数字流量份额对比" data-i18n-en="NSPAC Historical Escalator &amp; US Pet Digital Traffic Share">NSPAC 历史阶梯爬坡与全美宠物零售数字流量份额对比</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="nspac" data-i18n-zh="NSPAC 与 Autoship 双升" data-i18n-en="NSPAC &amp; Autoship Ramp">NSPAC 与 Autoship 双升</button>
+ <button type="button" class="mui-seg-btn" data-cview="share" data-i18n-zh="全美宠物垂类点击份额" data-i18n-en="US Pet Specialty Share">全美宠物垂类点击份额</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 行业对标参考：<a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1766502/000162828026061011/chwyq22026exhibit991.htm" target="_blank" rel="noopener noreferrer">Chewy Q2 FY26 运营披露 ↗</a> 与
+ <a class="cite-link" href="https://www.adthena.com/market-share/us-retail-pet/" target="_blank" rel="noopener noreferrer">Adthena 2026 美国宠物零售点击份额 ↗</a>（Chewy.com 以 38.3% 领跑垂直宠物电商，超越 Petco 与 PetSmart 之和）。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: 6:6 DUAL WORKBENCH — NEGATIVE CCC / BUYBACKS + LIVE 5Y EBITDA/EPS SIMULATOR -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · NEGATIVE CCC FLOAT &amp; BC PARTNERS BUYBACKS</span>
+ <h3 data-i18n-zh="-8.3天负现金转换周期与累计逾 $16亿 回购缩股轨迹" data-i18n-en="-8.3d Negative CCC Float &amp; $1.6B+ Share Retirement">-8.3天负现金转换周期与累计逾 $16亿 回购缩股轨迹</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="shares" data-i18n-zh="摊薄股本与B类股压降" data-i18n-en="Diluted &amp; Class B Reduction">摊薄股本与B类股压降</button>
+ <button type="button" class="mui-seg-btn" data-kview="ccc" data-i18n-zh="现金转换周期 (CCC)" data-i18n-en="CCC Float Days">现金转换周期 (CCC)</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption">
+ 资本效率底座：FY25 库存周转约 35.7 天、应收仅 6.4 天，而应付贸易账款高达 <strong>$12.21亿（~50.4 天 DPO）</strong>外加 $10.80亿应计负债，构成约 <strong>-8.3 天贸易 CCC（-$11.45亿负营运资本浮存）</strong>；同时公司自 FY24 至 1H26 累计回购逾 $16.0亿（含直接向大股东 BC Partners 定向回购注销），将加权摊薄股本从 4.32 亿股压降至 <strong>4.101 亿股</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1766502/000114036126022529/ny20064174x1_def14a.htm" target="_blank" rel="noopener noreferrer">2026 DEF 14A ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EBITDA &amp; FCF/SHARE COMPOUNDER</span>
+ <h3 data-i18n-zh="FY2026–FY2031 经营杠杆与每股现金流复利推演器" data-i18n-en="FY2026–FY2031 Operating Leverage &amp; FCF/Share Simulator">FY2026–FY2031 经营杠杆与每股现金流复利推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="宏观逆风" data-i18n-en="Bear">宏观逆风</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="基准兑现" data-i18n-en="Base">基准兑现</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="医疗+广告超预期" data-i18n-en="Bull">医疗+广告超预期</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="净营收年复合增速 (Net Sales CAGR)" data-i18n-en="Net Sales CAGR">净营收年复合增速 (Net Sales CAGR)</span><b class="mono" id="lblSvcCagr">7.5%</b></div>
+ <input type="range" id="inpSvcCagr" min="3" max="13" step="0.5" value="7.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="FY31E 目标 Adj. EBITDA 利润率" data-i18n-en="FY31E Target Adj. EBITDA Margin">FY31E 目标 Adj. EBITDA 利润率</span><b class="mono" id="lblProdCagr">10.0%</b></div>
+ <input type="range" id="inpProdCagr" min="6.5" max="12.5" step="0.5" value="10.0" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="年均净回购缩股率 (Annual Share Retirement)" data-i18n-en="Annual Net Share Retirement">年均净回购缩股率 (Annual Share Retirement)</span><b class="mono" id="lblBuyRate">3.0%</b></div>
+ <input type="range" id="inpBuyRate" min="0" max="6.0" step="0.5" value="3.0" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$19.4B</b><span data-i18n-zh="FY31E 净营收" data-i18n-en="FY31E Net Sales">FY31E 净营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simGmOut">$1.94B</b><span data-i18n-zh="FY31E Adj. EBITDA" data-i18n-en="FY31E Adj. EBITDA">FY31E Adj. EBITDA</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEpsOut">$4.31</b><span data-i18n-zh="FY31E 每股 FCF" data-i18n-en="FY31E FCF / Share">FY31E 每股 FCF</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simCagrOut">+20.5%</b><span data-i18n-zh="每股 FCF 复合增速" data-i18n-en="FCF/Sh CAGR">每股 FCF 复合增速</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: ARCHETYPE BENCHMARK MATRIX & STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · RETAIL &amp; SUBSCRIPTION BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球消费与订阅零售标杆对标矩阵及三大脆弱点压测" data-i18n-en="Subscription &amp; Pet Retail Peer Matrix &amp; Stress Audit">全球消费与订阅零售标杆对标矩阵及三大脆弱点压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="横向对比宠物零售与会员电商标杆的毛利、资本强度与经常性收入占比，并审视 Chewy 面临的三大结构性考验。" data-i18n-en="Benchmarking Chewy against pet care and membership retail leaders across margins, CapEx, and governance risks.">横向对比宠物零售与会员电商标杆的毛利、资本强度与经常性收入占比，并审视 Chewy 面临的三大结构性考验。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="pet" data-i18n-zh="宠物生态对手" data-i18n-en="Pet Ecosystem">宠物生态对手</button>
+ <button type="button" class="mui-seg-btn" data-pcat="sub" data-i18n-zh="会员/平台飞轮" data-i18n-en="Membership Flywheel">会员/平台飞轮</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th>公司与代码</th>
+ <th>核心商业模式原型</th>
+ <th>综合毛利率</th>
+ <th>经常性/会员锁客度</th>
+ <th>CapEx / 营收强度</th>
+ <th>核心竞争壁垒与结构性脆弱点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-chewy" data-row-cat="pet sub">
+ <td><strong>Chewy (CHWY)</strong> <span class="mui-chip mui-chip-primary mono">本研究标的</span></td>
+ <td>84.6% Autoship 口粮年金 + 宠物药房/诊所 + 广告</td>
+ <td class="mono">30.4% (Q2 FY26)</td>
+ <td class="mono" style="color:var(--mui-success-text);">84.6% Autoship 营收</td>
+ <td class="mono" style="color:var(--mui-success-text);">1.03% (FY25 轻资产)</td>
+ <td>全美#1宠物药房与情感客服壁垒；脆弱点在实体诊所重运营与B类股折价</td>
+ </tr>
+ <tr data-row-cat="pet sub">
+ <td><strong>Amazon (AMZN)</strong></td>
+ <td>Prime 极速履约 + 3P 平台佣金 + 零售媒体霸主</td>
+ <td class="mono">~49%–50% (含AWS)</td>
+ <td class="mono">Prime + Subscribe &amp; Save</td>
+ <td class="mono" style="color:var(--mui-warning-text);">~11%–14% (含AI云基建)</td>
+ <td>标品日百配送无敌；但缺乏兽医处方核验、配制药房与宠物情感顾问深度</td>
+ </tr>
+ <tr data-row-cat="sub">
+ <td><strong>Costco (COST)</strong></td>
+ <td>精选 SKU 极致平价引流 + 年费会员纯利闭环</td>
+ <td class="mono">~12.8%</td>
+ <td class="mono" style="color:var(--mui-success-text);">&gt;92% 北美会员续费率</td>
+ <td class="mono">~1.8%</td>
+ <td>商品零溢价锁定家庭刚需，与 Chewy Autoship + Chewy+ 逻辑高度同构</td>
+ </tr>
+ <tr data-row-cat="pet">
+ <td><strong>Petco (WOOF)</strong></td>
+ <td>北美 ~1,500 家重资产线下宠物门店 + 美容医院</td>
+ <td class="mono">~37%–38% (含门店租金前)</td>
+ <td class="mono">Vital Care 会员计划</td>
+ <td class="mono" style="color:var(--mui-warning-text);">~3.5%–4.5%</td>
+ <td>具备线下即时触点，但受困于高企门店租约、高杠杆债务与线上份额流失</td>
+ </tr>
+ <tr data-row-cat="pet sub">
+ <td><strong>Zoetis (ZTS)</strong></td>
+ <td>全球伴侣动物创新专利药与单抗龙头 (上游制药)</td>
+ <td class="mono">~70%–71%</td>
+ <td class="mono">慢病/皮肤科处方高频复购</td>
+ <td class="mono">~7%–8%</td>
+ <td>掌握上游专利原研药定价权，且将 Chewy 视为打通线上合规续方核心渠道</td>
+ </tr>
+ <tr data-row-cat="sub">
+ <td><strong>Apple (AAPL)</strong> <span class="mui-chip mono">方法论对照</span></td>
+ <td>39%毛利硬件入口 + 76%毛利生态服务税 + 负CCC</td>
+ <td class="mono">48.8%</td>
+ <td class="mono">&gt;15亿付费订阅账户</td>
+ <td class="mono" style="color:var(--mui-success-text);">1.9%</td>
+ <td>Chewy 正复刻“低毛利高频口粮获客 → 高毛利药房/广告变现 + 负CCC回购”路径</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · CLINIC UNIT ECONOMICS</span>
+ <h4>重金切入实体兽医诊所：资本回报与兽医用工瓶颈</h4>
+ <p>Chewy 在 2026 年斥资 $5.75亿 完成两笔现金并购（$1.75亿 SmartEquine + $4.0亿 Modern Animal），诊所数由 18 家跃升至 47 家并剑指年底 ~60 家，同时动用债务融资使 Q2 末长期负债升至 $5.89亿
+ <a class="cite-link" href="https://eightx.co/blog/us-teardown-chewy" target="_blank" rel="noopener noreferrer">Eightx 深度拆解 ↗</a>。全美执业兽医长期短缺且各州《企业行医禁令》(CPOM) 监管严格，单店爬坡至 &gt;20% 四墙 EBITDA 率需严密验证。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> 纳入季度跟踪：Modern Animal 2027 EBITDA 转正兑现度</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · AMAZON &amp; DISCRETIONARY DRAG</span>
+ <h4>亚马逊/沃尔玛价格战与硬品可选消费低迷</h4>
+ <p>美国宠物产业协会 (APPA) 数据显示 2025 全美宠物支出 $1,580亿 (+3.7%，剔除通胀实际量增仅 ~1.7%)，宏观高利率压制玩具、窝垫等可选硬品需求，导致 Q2 FY26 NSPAC 同比增速放缓至 +1.9% ($602)。Chewy 依靠 $59/年 Chewy+ 降门槛扩圈与处方药粘性抵御通用电商补贴冲击
+ <a class="cite-link" href="https://www.customerexperiencedive.com/news/chewys-autoship-subscription-grows-offering-reliability-and-repeat-sales/822715/" target="_blank" rel="noopener noreferrer">CX Dive ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> 纳入季度跟踪：NSPAC 同比增速与活跃客户净增节奏</label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · BC PARTNERS DUAL-CLASS OVERHANG</span>
+ <h4>BC Partners 88.4% 投票权控制与股权激励摊薄</h4>
+ <p>截至 2026 年 5 月代理声明，私募巨头 BC Partners 仍持有 1.765 亿股 10 倍投票权 B 类股（43.2% 经济权益却掌控 <strong>88.4% 投票权</strong>），触发纽交所“受控公司”条款并阻碍纳入部分被动指数；同时 FY25 股权激励（SBC 含税 $3.11亿）占营收 2.5%，需持续靠大额定向回购消化抛压与摊薄
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1766502/000114036126022529/ny20064174x1_def14a.htm" target="_blank" rel="noopener noreferrer">SEC DEF 14A ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> 纳入季度跟踪：BC Partners B类股减持转A类股进度与SBC占比</label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES FOOTER -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威 SEC 财报文件、并购公报与第三方研究信源" data-i18n-en="Verified SEC Filings, M&amp;A Releases &amp; Industry Research Sources">权威 SEC 财报文件、并购公报与第三方研究信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1766502/000176650226000033/chwyq42025exhibit991.htm" target="_blank" rel="noopener noreferrer">
+ <b>Chewy FY2025 Q4 &amp; Full-Year SEC EX-99.1 ↗</b>
+ <span>披露 FY25 净营收 $12.60B、毛利率 29.8%、Adj. EBITDA $719.2M、创纪录 FCF $562.4M 及资产负债表</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1766502/000162828026061011/chwyq22026exhibit991.htm" target="_blank" rel="noopener noreferrer">
+ <b>Chewy Q2 FY2026 SEC EX-99.1 (Ended Aug 2, 2026) ↗</b>
+ <span>披露 Q2 净营收 $3.33B (+7.3%)、毛利率 30.4%、Adj. EBITDA 率 6.8%、活跃客户 2,170.5万、NSPAC $602 与 Autoship 84.6%</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1766502/000162828026042058/chwyq12026exhibit991.htm" target="_blank" rel="noopener noreferrer">
+ <b>Chewy Q1 FY2026 SEC EX-99.1 (Ended May 3, 2026) ↗</b>
+ <span>披露 Q1 净营收 $3.36B (+7.7%)、Adj. EBITDA 率 7.5% 及 $174.8M 收购 SmartEquine 现金流明细</span>
+ </a>
+ <a class="bm-source-item" href="https://investor.chewy.com/news-and-events/news/news-details/2026/Chewy-to-Acquire-Modern-Animal-Accelerating-Evolution-to-a-Fully-Integrated-Healthcare-Ecosystem/default.aspx" target="_blank" rel="noopener noreferrer">
+ <b>Chewy Acquisition of Modern Animal Release (2026) ↗</b>
+ <span>官方披露并购 29 家科技兽医诊所（扩至 47 家）、年化营收 &gt;$125M、成熟单店 &gt;20% EBITDA 率与新增 $5亿回购授权</span>
+ </a>
+ <a class="bm-source-item" href="https://www.modernretail.co/marketing/inside-chewys-push-to-build-a-pet-focused-retail-media-network/" target="_blank" rel="noopener noreferrer">
+ <b>Modern Retail: Inside Chewy Ads &amp; Chewy Max ↗</b>
+ <span>详解 Chewy 第一方零售媒体平台转型、Chewy Max AI 投放工具、1/3 点击转化率及 &gt;$7 LTV ROAS 指标</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1766502/000114036126022529/ny20064174x1_def14a.htm" target="_blank" rel="noopener noreferrer">
+ <b>Chewy 2026 Definitive Proxy Statement (DEF 14A) ↗</b>
+ <span>披露双层股权治理结构、BC Partners 1.765亿股 B 类股投票权占比 (88.4%) 及高管薪酬与回购注销进展</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/chewy_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>

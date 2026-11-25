@@ -1,0 +1,63 @@
+/* Chart surfaces follow the McDonald's report: framed plots, compact labels and legends. */
+html[data-chart-ui] {
+  --chart-plot-bg: rgba(255, 255, 255, .52);
+  --chart-plot-line: rgba(0, 115, 230, .055);
+}
+html[data-chart-ui][data-theme="dark"] {
+  --chart-plot-bg: rgba(8, 14, 26, .42);
+  --chart-plot-line: rgba(51, 153, 255, .08);
+}
+html[data-chart-ui] main :is(.chart-card, .bm-chart-card, .ft-chart-card, .cc-chart-card, .os-chart-card) {
+  min-width: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: clamp(12px, 1.5vw, 18px);
+}
+html[data-chart-ui] main :is([class*="canvas-"], [class^="canvas"]):has(> canvas) {
+  position: relative;
+  min-width: 0;
+  max-width: 100%;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background:
+    linear-gradient(var(--chart-plot-line) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, var(--chart-plot-line) 1px, transparent 1px) 0 0 / 28px 28px,
+    var(--chart-plot-bg) !important;
+  box-sizing: border-box;
+}
+html[data-chart-ui] main canvas {
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+}
+html[data-chart-ui] main :is(.chart-toolbar, .bm-chart-toolbar, .ft-chart-toolbar, .chart-axis-meta, .chart-legend, .dial-legend, .bm-legend, .ft-legend, .cc-legend, .os-legend) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  min-width: 0;
+}
+html[data-chart-ui] main :is(.chart-title, .bm-chart-title, .ft-chart-title, .cc-chart-title, .os-chart-title) {
+  font-size: .94rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+html[data-chart-ui] main :is(.chart-caption, .bm-chart-caption, .ft-chart-caption, .cc-chart-caption, .os-chart-caption) {
+  color: var(--text-secondary);
+  font-size: .8rem;
+  line-height: 1.55;
+}
+html[data-chart-ui] main :is(.legend-pill, .bm-legend-pill, .ft-legend-pill, .cc-legend-pill, .os-legend-pill) {
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: .75rem;
+}
+
+html[data-chart-ui] #chartTooltip {
+  box-sizing: border-box;
+  max-width: min(300px, calc(100vw - 16px));
+  max-height: calc(100dvh - 16px);
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}

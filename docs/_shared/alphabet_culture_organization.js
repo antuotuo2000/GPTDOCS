@@ -631,7 +631,7 @@
             tip.innerHTML = hit.html;
             tip.style.display = 'block';
             tip.style.left = Math.min(window.innerWidth - 295, e.clientX + 14) + 'px';
-            tip.style.top = Math.max(12, e.clientY - 36) + 'px';
+            tip.style.top = Math.max(8, Math.min(window.innerHeight - tip.offsetHeight - 8, e.clientY - 36)) + 'px';
           } else {
             tip.style.display = 'none';
           }

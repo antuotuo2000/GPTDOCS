@@ -347,7 +347,7 @@
         var ctx = env.ctx, w = env.w, h = env.h, pal = getPalette();
         var pad = { top: 22, right: 18, bottom: 24, left: 46 };
         var pw = w - pad.left - pad.right, ph = h - pad.top - pad.bottom;
-        var lbls = ['当前折价市值', '2030基础盘', '2030含期权'];
+        var lbls = document.documentElement.lang === 'en' ? ['Current value', '2030 base', '2030 upside'] : ['当前折价市值', '2030基础盘', '2030含期权'];
         var maxV = Math.max(18, Math.ceil(Math.max.apply(null, miniCaps) * 1.18));
         ctx.strokeStyle = pal.grid; ctx.beginPath(); ctx.moveTo(pad.left, pad.top + ph); ctx.lineTo(pad.left + pw, pad.top + ph); ctx.stroke();
         var slot = pw / 3, bw = Math.min(52, slot * 0.5);
@@ -423,8 +423,8 @@
           if (hit) {
             tip.innerHTML = '<div style="font-weight:800;color:var(--mui-primary-lighter);margin-bottom:2px;">' + hit.title + '</div><div>' + hit.body + '</div>';
             tip.style.display = 'block';
-            tip.style.left = Math.min(window.innerWidth - 300, ev.clientX + 14) + 'px';
-            tip.style.top = Math.max(12, ev.clientY - 28) + 'px';
+            tip.style.left = Math.max(8, Math.min(window.innerWidth - tip.offsetWidth - 8, ev.clientX + 14)) + 'px';
+            tip.style.top = Math.max(8, Math.min(window.innerHeight - tip.offsetHeight - 8, ev.clientY - 28)) + 'px';
           } else tip.style.display = 'none';
         });
         c.addEventListener('mouseleave', function () { tip.style.display = 'none'; });
