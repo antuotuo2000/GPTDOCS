@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-imported-report data-chart-ui>
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="威瑞信 VeriSign, Inc. (NASDAQ: VRSN) 商业模式全景架构拆解：.com/.net 特许垄断注册局、100%连续可用性护城河、$14.6亿递延收入负营运资本浮存金、67.7%营业利润率与持续缩股复利机器（基于 FY2025 10-K 与 Q3 2026 财报）。" />
+ <title>威瑞信 VeriSign, Inc. (VRSN) 商业模式架构深度拆解 | 数据中心</title>
+
+
+<!-- PORTAL_MUI_OPT_CSS_START -->
+ 
+ 
+ 
+ 
+<!-- PORTAL_MUI_OPT_CSS_END -->
+<script src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script>
+<script src="../../_shared/device-mode.js"></script>
+<script src="../../_shared/454bfe2c0202e74e.js"></script>
+<link rel="stylesheet" href="../../_shared/verisign_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css">
+<link rel="stylesheet" href="../../_shared/report-tables.css">
+<link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/report-chart-ui.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+<div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted Glass MUI AppBar -->
+ <header class="mui-appbar">
+ <div class="mui-appbar-inner">
+ <div class="appbar-left">
+ <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="切换目录侧边栏" data-i18n-aria-zh="切换目录侧边栏" data-i18n-aria-en="Toggle Navigation Sidebar" title="展开/收起章节目录" data-i18n-title-zh="展开/收起章节目录" data-i18n-title-en="Toggle Table of Contents">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+ </button>
+ <span class="brand-monogram mono">VRSN</span>
+ <nav class="breadcrumbs" aria-label="面包屑导航">
+ <a class="crumb-link hide-sm" href="../../index.html">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--mui-primary-main);"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg>
+ <span data-i18n-zh="数据中心" data-i18n-en="Research Hub">数据中心</span>
+ </a>
+ <span class="hide-sm" style="opacity:0.45;">/</span>
+ <span class="crumb-current" data-i18n-zh="威瑞信 (VeriSign) 商业模式架构拆解" data-i18n-en="VeriSign, Inc. Business Model Architecture">威瑞信 (VeriSign) 商业模式架构拆解</span>
+ </nav>
+ <span class="mui-chip mui-chip-primary mono hide-sm">NASDAQ: VRSN</span>
+ <span class="mui-chip mui-chip-success mono hide-sm">Q3 2026 · 182.5M Domains</span>
+ </div>
+
+ <div class="appbar-right">
+ <div class="quick-search-wrap">
+ <span class="quick-search-icon">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+ </span>
+ <input type="search" id="quickJumpInput" class="quick-search-input" placeholder="检索飞轮或指标…" data-i18n-ph-zh="检索飞轮或指标…" data-i18n-ph-en="Search flywheel or KPIs…" aria-label="快速跳转章节或指标" autocomplete="off" />
+ <span class="quick-search-kbd mono">⌘K</span>
+ <div id="quickJumpPopover" class="quick-jump-popover"></div>
+ </div>
+ <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换">
+ <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
+ <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
+ </div>
+ <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换浅色 / 深色主题">
+ <span id="appbarThemeIcon" style="display:inline-flex;align-items:center;">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+ </span>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与站点导航">
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">VRSN · BUSINESS MODEL</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="威瑞信商业模式架构图谱" data-i18n-en="VeriSign Business Model Blueprint">威瑞信商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh=".com/.net 特许注册垄断 × 100%连续可用性 × $14.63亿递延收入负营运资本 × 67.7%营业利润率" data-i18n-en=".com/.net Registry Monopoly × 100% Uptime × $1.46B Deferred Rev Float × 67.7% Op Margin">.com/.net 特许注册垄断 × 100%连续可用性 × $14.63亿递延收入负营运资本 × 67.7%营业利润率</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span>
+ <span class="sidebar-mini-val mono" data-i18n-zh="互联网数字收费站" data-i18n-en="Internet Tollbooth">互联网数字收费站</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="FY25 营业 / 净利率" data-i18n-en="FY25 OpM / NetM">FY25 营业 / 净利率</span>
+ <span class="sidebar-mini-val mono">67.7% · 49.8%</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="CapEx强度 / FCF转化" data-i18n-en="CapEx / FCF Conv.">CapEx强度 / FCF转化</span>
+ <span class="sidebar-mini-val mono">1.4% · 129.4%</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="站点导航与架构目录">
+ <!-- SITE_RELATED_NAV_START -->
+ <div class="co-side-nav" id="companySubfolderHub" data-co-key="VRSN"><a class="co-side-home" href="../../index.html">首页</a></div>
+ <!-- SITE_RELATED_NAV_END -->
+
+ <div class="nav-section-label" style="margin-top:8px;" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与收费拆解" data-i18n-en="Profit Waterfall &amp; Tollbooth">利润池瀑布流与收费拆解</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="域名留存棘轮与单客 LTV" data-i18n-en="Domain Retention &amp; LTV">域名留存棘轮与单客 LTV</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="负所有者权益与缩股推演器" data-i18n-en="Negative Equity &amp; Buyback Lab">负所有者权益与缩股推演器</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="巨头范式矩阵与监管压测" data-i18n-en="Peer Matrix &amp; Stress Audit">巨头范式矩阵与监管压测</span></a></li>
+ </ul>
+ </nav>
+ 
+</aside>
+
+ <!-- Main Distinct Non-Linear Workspace -->
+ <main class="bm-workspace main-content">
+
+ <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：互联网根域特许垄断 × 零销售人员预收款" data-i18n-en="ARCHETYPE: Internet Root Registry Monopoly × Prepaid Tollbooth">商业范式：互联网根域特许垄断 × 零销售人员预收款</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="FY25 10-K &amp; Q3 2026 审计" data-i18n-en="FY25 10-K &amp; Q3 2026 Audited">FY25 10-K &amp; Q3 2026 审计</span>
+ <span class="mui-chip mui-chip-violet mono">67.7% OpM · $1.46B Float</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="威瑞信商业模式解构：<span class='bm-gradient-txt'>用 928 名员工掌管 1.825 亿全球商业域名，靠 88% 毛利与预收浮存金复利</span>" data-i18n-en="Deconstructing VeriSign's Business Model: <span class='bm-gradient-txt'>928 FTEs Governing 182.5M Global Domains at 88% Gross Margin &amp; Negative Working Capital</span>">
+ 威瑞信商业模式解构：<span class="bm-gradient-txt">用 928 名员工掌管 1.825 亿全球商业域名，靠 88% 毛利与预收浮存金复利</span>
+ </h1>
+
+ <p class="bm-lead" id="heroLeadText" data-i18n-rich="m0_lead">
+ 威瑞信（VeriSign, Inc., NASDAQ: VRSN）是互联网物理层最隐蔽、却利润率最高的基础设施守门人：公司凭借与 ICANN 签署的排他性注册局协议，独家运营全球商业互联网基石 <strong>.com 与 .net 顶级域</strong>，并运行全球 13 台互联网根服务器中的 2 台（A 根与 J 根）及根区维护职能
+ <a class="cite-link" href="https://investor.verisign.com/news-releases/news-release-details/verisign-reports-fourth-quarter-and-full-year-2025-results/" target="_blank" rel="noopener noreferrer">FY25 年报公报 ↗</a>。
+ 它不设消费端销售团队，而是通过 GoDaddy 等上千家注册商向全球 <strong>1.825 亿个 .com/.net 域名</strong>按年先收款后确认收入
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1014473/000101447326000038/q32026earningsrelease.htm" target="_blank" rel="noopener noreferrer">Q3 2026 SEC 8-K ↗</a>：FY2025 仅凭 <strong>928 名员工</strong>与 <strong>$2,280 万极低资本开支（营收占比 1.4%）</strong>，即创收 <strong>$16.57 亿</strong>、营业利润 <strong>$11.21 亿（67.7% 营业利润率）</strong> 与 <strong>$10.68 亿自由现金流（净利转化率 129.4%）</strong>，并将超额现金悉数注入股本注销与分红，令巴菲特旗下伯克希尔长期重仓持有 <strong>592 万股（6.6%）</strong>
+ <a class="cite-link" href="https://www.quantisnow.com/insight/amendment-sec-form-schedule-13ga-filed-by-berkshire-hathaway-inc-6795273" target="_blank" rel="noopener noreferrer">SEC 13G/A ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 互联网土地税" data-i18n-en="① Digital Property Tax">① 互联网土地税</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 88%边际零成本" data-i18n-en="② 88% Margin Leverage">② 88%边际零成本</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 负权益缩股引擎" data-i18n-en="③ Negative-Equity Cannibal">③ 负权益缩股引擎</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula"></div>
+ <div class="bm-lens-body" id="lensBody"></div>
+ </div>
+ </div>
+
+ <!-- Right: Live Financial Telemetry Ledger -->
+ <aside class="bm-telemetry-ledger" aria-label="FY2025 / Q3 2026 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="FY25 10-K &amp; Q3 2026 核心遥测账本" data-i18n-en="FY25 10-K &amp; Q3 2026 Telemetry">FY25 10-K &amp; Q3 2026 核心遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://www.sec.gov/Archives/edgar/data/1014473/000101447326000038/q32026earningsrelease.htm" target="_blank" rel="noopener noreferrer" data-i18n-zh="SEC 8-K ↗" data-i18n-en="SEC 8-K ↗">SEC 8-K ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY2026 全年指引营收 (vs FY25 $1.657B)" data-i18n-en="FY2026 Guidance Rev (vs FY25 $1.657B)">FY2026 全年指引营收 (vs FY25 $1.657B)</span>
+ <span class="bm-tel-val mono">$1.758B <small style="font-size:0.74rem;color:var(--mui-success-text);">+6.1%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:94%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>Q3 2026: $443.0M (+5.7% YoY)</span><span>9M 2026: $1,306.5M (+6.1%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY2025 毛利率 / 营业利润率 (极值结构)" data-i18n-en="FY2025 Gross Margin / Operating Margin">FY2025 毛利率 / 营业利润率 (极值结构)</span>
+ <span class="bm-tel-val mono">88.2% / 67.7%</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:67.7%;"></div>
+ <div style="width:20.5%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="FY26 指引 OpInc $1.188B–$1.192B" data-i18n-en="FY26 OpInc Guide $1.188B–$1.192B">FY26 指引 OpInc $1.188B–$1.192B</span><span data-i18n-zh="Q3 26 OpM 66.9%" data-i18n-en="Q3 26 OpM 66.9%">Q3 26 OpM 66.9%</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="FY2025 自由现金流 &amp; 极低资本开支" data-i18n-en="FY2025 Free Cash Flow &amp; CapEx">FY2025 自由现金流 &amp; 极低资本开支</span>
+ <span class="bm-tel-val mono">$1.068B <small style="font-size:0.74rem;color:var(--mui-success-text);">129.4% NI</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:97.9%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="OCF $1,091.1M · CapEx $22.8M" data-i18n-en="OCF $1,091.1M · CapEx $22.8M">OCF $1,091.1M · CapEx $22.8M</span><span data-i18n-zh="Q3 26 递延收入 $1,463.3M" data-i18n-en="Q3 26 Deferred Rev $1,463.3M">Q3 26 递延收入 $1,463.3M</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh=".com/.net 域名基数 × Q3 新增注册量" data-i18n-en=".com/.net Base × Q3 New Registrations">.com/.net 域名基数 × Q3 新增注册量</span>
+ <span class="bm-tel-val mono">182.5M / 13.1M</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:86%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="9M 26 回购 $620M + 分红 $221M" data-i18n-en="9M 26 Buybacks $620M + Div $221M">9M 26 回购 $620M + 分红 $221M</span><span data-i18n-zh="流通股降至 89.8M 股" data-i18n-en="Shares Out: 89.8M">流通股降至 89.8M 股</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: HORIZONTAL 5-NODE VALUE-CHAIN PIPELINE & INTERACTIVE INSPECTOR -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END VALUE CAPTURE PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从根域特许权到负股东权益复利" data-i18n-en="5-Node Value-Chain Pipeline: From Root Registry Franchise to EPS Compounding">五阶商业价值传导沙盘：从根域特许权到负股东权益复利</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解该环节的垄断壁垒来源、定价权传导与核心量化指标。" data-i18n-en="Select any node in the horizontal value chain to inspect its monopoly moat, pricing mechanics, and unit metrics.">点击下方任一价值链节点，拆解该环节的垄断壁垒来源、定价权传导与核心量化指标。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">FRANCHISE MOAT</span></div>
+ <div class="bm-node-title" data-i18n-zh="ICANN 特许权与根服务器底座" data-i18n-en="ICANN Franchise &amp; Root Servers">ICANN 特许权与根服务器底座</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="29年+ 100% .com/.net 零宕机" data-i18n-en="29+ Yrs 100% Availability">29年+ 100% .com/.net 零宕机</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">WHOLESALE CHANNEL</span></div>
+ <div class="bm-node-title" data-i18n-zh="注册商 B2B 分销与零直销团队" data-i18n-en="Registrar Channel &amp; Zero-Sales Force">注册商 B2B 分销与零直销团队</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="182.5M 域名基数 (+6.1% YoY)" data-i18n-en="182.5M Base (+6.1% YoY)">182.5M 域名基数 (+6.1% YoY)</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">CONTRACTED PRICING</span></div>
+ <div class="bm-node-title" data-i18n-zh="法定阶梯提价权 (.com 7% / .net 10%)" data-i18n-en="Contracted Price Escalators">法定阶梯提价权 (.com 7% / .net 10%)</div>
+ <div class="bm-node-kpi mono" data-i18n-zh=".com $10.97 (2026.11生效)" data-i18n-en=".com $10.97 (Nov 2026)">.com $10.97 (2026.11生效)</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">PREPAID FLOAT</span></div>
+ <div class="bm-node-title" data-i18n-zh="1–10年预收款与负营运资本" data-i18n-en="1–10Y Prepaid Deferred Revenue">1–10年预收款与负营运资本</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="$1,463.3M 递延收入浮存金" data-i18n-en="$1,463.3M Deferred Rev Float">$1,463.3M 递延收入浮存金</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">CAPITAL RETURN</span></div>
+ <div class="bm-node-title" data-i18n-zh="极低 CapEx 与激进回购注销" data-i18n-en="Lean CapEx &amp; Share Cannibalization">极低 CapEx 与激进回购注销</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="928人 · 流通股降至 89.8M" data-i18n-en="928 FTEs · 89.8M Shares">928人 · 流通股降至 89.8M</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge"></span>
+ <h3 id="nodeTitle"></h3>
+ <p id="nodeDesc"></p>
+ <div class="bm-ins-formula mono" id="nodeFormula"></div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis"></div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: DUAL-ENGINE PROFIT POOL -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN STABILITY</span>
+ <h3 data-i18n-zh="FY2025 $16.57亿 价值转化瀑布流与六年利润率护城河" data-i18n-en="FY2025 $1.657B P&amp;L Waterfall &amp; 6-Year Margin Stability">FY2025 $16.57亿 价值转化瀑布流与六年利润率护城河</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→FCF 瀑布流" data-i18n-en="Rev → FCF Waterfall">营收→FCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="6年三率稳态曲线" data-i18n-en="6Y Margin Trend">6年三率稳态曲线</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+ <div class="bm-chart-legend" id="profitLegend"></div>
+
+ <p class="bm-chart-caption" data-i18n-rich="m2_caption">
+ 数据来源：<a class="cite-link" href="https://investor.verisign.com/news-releases/news-release-details/verisign-reports-fourth-quarter-and-full-year-2025-results/" target="_blank" rel="noopener noreferrer">VeriSign FY2025 财报 ↗</a> 与
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1014473/000101447326000038/q32026earningsrelease.htm" target="_blank" rel="noopener noreferrer">Q3 2026 SEC 8-K ↗</a>。
+ 注意威瑞信极罕见的财务特征：<strong>自由现金流（$1,068.3M）常年高于 GAAP 净利润（$825.7M）</strong>（转化率高达 129.4%），源于预收多年期域名注册费带来的递延收入净流入与极轻资本开支。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · REVENUE &amp; MONETIZATION LAYERS</span>
+ <h3 data-i18n-zh="威瑞信四层收费结构（几乎 100% 为经常性软件/基建租金）" data-i18n-en="4-Layer Registry &amp; Trust Monetization Stack">威瑞信四层收费结构（几乎 100% 为经常性软件/基建租金）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="tax" data-i18n-zh="存量基石" data-i18n-en="Core Registry">存量基石</button>
+ <button type="button" class="mui-seg-btn" data-tcat="sub" data-i18n-zh="增量引擎" data-i18n-en="Growth Engines">增量引擎</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="tax">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="① .com 全球商业域名批发注册与续费" data-i18n-en="① .com Wholesale Registry &amp; Renewals">① .com 全球商业域名批发注册与续费</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="$10.97/年 · 毛利 ~89%" data-i18n-en="$10.97/yr · ~89% GM">$10.97/年 · 毛利 ~89%</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="占域名基数逾 93%（约 1.70 亿个），2026 年 11 月 1 日批发价由 $10.26 上调至 $10.97（+6.92%），合同允许至 2030 年每年最高提价 7%，新增提价几乎 100% 转为税前利润。" data-i18n-en="Over 93% of the base (~170M domains). Wholesale price rose from $10.26 to $10.97 (+6.92%) on Nov 1, 2026, with up to 7% annual hikes permitted through 2030—pure margin flow-through.">占域名基数逾 93%（约 1.70 亿个），2026 年 11 月 1 日批发价由 $10.26 上调至 $10.97（+6.92%），合同允许至 2030 年每年最高提价 7%，新增提价几乎 100% 转为税前利润。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="tax">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="② .net 基础设施域名批发与 10% 年提价权" data-i18n-en="② .net Registry &amp; 10% Annual Escalator">② .net 基础设施域名批发与 10% 年提价权</span>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="$12.00/年 (2027.03)" data-i18n-en="$12.00/yr (Mar 2027)">$12.00/年 (2027.03)</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="约 1,240 万个老牌网络基础设施域名，续费韧性极高；已公告 2027 年 3 月 1 日起批发价由 $10.91 上调 10% 至 $12.00，成为高确定性现金流补充。" data-i18n-en="About 12.4M core networking domains with sticky renewals; wholesale price rises 10% from $10.91 to $12.00 effective March 1, 2027.">约 1,240 万个老牌网络基础设施域名，续费韧性极高；已公告 2027 年 3 月 1 日起批发价由 $10.91 上调 10% 至 $12.00，成为高确定性现金流补充。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="sub">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="③ .web 顶级域商业化（无 ICANN 价格上限）" data-i18n-en="③ .web New gTLD Rollout (Uncapped Pricing)">③ .web 顶级域商业化（无 ICANN 价格上限）</span>
+ <span class="mui-chip mui-chip-violet mono" data-i18n-zh="2026.12 日出 · 2027.04 开放" data-i18n-en="Sunrise Dec 26 · GA Apr 27">2026.12 日出 · 2027.04 开放</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="历经十年博弈终获 ICANN 批准，2026 年 12 月 10 日启动商标日出期、2027 年 4 月 6 日全面开放；区别于 .com/.net，.web 不受批发限价约束，具备独立溢价潜力。" data-i18n-en="After a decade-long fight, ICANN cleared .web for Sunrise on Dec 10, 2026 and GA on Apr 6, 2027. Crucially, .web carries no ICANN wholesale price cap.">历经十年博弈终获 ICANN 批准，2026 年 12 月 10 日启动商标日出期、2027 年 4 月 6 日全面开放；区别于 .com/.net，.web 不受批发限价约束，具备独立溢价潜力。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="sub">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="④ Verisign Informed™ 高保证信任验证与 .name/.gov 服务" data-i18n-en="④ Verisign Informed™ Trust &amp; DNS Services">④ Verisign Informed™ 高保证信任验证与 .name/.gov 服务</span>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="2026.10 限额公测" data-i18n-en="Oct 2026 Limited Beta">2026.10 限额公测</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="2026 年 10 月启动有限测试的高保证实时信任验证方案，针对机器速度与 AI 代理时代的“过期信任（Stale Trust）”痛点，将 29 年 DNS 权威数据延伸至企业身份与交易验证。" data-i18n-en="Launched in limited beta Oct 2026 to solve 'stale trust' in an AI-agent era—extending Verisign's 29-year authoritative DNS trust into enterprise authentication.">2026 年 10 月启动有限测试的高保证实时信任验证方案，针对机器速度与 AI 代理时代的“过期信任（Stale Trust）”痛点，将 29 年 DNS 权威数据延伸至企业身份与交易验证。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: DOMAIN COHORT LTV & INDUSTRY PROFIT SHARE -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · DOMAIN LOCK-IN RATCHET EFFECT</span>
+ <h3 data-i18n-zh="域名生态分层经济模型：为什么成熟域名续费率接近刚性？" data-i18n-en="Cohort Unit Economics: Why Mature Domains Never Churn">域名生态分层经济模型：为什么成熟域名续费率接近刚性？</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="solo" data-i18n-zh="首年新注册域名" data-i18n-en="First-Year Domains">首年新注册域名</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="core" data-i18n-zh="成熟企业官网域名" data-i18n-en="Mature Corporate">成熟企业官网域名</button>
+ <button type="button" class="mui-seg-btn" data-cohort="ultra" data-i18n-zh="头部品牌/AI集群" data-i18n-en="Enterprise Portfolios">头部品牌/AI集群</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics"></div>
+ <div class="bm-ratchet-note" id="cohortNote"></div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · 10-YEAR DOMAIN LTV &amp; DNS PROFIT CAPTURE</span>
+ <h3 data-i18n-zh="三类域名资产 10 年累计毛利与全球 gTLD 利润池占比" data-i18n-en="10-Year Cumulative Domain Gross Profit &amp; Registry Profit Share">三类域名资产 10 年累计毛利与全球 gTLD 利润池占比</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="ltv" data-i18n-zh="10年单域毛利累积" data-i18n-en="10Y Domain LTV">10年单域毛利累积</button>
+ <button type="button" class="mui-seg-btn" data-cview="share" data-i18n-zh="全球域名基数 vs 利润" data-i18n-en="Base vs Profit Share">全球域名基数 vs 利润</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+ <div class="bm-chart-legend" id="cohortLegend"></div>
+
+ <p class="bm-chart-caption" data-i18n-rich="m3_caption">
+ 行业数据基准：<a class="cite-link" href="https://blog.verisign.com/domain-names/q3-2026-domain-name-industry-brief-quarterly-report/" target="_blank" rel="noopener noreferrer">Q3 2026 DNIB 行业简报 ↗</a>。全球域名总注册量达 4.116 亿个，威瑞信 .com/.net 占约 44.3% 基数，却因无营销补贴与超高毛利率攫取全球域名注册局逾 75% 的营业利润池。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: NEGATIVE WORKING CAPITAL & LIVE 5Y EPS COMPOUNDER -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · NEGATIVE EQUITY &amp; SHARE CANNIBALIZATION</span>
+ <h3 data-i18n-zh="-$22.85亿负股东权益与 13 年持续注销股本奇观" data-i18n-en="-$2.28B Stockholders' Deficit &amp; Relentless Share Retirement">-$22.85亿负股东权益与 13 年持续注销股本奇观</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="shares" data-i18n-zh="流通股本注销史" data-i18n-en="Share Cannibalization">流通股本注销史</button>
+ <button type="button" class="mui-seg-btn" data-kview="ccc" data-i18n-zh="递延收入浮存对比" data-i18n-en="Deferred Rev Float">递延收入浮存对比</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption" data-i18n-rich="m4_caption">
+ 资本配置奇迹：截至 Q3 2026，威瑞信账面递延收入高达 <strong>$1,463.3M</strong>（其中短期 $1,094.4M、长期 $368.9M），总资产仅 $1,280.1M 却支撑 $1.76B 营收；因累计回购金额远超留存收益，账面呈现 <strong>-$(2,284.7)M 负股东权益</strong>，摊薄股本由 2013 年约 1.55 亿股缩减至 Q3 2026 的 <strong>8,980 万股</strong>
+ <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1014473/000101447326000038/q32026earningsrelease.htm" target="_blank" rel="noopener noreferrer">Q3 2026 资产负债表 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EPS COMPOUNDER</span>
+ <h3 data-i18n-zh="FY2027–FY2031 提价+缩股复利推演器" data-i18n-en="FY2027–FY2031 Pricing + Buyback Simulator">FY2027–FY2031 提价+缩股复利推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="保守情景" data-i18n-en="Bear">保守情景</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="基准复利" data-i18n-en="Base">基准复利</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh=".web爆发" data-i18n-en="Bull"> .web爆发</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh=".com/.net 域名基数与年化提价综合增速" data-i18n-en="Core .com/.net Revenue CAGR">.com/.net 域名基数与年化提价综合增速</span><b class="mono" id="lblSvcCagr">8.5%</b></div>
+ <input type="range" id="inpSvcCagr" min="3" max="12" step="0.5" value="8.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh=".web + Verisign Informed 年化增量贡献 ($M/年)" data-i18n-en=".web + Informed Incremental Rev ($M/yr)">.web + Verisign Informed 年化增量贡献 ($M/年)</span><b class="mono" id="lblProdCagr">$45M</b></div>
+ <input type="range" id="inpProdCagr" min="0" max="120" step="5" value="45" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="年均净回购缩股率 (Annual Share Retirement)" data-i18n-en="Annual Net Share Retirement">年均净回购缩股率 (Annual Share Retirement)</span><b class="mono" id="lblBuyRate">3.2%</b></div>
+ <input type="range" id="inpBuyRate" min="0" max="5.0" step="0.2" value="3.2" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">$2.87B</b><span data-i18n-zh="FY31E 总营收" data-i18n-en="FY31E Revenue">FY31E 总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simGmOut">72.4%</b><span data-i18n-zh="FY31E 营业利润率" data-i18n-en="FY31E Op Margin">FY31E 营业利润率</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simEpsOut">$19.45</b><span data-i18n-zh="FY31E 摊薄 EPS" data-i18n-en="FY31E Diluted EPS">FY31E 摊薄 EPS</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simCagrOut">+15.6%</b><span data-i18n-zh="5年 EPS 复合增速" data-i18n-en="5Y EPS CAGR">5年 EPS 复合增速</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: GLOBAL MEGA-CAP ARCHETYPE MATRIX & REGULATORY STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球特许经营/基础设施巨头对标与三大风险压测" data-i18n-en="Global Tollbooth &amp; Infrastructure Peer Matrix &amp; Stress Audit">全球特许经营/基础设施巨头对标与三大风险压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比六大类垄断/基建商业原型的利润率、CapEx 强度与营运资本结构，并核查威瑞信三大核心风险。" data-i18n-en="Benchmarking VeriSign against tollbooth &amp; DNS/cloud peers while stress-testing contract, .web, and AI risks.">对比六大类垄断/基建商业原型的利润率、CapEx 强度与营运资本结构，并核查威瑞信三大核心风险。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="eco" data-i18n-zh="特许收费站" data-i18n-en="Tollbooths">特许收费站</button>
+ <button type="button" class="mui-seg-btn" data-pcat="hw" data-i18n-zh="域名/云基建" data-i18n-en="DNS &amp; Cloud">域名/云基建</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th data-i18n-zh="公司与代码" data-i18n-en="Company">公司与代码</th>
+ <th data-i18n-zh="核心商业模式原型" data-i18n-en="Business Archetype">核心商业模式原型</th>
+ <th data-i18n-zh="营业利润率 (OpM)" data-i18n-en="Operating Margin">营业利润率 (OpM)</th>
+ <th data-i18n-zh="CapEx / 营收强度" data-i18n-en="CapEx Intensity">CapEx / 营收强度</th>
+ <th data-i18n-zh="递延收入/浮存特征" data-i18n-en="Float / Deferred Rev">递延收入/浮存特征</th>
+ <th data-i18n-zh="模式终极壁垒与核心脆弱点" data-i18n-en="Core Moat &amp; Structural Risk">模式终极壁垒与核心脆弱点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-apple" data-row-cat="eco hw">
+ <td><strong>VeriSign (VRSN)</strong> <span class="mui-chip mui-chip-primary mono" data-i18n-zh="本研究标的" data-i18n-en="Subject">本研究标的</span></td>
+ <td data-i18n-zh=".com/.net 根域独家注册局 + 预收款缩股" data-i18n-en=".com/.net Exclusive Registry + Prepaid Buybacks">.com/.net 根域独家注册局 + 预收款缩股</td>
+ <td class="mono" style="color:var(--mui-success-text);">67.7% (GM 88.2%)</td>
+ <td class="mono" style="color:var(--mui-success-text);" data-i18n-zh="1.4% (FY25) / ~3.4% (FY26E)" data-i18n-en="1.4% (FY25) / ~3.4% (FY26E)">1.4% (FY25) / ~3.4% (FY26E)</td>
+ <td class="mono" style="color:var(--mui-success-text);" data-i18n-zh="$1.46B 递延收入 (~83% 营收)" data-i18n-en="$1.46B Deferred (~83% Rev)">$1.46B 递延收入 (~83% 营收)</td>
+ <td data-i18n-zh="29年零宕机不可替代；风险在 ICANN/DOJ 限价博弈" data-i18n-en="29+ yrs 100% uptime; risk lies in ICANN/DOJ pricing oversight">29年零宕机不可替代；风险在 ICANN/DOJ 限价博弈</td>
+ </tr>
+ <tr data-row-cat="hw">
+ <td><strong>GoDaddy (GDDY)</strong></td>
+ <td data-i18n-zh="下游零售注册商 + 建站与商业 SaaS 交叉销售" data-i18n-en="Retail Registrar + Website &amp; Commerce SaaS">下游零售注册商 + 建站与商业 SaaS 交叉销售</td>
+ <td class="mono">~19%–22%</td>
+ <td class="mono">~1%–2%</td>
+ <td class="mono" data-i18n-zh="预收年费订阅为主" data-i18n-en="Prepaid annual SaaS/domains">预收年费订阅为主</td>
+ <td data-i18n-zh="拥有海量 SMB 渠道与营销触点；需承担高额获客与客服成本" data-i18n-en="Strong SMB distribution; bears high CAC and retail support costs">拥有海量 SMB 渠道与营销触点；需承担高额获客与客服成本</td>
+ </tr>
+ <tr data-row-cat="hw">
+ <td><strong>Cloudflare (NET)</strong></td>
+ <td data-i18n-zh="边缘 CDN + DNS 解析与零信任网络安全" data-i18n-en="Edge CDN + DNS + Zero-Trust Security">边缘 CDN + DNS 解析与零信任网络安全</td>
+ <td class="mono">~12%–14% (Non-GAAP)</td>
+ <td class="mono" style="color:var(--mui-warning-text);">~10%–13%</td>
+ <td class="mono" data-i18n-zh="企业合同预付" data-i18n-en="Enterprise contracts">企业合同预付</td>
+ <td data-i18n-zh="全球边缘网络增速快；面临持续高研发与服务器折旧投入" data-i18n-en="High-growth edge network; requires heavy R&amp;D and server CapEx">全球边缘网络增速快；面临持续高研发与服务器折旧投入</td>
+ </tr>
+ <tr data-row-cat="eco">
+ <td><strong>Visa (V)</strong></td>
+ <td data-i18n-zh="全球支付清算四方网络“过路费”垄断" data-i18n-en="Global Card-Rail Payment Tollbooth">全球支付清算四方网络“过路费”垄断</td>
+ <td class="mono" style="color:var(--mui-success-text);">~67%</td>
+ <td class="mono">~3%–4%</td>
+ <td class="mono" data-i18n-zh="T+1 实时清算轻资产" data-i18n-en="Asset-light real-time rails">T+1 实时清算轻资产</td>
+ <td data-i18n-zh="与威瑞信营业利润率惊人趋同；面临央行实时支付与反垄断" data-i18n-en="Near-identical OpM to VRSN; faces DOJ &amp; instant-rail scrutiny">与威瑞信营业利润率惊人趋同；面临央行实时支付与反垄断</td>
+ </tr>
+ <tr data-row-cat="eco">
+ <td><strong>Moody's (MCO)</strong></td>
+ <td data-i18n-zh="法定信用评级双寡头 + 金融数据订阅" data-i18n-en="Credit Rating Duopoly + Analytics SaaS">法定信用评级双寡头 + 金融数据订阅</td>
+ <td class="mono">~43%–46%</td>
+ <td class="mono">~2%</td>
+ <td class="mono" data-i18n-zh="MA 数据预收订阅" data-i18n-en="Prepaid analytics subs">MA 数据预收订阅</td>
+ <td data-i18n-zh="牌照与标准双寡头护城河（同样获伯克希尔长期重仓）" data-i18n-en="Regulatory tollbooth moat (also a long-term Berkshire core holding)">牌照与标准双寡头护城河（同样获伯克希尔长期重仓）</td>
+ </tr>
+ <tr data-row-cat="eco">
+ <td><strong>MSCI Inc. (MSCI)</strong></td>
+ <td data-i18n-zh="全球指数基准授权税 (AUM 基点抽成)" data-i18n-en="Global Index Licensing (AUM bps)">全球指数基准授权税 (AUM 基点抽成)</td>
+ <td class="mono">~54%–56%</td>
+ <td class="mono">~3%</td>
+ <td class="mono" data-i18n-zh="高度粘性年费预收" data-i18n-en="Sticky annual renewals">高度粘性年费预收</td>
+ <td data-i18n-zh="金融基准锁死效应极强；盈利随全球股市 AUM 周期波动" data-i18n-en="Deep benchmark lock-in; fee base fluctuates with equity AUM">金融基准锁死效应极强；盈利随全球股市 AUM 周期波动</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · ICANN / NTIA OVERSIGHT</span>
+ <h4 data-i18n-zh="2030 下一轮 .com 协议续签与美国司法部定价监管" data-i18n-en="2030 .com Renewal &amp; DOJ / NTIA Price-Cap Oversight">2030 下一轮 .com 协议续签与美国司法部定价监管</h4>
+ <p data-i18n-rich="s1_body">威瑞信的 .com 提价权直接受制于 ICANN 协议与美国商务部 NTIA 合作协议（现行周期至 2030 年，允许后四年每年最高提价 7%）<a class="cite-link" href="https://domainnamewire.com/2024/11/27/verisign-inks-com-contract-extension-with-icann/" target="_blank" rel="noopener noreferrer">ICANN 续约记录 ↗</a>。若消费者倡导组织或监管机构在 2030 年压低提价上限，利润增速将回归纯域名量增（3%–6%）。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> <span data-i18n-zh="纳入季度跟踪：ICANN/NTIA 政策动向与 .com 续费率" data-i18n-en="Track Quarterly: ICANN/NTIA Policy &amp; .com Renewals">纳入季度跟踪：ICANN/NTIA 政策动向与 .com 续费率</span></label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · .WEB LAUNCH EXECUTION</span>
+ <h4 data-i18n-zh=".web 商业化节奏与对 .com 的潜在内部蚕食" data-i18n-en=".web Commercialization vs. Potential .com Cannibalization">.web 商业化节奏与对 .com 的潜在内部蚕食</h4>
+ <p data-i18n-zh=".web 虽不设价格上限，但 2027 年 4 月全面开放后若定价过高将限制 SMB 采用率，定价过低又可能分流部分原本选择高价二手 .com 的初创企业；如何通过 2027 年 1–4 月优先注册期转化现有 .com 持有人是关键。" data-i18n-en="While .web has no wholesale price cap, pricing too high post-Apr 2027 curbs SMB adoption, while pricing too low risks cannibalizing .com. Converting .com owners during the Jan–Apr 2027 Priority Access period is key.">.web 虽不设价格上限，但 2027 年 4 月全面开放后若定价过高将限制 SMB 采用率，定价过低又可能分流部分原本选择高价二手 .com 的初创企业；如何通过 2027 年 1–4 月优先注册期转化现有 .com 持有人是关键。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> <span data-i18n-zh="纳入季度跟踪：2027 Q1/Q2 .web 优先期与 GA 注册量" data-i18n-en="Track Quarterly: 2027 .web Priority &amp; GA Volume">纳入季度跟踪：2027 Q1/Q2 .web 优先期与 GA 注册量</span></label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · DNS SECURITY &amp; AI AGENTS</span>
+ <h4 data-i18n-zh="AI 代理流量洪峰、量子计算威胁与零宕机红线" data-i18n-en="AI Agent Query Surge, Quantum Threats &amp; Zero-Downtime SLA">AI 代理流量洪峰、量子计算威胁与零宕机红线</h4>
+ <p data-i18n-rich="s3_body">威瑞信在 Q3 2026 8-K 风险披露中明确新增“自主 AI 代理与量子计算进展”挑战 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1014473/000101447326000038/q32026earningsrelease.htm" target="_blank" rel="noopener noreferrer">Q3 2026 8-K ↗</a>；FY2026 CapEx 指引由 $22.8M 升至 $55M–$65M，正反映基础设施升级与抗量子/抗 DDoS 扩容投入。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> <span data-i18n-zh="纳入季度跟踪：FY26–FY27 CapEx 强度与 100% SLA 保持" data-i18n-en="Track Quarterly: CapEx Intensity &amp; 100% SLA Record">纳入季度跟踪：FY26–FY27 CapEx 强度与 100% SLA 保持</span></label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES FOOTER -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威财报、SEC 监管文件与行业研究信源" data-i18n-en="Verified Financial Filings &amp; Industry Research Sources">权威财报、SEC 监管文件与行业研究信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1014473/000101447326000038/q32026earningsrelease.htm" target="_blank" rel="noopener noreferrer">
+ <b>VeriSign Q3 2026 SEC Form 8-K (EX-99.1) ↗</b>
+ <span data-i18n-zh="官方披露 Q3 2026 营收 $443.0M、营业利润 $296.5M、182.5M 域名基数、$1,463.3M 递延收入与 89.8M 股本" data-i18n-en="Official Q3 2026 revenue $443.0M, OpInc $296.5M, 182.5M base, $1,463.3M deferred rev &amp; 89.8M shares">官方披露 Q3 2026 营收 $443.0M、营业利润 $296.5M、182.5M 域名基数、$1,463.3M 递延收入与 89.8M 股本</span>
+ </a>
+ <a class="bm-source-item" href="https://investor.verisign.com/news-releases/news-release-details/verisign-reports-fourth-quarter-and-full-year-2025-results/" target="_blank" rel="noopener noreferrer">
+ <b>VeriSign FY2025 Full-Year Results Release ↗</b>
+ <span data-i18n-zh="官方披露 FY25 营收 $1,656.6M、营业利润 $1,121.0M、OCF $1,091.1M、CapEx $22.8M 与 $0.81 季度股息" data-i18n-en="Official FY25 revenue $1,656.6M, OpInc $1,121.0M, OCF $1,091.1M, CapEx $22.8M &amp; $0.81 dividend">官方披露 FY25 营收 $1,656.6M、营业利润 $1,121.0M、OCF $1,091.1M、CapEx $22.8M 与 $0.81 季度股息</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1014473/000101447326000006/vrsn-20251231.htm" target="_blank" rel="noopener noreferrer">
+ <b>VeriSign FY2025 SEC Form 10-K Annual Report ↗</b>
+ <span data-i18n-zh="法定披露 928 名员工编制（926 名全职）、ICANN .com/.net 协议条款、税率及高管治理架构" data-i18n-en="Statutory disclosure of 928 employees (926 FTE), ICANN .com/.net agreements &amp; governance">法定披露 928 名员工编制（926 名全职）、ICANN .com/.net 协议条款、税率及高管治理架构</span>
+ </a>
+ <a class="bm-source-item" href="https://www.quantisnow.com/insight/verisign-announces-web-launch-key-dates-6785369" target="_blank" rel="noopener noreferrer">
+ <b>Verisign Announces .Web Launch, Key Dates ↗</b>
+ <span data-i18n-zh="官方公布 .web 顶级域 2026年12月10日日出期、2027年1月12日优先期及 4月6日全面开放时间表" data-i18n-en="Official .web launch timeline: Dec 10, 2026 Sunrise, Jan 12, 2027 Priority &amp; Apr 6, 2027 GA">官方公布 .web 顶级域 2026年12月10日日出期、2027年1月12日优先期及 4月6日全面开放时间表</span>
+ </a>
+ <a class="bm-source-item" href="https://www.quantisnow.com/insight/amendment-sec-form-schedule-13ga-filed-by-berkshire-hathaway-inc-6795273" target="_blank" rel="noopener noreferrer">
+ <b>Berkshire Hathaway Schedule 13G/A (Nov 16, 2026) ↗</b>
+ <span data-i18n-zh="伯克希尔及巴菲特申报截至 2026年9月30日持有威瑞信 5,922,136 股（占总股本 6.6%）" data-i18n-en="Berkshire Hathaway &amp; Buffett report 5,922,136 VRSN shares (6.6% stake) as of Sep 30, 2026">伯克希尔及巴菲特申报截至 2026年9月30日持有威瑞信 5,922,136 股（占总股本 6.6%）</span>
+ </a>
+ <a class="bm-source-item" href="https://blog.verisign.com/domain-names/q3-2026-domain-name-industry-brief-quarterly-report/" target="_blank" rel="noopener noreferrer">
+ <b>Verisign Q3 2026 Domain Name Industry Brief (DNIB) ↗</b>
+ <span data-i18n-zh="全球域名注册总数达 4.116 亿个的官方季度行业简报与各大顶级域份额追踪" data-i18n-en="Official Q3 2026 DNIB reporting 411.6M global domain registrations across all TLDs">全球域名注册总数达 4.116 亿个的官方季度行业简报与各大顶级域份额追踪</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/verisign_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+</body>
+</html>
