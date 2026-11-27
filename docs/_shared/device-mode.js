@@ -2,8 +2,9 @@
 (() => {
   const key = 'portal-device-mode-v1';
   const modes = ['wide', 'phone', 'ipad'];
-  const labels = { wide: '宽屏', phone: '手机窄屏', ipad: 'iPadMini' };
-  const widths = { phone: 430, ipad: 756 };
+  const labels = { wide: '宽屏', phone: '手机窄屏', ipad: 'iPad Pro 13″' };
+  // The 13-inch iPad Pro uses a 1032 CSS pixel viewport in portrait at 2×.
+  const widths = { phone: 430, ipad: 1032 };
   let mode = 'wide';
   try { const saved = localStorage.getItem(key); if (modes.includes(saved)) mode = saved; } catch {}
   let mirroredTop = -1;

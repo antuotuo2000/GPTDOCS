@@ -1564,7 +1564,7 @@
       wireAllCanvases();
       observeSections();
       applyTheme(state.theme, true);
-      if (initialIp !== state.ipId || !document.getElementById('ipSectionsHost')?.childElementCount) {
+      if (initialIp !== state.ipId || !document.querySelector('#ipSectionsHost #sec-01')) {
         switchIp(initialIp, true);
       } else {
         applyLanguage(state.lang, true);

@@ -6,9 +6,34 @@
 })();
 (() => {
   const root = document.documentElement;
+  const home = new URL('../index.html', document.currentScript.src).href;
   const key = 'mui_portal_sidebar_collapsed_v1';
   const desktop = matchMedia('(min-width:1024px)');
   const button = () => document.querySelector('.mui-appbar :is(#sidebarToggleBtn,#drawerToggleBtn)');
+  function prepareMenus() {
+    const control = button();
+    if (control) {
+      control.innerHTML = '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>';
+    }
+    const crumbs = document.querySelector('.mui-appbar :is(.breadcrumbs,.appbar-breadcrumb)');
+    if (crumbs) {
+      // Retain the old elements and IDs for report engines that still update them.
+      for (const item of crumbs.children) {
+        if (!item.matches('.crumb-current,.appbar-breadcrumb-cur')) item.classList.add('report-old-crumb');
+      }
+      const link = document.createElement('a');
+      link.className = 'report-home-crumb';
+      link.href = home;
+      link.innerHTML = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M2 5.2L9.5 9.5v8.3L2 13.5V5.2zm20 0L14.5 9.5v8.3L22 13.5V5.2zM12 2L4.6 6.2 12 10.4l7.4-4.2L12 2z"/></svg><span class="portal-menu-text" data-portal-zh="数据中心" data-portal-en="Research Hub">数据中心</span>';
+      crumbs.prepend(link);
+    }
+    document.querySelectorAll('#muiSidebar .toc-list').forEach(list => {
+      list.classList.add('mui-nav-list');
+      list.querySelectorAll('.toc-link').forEach(link => link.classList.add('mui-nav-link'));
+      list.querySelectorAll('.toc-num').forEach(number => number.classList.add('nav-idx'));
+    });
+    sync();
+  }
   function sync() {
     const control = button();
     if (!control) return;
@@ -38,9 +63,13 @@
         window.dispatchEvent(new Event('resize'));
       } else document.body.classList.toggle('portal-detail-drawer');
       sync();
-    } else if (event.target.closest('#portalDetailBackdrop,#muiSidebar .mui-nav-link')) close();
+    } else if (event.target.closest('#portalDetailBackdrop,#muiSidebar :is(.mui-nav-link,.toc-link)')) close();
   }, true);
-  document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape' || !document.body.classList.contains('portal-detail-drawer')) return;
+    close();
+    button()?.focus();
+  });
   desktop.addEventListener('change', close);
   window.addEventListener('storage', event => {
     if (event.key !== key) return;
@@ -49,8 +78,8 @@
     sync();
   });
   new MutationObserver(sync).observe(root, { attributes: true, attributeFilter: ['lang','data-theme','data-sidebar-collapsed'] });
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', sync, { once: true });
-  sync();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', prepareMenus, { once: true });
+  else prepareMenus();
 })();
 
 /* Keep process-card tags, titles and descriptions aligned after content switches. */

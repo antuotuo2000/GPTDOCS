@@ -1074,7 +1074,7 @@
 
         var html = [
           '<div class="m-doc-card hud-corners" style="--doc-spine:#D97706;">' +
-            '<div class="m-section-title">13F 传奇大师重仓共振矩阵 // OVERLAP SIGNALS</div>' +
+            '<div class="m-section-title">' + (isEn() ? 'Overlapping 13F Holdings' : '13F 机构重仓交集') + '</div>' +
             '<div class="m-hot-chips" style="margin-top:4px;">' +
               overlap.map(function (c) {
                 return '<button type="button" class="m-hot-chip mono" data-jump-co="' + esc(c.folder) + '">' +
@@ -1108,7 +1108,7 @@
         if (curated.length) {
           html.push(
             '<div class="m-chart-card hud-corners">' +
-              '<div class="m-section-title" style="margin-bottom:10px;">精选专题跃迁通道 // QUICK PORTALS</div>' +
+              '<div class="m-section-title" style="margin-bottom:10px;">' + (isEn() ? 'Featured Research' : '精选研究专题') + '</div>' +
               '<div class="m-pillar-grid">' +
                 curated.map(function (n) {
                   var u = normalizeNavUrl(n);
@@ -1293,9 +1293,15 @@
 
       function applyLang(l, silent) {
         state.lang = l === 'en' ? 'en' : 'zh';
-        document.getElementById('langSwitchBtn').textContent = isEn() ? '中文' : 'EN';
+        document.documentElement.lang = isEn() ? 'en' : 'zh-CN';
+        document.documentElement.dataset.lang = state.lang;
+        var switchButton = document.getElementById('langSwitchBtn');
+        switchButton.textContent = isEn() ? '中文' : 'EN';
+        switchButton.title = isEn() ? 'Switch to Chinese' : '切换为英文';
+        switchButton.setAttribute('aria-label', switchButton.title);
         document.querySelectorAll('[data-ui-zh]').forEach(function (el) {
-          el.textContent = el.getAttribute(isEn() ? 'data-ui-en' : 'data-ui-zh');
+          var label = el.getAttribute(isEn() ? 'data-ui-en' : 'data-ui-zh');
+          if (label !== null) el.textContent = label;
         });
         document.getElementById('globalSearchInput').placeholder = isEn()
           ? 'Scan tickers (AAPL), executives, or full-text corpus…'

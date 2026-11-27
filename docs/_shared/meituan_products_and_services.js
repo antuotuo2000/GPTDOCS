@@ -1380,7 +1380,11 @@
         secObserver = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              var id = entry.target.id;
+              var atEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+              var anchor = /^#sec-0[0-7]$/.test(location.hash) && document.getElementById(location.hash.slice(1));
+              var rect = anchor && anchor.getBoundingClientRect();
+              var id = rect && rect.top < innerHeight && rect.bottom > 60 ? anchor.id
+                : atEnd && document.getElementById('sec-07') ? 'sec-07' : entry.target.id;
               for (var i = 0; i < tocLinks.length; i++) {
                 tocLinks[i].classList.toggle('active', tocLinks[i].getAttribute('data-sec') === id);
               }
@@ -1615,9 +1619,6 @@
       var savedLang = rawLang ? String(rawLang).replace(/^"|"$/g, '') : '';
       if (savedLang === 'zh' || savedLang === 'en') state.lang = savedLang;
 
-      var rawDens = safeGetStorage(STORAGE_DENSITY_KEY);
-      if (rawDens === 'compact' || rawDens === 'relaxed') state.density = rawDens;
-
       var initialIp = state.ipId;
       if (!isExportedSingle() && window.location.hash) {
         var m = window.location.hash.match(/ip=([a-z0-9_]+)/i);
@@ -1682,7 +1683,18 @@
       }
 
       var tocLinks = document.querySelectorAll('#tocNavList .mui-nav-link');
-      for (var t = 0; t < tocLinks.length; t++) tocLinks[t].addEventListener('click', closeMobileDrawer);
+      for (var t = 0; t < tocLinks.length; t++) {
+        tocLinks[t].addEventListener('click', function (event) {
+          for (var i = 0; i < tocLinks.length; i++) tocLinks[i].classList.toggle('active', tocLinks[i] === this);
+          closeMobileDrawer();
+          var section = document.getElementById(this.dataset.sec);
+          if (section) {
+            event.preventDefault();
+            history.pushState(null, '', this.hash);
+            section.scrollIntoView({ block: 'start', behavior: 'instant' });
+          }
+        });
+      }
 
       document.addEventListener('click', function (e) {
         var catBtn = e.target.closest('[data-cat-filter]');

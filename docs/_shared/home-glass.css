@@ -76,3 +76,9 @@ html[data-theme="dark"] .m-backdrop { background: rgba(0, 0, 0, .3); }
   filter: none;
 }
 .m-doc-btns .m-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Both languages may wrap naturally when device preview reduces the available width. */
+.m-brand > :last-child,
+.m-hero-inner-split > :first-child { min-width: 0; }
+.m-brand-title { white-space: normal; overflow-wrap: anywhere; }
+.m-hero-headline { overflow-wrap: anywhere; }

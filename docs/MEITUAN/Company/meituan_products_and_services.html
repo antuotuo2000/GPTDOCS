@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="../../_shared/imported-report-ui.css">
 <link rel="stylesheet" href="../../_shared/report-chart-ui.css">
 </head>
-<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+<body>
 <div id="portalDetailBackdrop" aria-hidden="true"></div>
   <div id="readingProgressBar"></div>
   <div id="drawerBackdrop" class="drawer-backdrop"></div>
@@ -60,10 +60,6 @@
           <span class="quick-search-kbd mono">⌘K</span>
           <div id="quickJumpPopover" class="quick-jump-popover"></div>
         </div>
-        <button type="button" id="appbarDensityBtn" class="density-btn hide-sm" title="切换舒适排版 / 紧凑高密度视图" data-title-zh="切换舒适排版 / 紧凑高密度视图" data-title-en="Toggle Comfort / Compact Reading Density">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-          <span>舒适排版</span>
-        </button>
         <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换" data-aria-zh="语言切换" data-aria-en="Language Switcher">
           <button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button>
           <button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button>
@@ -97,34 +93,18 @@
         <div class="co-side-nav" id="companySubfolderHub" data-co-key="MEITUAN"><a class="co-side-home" href="../../index.html">首页</a></div>
         <!-- SITE_RELATED_NAV_END -->
 
-        <div class="toc-section-label mono" style="margin-top:12px;" data-i18n-zh="本篇研报章节目录" data-i18n-en="Monograph Chapters">本篇研报章节目录</div>
-        <ul class="toc-list" id="tocList">
-          <li class="toc-item"><a href="#sec-00" class="toc-link active" data-toc="sec-00"><span class="toc-num mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary &amp; KPIs">执行摘要与核心指标</span></a></li><li class="toc-item"><a href="#sec-01" class="toc-link" data-toc="sec-01"><span class="toc-num mono">01</span><span id="tocLbl1" data-i18n-zh="美团外卖餐饮产品架构与履约栈" data-i18n-en="Meituan Food Delivery Architecture &amp; Fulfillment">美团外卖餐饮产品架构与履约栈</span></a></li><li class="toc-item"><a href="#sec-02" class="toc-link" data-toc="sec-02"><span class="toc-num mono">02</span><span id="tocLbl2" data-i18n-zh="四大护城河支柱与雷达" data-i18n-en="4 Moat Pillars &amp; 5-Axis Radar">四大护城河支柱与雷达</span></a></li><li class="toc-item"><a href="#sec-03" class="toc-link" data-toc="sec-03"><span class="toc-num mono">03</span><span id="tocLbl3" data-i18n-zh="内部协同与行业竞品对标" data-i18n-en="Internal Synergy &amp; Peer Matrix">内部协同与行业竞品对标</span></a></li><li class="toc-item"><a href="#sec-04" class="toc-link" data-toc="sec-04"><span class="toc-num mono">04</span><span id="tocLbl4" data-i18n-zh="单均经济学与生态复利模拟" data-i18n-en="Unit Economics &amp; LTV Simulator">单均经济学与生态复利模拟</span></a></li><li class="toc-item"><a href="#sec-05" class="toc-link" data-toc="sec-05"><span class="toc-num mono">05</span><span id="tocLbl5" data-i18n-zh="业务演进史与2026关键战役" data-i18n-en="Evolution &amp; 2026 Key Battles">业务演进史与2026关键战役</span></a></li><li class="toc-item"><a href="#sec-06" class="toc-link" data-toc="sec-06"><span class="toc-num mono">06</span><span id="tocLbl6" data-i18n-zh="护城河与盈利修复核查清单" data-i18n-en="Moat &amp; Margin Audit Checklist">护城河与盈利修复核查清单</span></a></li><li class="toc-item"><a href="#sec-07" class="toc-link" data-toc="sec-07"><span class="toc-num mono">07</span><span id="tocLbl7" data-i18n-zh="港交所财报与官方信源索引" data-i18n-en="HKEX Filings &amp; Official Sources">港交所财报与官方信源索引</span></a></li>
+        <div class="nav-divider"></div>
+        <div class="nav-section-label" data-i18n-zh="核心研究章节 (00 – 07)" data-i18n-en="Report Chapters (00 – 07)">核心研究章节 (00 – 07)</div>
+        <ul class="mui-nav-list" id="tocNavList">
+          <li><a href="#sec-00" class="mui-nav-link active" data-sec="sec-00"><span class="nav-idx mono">00</span><span id="tocLbl0" data-i18n-zh="执行摘要与核心指标" data-i18n-en="Executive Summary &amp; KPIs">执行摘要与核心指标</span></a></li>
+          <li><a href="#sec-01" class="mui-nav-link" data-sec="sec-01"><span class="nav-idx mono">01</span><span id="tocLbl1" data-i18n-zh="美团外卖餐饮产品架构与履约栈" data-i18n-en="Meituan Food Delivery Architecture &amp; Fulfillment">美团外卖餐饮产品架构与履约栈</span></a></li>
+          <li><a href="#sec-02" class="mui-nav-link" data-sec="sec-02"><span class="nav-idx mono">02</span><span id="tocLbl2" data-i18n-zh="四大护城河支柱与雷达" data-i18n-en="4 Moat Pillars &amp; 5-Axis Radar">四大护城河支柱与雷达</span></a></li>
+          <li><a href="#sec-03" class="mui-nav-link" data-sec="sec-03"><span class="nav-idx mono">03</span><span id="tocLbl3" data-i18n-zh="内部协同与行业竞品对标" data-i18n-en="Internal Synergy &amp; Peer Matrix">内部协同与行业竞品对标</span></a></li>
+          <li><a href="#sec-04" class="mui-nav-link" data-sec="sec-04"><span class="nav-idx mono">04</span><span id="tocLbl4" data-i18n-zh="单均经济学与生态复利模拟" data-i18n-en="Unit Economics &amp; LTV Simulator">单均经济学与生态复利模拟</span></a></li>
+          <li><a href="#sec-05" class="mui-nav-link" data-sec="sec-05"><span class="nav-idx mono">05</span><span id="tocLbl5" data-i18n-zh="业务演进史与2026关键战役" data-i18n-en="Evolution &amp; 2026 Key Battles">业务演进史与2026关键战役</span></a></li>
+          <li><a href="#sec-06" class="mui-nav-link" data-sec="sec-06"><span class="nav-idx mono">06</span><span id="tocLbl6" data-i18n-zh="护城河与盈利修复核查清单" data-i18n-en="Moat &amp; Margin Audit Checklist">护城河与盈利修复核查清单</span></a></li>
+          <li><a href="#sec-07" class="mui-nav-link" data-sec="sec-07"><span class="nav-idx mono">07</span><span id="tocLbl7" data-i18n-zh="港交所财报与官方信源索引" data-i18n-en="HKEX Filings &amp; Official Sources">港交所财报与官方信源索引</span></a></li>
         </ul>
-
-        <div class="sidebar-quick-controls">
-          <div class="sidebar-control-row">
-            <span class="sidebar-control-label" data-i18n-zh="界面主题" data-i18n-en="Theme">界面主题</span>
-            <div class="sidebar-seg" role="group" aria-label="侧栏主题切换">
-              <button type="button" id="sideThemeLightBtn" class="sidebar-seg-btn active" data-theme-val="light" data-i18n-zh="浅色" data-i18n-en="Light">浅色</button>
-              <button type="button" id="sideThemeDarkBtn" class="sidebar-seg-btn" data-theme-val="dark" data-i18n-zh="深色" data-i18n-en="Dark">深色</button>
-            </div>
-          </div>
-          <div class="sidebar-control-row">
-            <span class="sidebar-control-label" data-i18n-zh="排版密度" data-i18n-en="Density">排版密度</span>
-            <div class="sidebar-seg" role="group" aria-label="侧栏排版密度切换">
-              <button type="button" id="sideDensityComfortBtn" class="sidebar-seg-btn active" data-density-val="comfort" data-i18n-zh="舒适" data-i18n-en="Comfort">舒适</button>
-              <button type="button" id="sideDensityCompactBtn" class="sidebar-seg-btn" data-density-val="compact" data-i18n-zh="紧凑" data-i18n-en="Compact">紧凑</button>
-            </div>
-          </div>
-          <div class="sidebar-control-row" style="margin-top:6px;">
-            <span class="sidebar-control-label" data-i18n-zh="研报导出" data-i18n-en="Export">研报导出</span>
-            <div class="sidebar-seg">
-              <button type="button" id="sideExportBtn" class="sidebar-seg-btn" data-i18n-zh="单品HTML" data-i18n-en="HTML">单品HTML</button>
-              <button type="button" id="sidePrintBtn" class="sidebar-seg-btn" data-i18n-zh="打印PDF" data-i18n-en="Print">打印PDF</button>
-            </div>
-          </div>
-        </div>
       </nav>
     </aside>
 
@@ -144,11 +124,7 @@
             <button type="button" id="nextIpBtn" class="mui-btn" title="切换至下一产品线 (快捷键 ])" data-title-zh="切换至下一产品线 (快捷键 ])" data-title-en="Next Product Line (Shortcut ])">
               <span data-i18n-zh="下一产品" data-i18n-en="Next">下一产品</span> <span>→</span>
             </button>
-            <button type="button" id="hubFocusModeBtn" class="mui-btn mui-btn-primary" title="收起/展开 12 大产品总览矩阵" data-title-zh="收起/展开 12 大产品总览矩阵" data-title-en="Toggle 12-Product Matrix">单品沉浸阅读 ▴</button>
-            <button type="button" id="hubExportSingleBtn" class="mui-btn" title="将当前正在浏览的单个产品线另存下载为独立 HTML 文件" data-title-zh="将当前正在浏览的单个产品线另存下载为独立 HTML 文件" data-title-en="Download active product monograph as standalone HTML">
-              <span data-i18n-zh="导出单品 HTML" data-i18n-en="Export HTML">导出单品 HTML</span>
-            </button>
-          </div>
+              </div>
         </div>
 
         <div class="hub-summary-strip">
