@@ -1,0 +1,39 @@
+/* Shared menu finish for the eighteen newly imported PDD and Meituan reports. */
+html[data-report-menu="unified"] .mui-appbar{background:transparent!important;backdrop-filter:blur(6px) saturate(150%)!important}
+html[data-report-menu="unified"] .mui-appbar .mui-appbar-inner{display:flex!important;gap:16px;width:100%;box-sizing:border-box}
+html[data-report-menu="unified"] .mui-appbar .appbar-left{flex:1 1 0%;min-width:0;overflow:hidden}
+html[data-report-menu="unified"] .mui-appbar .appbar-right{position:static!important;display:flex;align-items:center;gap:8px;flex:0 0 auto}
+html[data-report-menu="unified"] .mui-appbar .breadcrumbs{flex:1 1 0%;min-width:0;overflow:hidden}
+html[data-report-menu="unified"] .mui-appbar .crumb-current{flex:1 1 0%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+html[data-report-menu="unified"] .mui-appbar :is(.mui-icon-btn,.mui-theme-icon-btn){flex:0 0 34px!important;width:34px!important;height:34px!important;display:inline-grid!important;place-items:center}
+html[data-report-menu="unified"] .mui-appbar #langSwitchGroup{display:flex;align-items:center;flex-shrink:0;gap:2px;height:34px;padding:2px;border:1px solid var(--border-subtle);border-radius:10px;background:transparent}
+html[data-report-menu="unified"] .mui-appbar #langSwitchGroup button{height:28px;padding:0 9px;border:0;border-radius:7px;background:transparent;color:var(--text-secondary);font-family:inherit;font-size:12px;font-weight:600;line-height:1;cursor:pointer;white-space:nowrap}
+html[data-report-menu="unified"] .mui-appbar #langSwitchGroup button.active{color:var(--mui-primary-lighter);background:var(--mui-primary-bg)}
+html[data-report-menu="unified"] .mui-sidebar{box-sizing:border-box;gap:16px!important;isolation:isolate}
+html[data-report-menu="unified"] #companySubfolderHub{padding:14px!important;flex:0 0 auto;overflow:visible}
+html[data-report-menu="unified"] #companySubfolderHub .co-side-head{align-items:center;flex-wrap:wrap;gap:8px}
+html[data-report-menu="unified"] #companySubfolderHub .co-side-list{display:flex;flex-direction:column;gap:7px;max-height:none}
+html[data-report-menu="unified"] #companySubfolderHub .co-hub-item{display:flex;align-items:center;gap:8px;min-height:44px;padding:9px 10px;box-sizing:border-box}
+html[data-report-menu="unified"] #companySubfolderHub .co-hub-info{min-width:0;flex:1}
+html[data-report-menu="unified"] #companySubfolderHub .co-hub-title{white-space:normal;overflow-wrap:anywhere;line-height:1.5;font-size:12px}
+html[data-report-menu="unified"] #companySubfolderHub .co-hub-meta{font-size:10px;line-height:1.5;opacity:.8}
+html[data-report-menu="unified"] #companySubfolderHub .co-side-actions a{display:flex;align-items:center;justify-content:center;min-height:36px;font-size:12px}
+html[data-report-menu="unified"] #companySubfolderHub .co-hub-pill{min-height:36px;font-size:12px}
+html[data-report-menu="unified"] .mui-sidebar :is(.portal-reading-tools,#portalReadingTools,.sidebar-quick-controls){display:none!important}
+html[data-report-menu="unified"] .mui-sidebar :is(.mui-nav-link,.toc-link){min-height:38px;line-height:1.5;white-space:normal}
+@media(max-width:1023px){
+ html[data-report-menu="unified"] .mui-appbar .mui-appbar-inner{gap:8px!important}
+ html[data-report-menu="unified"] .mui-appbar .appbar-left{height:34px;min-width:0}
+ html[data-report-menu="unified"] .mui-appbar .quick-search-wrap{display:none!important}
+ html[data-report-menu="unified"] .mui-appbar .crumb-current{font-size:12px!important}
+ html[data-report-menu="unified"] #muiSidebar{z-index:1200!important;background-color:var(--bg-paper-solid)!important;padding:16px 12px!important;top:var(--report-header-height,60px)!important;bottom:0;overflow-y:auto;overscroll-behavior:contain}
+ html[data-report-menu="unified"] #muiSidebar:not(.open){transition:transform .24s ease!important}
+ html[data-report-menu="unified"] #companySubfolderHub .co-hub-item{min-height:44px}
+ html[data-report-menu="unified"] #companySubfolderHub .co-side-actions a,html[data-report-menu="unified"] #companySubfolderHub .co-hub-pill{min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){html[data-report-menu="unified"] #muiSidebar{transition:none!important}}
+/* Remove closed mobile drawers from paint, including descendant glass layers. */
+@media(max-width:1023px){
+ html[data-report-menu="unified"] body:not(.portal-detail-drawer) #muiSidebar{display:none!important}
+ html[data-report-menu="unified"] body.portal-detail-drawer #muiSidebar{display:flex!important;visibility:visible!important;transform:none!important}
+}

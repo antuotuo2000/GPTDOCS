@@ -26,3 +26,19 @@ html[data-imported-report] main :is(input,select) { font-size: max(16px,1rem); }
 @media (max-width:1023px) {
   html[data-imported-report] main :is(.os-hero-grid,.os-split-75,.os-split-57,.os-split-66,.fh-hero-grid,.fh-split-75,.fh-split-57,.fh-observatory) { grid-template-columns: minmax(0,1fr); }
 }
+
+/* Imported templates use the shared drawer state rather than their old .open class. */
+@media (max-width:1023px) {
+ html[data-imported-report] .mui-sidebar { transform:translateX(-110%) !important;visibility:hidden;pointer-events:none; }
+ html[data-imported-report] body.portal-detail-drawer .mui-sidebar { display:flex !important;transform:translateX(0) !important;visibility:visible;pointer-events:auto; }
+}
+@media (max-width:1023px) {
+ html[data-imported-report] .mui-sidebar { transition:transform .24s ease !important; }
+}
+@media (prefers-reduced-motion:reduce) {
+ html[data-imported-report] .mui-sidebar { transition:none !important; }
+}
+/* Long report titles stay inside the header's available text column. */
+html[data-imported-report] .mui-appbar .appbar-left { overflow:hidden; }
+html[data-imported-report] .mui-appbar :is(.breadcrumbs,.appbar-breadcrumb) { flex:1 1 0%; }
+html[data-imported-report] .mui-appbar :is(.crumb-current,.appbar-breadcrumb-cur) { flex:1 1 0%; }

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html data-report-menu="unified" data-imported-report data-report-family="meituan" lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="美团 Meituan (HKEX: 03690) 组织操作系统蓝图 (Organizational OS)：拓扑架构切换器、领导力时间分配罗盘、三代文化演进滑块、巨头基因竞技场与组织熵增模拟器。" />
+  <title>美团 Meituan (03690.HK) 组织操作系统蓝图 | 数据中心</title>
+  
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/meituan_culture_operating_system.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/imported-report-menu.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+  <div id="readingProgressBar"></div>
+  <div id="chartTooltip"></div>
+  <div id="muiSnackbar"></div>
+
+  <header class="mui-appbar" data-unified-report-menu>
+ <div class="mui-appbar-inner">
+  <div class="appbar-left">
+   <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="展开或收起目录" title="展开或收起目录"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg></button>
+   <nav class="breadcrumbs" aria-label="当前位置"><span class="crumb-current" data-i18n-zh="组织操作系统蓝图 (Organizational OS)" data-i18n-en="Organizational OS Blueprint (03690.HK)" data-zh="组织操作系统蓝图 (Organizational OS)" data-en="Organizational OS Blueprint (03690.HK)">组织操作系统蓝图 (Organizational OS)</span></nav>
+  </div>
+  <div class="appbar-right">
+   <div class="quick-search-wrap"><span class="quick-search-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></span><input type="search" id="quickJumpInput" class="quick-search-input" placeholder="搜索全站文章、代码或关键词…" aria-label="搜索全站研究文章" autocomplete="off"><span class="quick-search-kbd mono">⌘K</span><div id="quickJumpPopover" class="quick-jump-popover" role="listbox"></div></div>
+   <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换"><button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button><button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button></div>
+   <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换深浅色主题"><span id="appbarThemeIcon" style="display:inline-flex"></span></button>
+  </div>
+ </div>
+</header>
+
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+
+  <div class="layout-shell">
+    <aside id="muiSidebar" class="mui-sidebar" aria-label="组织 OS 模块导航"><div class="sidebar-card co-side-nav" id="companySubfolderHub" data-co-key="MEITUAN"><a href="../../index.html">首页</a></div>
+      <div class="sidebar-card">
+        <div class="sidebar-brand-top">
+          <span class="mui-chip mui-chip-primary mono">3690.HK · ORG OS</span>
+        </div>
+        <div class="sidebar-title" data-i18n-zh="美团组织操作系统蓝图" data-i18n-en="Meituan Organizational OS">美团组织操作系统蓝图</div>
+        <p class="sidebar-subtitle" data-i18n-zh="扁平化 CLC 拓扑 × 高管时间分配罗盘 × 11.4万FTE人效曲线 × 组织熵增压测" data-i18n-en="Flat CLC Topology × Leadership Time Dial × Rev/FTE Curve × Entropy Stress Test">扁平化 CLC 拓扑 × 高管时间分配罗盘 × 11.4万FTE人效曲线 × 组织熵增压测</p>
+        <div class="sidebar-mini-kpis">
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="汇报层级" data-i18n-en="Org Depth">汇报层级</span>
+            <span class="sidebar-mini-val mono">8级 → 4级 (去登味)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="人均年营收" data-i18n-en="Rev / FTE">人均年营收</span>
+            <span class="sidebar-mini-val mono">¥3.18M+ (FY25)</span>
+          </div>
+          <div class="sidebar-mini-row">
+            <span class="sidebar-mini-label" data-i18n-zh="AI 代码渗透" data-i18n-en="AI Coding">AI 代码渗透</span>
+            <span class="sidebar-mini-val mono">&gt;95% (CatPaw)</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-card" aria-label="OS 模块目录">
+        <div class="nav-section-label" data-i18n-zh="OS 核心模块 (C0–C4)" data-i18n-en="OS Modules (C0–C4)">OS 核心模块 (C0–C4)</div>
+        <ul class="mui-nav-list" id="tocList">
+          <li><a href="#mod-c0" class="mui-nav-link active"><span class="nav-idx mono">C0</span><span data-i18n-zh="拓扑架构与治理切换" data-i18n-en="Topology & Governance">拓扑架构与治理切换</span></a></li>
+          <li><a href="#mod-c1" class="mui-nav-link"><span class="nav-idx mono">C1</span><span data-i18n-zh="2x2 文化代码与时间罗盘" data-i18n-en="2x2 Code & Time Dial">2x2 文化代码与时间罗盘</span></a></li>
+          <li><a href="#mod-c2" class="mui-nav-link"><span class="nav-idx mono">C2</span><span data-i18n-zh="三代演进与人效杠杆" data-i18n-en="3-Era Scrubber & FTE">三代演进与人效杠杆</span></a></li>
+          <li><a href="#mod-c3" class="mui-nav-link"><span class="nav-idx mono">C3</span><span data-i18n-zh="巨头文化基因竞技场" data-i18n-en="Cultural Genome Arena">巨头文化基因竞技场</span></a></li>
+          <li><a href="#mod-c4" class="mui-nav-link"><span class="nav-idx mono">C4</span><span data-i18n-zh="组织熵增模拟与 6 法则" data-i18n-en="Entropy Sim & 6 Laws">组织熵增模拟与 6 法则</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-card sidebar-actions portal-reading-tools" id="portalReadingTools" hidden inert>
+        <div class="nav-section-label" data-i18n-zh="阅读与导出工具" data-i18n-en="Appearance & Export">阅读与导出工具</div>
+        <div class="side-theme-group" role="group" aria-label="Theme">
+          <button type="button" id="sideThemeLightBtn" aria-pressed="true" data-i18n-zh="浅色外观" data-i18n-en="Light">浅色外观</button>
+          <button type="button" id="sideThemeDarkBtn" aria-pressed="false" data-i18n-zh="深色外观" data-i18n-en="Dark">深色外观</button>
+        </div>
+        <div class="side-tool-grid">
+          <button type="button" id="sideExportBtn" data-i18n-zh="导出 HTML" data-i18n-en="Export HTML">导出 HTML</button>
+          <button type="button" id="sidePrintBtn" data-i18n-zh="打印 / PDF" data-i18n-en="Print / PDF">打印 / PDF</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="bm-workspace">
+      <!-- C0 Command Deck + Interactive Topology -->
+      <section id="mod-c0" class="bm-command-deck">
+        <div class="bm-thesis-deck">
+          <div>
+            <div class="bm-badge-row">
+              <span class="mui-chip mui-chip-primary mono" data-i18n-zh="ORGANIZATIONAL OS · 物理世界执行系统" data-i18n-en="ORGANIZATIONAL OS · PHYSICAL EXECUTION">ORGANIZATIONAL OS · 物理世界执行系统</span>
+              <span class="mui-chip mui-chip-success mono" data-i18n-zh="2026 扁平化 CLC 架构" data-i18n-en="2026 Unified CLC">2026 扁平化 CLC 架构</span>
+            </div>
+            <h1 class="bm-display-h1" data-i18n-zh="无限游戏与物理世界执行：<span class='bm-gradient-txt'>美团 Organizational OS 蓝图</span>" data-i18n-en="Infinite Game &amp; Physical Execution: <span class='bm-gradient-txt'>Meituan Organizational OS</span>">
+              无限游戏与物理世界执行：<span class="bm-gradient-txt">美团 Organizational OS 蓝图</span>
+            </h1>
+            <p class="bm-lead" data-i18n-zh="美团的组织操作系统专为高频、低客单价、强时效的物理履约网络设计。2026 年 3 月“去登味”改革后，美团用统一核心本地商业（CLC）替代了早期割裂的事业群，并由王兴直管无人机与 Keeta 出海，切换下方拓扑对比决策链路。" data-i18n-en="Engineered for high-frequency, time-critical physical fulfillment. Following the Mar 2026 'Reducing Deng Flavor' reform, Meituan unified CLC while Wang Xing directly oversees Drones and Keeta Global.">
+              美团的组织操作系统专为高频、低客单价、强时效的物理履约网络设计。2026 年 3 月“去登味”改革后，美团用统一核心本地商业（CLC）替代了早期割裂的事业群，并由王兴直管无人机与 Keeta 出海，切换下方拓扑对比决策链路。
+            </p>
+          </div>
+          <div>
+            <div class="mui-segmented" style="margin-bottom:12px;">
+              <button type="button" class="mui-seg-btn active" data-topo="unified" data-i18n-zh="2026 扁平化 CLC + 直管科技/出海" data-i18n-en="2026 Unified CLC + Direct Tech/Global">2026 扁平化 CLC + 直管科技/出海</button>
+              <button type="button" class="mui-seg-btn" data-topo="legacy" data-i18n-zh="2018–2023 传统事业群/割裂 O2O" data-i18n-en="2018–2023 Legacy Siloed O2O">2018–2023 传统事业群/割裂 O2O</button>
+            </div>
+            <div class="topo-board" id="topoBoard"></div>
+          </div>
+        </div>
+
+        <aside class="bm-telemetry-ledger" aria-label="组织 OS 核心遥测">
+          <div class="bm-ledger-head">
+            <div class="bm-ledger-title">
+              <span class="bm-pulse-dot"></span>
+              <span data-i18n-zh="Org OS 运行遥测 (2026)" data-i18n-en="Org OS Telemetry (2026)">Org OS 运行遥测 (2026)</span>
+            </div>
+            <a class="cite-link mono" href="https://finance.biggo.com/news/3RfY6pwBrdTHlKtCQnUc" target="_blank" rel="noopener noreferrer">去登味备忘录 ↗</a>
+          </div>
+          <div class="bm-telemetry-rows">
+            <div class="bm-tel-item">
+              <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="组织扁平化层级压缩" data-i18n-en="Hierarchy Compression">组织扁平化层级压缩</span><span class="bm-tel-val mono">8级 → 4级</span></div>
+              <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:85%;"></div></div>
+              <div class="bm-tel-sub mono"><span>Mar 2026 Reform</span><span>Direct BU Escalation</span></div>
+            </div>
+            <div class="bm-tel-item">
+              <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="人均年营收贡献 (FTE)" data-i18n-en="Revenue per FTE">人均年营收贡献 (FTE)</span><span class="bm-tel-val mono">¥3.18M</span></div>
+              <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:80%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div></div>
+              <div class="bm-tel-sub mono"><span>114.7K FTEs</span><span>FY26E Est: ¥3.45M</span></div>
+            </div>
+            <div class="bm-tel-item">
+              <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="AI 编程与大模型渗透" data-i18n-en="AI Coding & LLM Penetration">AI 编程与大模型渗透</span><span class="bm-tel-val mono">&gt;95%</span></div>
+              <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:95%;background:linear-gradient(90deg,#0073E6,#7C3AED);"></div></div>
+              <div class="bm-tel-sub mono"><span>CatPaw Coding</span><span>LongCat-2.5 (1.6T)</span></div>
+            </div>
+            <div class="bm-tel-item">
+              <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="自主无人履约累计单量" data-i18n-en="Autonomous Fulfillment Scale">自主无人履约累计单量</span><span class="bm-tel-val mono">6.4M+</span></div>
+              <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:88%;background:linear-gradient(90deg,#D97706,#F59E0B);"></div></div>
+              <div class="bm-tel-sub mono"><span>Drones &gt;900K</span><span>AVs &gt;5.5M Orders</span></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- C1 2x2 Bento + Leadership Dial -->
+      <section id="mod-c1" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE C1 · 2X2 OPERATING CODE & TIME DIAL</span>
+            <h2 class="bm-h2" data-i18n-zh="四大运行内核与高管时间分配模型" data-i18n-en="Four Operating Kernels & Executive Time Allocation">四大运行内核与高管时间分配模型</h2>
+            <p class="bm-head-desc" data-i18n-zh="切换右侧角色预设，检视王兴、王莆中、穆遥及城市一线负责人在“一线督战 / 战略学习 / 组织赋能 / 授权下放”的精力配比。" data-i18n-en="Switch role presets to inspect executive time allocation across Owning, Learning, Teaching, and Delegating.">切换右侧角色预设，检视王兴、王莆中、穆遥及城市一线负责人在“一线督战 / 战略学习 / 组织赋能 / 授权下放”的精力配比。</p>
+          </div>
+        </div>
+
+        <div class="bm-split-sim">
+          <div class="bm-grid-2">
+            <div class="bm-subcard">
+              <span class="mui-chip mui-chip-primary mono" style="margin-bottom:6px;">KERNEL 01</span>
+              <h3 data-i18n-zh="苦练基本功 (Better Each Day)" data-i18n-en="Better Each Day">苦练基本功 (Better Each Day)</h3>
+              <p data-i18n-zh="把复杂履约拆解为分钟级调度、商家动销率与冷链损耗率，不靠一次性营销透支长期口碑。" data-i18n-en="Decomposing fulfillment into minute-level dispatch, merchant activation, and cold-chain spoilage.">把复杂履约拆解为分钟级调度、商家动销率与冷链损耗率，不靠一次性营销透支长期口碑。</p>
+            </div>
+            <div class="bm-subcard">
+              <span class="mui-chip mui-chip-success mono" style="margin-bottom:6px;">KERNEL 02</span>
+              <h3 data-i18n-zh="事实与数据说话" data-i18n-en="Facts & Unit Economics First">事实与数据说话</h3>
+              <p data-i18n-zh="小象超市 68 城扩张与优选收缩均以单仓 UE（单位经济模型）为核心判据，零感性决策。" data-i18n-en="Xiaoxiang’s 68-city expansion and Meituan Select exit were both governed strictly by per-warehouse UE.">小象超市 68 城扩张与优选收缩均以单仓 UE（单位经济模型）为核心判据，零感性决策。</p>
+            </div>
+            <div class="bm-subcard">
+              <span class="mui-chip mui-chip-warning mono" style="margin-bottom:6px;">KERNEL 03</span>
+              <h3 data-i18n-zh="去登味与反内卷" data-i18n-en="Reducing Deng Flavor">去登味与反内卷</h3>
+              <p data-i18n-zh="2026 年 3 月废除“兴哥”称谓、削平资深中层官僚壁垒，鼓励一线直言与跨部门协同。" data-i18n-en="Mar 2026 reform abolished 'Brother Xing', flattened middle management, and empowered frontline candor.">2026 年 3 月废除“兴哥”称谓、削平资深中层官僚壁垒，鼓励一线直言与跨部门协同。</p>
+            </div>
+            <div class="bm-subcard">
+              <span class="mui-chip mui-chip-violet mono" style="margin-bottom:6px;">KERNEL 04</span>
+              <h3 data-i18n-zh="Physical AI 原生渗透" data-i18n-en="Physical AI Native">Physical AI 原生渗透</h3>
+              <p data-i18n-zh="CatPaw 覆盖 >95% 核心研发代码，LongCat-2.5 (1.6T) 与 M-Drone 4L 重塑人机协同。" data-i18n-en="CatPaw writes >95% of core code; LongCat-2.5 (1.6T) & M-Drone 4L redefine human-machine dispatch.">CatPaw 覆盖 >95% 核心研发代码，LongCat-2.5 (1.6T) 与 M-Drone 4L 重塑人机协同。</p>
+            </div>
+          </div>
+
+          <div class="bm-canvas-box">
+            <div class="mui-segmented" style="margin-bottom:10px;">
+              <button type="button" class="mui-seg-btn active" data-role="wx" data-i18n-zh="王兴 (CEO)" data-i18n-en="Wang Xing (CEO)">王兴 (CEO)</button>
+              <button type="button" class="mui-seg-btn" data-role="wpz" data-i18n-zh="王莆中 (CLC)" data-i18n-en="Wang Puzhong (CLC)">王莆中 (CLC)</button>
+              <button type="button" class="mui-seg-btn" data-role="my" data-i18n-zh="穆遥 (AI 转型)" data-i18n-en="Mu Yao (AI Trans.)">穆遥 (AI 转型)</button>
+              <button type="button" class="mui-seg-btn" data-role="ops" data-i18n-zh="城市一线负责人" data-i18n-en="City Ops Lead">城市一线负责人</button>
+            </div>
+            <canvas id="dialCanvas" height="220"></canvas>
+            <div class="bm-chart-legend" id="dialLegend" style="justify-content:center;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C2 3-Era Scrubber + Rev/FTE -->
+      <section id="mod-c2" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE C2 · LEADERSHIP SCRUBBER & FTE LEVERAGE</span>
+            <h2 class="bm-h2" data-i18n-zh="组织规模与人均创收杠杆 (108.9K – 114.7K FTEs)" data-i18n-en="Workforce Discipline & Revenue/FTE Leverage (108.9K – 114.7K)">组织规模与人均创收杠杆 (108.9K – 114.7K FTEs)</h2>
+          </div>
+          <span class="mui-chip mui-chip-primary mono" id="eraBadge">2024–2026+ · 去登味与 Physical AI 时代</span>
+        </div>
+
+        <div class="bm-subcard" style="margin-bottom:16px;">
+          <div class="slider-label">
+            <span data-i18n-zh="拖动时代时间轴 / Scrub Era:" data-i18n-en="Scrub Era Timeline:">拖动时代时间轴 / Scrub Era:</span>
+            <span class="mono" style="color:var(--mui-primary-lighter);">1.0 → 2.0 → 3.0</span>
+          </div>
+          <input type="range" id="eraScrubber" min="0" max="2" step="1" value="2" />
+          <p id="eraScrubDesc" style="margin:8px 0 0;"></p>
+        </div>
+
+        <div class="bm-canvas-box">
+          <strong style="font-size:0.9rem;display:block;margin-bottom:6px;" data-i18n-zh="人均年营收 (RMB 百万/FTE, 左轴) 与研发占营收比 (%, 右轴)" data-i18n-en="Annual Revenue per FTE (RMB M, Left) & R&D Intensity (%, Right)">人均年营收 (RMB 百万/FTE, 左轴) 与研发占营收比 (%, 右轴)</strong>
+          <canvas id="fteCanvas" height="260"></canvas>
+          <div class="bm-chart-legend" id="fteLegend"></div>
+        </div>
+      </section>
+
+      <!-- C3 Cultural Genome Arena -->
+      <section id="mod-c3" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE C3 · CULTURAL GENOME ARENA</span>
+            <h2 class="bm-h2" data-i18n-zh="物理履约密度 vs. AI 与技术自治象限" data-i18n-en="Physical Fulfillment Density vs. AI & Tech Autonomy">物理履约密度 vs. AI 与技术自治象限</h2>
+          </div>
+        </div>
+
+        <div class="bm-split-sim">
+          <div class="bm-canvas-box">
+            <strong style="font-size:0.9rem;display:block;margin-bottom:8px;" data-i18n-zh="组织基因四象限分布 (悬停气泡查看评分)" data-i18n-en="4-Quadrant Org Genome Map (Hover bubbles)">组织基因四象限分布 (悬停气泡查看评分)</strong>
+            <canvas id="arenaCanvas" height="285"></canvas>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="bm-subcard">
+              <span class="mui-chip mui-chip-primary mono" style="margin-bottom:6px;">阴阳张力 01</span>
+              <h3 data-i18n-zh="极度务实算账 vs. 无限游戏浪漫" data-i18n-en="Penny-Pinching UE vs. Infinite Game">极度务实算账 vs. 无限游戏浪漫</h3>
+              <p data-i18n-zh="一边精算外卖单均 0.08 元补贴波动，一边敢于重仓十年期无人机与 1.6T 大模型。" data-i18n-en="Tracking RMB 0.08/order subsidy shifts while funding 10-year drone fleets and 1.6T MoE models.">一边精算外卖单均 0.08 元补贴波动，一边敢于重仓十年期无人机与 1.6T 大模型。</p>
+            </div>
+            <div class="bm-subcard">
+              <span class="mui-chip mui-chip-success mono" style="margin-bottom:6px;">阴阳张力 02</span>
+              <h3 data-i18n-zh="铁军高压执行 vs. 去登味扁平授权" data-i18n-en="Iron Army Execution vs. Flat Candor">铁军高压执行 vs. 去登味扁平授权</h3>
+              <p data-i18n-zh="既要求区域网格零延迟落地，又通过废除江湖称谓让一线工程师直接挑战上级判断。" data-i18n-en="Zero-latency city grid execution paired with flattened hierarchy where junior engineers challenge VPs.">既要求区域网格零延迟落地，又通过废除江湖称谓让一线工程师直接挑战上级判断。</p>
+            </div>
+            <div class="bm-subcard">
+              <span class="mui-chip mui-chip-warning mono" style="margin-bottom:6px;">阴阳张力 03</span>
+              <h3 data-i18n-zh="本土防御战 vs. 全球化奇袭" data-i18n-en="Domestic Defense vs. Global Blitz">本土防御战 vs. 全球化奇袭</h3>
+              <p data-i18n-zh="国内守住 60%+ 高客单价护城河，海外用 Keeta 在沙特（22 个月盈利）与巴西（32 城）开疆。" data-i18n-en="Defending 60%+ high-ticket share at home while Keeta hits breakeven in Saudi Arabia in 22 months.">国内守住 60%+ 高客单价护城河，海外用 Keeta 在沙特（22 个月盈利）与巴西（32 城）开疆。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C4 Entropy Simulator & 6-Law Audit -->
+      <section id="mod-c4" class="bm-panel">
+        <div class="bm-panel-head">
+          <div>
+            <span class="bm-kicker mono">MODULE C4 · ENTROPY SIMULATOR & 6-LAW AUDIT</span>
+            <h2 class="bm-h2" data-i18n-zh="补贴战与官僚层级对组织熵增的压力测试" data-i18n-en="Subsidy War & Hierarchy Stress-Test Simulator">补贴战与官僚层级对组织熵增的压力测试</h2>
+          </div>
+        </div>
+
+        <div class="bm-split-sim" style="margin-bottom:18px;">
+          <div class="bm-subcard">
+            <div class="slider-row">
+              <div class="slider-label"><span data-i18n-zh="汇报层级深度 (去登味前 8 级 -> 现 4 级)" data-i18n-en="Hierarchy Depth (8 pre-2026 -> 4 now)">汇报层级深度 (去登味前 8 级 -> 现 4 级)</span><span class="mono" id="eSl1V">4 级</span></div>
+              <input type="range" id="eLayers" min="3" max="9" step="1" value="4" />
+            </div>
+            <div class="slider-row">
+              <div class="slider-label"><span data-i18n-zh="外部补贴战烈度 (S&M 占营收比)" data-i18n-en="Subsidy War S&M Intensity (% Rev)">外部补贴战烈度 (S&M 占营收比)</span><span class="mono" id="eSl2V">21%</span></div>
+              <input type="range" id="eSub" min="15" max="32" step="1" value="21" />
+            </div>
+            <div class="slider-row">
+              <div class="slider-label"><span data-i18n-zh="AI 编程与自动调度渗透率" data-i18n-en="AI Coding & Dispatch Automation (%)">AI 编程与自动调度渗透率</span><span class="mono" id="eSl3V">95%</span></div>
+              <input type="range" id="eAi" min="30" max="98" step="2" value="95" />
+            </div>
+          </div>
+
+          <div class="bm-grid-3">
+            <div class="kpi-mini"><div class="kpi-mini-lbl" data-i18n-zh="决策响应速度指数" data-i18n-en="Decision Velocity">决策响应速度指数</div><div class="kpi-mini-val mono" id="eVelOut">92 / 100</div></div>
+            <div class="kpi-mini"><div class="kpi-mini-lbl" data-i18n-zh="组织抗压盈利韧性" data-i18n-en="Margin Resilience">组织抗压盈利韧性</div><div class="kpi-mini-val mono" id="eResOut">88 / 100</div></div>
+            <div class="kpi-mini"><div class="kpi-mini-lbl" data-i18n-zh="官僚熵增风险" data-i18n-en="Entropy Risk">官僚熵增风险</div><div class="kpi-mini-val mono" id="eRiskOut" style="color:var(--mui-success-text);">低 (Low)</div></div>
+          </div>
+        </div>
+
+        <h3 style="font-size:0.95rem;margin-bottom:10px;" data-i18n-zh="美团 Organizational OS 六大运行法则审计 (localStorage 持久化)" data-i18n-en="Meituan Org OS 6-Law Audit (localStorage persisted)">美团 Organizational OS 六大运行法则审计 (localStorage 持久化)</h3>
+        <div class="bm-grid-2" id="osChecklist"></div>
+      </section>
+    </main>
+  </div>
+
+  
+<script src="../../_shared/meituan_culture_operating_system.js"></script><script src="../../_shared/company-report-ui.js"></script>
+<script src="../../_shared/imported-report-menu.js"></script>
+</body>
+</html>

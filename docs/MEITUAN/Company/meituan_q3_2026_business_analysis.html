@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html data-report-menu="unified" data-imported-report data-report-family="meituan" lang="zh-CN" data-theme="dark">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="美团 Meituan (HKEX: 3690.HK) 2026年第三季度财报深度拆解：营收1,155.6亿元（+21.6% YoY）、核心本地商业经营利润57.0亿元同比减亏近200亿、新业务亏损收窄至13.1亿元、Keeta沙特盈利及LongCat-2.5 AI落地全解析。" />
+ <title>美团 Meituan (3690.HK) 2026 Q3 财报深度拆解 | 数据中心</title>
+
+
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/meituan_q3_2026_business_analysis.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/imported-report-menu.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <!-- Sticky Frosted Glass MUI AppBar -->
+ <header class="mui-appbar" data-unified-report-menu>
+ <div class="mui-appbar-inner">
+  <div class="appbar-left">
+   <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="展开或收起目录" title="展开或收起目录"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg></button>
+   <nav class="breadcrumbs" aria-label="当前位置"><span class="crumb-current" data-i18n-zh="美团 (3690.HK) 2026 Q3 财报深度拆解" data-i18n-en="Meituan (3690.HK) Q3 2026 Earnings Deep Dive" data-zh="美团 (3690.HK) 2026 Q3 财报深度拆解" data-en="Meituan (3690.HK) Q3 2026 Earnings Deep Dive">美团 (3690.HK) 2026 Q3 财报深度拆解</span></nav>
+  </div>
+  <div class="appbar-right">
+   <div class="quick-search-wrap"><span class="quick-search-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></span><input type="search" id="quickJumpInput" class="quick-search-input" placeholder="搜索全站文章、代码或关键词…" aria-label="搜索全站研究文章" autocomplete="off"><span class="quick-search-kbd mono">⌘K</span><div id="quickJumpPopover" class="quick-jump-popover" role="listbox"></div></div>
+   <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换"><button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button><button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button></div>
+   <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换深浅色主题"><span id="appbarThemeIcon" style="display:inline-flex"></span></button>
+  </div>
+ </div>
+</header>
+
+ <div class="layout-shell">
+ <!-- Left MUI Documentation Sidebar -->
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="财报分析模块与导出工具"><div class="sidebar-card co-side-nav" id="companySubfolderHub" data-co-key="MEITUAN"><a href="../../index.html">首页</a></div>
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top">
+ <span class="mui-chip mui-chip-primary mono">3690.HK · Q3 2026</span>
+ <span class="mui-chip mui-chip-success mono">2026-11-27</span>
+ </div>
+ <div class="sidebar-title" data-i18n-zh="美团 Q3 财报全景架构" data-i18n-en="Meituan Q3 2026 Earnings Blueprint">美团 Q3 财报全景架构</div>
+ <p class="sidebar-subtitle" data-i18n-zh="外卖拐点扭亏 × 核心商业减亏近200亿 × 闪购/自营爆发 × 新业务减亏与AI商业闭环" data-i18n-en="Delivery Inflection × ~¥20B CLC Swing × Instashopping Surge × New Biz Narrowing &amp; AI">外卖拐点扭亏 × 核心商业减亏近200亿 × 闪购/自营爆发 × 新业务减亏与AI商业闭环</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="Q3 总营收" data-i18n-en="Q3 Revenue">Q3 总营收</span>
+ <span class="sidebar-mini-val mono">¥115.56B (+21.6%)</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="核心商业 / 新业务" data-i18n-en="CLC / New Biz Op.">核心商业 / 新业务</span>
+ <span class="sidebar-mini-val mono">+¥5.70B / -¥1.31B</span>
+ </div>
+ <div class="sidebar-mini-row">
+ <span class="sidebar-mini-label" data-i18n-zh="经调整净利 / 现金储备" data-i18n-en="Adj. NP / Cash Pile">经调整净利 / 现金储备</span>
+ <span class="sidebar-mini-val mono">¥1.85B · ¥157.5B</span>
+ </div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="财报架构目录">
+ <div class="nav-section-label" data-i18n-zh="财报工作台模块 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">财报工作台模块 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心定调" data-i18n-en="Command Deck &amp; Thesis">双栏指挥舱与核心定调</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶经营飞轮传导沙盘" data-i18n-en="5-Node Operating Pipeline">五阶经营飞轮传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润转化瀑布流与收入拆解" data-i18n-en="P&amp;L Waterfall &amp; Revenue Mix">利润转化瀑布流与收入拆解</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="分部反转与预期差对标" data-i18n-en="Segment Swing &amp; Consensus">分部反转与预期差对标</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="现金堡垒与2027盈利推演" data-i18n-en="Cash Fortress &amp; 2027 Lab">现金堡垒与2027盈利推演</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="本地生活竞对矩阵与压测" data-i18n-en="Peer Matrix &amp; Risk Audit">本地生活竞对矩阵与压测</span></a></li>
+ </ul>
+ </nav>
+
+ <div class="sidebar-card sidebar-actions portal-reading-tools" id="portalReadingTools" hidden inert>
+ <div class="nav-section-label" data-i18n-zh="阅读与导出工具" data-i18n-en="Appearance &amp; Export">阅读与导出工具</div>
+ <div class="side-theme-group" role="group" aria-label="Theme">
+ <button type="button" id="sideThemeLightBtn" data-portal-theme="light" aria-pressed="true" data-i18n-zh="浅色外观" data-i18n-en="Light">浅色外观</button>
+ <button type="button" id="sideThemeDarkBtn" data-portal-theme="dark" aria-pressed="false" data-i18n-zh="深色外观" data-i18n-en="Dark">深色外观</button>
+ </div>
+ <div class="side-tool-grid">
+ <button type="button" id="exportHtmlBtn" data-portal-export data-i18n-zh="导出 HTML" data-i18n-en="Export HTML">导出 HTML</button>
+ <button type="button" id="printPdfBtn" data-portal-print data-i18n-zh="打印 / PDF" data-i18n-en="Print / PDF">打印 / PDF</button>
+ </div>
+ </div>
+ </aside>
+
+ <!-- Main Distinct Non-Linear Workspace -->
+ <main class="bm-workspace">
+
+ <!-- MODULE 0: ASYMMETRIC COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="2026年11月27日 · 港交所三季报深度拆解" data-i18n-en="NOV 27, 2026 · HKEX Q3 EARNINGS ANALYSIS">2026年11月27日 · 港交所三季报深度拆解</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="外卖行业迎拐点 · 同比扭亏为盈" data-i18n-en="Delivery Inflection · Return to Profit">外卖行业迎拐点 · 同比扭亏为盈</span>
+ <span class="mui-chip mui-chip-warning mono" data-i18n-zh="营收 Beat · 经调整净利微逊预期" data-i18n-en="Rev Beat · Adj. NP Slightly Below Est.">营收 Beat · 经调整净利微逊预期</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="美团 2026 Q3 财报解构：<span class='bm-gradient-txt'>营收破1,155亿加速至+21.6%，核心商业减亏近200亿印证外卖拐点</span>" data-i18n-en="Meituan Q3 2026 Deconstruction: <span class='bm-gradient-txt'>Revenue Hits ¥115.6B (+21.6% YoY), Core Commerce Swings ~¥20B on Delivery Inflection</span>">
+ 美团 2026 Q3 财报解构：<span class="bm-gradient-txt">营收破1,155亿加速至+21.6%，核心商业减亏近200亿印证外卖拐点</span>
+ </h1>
+
+ <p class="bm-lead" id="heroLeadText" data-i18n-rich="m0_lead">
+ 2026年11月27日美团公布的三季报给出了清晰的产业信号：随着夏季补贴战降温、平均客单价同比明显回升及低价订单占比收缩，<strong>外卖行业正式迎来拐点</strong>
+ <a class="cite-link" href="https://www.meituan.com/news/NN261127296001055" target="_blank" rel="noopener noreferrer">美团官方三季报 ↗</a>。公司单季实现总营收 <strong>1,155.56亿元（+21.6% YoY，+10.4% QoQ）</strong>，超越市场一致预期（1,133.7亿元）；核心本地商业经营利润修复至 <strong>57.04亿元（7.3% 经营利润率）</strong>，较去年同期亏损 141.07亿元大幅反转近 200 亿元
+ <a class="cite-link" href="https://www.ithome.com/1/033/545.htm" target="_blank" rel="noopener noreferrer">财报核心数据 ↗</a>。与此同时，新业务亏损环比收窄至 <strong>13.12亿元（亏损率 3.5%）</strong>，Keeta 在香港与沙特实现全季盈利。不过受暑期营销推广（销售费用 270.2亿元高于预期）及公允价值变动剔除影响，经调整净利润录得 <strong>18.50亿元</strong>（略低于市场一致预期 22.0亿元）
+ <a class="cite-link" href="https://mlq.ai/news/meituan-stays-profitable-in-q3-as-revenue-rises-216-to-rmb1156-billion/" target="_blank" rel="noopener noreferrer">MLQ 财报摘要 ↗</a>，呈现出“<strong>营收与毛利强劲超预期、利润处于修复爬坡期</strong>”的典型拐点特征。
+ </p>
+ </div>
+
+ <!-- Interactive 3-Lens Earnings Switcher -->
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换财报分析透镜：" data-i18n-en="SWITCH EARNINGS LENS:">切换财报分析透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① 外卖拐点与UE修复" data-i18n-en="① Delivery Inflection">① 外卖拐点与UE修复</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 预期差与费用博弈" data-i18n-en="② Beat/Miss &amp; S&amp;M">② 预期差与费用博弈</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 新业务与AI生产力" data-i18n-en="③ New Biz &amp; AI">③ 新业务与AI生产力</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula"></div>
+ <div class="bm-lens-body" id="lensBody"></div>
+ </div>
+ </div>
+
+ <!-- Right: Live Financial Telemetry Ledger -->
+ <aside class="bm-telemetry-ledger" aria-label="Q3 2026 核心财务遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="2026 Q3 财报核心遥测账本 (HKFRS)" data-i18n-en="Q3 2026 Financial Telemetry (HKFRS)">2026 Q3 财报核心遥测账本 (HKFRS)</span>
+ </div>
+ <a class="cite-link mono" href="https://www.meituan.com/news/NN261127296001055" target="_blank" rel="noopener noreferrer" data-i18n-zh="官方公告 ↗" data-i18n-en="Filing ↗">官方公告 ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="总营收 (核心商业 67.7% / 新业务 32.3%)" data-i18n-en="Total Revenue (67.7% CLC / 32.3% New)">总营收 (核心商业 67.7% / 新业务 32.3%)</span>
+ <span class="bm-tel-val mono">¥115.56B <small style="font-size:0.74rem;color:var(--mui-success-text);">+21.6%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:67.7%;"></div>
+ <div style="width:32.3%;background:#16A34A;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span>CLC ¥78.28B (+16.8%)</span><span>New Biz ¥37.27B (+32.9%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="毛利额 &amp; 综合毛利率 (超预期 ¥20B)" data-i18n-en="Gross Profit &amp; Margin (+6.57ppt YoY)">毛利额 &amp; 综合毛利率 (超预期 ¥20B)</span>
+ <span class="bm-tel-val mono">¥37.68B <small style="font-size:0.74rem;color:var(--mui-success-text);">32.61%</small></span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:65.2%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="毛利同比 +52.2% (预期 ¥35.69B)" data-i18n-en="GP +52.2% YoY (Est. ¥35.69B)">毛利同比 +52.2% (预期 ¥35.69B)</span><span data-i18n-zh="毛利率同比 +6.57ppt" data-i18n-en="GM +6.57ppt YoY">毛利率同比 +6.57ppt</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="盈利反转：期内净利 / 经调整净利" data-i18n-en="Profit Swing: Net Profit / Adj. Net">盈利反转：期内净利 / 经调整净利</span>
+ <span class="bm-tel-val mono">¥2.07B / ¥1.85B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:78%;background:linear-gradient(90deg,#0073E6,#7C3AED);"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="经营溢利 ¥2.74B (2.4% OPM)" data-i18n-en="Op. Profit ¥2.74B (2.4% OPM)">经营溢利 ¥2.74B (2.4% OPM)</span><span data-i18n-zh="Adj. EBITDA ¥4.58B" data-i18n-en="Adj. EBITDA ¥4.58B">Adj. EBITDA ¥4.58B</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top">
+ <span class="bm-tel-lbl" data-i18n-zh="现金及短期理财堡垒 &amp; 季度研发" data-i18n-en="Cash + ST Treasury &amp; Q3 R&amp;D">现金及短期理财堡垒 &amp; 季度研发</span>
+ <span class="bm-tel-val mono">¥157.5B / ¥7.72B</span>
+ </div>
+ <div class="bm-tel-bar-track">
+ <div class="bm-tel-bar-fill" style="width:90%;"></div>
+ </div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="经营现金流入 ¥4.78B" data-i18n-en="OCF +¥4.78B">经营现金流入 ¥4.78B</span><span data-i18n-zh="研发 +11.3% (妙手服务200万+商家)" data-i18n-en="R&amp;D +11.3% (CatPaw &gt;2M merchants)">研发 +11.3% (妙手服务200万+商家)</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: HORIZONTAL 5-NODE OPERATING PIPELINE & INTERACTIVE INSPECTOR -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · Q3 2026 VALUE &amp; PROFITABILITY ENGINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶经营飞轮传导沙盘：从外卖拐点到 AI 与全球化闭环" data-i18n-en="5-Node Operating Pipeline: From Delivery Inflection to AI &amp; Global Scale">五阶经营飞轮传导沙盘：从外卖拐点到 AI 与全球化闭环</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一业务节点，拆解 2026 Q3 财报中该引擎的增长动能、UE 改善机制与核心量化指标。" data-i18n-en="Select any operating node to inspect its Q3 2026 growth driver, unit economics mechanism, and verified KPIs.">点击下方任一业务节点，拆解 2026 Q3 财报中该引擎的增长动能、UE 改善机制与核心量化指标。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">UE INFLECTION</span></div>
+ <div class="bm-node-title" data-i18n-zh="外卖拐点与客单价回升" data-i18n-en="Delivery Inflection &amp; AOV Rebound">外卖拐点与客单价回升</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="配送收入 ¥288.7亿 (+25.3%)" data-i18n-en="Delivery Rev ¥28.87B (+25.3%)">配送收入 ¥288.7亿 (+25.3%)</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">CORE PROFIT POOL</span></div>
+ <div class="bm-node-title" data-i18n-zh="到店酒旅与高阶会员闭环" data-i18n-en="In-Store, Hotel &amp; 40M+ VIP">到店酒旅与高阶会员闭环</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="核心利润 ¥57.0亿 (7.3% OPM)" data-i18n-en="CLC Profit ¥5.70B (7.3% OPM)">核心利润 ¥57.0亿 (7.3% OPM)</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">INSTASHOPPING</span></div>
+ <div class="bm-node-title" data-i18n-zh="美团闪购与自营闪电仓爆发" data-i18n-en="Instashopping &amp; 1P Surge">美团闪购与自营闪电仓爆发</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="自营商品 ¥42.6亿 (+75.8%)" data-i18n-en="1P Goods ¥4.26B (+75.8% YoY)">自营商品 ¥42.6亿 (+75.8%)</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">NEW INITIATIVES</span></div>
+ <div class="bm-node-title" data-i18n-zh="小象超市双线扩张与Keeta出海" data-i18n-en="Xiaoxiang &amp; Keeta Profitability">小象超市双线扩张与Keeta出海</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="新业务 +32.9% · 沙特盈利" data-i18n-en="New Biz +32.9% · Saudi Profitable">新业务 +32.9% · 沙特盈利</div>
+ </button>
+
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">AI &amp; DRONE TECH</span></div>
+ <div class="bm-node-title" data-i18n-zh="LongCat-2.5 开源与物理 AI" data-i18n-en="LongCat-2.5 &amp; Physical AI">LongCat-2.5 开源与物理 AI</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="研发 ¥77.2亿 · 妙手200万商家" data-i18n-en="R&amp;D ¥7.72B · CatPaw 2M+">研发 ¥77.2亿 · 妙手200万商家</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge"></span>
+ <h3 id="nodeTitle"></h3>
+ <p id="nodeDesc"></p>
+ <div class="bm-ins-formula mono" id="nodeFormula"></div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis"></div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: PROFIT POOL WATERFALL & SEGMENT DISAGGREGATION -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · Q3 P&amp;L BRIDGE &amp; MARGIN RECOVERY</span>
+ <h3 data-i18n-zh="Q3 2026 ¥1,156亿 损益转化瀑布流与四季度利润率修复" data-i18n-en="Q3 2026 ¥115.6B P&amp;L Waterfall &amp; Margin Recovery">Q3 2026 ¥1,156亿 损益转化瀑布流与四季度利润率修复</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→净利/现金流" data-i18n-en="Rev → Net / OCF">营收→净利/现金流</button>
+ <button type="button" class="mui-seg-btn" data-pview="scissors" data-i18n-zh="利润率反转轨迹" data-i18n-en="Margin Trajectory">利润率反转轨迹</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="profitCanvas"></canvas>
+ </div>
+ <div class="bm-chart-legend" id="profitLegend"></div>
+
+ <p class="bm-chart-caption" data-i18n-rich="m2_caption">
+ 数据来源：<a class="cite-link" href="https://www.meituan.com/news/NN261127296001055" target="_blank" rel="noopener noreferrer">美团 Q3 2026 业绩公告 ↗</a> 与
+ <a class="cite-link" href="https://finance.stockstar.com/IG2026112700033926.shtml" target="_blank" rel="noopener noreferrer">财务明细拆解 ↗</a>。
+ Q3 经营利润 27.41亿元中包含金融投资公允价值变动收益 23亿元（Q2 为 5,480万元）及 10亿元其他收益；同时未分配项目亏损由 44.10亿元收窄至 <strong>16.52亿元</strong>（含股份支付 19.12亿元），体现总部降本与内生盈利双轨修复。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · ¥115.56B REVENUE DISAGGREGATION</span>
+ <h3 data-i18n-zh="两大分部四层收入引擎拆解（同比 +21.6%）" data-i18n-en="4-Layer Revenue Engine Disaggregation (+21.6% YoY)">两大分部四层收入引擎拆解（同比 +21.6%）</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="clc" data-i18n-zh="核心商业" data-i18n-en="Core Local">核心商业</button>
+ <button type="button" class="mui-seg-btn" data-tcat="new" data-i18n-zh="新业务/自营" data-i18n-en="New &amp; 1P">新业务/自营</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="clc">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="① 核心商业 · 商家服务（佣金 + 在线营销）" data-i18n-en="① CLC · Merchant Services (Commission + Ads)">① 核心商业 · 商家服务（佣金 + 在线营销）</span>
+ <span class="mui-chip mui-chip-primary mono">¥434.07亿 (+8.2%)</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="核心商业最大现金牛底盘（占板块营收 55.4%），受益于GTV增长及在线营销活跃商家数持续攀升，到店酒旅保持高质量增长。" data-i18n-en="Largest profit anchor of CLC (55.4% of segment revenue), backed by higher GTV, active ad merchants, and resilient in-store &amp; hotel demand.">核心商业最大现金牛底盘（占板块营收 55.4%），受益于GTV增长及在线营销活跃商家数持续攀升，到店酒旅保持高质量增长。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="clc">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="② 核心商业 · 即时配送服务收入" data-i18n-en="② CLC · On-Demand Delivery Services">② 核心商业 · 即时配送服务收入</span>
+ <span class="mui-chip mui-chip-success mono">¥288.74亿 (+25.3%)</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="受益于平台在用户及骑手补贴激励上的节制（扣减收入的激励减少），配送服务净确认收入同比大增 25.3%，直接推升毛利率同比大涨 6.57pct。" data-i18n-en="More disciplined user &amp; courier subsidies reduced contra-revenue deductions, driving +25.3% YoY delivery revenue growth and +6.57ppt gross margin expansion.">受益于平台在用户及骑手补贴激励上的节制（扣减收入的激励减少），配送服务净确认收入同比大增 25.3%，直接推升毛利率同比大涨 6.57pct。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="new">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="③ 核心商业 · 自营商品销售（医药/酒类等）" data-i18n-en="③ CLC · 1P Merchandise Sales (Pharma &amp; Liquor)">③ 核心商业 · 自营商品销售（医药/酒类等）</span>
+ <span class="mui-chip mui-chip-violet mono">¥42.61亿 (+75.8%)</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="Q3 核心本地商业增速最亮眼的细分板块！以“歪马送酒”专属履约基建与24小时药店网络下沉为抓手，增速远超传统外卖。" data-i18n-en="Fastest-growing CLC sub-segment (+75.8% YoY), powered by Waima liquor delivery infrastructure and 24-hour pharmacy expansion into lower-tier cities.">Q3 核心本地商业增速最亮眼的细分板块！以“歪马送酒”专属履约基建与24小时药店网络下沉为抓手，增速远超传统外卖。</div>
+ </div>
+
+ <div class="bm-tier-card" data-tier="new">
+ <div class="bm-tier-top">
+ <span class="bm-tier-name" data-i18n-zh="④ 新业务 · 小象超市、快乐猴与 Keeta 出海" data-i18n-en="④ New Initiatives · Xiaoxiang Grocery &amp; Keeta">④ 新业务 · 小象超市、快乐猴与 Keeta 出海</span>
+ <span class="mui-chip mui-chip-warning mono">¥372.73亿 (+32.9%)</span>
+ </div>
+ <div class="bm-tier-desc" data-i18n-zh="其中新业务商品销售同比大增 48.6%，小象超市覆盖 85 城并开出 9 家线下店，沙特 Keeta 全季盈利，带动分部亏损率收窄至 -3.5%。" data-i18n-en="Merchandise sales +48.6% YoY; Xiaoxiang spans 85 cities with 9 offline stores, while Keeta Saudi turned profitable for the full quarter, narrowing segment loss margin to -3.5%.">其中新业务商品销售同比大增 48.6%，小象超市覆盖 85 城并开出 9 家线下店，沙特 Keeta 全季盈利，带动分部亏损率收窄至 -3.5%。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: SEGMENT TURNAROUND & CONSENSUS BEAT/MISS -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · BUSINESS UNIT ECONOMICS</span>
+ <h3 data-i18n-zh="三大核心业务线 Q3 单位经济拆解" data-i18n-en="3 Core Business Lines Q3 Unit Economics">三大核心业务线 Q3 单位经济拆解</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn active" data-cohort="delivery" data-i18n-zh="外卖与即时配送" data-i18n-en="Food Delivery">外卖与即时配送</button>
+ <button type="button" class="mui-seg-btn" data-cohort="instore" data-i18n-zh="到店酒旅与闪购" data-i18n-en="In-Store &amp; Flash">到店酒旅与闪购</button>
+ <button type="button" class="mui-seg-btn" data-cohort="overseas" data-i18n-zh="小象与Keeta出海" data-i18n-en="Grocery &amp; Keeta">小象与Keeta出海</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics"></div>
+ <div class="bm-ratchet-note" id="cohortNote"></div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · SEGMENT SWING &amp; CONSENSUS BEAT/MISS</span>
+ <h3 data-i18n-zh="分部经营利润大反转与市场预期差对比" data-i18n-en="Segment Operating Profit Swing &amp; Consensus Beat/Miss">分部经营利润大反转与市场预期差对比</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="swing" data-i18n-zh="分部利润反转 (Q3 25→Q3 26)" data-i18n-en="Segment Profit Swing">分部利润反转 (Q3 25→Q3 26)</button>
+ <button type="button" class="mui-seg-btn" data-cview="consensus" data-i18n-zh="实际值 vs 市场一致预期" data-i18n-en="Actual vs Consensus">实际值 vs 市场一致预期</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="cohortCanvas"></canvas>
+ </div>
+ <div class="bm-chart-legend" id="cohortLegend"></div>
+
+ <p class="bm-chart-caption" data-i18n-rich="m3_caption">
+ 预期差提示：<a class="cite-link" href="https://finance.biggo.com.tw/news/19622ed2-f603-4d3a-b22d-e0ba4d107285" target="_blank" rel="noopener noreferrer">BigGo 预期差分析 ↗</a>。Q3 总营收（1,155.6亿 vs 预期 1,133.7亿）、毛利（376.8亿 vs 预期 356.9亿）与核心商业经营利润（57.0亿 vs 预期 41.5亿）全面 Beat；但销售费用（270.2亿 vs 预期 253.1亿）偏高导致经调整净利（18.5亿）小幅低于共识（22.0亿）。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: CASH FORTRESS & LIVE 2027E PROFIT SIMULATOR -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · CASH FORTRESS &amp; EXPENSE RATIO</span>
+ <h3 data-i18n-zh="¥1,575亿 现金储备堡垒与费用率结构演进" data-i18n-en="¥157.5B Cash Fortress &amp; Expense Ratio Compression">¥1,575亿 现金储备堡垒与费用率结构演进</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="cash" data-i18n-zh="现金与债务结构" data-i18n-en="Cash &amp; Debt">现金与债务结构</button>
+ <button type="button" class="mui-seg-btn" data-kview="expenses" data-i18n-zh="Q3 费用率拆解" data-i18n-en="Q3 Cost Ratios">Q3 费用率拆解</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box">
+ <canvas id="capitalCanvas"></canvas>
+ </div>
+
+ <p class="bm-chart-caption" data-i18n-rich="m4_caption">
+ 资产负债表安全边际：截至 2026年9月30日，美团持有现金及现金等价物 <strong>1,041.4亿元</strong> + 短期理财投资 <strong>533.8亿元</strong>，合计 <strong>1,575.3亿元</strong>；Q3 经营活动现金净流入 47.84亿元（高于期内净利），流动性极为充裕
+ <a class="cite-link" href="https://finance.stockstar.com/IG2026112700033926.shtml" target="_blank" rel="noopener noreferrer">现金与债务明细 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 2027E EARNINGS RECOVERY SIMULATOR</span>
+ <h3 data-i18n-zh="2027E 美团盈利修复情景推演器（基于 Q3 基准年化）" data-i18n-en="2027E Earnings Recovery Simulator (Annualized from Q3 Base)">2027E 美团盈利修复情景推演器（基于 Q3 基准年化）</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="补贴战重燃" data-i18n-en="Bear">补贴战重燃</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="基准修复" data-i18n-en="Base">基准修复</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="拐点加速" data-i18n-en="Bull">拐点加速</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="核心本地商业营收同比增速 (CLC Growth)" data-i18n-en="Core Local Commerce Revenue Growth">核心本地商业营收同比增速 (CLC Growth)</span><b class="mono" id="lblClcGrowth">15.0%</b></div>
+ <input type="range" id="inpClcGrowth" min="5" max="25" step="0.5" value="15.0" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="核心本地商业经营利润率 (CLC OPM)" data-i18n-en="Core Local Commerce Operating Margin">核心本地商业经营利润率 (CLC OPM)</span><b class="mono" id="lblClcOpm">10.5%</b></div>
+ <input type="range" id="inpClcOpm" min="3" max="18" step="0.5" value="10.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="新业务经营亏损率 (New Biz Loss Margin)" data-i18n-en="New Initiatives Loss Margin">新业务经营亏损率 (New Biz Loss Margin)</span><b class="mono" id="lblNewLoss">-2.5%</b></div>
+ <input type="range" id="inpNewLoss" min="-6.0" max="1.0" step="0.5" value="-2.5" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">¥532B</b><span data-i18n-zh="2027E 推演总营收" data-i18n-en="2027E Est. Revenue">2027E 推演总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simClcOpOut">¥37.8B</b><span data-i18n-zh="核心商业经营利润" data-i18n-en="CLC Op. Profit">核心商业经营利润</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simNetOpOut">¥27.3B</b><span data-i18n-zh="集团推演经营利润" data-i18n-en="Group Op. Profit">集团推演经营利润</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simOpmOut">5.1%</b><span data-i18n-zh="集团经营利润率" data-i18n-en="Group OPM">集团经营利润率</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;">
+ <canvas id="simMiniCanvas"></canvas>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: PEER MATRIX & REGULATORY / COMPETITION STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · COMPETITIVE BENCHMARKING &amp; RISK STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="海内外本地生活与电商平台横向对标及三大核心风险压测" data-i18n-en="Local Commerce &amp; Global Delivery Peer Matrix &amp; Stress Audit">海内外本地生活与电商平台横向对标及三大核心风险压测</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比美团与全球即时配送（DoorDash/Uber）及国内泛零售生态巨头的商业模式差异，并核查三大关键风险。" data-i18n-en="Benchmarking Meituan against global delivery peers and domestic commerce rivals, plus 3 structural risk stress tests.">对比美团与全球即时配送（DoorDash/Uber）及国内泛零售生态巨头的商业模式差异，并核查三大关键风险。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (5)" data-i18n-en="All Peers (5)">全部标杆 (5)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="cn" data-i18n-zh="国内本地生活/电商" data-i18n-en="China Rivals">国内本地生活/电商</button>
+ <button type="button" class="mui-seg-btn" data-pcat="global" data-i18n-zh="海外即时配送" data-i18n-en="Global Delivery">海外即时配送</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th data-i18n-zh="公司与代码" data-i18n-en="Company">公司与代码</th>
+ <th data-i18n-zh="核心履约与商业原型" data-i18n-en="Business Archetype">核心履约与商业原型</th>
+ <th data-i18n-zh="最新毛利率" data-i18n-en="Gross Margin">最新毛利率</th>
+ <th data-i18n-zh="经营利润率 (OPM)" data-i18n-en="Operating Margin">经营利润率 (OPM)</th>
+ <th data-i18n-zh="Q3/近期关键动能" data-i18n-en="Key Momentum">Q3/近期关键动能</th>
+ <th data-i18n-zh="核心壁垒与正面交锋点" data-i18n-en="Core Moat &amp; Overlap">核心壁垒与正面交锋点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-subject" data-row-cat="cn global">
+ <td><strong>Meituan (3690.HK)</strong> <span class="mui-chip mui-chip-primary mono" data-i18n-zh="本研究标的" data-i18n-en="Subject">本研究标的</span></td>
+ <td data-i18n-zh="高密度骑手调度网络 + 到家/到店双轮 + 闪购自营" data-i18n-en="High-Density Rider Mesh + Delivery/In-Store + 1P">高密度骑手调度网络 + 到家/到店双轮 + 闪购自营</td>
+ <td class="mono">32.6% (+6.6ppt)</td>
+ <td class="mono" style="color:var(--mui-success-text);">2.4% (CLC 7.3%)</td>
+ <td data-i18n-zh="Q3 营收 ¥115.6B (+21.6%)，核心商业扭亏减亏近200亿" data-i18n-en="Q3 Rev ¥115.6B (+21.6%), CLC swung ~¥20B">Q3 营收 ¥115.6B (+21.6%)，核心商业扭亏减亏近200亿</td>
+ <td data-i18n-zh="外卖 GTV 份额 &gt;60%，4000万+高等级会员；警惕冬季履约成本" data-i18n-en="&gt;60% delivery GTV share, 40M+ VIP; watch Q4 winter rider costs">外卖 GTV 份额 &gt;60%，4000万+高等级会员；警惕冬季履约成本</td>
+ </tr>
+ <tr data-row-cat="global">
+ <td><strong>DoorDash (DASH)</strong></td>
+ <td data-i18n-zh="北美即时配送垄断平台 + DashPass 订阅 + 广告" data-i18n-en="US Delivery Leader + DashPass + Ads">北美即时配送垄断平台 + DashPass 订阅 + 广告</td>
+ <td class="mono">~51.9%</td>
+ <td class="mono" style="color:var(--mui-success-text);">~5.3%</td>
+ <td data-i18n-zh="Q3 2026 净利率 ~6.2%，海外与非餐品类持续扩张" data-i18n-en="Q3 2026 Net Margin ~6.2%, expanding non-restaurant retail">Q3 2026 净利率 ~6.2%，海外与非餐品类持续扩张</td>
+ <td data-i18n-zh="北美单均客单价与抽成率极高；Q4 同样面临冬季骑手补贴季节性承压" data-i18n-en="High US AOV &amp; take rate; seasonal Q4 dasher cost headwind">北美单均客单价与抽成率极高；Q4 同样面临冬季骑手补贴季节性承压</td>
+ </tr>
+ <tr data-row-cat="cn">
+ <td><strong>Alibaba · 淘宝闪购</strong></td>
+ <td data-i18n-zh="远场电商流量反哺即时零售 + 盒马前置仓" data-i18n-en="E-Commerce Traffic + Taobao Instant Commerce">远场电商流量反哺即时零售 + 盒马前置仓</td>
+ <td class="mono">~38%–40%</td>
+ <td class="mono">~10%–13% (集团)</td>
+ <td data-i18n-zh="重启淘鲜达，盒马在华东加密28座前置仓直攻小象" data-i18n-en="Boxma adding front-warehouses in East China vs Xiaoxiang">重启淘鲜达，盒马在华东加密28座前置仓直攻小象</td>
+ <td data-i18n-zh="美团外卖头号双雄对手；2026下半年补贴战正从非理性回归ROI" data-i18n-en="Primary delivery duopoly rival; subsidies rationalizing post-summer">美团外卖头号双雄对手；2026下半年补贴战正从非理性回归ROI</td>
+ </tr>
+ <tr data-row-cat="cn">
+ <td><strong>JD.com · 京东本地生活</strong></td>
+ <td data-i18n-zh="自营供应链 + 达达即时配送网络" data-i18n-en="1P Supply Chain + Dada On-Demand">自营供应链 + 达达即时配送网络</td>
+ <td class="mono">~15%–16%</td>
+ <td class="mono">~3%–4%</td>
+ <td data-i18n-zh="由纯补贴转向供应链盈利战，聚焦医药/3C/酒水即时送" data-i18n-en="Shifting from pure subsidies to supply-chain profitability">由纯补贴转向供应链盈利战，聚焦医药/3C/酒水即时送</td>
+ <td data-i18n-zh="3C数码与高品质酒水供应链强；但在高频餐饮外卖密度上弱于美团" data-i18n-en="Strong 3C/liquor supply chain; lower restaurant order density">3C数码与高品质酒水供应链强；但在高频餐饮外卖密度上弱于美团</td>
+ </tr>
+ <tr data-row-cat="cn">
+ <td><strong>ByteDance · 抖音本地生活</strong></td>
+ <td data-i18n-zh="短视频/直播兴趣种草 + 到店团购核销" data-i18n-en="Short-Video Discovery + In-Store Vouchers">短视频/直播兴趣种草 + 到店团购核销</td>
+ <td class="mono" data-i18n-zh="未上市 (高毛利内容平台)" data-i18n-en="Private (High-GM Content)">未上市 (高毛利内容平台)</td>
+ <td class="mono" data-i18n-zh="高现金流广告生态" data-i18n-en="High-FCF Ad Engine">高现金流广告生态</td>
+ <td data-i18n-zh="上线独立团购工具“抖省省”，持续争夺高毛利到店流量" data-i18n-en="Douyin group-buying &amp; local tools competing for in-store share">上线独立团购工具“抖省省”，持续争夺高毛利到店流量</td>
+ <td data-i18n-zh="内容爆品与脉冲式核销极强；美团以“神抢手/繁盛计划/直订”防守" data-i18n-en="Strong impulse discovery; Meituan defends via search intent &amp; SaaS">内容爆品与脉冲式核销极强；美团以“神抢手/繁盛计划/直订”防守</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">RISK 01 · S&amp;M &amp; WINTER COURIER COST</span>
+ <h4 data-i18n-zh="Q3 销售费用超预期（¥270.2亿）与 Q4 冬季骑手成本" data-i18n-en="Elevated S&amp;M (¥27.0B) &amp; Q4 Winter Rider Subsidies">Q3 销售费用超预期（¥270.2亿）与 Q4 冬季骑手成本</h4>
+ <p data-i18n-rich="s1_body">虽然 Q3 外卖补贴趋理性，但销售及营销开支仍达 <strong>270.2亿元</strong>（高于市场一致预期的 253.1亿元），导致经调整净利润（18.5亿元）略低于预期。花旗等机构提醒，四季度气温下降叠加骑手社保/职业伤害保障全国落地，冬季运力补贴可能阶段性压制利润率 <a class="cite-link" href="https://digg.com/tech/nhn436ef" target="_blank" rel="noopener noreferrer">机构风险提示 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> <span data-i18n-zh="纳入 Q4 跟踪：销售费用率能否回落至 21% 以下" data-i18n-en="Track Q4: Can S&amp;M Ratio Fall Below 21%?">纳入 Q4 跟踪：销售费用率能否回落至 21% 以下</span></label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">RISK 02 · INSTANT RETAIL &amp; IN-STORE RIVALRY</span>
+ <h4 data-i18n-zh="淘宝闪购/盒马前置仓与抖音“抖省省”的双向夹击" data-i18n-en="Boxma Front-Warehouses &amp; Douyin In-Store Competition">淘宝闪购/盒马前置仓与抖音“抖省省”的双向夹击</h4>
+ <p data-i18n-zh="外卖虽迎来拐点，但高利润率的“到店”与高成长的“即时零售”战火未熄：阿里重启淘鲜达并在华东加密盒马前置仓直攻小象超市，抖音则通过“抖省省”抢占到店团购心智。美团需通过 4,000万+ 高等级会员与“超级厨房/妙手”商户锁定持续巩固护城河。" data-i18n-en="While food delivery subsidies eased, Boxma's front-warehouses target Xiaoxiang Supermarket and Douyin attacks high-margin in-store vouchers. Meituan must defend via 40M+ VIPs and CatPaw merchant SaaS.">外卖虽迎来拐点，但高利润率的“到店”与高成长的“即时零售”战火未熄：阿里重启淘鲜达并在华东加密盒马前置仓直攻小象超市，抖音则通过“抖省省”抢占到店团购心智。美团需通过 4,000万+ 高等级会员与“超级厨房/妙手”商户锁定持续巩固护城河。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> <span data-i18n-zh="纳入 Q4 跟踪：核心本地商业 OPM 能否站稳 7%–9%" data-i18n-en="Track Q4: Does CLC OPM Hold 7%–9%?">纳入 Q4 跟踪：核心本地商业 OPM 能否站稳 7%–9%</span></label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">RISK 03 · OCI VALUATION &amp; BRAZIL EXPANSION</span>
+ <h4 data-i18n-zh="股权投资公允价值波动（-¥122亿 OCI）与巴西扩张投入" data-i18n-en="Equity Investment Volatility (-¥12.2B OCI) &amp; Brazil Spend">股权投资公允价值波动（-¥122亿 OCI）与巴西扩张投入</h4>
+ <p data-i18n-rich="s3_body">截至9月30日，美团持有智谱 3.53%、宇树科技 6.85% 等股权，Q3 计入其他全面收益（OCI）的公允价值变动亏损达 <strong>122亿元</strong>（虽不影响当期损益表，但影响净资产）。同时 Keeta 在巴西已拓展至 32 座城市，需观察巴西前期投入是否会拖累新业务进一步减亏节奏 <a class="cite-link" href="https://finance.stockstar.com/IG2026112700033926.shtml" target="_blank" rel="noopener noreferrer">OCI 投资明细 ↗</a>。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> <span data-i18n-zh="纳入 Q4 跟踪：新业务亏损能否进一步收窄至 10亿以内" data-i18n-en="Track Q4: New Biz Loss Narrowing Below ¥1.0B">纳入 Q4 跟踪：新业务亏损能否进一步收窄至 10亿以内</span></label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES FOOTER -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES · 2026-11-27</span>
+ <h2 class="bm-h2" data-i18n-zh="美团 2026 Q3 财报官方公告与权威财经信源" data-i18n-en="Verified Official Releases &amp; Financial Sources">美团 2026 Q3 财报官方公告与权威财经信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://www.meituan.com/news/NN261127296001055" target="_blank" rel="noopener noreferrer">
+ <b>美团官方新闻中心：2026年三季报全文 ↗</b>
+ <span data-i18n-zh="官方披露营收 1,156亿（+21.6%）、研发 77亿、LongCat-2.5 开源、妙手 200万商家及 Keeta 沙特盈利" data-i18n-en="Official release: ¥115.6B rev (+21.6%), ¥7.7B R&amp;D, LongCat-2.5, CatPaw 2M+ merchants &amp; Keeta Saudi profit">官方披露营收 1,156亿（+21.6%）、研发 77亿、LongCat-2.5 开源、妙手 200万商家及 Keeta 沙特盈利</span>
+ </a>
+ <a class="bm-source-item" href="https://www.ithome.com/1/033/545.htm" target="_blank" rel="noopener noreferrer">
+ <b>IT之家：美团 2026 Q3 核心财务数据汇总 ↗</b>
+ <span data-i18n-zh="营收 1,155.56亿、毛利 376.84亿（32.61%）、归母净利 20.7亿、经营现金流 47.84亿及现金储备 1,575亿" data-i18n-en="Rev ¥115.56B, GP ¥37.68B (32.61%), Net Profit ¥2.07B, OCF ¥4.78B &amp; ¥157.5B cash pile">营收 1,155.56亿、毛利 376.84亿（32.61%）、归母净利 20.7亿、经营现金流 47.84亿及现金储备 1,575亿</span>
+ </a>
+ <a class="bm-source-item" href="https://www.iyiou.com/news/202611271147463" target="_blank" rel="noopener noreferrer">
+ <b>亿欧：核心本地商业分部收入明细拆解 ↗</b>
+ <span data-i18n-zh="配送服务 288.74亿、商家服务 434.07亿、自营商品 42.61亿（+75.8%）及小象超市 85城/9家线下店进展" data-i18n-en="Delivery ¥28.87B, Merchant ¥43.41B, 1P Goods ¥4.26B (+75.8%) &amp; Xiaoxiang 85 cities">配送服务 288.74亿、商家服务 434.07亿、自营商品 42.61亿（+75.8%）及小象超市 85城/9家线下店进展</span>
+ </a>
+ <a class="bm-source-item" href="https://mlq.ai/news/meituan-stays-profitable-in-q3-as-revenue-rises-216-to-rmb1156-billion/" target="_blank" rel="noopener noreferrer">
+ <b>MLQ.ai: Q3 2026 vs Q2 2026 vs Q3 2025 财报对比 ↗</b>
+ <span data-i18n-zh="三季度与二季度、去年同期分部利润、公允价值收益（23亿）及 S&amp;M 费用（270亿）完整英文对照" data-i18n-en="Full Q3 26 vs Q2 26 vs Q3 25 P&amp;L table, ¥2.3B fair value gains &amp; ¥27.0B S&amp;M breakdown">三季度与二季度、去年同期分部利润、公允价值收益（23亿）及 S&amp;M 费用（270亿）完整英文对照</span>
+ </a>
+ <a class="bm-source-item" href="https://finance.stockstar.com/IG2026112700033926.shtml" target="_blank" rel="noopener noreferrer">
+ <b>证券之星：未分配项目、OCI 投资变动与债务结构 ↗</b>
+ <span data-i18n-zh="未分配项目亏损收窄至 16.52亿、智谱/宇树科技 OCI 公允价值变动 -122亿及现金/借款明细" data-i18n-en="Unallocated loss narrowed to ¥1.65B, -¥12.2B OCI on Zhipu/Unitree &amp; debt structure">未分配项目亏损收窄至 16.52亿、智谱/宇树科技 OCI 公允价值变动 -122亿及现金/借款明细</span>
+ </a>
+ <a class="bm-source-item" href="https://finance.biggo.com.tw/news/19622ed2-f603-4d3a-b22d-e0ba4d107285" target="_blank" rel="noopener noreferrer">
+ <b>BigGo 财经：市场预期差（Consensus Beat/Miss）↗</b>
+ <span data-i18n-zh="营收/毛利/核心利润 Beat 与经调整净利（18.5亿 vs 22.0亿）及销售费用（270.2亿 vs 253.1亿）预期差解析" data-i18n-en="Consensus comparison: Revenue/GP/CLC Beat vs Adj. Net Profit (¥1.85B vs ¥2.20B) &amp; S&amp;M variance">营收/毛利/核心利润 Beat 与经调整净利（18.5亿 vs 22.0亿）及销售费用（270.2亿 vs 253.1亿）预期差解析</span>
+ </a>
+ </div>
+ </section>
+
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/meituan_q3_2026_business_analysis.js"></script><script src="../../_shared/company-report-ui.js"></script>
+<script src="../../_shared/imported-report-menu.js"></script>
+</body>
+</html>

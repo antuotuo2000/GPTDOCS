@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html data-report-menu="unified" data-imported-report data-report-family="pdd" lang="zh-CN" data-theme="dark">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="拼多多控股 PDD Holdings (NASDAQ: PDD) 商业模式架构深度拆解：C2M需求汇聚漏斗、零自营库存双边抽成（在线营销+交易服务）、千亿扶持商家生态、Temu半托管转型与RMB 4,554亿现金堡垒（基于FY2025 20-F与Q3 2026财报）。" />
+ <title>拼多多 PDD Holdings (PDD) 商业模式架构深度拆解 | 数据中心</title>
+ 
+<script id="portalDetailPreferences" src="../../_shared/68ff95eea5e79934.js"></script>
+<script src="../../_shared/navigation.js"></script><script src="../../_shared/device-mode.js"></script>
+<link rel="stylesheet" href="../../_shared/pdd_business_model.css">
+<link rel="stylesheet" href="../../_shared/report-design.css" data-shared-report-design="duan-yongping">
+<link rel="stylesheet" href="../../_shared/report-tables.css"><link rel="stylesheet" href="../../_shared/imported-report-ui.css">
+<link rel="stylesheet" href="../../_shared/imported-report-menu.css">
+</head>
+<body><div id="portalDetailBackdrop" aria-hidden="true"></div>
+ <div id="readingProgressBar"></div>
+ <div id="drawerBackdrop" class="drawer-backdrop"></div>
+ <div id="chartTooltip"></div>
+ <div id="muiSnackbar" role="status" aria-live="polite"></div>
+
+ <header class="mui-appbar" data-unified-report-menu>
+ <div class="mui-appbar-inner">
+  <div class="appbar-left">
+   <button type="button" id="sidebarToggleBtn" class="mui-icon-btn" aria-label="展开或收起目录" title="展开或收起目录"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg></button>
+   <nav class="breadcrumbs" aria-label="当前位置"><span class="crumb-current" data-i18n-zh="拼多多 (PDD Holdings) 商业模式架构拆解" data-i18n-en="PDD Holdings Business Model Architecture" data-zh="拼多多 (PDD Holdings) 商业模式架构拆解" data-en="PDD Holdings Business Model Architecture">拼多多 (PDD Holdings) 商业模式架构拆解</span></nav>
+  </div>
+  <div class="appbar-right">
+   <div class="quick-search-wrap"><span class="quick-search-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></span><input type="search" id="quickJumpInput" class="quick-search-input" placeholder="搜索全站文章、代码或关键词…" aria-label="搜索全站研究文章" autocomplete="off"><span class="quick-search-kbd mono">⌘K</span><div id="quickJumpPopover" class="quick-jump-popover" role="listbox"></div></div>
+   <div id="langSwitchGroup" class="mui-lang-switch" role="group" aria-label="语言切换"><button type="button" id="langZhBtn" class="mui-lang-btn active" data-lang="zh" aria-pressed="true">中文</button><button type="button" id="langEnBtn" class="mui-lang-btn" data-lang="en" aria-pressed="false">EN</button></div>
+   <button type="button" id="appbarThemeBtn" class="mui-theme-icon-btn" aria-label="切换深浅色主题" title="切换深浅色主题"><span id="appbarThemeIcon" style="display:inline-flex"></span></button>
+  </div>
+ </div>
+</header>
+
+ <div class="layout-shell">
+ <aside id="muiSidebar" class="mui-sidebar" aria-label="商业模式模块与导航"><div class="sidebar-card co-side-nav" id="companySubfolderHub" data-co-key="PDD"><a href="../../index.html">首页</a></div>
+ <div class="sidebar-card">
+ <div class="sidebar-brand-top"><span class="mui-chip mui-chip-primary mono">PDD · BUSINESS MODEL</span></div>
+ <div class="sidebar-title" data-i18n-zh="拼多多商业模式架构图谱" data-i18n-en="PDD Business Model Blueprint">拼多多商业模式架构图谱</div>
+ <p class="sidebar-subtitle" data-i18n-zh="C2M需求汇聚 × 零自营库存双边平台 × 在线营销与交易服务双擎 × 负营运资本现金堡垒" data-i18n-en="C2M Demand Aggregation × Zero-Inventory 3P Marketplace × Dual Monetization × Negative Working Capital Fortress">C2M需求汇聚 × 零自营库存双边平台 × 在线营销与交易服务双擎 × 负营运资本现金堡垒</p>
+ <div class="sidebar-mini-kpis">
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="商业原型" data-i18n-en="Archetype">商业原型</span><span class="sidebar-mini-val mono" data-i18n-zh="C2M 算法双边市场" data-i18n-en="C2M Algo Marketplace">C2M 算法双边市场</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="FY25 营收 / Q3'26 毛利" data-i18n-en="FY25 Rev / Q3'26 GM">FY25 营收 / Q3'26 毛利</span><span class="sidebar-mini-val mono">¥431.8B · 58.2%</span></div>
+ <div class="sidebar-mini-row"><span class="sidebar-mini-label" data-i18n-zh="现金+短投 (26Q3)" data-i18n-en="Cash &amp; ST Inv (26Q3)">现金+短投 (26Q3)</span><span class="sidebar-mini-val mono">¥455.4B ($67.9B)</span></div>
+ </div>
+ </div>
+
+ <nav class="sidebar-card" aria-label="商业架构工作台目录">
+ <div class="nav-section-label" data-i18n-zh="商业架构工作台 (M0–M5)" data-i18n-en="Workbench Modules (M0–M5)">商业架构工作台 (M0–M5)</div>
+ <ul class="mui-nav-list" id="tocList">
+ <li><a href="#mod-deck" class="mui-nav-link active"><span class="nav-idx mono">M0</span><span data-i18n-zh="双栏指挥舱与核心公式" data-i18n-en="Command Deck &amp; Formula">双栏指挥舱与核心公式</span></a></li>
+ <li><a href="#mod-pipeline" class="mui-nav-link"><span class="nav-idx mono">M1</span><span data-i18n-zh="五阶价值链传导沙盘" data-i18n-en="5-Node Value Pipeline">五阶价值链传导沙盘</span></a></li>
+ <li><a href="#mod-profit-pool" class="mui-nav-link"><span class="nav-idx mono">M2</span><span data-i18n-zh="利润池瀑布流与双擎拆解" data-i18n-en="Profit Waterfall &amp; Engines">利润池瀑布流与双擎拆解</span></a></li>
+ <li><a href="#mod-cohort" class="mui-nav-link"><span class="nav-idx mono">M3</span><span data-i18n-zh="三类客群复购与份额" data-i18n-en="Cohort LTV &amp; Market Share">三类客群复购与份额</span></a></li>
+ <li><a href="#mod-capital" class="mui-nav-link"><span class="nav-idx mono">M4</span><span data-i18n-zh="现金堡垒与5年推演器" data-i18n-en="Cash Fortress &amp; 5Y Lab">现金堡垒与5年推演器</span></a></li>
+ <li><a href="#mod-matrix" class="mui-nav-link"><span class="nav-idx mono">M5</span><span data-i18n-zh="全球巨头对标与监管压测" data-i18n-en="Peer Matrix &amp; Stress Audit">全球巨头对标与监管压测</span></a></li>
+ </ul>
+ </nav>
+
+ <div class="sidebar-card portal-reading-tools" id="portalReadingTools" hidden inert>
+ <div class="nav-section-label" data-i18n-zh="阅读与导出工具" data-i18n-en="Appearance &amp; Export">阅读与导出工具</div>
+ <div class="side-theme-group" role="group" aria-label="Theme">
+ <button type="button" id="sideLightBtn" aria-pressed="true" data-i18n-zh="浅色外观" data-i18n-en="Light">浅色外观</button>
+ <button type="button" id="sideDarkBtn" aria-pressed="false" data-i18n-zh="深色外观" data-i18n-en="Dark">深色外观</button>
+ </div>
+ <div class="side-tool-grid">
+ <button type="button" id="sideExportBtn" data-i18n-zh="导出 HTML" data-i18n-en="Export HTML">导出 HTML</button>
+ <button type="button" id="sidePrintBtn" data-i18n-zh="打印 / PDF" data-i18n-en="Print / PDF">打印 / PDF</button>
+ </div>
+ </div>
+ </aside>
+
+ <main class="bm-workspace">
+ <!-- MODULE 0: COMMAND DECK -->
+ <section id="mod-deck" class="bm-command-deck">
+ <div class="bm-thesis-deck">
+ <div>
+ <div class="bm-badge-row">
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="商业范式：C2M 需求聚合器 × 零自营库存双边平台" data-i18n-en="ARCHETYPE: C2M Demand Aggregator × Zero-Inventory 3P Marketplace">商业范式：C2M 需求聚合器 × 零自营库存双边平台</span>
+ <span class="mui-chip mui-chip-success mono" data-i18n-zh="2025 20-F &amp; Q3 2026 审计基准" data-i18n-en="2025 20-F &amp; Q3 2026 Verified">2025 20-F &amp; Q3 2026 审计基准</span>
+ <span class="mui-chip mui-chip-violet mono">CapEx 0.27% · ~8.6x P/E</span>
+ </div>
+
+ <h1 class="bm-display-h1" data-i18n-zh="拼多多商业模式解构：<span class='bm-gradient-txt'>以算法聚合海量确定性需求，用2.5万人撬动4,318亿营收与4,554亿现金堡垒</span>" data-i18n-en="Deconstructing PDD's Business Model: <span class='bm-gradient-txt'>Algorithmic Demand Aggregation Driving RMB 431.8B Sales &amp; RMB 455.4B Cash with 25,474 FTEs</span>">
+ 拼多多商业模式解构：<span class="bm-gradient-txt">以算法聚合海量确定性需求，用2.5万人撬动4,318亿营收与4,554亿现金堡垒</span>
+ </h1>
+
+ <p class="bm-lead" data-i18n-rich="m0_lead">
+ 传统货架电商按“人找货”逻辑分配曝光，而<strong>拼多多（PDD Holdings, NASDAQ: PDD）</strong>重构了“货找人”的 <strong>C2M 确定性分发机器</strong>：通过社交拼团、百亿补贴与极简“千人千面”瀑布流将零散消费聚沙成塔，直连 <strong>1,680 万活跃商家</strong>与产业带源头工厂 <a class="cite-link" href="https://www.sec.gov/Archives/edgar/data/1737806/000110465926050727/pdd-20251231x20f.htm" target="_blank" rel="noopener noreferrer">2025 Form 20-F ↗</a>。FY2025 公司总营收达 <strong>RMB 4,318.5 亿（US$617.5 亿）</strong>，其中在线营销服务（RMB 2,177.8 亿）与交易服务（RMB 2,140.6 亿）形成均衡双轮 <a class="cite-link" href="https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-fourth-quarter-2025-and-fiscal-year-2025/" target="_blank" rel="noopener noreferrer">FY25 财报 ↗</a>。2026 年第三季度，在“千亿扶持”让利商家与海外半托管转型下，公司实现营收 <strong>RMB 1,083.4 亿</strong>、营业利润大增至 <strong>RMB 311.6 亿（营业利润率 28.8%）</strong>、净利润 <strong>RMB 295.4 亿</strong>，账面现金及短期投资攀升至 <strong>RMB 4,554 亿（US$679 亿）</strong> <a class="cite-link" href="https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-third-quarter-2026-unaudited-financial/" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-lens-panel">
+ <div class="bm-lens-head">
+ <span class="mono" style="font-size:0.74rem;font-weight:800;color:var(--text-muted);" data-i18n-zh="切换商业本质透镜：" data-i18n-en="SWITCH ECONOMIC LENS:">切换商业本质透镜：</span>
+ <div class="mui-segmented" id="lensTabs">
+ <button type="button" class="mui-seg-btn active" data-lens="0" data-i18n-zh="① C2M 需求聚合漏斗" data-i18n-en="① C2M Demand Funnel">① C2M 需求聚合漏斗</button>
+ <button type="button" class="mui-seg-btn" data-lens="1" data-i18n-zh="② 双擎变现结构" data-i18n-en="② Dual Monetization">② 双擎变现结构</button>
+ <button type="button" class="mui-seg-btn" data-lens="2" data-i18n-zh="③ 负营运资本浮存" data-i18n-en="③ Negative WC Float">③ 负营运资本浮存</button>
+ </div>
+ </div>
+ <div class="bm-equation-bar mono" id="lensFormula"></div>
+ <div class="bm-lens-body" id="lensBody"></div>
+ </div>
+ </div>
+
+ <aside class="bm-telemetry-ledger" aria-label="FY25 与 Q3 2026 核心经济遥测">
+ <div class="bm-ledger-head">
+ <div class="bm-ledger-title">
+ <span class="bm-pulse-dot"></span>
+ <span data-i18n-zh="FY2025 &amp; Q3 2026 核心遥测账本" data-i18n-en="FY2025 &amp; Q3 2026 Telemetry Ledger">FY2025 &amp; Q3 2026 核心遥测账本</span>
+ </div>
+ <a class="cite-link mono" href="https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-third-quarter-2026-unaudited-financial/" target="_blank" rel="noopener noreferrer" data-i18n-zh="Q3'26 8-K ↗" data-i18n-en="Q3'26 Release ↗">Q3'26 8-K ↗</a>
+ </div>
+
+ <div class="bm-telemetry-rows">
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="FY25 营收结构 (营销 50.4% / 交易 49.6%)" data-i18n-en="FY25 Revenue Mix (Mkt 50.4% / Txn 49.6%)">FY25 营收结构 (营销 50.4% / 交易 49.6%)</span><span class="bm-tel-val mono">¥431.85B</span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:50.4%;"></div><div style="width:49.6%;background:#16A34A;"></div></div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="在线营销 ¥217.8B (+10%)" data-i18n-en="Marketing ¥217.8B (+10%)">在线营销 ¥217.8B (+10%)</span><span data-i18n-zh="交易服务 ¥214.1B (+9%)" data-i18n-en="Transaction ¥214.1B (+9%)">交易服务 ¥214.1B (+9%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="Q3 2026 单季营收与盈利跃升" data-i18n-en="Q3 2026 Revenue &amp; Margin Rebound">Q3 2026 单季营收与盈利跃升</span><span class="bm-tel-val mono">¥108.34B <small style="font-size:0.74rem;color:var(--mui-success-text);">28.8% OpM</small></span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:58.2%;"></div><div style="width:28.8%;background:#16A34A;"></div></div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="毛利率 58.2% · 营销 ¥59.8B (+12%)" data-i18n-en="GM 58.2% · Mkt ¥59.8B (+12%)">毛利率 58.2% · 营销 ¥59.8B (+12%)</span><span data-i18n-zh="净利 ¥29.54B (27.3% NM)" data-i18n-en="Net Inc ¥29.54B (27.3% NM)">净利 ¥29.54B (27.3% NM)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="FY25 自由现金流 &amp; 极致轻资产" data-i18n-en="FY25 FCF &amp; Ultra-Light CapEx">FY25 自由现金流 &amp; 极致轻资产</span><span class="bm-tel-val mono">¥105.8B <small style="font-size:0.74rem;color:var(--mui-success-text);">108% 转化</small></span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:94%;background:linear-gradient(90deg,#16A34A,#22C55E);"></div></div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="经营现金流 ¥106.9B" data-i18n-en="Op Cash Flow ¥106.9B">经营现金流 ¥106.9B</span><span data-i18n-zh="CapEx ¥1.15B (仅占营收 0.27%)" data-i18n-en="CapEx ¥1.15B (0.27% of Sales)">CapEx ¥1.15B (仅占营收 0.27%)</span></div>
+ </div>
+
+ <div class="bm-tel-item">
+ <div class="bm-tel-top"><span class="bm-tel-lbl" data-i18n-zh="现金及等价物+短投 (含非流动定存 ¥571.1B)" data-i18n-en="Cash &amp; ST Inv (¥571.1B incl. LT Deposits)">现金及等价物+短投 (含非流动定存 ¥571.1B)</span><span class="bm-tel-val mono">¥455.4B</span></div>
+ <div class="bm-tel-bar-track"><div class="bm-tel-bar-fill" style="width:86%;"></div></div>
+ <div class="bm-tel-sub mono"><span data-i18n-zh="员工仅 25,474 人 · 人效 ¥16.95M" data-i18n-en="25,474 FTEs · ¥16.95M/FTE">员工仅 25,474 人 · 人效 ¥16.95M</span><span data-i18n-zh="零分红零回购 (市值 ~$111.9B)" data-i18n-en="0 Div/Buyback (~$111.9B Cap)">零分红零回购 (市值 ~$111.9B)</span></div>
+ </div>
+ </div>
+ </aside>
+ </section>
+
+ <!-- MODULE 1: 5-NODE VALUE PIPELINE -->
+ <section id="mod-pipeline" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 01 · END-TO-END VALUE CAPTURE PIPELINE</span>
+ <h2 class="bm-h2" data-i18n-zh="五阶商业价值传导沙盘：从社交拼团获客到负营运资本现金堡垒" data-i18n-en="5-Node Value Pipeline: From Social Discovery to Negative Working Capital Fortress">五阶商业价值传导沙盘：从社交拼团获客到负营运资本现金堡垒</h2>
+ <p class="bm-head-desc" data-i18n-zh="点击下方任一价值链节点，拆解拼多多主站、多多买菜与 Temu 的底层协同逻辑与量化指标。" data-i18n-en="Select any node in the pipeline to inspect Pinduoduo, Duoduo Grocery, and Temu unit economics.">点击下方任一价值链节点，拆解拼多多主站、多多买菜与 Temu 的底层协同逻辑与量化指标。</p>
+ </div>
+ <span class="mui-chip mui-chip-primary mono" data-i18n-zh="点击节点交互拆解 (01 → 05)" data-i18n-en="Interactive 5-Stage Flow">点击节点交互拆解 (01 → 05)</span>
+ </div>
+
+ <div class="bm-pipeline-track" id="pipelineTrack">
+ <button type="button" class="bm-node-btn active" data-node="0">
+ <div class="bm-node-top"><span class="bm-node-step mono">01</span><span class="bm-node-tag mono">FEED &amp; SOCIAL</span></div>
+ <div class="bm-node-title" data-i18n-zh="去购物车化瀑布流与裂变" data-i18n-en="Cart-Free Feed &amp; Viral Sharing">去购物车化瀑布流与裂变</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="9亿+ 年活跃买家底座" data-i18n-en="900M+ Annual Active Buyers">9亿+ 年活跃买家底座</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="1">
+ <div class="bm-node-top"><span class="bm-node-step mono">02</span><span class="bm-node-tag mono">C2M &amp; AGRI</span></div>
+ <div class="bm-node-title" data-i18n-zh="产业带直连与农地云拼" data-i18n-en="C2M Factory &amp; Agritech Direct">产业带直连与农地云拼</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="1,680万 活跃商家 (FY25)" data-i18n-en="16.8M Active Merchants">1,680万 活跃商家 (FY25)</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="2">
+ <div class="bm-node-top"><span class="bm-node-step mono">03</span><span class="bm-node-tag mono">DUAL ENGINE</span></div>
+ <div class="bm-node-title" data-i18n-zh="全站推广营销 + 交易抽成" data-i18n-en="Marketing Ads + Transaction Fees">全站推广营销 + 交易抽成</div>
+ <div class="bm-node-kpi mono">Q3'26 Mkt ¥59.8B (+12%)</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="3">
+ <div class="bm-node-top"><span class="bm-node-step mono">04</span><span class="bm-node-tag mono">TEMU PIVOT</span></div>
+ <div class="bm-node-title" data-i18n-zh="全托管向半托管/本对本跃迁" data-i18n-en="Temu Semi-Managed &amp; Local Pivot">全托管向半托管/本对本跃迁</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="规避小额免税取消冲击" data-i18n-en="Mitigates De Minimis Repeal">规避小额免税取消冲击</div>
+ </button>
+ <button type="button" class="bm-node-btn" data-node="4">
+ <div class="bm-node-top"><span class="bm-node-step mono">05</span><span class="bm-node-tag mono">CASH FORTRESS</span></div>
+ <div class="bm-node-title" data-i18n-zh="零库存应付浮存与千亿扶持" data-i18n-en="Zero-Inventory Float &amp; Reinvestment">零库存应付浮存与千亿扶持</div>
+ <div class="bm-node-kpi mono" data-i18n-zh="应付商家款 ¥112.0B + 押金 ¥18.9B" data-i18n-en="Merchant Payables ¥112B">应付商家款 ¥112.0B + 押金 ¥18.9B</div>
+ </button>
+ </div>
+
+ <div class="bm-node-inspector" id="nodeInspector">
+ <div class="bm-ins-prose">
+ <span class="mui-chip mui-chip-primary mono" id="nodeBadge"></span>
+ <h3 id="nodeTitle"></h3>
+ <p id="nodeDesc"></p>
+ <div class="bm-ins-formula mono" id="nodeFormula"></div>
+ </div>
+ <div class="bm-ins-kpis" id="nodeKpis"></div>
+ </div>
+ </section>
+
+ <!-- MODULE 2: PROFIT POOL & MONETIZATION -->
+ <section id="mod-profit-pool" class="bm-split-75">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02A · P&amp;L WATERFALL &amp; MARGIN TRAJECTORY</span>
+ <h3 data-i18n-zh="FY2025 ¥4,318亿 价值转化瀑布流与季度利润率走势" data-i18n-en="FY2025 RMB 431.8B P&amp;L Waterfall &amp; Margin Trajectory">FY2025 ¥4,318亿 价值转化瀑布流与季度利润率走势</h3>
+ </div>
+ <div class="mui-segmented" id="pChartTabs">
+ <button type="button" class="mui-seg-btn active" data-pview="waterfall" data-i18n-zh="营收→FCF 瀑布流" data-i18n-en="Rev → FCF Waterfall">营收→FCF 瀑布流</button>
+ <button type="button" class="mui-seg-btn" data-pview="margins" data-i18n-zh="22–26Q3 利润率曲线" data-i18n-en="22–26Q3 Margins">22–26Q3 利润率曲线</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box"><canvas id="profitCanvas"></canvas></div>
+ <div class="bm-chart-legend" id="profitLegend"></div>
+
+ <p class="bm-chart-caption" data-i18n-rich="m2_caption">
+ 数据来源：<a class="cite-link" href="https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-fourth-quarter-2025-and-fiscal-year-2025/" target="_blank" rel="noopener noreferrer">FY2025 财报 ↗</a> 与 <a class="cite-link" href="https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-third-quarter-2026-unaudited-financial/" target="_blank" rel="noopener noreferrer">Q3 2026 财报 ↗</a>。2025 年受“千亿扶持”与履约成本影响毛利率阶段性下探至 56.3%，2026 Q3 随着营销费用同比大降 16.6% 及半托管占比提升，毛利率回升至 <strong>58.2%</strong>，营业利润率重返 <strong>28.8%</strong>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 02B · DUAL-ENGINE MONETIZATION</span>
+ <h3 data-i18n-zh="双擎变现与“千亿扶持”四层结构拆解" data-i18n-en="4-Layer Monetization &amp; Merchant Support Architecture">双擎变现与“千亿扶持”四层结构拆解</h3>
+ </div>
+ <div class="mui-segmented" id="tierFilter">
+ <button type="button" class="mui-seg-btn active" data-tcat="all" data-i18n-zh="全部" data-i18n-en="All">全部</button>
+ <button type="button" class="mui-seg-btn" data-tcat="mkt" data-i18n-zh="营销广告" data-i18n-en="Marketing">营销广告</button>
+ <button type="button" class="mui-seg-btn" data-tcat="txn" data-i18n-zh="交易/供应链" data-i18n-en="Txn/Supply">交易/供应链</button>
+ </div>
+ </div>
+
+ <div class="bm-tier-list" id="tierList">
+ <div class="bm-tier-card" data-tier="mkt">
+ <div class="bm-tier-top"><span class="bm-tier-name" data-i18n-zh="① 全站推广 (Full-Site Promotion) ROI 竞价引擎" data-i18n-en="① Full-Site Promotion Algorithmic Ad Engine">① 全站推广 (Full-Site Promotion) ROI 竞价引擎</span><span class="mui-chip mui-chip-success mono">Q3'26 ¥59.8B (+12%)</span></div>
+ <div class="bm-tier-desc" data-i18n-zh="商家仅设定目标投产比（ROI），算法自动包办自然流量与付费流量混排分发，大幅降低中小白牌商家投放门槛，成为利润率最稳健的核心现金牛。" data-i18n-en="Merchants simply set a target ROAS while algorithms blend organic and paid traffic—lowering SME ad friction and driving steady +12% YoY growth in Q3'26.">商家仅设定目标投产比（ROI），算法自动包办自然流量与付费流量混排分发，大幅降低中小白牌商家投放门槛，成为利润率最稳健的核心现金牛。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="txn">
+ <div class="bm-tier-top"><span class="bm-tier-name" data-i18n-zh="② 交易服务 (Transaction Services) 与 Temu 履约" data-i18n-en="② Transaction Services &amp; Temu Fulfillment">② 交易服务 (Transaction Services) 与 Temu 履约</span><span class="mui-chip mui-chip-primary mono">Q3'26 ¥48.5B (-12%)</span></div>
+ <div class="bm-tier-desc" data-i18n-zh="包含主站支付手续费、多多买菜佣金及 Temu 全托管核价差额。2026 Q3 随着 Temu 转向半托管（商家自担头程与尾程物流）叠加百亿减免退费，交易收入主动缩表 -12% 但净毛利率反而扩张。" data-i18n-en="Includes payment fees, Duoduo Grocery commissions, and Temu managed spreads. Q3'26 fell 12% as Temu shifted to semi-managed (merchants handle logistics) and PDD rebated merchant fees, boosting gross margin.">包含主站支付手续费、多多买菜佣金及 Temu 全托管核价差额。2026 Q3 随着 Temu 转向半托管（商家自担头程与尾程物流）叠加百亿减免退费，交易收入主动缩表 -12% 但净毛利率反而扩张。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="mkt">
+ <div class="bm-tier-top"><span class="bm-tier-name" data-i18n-zh="③ 百亿补贴与“千亿扶持”生态反哺" data-i18n-en="③ 10B Subsidies &amp; 100B Merchant Support Program">③ 百亿补贴与“千亿扶持”生态反哺</span><span class="mui-chip mui-chip-violet mono" data-i18n-zh="¥100B 商家生态投入" data-i18n-en="RMB 100B Initiative">¥100B 商家生态投入</span></div>
+ <div class="bm-tier-desc" data-i18n-zh="2025年4月启动“千亿扶持”及“申诉优赔”（日均处理百万级申诉），通过技术服务费退还与偏远地区物流补贴巩固“新质商家”供给护城河。" data-i18n-en="Launched in April 2025, the RMB 100B Support Program rebates technical fees, subsidizes western China logistics, and funds merchant dispute protection to lock in quality supply.">2025年4月启动“千亿扶持”及“申诉优赔”（日均处理百万级申诉），通过技术服务费退还与偏远地区物流补贴巩固“新质商家”供给护城河。</div>
+ </div>
+ <div class="bm-tier-card" data-tier="txn">
+ <div class="bm-tier-top"><span class="bm-tier-name" data-i18n-zh="④ 多多买菜 (Duoduo Grocery) 高频生鲜冷链网" data-i18n-en="④ Duoduo Grocery High-Frequency Fresh Grid">④ 多多买菜 (Duoduo Grocery) 高频生鲜冷链网</span><span class="mui-chip mui-chip-warning mono" data-i18n-zh="高频复购流量锚" data-i18n-en="High-Freq Retention Anchor">高频复购流量锚</span></div>
+ <div class="bm-tier-desc" data-i18n-zh="利用网格仓+自提点履约将生鲜客单履约成本压缩至极低水平，不仅实现区域盈利，更以“买菜级”打开频次带动主站高毛利百货交叉转化。" data-i18n-en="Grid-warehouse + pickup-point logistics slashes fresh-produce fulfillment cost, turning regionally profitable while driving daily-habit cross-sell into higher-margin general merchandise.">利用网格仓+自提点履约将生鲜客单履约成本压缩至极低水平，不仅实现区域盈利，更以“买菜级”打开频次带动主站高毛利百货交叉转化。</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MODULE 3: COHORT UNIT ECONOMICS & SHARE -->
+ <section id="mod-cohort" class="bm-split-57">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03A · USER COHORT UNIT ECONOMICS</span>
+ <h3 data-i18n-zh="客群分层经济模型：从拼团裂变到高净值家庭全包" data-i18n-en="Cohort Unit Economics: From Viral Bargain Hunter to Household Staple">客群分层经济模型：从拼团裂变到高净值家庭全包</h3>
+ </div>
+ </div>
+
+ <div class="mui-segmented" id="cohortTabs">
+ <button type="button" class="mui-seg-btn" data-cohort="casual" data-i18n-zh="下沉/高频刚需" data-i18n-en="Value Daily Buyer">下沉/高频刚需</button>
+ <button type="button" class="mui-seg-btn active" data-cohort="core" data-i18n-zh="百亿补贴中产户" data-i18n-en="10B-Subsidy Urban">百亿补贴中产户</button>
+ <button type="button" class="mui-seg-btn" data-cohort="temu" data-i18n-zh="Temu 欧美复购客" data-i18n-en="Temu Global Repeat">Temu 欧美复购客</button>
+ </div>
+
+ <div class="bm-cohort-metrics" id="cohortMetrics"></div>
+ <div class="bm-ratchet-note" id="cohortNote"></div>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 03B · COHORT LTV &amp; CHINA E-COMMERCE SHARE</span>
+ <h3 data-i18n-zh="三类客群5年货币化曲线与国内电商份额格局" data-i18n-en="5-Year Monetization Curve &amp; China E-Commerce Market Share">三类客群5年货币化曲线与国内电商份额格局</h3>
+ </div>
+ <div class="mui-segmented" id="cChartTabs">
+ <button type="button" class="mui-seg-btn active" data-cview="ltv" data-i18n-zh="5年单客毛利累积" data-i18n-en="5Y Cohort LTV">5年单客毛利累积</button>
+ <button type="button" class="mui-seg-btn" data-cview="share" data-i18n-zh="国内电商份额对比" data-i18n-en="China Market Share">国内电商份额对比</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box"><canvas id="cohortCanvas"></canvas></div>
+ <div class="bm-chart-legend" id="cohortLegend"></div>
+ <p class="bm-chart-caption" data-i18n-rich="m3_caption">
+ 市场地位参考：据 <a class="cite-link" href="https://everythingmoney.com/blog/pdd-holdings-the-origin-the-business-model-and-the-numbers-5819" target="_blank" rel="noopener noreferrer">Euromonitor / USDA 报告 ↗</a>，拼多多已占据中国零售电商市场约 <strong>16.7% 份额</strong>（阿里 27.9%、京东 22.1%、抖音字节 21.3%），但以极简人员配置实现了远高于传统货架巨头的净利率（27.3%）。
+ </p>
+ </div>
+ </section>
+
+ <!-- MODULE 4: CASH FORTRESS & 5Y SIMULATOR -->
+ <section id="mod-capital" class="bm-split-66">
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04A · CASH FORTRESS &amp; NEGATIVE WORKING CAPITAL</span>
+ <h3 data-i18n-zh="¥4,554亿现金堡垒累积史与负营运资本浮存结构" data-i18n-en="RMB 455.4B Cash Fortress &amp; Negative Working Capital Float">¥4,554亿现金堡垒累积史与负营运资本浮存结构</h3>
+ </div>
+ <div class="mui-segmented" id="kChartTabs">
+ <button type="button" class="mui-seg-btn active" data-kview="cash" data-i18n-zh="现金+短投跃升 (¥B)" data-i18n-en="Cash &amp; ST Inv (¥B)">现金+短投跃升 (¥B)</button>
+ <button type="button" class="mui-seg-btn" data-kview="float" data-i18n-zh="Q3'26 资产负债浮存" data-i18n-en="Q3'26 Balance Float">Q3'26 资产负债浮存</button>
+ </div>
+ </div>
+
+ <div class="bm-canvas-box"><canvas id="capitalCanvas"></canvas></div>
+ <p class="bm-chart-caption" data-i18n-rich="m4_caption">
+ 资本异象：截至 2026年9月30日，拼多多账面现金、受限资金及短期投资达 <strong>RMB 4,554亿 ($67.9B)</strong>，外加非流动定存与债券 <strong>RMB 1,157亿 ($17.3B)</strong>，合计流动性高达 <strong>RMB 5,711亿 ($85.2B)</strong>，而总市值仅约 $1,119亿——净现金占市值比重超过 <strong>60%</strong>，成为市场分歧（零分红零回购 vs 极低估值）的核心焦距 <a class="cite-link" href="https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-third-quarter-2026-unaudited-financial/" target="_blank" rel="noopener noreferrer">Q3'26 资产负债表 ↗</a>。
+ </p>
+ </div>
+
+ <div class="bm-subpanel">
+ <div class="bm-subhead">
+ <div>
+ <span class="bm-kicker mono">MODULE 04B · INTERACTIVE 5-YEAR EARNINGS SIMULATOR</span>
+ <h3 data-i18n-zh="FY2027–FY2031 营收双擎与营销费率情景推演器" data-i18n-en="FY2027–FY2031 Dual-Engine &amp; Margin Simulator">FY2027–FY2031 营收双擎与营销费率情景推演器</h3>
+ </div>
+ <div class="mui-segmented" id="simPresets">
+ <button type="button" class="mui-seg-btn" data-preset="bear" data-i18n-zh="关税/内卷承压" data-i18n-en="Bear">关税/内卷承压</button>
+ <button type="button" class="mui-seg-btn active" data-preset="base" data-i18n-zh="高质量稳态" data-i18n-en="Base">高质量稳态</button>
+ <button type="button" class="mui-seg-btn" data-preset="bull" data-i18n-zh="半托管+回购释放" data-i18n-en="Bull">半托管+回购释放</button>
+ </div>
+ </div>
+
+ <div class="bm-sim-sliders">
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="在线营销服务年化增速 (Marketing CAGR)" data-i18n-en="Online Marketing CAGR">在线营销服务年化增速 (Marketing CAGR)</span><b class="mono" id="lblMktCagr">10.0%</b></div>
+ <input type="range" id="inpMktCagr" min="2" max="18" step="0.5" value="10.0" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="交易服务年化增速 (Transaction CAGR)" data-i18n-en="Transaction Services CAGR">交易服务年化增速 (Transaction CAGR)</span><b class="mono" id="lblTxnCagr">6.5%</b></div>
+ <input type="range" id="inpTxnCagr" min="-5" max="18" step="0.5" value="6.5" />
+ </div>
+ <div class="bm-slider-row">
+ <div class="bm-slider-lbl"><span data-i18n-zh="销售及营销费用率 (S&amp;M % of Rev)" data-i18n-en="Sales &amp; Marketing Ratio (% Rev)">销售及营销费用率 (S&amp;M % of Rev)</span><b class="mono" id="lblSmRatio">24.5%</b></div>
+ <input type="range" id="inpSmRatio" min="18" max="34" step="0.5" value="24.5" />
+ </div>
+ </div>
+
+ <div class="bm-sim-outputs">
+ <div class="bm-sim-out"><b class="mono" id="simRevOut">¥646B</b><span data-i18n-zh="FY31E 总营收" data-i18n-en="FY31E Revenue">FY31E 总营收</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simOpOut">¥187B</b><span data-i18n-zh="FY31E 营业利润" data-i18n-en="FY31E Op Income">FY31E 营业利润</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simNetOut">¥174B</b><span data-i18n-zh="FY31E 净利润" data-i18n-en="FY31E Net Income">FY31E 净利润</span></div>
+ <div class="bm-sim-out"><b class="mono" id="simPeOut">4.3x</b><span data-i18n-zh="隐含远期 P/E" data-i18n-en="Implied 31E P/E">隐含远期 P/E</span></div>
+ </div>
+
+ <div class="bm-canvas-box" style="height:175px;"><canvas id="simMiniCanvas"></canvas></div>
+ </div>
+ </section>
+
+ <!-- MODULE 5: GLOBAL COMMERCE PEER MATRIX & STRESS AUDIT -->
+ <section id="mod-matrix" class="bm-panel">
+ <div class="bm-panel-head">
+ <div>
+ <span class="bm-kicker mono">MODULE 05 · ARCHETYPE BENCHMARKING &amp; STRESS AUDIT</span>
+ <h2 class="bm-h2" data-i18n-zh="全球零售与电商巨头商业范式对标及三大结构性压力测试" data-i18n-en="Global Commerce Peer Matrix &amp; Three Structural Stress Tests">全球零售与电商巨头商业范式对标及三大结构性压力测试</h2>
+ <p class="bm-head-desc" data-i18n-zh="对比六大电商与零售标杆的毛利率、资本开支与人效结构，并追踪拼多多的三大核心风险。" data-i18n-en="Benchmarking PDD against global commerce peers on margin, CapEx, and workforce efficiency.">对比六大电商与零售标杆的毛利率、资本开支与人效结构，并追踪拼多多的三大核心风险。</p>
+ </div>
+ <div class="mui-segmented" id="peerFilter">
+ <button type="button" class="mui-seg-btn active" data-pcat="all" data-i18n-zh="全部标杆 (6)" data-i18n-en="All Peers (6)">全部标杆 (6)</button>
+ <button type="button" class="mui-seg-btn" data-pcat="plat" data-i18n-zh="轻资产平台" data-i18n-en="3P Platforms">轻资产平台</button>
+ <button type="button" class="mui-seg-btn" data-pcat="heavy" data-i18n-zh="重履约/自营" data-i18n-en="1P / Logistics">重履约/自营</button>
+ </div>
+ </div>
+
+ <div class="bm-table-wrap">
+ <table class="bm-table" id="peerTable">
+ <thead>
+ <tr>
+ <th data-i18n-zh="公司与代码" data-i18n-en="Company">公司与代码</th>
+ <th data-i18n-zh="核心商业模式原型" data-i18n-en="Business Archetype">核心商业模式原型</th>
+ <th data-i18n-zh="毛利率 / 净利率" data-i18n-en="GM / Net Margin">毛利率 / 净利率</th>
+ <th data-i18n-zh="CapEx / 营收强度" data-i18n-en="CapEx Intensity">CapEx / 营收强度</th>
+ <th data-i18n-zh="员工规模与组织特征" data-i18n-en="Headcount &amp; Org">员工规模与组织特征</th>
+ <th data-i18n-zh="核心护城河与结构性挑战" data-i18n-en="Moat &amp; Structural Risk">核心护城河与结构性挑战</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="is-pdd" data-row-cat="plat">
+ <td><strong>PDD Holdings (PDD)</strong> <span class="mui-chip mui-chip-primary mono" data-i18n-zh="本研究标的" data-i18n-en="Subject">本研究标的</span></td>
+ <td data-i18n-zh="C2M 需求聚合 + 零自营库存双边平台" data-i18n-en="C2M Demand Aggregator + Zero-Inventory 3P">C2M 需求聚合 + 零自营库存双边平台</td>
+ <td class="mono" data-i18n-zh="56.3%–58.2% · 净利 27.3%" data-i18n-en="56.3%–58.2% · 27.3% NM">56.3%–58.2% · 净利 27.3%</td>
+ <td class="mono" style="color:var(--mui-success-text);" data-i18n-zh="0.27% (极致轻资产)" data-i18n-en="0.27% (Ultra-Light)">0.27% (极致轻资产)</td>
+ <td class="mono" data-i18n-zh="25,474 人 · 扁平原子化" data-i18n-en="25,474 FTEs · Flat Atomic">25,474 人 · 扁平原子化</td>
+ <td data-i18n-zh="性价比心智与人效极值；挑战在欧美关税及零资本回馈" data-i18n-en="Peak FTE leverage &amp; value mindshare; risks in tariffs &amp; zero capital return">性价比心智与人效极值；挑战在欧美关税及零资本回馈</td>
+ </tr>
+ <tr data-row-cat="heavy">
+ <td><strong>Amazon (AMZN)</strong></td>
+ <td data-i18n-zh="自营+FBA 重物流履约 + AWS 云基建" data-i18n-en="1P/FBA Logistics + AWS Cloud">自营+FBA 重物流履约 + AWS 云基建</td>
+ <td class="mono">~48% · ~10%</td>
+ <td class="mono" style="color:var(--mui-warning-text);" data-i18n-zh="~14% (仓储与AI重投入)" data-i18n-en="~14% (Fulfillment &amp; AI)">~14% (仓储与AI重投入)</td>
+ <td class="mono" data-i18n-zh="~155万人 (含履约)" data-i18n-en="~1.55M (incl. Ops)">~155万人 (含履约)</td>
+ <td data-i18n-zh="Prime 次日达基础设施护城河；履约与 AI 基建重资产折旧" data-i18n-en="Prime logistics moat; heavy fulfillment &amp; AI CapEx burden">Prime 次日达基础设施护城河；履约与 AI 基建重资产折旧</td>
+ </tr>
+ <tr data-row-cat="plat">
+ <td><strong>Alibaba (BABA)</strong></td>
+ <td data-i18n-zh="货架品牌电商 + 阿里云 + 本地生活矩阵" data-i18n-en="Branded Shelf + Cloud + Local">货架品牌电商 + 阿里云 + 本地生活矩阵</td>
+ <td class="mono">~38% · ~12%</td>
+ <td class="mono">~6%–9%</td>
+ <td class="mono" data-i18n-zh="~19万人+ (多BG矩阵)" data-i18n-en="~190k+ (Multi-BG)">~19万人+ (多BG矩阵)</td>
+ <td data-i18n-zh="88VIP 高净值品牌生态；多业务协同与组织减负仍在推进" data-i18n-en="88VIP branded ecosystem; balancing multi-BG complexity">88VIP 高净值品牌生态；多业务协同与组织减负仍在推进</td>
+ </tr>
+ <tr data-row-cat="heavy">
+ <td><strong>JD.com (JD)</strong></td>
+ <td data-i18n-zh="自营买断供应链 + 自建达达/京东物流" data-i18n-en="1P Direct Retail + Self-Built Logistics">自营买断供应链 + 自建达达/京东物流</td>
+ <td class="mono">~15.5% · ~3.8%</td>
+ <td class="mono">~2%–3%</td>
+ <td class="mono" data-i18n-zh="~60万人+ (含快递员)" data-i18n-en="~600k+ (incl. Couriers)">~60万人+ (含快递员)</td>
+ <td data-i18n-zh="3C家电正品当日达心智；重人力成本压低净利率上限" data-i18n-en="3C/appliance trust &amp; speed; heavy labor caps net margin ceiling">3C家电正品当日达心智；重人力成本压低净利率上限</td>
+ </tr>
+ <tr data-row-cat="plat heavy">
+ <td><strong>MercadoLibre (MELI)</strong></td>
+ <td data-i18n-zh="拉美电商平台 + Mercado Pago 金融生态" data-i18n-en="LatAm 3P + Mercado Pago Fintech">拉美电商平台 + Mercado Pago 金融生态</td>
+ <td class="mono">~46% · ~9%</td>
+ <td class="mono">~4%–5%</td>
+ <td class="mono" data-i18n-zh="~8万人" data-i18n-en="~80k FTEs">~8万人</td>
+ <td data-i18n-zh="电商+金融双飞轮；面临 Temu 本对本跨境低价竞争" data-i18n-en="Commerce + fintech flywheel; faces Temu cross-border pressure">电商+金融双飞轮；面临 Temu 本对本跨境低价竞争</td>
+ </tr>
+ <tr data-row-cat="heavy">
+ <td><strong>Costco (COST)</strong></td>
+ <td data-i18n-zh="精选 SKU 低加价引流 + 会员费纯利" data-i18n-en="Curated SKU Funnel + Membership Profit">精选 SKU 低加价引流 + 会员费纯利</td>
+ <td class="mono">~12.8% · ~2.9%</td>
+ <td class="mono">~1.8%</td>
+ <td class="mono" data-i18n-zh="~33万人 (门店仓储)" data-i18n-en="~330k (Warehouse)">~33万人 (门店仓储)</td>
+ <td data-i18n-zh="黄峥公开对标的“Costco + Disney”精神源头，极简选品哲学" data-i18n-en="Colin Huang's explicit 'Costco + Disney' inspiration for curated value">黄峥公开对标的“Costco + Disney”精神源头，极简选品哲学</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+
+ <div class="bm-stress-grid">
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-error mono">STRESS 01 · TARIFFS &amp; DSA</span>
+ <h4 data-i18n-zh="美国小额免税取消与欧盟 €3 包裹税冲击" data-i18n-en="US De Minimis Repeal &amp; EU €3 Parcel Duty">美国小额免税取消与欧盟 €3 包裹税冲击</h4>
+ <p data-i18n-rich="s1_body">美国于 2025年8月29日取消 $800 以下非邮政小包免税；欧盟于 2026年5月对 Temu 处以 €2亿 DSA 罚款并自 2026年7月1日起对 €150 以下包裹征收每件 €3 关税 <a class="cite-link" href="https://ppc.land/temu-owner-pdd-cuts-marketing-spend-17-as-revenue-stalls/" target="_blank" rel="noopener noreferrer">贸易政策时间线 ↗</a>。Temu 通过强制切向海外仓“半托管/本对本”与削减 17% 营销费用对冲，使 26Q3 净利反超预期。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s1" /> <span data-i18n-zh="纳入季度跟踪：Temu 半托管本地仓占比与欧美关税" data-i18n-en="Track Quarterly: Temu Semi-Managed Share &amp; Tariffs">纳入季度跟踪：Temu 半托管本地仓占比与欧美关税</span></label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-warning mono">STRESS 02 · CAPITAL ALLOCATION</span>
+ <h4 data-i18n-zh="¥5,711亿现金滞留与零分红回购引发的估值折价" data-i18n-en="RMB 571B Cash Hoard &amp; Zero-Payout Valuation Discount">¥5,711亿现金滞留与零分红回购引发的估值折价</h4>
+ <p data-i18n-zh="尽管账面现金及各类理财定存合计超 $852 亿美元，管理层在 2026 年仍坚持“零分红、零回购”并将其定性为“千亿扶持战略投入期”，导致市场仅给予 ~8.6x P/E。一旦未来宣布哪怕 30% FCF 回购，估值中枢将迎来戴维斯双击。" data-i18n-en="Despite $85.2B in total cash and deposits, management maintains zero dividends and zero buybacks during its 'strategic investment phase,' anchoring P/E at ~8.6x—creating massive optionality if payouts begin.">尽管账面现金及各类理财定存合计超 $852 亿美元，管理层在 2026 年仍坚持“零分红、零回购”并将其定性为“千亿扶持战略投入期”，导致市场仅给予 ~8.6x P/E。一旦未来宣布哪怕 30% FCF 回购，估值中枢将迎来戴维斯双击。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s2" /> <span data-i18n-zh="纳入季度跟踪：资本配置政策转向信号（分红/回购）" data-i18n-en="Track Quarterly: Capital Return Policy Pivot">纳入季度跟踪：资本配置政策转向信号（分红/回购）</span></label>
+ </div>
+
+ <div class="bm-stress-card">
+ <div>
+ <span class="mui-chip mui-chip-violet mono">STRESS 03 · VIE &amp; COMPETITION</span>
+ <h4 data-i18n-zh="国内直播电商分流与商家“仅退款”治理平衡" data-i18n-en="Domestic Competition &amp; Merchant Governance Balance">国内直播电商分流与商家“仅退款”治理平衡</h4>
+ <p data-i18n-zh="抖音/快手内容电商抢占用户时长，同时过去极端偏袒买家的规则曾引发中小商家反弹。2025–2026 年赵佳臻主导“商保会”与“申诉优赔”百亿元级兜底，旨在修复高质量品牌与产业带留存率。" data-i18n-en="ByteDance/Kuaishou capture time-spent while past buyer-first policies strained SMEs. Co-CEO Zhao Jiazhen's 2025–2026 merchant protection &amp; appeal-compensation reforms aim to retain quality supply.">抖音/快手内容电商抢占用户时长，同时过去极端偏袒买家的规则曾引发中小商家反弹。2025–2026 年赵佳臻主导“商保会”与“申诉优赔”百亿元级兜底，旨在修复高质量品牌与产业带留存率。</p>
+ </div>
+ <label class="bm-check-label"><input type="checkbox" data-stress-chk="s3" /> <span data-i18n-zh="纳入季度跟踪：国内在线营销收入增速 (+12%) 持续性" data-i18n-en="Track Quarterly: Domestic Online Marketing Growth (+12%)">纳入季度跟踪：国内在线营销收入增速 (+12%) 持续性</span></label>
+ </div>
+ </div>
+ </section>
+
+ <!-- PRIMARY SOURCES -->
+ <section class="bm-panel" aria-label="权威财报与行业信源">
+ <div class="bm-panel-head" style="margin-bottom:14px;padding-bottom:10px;">
+ <div>
+ <span class="bm-kicker mono">VERIFIED PRIMARY SOURCES</span>
+ <h2 class="bm-h2" data-i18n-zh="权威财报、SEC 20-F 监管文件与行业研究信源" data-i18n-en="Verified SEC Filings &amp; Industry Research Sources">权威财报、SEC 20-F 监管文件与行业研究信源</h2>
+ </div>
+ </div>
+ <div class="bm-sources-grid">
+ <a class="bm-source-item" href="https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-third-quarter-2026-unaudited-financial/" target="_blank" rel="noopener noreferrer">
+ <b>PDD Holdings Q3 2026 Financial Results (Nov 19, 2026) ↗</b>
+ <span data-i18n-zh="营收 RMB 108.3B、营业利润 RMB 31.2B、净利 RMB 29.5B 及现金+短投 RMB 455.4B 官方披露" data-i18n-en="Official Q3 2026 release: RMB 108.3B rev, RMB 31.2B op profit, RMB 29.5B NI, RMB 455.4B cash">营收 RMB 108.3B、营业利润 RMB 31.2B、净利 RMB 29.5B 及现金+短投 RMB 455.4B 官方披露</span>
+ </a>
+ <a class="bm-source-item" href="https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-fourth-quarter-2025-and-fiscal-year-2025/" target="_blank" rel="noopener noreferrer">
+ <b>PDD Holdings Q4 &amp; FY2025 Financial Results (Mar 25, 2026) ↗</b>
+ <span data-i18n-zh="FY2025 总营收 RMB 431.85B（营销 ¥217.8B + 交易 ¥214.1B）、净利 RMB 97.84B" data-i18n-en="FY2025 revenue RMB 431.85B (Marketing ¥217.8B + Txn ¥214.1B), Net Income RMB 97.84B">FY2025 总营收 RMB 431.85B（营销 ¥217.8B + 交易 ¥214.1B）、净利 RMB 97.84B</span>
+ </a>
+ <a class="bm-source-item" href="https://www.sec.gov/Archives/edgar/data/1737806/000110465926050727/pdd-20251231x20f.htm" target="_blank" rel="noopener noreferrer">
+ <b>PDD Holdings FY2025 Form 20-F Annual Report (SEC) ↗</b>
+ <span data-i18n-zh="官方核验 25,474 名全职员工、1,680 万活跃商家、VIE 架构与资本配置原则" data-i18n-en="SEC Form 20-F disclosing 25,474 FTEs, 16.8M active merchants, VIE structure &amp; capital allocation">官方核验 25,474 名全职员工、1,680 万活跃商家、VIE 架构与资本配置原则</span>
+ </a>
+ <a class="bm-source-item" href="https://ppc.land/temu-owner-pdd-cuts-marketing-spend-17-as-revenue-stalls/" target="_blank" rel="noopener noreferrer">
+ <b>Temu Trade &amp; EU/US Tariff Timeline (Nov 2026) ↗</b>
+ <span data-i18n-zh="美国小额免税取消（2025.08）与欧盟 €3 包裹税及 DSA 罚款对营销/履约的影响" data-i18n-en="Timeline of US de minimis repeal (Aug 2025), EU €3 parcel duty &amp; 17% marketing spend cut">美国小额免税取消（2025.08）与欧盟 €3 包裹税及 DSA 罚款对营销/履约的影响</span>
+ </a>
+ <a class="bm-source-item" href="https://everythingmoney.com/blog/pdd-holdings-the-origin-the-business-model-and-the-numbers-5819" target="_blank" rel="noopener noreferrer">
+ <b>PDD Financial &amp; Market Share Deep Dive (Nov 2026) ↗</b>
+ <span data-i18n-zh="FY25 FCF RMB 105.8B（CapEx 仅 RMB 1.15B）、中国电商份额 16.7% 与 13F 机构持仓" data-i18n-en="FY25 FCF RMB 105.8B (CapEx RMB 1.15B), 16.7% China retail e-commerce share &amp; 13F filings">FY25 FCF RMB 105.8B（CapEx 仅 RMB 1.15B）、中国电商份额 16.7% 与 13F 机构持仓</span>
+ </a>
+ <a class="bm-source-item" href="https://m.10jqka.com.cn/20261123/c682079571.shtml" target="_blank" rel="noopener noreferrer">
+ <b>千亿扶持与雄安产业带数字化“申诉优赔”解析 (2026.11) ↗</b>
+ <span data-i18n-zh="拼多多 180+ 项平台治理举措、日均百万级申诉兜底与高质量供应链转型" data-i18n-en="180+ platform governance initiatives, daily million-scale merchant appeal support &amp; supply upgrade">拼多多 180+ 项平台治理举措、日均百万级申诉兜底与高质量供应链转型</span>
+ </a>
+ </div>
+ </section>
+ </main>
+ </div>
+
+ 
+<script src="../../_shared/pdd_business_model.js"></script><script src="../../_shared/company-report-ui.js"></script>
+<script src="../../_shared/imported-report-menu.js"></script>
+</body>
+</html>
